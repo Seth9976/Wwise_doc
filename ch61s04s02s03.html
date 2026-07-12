@@ -1,0 +1,85 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Copy States Values</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s04s02.html" title="States"><link rel="prev" href="ch61s04s02s02.html" title="Property Editor: State"><link rel="next" href="ch61s04s02s04.html" title="Contents Editor: State Group"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04.html">Game Syncs Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04s02.html">States</a></span> &gt; <span class="breadcrumb-node">Copy States Values</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="copy_states_values"></a>Copy States Values</h4></div></div></div><p>The Copy States Values dialog allows you to copy the property settings from one custom State to another. You can copy the State values to an existing or newly-created State within the same State Group.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>State Group</p>
+								</td><td>
+									<p>The name of the State Group</p>
+								</td></tr><tr><td>
+								  <p>
+										<span class="inlinemediaobject"><img src="Images/btn_selector.png"></span>
+									</p>
+									<p> (State Group Selector)</p>
+								</td><td>
+									<p>Displays a complete list of State Groups in the project.</p>
+									<p>When you select a State Group, the name is displayed in the State Group field.</p>
+								</td></tr><tr><td>
+									<p>From</p>
+								</td><td>
+									<p>The name of the source State whose values you want to copy.</p>
+								</td></tr><tr><td>
+									<p>
+										<span class="inlinemediaobject"><img src="Images/btn_selector.png"></span>
+									</p>
+									<p> (State Selector)</p>
+								</td><td>
+									<p>Displays the list of States within the selected State Group.</p>
+									<p>When you select a State, its name is displayed in the From field.</p>
+								</td></tr><tr><td>
+									<p>To</p>
+								</td><td>
+									<p>The name of the target State to which the State values will be copied.</p>
+								</td></tr><tr><td>
+							    <p>
+										<span class="inlinemediaobject"><img src="Images/btn_selector.png"></span>
+									</p>
+							    <p> (State Selector)</p>
+							  </td><td>
+									<p>Displays the list of States within the select State Group.</p>
+									<p>To create a new State within the selected State Group, click the 'New' option.</p>
+									<p>When you select a State, its name is displayed in the To field.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Affected objects</strong></span></p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Use</p>
+								</td><td>
+									<p>Determines which objects will have the State values copied.</p>
+								</td></tr><tr><td>
+									<p>Object Name</p>
+								</td><td>
+									<p>The names of the objects in your project that already subscribe to the State Group selected.</p>
+									<p>The objects in this list are basically the ones that will be affected by the newly copied State values.</p>
+								</td></tr><tr><td>
+									<p>Action</p>
+								</td><td>
+									<p>Specifies the Action that will be taken when the State values are copied to the State selected in the 'To' field. The following two actions are possible:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+												<span class="bold"><strong>Overwrite existing state values</strong></span> - When the object already uses custom state properties, these properties will be overwritten with the copied property settings.
+											</p></li><li class="listitem"><p>
+												<span class="bold"><strong>Create new state values</strong></span> - When the object uses the default state properties, a custom version will be created with the copied property settings.
+											</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_select_all.png"></div>
+								</td><td>
+									<p>Selects all objects in the list.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_select_none.png"></div>
+								</td><td>
+									<p>Clears the selection for all objects in the list.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Copies the custom property settings from the source to the target State.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the dialog without copying the custom property settings.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch17s03s03.html" title="Copying State values between States">Copying State values between States</a>
+						</p></li><li class="listitem"><p> <a class="xref" href="ch17s03s04.html" title="Copying State Groups between objects">Copying State Groups between objects</a> </p></li></ul></div></div><HR></body></html>

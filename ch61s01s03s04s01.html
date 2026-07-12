@@ -1,0 +1,134 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Blend Track Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03s04.html" title="Property Editor: Blend Container"><link rel="prev" href="ch61s01s03s04.html" title="Property Editor: Blend Container"><link rel="next" href="ch61s01s03s05.html" title="Property Editor: Sound SFX and Sound Voice"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03s04.html">Property Editor: Blend Container</a></span> &gt; <span class="breadcrumb-node">Blend Track Editor</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="blend_track_editor_blend_track_editor"></a>Blend Track Editor</h5></div></div></div><p>
+        The Blend Track Editor is where you edit the contents of Blend Containers. The contents of these containers are played all at once,
+        but you can modify them so that their properties are controlled by RTPC curves and crossfades.
+      </p><p>
+        The Blend Track Editor is made up of two main areas: one where you enable and define crossfading, and another where you define RTPC curves and create crossfade regions in a graph view. You can also copy the RTPC curves from one property to another, from one track to another,
+        or from one object to another.
+      </p><p>The graph view also has a Game Parameter cursor that you can scroll back and forth to test the curves during playback. You can modify these points in real time during playback.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You must create at least one blend track before most options in the Blend Track Editor are visible.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Blend Container</p>
+              </td><td>
+                <p>The name of the Blend Container whose blend tracks you are currently editing.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_new_blend_track.png"></div>
+
+              </td><td>
+                <p>Creates a new blend track in the Blend Track Editor.</p>
+              </td></tr><tr><td>
+                <p>Name</p>
+              </td><td>
+                <p>The name of the current blend track.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_delete.png"></div>
+
+              </td><td>
+                <p>Deletes the current blend track.</p>
+              </td></tr><tr><td>
+                <p>Crossfade</p>
+              </td><td>
+                <p>Determines whether crossfading is enabled in the current blend track. When selected, you can use crossfade regions in the current blend track.</p>
+              </td></tr><tr><td>
+		<p>Crossfade Control Input</p>
+	</td><td>
+		<p>Displays the Game Parameter used for crossfading. To change the Game Parameter used for crossfading, expand the list and select a new Game Parameter.</p>
+	</td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+
+              </td><td>
+                <p>Displays the Wwise properties that can be mapped to Game Parameters.</p>
+              </td></tr><tr><td align="center">
+	<div class="mediaobject"><img src="Images/pin_icon.png"></div>
+	<div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+	<p>(Pinned/Unpinned)</p>
+</td><td>
+                <p>Determines whether the RTPC curve is displayed in the graph view.</p>
+                <p>When the Pin icon is selected, the RTPC curve will be displayed in the graph view whether the curve is selected or not.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/Color_Red.png" width="13"></td></tr></table></div>
+
+                <p>(Color block)</p>
+              </td><td>
+                <p>Displays the color of the RTPC curve in the graph view. Each new curve is assigned a different color.</p>
+                <p>The relative properties (Volume, Pitch, Low-pass filter, High-pass filter, etc.) are always assigned the same color.</p>
+              </td></tr><tr><td>
+                <p>Y axis</p>
+              </td><td>
+                <p>The Wwise property assigned to the Y axis.</p>
+                <p>To change the Wwise property assigned to the Y axis, click the Wwise Property Display button and select a new property.</p>
+              </td></tr><tr><td>
+                <p>X axis</p>
+              </td><td>
+                <p>The Game Parameter assigned to the X axis.</p>
+                <p>To change the Game Parameter assigned to the X axis expand the list and select a new Game Parameter.</p>
+              </td></tr><tr><td>
+                <p>Notes</p>
+              </td><td>
+                <p>Any additional information about the RTPC.</p>
+              </td></tr><tr><td>
+                <p>(Graph View)</p>
+              </td><td>
+                <p>A graphical representation of the relationship between a Game Parameter (X axis) and a property value in Wwise (Y axis).</p>
+                <p>The graph view can display several curves simultaneously.</p>
+              </td></tr><tr><td>
+                <p>X</p>
+              </td><td>
+                <p>The coordinate along the X axis of the selected control point. The X value represents the value of a selected Game Parameter.</p>
+                <p>
+                  If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type
+                  -5 in the X text box, both control points will move to the left by 5 units.
+                </p>
+              </td></tr><tr><td>
+                <p>Y</p>
+              </td><td>
+                <p>The coordinate along the Y axis of the selected control point. The Y value represents a property value (volume in decibels, pitch in cents, or Low-Pass Filter in percentage).</p>
+                <p>
+                  If more than one control point is selected,
+                  the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values.
+                  For example, if you select two control points and type -5 in the Y text box, both control points will move down by 5 units.
+                </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+
+              </td><td>
+                <p>Zooms in towards the center of the graph view.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+
+              </td><td>
+                <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+
+              </td><td>
+                <p>Zooms out from the center of the graph view.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch22s04.html#creating_blend_container" title="Creating Blend Containers">Creating Blend Containers</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch22s04s01.html" title="Working with Blend Tracks">Working with Blend Tracks</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch22s04s01.html#adding_and_removing_objects_from_blend_tracks" title="Adding and removing objects from Blend Tracks">Adding and removing objects from Blend Tracks</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch22s04s02.html" title="Managing crossfades">Managing crossfades</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch50s01.html" title="Changing the display of the graph view">Changing the display of the graph view</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch50s02.html" title="Working with control points in the graph view">Working with control points in the graph view</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch50s03.html" title="Working with curves in the graph view">Working with curves in the graph view</a>
+          </p></li></ul></div></div><HR></body></html>

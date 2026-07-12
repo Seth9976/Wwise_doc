@@ -1,0 +1,106 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBank Editor - Details Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s03s01.html" title="SoundBank Editor"><link rel="prev" href="ch61s03s01s03.html" title="SoundBank Editor - Edit Tab"><link rel="next" href="ch61s04.html" title="Game Syncs Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03.html">SoundBanks Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03s01.html">SoundBank Editor</a></span> &gt; <span class="breadcrumb-node">SoundBank Editor - Details Tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="soundbank_editor_details_tab"></a>SoundBank Editor - Details Tab</h4></div></div></div><p>The Details tab of the SoundBank Editor displays information about the size of the different elements within the selected SoundBank as well as any files that may be missing. The information on this tab is sorted by language.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Maximum size</p>
+								</td><td>
+									<p>The maximum amount of in-game memory that you allocated for a particular SoundBank.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Date updated</p>
+								</td><td>
+									<p>The date and time the SoundBank was created or last updated.</p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Types</p>
+								</td><td>
+									<p>The different types of objects that are included in the corresponding SoundBank, for example, SFX, Voice, and Music. If the SoundBank contains all four types of objects, the word &#8220;All&#8221; is displayed in this column.</p>
+								</td></tr><tr><td>
+									<p>Languages</p>
+								</td><td>
+									<p>A list of languages used in the current project. If more than one language is used, they will appear in alphabetical order.</p>
+									<p>If no Voice objects are included in the SoundBank, this field will be empty.</p>
+								</td></tr><tr><td>
+									<p>SFX</p>
+								</td><td>
+									<p>The amount of memory occupied by the Sound SFX objects in the current SoundBank.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Music</p>
+								</td><td>
+									<p>The amount of memory occupied by the Music objects in the current SoundBank.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Voice</p>
+								</td><td>
+									<p>The amount of memory occupied by the Sound Voice objects for a particular language.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Data Size</p>
+								</td><td>
+									<p>The amount of memory occupied by the Sound SFX and Sound Voice objects for a particular language.</p>
+									<p>The current size will appear in red if it exceeds the maximum allocated for this SoundBank.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can successfully generate a SoundBank even though it exceeds the maximum memory that you allocated.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p>Free Space</p>
+								</td><td>
+									<p>The amount of space remaining in the SoundBank. Free space is calculated by subtracting the Data Size from the maximum size. If the Data Size exceeds the Maximum size, the Free Space value will be displayed in red.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Missing Files</p>
+								</td><td>
+									<p>The number of media files, both Sound SFX and Sound Voice, missing from a particular language.</p>
+								</td></tr><tr><td>
+									<p>Files Replaced</p>
+								</td><td>
+									<p>The number of missing Sound Voice audio files in a particular language that are currently replaced by the audio files of the reference language.</p>
+								</td></tr><tr><td>
+									<p>Memory Size</p>
+								</td><td>
+									<p>The amount of space occupied by the SoundBank data that is to be loaded in memory.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Prefetch Size</p>
+								</td><td>
+									<p>The amount of space occupied by the prefetch data of the streamed media files. This information is loaded into memory when the SoundBank is loaded to ensure that the streamed media files playback without delays.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>File Size</p>
+								</td><td>
+									<p>The total size of the generated SoundBank file.</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch41s05.html#monitoring_details_of_soundbank" title="Monitoring the details of SoundBanks">Monitoring the details of SoundBanks</a>
+						</p></li></ul></div></div><HR></body></html>

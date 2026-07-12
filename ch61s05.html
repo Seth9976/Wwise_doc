@@ -1,0 +1,49 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>ShareSets Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61.html" title="Project Explorer"><link rel="prev" href="ch61s04s04s01.html" title="Property Editor: Trigger"><link rel="next" href="ch61s05s01.html" title="Effect Plug-in Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-node">ShareSets Tab</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="sharesets_tab"></a>ShareSets Tab</h2></div></div></div><p>The ShareSets tab of the Project Explorer displays a complete list of ShareSets organized into Work Units. You can create and manage your ShareSets and their corresponding Work Units in this tab. Included in the Effects section is a list of Factory Effects that ship with Wwise.</p><p>You can navigate through the different folders and Work Units by clicking the plus (+) and minus (-) signs to expand and collapse the various folders. The ShareSets tab also includes a toolbar that allows you to quickly add ShareSets, Work Units, and folders to your project hierarchy.  </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+							<p>(Toolbar)</p>
+						</td><td>
+							<p>Displays one or more icons representing the project elements that can be added as a parent or child of the selected node in the project explorer.</p>
+							<p>By default, the toolbar displays all project elements that can be added as a child of the selected node. To display the possible parent project elements, press the Shift key.</p>
+							<p>To add a child to the selected node, simply click one of the active icons in the icon bar. To add a parent to the selected node, simply Shift+click one of the active icons in the icon bar.</p>
+							<p>Different icons will become active depending on the type of object you currently have selected in the hierarchy.</p>
+						</td></tr><tr><td>
+							<p>Effects</p>
+						</td><td>
+							<p>A complete list of Effect ShareSets sorted by Virtual Folders and Effect Work Units for your project. Double-click an Effect ShareSet to open the <a class="xref" href="ch61s05s01.html" title="Effect Plug-in Editor">Effect Plug-in Editor</a>.</p>
+						</td></tr><tr><td>
+							<p>Attenuations</p>
+						</td><td>
+							<p>A complete list of Attenuation ShareSets sorted by Virtual Folders and Work Units for your project. Double-click an Attenuation ShareSet to open the <a class="xref" href="ch61s05s02.html" title="Attenuation Editor">Attenuation Editor</a>.</p>
+						</td></tr><tr><td>
+							<p>Conversion Settings</p>
+						</td><td>
+							<p>A complete list of Conversion Settings ShareSets sorted by Virtual Folders and Work Units for your project. Double-click a Conversion Settings ShareSet to open the <a class="xref" href="ch61s05s03.html" title="Conversion Settings Editor">Conversion Settings Editor</a>.</p>
+						</td></tr><tr><td>
+							<p>Modulators</p>
+						</td><td>
+							<p>A complete list of LFO, Envelope, and Time Modulator ShareSets sorted by Virtual Folders and Work Units for your project. Double-click a Modulator ShareSet to open the <a class="xref" href="ch61s05s04.html" title="Modulator Editor">Modulator Editor</a>.</p>
+						</td></tr><tr><td>
+							<p>Virtual Acoustics</p>
+						</td><td>
+							<p>A complete list of Virtual Acoustics ShareSets sorted by Virtual Folders and Work Units for your project. Virtual Acoustics, for now, consist only of Acoustic Textures. These textures work with the <a class="xref" href="ch67s20.html" title="Reflect">Reflect</a> plug-in to represent different material properties. These properties, such as frequency absorption, simulate the impact of different materials on early reflections.</p>
+							<p>For example, an anechoic material would have 100 for every field, meaning there would be absolute absorption and, thus, no reflections. On the other hand, a more reflective material such as concrete would typically reflect a fair bit and, as such, would have a much smaller amount of absorption (say, 10 to 30%) for all frequency bands, with the percentages tending larger for higher frequencies. Other materials, such as certain varieties of wood, might generally reflect less than a concrete; but, could have a greater percentage of frequency absorption for lower frequencies.
+							</p>
+							<p>Double-click the Texture to open the <a class="xref" href="ch61s05s05.html" title="Acoustic Texture Editor">Acoustic Texture Editor</a>.
+							</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>For Effects:</strong></span></p>
+						</td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch44s03.html" title="Using the Project Explorer toolbar">Using the Project Explorer toolbar</a></p></li><li class="listitem"><p><a class="xref" href="ch25.html#creating_effect_sharesets" title="Creating Effect ShareSets">Creating Effect ShareSets</a></p></li><li class="listitem"><p><a class="xref" href="ch25.html#deleting_effect_sharesets" title="Deleting Effect ShareSets">Deleting Effect ShareSets</a></p></li><li class="listitem"><p><a class="xref" href="ch25.html#converting_effect_sharesets_into_custom_instances" title="Converting Effect ShareSets into custom instances">Converting Effect ShareSets into custom instances</a></p></li><li class="listitem"><p><a class="xref" href="ch23s07s01.html#creating_an_attenuation_shareset" title="Creating Attenuation ShareSets">Creating Attenuation ShareSets</a></p></li><li class="listitem"><p><a class="xref" href="ch23s07s01.html#deleting_an_attenuation_shareset" title="Deleting Attenuation ShareSets">Deleting Attenuation ShareSets</a></p></li><li class="listitem"><p><a class="xref" href="ch23s07s02.html#applying_an_attenuation_shareset_to_an_object" title="Applying Attenuation ShareSets to objects">Applying Attenuation ShareSets to objects</a></p></li><li class="listitem"><p><a class="xref" href="ch23s07s02.html#converting_attenuation_sharesets_into_custom_instances" title="Converting Attenuation ShareSets into custom instances">Converting Attenuation ShareSets into custom instances</a></p></li><li class="listitem"><p><a class="xref" href="ch10s01.html#creating_work_units_in_project" title="Creating Work Units in your project">Creating Work Units in your project</a></p></li><li class="listitem"><p><a class="xref" href="ch35s06.html" title="Built-in Audio Devices">Built-in Audio Devices</a></p></li></ul></div></div><HR></body></html>

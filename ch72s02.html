@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Game Engine Integration</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch72.html" title="ReadSpeaker speechEngine"><link rel="prev" href="ch72s01.html" title="Platform Support"><link rel="next" href="ch72s03.html" title="Platform-Specific Setup"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt10.html">Certified Partner plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch72.html">ReadSpeaker speechEngine</a></span> &gt; <span class="breadcrumb-node">Game Engine Integration</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_game_engine_integration"></a>Game Engine Integration</h2></div></div></div><p>This section includes additional instructions for certain game engine integration scenarios.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="readspeaker_tts_unity_integration"></a>Copying libraries for the Unity Integration</h3></div></div></div><p> In addition to the speechEngine plug-in library, voices dynamic libraries are required at
+				runtime such as <code class="code">vt_eng.dll</code> or <code class="code">vt_fre.dll</code> for English and
+				French on Windows. </p><p>
+				To copy the required libraries during the build phase, use the Unity Editor helper script located in
+				the following directory in the Unity project:
+				<code class="code">SDK/Plugins/speechEngine/Unity/Editor/SpeechEnginePluginImporterScript.cs</code>
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="readspeaker_tts_unity_unreal_string_encoding"></a>Converting character encoding to UTF-8</h3></div></div></div><p>
+				Any text you send at runtime must use UTF-8 character encoding. Depending on the platform, you might have to convert text from a different type of encoding to UTF-8.
+				The following code samples for Unity and Unreal demonstrate how to convert UTF-16 encoding (the default on Windows) to UTF-8. You might have to modify the code for other platforms depending on the type of encoding they use.
+			</p><p>
+				<span class="bold"><strong>Unity:</strong></span>
+				</p><pre class="programlisting">
+public byte[] ConvertUtf16ToUtf8Bytes(string utf16String)
+{
+	// Get the UTF-8 encoding
+	Encoding utf8 = Encoding.UTF8;
+
+	// Convert the UTF-16 string to a UTF-8 byte array
+	byte[] utf8Bytes = utf8.GetBytes(utf16String);
+
+	return utf8Bytes;
+}
+
+byte[] textArray = ConvertUtf16ToUtf8Bytes(Text);
+System.Runtime.InteropServices.GCHandle pinned = System.Runtime.InteropServices.GCHandle.Alloc(textArray, System.Runtime.InteropServices.GCHandleType.Pinned);
+IntPtr address = pinned.AddrOfPinnedObject();
+AkUnitySoundEngine.SendPluginCustomGameData(0, this.gameObject, AkPluginType.AkPluginTypeSource, 312, 1, address, (uint)textArray.Length + 1);
+pinned.Free();
+				</pre><p>
+			</p><p>
+				<span class="bold"><strong>Unreal:</strong></span>
+				</p><pre class="programlisting">
+FString utf16_text = TEXT("This is a UTF-16 string at its core.");
+FStringView fStringView(utf16_text);
+auto ConvertedTemp = StringCast&lt;UTF8CHAR&gt;(fStringView.GetData(), fStringView.Len());
+auto utf8_text = ConvertedTemp.Get();
+SoundEngine-&gt;SendPluginCustomGameData(0, 100, AkPluginTypeSource, 312, 1, utf8_text, ConvertedTemp.Length() + 1);
+				</pre><p>
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="readspeaker_tts_unity_unreal_mac"></a>SoundBank Generation on Mac</h3></div></div></div><p> The speechEngine plug-in does not support the Mac platform. However, if you generate
+				SoundBanks through the Wwise Unreal or Unity Integration, SoundBanks are
+				automatically generated for Mac, which can cause errors. Therefore, we recommend
+				that you explicitly exclude all speechEngine elements from your Wwise project for
+				Mac to avoid such errors. See <a class="link" href="https://www.audiokinetic.com/en/library/edge/?source=Help&amp;id=authoring_across_platforms#excluding_project_elements_from_platform" target="_blank"> Excluding project elements from a platform</a> for more information. </p></div></div><HR></body></html>

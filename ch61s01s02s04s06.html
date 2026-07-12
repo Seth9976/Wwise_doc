@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Advanced category: Audio Busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s02s04.html" title="Common tabs and categories: Busses hierarchy objects"><link rel="prev" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses"><link rel="next" href="ch61s01s02s05.html" title="Contents Editor: Main Audio, Audio, and Auxiliary Busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02.html">Busses hierarchy</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02s04.html">Common tabs and categories: Busses hierarchy objects</a></span> &gt; <span class="breadcrumb-node">Advanced category: Audio Busses</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="advanced_settings_tab_bus"></a>Advanced category: Audio Busses</h5></div></div></div><p>The properties in the Advanced category for all Busses hierarchy objects, except <a class="link" href="ch61s01s02s03.html" title="Property Editor: Auxiliary Busses">Auxiliary Busses</a>, allow you to specify the overall number of sound, music, and/or motion instances that can be passed through a bus simultaneously.
+        </p><div class="informaltable"><a name="wwiseobject_bus_advanced"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Advanced</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Playback Limit</strong></span>
+        </td></tr><tr><td>
+		<p>Ignore Parent Playback Limit</p>
+	</td><td>
+		<p>Determines if the current object and its children are considered part of the parent&#8217;s playback limit (unchecked) or defined at this level (checked). If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Limit Sound Instances</p>
+	</td><td>
+		<p>The number of sound or motion instances within the same hierarchical structure that can play simultaneously.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Sound Instance Limit</p>
+	</td><td>
+		<p>Default value: 50</p>
+		<p>Range: 1 to 1000</p>
+	</td></tr><tr><td>
+		<p>When limit is reached:</p>
+	</td><td>
+		<p>Determines what happens when the playback limit is reached. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Kill voice for lowest priority:</strong></span> Stops playing instance with the lowest priority. When an object is killed, a small fade out of a few milliseconds is performed.</p></li><li class="listitem"><p><span class="bold"><strong>Use virtual voice settings for lowest priority:</strong></span> Sets the sound with the lowest priority to adopt its virtual voice behavior. Refer to the <span class="bold"><strong>Virtual voice behavior</strong></span> section in this table.</p></li></ul></div>
+		<p>Keep in mind that each entity can override its own behavior so that the virtual behavior of a sound can still be to discard the sound or to continue to play.</p>
+		<p>Default value: Kill voice</p>
+	</td></tr><tr><td>
+		<p>When priority is equal:</p>
+	</td><td>
+		<p>Determines what happens when the playback limit is reached and there is more than one object with the lowest priority. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Discard oldest instance</strong></span> to discard the oldest playing instance with the lowest priority.</p></li><li class="listitem"><p><span class="bold"><strong>Discard newest instance</strong></span> to discard the newest playing instance with the lowest priority.</p></li></ul></div>
+		<p>Default value: Discard oldest</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch24s02.html" title="Limiting object playback instances">Limiting object playback instances</a>
+            </p></li></ul></div></div><HR></body></html>

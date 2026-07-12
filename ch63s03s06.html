@@ -1,0 +1,35 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Devices</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s05.html" title="Sidechain Mixes"><link rel="next" href="ch63s03s07.html" title="Emitter-Listener Associations"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Audio Devices</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="advanced_profiler_audio_devices"></a>Audio Devices</h3></div></div></div><p>The Advanced Profiler - Audio Devices tab displays information about each of the Audio Devices active in the sound engine. Active devices are either specified at initialization of the sound engine using <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_output_settings.html" target="_blank"><code class="code">AkOutputSettings</code></a> when calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a9a26da64092b97243844df77cbcdbf5f.html#a9a26da64092b97243844df77cbcdbf5f" target="_blank"><code class="code">AK::SoundEngine::Init</code></a>, or they are added by calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a15ab79f954a307902f529d8ccde8ad48.html" target="_blank"><code class="code">AK::SoundEngine::AddOutput</code></a>, replaced by calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a81521a4611d3891c499ec9c5eb421ac2.html" target="_blank"><code class="code">AK::SoundEngine::ReplaceOutput</code></a>, or removed by calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a0932ed2a3669258ecc3bbe6448314020.html" target="_blank"><code class="code">AK::SoundEngine::RemoveOutput</code></a>.
+      </p><div class="informaltable"><a name="audiodevicestab_table"></a><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Audio Devices</p>
+              </td><td>
+                <p>Identifies the Audio Device ShareSet from the project.</p>
+              </td></tr><tr><td>
+                <p>Device ID</p>
+              </td><td>
+                <p>Identifies the specific device using this Audio Device ShareSet.</p>
+              </td></tr><tr><td>
+                <p>Specified Listeners</p>
+              </td><td>
+                <p>Shows listeners provided to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a15ab79f954a307902f529d8ccde8ad48.html" target="_blank"><code class="code">AK::SoundEngine::AddOutput</code></a>. Specified Listeners are only taken into account when multiple Audio Devices using the same ShareSet are active simultaneously. When using multiple Audio Devices sharing the same ShareSet, Specified Listeners identifies which listeners should output to this device. Audio Devices with no Specified Listeners will accept sounds from listeners not specified by any other Audio Devices using the same ShareSet.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch61s01s01.html" title="Audio Devices">Audio Devices</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch35s07.html" title="Understanding secondary outputs">Understanding secondary outputs</a>
+          </p></li></ul></div></div><HR></body></html>

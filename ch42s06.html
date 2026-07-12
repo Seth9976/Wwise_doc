@@ -1,0 +1,173 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Using File Packager arguments in the command line</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch42.html" title="Managing file packages"><link rel="prev" href="ch42s05.html" title="Packaging DLC files"><link rel="next" href="ch43.html" title="Migrating your projects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch42.html">Managing file packages</a></span> &gt; <span class="breadcrumb-node">Using File Packager arguments in the command line</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="using_file_packager_arguments_in_command_line"></a>Using File Packager arguments in the command line</h2></div></div></div><p>When generating the package file from the command line, you must use specific arguments to
+			define the characteristics of the package. The following table lists the arguments that
+			you can use.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="150px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+							<p>Argument</p>
+						</th><th>
+							<p>Description</p>
+						</th></tr></thead><tbody><tr><td>
+							<p><code class="code">-generate</code></p>
+						</td><td>
+							<p>Launches the file package generation process. You can combine this argument with the
+								File Packager project path or with the <code class="code">-info</code> argument.
+								Here are some examples:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Generate with a File Packager project:</p><p><code class="code">-generate {project_path}</code></p></li><li class="listitem"><p>Generate a single package with a <code class="code">SoundbanksInfo.xml</code> file:</p><p><code class="code">-generate -info {soundbank_info_filename} -output {package_name}</code></p></li><li class="listitem"><p>Generate a stream package and a bank package with a <code class="code">SoundbanksInfo.xml</code>
+										file:</p><p><code class="code">-generate -info {soundbank_info_filename} -output_stm {package_name}
+											-output_bnk {package_name}</code></p></li></ul></div>
+						</td></tr><tr><td>
+							<p><code class="code">-info {filename}</code></p>
+						</td><td>
+							<p>Specifies the location of the <code class="code">SoundbanksInfo.xml</code> file.</p>
+							<p>Use with one or multiple of the following:</p>
+							<p><code class="code">-output</code></p>
+							<p><code class="code">-put_</code></p>
+						</td></tr><tr><td>
+							<p><code class="code">-output {filename}</code></p>
+						</td><td>
+							<p>Generates one file package that include both SoundBank files and streamed media files.
+									<code class="code">{filename}</code> specifies the package name and location
+								in which to save the generated file package. </p>
+							<p>You can use this argument when the <code class="code">{projectpath}</code> is not specified. It can
+								be either a full file path or the package name. Both options require
+								the inclusion of the file package extension.</p>
+							<p>You can combine this argument with <code class="code">-output_stm</code> or <code class="code">-output_bnk</code>
+								to generate more than one package file, where each contains a
+								different set of files. </p>
+							<p>If you explicitly define the <code class="code">-output</code> argument, it takes precedence over
+								the value specified in the project.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-output_stm {filename}</code></p>
+						</td><td>
+							<p>Generates one file package that includes only streamed media files.
+									<code class="code">{filename}</code> specifies the package name and location
+								in which to save the generated file package. </p>
+							<p>You can use this argument when the <code class="code">{projectpath}</code> is not specified. It can
+								be either a full file path or the package name. Both options require
+								the inclusion of the file package extension.</p>
+							<p>You can combine this argument with <code class="code">-output</code> or
+									<code class="code">-output_bnk</code> to generate more than one package file,
+								where each contains a different set of files. </p>
+						</td></tr><tr><td>
+							<p><code class="code">-output_bnk {filename}</code></p>
+						</td><td>
+							<p>Generates one file package that include only SoundBank files.<code class="code">{filename}</code>
+								specifies the package name and location in which to save the
+								generated file package.</p>
+							<p>You can use this argument when the <code class="code">{projectpath}</code> is
+								not specified. It can be either a full file path or the package
+								name. Both options require the inclusion of the file package
+								extension.</p>
+							<p>You can combine this argument with <code class="code">-output</code> or
+									<code class="code">-output_stm</code> to generate more than one package file,
+								where each contains a different set of files. </p>
+						</td></tr><tr><td>
+							<p><code class="code">-output_loose {directory}</code></p>
+							<p><code class="code">-output_loose</code></p>
+						</td><td>
+							<p>Generates one or multiple file packages that include only loose media files. These
+								files are referenced by Events or structures in at least one
+								SoundBank, but are not included in any SoundBank in the project.
+									<code class="code">{directory}</code> is optional and specifies the location
+								in which to save the generated file packages. If
+									<code class="code">{directory}</code> is not specified, the packages are
+								generated in the same directory that contains the
+									<code class="code">SoundbanksInfo.xml</code> file.</p>
+							<p>You can use this argument when the <code class="code">{projectpath}</code> is not specified. It can
+								be either a relative or absolute directory.</p>
+							<p>You can combine this argument with <code class="code">-output</code>,
+									<code class="code">-output_stm</code>, or <code class="code">-output_bnk</code> to
+								generate more than one package file, where each contains a different
+								set of files. </p>
+						</td></tr><tr><td>
+							<p><code class="code">-blocksize {number}</code></p>
+						</td><td>
+							<p>The number of bytes upon which the data within your package is aligned. The number
+								depends on the requirements of the platform and your project's I/O
+								hook. </p>
+							<p>If not specified, a value of <code class="code">1</code> is used, which indicates no
+								alignment.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-hideprogressui {boolean}</code></p>
+						</td><td>
+							<p>Specifies whether the Generating Packages dialog is displayed while the packages are being generated from within Wwise.</p>
+							<p>If set to true, the progress dialog is not displayed. By default, this argument is set to false.</p>
+						</td></tr><tr><td>
+							<p><code class="code">{projectpath}</code></p>
+						</td><td>
+							<p>Specifies a File Packager project path that contains a <code class="code">WFPPROJ</code> file. When
+								used with the <code class="code">-generate</code> argument, other arguments are
+								ignored and the File Packager project is used to generate the
+								packages.</p>
+							<p>This argument is optional.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-soundbanks_dir {directory}</code></p>
+						</td><td>
+							<p>Overrides the information in the <code class="code">SoundbanksInfo.xml</code> file (at
+									<code class="code">SoundBanksInfo/RootPaths/SourceFilesRoot</code>) that
+								specifies the directory in which the generated SoundBanks were saved
+								by Wwise.</p>
+							<p>This argument is optional.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-cache_dir {directory}</code></p>
+						</td><td>
+							<p>Overrides the information in the <code class="code">SoundbanksInfo.xml</code>
+								file (at <code class="code">SoundBanksInfo/RootPaths/SourceFilesRoot</code>) that
+								specifies the directory in which the generated SoundBanks were saved
+								by Wwise.</p>
+							<p>This is normally written as <code class="code">projectpath\.cache\platform\</code></p>
+							<p>This argument is optional.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-languages "{language1} {languageN}"</code></p>
+						</td><td>
+							<p>Space-separated list that specifies the languages to package. Use double quotation
+								marks to enclose the list in a single argument.</p>
+							<p>Use the keyword <code class="code">"SFX"</code> in the language list to package
+								SFX files as well.</p>
+							<p>This argument is optional. By default all languages are packaged.</p>
+							<p>This argument is only used when the File Packager project is not specified.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-banks "{soundbank1} {soundbankN}"</code></p>
+						</td><td>
+							<p>Space-separated list that specifies the SoundBanks to package. Do not include the
+									<code class="code">.bnk</code> extensions. Use double quotation marks to
+								enclose the list in a single argument.</p>
+							<p>This argument is optional. By default all SoundBanks are packaged.</p>
+							<p>You can use this argument when the File Packager project is specified: it automatically
+								builds the packages that have references to the specified
+								SoundBanks.</p>
+						</td></tr><tr><td>
+							<p><code class="code">-includedFilesInBanks "{soundbank1} {soundbankN}"</code></p>
+						</td><td>
+							<p>Space-separated list of SoundBanks that include media files that you want to package as
+								loose media. Do not include the <code class="code">.bnk</code> extensions. Use
+								double quotation marks to enclose the list in a single argument. </p>
+							<p>You can use this option if the <code class="code">PrepareEvent</code> API needs
+								loose media, and banks loaded in memory also need the same
+								media.</p>
+							<p>This argument is optional. By default, media files included in SoundBanks are not added as loose files to packages.</p>              
+						</td></tr><tr><td>
+							<p><code class="code">-excludedFilesInBanks "{soundbank1} {soundbankN}"</code></p>
+						</td><td>
+							<p>Space-separated list of SoundBanks that include references to media files that you want
+								to package as loose files. Do not include the <code class="code">.bnk</code>
+								extensions. Use double quotation marks to enclose the list in a
+								single argument.</p>
+							<p>You can use this options if the <code class="code">PrepareEvent</code> API
+								needs loose media, and different SoundBanks loaded in memory also
+								need the same media.</p>
+							<p>This argument is optional. By default, media files that are referenced but not included
+								in a SoundBank are added to the package only if they are not
+								referenced in any other SoundBank.</p>              
+						</td></tr><tr><td>
+							<p><code class="code">-verbosity {level}</code></p>
+						</td><td>
+							<p>Specifies how much information is printed in the tool's standard output and error
+								streams. </p>
+							<p>Set the level to <code class="code">0</code> (errors only),  <code class="code">1</code> (errors and warnings),
+								or <code class="code">2</code> (errors, warnings, and information
+								messages).</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Printing messages can slow down the packaging process on large projects. If the tool
+									runs slowly, reduce the verbosity level to improve
+									performance.</p></td></tr></table></div>
+							<p>This argument is optional. By default, all message types are printed (level
+									<code class="code">2</code>).</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

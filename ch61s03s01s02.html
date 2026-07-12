@@ -1,0 +1,56 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBank Editor - Game Syncs Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s03s01.html" title="SoundBank Editor"><link rel="prev" href="ch61s03s01s01.html" title="SoundBank Editor - Add Tab"><link rel="next" href="ch61s03s01s03.html" title="SoundBank Editor - Edit Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03.html">SoundBanks Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03s01.html">SoundBank Editor</a></span> &gt; <span class="breadcrumb-node">SoundBank Editor - Game Syncs Tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="soundbank_editor_game_syncs_tab"></a>SoundBank Editor - Game Syncs Tab</h4></div></div></div><p>
+              The Game Syncs tab of the SoundBank Editor displays a list of game syncs that are referenced by the sound structures that have been added to your SoundBank. This list allows you to fine-tune the contents of your SoundBank by including or excluding specific events, object structures, or media files based on their relationship with a particular game sync.
+              For example, let's say you are using a Switch Container for your main character's footsteps, and the Switch Container has Switches for wood, tile, carpet, and water. The water Switch is only used in one zone in your game, so to avoid loading the &#8220;water footstep&#8221; sounds unnecessarily, you can exclude the Water Switch from every zone's SoundBank except the one where the water exists. By including/excluding sounds based on their relationship with game syncs, you have more control over what sounds are loaded at specific points in the game. This means you can better manage the memory limitations of the game's platform. To exclude a particular game sync as well as its corresponding objects and media files from the SoundBank, simply deselect the check box beside the game sync.
+				</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Game parameters are not included in the Game Sync list.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Include</p>
+								</td><td>
+									<p>Determines whether an individual game sync and its corresponding objects or media files are included in the SoundBank.</p>
+									<p>To exclude a game sync from the SoundBank, deselect its corresponding check box.</p>
+								</td></tr><tr><td>
+									<p>Game Sync</p>
+								</td><td>
+									<p>A list of States, Switches, and Triggers that are referenced by the Events and sound structures included on the Add tab.</p>
+									<p>Click the column title bar to sort the information alphabetically in either ascending or descending order.</p>
+									<p>Game syncs can be excluded from a SoundBank manually or by importing a SoundBank definition file. To help you distinguish between the two, an asterisk (*) is added to the name of the game syncs that have been excluded manually.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_include_all.png"></div>
+								</td><td>
+									<p>Includes all game syncs and their related objects and media files in the SoundBank.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_exclude_all.png"></div>
+								</td><td>
+									<p>Excludes all game syncs and their related objects and media files in the SoundBank.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s02.html" title="Including/excluding project elements using game syncs">Including/excluding project elements using game syncs</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s01.html" title="Including/excluding project elements from SoundBanks">Including/excluding project elements from SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s04.html" title="Searching for elements in SoundBanks">Searching for elements in SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s05.html" title="Filtering the list of elements in SoundBanks">Filtering the list of elements in SoundBanks</a>
+						</p></li></ul></div></div><HR></body></html>

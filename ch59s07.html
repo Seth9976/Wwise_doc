@@ -1,0 +1,25 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Meter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s06.html" title="Busses Console"><link rel="next" href="ch59s07s01.html" title="3D Meter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Meter</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="meter"></a>Meter</h2></div></div></div><p> The Meter view can display three different kinds of levels: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Peak</p></li><li class="listitem"><p>True Peak (as defined by ITU-R BS.1770-4)</p></li><li class="listitem"><p>RMS</p></li></ul></div><p>Each type of level shows the values per channel. For more information about speaker
+		configurations and channels, refer to <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>. </p><p>The color of the meter is:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>green under -6 dB</p></li><li class="listitem"><p>yellow from -6 dB to 0 dB</p></li><li class="listitem"><p>red over 0 dB</p></li></ul></div><p>The meter data source can be synchronized with the currently playing objects or, when a profiling session is present, with historical values. 
+	When the meter is showing the profiling session history, use the <span class="bold"><strong>LIVE</strong></span> button on the Wwise toolbar to return to current values.</p><p>For more information, refer to <a class="xref" href="ch35s11s02.html" title="Monitoring the signal level">Monitoring the signal level</a>. </p><p>For details on the Meter Instance, A, B, C, or D, refer to <a class="xref" href="ch05s01s01.html" title="Understanding Selection Channels and Meter Instances">Understanding Selection Channels and Meter Instances</a></p><p>The Meter displays the following elements:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+						<p>Peak</p>
+					</td><td>
+						<p>Peak metering measures the maximum or minimum values of a PCM signal for a very short period of time. (Units: dBFS)</p>
+					</td></tr><tr><td>
+						<p>True Peak</p>
+					</td><td>
+						<p>True peak is an estimate of the maximum peak of the digital signal in the analogue domain. This value is useful when making sure the digital to analogue converter is not saturated. (Units: dBTP)</p>
+						<p>True peak is implemented on ITU-R BS.1770-4 specifications.</p>
+					</td></tr><tr><td>
+						<p>Root mean square (RMS)</p>
+					</td><td>
+						<p>The RMS level is measured with the peak meter values and does an average over a very short period of time.</p>
+					</td></tr><tr><td>
+						<p>3D Meter</p>
+					</td><td>
+						<p>The 3D Meter mode provides a 3D spherical representation of the directionality of an ambisonic signal. It calculates the Peak level at every virtual speaker position on the sphere. A heatmap representation is then generated from each of the positions on the sphere. The 3D Meter mode is currently only available on busses that have an ambisonics bus configuration.</p>
+						<p>For more information regarding the 3D Meter mode, refer to <a class="xref" href="ch59s07s01.html" title="3D Meter">3D Meter</a>.</p>
+					</td></tr></tbody></table></div></div><HR></body></html>

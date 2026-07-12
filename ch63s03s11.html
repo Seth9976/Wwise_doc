@@ -1,0 +1,115 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Streaming Devices</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s10.html" title="Streams"><link rel="next" href="ch63s03s12.html" title="CPU"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Streaming Devices</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="streaming_devices"></a>Streaming Devices</h3></div></div></div><p>The Advanced Profiler - Streaming Devices tab displays information about how each of the streaming devices are managed by the Wwise sound engine. For in-depth details on I/O management in Wwise, refer to the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=streamingdevicemanager.html" target="_blank">
+        Streaming / Stream Manager</a> section of the SDK documentation.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Device Name</p>
+              </td><td>
+                <p>The name of the device. This is the string that is returned from your implementation of IAkLowLevelIOHook::GetDeviceDesc().</p>
+              </td></tr><tr><td>
+                <p>IO Pool Size</p>
+              </td><td>
+                <p>The amount of memory reserved for the streaming I/O memory pool of this device. The reserved size is set when the streaming device is created, using 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_device_settings_a75893592924a59881fe2cbca4e4ddd04.html" target="_blank">
+                    <code class="code">AkDeviceSettings::uIOMemorySize</code></a>.</p>
+              </td></tr><tr><td>
+                <p>Ratio Used</p>
+              </td><td>
+                <p>A graphical representation of the amount of memory used in relation to the total memory reserved in the streaming I/O pool. The darker gray bar represents the referenced cached memory (it cannot be discarded), while the lighter gray bar represents the unreferenced cached memory (it can be discarded).</p>
+              </td></tr><tr><td>
+                <p>Ref'd Mem.</p>
+              </td><td>
+                <p>The amount of memory that is currently used in the streaming I/O memory pool because it is either referenced by a stream or it is pinned to the cache.</p>
+              </td></tr><tr><td>
+                <p>Peak Ref'd Mem.</p>
+              </td><td>
+                <p>The maximum amount of referenced memory previously used in the streaming I/O memory pool&#8212;at any point before the cursor time.</p>
+                <p>This value can help you determine when the amount of memory being used is close to the reserved memory limit.</p>
+                <p>Unlike for other memory pools, it is acceptable to reach the streaming I/O pool limit from time to time. The most significant consequence is source starvation. However, if the streams require a lot more memory than what is available, they may stall for a very long time.</p>
+              </td></tr><tr><td>
+                <p>Cached Memory</p>
+              </td><td>
+                <p>The unreferenced memory in cache, meaning that which is neither in use by a playing stream nor pinned to cache, available in the streaming I/O memory pool.</p>
+              </td></tr><tr><td>
+                <p>Pinned to Cache</p>
+              </td><td>
+                <p>The streaming I/O memory pool cache memory that has been pinned (reserved) for use.</p>
+              </td></tr><tr><td>
+                <p>Allocs</p>
+              </td><td>
+                <p>The number of allocations performed since the streaming I/O memory pool was created.</p>
+                <p>When this number changes, it indicates that the streaming I/O memory pool is currently allocating memory.</p>
+              </td></tr><tr><td>
+                <p>Frees</p>
+              </td><td>
+                <p>The number of deallocations performed since the streaming I/O memory pool was created.</p>
+                <p>When this number changes, it indicates that the streaming I/O memory pool is currently deallocating memory.</p>
+              </td></tr><tr><td>
+                <p>Cur. Allocs</p>
+              </td><td>
+                <p>The number of memory blocks that are currently allocated in the streaming I/O memory pool. The Current Allocs value is the number of Allocs minus the number of Frees.</p>
+                <p>When this number changes, it indicates that the memory pool is currently allocating or deallocating memory.</p>
+              </td></tr><tr><td>
+                <p>Cache Efficiency</p>
+              </td><td>
+                <p>An estimation of the effectiveness of data caching. The cache efficiency is derived from the average difference between the low-level bandwidth and the total bandwidth (see "Bandwidth (Low-Level)" and "Total Bandwidth" below) over the lifetime of the profiling session.</p>
+                <p>Data caching may be enabled in the streaming I/O pool for a given device (see 
+                  <code class="code">AkDeviceSettings::bUseStreamCache</code>
+                  in the SDK documentation). Before preparing a data transfer, the streaming device searches in the pool for data corresponding to this file. If this data is found, then this data is used directly and no I/O transfer request is sent to the Low-Level I/O.</p>
+              </td></tr><tr><td>
+                <p>Granularity</p>
+              </td><td>
+                <p>The device's granularity (
+                  <code class="code">AkDeviceSettings::uGranularity</code>
+                  ). It represents the size of each memory block in the streaming I/O pool, and defines the size of I/O transfer requests to the Low-Level I/O.</p>
+              </td></tr><tr><td>
+                <p>Active Streams</p>
+              </td><td>
+                <p>The number of active streams in this device at any given point in time. A stream is active if its target buffering has not been reached, or if it is waiting for at least one I/O transfer to complete.</p>
+              </td></tr><tr><td>
+                <p>Total Bandwidth</p>
+              </td><td>
+                <p>The rate at which data was being streamed in the last profiling frame for all streams existing in this device. This value takes all transfers into account, including transfers that occurred from the Stream Manager's cache.</p>
+              </td></tr><tr><td>
+                <p>Bandwidth (Low-Level)</p>
+              </td><td>
+                <p>The rate at which the file was streamed in the last profiling frame for all streams existing in this device. Unlike the Total Bandwidth field, this field value considers transfers that occurred from within the low-level device. This value is always less than or equal to Total Bandwidth.</p>
+              </td></tr><tr><td>
+                <p>Completed Req. (Low-Level)</p>
+              </td><td>
+                <p>The number of I/O transfer requests that completed in the Low-Level I/O during the last profiling frame.</p>
+              </td></tr><tr><td>
+                <p>Canceled Req. (Low-Level)</p>
+              </td><td>
+                <p>The number of I/O transfer requests that were canceled in the Low-Level I/O during the last profiling frame.</p>
+              </td></tr><tr><td>
+                <p>Pending Req. (Low-Level)</p>
+              </td><td>
+                <p>The number of I/O transfer requests that were waiting to be completed by the Low-Level I/O when profiling occurred.</p>
+              </td></tr><tr><td>
+                <p>Custom Parameter</p>
+              </td><td>
+                <p>Displays the value that you return from your implementation of 
+                  <code class="code">IAkLowLevelIOHook::GetData()</code>
+                  .</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

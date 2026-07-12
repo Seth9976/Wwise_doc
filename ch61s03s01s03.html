@@ -1,0 +1,133 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBank Editor - Edit Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s03s01.html" title="SoundBank Editor"><link rel="prev" href="ch61s03s01s02.html" title="SoundBank Editor - Game Syncs Tab"><link rel="next" href="ch61s03s01s04.html" title="SoundBank Editor - Details Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03.html">SoundBanks Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03s01.html">SoundBank Editor</a></span> &gt; <span class="breadcrumb-node">SoundBank Editor - Edit Tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="soundbank_editor_edit_tab"></a>SoundBank Editor - Edit Tab</h4></div></div></div><p>The Edit tab of the SoundBank Editor displays every single project element that will be included in your SoundBank. This list is a breakdown of each element within the object hierarchies that were added to the Add tab. This breakdown allows you to fine-tune the contents of your SoundBank by excluding specific events, object structures, or media files.</p><p>More detailed information is displayed for the media files in the SoundBank, including sample rate, audio format, and file size. By having this additional information, you can easily tweak the Conversion Settings of each individual file to respect the constraints or limitations of a particular platform. To change the Conversion Settings of a media file, simply right-click the entry in the list and select Conversion Settings.</p><p>If you want to exclude a particular element from the SoundBank, simply clear the element's corresponding check box. You can sort the project elements alphabetically or in ascending/descending order by clicking any one of the column's title bars. You can also use the search or filters to help you find particular elements quickly.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Search</p>
+								</td><td>
+									<p>Filters the project elements that appear in the list.</p>
+									<p>Type a name or part of a name in this text box to display only those elements that contain corresponding letters in their name.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_reset.png"></div>
+								</td><td>
+									<p>Clears the contents of the Search field.</p>
+									<p>When the Search field is cleared, the entire list of project elements included in the SoundBank is displayed again.</p>
+								</td></tr><tr><td>
+									<p>(Language Filter)</p>
+								</td><td>
+									<p>
+                        Filters the list by language.
+									</p>
+									<p>The language filter allows you to review the contents of each language's SoundBank.</p>
+								</td></tr><tr><td>
+									<p>(Object Filter)</p>
+								</td><td>
+									<p>Filters the list by object type.</p>
+									<p>You can filter the list using any of the following object types:</p>
+									<p>
+										<span class="bold"><strong>Events</strong></span> - To display only the Events that were added to the SoundBank.
+									</p>
+									<p>
+										<span class="bold"><strong>Structures</strong></span> - To display only object structures that were added to the SoundBank.
+									</p>
+									<p>
+										<span class="bold"><strong>Media</strong></span> - To display only the media files that were added to the SoundBank.
+									</p>
+								</td></tr><tr><td>
+									<p>Include</p>
+								</td><td>
+									<p>Determines whether an individual event, object, or media file is included in the SoundBank.</p>
+									<p>To exclude a project element from the SoundBank, deselect its corresponding check box.</p>
+									<p>If you exclude a parent object, all corresponding child objects will be automatically excluded as well.</p>
+								</td></tr><tr><td>
+									<p>Object</p>
+								</td><td>
+									<p>A list of every object structure, event, and media file that is currently in the SoundBank.</p>
+									<p>Click the column title bar to sort the information alphabetically in either ascending or descending order.</p>
+								</td></tr><tr><td>
+									<p>Sample Rate</p>
+								</td><td>
+									<p>The sample rate of the audio file that will be included in the SoundBank.</p>
+									<p>The sample rate basically defines the number of times per second a digital audio signal is sampled, defined in Hertz (Hz). The sample rate range varies for each platform to a maximum of 48,000 Hz.</p>
+									<p>The sample rate information will appear in blue if the media file has not yet been converted for the current platform or in red if the original media file is missing from the project.</p>
+								</td></tr><tr><td>
+									<p>Format</p>
+								</td><td>
+									<p>
+                        The format of the audio file that will be included in the SoundBank, for example, PCM, Vorbis, or ADPCM.
+                        Refer to <a class="xref" href="ch35s10s01.html#about_audio_formats" title="About audio formats">About audio formats</a> for information on selecting the audio file format for your platform.
+									</p>
+									<p>The format information will appear in blue if the media file has not yet been converted for the current platform or in red if the original media file is missing from the project.</p>
+								</td></tr><tr><td>
+									<p>Memory Size</p>
+								</td><td>
+									<p>The amount of a platform's memory that will be taken up by the converted media files when this SoundBank is loaded into memory.</p>
+									<p>
+										<span class="bold"><strong>Unit</strong></span>: Bytes
+									</p>
+									<p>If a media file is streamed, the memory size will be zero.</p>
+								</td></tr><tr><td>
+									<p>Decoded Size</p>
+								</td><td>
+									<p>The amount of in-game memory that a SoundBank with decoded Opus or Vorbis media would use for the currently selected platform. If the SoundBank has no Opus or Vorbis media files, then this value will be same as the Data Size. 
+                  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If your SoundBank contains Sound Voices, then - like the Data Size column - the Decoded Size column will also be updated according to the currently selected language.</p></td></tr></table></div><p>
+									</p>
+									<p>
+										<span class="bold"><strong>Units</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>Prefetch Size</p>
+								</td><td>
+									<p>The amount of a platform's memory that will be taken up by the prefetch data associated with the streamed media file when this SoundBank is loaded into memory.</p>
+									<p>Prefetch data is loaded into memory to ensure that the streamed media file plays back without a delay.</p>
+									<p>
+										<span class="bold"><strong>Unit</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>File Size</p>
+								</td><td>
+									<p>The total size of the converted media file.</p>
+									<p>This number may not represent the amount of data that will be included in the generated SoundBank, depending on whether the media file is streamed and its prefetch status.</p>
+									<p>
+										<span class="bold"><strong>Unit</strong></span>: Bytes
+									</p>
+								</td></tr><tr><td>
+									<p>ID</p>
+								</td><td>
+									<p>The media file's unique 9-digit identification number.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_include_all.png"></div>
+								</td><td>
+									<p>Includes all events, objects, and media files in the SoundBank.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s01.html" title="Including/excluding project elements from SoundBanks">Including/excluding project elements from SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s04.html" title="Searching for elements in SoundBanks">Searching for elements in SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s05.html" title="Filtering the list of elements in SoundBanks">Filtering the list of elements in SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch35s10s01.html" title="Creating audio Conversion Settings ShareSets">Creating audio Conversion Settings ShareSets</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch35s10s05.html" title="Converting audio files">Converting audio files</a>
+						</p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,130 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Customizing keyboard shortcuts and commands</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch06.html" title="Speeding up the way you work"><link rel="prev" href="ch06.html" title="Speeding up the way you work"><link rel="next" href="ch06s02.html" title="Using the Batch Rename"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt01.html">Getting started</a></span> &gt; <span class="breadcrumb-link"><a href="ch06.html">Speeding up the way you work</a></span> &gt; <span class="breadcrumb-node">Customizing keyboard shortcuts and commands</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="keyboard_shortcuts"></a>Customizing keyboard shortcuts and commands</h2></div></div></div><p>To work faster, use keyboard shortcuts to type combinations of keys on your keyboard
+        instead of clicking through the UI. Use the Keyboard Shortcut dialog to configure most of
+        the keyboard shortcuts in Wwise. The available commands are listed, by category, in the
+        Keyboard Shortcuts dialog with their associated shortcut key.</p><p>When you hover the mouse over a button or tool in the interface, a tooltip appears. The
+        tooltip gives a description of the tool and often its associated keyboard shortcut. You can
+        also see keyboard shortcuts in the menus.</p><p>Wwise also has other keyboard shortcuts not listed here because they are not
+        editable.</p><div class="mediaobject"><img src="Images/KeyShortDialog.png"></div><div class="itemizedlist"><p class="title"><b>To show the Keyboard Shortcuts and Commands dialog</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In Wwise, click <span class="bold"><strong>Project &gt; Keyboard Shortcuts and
+              Commands</strong></span>. </p></li><li class="listitem"><p>Press <span class="bold"><strong>Ctrl+Shift+K</strong></span> (default).</p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="adding_keyboard_shortcuts"></a>Adding Keyboard Shortcuts</h3></div></div></div><p>For each command in the Keyboard Shortcuts and Commands dialog, you can set one or many
+        shortcut keys.</p><div class="orderedlist"><p class="title"><b>To assign a new shortcut to a command</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Select the command in the command list.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>New Shortcut</strong></span> edit box to place the
+            keyboard focus on it.</p></li><li class="listitem"><p>Press your shortcut on the keyboard. For example, to assign <span class="bold"><strong>Ctrl+B</strong></span> to a command, press and hold <span class="bold"><strong>Ctrl</strong></span>
+            and press <span class="bold"><strong>B</strong></span>.</p></li><li class="listitem"><p>If a conflict is shown, choose another shortcut key or remove the conflict.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Assign</strong></span>.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To unassign an existing shortcut on a command</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Select the command in the command list on the left.</p></li><li class="listitem"><p>Select the shortcut key you want to remove in the Current Shortcuts list.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Remove</strong></span>.</p></li></ol></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>To create a shortcut list for your own reference:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Open the <span class="bold"><strong>Keyboard Shortcuts and Commands</strong></span>
+              dialog.</p></li><li class="listitem"><p>Select the whole shortcut list (or press <span class="bold"><strong>Ctrl+A</strong></span>).</p></li><li class="listitem"><p>Press <span class="bold"><strong>Ctrl+C</strong></span> to copy the shortcuts.</p></li><li class="listitem"><p>Paste the tab-separated content in a spreadsheet application.</p></li></ol></div></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="custom_command_keyboard_shortcuts"></a>Adding Custom Commands from the Keyboard Shortcut Dialog</h3></div></div></div><p>Create your own shortlist of custom commands that can be assigned to keyboard shortcuts
+        to accommodate and speed up your workflows. This is done by saving your custom commands list
+        to a <code class="code">.json</code> file that is referenced by Wwise. Once loaded, your custom commands
+        are displayed in the Keyboard Shortcut menu.</p><p>Wwise&#8217;s Keyboard Shortcuts menu facilitates creating, editing and reloading your custom
+        commands.</p><div class="orderedlist"><p class="title"><b>To create a list of custom commands:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the <span class="bold"><strong>Keyboard Shortcuts and Commands</strong></span>
+            dialog.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Create</strong></span>. You are prompted to select the
+            location to save your list. Options are:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Create in Installation Folder</strong></span>: In the
+                  installation folder, under <code class="code">Authoring\\Data\\Add-onsCommands</code>.</p></li><li class="listitem"><p><span class="bold"><strong>Create in Project Folder</strong></span>: In the project
+                  folder, under <code class="code">Add-onsCommands</code>.</p></li><li class="listitem"><p><span class="bold"><strong>Create in User Folder </strong></span>: In the user data
+                  directory, under
+                  <code class="code">%APPDATA%\\Audiokinetic\\Wwise\\Add-onsCommands</code>.</p></li></ul></div></li><li class="listitem"><p>Select your preferred location. A file explorer window is opened and displays the
+            default <code class="code">commands.json</code> name for the file you&#8217;re about to create.</p></li><li class="listitem"><p>Optionally rename the file and click <span class="bold"><strong>Save</strong></span>. The
+              <code class="code">.json</code> file is saved at the specified location and is automatically opened
+            in your default editor.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>There can only be one <code class="code">.json</code> file per directory, used to define custom
+              commands.</p></td></tr></table></div></li><li class="listitem"><p>Populate your list of custom commands and save the file. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=defining_custom_commands.html" target="_blank">Defining Command Add-ons</a> for information on how to define custom
+            commands.</p></li><li class="listitem"><p>In Wwise, click <span class="bold"><strong>Reload All</strong></span>, to reload the latest
+            changes to the <code class="code">.json</code> file. Your custom commands are displayed in the list
+            of commands where you can assign keyboard shortcuts to them.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To edit a list of custom commands:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the <span class="bold"><strong>Keyboard Shortcuts and Commands</strong></span>
+            dialog.</p></li><li class="listitem"><p> Click <span class="bold"><strong>Edit</strong></span>. You are prompted to select the
+            location of your <code class="code">.json</code> file. Options are: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Edit in Installation Folder</strong></span>: In the
+                  installation folder, under <code class="code">Authoring\\Data\\Add-onsCommands</code>.</p></li><li class="listitem"><p><span class="bold"><strong>Edit in Project Folder</strong></span>: In the project
+                  folder, under <code class="code">Add-onsCommands</code>.</p></li><li class="listitem"><p><span class="bold"><strong>Edit in User Folder</strong></span>: In the user data
+                  directory, under
+                  <code class="code">%APPDATA%\\Audiokinetic\\Wwise\\Add-onsCommands</code>.</p></li></ul></div><p>
+          </p></li><li class="listitem"><p>Select the appropriate location. A file explorer window is opened and displays the
+              <code class="code">.json</code> file you created earlier.</p></li><li class="listitem"><p>Select the <code class="code">.json</code> file and click <span class="bold"><strong>Open</strong></span>.
+            The file is opened in your default editor.</p></li><li class="listitem"><p>Make your changes and save the file.</p></li><li class="listitem"><p>In Wwise, click <span class="bold"><strong>Reload All</strong></span> to reload the latest
+            changes to the <code class="code">.json</code> file. Your custom commands are displayed in the list
+            of commands and you can assign keyboard shortcuts to them.</p></li></ol></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Command List</strong></span></p>
+              </td></tr><tr><td>
+                <p>Name</p>
+              </td><td>
+                <p>Displays the name or category of the command.</p>
+              </td></tr><tr><td>
+                <p>Shortcut</p>
+              </td><td>
+                <p>Displays the list of shortcuts currently assigned to a specific
+                  command.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If the shortcut is grayed-out, it means the shortcut is read-only and is
+                    displayed for reference. It cannot be changed.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Command Add-ons</strong></span></p>
+              </td></tr><tr><td>Create</td><td>
+                <p>Displays a menu allowing you to create a new command definition file at the
+                  specified location.</p>
+              </td></tr><tr><td>Edit</td><td>
+                <p>Displays a menu allowing you to edit an existing command definition file at
+                  the specified location.</p>
+              </td></tr><tr><td>Reload All</td><td>
+                <p>Reloads all Command Add-ons from the definition files found at all known
+                  locations. This is used to reload your custom commands after editing the
+                  definition files.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Current Shortcuts</strong></span></p>
+              </td></tr><tr><td>
+                <p>Remove</p>
+              </td><td>
+                <p>Removes the currently selected shortcut(s) from the assignation list of the
+                  current command.</p>
+              </td></tr><tr><td>
+                <p>Reset to Default</p>
+              </td><td>
+                <p>Resets the current command to its factory default shortcut.</p>
+                <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>This action removes all shortcuts manually assigned to the current
+                    command.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>New Shortcut</strong></span></p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/editbox.png"></div>
+              </td><td>
+                <p>Edit-box to set a new shortcut for the current command. Once the key is
+                  entered, click <span class="bold"><strong>Assign</strong></span> to bind the shortcut key to
+                  the current command.</p>
+              </td></tr><tr><td>
+                <p>Assign</p>
+              </td><td>
+                <p>Assign the shortcut displayed in the edit box to the current command.</p>
+              </td></tr><tr><td>
+                <p>Reset All Shortcuts</p>
+              </td><td>
+                <p>Resets all commands in the list to their factory default shortcuts.</p>
+                <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>This action removes all manually assigned shortcuts from all
+                    commands.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Conflict</strong></span></p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/shortcut_conflict.png"></div>
+              </td><td>
+                <p>The conflict box is only visible when a conflict occurs after assigning a
+                  shortcut. It shows which command is creating the conflict.</p>
+              </td></tr><tr><td>
+                <p>Remove [conflict]</p>
+              </td><td>
+                <p>When a conflict occurs after assigning a shortcut, the <span class="bold"><strong>Remove</strong></span> button is displayed in the conflict box. Click <span class="bold"><strong>Remove</strong></span> to remove (unassign) the shortcut from the
+                  conflicting command.</p>
+              </td></tr><tr><td>
+                <p>Go to conflict</p>
+              </td><td>
+                <p>Go to the conflicting command. After the conflict is resolved, you must return
+                  to the original command and re-type the shortcut again.</p>
+              </td></tr></tbody></table></div></div></div><HR></body></html>

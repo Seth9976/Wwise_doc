@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voice Explorer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s09.html" title="Voice Monitor"><link rel="next" href="ch63s11.html" title="Game Object 3D Viewer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Voice Explorer</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="voice_explorer"></a>Voice Explorer</h2></div></div></div><p>The Voice Explorer shows the playing voices for the current cursor time set for the
+      profiling capture session. The voices are organized by playing instance, where each playing
+      instance corresponds to an Event being posted. For example, calling <span class="bold"><strong>PostEvent</strong></span> twice on the same Event will generate two playing instances in the
+      Voice Explorer. The Voice Explorer offers organization options to create rows for the Game
+      Object, Event name, and Event target.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>It is possible to change the profiling cursor time by clicking on the timeline of one of the following views: Voice Monitor, Performance Monitor, Game Sync Monitor. Click <span class="bold"><strong>LIVE</strong></span> in the Wwise toolbar to synchronize with the most recent data.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="c1"><col width="720px" class="c2"></colgroup><thead><tr><th align="left">Interface Element</th><th align="left">Description</th></tr></thead><tbody><tr><td>View Option</td><td>
+              <p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Toggle Game Object visibility</strong></span>: Groups
+                      voices by game object and playing instance.</p></li><li class="listitem"><p><span class="bold"><strong>Toggle Event visibility</strong></span>: Groups voices by
+                      event and playing instance.</p></li><li class="listitem"><p><span class="bold"><strong>Toggle Event Target visibility</strong></span>: Groups
+                      voices by event target and playing instance.</p></li></ul></div><p>
+              </p>
+            </td></tr><tr><td>Voice List</td><td><p>Displays the playing voice list, organized by playing instance. The columns vary
+              according to the view options.</p>
+              <p>Columns:</p><p>
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Mute/Solo</strong></span>: Mute or Solo the Game Object,
+                      Target or Sound object.</p></li><li class="listitem"><p><span class="bold"><strong>Game Object</strong></span>: The game object specified on
+                      the PostEvent call. (Only visible when grouping by Game Object is <span class="bold"><strong>not</strong></span> activated.).</p></li><li class="listitem"><p><span class="bold"><strong>Event</strong></span>: The event name from which the
+                      sound originated. ( Only visible when grouping by Event is <span class="bold"><strong>not</strong></span> activated.).</p></li><li class="listitem"><p><span class="bold"><strong>Target</strong></span>: The Event's target name from
+                      which the sound originated. ( Only visible when grouping by Target is
+                        <span class="bold"><strong>not</strong></span> activated.).</p></li><li class="listitem"><p><span class="bold"><strong>Name</strong></span>: The name of the Game Object, Event,
+                      Target or Sound object.</p></li><li class="listitem"><p><span class="bold"><strong>ID</strong></span>: The Game Object ID, Event ID, Target
+                      ID or Sound ID.</p></li><li class="listitem"><p><span class="bold"><strong>Bus</strong></span>: The output bus name.</p></li><li class="listitem"><p><span class="bold"><strong>Listener</strong></span>: The Listener associated with
+                      the game object.</p></li></ul></div><p>
+              </p></td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch40s10.html" title="Analyzing voices with the Voice Inspector">Analyzing voices with the Voice Inspector</a>
+        </p></li></ul></div></div><HR></body></html>

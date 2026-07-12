@@ -1,0 +1,73 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Specifying project settings for External Sources</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03s05.html" title="Defining environmental curves for your project"><link rel="next" href="ch07s03s07.html" title="Specifying network ports"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Specifying project settings for External Sources</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="specifying_input_output_locations_for_external_sources"></a>Specifying project settings for External Sources</h3></div></div></div><p>If you plan to use the <a class="xref" href="ch66s03.html" title="External Source">External Source</a> plug-in you
+				must specify the location of the External Sources List file. This is an XML file
+				that specifies:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The location of the external audio files that can be associated with the External Source
+						you created in Wwise.</p></li><li class="listitem"><p>The Conversion Settings that will be used to convert each file. </p></li></ul></div><p>You must also specify the folder in which the converted sources will be saved so that they can be used by the Wwise sound engine at runtime. The output folder path can also include environment variables as part of the path, for example, <code class="code">$(WWISESDK)</code> or <code class="code">$(TEMP)</code>.</p><p>You can override these project settings with the user settings of the SoundBank Manager.
+				See <a class="xref" href="ch41s04.html#specifying_input_ouput_location_for_external_source_files" title="Specifying user settings for external sources">Specifying user settings for external sources</a>.</p><div class="orderedlist"><p class="title"><b>To specify project settings for external sources:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project</strong></span> &gt; <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>In the Project Settings dialog, switch to the <a class="xref" href="ch07s03s06.html#external_sources_tab" title="External Sources tab of the Project Settings dialog">External Sources tab of the Project Settings dialog</a>.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Input Path</strong></span> group, specify a folder where the External Sources List file (WSOURCES) is located by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Click in the <span class="bold"><strong>External Sources List</strong></span> and type the path where the External Sources List file is located.</p></li><li class="listitem"><p>Click the browse button [&#8230;] that corresponds to one of the game platforms, navigate to the folder that contains the External Sources List file for that platform, and then click <span class="bold"><strong>Open</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Repeat step <span class="bold"><strong>3</strong></span> for each of the active platforms in your project.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Output Path</strong></span> group, specify a folder where the converted external sources will be saved by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Click in the <span class="bold"><strong>External Sources Output Folder</strong></span> list and type the path where you want the audio files to be saved.</p></li><li class="listitem"><p>Click the browse button [&#8230;] that corresponds to one of the game platforms to use the <a class="xref" href="ch07s03s01.html#advanced_folder_picker_dlg" title="Advanced Folder Picker">Advanced Folder Picker</a> to specify the folder where you want to save the converted audio files for that platform, and then click <span class="bold"><strong>OK</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Repeat step <span class="bold"><strong>5</strong></span> for each of the platforms.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to close the Project Settings dialog.</p></li></ol></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="external_sources_tab"></a>External Sources tab of the Project Settings dialog</h4></div></div></div><p>In the External Sources tab of the Project Settings dialog, you can specify
+					the location of the External Sources List file. This XML file contains
+					information about the audio files used by the <a class="xref" href="ch66s03.html" title="External Source">External Source</a> plug-in, including their
+					location, conversion settings, and output folder where the external source audio
+					files are saved for use in your game.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+									<p><span class="bold"><strong>Input Path</strong></span></p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Platform</p>
+								</td><td>
+									<p>The names of the various platforms that are currently
+										active in your project.</p>
+								</td></tr><tr><td>
+									<p>External Sources List</p>
+								</td><td>
+									<p>The full path where the External Sources List file is
+										located.</p>
+									<p>This XML file contains information about the external
+										sources, including their location and the Conversion
+										Settings used to convert the files.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+									<p>(Browse)</p>
+								</td><td>
+									<p>Opens a Windows browser where you can navigate to and
+										select the External Sources List file.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Output Path</strong></span></p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Platform</p>
+								</td><td>
+									<p>The names of the various platforms that are currently
+										active in your project.</p>
+								</td></tr><tr><td>
+									<p>External Sources Output Folder</p>
+								</td><td>
+									<p>The folder where the converted external sources will be
+										output.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+									<p>(Browse)</p>
+								</td><td>
+									<p>Opens the Browse For Folder dialog where you can navigate
+										to the folder where the converted external audio sources
+										will be saved.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog and saves your
+										settings.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog without saving your
+										settings.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s06.html" title="Specifying project settings for External Sources">Specifying project settings for External Sources</a></p></li></ul></div></div></div><HR></body></html>

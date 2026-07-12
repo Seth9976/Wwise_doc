@@ -1,0 +1,93 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Conversion - In Progress/Stopped</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35s10.html" title="Managing audio file conversion"><link rel="prev" href="ch35s10s05.html" title="Converting audio files"><link rel="next" href="ch35s10s07.html" title="Conversion tips and best practices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-link"><a href="ch35s10.html">Managing audio file conversion</a></span> &gt; <span class="breadcrumb-node">Conversion - In Progress/Stopped</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="conversion_in_progress_stopped"></a>Conversion - In Progress/Stopped</h3></div></div></div><p>The Conversion - In Progress dialog contains a primary progress bar that displays the
+			overall progress of the audio source conversion as well as a set of secondary progress
+			bars for each file that is being converted. The number of secondary progress bars will
+			depend on the number of processing cores on your machine. Wwise uses each processing
+			core to make the conversion process as fast as possible. The dialog also displays a log
+			that contains information about the conversion process including the status of the
+			conversion and any errors.</p><p>You can stop the conversion process at any point. When the conversion is interrupted,
+			Wwise automatically displays the Conversion - Stopped dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+							<p>Operation</p>
+						</td><td>
+							<p>Displays the name of the high-level task being performed along
+								with the name of each file that is being converted.</p>
+						</td></tr><tr><td>
+							<p>Progress</p>
+						</td><td>
+							<p>A series of progress bars that displays the progression of the
+								media files that are being converted.</p>
+							<p>A primary progress bar displays the overall progress of the audio
+								source conversion. One or more secondary progress bars display the
+								progress of each media file as it is being converted. If your
+								machine has a multi-core processor, each core will have its own
+								progress bar.</p>
+							<p>This column is empty when the conversion is stopped.</p>
+						</td></tr><tr><td>
+							<p>Details</p>
+						</td><td>
+							<p>Displays detailed information about the particular task being
+								performed by each core.</p>
+							<p>This column is empty when the conversion is stopped.</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Log</strong></span></p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/SoundBank_Log_Color_Yellow.png" width="13"></td></tr></table></div>
+							<p>(Type - Color)</p>
+						</td><td>
+							<p>Displays the color associated with the different types of
+								messages. The following types exist in the Log:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>Yellow</strong></span> - For conversion
+										warnings. </p></li><li class="listitem"><p>
+										<span class="bold"><strong>Red</strong></span> - For conversion
+										errors. </p></li><li class="listitem"><p>
+										<span class="bold"><strong>White</strong></span> - For general
+										messages. </p></li></ul></div>
+						</td></tr><tr><td>
+							<p>Time</p>
+						</td><td>
+							<p>The time the warning, error, or message was generated.</p>
+						</td></tr><tr><td>
+							<p>ID</p>
+						</td><td>
+							<p>The ID assigned to the particular error, warning, or
+								message.</p>
+						</td></tr><tr><td>
+							<p>Message</p>
+						</td><td>
+							<p>A description of the issue that was encountered while the file was
+								being converted.</p>
+						</td></tr><tr><td>
+							<p>Platform</p>
+						</td><td>
+							<p>The platform on which the issue was found.</p>
+						</td></tr><tr><td>
+							<p>Parameters</p>
+						</td><td>
+							<p>A list of project elements that are related to the error, warning,
+								or message.</p>
+							<p>You can double-click a project element to load it into its
+								editor.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_copy_to_clipboard.png"></div>
+						</td><td>
+							<p>Copies the information in the Message text box to the Windows
+								clipboard so that you can paste the information into a new
+								file.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_stop.png"></div>
+						</td><td>
+							<p>Stops the conversion process and displays the Conversion - Stopped
+								dialog.</p>
+							<p>This button is only available in the Conversion - In Progress
+								dialog.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_close.png"></div>
+						</td><td>
+							<p>Closes the Conversion Stopped dialog.</p>
+							<p>This button is only available in the Conversion - Stopped
+								dialog.</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

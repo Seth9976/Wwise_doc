@@ -1,0 +1,158 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Multiband Meter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s13.html" title="Meter"><link rel="next" href="ch67s15.html" title="Parametric EQ"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Multiband Meter</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_multiband_meter_plug_in_effect"></a>Multiband Meter</h2></div></div></div><p>The Multiband Meter Effect is similar to the Meter Effect, but meters multiple frequency bands of the audio signal in one effect, and drives values for multiple game parameters. The Multiband Meter provides enhanced control over the frequency space of a mix, which you can use to implement advanced forms of side-chaining with RTPCs.</p><p>The Multiband Meter plug-in is built into Wwise. For information on applying it to
+		objects, see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>The Effect performs the following steps:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Downmixes the input audio signal into a single channel of data.</p></li><li class="listitem"><p>Performs a fullband measurement of the level of the audio signal.</p></li><li class="listitem"><p>Runs a bank of parallel Butterworth high-pass and low-pass filters to split the audio signal into multiple frequency bands.</p></li><li class="listitem"><p>Measures the level of each filtered audio signal.</p></li></ol></div><p>It is also possible to monitor the filtered audio signals when Wwise is connected to the sound engine. Typically, the Multiband Meter Effect does not modify the output audio signal in any way. However, when one of the <span class="bold"><strong>Listen</strong></span> check boxes is set, the output audio of the Multiband Meter Effect is replaced with one of the filtered audio signals used for the metering process. This is intended to be used for debugging purposes, in order to review which portion of the audio signal is being metered.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_multiband_meter_properties"></a>Multiband Meter properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+		<p>Mode</p>
+	</td><td>
+		<p>The metering mode. This plug-in can be set to track either peak values or RMS.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Peak</strong></span>: Sets the meter to Peak mode, which is more reactive to transients.</p></li><li class="listitem"><p><span class="bold"><strong>RMS</strong></span>: Sets the meter to RMS mode, which is generally better for voice work.</p></li></ul></div>
+		<p>Default value: RMS</p>
+	</td></tr><tr><td>
+		<p>Scope</p>
+	</td><td>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Global</strong></span>: Sets the meter to work on all input into the applicable Wwise audio element (a bus, container, Music Segment, or anything else) and treats multiple game object instances of the element as a collective single game object.</p></li><li class="listitem"><p><span class="bold"><strong>Game Object</strong></span>: Sets the meter to apply to input into each game object instance.</p></li></ul></div>
+		<p>Default value: Global</p>
+	</td></tr><tr><td>
+		<p>Infinite Hold</p>
+	</td><td>
+		<p>When enabled, the output value is held indefinitely at the highest level monitored after the option was enabled. In other words, the output value can increase but never decrease.</p>
+		<p>While this option is enabled, the Hold property value has no effect.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Apply Downstream Volume</p>
+	</td><td>
+		<p>When enabled, the meter will display volume gains applied at a higher level. For example, if the volume of the Main Audio Bus is increased by 10 and the volume of a child Audio Bus is decreased by 15, then all its children will inherit the sum total gain of -5. Although the gain is always audible, the meter only reflects it when this option is enabled.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Per-Band Properties and Dynamics</strong></span></p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Output Game Parameter</strong></span></p>
+						</td></tr><tr><td>
+							<p></p>
+						</td><td>
+							<p>When set, the output value is sent to this Game Parameter based on the playing instance's Scope, either a specific Game Object or globally.
+						</p>
+							<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Make sure that the range of the selected Game Parameter contains the output value range. For more information on setting the Game Parameter range, refer to <a class="xref" href="ch61s04s03s01.html" title="Property Editor: Game Parameter">Property Editor: Game Parameter</a>.</p></td></tr></table></div>
+						</td></tr><tr><td>
+		<p>Low Freq</p>
+	</td><td>
+		<p>The lower end of the frequency range to be metered. A high-pass filter at this frequency point is performed for the metering process.</p>
+		<p>Default value: 800</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>Low Roll-off</p>
+	</td><td>
+		<p>The roll-off of the frequency range to be metered. Higher values result in sharper roll-offs around the range being metered.</p>
+		<p>Default value: 24 dB/Oct</p>
+		<p>Units: dB/octave </p>
+	</td></tr><tr><td>
+		<p>High-Freq</p>
+	</td><td>
+		<p>The upper end of the frequency range to be metered. A low-pass filter at this frequency point is performed for the metering process.</p>
+		<p>Default value: 16000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>High Roll-off</p>
+	</td><td>
+		<p>The roll-off of the frequency range to be metered. Higher values result in sharper roll-offs around the range being metered.</p>
+		<p>Default value: Disabled</p>
+		<p>Units: dB/octave </p>
+	</td></tr><tr><td>
+		<p>Attack</p>
+	</td><td>
+		<p>The time it takes for the output value to rise by 10 decibels, when the monitored level is above the current output value.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0 to 10</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Hold</p>
+	</td><td>
+		<p>The time it takes for the output value to start falling from the moment the monitored level goes below the current output value.</p>
+		<p>This property has no effect while Infinite Hold is enabled.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 10</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Release</p>
+	</td><td>
+		<p>The time it takes for the output value to fall by 10 decibels, when the monitored level is below the current output value.</p>
+		<p>Default value: 0.1</p>
+		<p>Range: 0 to 10</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Min</p>
+	</td><td>
+		<p>The minimum output value.</p>
+		<p>Default value: -48</p>
+		<p>Range: -96.3 to 0</p>
+	</td></tr><tr><td>
+		<p>Max</p>
+	</td><td>
+		<p>The maximum output value.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 12</p>
+	</td></tr><tr><td>
+		<p>Listen</p>
+	</td><td>
+		<p>When selected, the output audio signal of the Effect is replaced with the filtered audio signal that is being metered for the given band. This can be used for debugging purposes to check precisely what audio is being analyzed for the given band. </p>
+		<p>Only one band can be listened to at a time. This property is not persisted, and is only relevant when connected to a running instance of the sound engine.</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Object List</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s05s01.html" title="Audio Object 3D Viewer Options"><link rel="next" href="ch63s07.html" title="Audio Object Metadata"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Audio Object List</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="audio_object_list"></a>Audio Object List</h2></div></div></div><p dir="ltr">The Audio Object List view provides detailed information about Audio Objects as
+      they go through the bus pipeline. The information is presented in a tree view, which
+      represents the busses and Audio Objects instantiated at the current profiler cursor
+      time.</p><p dir="ltr">The Audio Object List can also show the different Effect stages of busses.
+      Effects inserted on busses have the ability to modify, delete, or create Audio Objects. For
+      example, Reflect could create new Audio Objects based on game data.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p dir="ltr">To have information in this view, you must enable <span class="bold"><strong>Audio
+          Object Data</strong></span> in the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> prior to capturing data,
+        and you must select a point in time from the capture. </p></td></tr></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Non-mixing busses are not displayed in the Audio Object List view. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more information on the processing status of
+        busses.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+            </td><td>
+              <p>Click the View Settings icon in the upper right corner of the view to open the
+                  <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> dialog, where you can specify the type of
+                data to capture.</p>
+            </td></tr><tr><td align="left">
+              <p>Item</p>
+            </td><td>
+              <p>Shows the names of devices, busses, stages and Audio Objects. When an Audio
+                Object does not have a name, the instigator name is shown.</p>
+            </td></tr><tr><td align="left">
+              <p>Game Object</p>
+            </td><td>
+              <p>Shows the name of the game object associated with the item. For busses, this is
+                the game object associated with the bus, if any. For Audio Objects, this is the game
+                object associated with the instigator.</p>
+            </td></tr><tr><td align="left">
+              <p>Pipeline ID</p>
+            </td><td>
+              <p dir="ltr">For busses - shows the pipeline ID for the bus.</p>
+              <p dir="ltr">For Audio Objects - shows the pipeline ID for the instigator of the
+                Audio Object.</p>
+              <p dir="ltr">The instigator is the pipeline element from which the Audio Object was
+                created. The instigator can either be a bus pipeline element or a voice pipeline
+                element. The instigator also defines the metadata inserted on the Audio
+                Object.</p>
+              <p dir="ltr">In some cases, an Audio Object could refer to an instigator that does
+                not exist anymore. For example, in the case of an effect tail, the pipeline element
+                from which the Audio Object was created could be terminated. In this scenario, the
+                name might only refer to the pipeline ID. Use the Filtering Toolbar prefixed with
+                &#8220;pipelineId:&#8221; to find the pipeline element in the Voice Monitor.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_pre_effects.png"></div>
+            </td><td>
+              <p dir="ltr">Shows only the Audio Objects for the Pre-Effects stage in the list.
+                The Pre-Effects stage is placed just before Effects are processed. When mixing
+                happens on a bus (refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for
+                details), the Pre-Effects stage is after the mixing stage.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_post_effects.png"></div>
+            </td><td>
+              <p dir="ltr">Shows only the Audio Objects for the Post-Effects stage in the
+                list.</p>
+              <p dir="ltr">The Post-Effect stage is placed just after all Effects are processed. </p>
+              <p dir="ltr">If no Effects are inserted on the bus, the Pre-Effects stage and the
+                Post-Effects stage are equivalent.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/alleffects_button.png"></div>
+            </td><td>
+              <p dir="ltr">Shows the Audio Objects in all of the Effect stages, including the
+                Pre-Effects stage.</p>
+              <p dir="ltr">The Audio Objects are monitored before and after each Effect.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_display_options_arrow.png"></div>
+            </td><td>
+              <p>Defines which mode is used to display the meters.</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Peak</strong></span>: The standard display mode. Each
+                    channel is displayed. The values represent the peak PCM values in decibels for
+                    the region drawn. </p></li><li class="listitem"><p><span class="bold"><strong>RMS</strong></span>: Shows the RMS (Root Mean Square)
+                    values. All channels are collapsed. The values represent the peak RMS values for
+                    the region drawn. </p></li></ul></div>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+              <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+              <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+              <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+              <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+            </td><td>
+              <p>If there is an instigator object - these buttons control the Mute and Solo
+                states for the instigator object and show the implicit mute and solo states for the
+                instigator object. </p>
+              <p>Muting an instigator object silences this instigator object for the current
+                monitoring session. Soloing an instigator object silences all the other objects in
+                the project except this one.</p>
+              <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span>
+                indicates that the Mute or Solo state has been explicitly set for the instigator
+                object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the instigator object's Mute or Solo
+                state was implicitly set from another object's state.</p>
+              <p>Muting an instigator object implicitly mutes the descendant objects.</p>
+              <p>Soloing an instigator object implicitly mutes the sibling objects and implicitly
+                solos the descendant and ancestor objects.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not
+                  persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/enable_filter_icon.png"></div>
+              <div class="mediaobject"><img src="Images/no_visibility_icon.png"></div>
+            </td><td>
+              <p>A Visibility icon that is active <span class="inlinemediaobject"><img src="Images/enable_filter_icon.png"></span> when the objects of the Effect stage are visible in the <a class="xref" href="ch63s05.html" title="Audio Object 3D Viewer">Audio Object 3D Viewer</a>, and inactive <span class="inlinemediaobject"><img src="Images/no_visibility_icon.png"></span> when they are not.</p>
+            </td></tr><tr><td align="left">
+              <p>Item</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td align="left">
+              <p>Game Object</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td align="left">
+              <p>Audio Object ID</p>
+            </td><td>
+              <p>Shows the unique ID of an Audio Object. An Audio Object will change ID each time
+                it is routed, either to its parent bus, or to an auxiliary bus. The Audio Object ID
+                can also change when Audio Objects are going through Effects.</p>
+            </td></tr><tr><td align="left">
+              <p>Pipeline ID</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td align="left">
+              <p>3D Spatialization</p>
+            </td><td>
+              <p>Indicates if the Audio Object has 3D spatialization.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch13s03.html" title="Understanding object-based audio">Understanding object-based audio </a></p></li><li class="listitem"><p><a class="xref" href="ch40s12.html" title="Profiling Audio Objects">Profiling Audio Objects</a></p></li></ul></div></div><HR></body></html>

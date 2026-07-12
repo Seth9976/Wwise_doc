@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Getting to know the Property Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch45.html" title="Getting to know the Event Viewer"><link rel="next" href="ch46s01.html" title="Object specific category"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Getting to know the Property Editor</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="getting_to_know_property_editor"></a>Getting to know the Property Editor</h2></div></div></div><p>You can use the Property Editor to view and change the properties of objects. Properties are
+		grouped into categories that each have a category filter. You can select one or more
+		categories to display their properties in the Property Editor. Hold Ctrl or Shift to select
+		multiple category filters. You can also select the All category to display all properties
+		for the object. Alternatively, you can select the properties you use the most by creating a
+		Favorites group.</p><div class="mediaobject"><img src="Images/property_editor_category_properties.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Callout1.png"></div>
+					</td><td>The selected General category.</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Callout2.png"></div>
+					</td><td>The All category. When selected, all categories are displayed in the Property
+						Editor.</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Callout3.png"></div>
+					</td><td>The Favorites category. When selected, displays the properties you have configured as
+						Favorites. See <a class="xref" href="ch46.html#property_favorites" title="Configuring a Favorites category">Configuring a Favorites category</a>.</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Callout4.png"></div>
+					</td><td>The heading for the group of Voice properties.</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Callout5.png"></div>
+					</td><td>The properties under the Voice group heading.</td></tr></tbody></table></div><p>The Property Editor is visible:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In its own window. From the menu bar, click <span class="bold"><strong>Views &gt; Editors &gt;
+					Property Editor</strong></span> (Ctrl+K) or click the Open in New Window icon at the
+				bottom right of the Editor pane.</p></li><li class="listitem"><p>In the Object Tab Group of the Designer layout. See <a class="xref" href="ch52.html" title="Working with Object Tabs and Object Tab Groups"><i>Working with Object Tabs and Object Tab Groups</i></a> and <a class="xref" href="ch05s02.html" title="Working with layouts">Working with layouts</a>.</p></li></ul></div><p>Select an object in the Project Explorer to view its properties in the Property Editor. The
+		properties and categories that are displayed depend on the type of object. See <a class="xref" href="ch46s01.html" title="Object specific category">Object specific category</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you open the Property Editor in a new window, categories are added to include the
+				properties from the primary editor. For example, for Sound SFX objects, the Effects
+				category is displayed in the floating Property Editor.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577869088"></a>Customizing which categories are displayed in the Property Editor</h2></div></div></div><p>Choose which categories are displayed in the Property Editor by clicking <span class="bold"><strong>Show/Hide Category Filters</strong></span>
+			<span class="inlinemediaobject"><img src="Images/btn_display_options_arrow.png"></span> and selecting or deselecting them.</p><p><a name="categories"></a>Depending on the object type, the following categories might be
+			available:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch46s02.html" title="General category">General category</a></p></li><li class="listitem"><p><a class="xref" href="ch46s03.html" title="Routing category">Routing category</a></p></li><li class="listitem"><p><a class="xref" href="ch46s04.html" title="Conversion category">Conversion category</a></p></li><li class="listitem"><p>
+					<a class="xref" href="ch46s05.html" title="Positioning category">Positioning category</a> (for Containers hierarchy and most Busses
+					hierarchy objects)</p></li><li class="listitem"><p>
+					<a class="xref" href="ch46s06.html" title="HDR category">HDR category</a> (for Containers hierarchy objects and Audio Busses)</p></li><li class="listitem"><p>
+					<a class="xref" href="ch46s07.html" title="MIDI category">MIDI category</a> (for Containers hierarchy objects) </p></li><li class="listitem"><p>
+					<a class="xref" href="ch46s08.html" title="Advanced category">Advanced category</a> (for all objects other than Auxiliary
+					Busses) </p></li><li class="listitem"><p><a class="xref" href="ch46s09.html" title="Sources category">Sources category</a></p></li><li class="listitem"><p><a class="xref" href="ch46s10.html" title="All category">All category</a></p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="property_favorites"></a>Configuring a Favorites category</h2></div></div></div><p>You can configure a custom category called Favorites that contains the properties and
+			categories you want to view together. The properties you select will appear in the
+			Favorites category under their respective categories. For example, if you configure only
+			the Voice Pitch property as a favorite, that property appears under the General category
+			in the Favorites list. The Favorites category is available in the tab with the star
+			icon.</p><p>
+			</p><div class="mediaobject"><img src="Images/property_editor_favorites.png"></div><p>
+		</p><p>
+			</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>The General category in the Property Editor with only Voice
+									<span class="bold"><strong>Pitch</strong></span> selected as a
+								Favorite.</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout2.png"></div>
+							</td><td>The Favorites category selected.</td></tr></tbody></table></div><p>
+		</p><p>
+			</p><div class="orderedlist"><p class="title"><b>To create a Favorites category:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click <span class="bold"><strong>Show/Hide Category Filters</strong></span>
+						<span class="inlinemediaobject"><img src="Images/btn_display_options_arrow.png"></span>. </p></li><li class="listitem"><p>Do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right-click a property and select <span class="bold"><strong>Add to
+										Favorites</strong></span>. Only the property is added to the
+									Favorites category.</p></li><li class="listitem"><p>Right-click the heading for the group of properties and select
+										<span class="bold"><strong>Add Group to Favorites</strong></span>. All
+									the properties in that group are added to the Favorites
+									category.</p></li><li class="listitem"><p>Right-click a property or a property group and select <span class="bold"><strong>Configure
+										Favorites</strong></span>. The Property Editor Favorites dialog
+									opens where you can click each property to add.</p></li></ul></div></li></ol></div><p>
+		</p><p>Properties that are added to the Favorites category have a star beside their
+			name.</p><p>If you have configured at least one favorite, you can filter for favorites by clicking
+				<span class="bold"><strong>Show/Hide Category Filters</strong></span> and selecting <span class="bold"><strong>Favorites</strong></span>. Properties in Favorites are grouped by category.
+			You can change the display order of the groups by clicking and dragging the <span class="inlinemediaobject"><img src="Images/btn_drag_up_or_down_categories.png"></span> title bar icon. To restore the default order, click <span class="bold"><strong>Show/Hide Category Filters</strong></span> then click <span class="bold"><strong>Reset Favorites Order to Default</strong></span>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577789472"></a>Searching by property names</h2></div></div></div><p>Type the name of the property you are searching for in the Search field. Any properties that
+			match what you type will be displayed in the Property Editor.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577788064"></a>Displaying only modified properties</h2></div></div></div><p>Modified properties are marked with an orange band, for example: <span class="inlinemediaobject"><img src="Images/btn_modified_property.png"></span>.  Groups and categories containing modified properties are also
+			marked with an orange band.</p><p>Click <span class="inlinemediaobject"><img src="Images/btn_modified.png"></span> to display only groups and categories containing the modified
+			properties.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577782816"></a>Expanding or collapsing property groups</h2></div></div></div><p>Properties are displayed in collapsible groups. Groups can be expanded or collapsed by
+			clicking on them or by clicking <span class="bold"><strong>More Options</strong></span>
+			<span class="inlinemediaobject"><img src="Images/btn_more_options_off.png"></span> and then <span class="bold"><strong>Expand All</strong></span> or <span class="bold"><strong>Collapse All</strong></span>. Some groups contain additional properties you
+			can display by clicking <span class="inlinemediaobject"><img src="Images/icn_expand.png"></span>. To have them shown always, click <span class="bold"><strong>Show/Hide
+				Category Filters</strong></span> and enable <span class="bold"><strong>Always Show Additional
+				Properties</strong></span>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577762848"></a>Properties displayed for Game Syncs</h2></div></div></div><p>When a Game Sync is loaded into the Property Editor, various properties are displayed
+			depending on the game sync type. The following table describes which properties are
+			displayed for each Game Sync:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+							<p>Game Sync</p>
+						</th><th>
+							<p>Property Editor Contents</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Switch Group</p>
+						</td><td>
+							<p>Name, notes, and Switch to Game Parameter value mappings.</p>
+						</td></tr><tr><td>
+							<p>Switch</p>
+						</td><td>
+							<p>Name and notes.</p>
+						</td></tr><tr><td>
+							<p>State Group</p>
+						</td><td>
+							<p>Name, notes, and transition properties between States.</p>
+						</td></tr><tr><td>
+							<p>State</p>
+						</td><td>
+							<p>Name, notes, and the copying of State values.</p>
+						</td></tr><tr><td>
+							<p>Game Parameter</p>
+						</td><td>
+							<p>Name; Notes; Built-in Parameters to bind to; Minimum, Maximum, and
+								Default values for the Game Parameter; and Interpolation mode
+								values.</p>
+						</td></tr><tr><td>
+							<p>Trigger</p>
+						</td><td>
+							<p>Name and notes.</p>
+						</td></tr></tbody></table></div><p>Properties are also displayed in the primary and secondary editors. See <a class="xref" href="ch52s03.html" title="Primary and Secondary Editors">Primary and Secondary Editors</a>.</p></div></div><HR></body></html>

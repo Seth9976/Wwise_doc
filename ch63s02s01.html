@@ -1,0 +1,139 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Performance Monitor Settings</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s02.html" title="Performance Monitor"><link rel="prev" href="ch63s02.html" title="Performance Monitor"><link rel="next" href="ch63s03.html" title="Advanced Profiler"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s02.html">Performance Monitor</a></span> &gt; <span class="breadcrumb-node">Performance Monitor Settings</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="performance_monitor_settings"></a>Performance Monitor Settings</h3></div></div></div><p>The Performance Monitor Settings dialog contains a list of counters that you can add or remove from the Performance Monitor's graph and data list views. You can also change each of the graph view counters' value ranges.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td><a name="profiler_counters"></a>
+                <p>Counter</p>
+              </td><td>
+                <p>The name of the counters that can be displayed in the Performance Monitor.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Some counters are not applicable to all platforms.</p></td></tr></table></div>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>API calls</strong></span>: The number of calls from the API to the sound engine at that particular moment. The number of open calls includes separate calls to the same function. So, in one moment, there may be 5 different API functions called but a total number of calls that is much higher because of multiple different calls to the same function.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Command Queue Size</strong></span>: The current amount of
+                      memory allocated for storing commands that are sent from the game application
+                      to the sound engine. The default size of the command queue is 256 KB. The
+                      maximum value can be set in the Wwise SDK.</p><p>Examples: Play Event. RTPC = 50.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Commands are only displayed in the Capture Log if the <span class="bold"><strong>API Calls</strong></span> data type is enabled in the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a>.</p></td></tr></table></div></li><li class="listitem"><p>
+                      <span class="bold"><strong>Command Queue Used</strong></span>: The percentage of the
+                      command queue that is being used at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>CPU - Plug-in Total</strong></span>: The amount of the CPU used for plug-ins at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>CPU - Total</strong></span>: The amount of the CPU used by the audio thread. Audio Thread CPU is based on a counter that starts when the audio thread wakes up for audio processing, and ends when the audio thread processing is done. Depending on the platform, and the priority of other threads running on the same CPU core, this number can get a lot higher than actual CPU usage of the sound engine. Still, you can trust it as a '% of audio capacity', meaning that if it gets close to 100% the audio will most likely starve.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Hardware Audio Decoder Usage</strong></span>: The percentage of the Hardware Audio Decode resources that is being used at any one time.</p><p>This counter will only be displayed when certain platforms (PS4 and PS5) are selected.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Live Media Transfers (Memory - Wwise)</strong></span>: The total size of the media files that have been transferred to the game because of live edits done while connected. This memory is not used in the Release configuration.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Loaded Banks (Memory - Wwise)</strong></span>: The current size of the SoundBanks that have been loaded into memory by Wwise.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Loaded Banks (Memory - Integration)</strong></span>: The current size of the SoundBanks that have been loaded into memory by the game engine integration and are not managed by Wwise. This includes memory tracked via the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a7e8069027779f518a2049dffbb8ecbcb.html" target="_blank"><code class="code">AK::SoundEngine::LoadBankMemoryView</code></a> API.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Loaded Media (Memory - Wwise)</strong></span>: The total size of the media files that have been loaded into memory by Wwise.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Loaded Media (Memory - Integration)</strong></span>: The total size of the media files that have been loaded into memory by the game engine integration and are not managed by Wwise. This includes memory tracked via the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a7e8069027779f518a2049dffbb8ecbcb.html" target="_blank"><code class="code">AK::SoundEngine::LoadBankMemoryView</code></a> and <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_ae93bba30404755a4d2e592c3bfbf340c.html" target="_blank"><code class="code">AK::SoundEngine::SetMedia</code></a> APIs.</p></li><li class="listitem"><p> <span class="bold"><strong>Loudness Momentary</strong></span>(Instance A to D): <a class="xref" href="ch59s05.html" title="Loudness Meter">Loudness Meter</a> momentary (0.4-second rectangular time window) loudness level.</p></li><li class="listitem"><p> <span class="bold"><strong>Loudness Short-term</strong></span>(Instance A to D): The <a class="xref" href="ch59s05.html" title="Loudness Meter">Loudness Meter</a> short-term (3-second rectangular time window) loudness level.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Active Events</strong></span>: The number of Events that have been posted by the game and have not yet reached their end number of active listeners.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Active Listeners</strong></span>: The number of active listeners.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Active Sends</strong></span>: The number of Game-defined or User-defined auxiliary sends that are active.</p></li><li class="listitem"><p><span class="bold"><strong>Number of System Audio Objects Used</strong></span>:
+                      The number of System Audio Objects playing at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Prepared Events</strong></span>: The number of Events that have been prepared using the 
+                       <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a98b617d05618e6d18680d198845ff3d7.html" target="_blank">
+                        <code class="code">PrepareEvent()</code></a>function.</p><p>When an Event is prepared, only the media specifically associated with that Event gets loaded into memory.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Registered Objects</strong></span>: The number of game objects registered at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of State Transitions</strong></span>: The number of transitions between States that are played at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Streams</strong></span>: The total number of streams open at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Streams (Active)</strong></span>: The number of streams that are active. A stream is active when it required or was waiting for at least one I/O transfer in the last profiling frame.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Transitions/Interpolations</strong></span>: The number of fades/transitions/interpolations that are active at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Voices (Physical)</strong></span>: The number of physical voices that are played at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Voices (Total)</strong></span>: 
+                      
+                      The number of audio voices or separate playback instances that are played at any one time (Physical + Virtual). </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Number of Voices (Virtual)</strong></span>: The number of virtual voices in the virtual voice list at any one time.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Output Peak</strong></span>: The peak output from the sound engine at any given time, in dB.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Prepared Events (Memory)</strong></span>: The amount of memory used by the Events that have been prepared. This value includes any media files that were loaded into memory as a result of the Event being prepared.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Profiler Bandwidth</strong></span>: The volume of
+                      profiling data sent by the game to the Wwise authoring application. Units:
+                      KB/s (kilobytes per second).</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Computed Edges</strong></span>: The number of
+                      diffraction edges that have been processed during this frame. Spatial audio
+                      constructs an internal data structure of edge visibility. This map is
+                      incrementally updated at each frame. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Spatial Audio counters (except for the Spatial Audio - CPU) might not be
+                        reported correctly when Multi-Core Rendering is enabled. See <a class="xref" href="ch05s05.html#multi_core_rendering" title="Enabling multi-core rendering (Windows only)">Enabling multi-core rendering (Windows only)</a>.</p></td></tr></table></div></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - CPU</strong></span>: The total amount of CPU
+                      used by spatial audio, expressed as a percentage of an audio frame. This is
+                      approximately the sum of "Spatial Audio - Raytracing CPU", "Spatial Audio -
+                      Path Validation CPU", "Spatial Audio - Portal Raytracing CPU" and "Spatial
+                      Audio - Portal Path Validation CPU". Note that this is different from the CPU
+                      percentage displayed in the Advanced Profiler CPU tab: The spatial audio CPU
+                      band indicates the CPU percentage per call to spatial audio, while the spatial
+                      audio CPU percentage displayed in the CPU tab indicates the cumulative CPU for
+                      one frame. Also note that the number of instances displayed in the CPU tab
+                      indicates the number of calls to spatial audio per frame. A call to spatial
+                      audio does not necessarily trigger the computation of paths. Spatial Audio -
+                      CPU value depends on the number of emitters, the complexity of the geometry
+                      (i.e. the number of triangles and diffraction edges) and the enabled features
+                      (i.e. the order of reflection, the diffraction, the reflection on
+                      diffraction).  </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Diffraction Edges</strong></span>: The total
+                      number of diffraction edges in the current 3D environment. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Emitters Processed</strong></span>: The number of emitters processed by spatial audio: for each emitter spatial audio validates the reflection and diffraction paths.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Path Validation CPU</strong></span>: The
+                      amount of CPU used by the path validation phase of spatial audio expressed as
+                      a percentage of an audio frame. During the path validation phase, spatial
+                      audio validates the potential reflection and diffraction paths found during
+                      the raytracing phase as well as the ones validated in the previous frames.
+                      Spatial Audio - Path Validation CPU cost is mainly influenced by the number of
+                      emitters: the more emitters, the higher the cost. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Portal Path Validation CPU</strong></span>:
+                      The amount of CPU used by spatial audio to validate paths from the portals to
+                      the listener and the emitters expressed as a percentage of an audio frame.
+                      Spatial Audio - Portal Path Validation CPU cost is mainly influenced by the
+                      number of emitters and the complexity of the room and portal connections.
+                    </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Portal Raytracing CPU</strong></span>: The
+                      amount of CPU used by spatial audio to sample the environment to find
+                      potential paths from the portal to the listener and the emitters. Expressed as
+                      a percentage of an audio frame. Spatial Audio - Portal Raytracing CPU cost is
+                      mainly due to the complexity of the geometry (i.e. the number of triangles and
+                      the number of diffraction edges) and the enabled features (i.e. the reflection
+                      order, the diffraction, and the reflection on diffraction). It does not depend
+                      on the number of emitters. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Primary Rays</strong></span>: The number of primary rays targeted by spatial audio.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Raytracing CPU</strong></span>: The amount of CPU used by the raytracing phase of spatial audio expressed as a percentage of an audio frame. During the raytracing phase, spatial audio samples the environment to find potential reflection and diffraction paths between the listener and the emitters. The Spatial Audio - Raytracing CPU cost is mainly due to the complexity of the geometry (i.e. the number of triangles and the number of diffraction edges) and the enabled features (i.e. the reflection order, the diffraction and the reflection on diffraction). It does not depend on the number of emitters.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Spatial Audio - Triangles</strong></span>: The total number of triangles in the current 3D environment.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Total Reserved Memory</strong></span>: The total amount of memory that has been reserved, or mapped to physical memory, but not necessarily in use by runtime memory allocations.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Total Streaming Bandwidth</strong></span>: The total amount of streaming bandwidth that is used at any one time. This value includes both low-level I/O transfers and transfers from the Stream Manager's cache which don't require access to disk, and is therefore larger or equal to the Total I/O Bandwidth (Low-Level).</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Total Streaming Bandwidth (Low-Level)</strong></span>: The total amount of streaming bandwidth that is used at any one time. This value takes low-level I/O transfers into account only, and excludes virtual transfers from cached data in the Stream Manager.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Total Used Memory</strong></span>: The total amount of memory in use by runtime memory allocations.</p></li></ul></div>
+              </td></tr><tr><td>
+                <p>Show in Graph</p>
+              </td><td>
+                <p>Determines whether the counter is displayed in the Performance Monitor graph view.</p>
+              </td></tr><tr><td>
+                <p>Show in List</p>
+              </td><td>
+                <p>Determines whether the counter is displayed in the Performance Data list.</p>
+              </td></tr><tr><td>
+                <p>Graph Min</p>
+              </td><td>
+                <p>Defines the minimum range of the graph band for each counter. Select a highlighted field to modify.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A thick line at the bottom of the graph view range indicates a value below the Graph Min.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Graph Max</p>
+              </td><td>
+                <p>Defines the maximum vertical range of the graph band for each counter. Select a highlighted field to modify.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A thick line at the top of the graph view range indicates a value above the Graph Max.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Moving Avg</p>
+              </td><td>
+                <p>Defines the sampling period for the moving average curve; a larger value yields a smoother curve.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When set to zero, no average curve is displayed.</p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_ok.png"></div>
+              </td><td>
+                <p>Adds or removes counters from the Performance Monitor graph view according the settings that you specified.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+              </td><td>
+                <p>Closes the Performance Monitor Settings dialog without applying any of the changes you made to the Performance Monitor settings.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html#customizing_performance_monitor" title="Customizing the Performance Monitor">Customizing the Performance Monitor</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07s10.html" title="Loading the data from a previous remote capture session">Loading the data from a previous remote capture session</a>
+          </p></li></ul></div></div><HR></body></html>

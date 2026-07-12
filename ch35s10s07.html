@@ -1,0 +1,70 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Conversion tips and best practices</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35s10.html" title="Managing audio file conversion"><link rel="prev" href="ch35s10s06.html" title="Conversion - In Progress/Stopped"><link rel="next" href="ch35s11.html" title="Creating the final mix"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-link"><a href="ch35s10.html">Managing audio file conversion</a></span> &gt; <span class="breadcrumb-node">Conversion tips and best practices</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="versions_tips_and_best_practices"></a>Conversion tips and best practices</h3></div></div></div><p>You may want to review the following sections, which provide you with a series of tips and best practices that can help you better manage your platform and language versions throughout the audio development process. </p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="converting_multiple_files"></a>Converting multiple files</h4></div></div></div><p>You can convert many audio files at once by right-clicking a high-level object in the hierarchy, such as a container, and then selecting <span class="bold"><strong>Convert</strong></span> from the shortcut menu. If you want to set the Conversion Settings for an entire group of objects, you can right-click the top-level object and select <span class="bold"><strong>Conversion Settings</strong></span> from the shortcut menu. You can also multi-select objects in the Project Explorer and then define their Conversion Settings or convert them all simultaneously.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="strategies_for_conversion_settings"></a>Strategies for Conversion Settings</h4></div></div></div><p>Many times, when a studio develops a game, it examines each platform and then allocates a
+			budget for such items as the memory footprint, CPU, and bandwidth. The audio team gets a
+			portion of this budget and it's up to them to manage this budget efficiently for each
+			platform. Depending on the platform, these allowances will be different, so the audio
+			designer needs to understand how to efficiently compensate for these differences and
+			still deliver great sound using the various Conversion Settings available. To see how
+			well you are doing, you can monitor your project's performance in game using the Game
+			Profiler, and adjust the Conversion Settings as needed to stay within your
+			budget.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="audio_formats"></a>Audio formats</h4></div></div></div><p>Audio formats must also be considered in your budget. It is useful to review the characteristics of the different formats supported by Wwise so that you can make good choices for your project. A general rule is that the less a file is compressed, the less processing power is needed; however, an uncompressed file usually uses more memory or disk space.
+		</p><p>The following table provides you with some basic suggestions and information to help you decide how to encode your audio files.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="50px" class="col1"><col width="50px" class="col2"><col width="50px" class="col3"><col width="50px" class="col4"><col width="100px" class="col5"><col class="col6"></colgroup><thead><tr><th>
+							<p>File Format</p>
+						</th><th>
+							<p>Compression ratio <br> (approx)</p>
+						</th><th>
+							<p>CPU</p>
+						</th><th>
+							<p>Memory</p>
+						</th><th>
+							<p>Examples of how these are commonly used</p>
+						</th><th>
+							<p>Limitations</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>PCM</p>
+						</td><td>
+							<p>1:1</p>
+						</td><td>
+							<p>Very Low</p>
+						</td><td>
+							<p>High</p>
+						</td><td>
+							<p>Sounds requiring high fidelity.</p>
+						</td><td>
+							<p>None.</p>
+						</td></tr><tr><td>
+							<p>ADPCM</p>
+						</td><td>
+							<p>4:1</p>
+						</td><td>
+							<p>Low </p>
+						</td><td>
+							<p>Moderate</p>
+						</td><td>
+							<p>Ambient sounds and SFX.</p>
+						</td><td>
+							<p>Looping on 64 sample boundaries only.</p>
+						</td></tr><tr><td>
+							<p>Vorbis</p>
+						</td><td>
+							<p>3-40:1</p>
+						</td><td>
+							<p>Moderate to High</p>
+						</td><td>
+							<p>Moderate to very low</p>
+						</td><td>
+							<p>Dialogue, music, ambient sounds, and SFX.</p>
+						</td><td>
+							<p>Slightly larger metadata overhead than other formats, so you should avoid it with very small sounds (less than a few tens of milliseconds). Requires a seek table for seeking.</p>
+						</td></tr><tr><td>
+							<p>WEM Opus</p>
+						</td><td>
+							<p>10-60:1</p>
+						</td><td>
+							<p>High (when not hardware-accelerated), Very Low (when hardware-accelerated)</p>
+						</td><td>
+							<p>Moderate to very low</p>
+						</td><td>
+							<p>Dialogue, simple music, ambient sounds, and SFX.</p>
+						</td><td>
+							Limitations differ based on platform capabilities. See <a class="xref" href="ch35s10s07.html#wem_opus_platform_tradeoffs" title="How platform capabilities influence WEM Opus limitations and trade-offs">How platform capabilities influence WEM Opus limitations and trade-offs</a> below for more details.
+						</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="using_seek_tables_with_vorbis_encoder"></a>Using seek tables with the Vorbis encoder</h4></div></div></div><p>By default, the Vorbis encoder uses a <span class="bold"><strong>Seek table granularity (sample frames)</strong></span> of 16384. While seek tables are not always necessary, you must use one in the following circumstances:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When using the Vorbis encoder in combination with the virtual voice "From Elapsed Time" settings.</p></li><li class="listitem"><p>When using the Vorbis encoder for interactive music files, especially when the sound engine must start reading the file from somewhere other than the beginning.</p></li><li class="listitem"><p>When using Seek Actions with the Vorbis encoder.</p></li></ul></div><p>To enable the seek table for a selection of Vorbis encoded files, do the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="bold"><strong>Conversion Settings</strong></span> dialog, click <span class="bold"><strong>Edit</strong></span> for the platform that is using the Vorbis encoder. </p></li><li class="listitem"><p>In the <span class="bold"><strong>Vorbis Encoder Parameters</strong></span> dialog, specify granularity by selecting a number from the <span class="bold"><strong>Seek table granularity</strong></span> list.</p></li></ul></div><p>Smaller seek table granularities require more memory.  Sample-accurate seeking (interactive music or seek actions) may incur a CPU spike if granularity is too large, and inefficient I/O usage if it is larger than the disk streaming granularity.  As a rule of thumb, pick a seek table size that is smaller or equal to your disk streaming granularity, which is the value used for <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=struct_ak_device_settings_abd4879bfd150b9a2f898102e3815dbe2.html" target="_blank"><code class="code">AkDeviceSettings::uGranularity</code></a> during initialization.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If the file is smaller than or very close to the size of the Seek table granularity, seeking may fail. In such cases, make the Seek table granularity smaller.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="wem_opus_platform_tradeoffs"></a>How platform capabilities influence WEM Opus limitations and trade-offs</h4></div></div></div><p>WEM Opus is a particular format in that its decoding behavior is dependent on the platform's capabilities. Specifically, WEM Opus will attempt to use hardware acceleration on platforms that support it. Therefore, its limitations (and overall usefulness) depend on the target platform.</p><p>On most platforms, WEM Opus is decoded on the CPU. Its limitations in this case are: overall higher CPU usage than Vorbis, in exchange for better compression.</p><p>When the target platform supports Opus hardware acceleration, this limitation goes away: CPU usage will be very low, even when seeking. For these platforms, the Wwise sound engine will expose an option to turn on or off low-latency hardware decoding during initialization:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When low-latency decoding is disabled, WEM Opus playback may start one audio frame late (usually 10.6ms with default settings). Seeking operations will incur a similar delay. </p></li><li class="listitem"><p>When low-latency decoding is enabled, WEM Opus will not suffer the extra latency described above. However, playing too many WEM Opus-encoded sounds concurrently runs a higher risk of voice starvation. This is because the sound engine must wait for the platform's hardware to complete decoding before mixing the different sounds together.</p></li></ul></div><p>Note that this option is a global setting; it is not possible to toggle it on or off for individual sounds. The trade-offs must be carefully considered in the context of your project's specific use cases.</p><p>Consult your target platform's specific SDK documentation page to learn whether it supports Opus hardware acceleration, and how to turn on or off low-latency decoding.</p></div></div><HR></body></html>

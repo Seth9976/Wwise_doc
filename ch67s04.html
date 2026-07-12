@@ -1,0 +1,116 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AK Custom Panner</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s03.html" title="AK Convolution Reverb"><link rel="next" href="ch67s05.html" title="Compressor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">AK Custom Panner</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_custom_panner_plug_in"></a>AK Custom Panner</h2></div></div></div><p>You can use the AK Custom Panner plug-in to create custom speaker position configurations
+		for audio busses. The plug-in uses a Vector Base Amplitude Panning (VBAP) algorithm, which
+		supports customized panning and sound delivery to non-standard audio configurations.</p><p>The Custom Panner acts as an out-of-place object processor that can output a different
+		number of channels than its input channel configuration. See <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_plugins_objectprocessor.html#implementing_an_out-of-place_object_processor" target="_blank">Implementing an Out-of-Place Object Processor</a> for more information.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1510086512"></a>Installation</h3></div></div></div><p>To use the Custom Panner, you must install it through the Audiokinetic Launcher. See
+				<a class="link" href="https://www.audiokinetic.com/library/edge/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> for more information. The plug-in requires a license to
+			be activated and for SoundBanks to be generated successfully. You can acquire a free
+			license from the Audiokinetic website at <a class="link" href="https://www.audiokinetic.com/wwise/plugins/custom-panner/" target="_blank">Plug-ins: AK
+				Custom Panner</a>.</p><p>After the plug-in is installed, the Custom Panner factory assets are added to new
+			projects by default. To add them to existing projects, use the <a class="xref" href="ch07s02.html" title="Import Factory Assets">Import Factory Assets</a> dialog.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1510074224"></a>Using the Customer Panner</h3></div></div></div><p>Before you insert the Custom Panner on a bus, set the <span class="bold"><strong>Bus
+				Configuration</strong></span> to <span class="bold"><strong>Audio Objects</strong></span>. See
+				<a class="xref" href="ch61s01s02s02.html" title="Property Editor: Audio Bus">Property Editor: Audio Bus</a> for details.</p><p>The following image shows the Custom Panner in an Object Tab.</p><p>
+			</p><div class="mediaobject"><img src="Images/CustomPanner_Screenshot.png"></div><p>
+		</p><p>By default, the Custom Panner sound output is sent as a single anonymous multi-channel
+			audio object. If a speaker is marked as LFE, the Custom Panner mixes the input LFE
+			content into the single audio object, and that speaker is not included in the
+			positioning algorithm (VBAP). Alternatively, when <span class="bold"><strong>Object
+				Mode</strong></span> is selected, the sound output is sent as multiple mono audio
+			objects. If a speaker is marked as LFE, the Custom Panner sends an additional audio
+			object with an LFE configuration (channel configuration of 0.1).</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1510074736"></a>Muting and soloing speakers</h3></div></div></div><p>You can use the Mute (<span class="bold"><strong>M</strong></span>) and Solo (<span class="bold"><strong>S</strong></span>) buttons to silence or isolate speakers, respectively.
+			However, the behavior varies slightly depending on whether the affected speakers are
+			real or virtual:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Muting speakers prevents them from emitting any sound, including contributions
+					from virtual speakers. </p><p>Muting virtual speakers stops their contributions to any real speakers.</p></li><li class="listitem"><p>Soloing a speaker mutes all other real speakers. The solo speaker emits its
+					direct sound as well as any contributions from virtual speakers. </p><p>Soloing a virtual speaker mutes all direct sound to real speakers and all
+					contributions from other virtual speakers. Soloing a virtual speaker is a way to
+					isolate the sound it redistributes to real speakers.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1510066160"></a>Using virtual speakers</h3></div></div></div><p>You can use the Custom Panner to set selected speaker positions as virtual. A virtual
+			speaker is a position included in the VBAP triangulation but does not correspond to a
+			physical output.</p><p>When audio is panned to a virtual speaker, the plug-in redistributes that signal's energy to
+			the closest real speakers in the triangulation, which sound designers can use to manage
+			complex spatialization. Through strategic virtual speaker placement, you can increase
+			panning behavior predictability, especially in highly irregular speaker configurations
+			in which VBAP-only calculations might otherwise cause discontinuities in panning.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>For the redistribution algorithm to work properly, virtual speakers must be
+				surrounded by real speakers. Configurations of multiple virtual speakers as direct
+				neighbors of one another are not supported.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1510071664"></a>AK Custom Panner properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th>
+							<p>Interface Element</p>
+						</th><th>
+							<p>Description</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>
+								</p><div class="mediaobject"><img src="Images/CustomPanner_Add.png"></div><p>
+							</p>
+						</td><td>
+							<p>Adds a speaker position to the list.</p>
+						</td></tr><tr><td>
+							<p>
+								</p><div class="mediaobject"><img src="Images/CustomPanner_Remove.png"></div><p>
+							</p>
+						</td><td>
+							<p>Removes the selected speaker positions from the list.</p>
+						</td></tr><tr><td>
+							<p>Object Mode</p>
+						</td><td>
+							<p>Determines the number of audio objects the plug-in creates. If
+								selected, the plug-in creates as many objects as speaker positions.
+								If not selected, the plug-in creates a single object with as many
+								channels as the number of speaker positions.</p>
+						</td></tr><tr><td>
+							<p>Channel</p>
+						</td><td>
+							<p>Output channel number assigned to the speaker position.</p>
+							<p>This value is displayed as "-" if the speaker is marked as Virtual.</p>
+						</td></tr><tr><td>
+							<p>[M]</p>
+						</td><td>
+							<p>(Mute) Mutes the corresponding speaker position, which can be
+								helpful during speaker configuration. </p>
+							<p>You can mute multiple speaker positions simultaneously.</p>
+						</td></tr><tr><td>
+							<p>[S]</p>
+						</td><td>
+							<p>(Solo) Mutes all other speaker positions so that you can audition
+								the selected speaker position in isolation. </p>
+							<p>You can set more than one speaker position to solo. To isolate a
+								single speaker position when other speaker positions are set to
+								solo, <span class="bold"><strong>Ctrl+click</strong></span> the Solo button to
+								select the current Solo button and clear all other Solo buttons.
+							</p>
+						</td></tr><tr><td>
+							<p>Name</p>
+						</td><td>
+							<p>Name of the speaker position.</p>
+						</td></tr><tr><td>
+							<p>LFE</p>
+						</td><td>
+							<p>Removes the speaker position from the panning algorithm and
+								assigns it to the LFE channel. </p>
+						</td></tr><tr><td>
+							<p>Virtual</p>
+						</td><td>
+							<p>Marks the speaker position as virtual.</p>
+							<p>When selected, the speaker is not included in the output of this
+								plug-in. The speaker output is redistributed to its closest
+								non-virtual neighbors on the VBAP sphere.</p>
+							<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Avoid configuring multiple virtual speakers as direct
+									neighbors of one other. This type of configuration is not
+									supported and can cause unpredictable panning behavior.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Azimuth</p>
+						</td><td>
+							<p>Speaker position horizontal plane azimuth. </p>
+							<p>When set to 0, the speaker position is directly in front. Negative
+								angles move the speaker position to the left. Positive angles move
+								the speaker's position to the right. </p>
+							<p>Default value: 0</p>
+							<p>Range: -180 to 180</p>
+							<p>Units: Degrees</p>
+						</td></tr><tr><td>
+							<p>Elevation</p>
+						</td><td>
+							<p>Speaker position vertical plane elevation. </p>
+							<p>When set to 0, the speaker position is directly in front. Positive
+								angles move the speaker position upward. Negative angles move the
+								speaker position downward.</p>
+							<p>Default value: 0</p>
+							<p>Range: -90 to 90</p>
+							<p>Units: Degrees</p>
+						</td></tr></tbody></table></div></div></div><HR></body></html>

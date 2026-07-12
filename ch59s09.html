@@ -1,0 +1,265 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBank Manager</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s08.html" title="Contextual Help"><link rel="next" href="ch59s09s01.html" title="SoundBanks Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">SoundBank Manager</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="soundbank_manager"></a>SoundBank Manager</h2></div></div></div><p>The SoundBank Manager displays the SoundBanks that have been created for your project. It also displays information about each SoundBank, including its current size, the amount of free space left, and the type or contents of the SoundBank. Before generating your SoundBanks, you can define custom user settings and specify for which platforms and languages the SoundBanks will be generated.</p><p>When you double-click a SoundBank in the SoundBank Manager, information related to the selected SoundBank is automatically displayed in the SoundBank Editor.</p><p>The SoundBank Manager displays two lists of SoundBanks:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>User-Defined SoundBanks</strong></span>: This list, in the upper pane,
+          contains all SoundBanks created by editing the project. These SoundBanks are created and
+          fully defined by the user, either by manually creating the SoundBanks individually, or
+          importing a definition file. Refer to <a class="xref" href="ch41s03s01.html" title="Creating user-defined SoundBanks manually">Creating user-defined SoundBanks manually</a> for more
+          details.</p></li><li class="listitem"><p><span class="bold"><strong>Auto-Defined SoundBanks</strong></span>: This list, in the lower pane, contains all objects for which Wwise can automatically create a SoundBank. For each object, the list details whether a SoundBank was automatically created. If a SoundBank is not created, additional columns provide the information required to determine why. Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for more details.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Both SoundBank lists add and remove rows dynamically as the project is edited. However, the information presented in each row:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Is only updated following a SoundBank generation.</p></li><li class="listitem"><p>Represents the SoundBank information for the current active platform and language. Refer to
+            <a class="xref" href="ch36s01.html#switching_to_different_platform" title="Switching to a different platform">Switching to a different platform</a> and <a class="xref" href="ch36s02.html#switching_to_different_language_version" title="Switching to a different project language">Switching to a different project language</a> for more details.</p></li></ul></div></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="left">
+              <p>Show Hierarchy</p>
+            </td><td>
+              <p>Changes the way items are displayed in the SoundBank lists. If selected, items are displayed hierarchically, with Work Units, Folders, and other objects. If unselected, items are displayed in a simple list.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_display_options_arrow.png"></div>
+            <div class="mediaobject"><img src="Images/btn_display_options_arrow_on.png"></div>
+            </td><td>
+              <p>Display options affecting the content of the Auto-Defined SoundBanks
+              list:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Show Events</strong></span>: Shows Events in Auto-Defined SoundBanks
+                  list.</p></li><li class="listitem"><p><span class="bold"><strong>Show Audio Busses</strong></span>: Shows Audio Busses in Auto-Defined
+                  SoundBanks list.</p></li><li class="listitem"><p><span class="bold"><strong>Show Generated Auto SoundBanks</strong></span>: Shows items in the
+                  Auto-Defined SoundBanks list for which a SoundBank was auto-defined.</p></li><li class="listitem"><p><span class="bold"><strong>Show Non-Generated Auto SoundBanks</strong></span>: Shows items in the
+                  Auto-Defined SoundBanks list for which a SoundBank was not auto-defined.</p></li></ul></div>
+            <p>If any options in the list are deselected, the display options button is displayed
+              in orange.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for further details on
+                auto-defined SoundBanks.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+            <p>[Platform]</p>
+          </td><td>
+            <p>Displays the current active platform for which SoundBank information is shown. To
+              change the active platform, refer to <a class="xref" href="ch36s01.html#switching_to_different_platform" title="Switching to a different platform">Switching to a different platform</a>.</p>
+          </td></tr><tr><td align="center">
+            <p>[Language]</p>
+          </td><td>
+            <p>Displays the current active language for which SoundBank information is shown. To
+              change the active language, refer to <a class="xref" href="ch36s02.html#switching_to_different_language_version" title="Switching to a different project language">Switching to a different project language</a>.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_create_new_user-defined_soundbank.png"></div>
+          </td><td><p>Opens the New SoundBank dialog. There you can create and name a new
+            SoundBank in a specific Work Unit.</p></td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_show_soundbank_log.png"></div>
+          </td><td>
+            <p>Displays the SoundBank Generation Log, which contains information about issues or potential issues that were found during the generation process.</p>
+            <p>The button displays the number of severe SoundBank Generation Log entries.</p>
+          </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_generate_checked.png"></div>
+            </td><td>
+              <p>Opens the <a class="xref" href="ch59s09s04.html" title="Generating SoundBanks">Generating SoundBanks</a> dialog and generates the selected SoundBanks and corresponding files for the selected platforms and languages, all according to the settings specified. If no changes were made since the last time the SoundBanks were generated, then the SoundBanks are not regenerated.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_generate_all.png"></div>
+            </td><td>
+              <p>Opens the <a class="xref" href="ch59s09s04.html" title="Generating SoundBanks">Generating SoundBanks</a> dialog and generates all SoundBanks and corresponding files for all platforms and languages, whether or not they are selected, all according to the settings specified. If no changes were made since the last time the SoundBanks were generated, then the SoundBanks are not regenerated.</p>
+            </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_gear_dropdown.png"></div>
+            <div class="mediaobject"><img src="Images/btn_gear_dropdown_on.png"></div>
+          </td><td>
+            <p>SoundBank Settings:</p>
+            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Project SoundBank Settings</strong></span>: Opens the Project
+                  Settings dialog to the SoundBanks tab. This dialog sets the SoundBank
+                  settings for the project. The project SoundBank settings are applied to all users,
+                  unless overridden in the User SoundBank Settings.</p></li><li class="listitem"><p><span class="bold"><strong>User SoundBank Settings</strong></span>: Opens the SoundBanks
+                  Settings dialog. This dialog is used to define custom user settings, which
+                  override those set in the Project SoundBank Settings. </p><p>If any options in this dialog are modified from their default state, the
+                  settings button is displayed in orange. This indicates that the user SoundBank
+                  settings are overriding the project settings.</p></li></ul></div>
+          </td></tr><tr><td colspan="2">
+            <p><span class="bold"><strong>User-Defined SoundBanks</strong></span></p>
+          </td></tr><tr><td>
+              <p>User-Defined SoundBanks</p>
+            </td><td>
+              <p>The first column of the list of user-defined SoundBanks. The column contains the
+              name of user-defined SoundBanks. Refer to <a class="xref" href="ch41s03.html" title="Working with user-defined SoundBanks">Working with user-defined SoundBanks</a> for
+              more information.</p>
+              <p>When displaying SoundBanks with <span class="bold"><strong>Show Hierarchy</strong></span> enabled, this column displays the hierarchy of Work Units, Folders, and SoundBanks. When selecting the check box for a Work Unit or Folder, all children are also selected. When deselecting it, all children are also deselected.</p>
+              <p> The name appears in red if there are any issues with the SoundBank. Such issues could be either of the following: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The current value of the Data Size exceeds the maximum memory allowed in Max Size.</p></li><li class="listitem"><p>The SoundBank does not include sources for all the specified language versions of its Sound Voices.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If <span class="bold"><strong>Use reference language as stand-in</strong></span> is
+                      selected in the Language Manager, then the missing language voices will be
+                      output in the reference language; however, the SoundBank name will still be
+                      red. See <a class="xref" href="ch09.html" title="Managing languages"><i>Managing languages</i></a>.</p></td></tr></table></div></li></ul></div><p> </p>
+            <p>Only SoundBanks with their check box selected are generated.</p>
+            <p>If <span class="bold"><strong>Enable Auto-Defined SoundBanks</strong></span> is selected in the Project Settings, you will not have the option to select individual SoundBanks. This is because Wwise automatically defines SoundBanks for Events not included in any user-defined SoundBank. Generating all SoundBanks at the same time ensures this can be accurately assessed. Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for more information on this SoundBank management strategy. </p>
+            </td></tr><tr><td>
+              <p>ID</p>
+            </td><td>
+              <p>The ID used to identify the SoundBank when calling SDK functions. Note, the ID is obtained using the SDK function <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a1aae6ebdec25946fb2897ce0e025366d.html" target="_blank">AK::SoundEngine::GetIDFromString</a>.</p>
+            <p>Generated metadata files also contain the SoundBank's ID. See <a class="xref" href="ch07s03s03.html#project_settings_soundbanks_tab" title="Soundbanks tab of the Project Settings dialog">Soundbanks tab of the Project Settings dialog</a> for details.</p>
+            </td></tr><tr><td>
+              <p>On Disk</p>
+            </td><td>
+            <p>Displays whether a SoundBank file exists for the row entry. If a file exists then the column contains the SoundBank file (.bnk) icon. Otherwise the column is empty.</p>
+            <p>The information in this column is updated after each SoundBank generation.</p>
+            <p>If source control is enabled and configured for generated files, then the icon indicates the source control status of the file.</p>
+          </td></tr><tr><td>
+              <p>Data Size</p>
+            </td><td>
+              <p>The amount of in-game memory that the SoundBank would use for the currently selected platform. </p>
+            <p>If your SoundBank contains Sound Voices, the Data Size column are also updated
+              according to the currently selected language.</p>
+              <p>The Data Size value is red if it exceeds the maximum. The displayed size is the value as of the last generation of the SoundBank; it does not update until the SoundBank is successfully regenerated.</p>
+              <p>
+                <span class="bold"><strong>Units</strong></span>: Bytes
+              </p>
+            </td></tr><tr><td>
+              <p>Decoded Size</p>
+            </td><td>
+              <p>The amount of in-game memory that a SoundBank with decoded Vorbis or Opus media would use for the currently selected platform. If the SoundBank has no Vorbis or Opus media files, then this value will be same as the Data Size. </p>
+            <p>If your SoundBank contains Sound Voices, the Decoded Size column will also be updated according to the currently selected language.</p>
+              <p>
+                <span class="bold"><strong>Units</strong></span>: Bytes
+              </p>
+            </td></tr><tr><td>
+		<p>Max Size</p>
+	</td><td>
+		<p>The maximum amount of in-game memory that you want to allocate for a particular SoundBank.</p>
+		<p>This value can be unlinked so that the maximum size can be different for each platform.</p>
+		<p>You can successfully generate a SoundBank even though it exceeds the maximum memory that you allocated.</p>
+		<p>A value of 0 means there is no limit on the size of this SoundBank. In this case the control displays &#8220;Infinite&#8221; instead of &#8220;0&#8221;.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 2147483647</p>
+		<p>Units: Bytes </p>
+	</td></tr><tr><td>
+              <p>Free Space</p>
+            </td><td>
+              <p>The amount of space remaining in the SoundBank. Free space is calculated by subtracting the Data Size from the Max Size. If the Data Size exceeds the Max Size, the Free Space value is displayed in red.</p>
+              <p>
+                <span class="bold"><strong>Units</strong></span>: Bytes
+              </p>
+            </td></tr><tr><td>
+              <p>Type</p>
+            </td><td>
+              <p>Displays the type of objects that are included in the corresponding SoundBank, for example, SFX, Voice, and Music. If the SoundBank contains all four types of objects, the word &#8220;All&#8221; is displayed in this column.</p>
+              <p>The text in this column is displayed in red if the SoundBank contains Voice content with any other type. This simply warns you that data will be unnecessarily duplicated for each language generated.</p>
+            </td></tr><tr><td>
+              <p>Date Updated</p>
+            </td><td>
+              <p>The date and time the SoundBank was last updated.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+            <p><span class="bold"><strong>Auto-Defined SoundBanks</strong></span></p>
+          </td></tr><tr><td>
+              <p>Auto-Defined SoundBanks</p>
+            </td><td>
+              <p>The first column of the Auto-Defined SoundBanks list. The column contains the
+              name of the objects for which Wwise may auto-define a SoundBank.</p>
+              <p>This column contains:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Init SoundBank. Every project contains only one Init SoundBank, regardless of the SoundBank settings.</p></li><li class="listitem"><p>Each object for which a SoundBank <span class="italic">might be</span> automatically defined. Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for more information.</p></li></ul></div>
+              <p>When displaying SoundBanks with <span class="bold"><strong>Show Hierarchy</strong></span> enabled, this column displays the object for which the SoundBank was automatically defined and its hierarchy, as seen in the Project Explorer view.</p>
+            </td></tr><tr><td>
+              <p>ID</p>
+            </td><td>
+              <p>The ID used to identify the SoundBank when calling SDK functions. Note, the ID is obtained using the SDK function <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a1aae6ebdec25946fb2897ce0e025366d.html" target="_blank">AK::SoundEngine::GetIDFromString</a></p>
+            <p>Generated metadata files also contain the SoundBank's ID. See <a class="xref" href="ch07s03s03.html#project_settings_soundbanks_tab" title="Soundbanks tab of the Project Settings dialog">Soundbanks tab of the Project Settings dialog</a> for more details.</p>
+            </td></tr><tr><td>
+              <p>On Disk</p>
+            </td><td>
+            <p>Displays whether a SoundBank file exists for the row entry. If a file exists then the column contains the SoundBank file (.bnk) icon. Otherwise the column is empty.</p>
+            <p>The information in this column is updated after each SoundBank generation.</p>
+            <p>If source control is enabled and configured for generated files, then the icon indicates the source control status of the file.</p>
+          </td></tr><tr><td>
+              <p>Inc</p>
+            </td><td>
+              <p>Displays whether the object's Inclusion property is set, if applicable.</p>
+              <p>An object that has the Inclusion property must have the property set to have an automatically defined SoundBank.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The information in this column is updated after each SoundBank generation. It <span class="emphasis"><em>is not</em></span> updated dynamically after modifying your project.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>In User-Defined</p>
+            </td><td>
+              <p>Displays which user-defined SoundBanks contain the object, if applicable.</p>
+              <p>This might determine if the object has an automatically defined SoundBank, depending on the project configuration. Refer to <a class="xref" href="ch41s03.html" title="Working with user-defined SoundBanks">Working with user-defined SoundBanks</a> for more information.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The information in this column is updated after each SoundBank generation. It <span class="emphasis"><em>is not</em></span> updated dynamically after making changes to your project.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Type</p>
+            </td><td>
+              <p>Displays the type of objects that are included in the corresponding SoundBank, for example, SFX, Voice, and Music. If the SoundBank contains all four types of objects, the word &#8220;All&#8221; is displayed in this column.</p>
+              <p>The text in this column is displayed in red if the SoundBank contains Voice content with any other type. This simply warns you that data will be unnecessarily duplicated for each language generated.</p>
+            </td></tr><tr><td>
+              <p>Date Updated</p>
+            </td><td>
+              <p>The date and time the SoundBank was last updated.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+            <p><span class="bold"><strong>Platforms</strong></span></p>
+          </td></tr><tr><td>
+              <p>Platforms</p>
+            </td><td>
+              <p>A list of platforms that are available and active in the current project.</p>
+              <p>SoundBanks will be generated for the platforms whose check boxes are selected.</p>
+              <p>Only platforms licensed for the current project are available in the list. For
+              more information about getting licenses for all platforms, refer to the
+              Troubleshooting section of the Audiokinetic Launcher documentation.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+            <p><span class="bold"><strong>Languages</strong></span></p>
+          </td></tr><tr><td>
+              <p>Languages</p>
+            </td><td>
+              <p>A list of languages used in the current project.</p>
+              <p>SoundBanks will be generated for the languages whose check boxes are selected.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch41s03s01.html" title="Creating user-defined SoundBanks manually">Creating user-defined SoundBanks manually</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s03s02.html" title="Creating and populating SoundBanks by importing a definition file">Creating and populating SoundBanks by importing a definition file</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s03s03.html" title="Populating SoundBanks manually">Populating SoundBanks manually</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s03s05.html" title="Renaming SoundBanks">Renaming SoundBanks</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s03s04s06.html" title="Moving project elements between SoundBanks">Moving project elements between SoundBanks</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s03s06.html" title="Deleting SoundBanks">Deleting SoundBanks</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s05.html" title="Generating SoundBanks for a project">Generating SoundBanks for a project</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch41s05.html#using_scripts_to_generate_soundbanks" title="Using scripts to generate SoundBanks">Using scripts to generate SoundBanks</a>
+        </p></li></ul></div></div><HR></body></html>

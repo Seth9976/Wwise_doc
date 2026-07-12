@@ -1,0 +1,195 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Troubleshooting your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07.html" title="Working with projects"><link rel="prev" href="ch07s04.html" title="Specifying the default object values for your project"><link rel="next" href="ch07s06.html" title="Project management tips and best practices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-node">Troubleshooting your project</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="troubleshooting_project"></a>Troubleshooting your project</h2></div></div></div><p>Wwise has two primary ways to discover problems within your project:
+			</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s05.html#using_logs_view" title="Using the Logs view">Using the Logs view</a></p></li><li class="listitem"><p><a class="xref" href="ch07s05.html#using_the_integrity_report" title="Using the integrity report">Using the integrity report</a></p></li></ul></div><p>
+		</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="using_logs_view"></a>Using the Logs view</h3></div></div></div><p>You can quickly see messages, warnings, and errors that appear in your project from the <a class="link" href="ch04.html" title="Wwise interface basics">Wwise toolbar</a>'s logs indicator. Hover over the indicator to get more details.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="286"><tr><td><img src="Images/toolbar_log_indicator.png" width="286"></td></tr></table></div><p>To fully view the listed log entries, click the indicator to open the Logs view. Its five tabs cover all the places you could encounter an issue with your Wwise project.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="850"><tr><td><img src="Images/Logs_view.png" width="850"></td></tr></table></div><p>Each tab with log entries will have an icon corresponding to their highest severity level. Errors must be addressed because they impact the integrity of the operation and, for fatal errors, will even impact the completion of the operation.  Warnings may impact the integrity of the operation, but not necessarily, so they should be evaluated. Messages should not be problematic, but they can provide invaluable information for understanding what's going on in your Wwise project. If there are no entries in a log, then the tab will have no severity icon.</p><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>All the Logs view tabs' column headers can be clicked to organize the entries in a logical way. The Severity column, for example, can be ordered by highest severity level (fatal error, error, warning, general message) or lowest severity level (general message, warning, error, fatal error).</p></td></tr></table></div><br></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="using_the_integrity_report"></a>Using the integrity report</h3></div></div></div><p>You can check the status of your project by generating an integrity report that displays information about platform, audio file, SoundBank and plug-in issues. By examining this report, you can deal with project issues such as:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Missing media files</p></li><li class="listitem"><p>Missing sources, such as missing language versions</p></li><li class="listitem"><p>Plug-in problems</p></li><li class="listitem"><p>Missing objects in SoundBanks</p></li><li class="listitem"><p>Rendering and bypass effect issues for SoundBanks</p></li><li class="listitem"><p>Rendering and RTPCs for SoundBanks</p></li></ul></div><p>In addition to displaying the project issues, the integrity report also provides information about the issue including the following: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="bold"><strong>Platform</strong></span>: The platform on which the issue occurs.</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Type</strong></span>: The type of object that is affected. </p></li><li class="listitem"><p>
+					<span class="bold"><strong>Object name</strong></span>: The name of the object or element that is affected.</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Status</strong></span>: The description of the issue.</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Comments/Suggestions</strong></span>: Information and suggestions about how to deal with the issue.</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Hierarchy</strong></span>: The location of the affected object in the hierarchy.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="generating_an_integrity_report"></a>Generating an integrity report</h3></div></div></div><p>At any time during the development of your Wwise project, you can generate an integrity report. It is a good idea to generate the report prior to generating SoundBanks, or, if you are working with source control, before checking in major changes to a Work Unit.</p><p>To simplify looking for a specific type of issue, you can also filter the report by specifying the type of information that you want to generate. You can limit the report to display any or all of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Audio files and sources</p></li><li class="listitem"><p>Hierarchies</p></li><li class="listitem"><p>References</p></li><li class="listitem"><p>Optimizations</p></li></ul></div><p>After the report is generated, you can review each of the issues in the report and then double-click each one to carry out the suggested fix. For example, double-clicking a status message that states &#8220;No group assigned to the Switch Container&#8221; opens the Property Editor where you can assign a Switch or State Group to the Switch Container. </p><div class="orderedlist"><p class="title"><b>To generate an integrity report:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the Wwise menu bar, click <span class="bold"><strong>Views &gt; Utilities &gt; Integrity
+							Report</strong></span>.</p><p>The Integrity Report opens.</p></li><li class="listitem"><p>To define which platform issues to include in the Integrity Report, select one or more of your project's platforms, as defined in the <a class="xref" href="ch08.html#projects_platform_manager" title="Platform Manager dialog">Platform Manager dialog</a>, from the <span class="bold"><strong>Platforms</strong></span> group.</p></li><li class="listitem"><p>To define which project language issues to include in the Integrity Report, in the <span class="bold"><strong>Languages</strong></span> group, select the <span class="bold"><strong>Languages</strong></span> option and choose the appropriate languages.</p></li><li class="listitem"><p>To filter for project issue types, select one or more of the following:</p><p>Audio files and sources</p><p>Hierarchies</p><p>Broken References</p><p>Optimizations</p></li><li class="listitem"><p>Click <span class="bold"><strong>Generate</strong></span>.</p><p>A progress bar displays the status of the generation process. </p></li><li class="listitem"><p>When Wwise is finished generating the integrity report, click <span class="bold"><strong>Close</strong></span>.</p><p>The Integrity Report- Completed dialog closes and the Integrity Report is displayed.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you close the Integrity Report dialog, the information is not saved. Make sure to save the report if you plan to view the information at another time. For information about how to save an integrity report, refer to <a class="xref" href="ch07s05.html#saving_an_integrity_report" title="Saving an integrity report">Saving an integrity report</a>.</p></td></tr></table></div></li><li class="listitem"><p>Double-click the issue to open the corresponding dialog where you can fix or modify its issue status. </p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="integrity_report_issues"></a>Integrity report issues</h3></div></div></div><p>The following table lists the possible issues detected, and how you can correct these project issues.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="155px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Issue</p>
+								</th><th>
+									<p>Information/Suggestion</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Original audio file not found.</p>
+								</td><td>
+									<p>Do one of the following:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Drag the missing files into the Originals folder.</p></li><li class="listitem"><p>Import the missing file using the Audio File Importer.</p></li></ul></div>
+								</td></tr><tr><td>
+									<p>Audio source is missing.</p>
+								</td><td>
+									<p>Double-click the message to view the missing source in the Audio tab of the Project Explorer for SFX and in the Contents Editor for voice.</p>
+								</td></tr><tr><td>
+									<p>Source Plug-in not supported on platform.</p>
+								</td><td>
+									<p>Double-click the message to open the Contents Editor where you can select a source plug-in that is supported by the current platform.</p>
+								</td></tr><tr><td>
+									<p>Source Plug-in not installed.</p>
+								</td><td>
+									<p>Install the source plug-in.</p>
+								</td></tr><tr><td>
+									<p>Missing language sources.</p>
+								</td><td>
+									<p>Import the missing language source using the Audio File Importer.</p>
+								</td></tr><tr><td>
+									<p>Selected codec does not support this source's channel configuration.</p>
+								</td><td>
+									<p>Wwise will automatically downmix the source before conversion. Double-click the message and change the codec (audio format) or channels settings.</p>
+								</td></tr><tr><td>
+									<p>Audio FX plug-in not supported on platform.</p>
+								</td><td>
+									<p>Double-click the message to open the Property Editor where you can select an Effect plug-in that is supported by the current platform.</p>
+								</td></tr><tr><td>
+									<p>Audio FX Plug-in not installed.</p>
+								</td><td>
+									<p>Install the missing audio effects plug-in.</p>
+								</td></tr><tr><td>
+									<p>Render effect has been applied to an &#8220;In use&#8221; source that is not an audio file.</p>
+								</td><td>
+									<p>Render effects are not supported for source plug-ins. Double-click the message to do one of the following:</p>
+									<p>In the Property Editor, remove the render effect option.</p>
+									<p>In the Contents Editor, select an audio source that references an audio file to be &#8220;In Use&#8221;. </p>
+								</td></tr><tr><td>
+									<p>The selected effect must be rendered.</p>
+								</td><td>
+									<p>Double-click to open the Property Editor and do one of the following:</p>
+									<p>Render the Effect.</p>
+									<p>Change the Effect used.</p>
+								</td></tr><tr><td>
+									<p>The effect could be rendered to save CPU, since no parameters will change in game.</p>
+								</td><td>
+									<p>Double-click to open the Property Editor and select the <span class="bold"><strong>Render</strong></span> check box.</p>
+								</td></tr><tr><td>
+									<p>The effect on this object has been bypassed. The render effect will be ignored.</p>
+								</td><td>
+									<p>Since both of these operations cannot be supported, verify the importance to your project of the render effect. If you want to apply the render effect option, remove the Bypass Effect.</p>
+								</td></tr><tr><td>
+									<p>A bypass effect property has been assigned to the RTPC for this object. The render effect will be ignored.</p>
+								</td><td>
+									<p>Since both of these operations cannot be supported, verify the importance to your project of the Render effect operation or the RTPC-driven bypass effect. If you want to apply the render effect option, remove the RTPC bypass effect on the object.</p>
+								</td></tr><tr><td>
+									<p>An RTPC has been applied to the Effect for this object. The render effect will be ignored.</p>
+								</td><td>
+									<p>Since both of these operations cannot be supported, verify the importance to your project of the RTPC that has been applied, or the render effect. If you want to apply the render effect, remove the RTPC.</p>
+								</td></tr><tr><td>
+									<p>Seek table required for this virtual voice behavior.</p>
+								</td><td>
+									<p>Double-click the message to open the Conversion Settings dialog and do one of the following:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enable the seek table in the Vorbis Encoder Parameters dialog.</p></li><li class="listitem"><p>Change the file format.</p></li></ul></div>
+								</td></tr><tr><td>
+									<p>Seek table not required for this virtual voice behavior.</p>
+								</td><td>
+									<p>To reduce the memory usage, you can disable the seek table. Double-click the message to open the Conversion Settings dialog to disable the seek table in the Vorbis Encoder Parameters dialog.</p>
+								</td></tr><tr><td>
+									<p>Seek table required for music objects in Vorbis format.</p>
+								</td><td>
+									<p>Double-click the message to open the Conversion Settings dialog and do one of the following:</p>
+									<p>Enable the seek table in the Vorbis Encoder Parameters dialog.</p>
+									<p>Change the file format.</p>
+								</td></tr><tr><td>
+									<p>Child object in this container is not assigned to a Switch.</p>
+								</td><td>
+									<p>Double-click the message to open the Project Explorer and the associated Property Editor where you can do one of the following:</p>
+									<p>Remove the unassigned object.</p>
+									<p>Assign the object to a Switch.</p>
+								</td></tr><tr><td>
+									<p>No group assigned to the Switch Container.</p>
+								</td><td>
+									<p>Double-click to open the Property Editor and assign a Switch or State Group to the Switch Container.</p>
+								</td></tr><tr><td>
+									<p>No objects assigned to a Switch in Switch Container.</p>
+								</td><td>
+									<p>Double click to open the Contents Editor and assign an object to a Switch in the Switch Container.</p>
+								</td></tr><tr><td>
+									<p>No group is assigned to the Music Switch Container.</p>
+								</td><td>
+									<p>Double-click to open the Property Editor and assign a Switch or State Group to the Music Switch Container.</p>
+								</td></tr><tr><td>
+									<p>No music objects assigned to a Switch in this container.</p>
+								</td><td>
+									<p>Double-click to open the Music Switch Association Editor where you can assign music objects to the Switch.</p>
+								</td></tr><tr><td>
+									<p>The playlist of the Sequence Container has no assigned objects.</p>
+								</td><td>
+									<p>Double-click to open the Contents Editor where you can assign objects to the playlist.</p>
+								</td></tr><tr><td>
+									<p>The playlist of the Music Playlist Container has no assigned objects.</p>
+								</td><td>
+									<p>Double-click to open the Music Playlist Editor and assign music objects to the playlist.</p>
+								</td></tr><tr><td>
+									<p>A blend track in the Blend Container has no assigned objects.</p>
+								</td><td>
+									<p>Double-click to open the Blend Track Editor where you can do one of the following:</p>
+									<p>Add objects to the blend track.</p>
+									<p>Remove the blend track.</p>
+								</td></tr><tr><td>
+									<p>A music track in the Music Segment contains no audio files.</p>
+								</td><td>
+									<p>Double-click to open the Music Segment Editor where you can do one of the following:</p>
+									<p>Add clips to the music track.</p>
+									<p>Delete the music track.</p>
+								</td></tr><tr><td>
+									<p>The SoundBank refers to objects that no longer exist.</p>
+								</td><td>
+									<p>Delete the Events or objects from the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>No object assigned to Event Action.</p>
+								</td><td>
+									<p>Double-click and open the Event Editor to do one of the following:</p>
+									<p>Assign objects to these Actions.</p>
+									<p>Remove the Event Action.</p>
+								</td></tr><tr><td>
+									<p>No object assigned to path in Dialogue Event.</p>
+								</td><td>
+									<p>Double-click to open the Dialogue Event Editor and do one of the following:</p>
+									<p>Assign an object to the path.</p>
+									<p>Remove the path.</p>
+								</td></tr><tr><td>
+									<p>Some child objects in this sample accurate container are not using the same output properties as the parent container.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Double-click to open the Schematic View where you can remove any output overrides for the child objects of the sample accurate container.</p>
+								</td></tr><tr><td>
+									<p>Some child objects in this sample accurate container are not using the same effect properties as the parent container.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Double-click to open the Schematic View where you can remove any effect overrides for the child objects of the sample accurate container.</p>
+								</td></tr><tr><td>
+									<p>Some child objects in this sample accurate container are not using the same advanced settings properties as the parent container.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Double-click to open the Schematic View where you can remove any advanced settings overrides for the child objects of the sample accurate container.</p>
+								</td></tr><tr><td>
+									<p>Some containers in this sample accurate container are not sample accurate.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Double-click to open the Project Explorer and change the non-sample accurate child containers of the sample accurate container to sample accurate.</p>
+								</td></tr><tr><td>
+									<p>This sample accurate container has a child Switch Container.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Double-click to open the Project Explorer to remove the Switch Container.</p>
+								</td></tr><tr><td>
+									<p>An audio source in this sample accurate container does not have the same number of channels as other audio sources in the container.</p>
+								</td><td>
+									<p>The parent container may no longer be sample accurate. Verify that all audio sources for this container have the same number of channels.</p>
+								</td></tr><tr><td>
+									<p>Some audio files are shorter than 0.05 seconds. These cannot be used for crossfade transitions.</p>
+								</td><td>
+									<p>Double-click to open the Project Explorer to locate the sound object associated with the audio file whose duration is too short for a crossfade transition and do one of the following.</p>
+									<p>Drag and drop another audio file with a longer duration onto the sound object.</p>
+									<p>In the Property Editor for the parent object, select another transition type.</p>
+								</td></tr><tr><td>
+									<p>Switch Containers with more than one object assigned to a Switch do not crossfade correctly.</p>
+								</td><td>
+									<p>Double-click to open the Project Explorer and in the associated Property Editor ensure that only one object is assigned to a Switch for crossfade transitions.</p>
+								</td></tr><tr><td>
+									<p>A container with a Trigger rate duration of less than 0.021 seconds may not play as expected.</p>
+								</td><td>
+									<p>Double-click to open the Property Editor and in the associated Property Editor, change the Trigger rate duration to more than 0.021 seconds.</p>
+								</td></tr><tr><td>
+									<p>This source only contains an LFE channel.</p>
+								</td><td>
+									<p></p>
+								</td></tr><tr><td>
+									<p>This source contains an LFE channel.</p>
+								</td><td>
+									<p></p>
+								</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="saving_an_integrity_report"></a>Saving an integrity report</h3></div></div></div><p>It is a good idea to save the integrity report so that you can consult the report to resolve issues, or to keep a record of the issues in your project.</p><div class="orderedlist"><p class="title"><b>To save an integrity report:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Integrity Report, click <span class="bold"><strong>Save Report</strong></span>.</p><p>The Save As dialog opens.</p></li><li class="listitem"><p>Browse to the folder where you want to save the report.</p></li><li class="listitem"><p>Replace the default report name with one that best represents this report, and click <span class="bold"><strong>Save.</strong></span>
+					</p><p>The Integrity Report is saved as a text file in the location that you have specified.</p></li></ol></div></div></div><HR></body></html>

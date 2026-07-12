@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61.html" title="Project Explorer"><link rel="prev" href="ch61.html" title="Project Explorer"><link rel="next" href="ch61s01s01.html" title="Audio Devices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-node">Audio tab</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="audio_tab"></a>Audio tab</h2></div></div></div><p>The Audio tab in the Project Explorer is where you create and manage the hierarchical
+			structures of your project assets in a tree view, much like Windows Explorer or the Mac
+			Finder. You can organize your assets using several different types of objects such as
+			regular folders like you would find in Windows, and other objects that are specific to
+			Wwise such as Music Segments, containers, and Property Containers.</p><p>You can navigate through the tree by clicking the plus (+) and minus (-) signs to
+			expand and collapse the various types of folders and objects. You can rename, cut, copy,
+			paste, and delete objects, create Events, as well as import and convert media files in
+			this tab. You can also drag and drop
+				one or more objects between Work Units, folders, and other objects as well as to
+				different views within the Wwise interface. 
+			The Audio tab also includes a toolbar that allows you to
+				quickly add objects, Busses, Work Units, and Folders to your project hierarchy.
+			</p><p>To access the Project Explorer commands, right-click an object in the Project
+			Explorer.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+							<p>(Toolbar)</p>
+						</td><td>
+							<p>Displays one or more icons representing the project elements that
+								can be added as parents or children of the selected node in the
+								Project Explorer.</p>
+							<p>By default, the toolbar displays all project elements that can be
+								added as a child of the selected node. To display the possible
+								parent project elements, press the Shift key.</p>
+							<p>To add a child to the selected node, simply click one of the
+								active icons in the icon bar. To add a parent to the selected node,
+								simply Shift+click one of the active icons in the icon bar.</p>
+							<p>Different icons will become active depending on the type of object
+								you currently have selected in your project hierarchy.</p>
+						</td></tr><tr><td>
+							<p><a class="xref" href="ch61s01s01.html" title="Audio Devices">Audio Devices</a></p>
+						</td><td>
+							<p>A complete list of Audio Devices in your project sorted by Work Units and Virtual
+								Folders. Double-click an Audio Device to open the <a class="xref" href="ch61s01s01s01.html" title="Audio Device Editor: System">Audio Device Editor: System</a>.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The listed Audio Devices are sink plug-ins created by third parties or by developers
+									using the SDK's sink plug-in framework. They are only available
+									to those who have created and/or incorporated these plug-ins
+									into Wwise. Correspondingly, there is no toolbar icon. Instead,
+									from the shortcut menu of any Work Unit in the Audio Devices
+									section, select <span class="bold"><strong>New Child</strong></span>.
+									Under the <span class="bold"><strong>Work Unit</strong></span> and
+										<span class="bold"><strong>Virtual Folder</strong></span> options, all
+									available Audio Device plug-ins are listed. These Audio Devices
+									are also automatically added to the Init.bnk file. </p></td></tr></table></div>
+							<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Refer to the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=soundengine__plugins__audiodevices.html" target="_blank">
+									SDK documentation
+								</a> to learn more about how to develop Audio Device plug-ins.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>
+								<a class="xref" href="ch61s01s02.html" title="Busses hierarchy">Busses hierarchy</a></p>
+						</td><td>
+							<p>A hierarchical
+									structure of busses at the top of your object hierarchy that
+									allows you to define the routing of the various sound, music,
+									and motion structures within your project. </p>
+							<p>After the different structures have been grouped into busses, you
+								can modify the properties, such as volume and pitch, define
+								behaviors, such as ducking, and apply effects to the entire
+								group.</p>
+							<p>Double-click a bus to open the Bus Property Editor.</p>
+						</td></tr><tr><td>
+							<p>
+								<a class="xref" href="ch61s01s03.html" title="Containers hierarchy: sound and motion objects">Containers hierarchy: sound and motion objects</a></p>
+						</td><td>
+							<p>A hierarchical structure of the assets within your project.
+									The Containers hierarchy can be
+									comprised of a series of sound, motion, and music objects, organized
+									 in containers and folders. Click an object to open it in an object tab.
+							</p>
+						</td></tr><tr><td colspan="2">
+							
+							<p>For objects in the Devices and Containers hierarchies:</p>
+						</td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr></tbody></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>To open the selected items in the default External Editor, press Ctrl+E. Refer to
+					<a class="xref" href="ch11s08.html" title="Editing audio files in an external editor">Editing audio files in an external editor</a> for more
+				information.</p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch44s01.html" title="Setting display options">Setting display options</a></p></li><li class="listitem"><p><a class="xref" href="ch44s03.html" title="Using the Project Explorer toolbar">Using the Project Explorer toolbar</a></p></li><li class="listitem"><p><a class="xref" href="ch12s03.html#building_actor_mixer_hierarchy_adding_parent_objects" title="Adding parent objects">Adding parent objects</a></p></li><li class="listitem"><p><a class="xref" href="ch12s03.html#adding_objects_to_actor_mixer_hierarchy" title="Adding objects to the Containers hierarchy">Adding objects to the Containers hierarchy</a></p></li><li class="listitem"><p><a class="xref" href="ch12s03.html#managing_objects_in_actor_mixer_hierarchy" title="Managing objects in the Containers hierarchy">Managing objects in the Containers hierarchy</a></p></li><li class="listitem"><p><a class="xref" href="ch28s04.html" title="Working with music objects">Working with music objects</a></p></li><li class="listitem"><p><a class="xref" href="ch10s01.html#creating_work_units_in_project" title="Creating Work Units in your project">Creating Work Units in your project</a></p></li></ul></div></div><HR></body></html>

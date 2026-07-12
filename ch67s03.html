@@ -1,0 +1,451 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AK Convolution Reverb</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s02.html" title="AK Channel Router"><link rel="next" href="ch67s04.html" title="AK Custom Panner"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">AK Convolution Reverb</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_convolution_reverb_plug_in"></a>AK Convolution Reverb</h2></div></div></div><p>The AK Convolution Reverb plug-in must be installed and is referred to as AK Convolution in
+    the Audiokinetic Launcher. For information on installing plug-ins through the Launcher, see
+      <a class="link" href="https://www.audiokinetic.com/library/edge/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> in the Audiokinetic Launcher guide.</p><p>For information on applying it to objects, see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>
+      (See the <a class="xref" href="ch67s03.html#convolution_reverb_plug_in_properties" title="AK Convolution Reverb properties">AK Convolution Reverb properties</a> below.)
+    </p><p>The AK Convolution Reverb plug-in can be used to simulate the acoustics of real spaces. It uses a pre-recorded impulse response of the space being modeled and performs the convolution of the incoming audio signal with a given impulse response file. This applies the acoustics of the recorded room held in the impulse response onto the incoming audio signal as if the sound were played within that environment.</p><p>The AK Convolution Reverb comes with a collection of various acoustical spaces, which are ready-to-use <a class="xref" href="ch61s11.html" title="Presets">Presets</a> available within new Wwise projects. You can also provide your own impulse response recordings, either obtained through an existing library (commercial or free) or through in-house recordings of a space.</p><p>The acoustical properties of these spaces can be tuned through many settings that can be edited in the interface to obtain a variety of alternate spaces derived from the same impulse response recordings.</p><p>The AK Convolution Reverb plug-in performs its processing in two stages: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>When making a change to one of the offline settings, a SoundBank must be regenerated
+            and redeployed to your game (that is, it is not pushed through network communication
+            because of bandwidth considerations).</p></td></tr></table></div><p><span class="bold"><strong>Offline impulse response conversions</strong></span>: Certain
+        settings are applied offline to the original displayed impulse response file. Every time one
+        of these parameters changes, a new converted impulse response is created in the background
+        with the offline parameter settings applied onto it. All parameters controlled within or
+        above the impulse response display, located in the left portion of the interface, are
+        parameters which are processed offline. These changes are automatically applied behind the
+        scenes for playback in Wwise or when generating SoundBanks.</p></li><li class="listitem"><p><span class="bold"><strong>Real-time processing</strong></span>: At runtime, the convolution with the pre-processed impulse response is applied to the incoming signal as well as a series of other runtime digital signal processing operations, many of which can be controlled using RTPCs. The parameters to the right of the impulse response display are all applied at runtime and do not trigger any changes in the impulse response file that will be packaged into SoundBanks.</p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="integrating_convolution_reverb_inside_game"></a>Integrating AK Convolution Reverb inside the game</h3></div></div></div><p>The AK Convolution Reverb impulse response files must be included in a SoundBank for the Effect to function normally inside the game. Refer to <a class="xref" href="ch41s03s04s03.html" title="Including plug-in media in SoundBanks">Including plug-in media in SoundBanks</a> for more information.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="importing_custom_impulse_responses"></a>Importing custom impulse responses</h3></div></div></div><p>The AK Convolution Reverb plug-in supports impulse responses in the WAV standard format so that you can provide your own impulse response recordings. It can accept WAV files in 16 or 24 bit integer formats. All channel configurations are supported.</p><p>The AK Convolution Reverb plug-in expects impulse responses recorded with impulsive sounds. When using the sine wave method to record impulse responses, the recordings must first be properly deconvolved (commercial solutions are available to perform this). For optimal results, impulse response WAV files should be edited as follows before loading the impulse response in the AK Convolution Reverb:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Remove unnecessary silence (or very low amplitude noise) at the beginning of the impulse response to avoid undesirable latency.</p></li><li class="listitem"><p>Remove unnecessary silence (or very low amplitude noise) at the end of the sound to avoid undesirable impacts on performance and memory usage. This will also speed up the frequent impulse response conversion performed by Wwise.</p></li><li class="listitem"><p>Remove the dry component spike from the recording.</p></li><li class="listitem"><p>In the highest bit-depth possible (for example, using 24-bit recordings), normalize the waveform to maintain a good signal to noise ratio within the convolution engine.</p></li></ul></div><p>
+			</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>It is also possible to sample the impulse response of an electronic reverberation unit or other device instead of sampling a real space.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="multichannel_input_signals_and_impulse_responses"></a>Multi-channel input signals and impulse responses</h3></div></div></div><p>The AK Convolution Reverb plug-in can import impulse responses of all channel configurations supported by Wwise, even standard configurations with height channels, such as 7.1.4, and ambisonics up to 3rd order. They can be used as they are, if the Channels downmix option is set to <span class="bold"><strong>As Input</strong></span>. Other downmix options will result in a mono or stereo impulse response. However, input and impulse response configurations need to match to some extent. Invalid combinations result in an "Unsupported channel configuration" error in the Capture Log when the Effect is played back. Here are the rules:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In general, the channel configuration type of the input signal and impulse response must be the same. For example, ambisonic sounds must be convolved with ambisonic impulse responses, and standard sounds (stereo, 5.1, and so on) with standard impulse responses.</p></li><li class="listitem"><p>An exception to the rule above is mono (single-channel) sounds or impulse responses, which can be used with any configuration type.</p></li><li class="listitem"><p>Anonymous channel configurations are only supported in Filter mode, not in Reverb mode, except if there is just one channel.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>"Input signal" refers to the signal to be processed by the plug-in. The source of the input signal can vary based on where the effect is placed. When Convolution Reverb is placed after another effect in an effect chain, the input signal is the output signal of the previous effect in the chain. The previous effect determines the channel configuration of the input signal. When Convolution Reverb is the first effect in the chain, the source of the input signal depends on the type of object on which it is placed.</p><p>On an object in the Containers hierarchy, the input signal is the output of the source of the object. The channel configuration of the input signal is also controlled by the source of the object.</p><p>On a Bus, the input signal is the downmix performed by the Bus. The channel configuration of the input signal matches the Bus' channel configuration.</p></td></tr></table></div><p>In Reverb mode, the input signal is first downmixed to mono or stereo using the controls in the Input Levels section. A multi-channel convolution is performed, and the result is upmixed back to the original multi-channel configuration using the Output Levels controls. Downmixing to mono or stereo depends on the configuration types of the input and impulse response, and on the input signal's channel count.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>With standard configurations, input channels are downmixed to stereo, except if there is just one channel (mono or 0.1). The contribution of the center and LFE channels may be controlled with the Input Levels control group. The Input Spread control also determines the amount of crosstalk between the two downmix channels. These two channels are convolved with the respective left-hand side and right-hand side of the impulse response.</p></li><li class="listitem"><p>With ambisonic configurations, the Input Spread is not supported, and thus the input signal is always downmixed to mono. That is, the W channel is taken. It is then convolved with each channel of the impulse response, and each convolved channel is mixed into its respective output channel, followed by additional processing of output Front and Rear levels, and Rear delay. If the input signal and impulse response ambisonic order differs, convolution happens on the lowest order of the two, and no contribution (wet) is added to the higher harmonics.</p></li></ul></div><p>In Filter mode, a direct convolution is applied between each channel and the impulse response channel(s).</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>With standard configurations, input channels are convolved with the best match found in the impulse response. For example, the back left (BL) input channel would be convolved with the back left impulse response channel if it exists, otherwise with the side left (SL) if it exists, otherwise with the front left (FL).</p></li><li class="listitem"><p>With ambisonic and anonymous configurations, the ith input channel is convolved with the (ith % N) channel of the impulse response, where N is the number of channel of the impulse response. In other words, channels are convolved in order and wrap to the beginning after exhausting all the impulse response's channels.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="memory_and_cpu_optimizations"></a>Memory and CPU optimizations</h3></div></div></div><p>Several mechanisms are available to reduce the resource usage (CPU and memory) of the AK Convolution Reverb:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Time-domain truncation: The begin and end markers can be used to trim the length of the
+          impulse response file. Because CPU and memory consumption are directly related to the
+          length of the impulse response, significant optimizations can be achieved by effectively
+          reducing the length of the impulse response. If the impulse response imported was not
+          properly trimmed and contains significant silence before its start and end points, it
+          should be carefully trimmed to avoid using any unnecessary resources.</p></li><li class="listitem"><p>Impulse response downmix options: Multi-channel impulse responses provide a true
+          sensation of space and are desirable in many situations. There may be cases, however,
+          where a mono impulse response may be sufficient. In these cases, just make sure you are
+          either using one of the impulse response channels (left or right) or the downmix of both
+          channels together using the provided downmix option to get a more efficient
+          convolution.</p></li><li class="listitem"><p>Frequency-domain truncation: The threshold parameter can be used to stop processing the
+          convolution at the lowest frequency which falls below the threshold to further reduce the
+          memory and CPU usage of the convolution. For large threshold values, the cutoff frequency
+          detected may change abruptly, leading to artifacts such as frequency sweeping and tail
+          cut. The smoothing parameter can be used to reduce these artifacts by avoiding drastic
+          changes in the impulse response at the expense of reducing the optimization gain. The
+          figures below illustrate the effect of the threshold and smoothing parameters on detected
+          convolution cutoff frequencies.</p><div class="mediaobject"><img src="Images/Plugins/Wwise_Convolution_Reverb/ThresholdParameterEffect.png"></div><div class="mediaobject"><img src="Images/Plugins/Wwise_Convolution_Reverb/SmoothingParameterEffect.png"></div></li><li class="listitem"><p>Low-pass filtering: When used in conjunction with the threshold parameter for frequency-domain truncation, you can achieve additional optimizations by low-pass filtering the impulse response with a time varying curve. Because lowpass filtering will make higher frequencies decay more rapidly (which may be desirable to create a darker sounding environment), the frequency truncation algorithm will be able to truncate more aggressively and save additional memory and CPU when heavy low-pass filtering is used.</p></li><li class="listitem"><p>Optimizations ratio display: When performing one of the above optimizations, keep an eye on the optimizations ratio display while validating that the audio differences remain faithful to the original room.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="convolution_latency"></a>Audio signal latency in AK Convolution Reverb</h3></div></div></div><p>Due to the processing of the Convolution Effect, there may be some latency introduced in both the dry and the wet audio signal, even if there is a Pre Delay of 0ms specified in the Effect. In order for the internal convolution processing to occur, the Effect needs to buffer a certain number of audio samples over one or more sound engine frames, perform the convolution, and then gradually output the buffered result of the processing. The number of samples to be buffered is defined by the Block Size property on the Effect.</p><p>For example, consider a sound engine with <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_init_settings_a2438a18ece872c83175f70d7f70d659b.html" target="_blank"><code class="code">AkInitSettings.uNumSamplesPerFrame</code></a> configured to process 256 samples per frame, but the Block Size of a Convolution Effect is set to 1024. On the first sound engine frame, the Effect will take 256 samples of audio as input and store it in a buffer. This will repeat for the next two frames. Then, on the fourth frame, after 1024 samples have been buffered, the full convolution will be processed, and then only the first 256 samples of the processed data will be output. Over the next three frames, the remaining 768 samples of processed data will be output, and meanwhile, the input audio will be buffered again for another convolution process to occur later. This ultimately creates 768 samples of latency on the output audio signal. </p><p>However, consider a sound engine with <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_init_settings_a2438a18ece872c83175f70d7f70d659b.html" target="_blank"><code class="code">AkInitSettings.uNumSamplesPerFrame</code></a> configured to process 256 samples per frame, and the Block Size of a Convolution Effect is set to 256. In this scenario, on every frame the Effect will take in 256 samples of audio, perform the convolution, and output 256 samples, with zero samples of added latency on the output audio signal. This does come at a greater memory and CPU cost, because the convolution has to be performed every frame, instead of being performed every fourth frame, but this can be valuable if zero-latency processing is desired.</p><p>Conversely, if the latency of the signal is not a concern, then a larger Block Size can allow the convolution to be processed even less frequently, which can reduce the amortized CPU cost of the Effect. For example, this approach would be appropriate when the Effect on its own is not intended to output any portion of the dry signal and there's already going to be a delay on the wet signal.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="additional_notes"></a>Additional notes</h3></div></div></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>The AK Convolution Reverb plug-in is only compatible with sound engine sample rates of
+        48000 Hz. This is the default setting in <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_platform_init_settings_a2bf6f000f256b146d6cd36401a234b85.html#a2bf6f000f256b146d6cd36401a234b85" target="_blank">uSampleRate</a>.</p></td></tr></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>The complexity of the reverberation (affecting CPU and memory usage) is directly proportional to the length of the converted impulse response file. For very long reverberation times, it may be best to use a parametric reverb solution, such as the <a class="xref" href="ch67s21.html" title="RoomVerb">RoomVerb</a> plug-in.</p></td></tr></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>When working exclusively on tweaking reverb Presets, the converted files created behind the scenes when modifying offline parameters may result in an accumulation of converted files that is resolved when closing the project or when generating banks. In this situation it may be a good idea to clear the audio file cache on the Windows platforms (orphans only).</p></td></tr></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>The AK Convolution Reverb plug-in can be quite intensive for memory and CPU usage. It is a good idea to budget the necessary memory and CPU early on in the design. Make sure that you are familiar with optimization parameters, such as impulse response threshold, truncation, and downmix, because these parameters can all help ensure that the requirements of the plug-in remain acceptable.</p></td></tr></table></div><br><br></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="convolution_reverb_plug_in_properties"></a>AK Convolution Reverb properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2"><a name="convolution_reverb_plug_in_offline_settings"></a>
+                <p>
+                  <span class="bold"><strong>AK Convolution Reverb Offline Settings</strong></span>
+                </p>
+                <p>These properties are applied offline to the converted IR file. They cannot be modified at runtime.</p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Settings</strong></span>
+                </p>
+              </td></tr><tr><td align="center">
+                <p>Filename</p>
+              </td><td>
+                <p>The impulse response file (WAV or AMB) selected to be used for the convolution.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+                <p>(Browse)</p>
+              </td><td>
+                <p>Opens a load dialog, where you can browse to and select the impulse response file (WAV or AMB) to be used for the convolution.</p>
+              </td></tr><tr><td>
+		<p>Channel Config</p>
+	</td><td>
+		<p>A list of possible channel configurations for the source, which will impact how the channels are transformed.</p>
+		<p>Wwise can interpret the source channel configuration according to the following file ordering varieties:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>SMPTE</strong></span>: By default, Wwise understands the file order to be SMPTE (the Microsoft standard), unless it has an ambisonics header. For 5.1, it would appear as <span class="bold"><strong>5.1(L,R,C,LFE,SL,SR)</strong></span>.<br> However, the default is indicated in the list with Detect [channelconfig], where &#8220;channelconfig&#8221; indicates the detected configuration. For 5.1, it appears as <span class="bold"><strong>Detect [5.1(L,R,C,LFE,SL,SR)]</strong></span>.<br></p></li><li class="listitem"><p><span class="bold"><strong>FuMa</strong></span>: By default, for Ambisonics Component Ordering, Wwise understands the file order to be FuMa. For ambisonics 1-1, it would appear as <span class="bold"><strong>4(Ambisonics) (FuMa)</strong></span>.<br> However, the default is indicated in the list with Detect [channelconfig], where &#8220;channelconfig&#8221; indicates the detected configuration. For ambisonics 1-1, it appears as <span class="bold"><strong>Detect [4(Ambisonics)(FuMa)]</strong></span>.<br></p></li><li class="listitem"><p><span class="bold"><strong>Anonymous</strong></span>: The anonymous Channel Config options simply number the channels in order of appearance. So, an ambisonics 1-1 file would just be 1 + 2 + 3 + 4, while a 5.1 file would just be 1 + 2 + 3 + 4 + 5 + 6.<br></p></li><li class="listitem"><p><span class="bold"><strong>Film</strong></span>: Apart from ambisonic files, the alternative file orderings in the list are Film. For 5.1, it appears as <span class="bold"><strong>5.1(L,C,R,SL,SR,LFE)</strong></span>.<br></p></li><li class="listitem"><p><span class="bold"><strong>AmbiX</strong></span>: For ambisonics, the alternative file orderings in the list are AmbiX (ACN ordering with SN3D normalization). For ambisonics 1-1, it appears as <span class="bold"><strong>4(Ambisonics)(AmbiX)</strong></span>.<br></p></li></ul></div>
+		<p>Default value: 0</p>
+	</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/pin_icon.png"></div>
+              <div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+              <p>(Pinned/Unpinned)</p>
+            </td><td>
+                <p>Determines whether a property curve will remain in the graph view when another curve is selected.</p>
+                <p>When the Pin icon is selected, the curve will be displayed in the graph view whether the curve is selected or not.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/Color_Red.png" width="13"></td></tr></table></div>
+                <p>(Color block)</p>
+              </td><td>
+                <p>Displays the color of the corresponding property curve in the graph view.</p>
+              </td></tr><tr><td>
+		<p>Volume</p>
+	</td><td>
+		<p>A volume offset to compensate for different recording levels for different impulse responses. When using curve automation this is a powerful tool to create an amplitude time envelope to modify the characteristics of the impulse response. For example, fading in the impulse response can result in a more diffuse reverberation.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+                <p>LPF (Low-Pass Filter)</p>
+              </td><td>
+                <p>With curve automation, LPF can be used to control the cutoff frequency of a low-pass filtering effect with time-varying characteristics. This can be used to simulate different frequency-dependent damping characteristics. For example, a decaying LPF envelope results in a darker room typical of more absorbing material.</p>
+                <p>
+                  Curve Range: 20 to 20,000 <br>Units: Hz
+                </p>
+              </td></tr><tr><td>
+		<p>Automate</p>
+	</td><td>
+		<p>Enables automation of the property values over the duration of the original impulse response using user editable curves.</p>
+		<p>When this option is selected, you can edit the automation curve for the corresponding property in the graph view.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Transformation</strong></span>
+                </p>
+              </td></tr><tr><td>
+		<p>IR Stretch</p>
+	</td><td>
+		<p>Impulse response resampling factor. This applies a pitch shift effect through resampling (thus affecting its duration). This can be used to simulate smaller or larger spaces by shifting the resonances of the impulse response in frequency. A value of 100 results in no change in duration and frequency. A value of 50 yields a converted impulse response twice as short and with higher resonance frequencies (typical of smaller spaces). A value of 200 yields an impulse response twice as long with lower resonance frequencies (typical of larger spaces).</p>
+		<p>Default value: 100</p>
+		<p>Range: 50 to 200</p>
+	</td></tr><tr><td>
+		<p>IR Channels</p>
+	</td><td>
+		<p>Downmix options available for multi-channel impulse responses:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>As Input</strong></span>: Uses all channels of the impulse response to perform a multi-channel convolution.</p></li><li class="listitem"><p><span class="bold"><strong>Stereo</strong></span>: Uses a stereo downmix of the impulse response to perform a stereo convolution. Ignored with anonymous channel configurations (falls back to As Input).</p></li><li class="listitem"><p><span class="bold"><strong>Mixdown</strong></span>: Uses a downmix of all channels of the impulse response to perform a mono convolution with all channels. Anonymous configurations and ambisonics take the first channel / W.</p></li><li class="listitem"><p><span class="bold"><strong>Left only</strong></span>: Uses the left channel from the impulse response to perform a mono convolution with all channels. Anonymous configurations and ambisonics take the first channel / W.</p></li><li class="listitem"><p><span class="bold"><strong>Right only</strong></span>: Uses the right channel from the impulse response to perform a mono convolution with all channels. Anonymous configurations and ambisonics take the first channel / W.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This control is only enabled when a multi-channel impulse response file is used.</p></td></tr></table></div>
+		<p>Default value: As Input</p>
+	</td></tr><tr><td>
+		<p>IR Balance</p>
+	</td><td>
+		<p>Balance control can be used to pan a stereo impulse response. This may be useful for impulse responses recorded with more emphasis in one channel, which may result in an undesirable steering of the stereo image (wet component) to one side or the other.</p>
+		<p>Because the balance control produces a re-mix of the stereo impulse response channels with different weightings, it can also be used with the &#8216;Mixdown&#8217; option of the &#8216;Channels&#8217; parameter to effectively interpolate between the characteristics of the left and right channels.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This control is only enabled when a stereo impulse response file is used and when the Channels parameter is set to <span class="bold"><strong>Stereo</strong></span> or <span class="bold"><strong>Mixdown</strong></span>.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Optimization</strong></span>
+                </p>
+              </td></tr><tr><td>
+                <p>Threshold</p>
+              </td><td>
+                <p>
+                  Specifies the level below which energy contained in the impulse response will be discarded to save memory and CPU resources. This threshold is compared against a frequency-specific energy computation that evolves over time in the impulse response and allows for the optimization of storage and processing of the convolution at no or minimal cost in terms of quality losses. A value of -144 dB will result in the full impulse response information being processed while lower values will typically eliminate low-energy higher frequency information to obtain significant optimizations. At higher threshold values (for example, above -50 dB), artifacts due to compression will be more noticeable. It is recommended that you try to set the threshold as high as possible without noticeably affecting the audio quality. For more details, refer to <a class="xref" href="ch67s03.html#memory_and_cpu_optimizations" title="Memory and CPU optimizations">Memory and CPU optimizations</a>.
+                </p>
+                <p>
+                  Default value: -144 <br>Slider Range: -144 to -30 <br>Units: dB
+                </p>
+              </td></tr><tr><td>
+                <p>Smooth</p>
+              </td><td>
+                <p>
+                  Uses Low-Pass Filtering to smooth the frequency specific truncation points detected based on the threshold parameter. Smoothing can be used to compensate for the artifacts introduced by using high threshold values. The consequence of using high smoothing values is that any optimization gains will be reduced, so it should only be used when necessary. Note that it is sometimes best to set the threshold parameter at a lower value rather than having to use large smoothing parameter values. For more details, refer to <a class="xref" href="ch67s03.html#memory_and_cpu_optimizations" title="Memory and CPU optimizations">Memory and CPU optimizations</a>.
+                  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is only enabled when the threshold parameter is set above -144 dB.</p></td></tr></table></div><p>
+                  Default value: 0 <br>Slider Range: 0 to 100 <br>
+                </p>
+              </td></tr><tr><td>
+                <p>HW Acceleration</p>
+              </td><td>
+                <p>
+                  Some platforms have hardware acceleration for convolution processing. When enabled, this can reduce the CPU usage of the convolution effect.
+                </p>
+                
+                  
+                
+                
+                  
+                
+              </td></tr><tr><td>
+                <p>Input Threshold</p>
+              </td><td>
+                <p>
+                  The volume at which higher frequencies of input audio will be considered too quiet to make an audible difference. By discarding information on high-frequency audio that is deemed irrelevant, CPU resources can be saved during convolution processing.
+                </p>
+              </td></tr><tr><td>
+                <p>Block Size</p>
+              </td><td>
+                <p>
+                  Size of the blocks used for the fourier transform and convolution processing of the effect. Larger block sizes can reduce the CPU cost of the effect, but at the expense of increased latency of the output audio. For more details, refer to <a class="xref" href="ch67s03.html#convolution_latency" title="Audio signal latency in AK Convolution Reverb">Audio signal latency in AK Convolution Reverb</a>.
+                </p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>IR Information Display</strong></span>
+                </p>
+              </td></tr><tr><td>
+                <p>Original</p>
+              </td><td>
+                <p>Information about the original impulse response file loaded in the plug-in.</p>
+              </td></tr><tr><td>
+                <p>Converted</p>
+              </td><td>
+                <p>Information about the converted impulse response, that is, after applying all offline settings to the original impulse response file.</p>
+              </td></tr><tr><td>
+                <p>Channels</p>
+              </td><td>
+                <p>The number of channels contained in the impulse response file.</p>
+              </td></tr><tr><td>
+                <p>Length</p>
+              </td><td>
+                <p>The duration (in seconds) of the impulse response file.</p>
+              </td></tr><tr><td>
+                <p>Peak</p>
+              </td><td>
+                <p>The peak amplitude of all channels of the impulse response file (in dB).</p>
+              </td></tr><tr><td>
+                <p>RT60</p>
+              </td><td>
+                <p>RT60 is an acoustical measurement used to calculate reverberation time decay. In other words, RT60 is the measurement of the time it takes a signal to decay by 60 dB.</p>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>The RT60 value of the original can be used to provide a good starting point in selecting the location for the end marker truncation.</p></td></tr></table></div>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>RT60 is an estimation computed by slope projection, so it is possible that the RT60 time is actually longer than the length of the impulse response itself.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Lower Engine Memory Usage</p>
+              </td><td>
+                <p>
+                  The estimated amount of runtime memory required (in kilobytes) for each playing instance using the current effect settings. This estimate is provided assuming surround sound (5.1) execution of the Effect.
+                </p>
+              </td></tr><tr><td>
+                <p>SoundBank Memory Usage</p>
+              </td><td>
+                <p>The estimated amount of memory that the converted impulse response file will take (in kilobytes) when packaged into a SoundBank using the current effect settings.</p>
+              </td></tr><tr><td>
+                <p>Optimization Ratio Display</p>
+              </td><td>
+                <p>Determines the total memory gains (SoundBank and Lower Engine) based on optimization parameters as well as impulse response truncation using the begin and end markers. a 2:1 ratio thus means that only half of the memory is required to perform the convolution with the current settings.</p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Graphical Displays Controls</strong></span>
+                </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+              </td><td>
+                <p>Zooms in towards the center of the graph view.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+              </td><td>
+                <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+              </td><td>
+                <p>Zooms out from the center of the graph view.</p>
+              </td></tr><tr><td>
+                <p>X</p>
+              </td><td>
+                <p>The coordinate along the X axis of the selected control point.</p>
+                <p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the X text box, both control points will move to the left by 5 units.</p>
+              </td></tr><tr><td>
+                <p>Y</p>
+              </td><td>
+                <p>The coordinate along the Y axis of the selected control point.</p>
+                <p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the Y text box, both control points will move down by 5 units.</p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Time-domain Display</strong></span>
+                </p>
+              </td></tr><tr><td>
+                <p>(Waveform GraphView)</p>
+              </td><td>
+                <p>A graphical representation of the original impulse response is displayed. The wave shown is full-wave rectified and downmixed when the loaded impulse response is multi-channel. Automation curves of the volume and LPF properties can also be shown on the graph. The X axis represents the duration of the original impulse response sound, and the Y axis represents the value of the property to be applied at a specific time.</p>
+                <p>Only curves with the Automate option selected can be edited in the graph view. You can move points along the curve by clicking and dragging. To add a point, double-click anywhere along the curve and right-click on a section of the curve to select a different curve shape.</p>
+                <p>The graph view can display several curves simultaneously by selecting multiple properties in the list or by using the pin option.</p>
+              </td></tr><tr><td>
+                <p>Begin Marker</p>
+              </td><td>
+                <p>
+                  Removes the start of the original impulse response from the convolution. It can be used to obtain a different sounding reverberation (for example, a more diffuse reverberation) or to trim the impulse response file to remove unnecessary pre-delay which can result in perceived latency. For more details, refer to <a class="xref" href="ch67s03.html#memory_and_cpu_optimizations" title="Memory and CPU optimizations">Memory and CPU optimizations</a>.
+                </p>
+              </td></tr><tr><td>
+                <p>End Marker</p>
+              </td><td>
+                <p>
+                  Removes the end of the original impulse response from the convolution. It can be used to obtain a different reverberation sound (for example, shorter reverb time) or to reduce resource usage by performing a shorter convolution. For more details, refer to <a class="xref" href="ch67s03.html#memory_and_cpu_optimizations" title="Memory and CPU optimizations">Memory and CPU optimizations</a>.
+                </p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Impulse Response Frequency-domain Display</strong></span>
+                </p>
+              </td></tr><tr><td>
+                <p>(EQ GraphView)</p>
+              </td><td>
+                <p>In this graphical representation view of the original impulse, you can change the frequency response to customize the tonal characteristics of the impulse response used (graphic equalizer) where the desired frequency response can be simply drawn using curve controls. The X axis represents frequency and the Y axis represents the desired gain to be applied at a specific frequency.</p>
+                <p>You can move points along the curve by clicking and dragging. To add a point, double-click anywhere along the curve and right-click on a section of the curve to select a different curve shape.</p>
+                <p>
+                  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The response drawn is sampled approximately every 20 Hz. The gain specified at the maximum frequency (20,000 Hz) is extended up to the Nyquist frequency. Note that very sharp transitions may be effectively smoothed by the filtering process to avoid the Gibbs phenomenon because the filtering process has a small transition band and is not exactly brickwall.</p></td></tr></table></div><p>
+                </p>
+              </td></tr><tr><td>
+		<p>IR Enable EQ</p>
+	</td><td>
+		<p>Enables/disables use of graphic equalizer.</p>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> Disable the graphic equalizer when used with the default curve only (flat line at 0 dB for whole spectrum) to speed up the audio file conversion process.</p></td></tr></table></div>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2"><a name="convolution_reverb_plug_in_runtime_settings"></a>
+                <p>
+                  <span class="bold"><strong>AK Convolution Reverb Runtime Settings</strong></span>
+                </p>
+                <p>
+                  These properties are applied at runtime by the plug-in. They do not affect the converted IR file, so they can be modified in real-time. Most of them can be controlled in-game using RTPCs (refer to <a class="xref" href="ch19.html" title="Working with RTPCs"><i>Working with RTPCs</i></a> for more information).
+                </p>
+              </td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Reverb Effect Settings</strong></span>
+                </p>
+              </td></tr><tr><td>
+		<p>Reverb Type</p>
+	</td><td>
+		<p>Determines the type of algorithm used.</p>
+		<p><span class="bold"><strong>Reverb (default)</strong></span> In this mode, multi-channel content is first downmixed using the controls in the Input Levels section. A multi-channel convolution is performed, and the result is upmixed back to the original multi-channel configuration using the Output Levels control. Additional processing such as spread, pre-delay application, and rear channel delay are also performed, using the optimal amount of memory and CPU.</p>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> For all reverberation purposes, this mode of operation should be used.</p></td></tr></table></div>
+		<p><span class="bold"><strong>Filter</strong></span>: This mode can be used to apply a direct convolution between each channel and the impulse response channel(s). In this mode, unlike the reverb mode, there is no downmix or upmix performed, and thus the Input/Output Levels are not enabled. With standard multi-channel impulse responses, the left input channels (front, side and/or rear) are convolved with the left impulse response channels while the right input channels are convolved with the right impulse response channels.</p>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> This mode can be used to apply a complex frequency response (for example, that of an electronic device, or a calibrated impulse response file to perform brickwall filtering) on all input channels.</p></td></tr></table></div>
+		<p>Default value: Reverb</p>
+	</td></tr><tr><td>
+		<p>Pre Delay</p>
+	</td><td>
+		<p>Specifies the time delay between the direct and the reverberated signals. While pre delay supports exclusive RTPC, it should only be used for initialization, before playback. If an RTPC is used to change pre delay in real time during playback, the delay buffer will be continuously re-initialized, which will cause sudden silences or changes in the reverb signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 1000</p>
+	</td></tr><tr><td>
+		<p>Rear Delay</p>
+	</td><td>
+		<p>Specifies the time delay between the reverberation output in the front and rear channels.</p>
+		<p><span class="bold"><strong>Caution</strong></span> This property has no effect on ambisonic sounds in Filter mode.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 200</p>
+	</td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Input Levels</strong></span>
+                </p>
+              </td></tr><tr><td>
+		<p>Center Input Level</p>
+	</td><td>
+		<p>Determines the amount of the center channel that will contribute to feed the reverberation algorithm.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>LFE Input Level</p>
+	</td><td>
+		<p>Determines the amount of the LFE channel that will contribute to feed the reverberation algorithm.</p>
+		<p>Default value: -96.3</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Input Spread</p>
+	</td><td>
+		<p>Determines the amount of crosstalk between the left and right downmix channels prior to reverberation. This can broaden the sense of space of an otherwise strongly correlated impulse response by enlarging the spread of the input downmix.</p>
+		<p>When a value of zero is used, the input signal is downmixed to mono, and then convolved with each impulse response channel. A value of 180 means that the result of the multi-channel convolution is fed directly to each side.</p>
+		<p>On the other hand, with input spread of 180 (maximum), an incoming sound panned to the hard left will be solely convolved with the left channel of the impulse response, which does not make sense in terms of sound propagation.</p>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> With multi-channel impulse responses, it is recommended to use a mono or quasi-mono downmix (Input Spread close to 0) in Reverb mode. You should use higher values of Input Spread only with mono impulse responses, because it is the only way to &#8220;cheat&#8221; and create different signals (thus a sense of space) on the left and right.</p></td></tr></table></div>
+		<p><span class="bold"><strong>Caution</strong></span>: This property has no effect on 1.0 (mono) or 1.1 channel sounds and does not apply to Filter mode. This property is ignored with ambisonic impulse response configurations.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Input Spread can be used with ambisonic input signals and mono impulse responses.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 180</p>
+	</td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Reverb Levels</strong></span>
+                </p>
+              </td></tr><tr><td>
+		<p>Reverb Front Level</p>
+	</td><td>
+		<p>Controls the amount of reverberation applied to the front left and right channels. This property control does not affect the center channel, which can be controlled explicitly.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Reverb Rear Level</p>
+	</td><td>
+		<p>Controls the amount of reverberation applied to the rear left and right channels.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Reverb Center Level</p>
+	</td><td>
+		<p>Controls the amount of reverberation applied to the center channel, when present.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Reverb LFE Level</p>
+	</td><td>
+		<p>Controls the amount of reverberation applied to the LFE channel, when present.</p>
+		<p>Default value: -96.3</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2">
+                <p>
+                  <span class="bold"><strong>Output Levels</strong></span>
+                </p>
+              </td></tr><tr><td>
+		<p>Dry Level</p>
+	</td><td>
+		<p>Determines the gain factor that is applied to the direct path sound.</p>
+		<p>Default value: -96.3</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Reverb Level</p>
+	</td><td>
+		<p>Determines the gain factor that is applied to the reverberated signal (reverb tail).</p>
+		<p>Default value: -20</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Output Spread</p>
+	</td><td>
+		<p>With standard channel configurations (stereo, 5.1, and so on), Output Spread determines the similarity of the reverberation sent to the left channels (front and/or rear) and right channels (front and/or rear). This can create a stronger or lesser sense of space, by enlarging or narrowing the spread of the reverberation (wet part) of the signal.</p>
+		<p>When a value of zero is used, the reverberation output to the left and right channels is the same. A value of 180 means that the result of the multi-channel convolution is fed directly to each side.</p>
+		<p>With ambisonics, the spread is not just lateral (stereo), but instead generalizes to all directions. In effect, it weighs the directional channels compared to the omni channel W.</p>
+		<p>This Effect is stronger when monitored over headphones because of the absence of cross-talk between speaker signals, which diminishes the Effect.</p>
+		<p><span class="bold"><strong>Caution</strong></span>: This property has no effect on 1.0 (mono) or 1.1 channel sounds and does not apply to Filter mode.</p>
+		<p>Default value: 180</p>
+		<p>Range: 0 to 180</p>
+		<p>Units: ° </p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

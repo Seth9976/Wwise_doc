@@ -1,0 +1,235 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Transitions tab: music objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s05.html" title="Common tabs and categories: music objects"><link rel="prev" href="ch61s01s04s05s01.html" title="States tab: music objects"><link rel="next" href="ch61s01s04s05s03.html" title="Stingers tab: music objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s05.html">Common tabs and categories: music objects</a></span> &gt; <span class="breadcrumb-node">Transitions tab: music objects</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="transitions_tab_music_objects"></a>Transitions tab: music objects</h5></div></div></div><p>
+        The Transitions tab is where you define the transitions between music objects within either music playlist or Music Switch Containers. A transition is a musical behavior you can define to be used when switching from the music object currently playing to another. Each transition has a source and a destination. An additional segment, called a transition segment, can be used as a musical bridge between the source and destination.
+			</p><p>The Transitions tab contains the transition matrix, which allows you to create a set of rules that define how each object transitions to every other object within the container. You can create explicit rules for each object, or more general rules that apply to more than one object. The default &#8220;Any to Any&#8221; transition rule applies to all remaining undefined transitions.</p><p>The list of transitions is displayed in the Transitions tab in descending order. When a transition is needed, Wwise begins searching at the bottom of the list until it finds one that applies to the situation at hand. If no matching transition is found, Wwise uses the default &#8220;Any to Any&#8221; transition.</p><p>
+        To facilitate the definition of transitions, music objects which are children of Music Switch Containers can be organized into Virtual Folders. A Virtual Folder can then be chosen as the source or the target of a transition rule. When the transition system searches for a rule to apply, a source or destination folder will match if any of the music objects inside the folder are a match for the source or destination.
+			</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+								<p>Transitions</p>
+							</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>No.</p>
+							</td><td>
+								<p>The number assigned to the transition rule.</p>
+								<p>When a transition occurs during profiling, a transition monitoring message is displayed in the Capture Log. The transition is identified using this number.</p>
+							</td></tr><tr><td>
+								<p>Source</p>
+							</td><td>
+								<p>The source music object for the transition.</p>
+								<p>Click the Selector button to access the following options:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>Any</strong></span> to create a transition for any unspecified source music object.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Nothing</strong></span> to create a transition where there is no source, that is, no music object is playing.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Browse</strong></span> to create a transition using a specific music object, or a Virtual Folder containing music objects as the source.
+										</p></li></ul></div>
+								<p>If a music object or folder is not specified in the Source column, Wwise will apply the first applicable transition that has the source &#8220;Any&#8221;.</p>
+							</td></tr><tr><td>
+								<p>Destination</p>
+							</td><td>
+								<p>The destination music object for the transition.</p>
+								<p>Click the Selector button to access the following options:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>Any</strong></span> to create a transition for any unspecified destination music object.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Nothing</strong></span> to create a transition where there is no destination, that is, no music object is playing.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Browse</strong></span> to create a transition using a specific music object, or a Virtual Folder containing music objects as the destination.
+										</p></li></ul></div>
+								<p>If a music object or a folder is not specified in the Destination column, then Wwise will apply the first applicable transition that has the destination &#8220;Any&#8221;.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add.png"></div>
+							</td><td>
+								<p>Adds a transition to the transition matrix.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+							</td><td>
+								<p>Removes a selected transition from the transition matrix.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Source</strong></span></p>
+							</td></tr><tr><td>
+		<p>Exit source at</p>
+	</td><td>
+		<p>Indicates the point in the source at which the exit will be initiated. You can choose from the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Immediate:</strong></span> The source stops playing immediately.</p></li><li class="listitem"><p><span class="bold"><strong>Next Grid:</strong></span> The source stops playing at the next grid interval. The grid is an arbitrary method by which music objects can be virtually partitioned.</p></li><li class="listitem"><p><span class="bold"><strong>Next Bar:</strong></span> The source stops playing at the next bar.</p></li><li class="listitem"><p><span class="bold"><strong>Next Beat:</strong></span> The source stops playing at the next beat.</p></li><li class="listitem"><p><span class="bold"><strong>Next Cue:</strong></span> The source stops playing at the next cue, whether it be a custom cue or the exit cue.</p></li><li class="listitem"><p><span class="bold"><strong>Next Custom Cue:</strong></span> The source stops playing at the next custom cue. If the current segment doesn&#8217;t contain a custom cue, Wwise continues to the next segment until it finds a custom cue.</p></li><li class="listitem"><p><span class="bold"><strong>Exit Cue:</strong></span> The source stops playing at the exit cue.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> When choosing &#8216;Next Cue&#8217; or &#8216;Next Custom Cue&#8217;, you can define which custom cue name to match. The name must be an exact match. If no name is specified, any custom cue will match.</p></td></tr></table></div>
+		<p>This option is available for Music Switch Containers only.</p>
+		<p>Default value: Exit Cue</p>
+	</td></tr><tr><td>
+								<p>Match (exit source at)</p>
+							</td><td>
+								<p>Specifies the name of the custom cue to match if the 'Exit source at' option is set to 'Next Cue' or 'Next Custom Cue'. If no name is specified, any custom cue will match.</p>
+								<p>The name must be an exact match to custom cue names present at the source. Name matching is case-insensitive.</p>
+							</td></tr><tr><td>
+		<p>Play post-exit</p>
+	</td><td>
+		<p>If selected, the post-exit of a source segment will play. The post-exit is defined as the area to the right of the exit cue.</p>
+		<p>The post-exit of a source will only play if that source exits at its exit cue, or fades out at or beyond its exit cue. Otherwise, the post-exit will never play during a transition.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Fade-out</p>
+	</td><td>
+		<p>If selected, determines whether a fade-out will be applied as the source segment reaches its end.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_edit_dots_small.png"></div>
+							</td><td>
+								<p>
+                  Displays the <a class="xref" href="ch61s01s04s08s04.html" title="Music Fade Editor">Music Fade Editor</a>, where you can edit the fade-out from the source.
+								</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Destination</strong></span></p>
+							</td></tr><tr><td>
+		<p>Jump To</p>
+	</td><td>
+		<p>Determines the point in the music object at which the destination will begin playing. You can choose from the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Start of Playlist</strong></span>: Jumps to the first item in your playlist.</p></li><li class="listitem"><p><span class="bold"><strong>Specific Playlist Item</strong></span>: Jumps to the specified item from your playlist. To specify the playlist item to jump to, click the browse button. This option is only available if the destination object is a Music Playlist Container.</p></li><li class="listitem"><p><span class="bold"><strong>Last Played Segment</strong></span>: Jumps to the segment that was last played.</p></li><li class="listitem"><p><span class="bold"><strong>Next Segment</strong></span>: Jumps to the next item in the playlist, following the last played segment.</p></li></ul></div>
+		<p>Default value: Start of Playlist</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+							</td><td>
+								<p>Displays the Project Explorer - Browser where you can select a destination playlist item.</p>
+							</td></tr><tr><td>
+		<p>Sync to</p>
+	</td><td>
+		<p>Determines the point in the music object at which the destination will begin playing. You can choose from the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Entry cue</strong></span>: The destination will begin playing at its entry cue.</p></li><li class="listitem"><p><span class="bold"><strong>Same time as playing segment</strong></span>: The destination will begin playing at the same time mark as the source segment. For example, if the source segment has been playing for 15 seconds since its beginning, the destination will start playing 15 seconds in.</p></li><li class="listitem"><p><span class="bold"><strong>Random Cue</strong></span>: The destination will begin playing at a randomly chosen cue. When this option is selected, any cue can be chosen, including the entry cue or any custom cue that match the filtering criterion. See Match source cue name and Match (jump to destination).</p></li><li class="listitem"><p><span class="bold"><strong>Random Custom Cue</strong></span>: The destination will begin playing at a randomly chosen custom cue that match the filtering criterion. See Match source cue name and Match (specify cue name). If there are no custom cues in the segment, the entry cue will be used.</p></li><li class="listitem"><p><span class="bold"><strong>Last Exit Position</strong></span>: The destination will begin playing at a point offset by the amount of time elapsed in the last played segment of the destination. For example, if a point 15 seconds into the third segment of the destination was reached the last time it was played, the destination will start playing 15 seconds in.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The option <span class="bold"><strong>Last Exit Position</strong></span> only applies for transitions of the parent Music Container during the same playback instance.</p></td></tr></table></div>
+		<p>Default value: Entry Cue</p>
+	</td></tr><tr><td>
+		<p>Match source cue name</p>
+	</td><td>
+		<p>Determines which custom cues are eligible as the start position in the destination segment. Only the custom cues whose name matches the name of the cue that was used in the transition&#8217;s source constitute potential start positions. For example, if the source exits at a custom cue named &#8216;A&#8217;, the destination will start at a custom cue named &#8216;A&#8217;.</p>
+		<p>String comparison is not case-sensitive, but it must be exact (there is no wildcard).</p>
+		<p>This option can only be used when &#8216;Sync to&#8217; is set to &#8216;Random Cue&#8217; or &#8216;Random Custom Cue&#8217;.</p>
+		<p>If no match is found, the entry cue will be used.</p>
+		<p>This option will only work correctly when:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The &#8216;Exit Source At&#8217; setting is set to &#8216;Next Cue&#8217; or &#8216;Next Custom Cue&#8217;.</p></li><li class="listitem"><p>The &#8216;Source&#8217; object is different from &#8216;nothing&#8217;.</p></li></ul></div>
+		<p>Name matching affects the selection of custom cues only; it has no effect on the eligibility of the entry cue. If you use &#8216;Random Cue&#8217; as the &#8216;Sync to&#8217; property, the selected destination cue will be either a custom cue whose name matches that of the cue where the source exited, or the entry cue. Use &#8216;Random Custom Cue&#8217; as the &#8216;Sync to&#8217; property to remove the entry cue from the possible destinations.</p>
+		<p><span class="bold"><strong>Match (specify cue name)</strong></span> Determines which custom cues are eligible as the start position in the destination segment. Among the custom cues, only those whose name matches the string in the edit box constitute potential start positions. If no name is specified, any custom cue will match.</p>
+		<p>String comparison is not case-sensitive, but it must be exact (there is no wildcard).</p>
+		<p>This option can only be used when &#8216;Sync to&#8217; is set to &#8216;Random Cue&#8217; or &#8216;Random Custom Cue&#8217;.</p>
+		<p>If no match is found, the entry cue will be used.</p>
+		<p>Name matching affects the selection of custom cues only; it has no effect on the eligibility of the entry cue. If you use &#8216;Random Cue&#8217; as the &#8216;Sync to&#8217; property, the selected destination cue will be either a custom cue whose name corresponds to the string entered in the &#8216;Match&#8217; text field, or the entry cue. Use &#8216;Random Custom Cue&#8217; as the &#8216;Sync to&#8217; property to remove the entry cue from the possible destinations.</p>
+		<p>Default value: Match specific name</p>
+	</td></tr><tr><td>
+		<p>Match (specify cue name)</p>
+	</td><td>
+		<p>Determines which custom cues are eligible as the start position in the destination segment. Among the custom cues, only those whose name matches the string in the edit box constitute potential start positions. If no name is specified, any custom cue will match.</p>
+		<p>String comparison is not case-sensitive, but it must be exact (there is no wildcard).</p>
+		<p>This option can only be used when &#8216;Sync to&#8217; is set to &#8216;Random Cue&#8217; or &#8216;Random Custom Cue&#8217;.</p>
+		<p>If no match is found, the entry cue will be used.</p>
+		<p>Name matching affects the selection of custom cues only; it has no effect on the eligibility of the entry cue. If you use &#8216;Random Cue&#8217; as the &#8216;Sync to&#8217; property, the selected destination cue will be either a custom cue whose name corresponds to the string entered in the &#8216;Match&#8217; text field, or the entry cue. Use &#8216;Random Custom Cue&#8217; as the &#8216;Sync to&#8217; property to remove the entry cue from the possible destinations.</p>
+	</td></tr><tr><td>
+		<p>Play pre-entry</p>
+	</td><td>
+		<p>If selected, the pre-entry of a destination segment will play. The pre-entry is defined as the area to the left of the entry cue.</p>
+		<p>The pre-entry of a destination will only play if the destination begins at its entry cue. Otherwise, the pre-entry will never play during a transition.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Fade-in</p>
+	</td><td>
+		<p>If selected, determines whether a fade-in will be applied as the destination segment begins to play.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_edit_dots_small.png"></div>
+							</td><td>
+								<p>
+                  Displays the <a class="xref" href="ch61s01s04s08s04.html" title="Music Fade Editor">Music Fade Editor</a>, where you can edit the fade-in for a transition destination.
+								</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Transition Segment</strong></span></p>
+							</td></tr><tr><td>
+		<p>Use transition segment</p>
+	</td><td>
+		<p>If selected, a transition segment will play during the transition. A transition segment is a short piece of music that musically bridges the source and destination objects.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+							</td><td>
+								<p>Displays the Project Explorer Browser where you can select a transition segment.</p>
+							</td></tr><tr><td>
+		<p>Play transition pre-entry</p>
+	</td><td>
+		<p>If selected, the pre-entry of the transition segment will play. The pre-entry is defined as the area to the left of the entry cue.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Fade-In</p>
+	</td><td>
+		<p>If selected, a fade-in will be applied as the transition segment begins to play.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_edit_dots_small.png"></div>
+							</td><td>
+								<p>Displays the Music Fade Editor, where you can edit the fade-in of the transition segment.</p>
+							</td></tr><tr><td>
+		<p>Play transition post-exit</p>
+	</td><td>
+		<p>If selected, the post-exit of the transition segment will play. The post-exit is defined as the area to the right of the exit cue.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Fade-out</p>
+	</td><td>
+		<p>If selected, a fade-out will be applied to the transition segment as it reaches its end.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_edit_dots_small.png"></div>
+							</td><td>
+								<p>Displays the Music Fade Editor, where you can edit the fade-out of the transition segment.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch33s01.html#adding_transitions" title="Adding transitions">Adding transitions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch33s01.html#removing_transitions" title="Removing transitions">Removing transitions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch33s02.html" title="Setting source and destination properties">Setting source and destination properties</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch33s03.html" title="Using transition segments">Using transition segments</a>
+					</p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,61 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Emitter-Listener Associations</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s06.html" title="Audio Devices"><link rel="next" href="ch63s03s08.html" title="Memory"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Emitter-Listener Associations</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="game_defined_sends"></a>Emitter-Listener Associations</h3></div></div></div><p>The Advanced Profiler - Emitter-Listener tab displays information about the emitter listener associations.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Emitter</p>
+              </td><td>
+                <p>The game object ID, or game object name, being assigned to this Emitter-Listener association as a sound emitter. Corresponds to the first argument of the 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a2f85a55c38afa2e0dbc6172a7bec91d1.html" target="_blank">
+                    <code class="code">SetListeners()</code></a>and 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af960fca0239e219b9d08c2659fe9e5d4.html" target="_blank">
+                    <code class="code">SetGameObjectAuxSendValues()</code></a>API calls. Can be any game object.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Double-clicking a listed game object in the Emitter-Listener tab will open the Voices Graph tab filtered by that game object ID.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Listener</p>
+              </td><td>
+                <p>The game object ID, or game object name, being assigned to this Emitter-Listener association as a sound listener. Corresponds to the second argument of the 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a2f85a55c38afa2e0dbc6172a7bec91d1.html" target="_blank">
+                    <code class="code">SetListeners()</code></a>and 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af960fca0239e219b9d08c2659fe9e5d4.html" target="_blank">
+                    <code class="code">SetGameObjectAuxSendValues()</code></a>API calls. Can be any game object.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Double-clicking a listed game object in the Emitter-Listener tab will open the Voices Graph tab filtered by that game object ID.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Bus</p>
+              </td><td>
+                <p>The name of the Bus associated with this object.</p>
+              </td></tr><tr><td>
+                <p>Level</p>
+              </td><td>
+                <p>The percentage of the send values being applied to the game object. This relates to the send volume.</p>
+              </td></tr><tr><td>
+                <p>Routing Type</p>
+              </td><td>
+                <p>"User-defined": associations established via the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a2f85a55c38afa2e0dbc6172a7bec91d1.html" target="_blank">
+                    <code class="code">SetListeners()</code></a> API call. Refers to all direct output and
+                  user-defined sends within the project. User associations can apply to any node in
+                  the voice graph.</p>
+                <p>"Game-defined": associations set using the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af960fca0239e219b9d08c2659fe9e5d4.html" target="_blank">
+                    <code class="code">SetGameObjectAuxSendValues()</code></a>API call. Relates to the game
+                  defined sends, fully qualified tuples of GameObjectID and AuxBusID are defined
+                  entirely through the API call regardless of project settings.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

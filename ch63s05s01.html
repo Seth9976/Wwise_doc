@@ -1,0 +1,65 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Object 3D Viewer Options</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s05.html" title="Audio Object 3D Viewer"><link rel="prev" href="ch63s05.html" title="Audio Object 3D Viewer"><link rel="next" href="ch63s06.html" title="Audio Object List"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s05.html">Audio Object 3D Viewer</a></span> &gt; <span class="breadcrumb-node">Audio Object 3D Viewer Options</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="audio_object_3d_viewer_settings"></a>Audio Object 3D Viewer Options</h3></div></div></div><p>The Audio Object 3D Viewer Options allow you to select the options that you want to
+        appear in the <a class="xref" href="ch63s05.html" title="Audio Object 3D Viewer">Audio Object 3D Viewer</a>. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left"><span class="bold"><strong>General</strong></span></td></tr><tr><td align="left">
+                <p>Show Grid</p>
+              </td><td>
+                <p>Shows the grid lines and numbers in the 3D view.</p>
+              </td></tr><tr><td align="left">
+                <p>Linear Threshold (meters)</p>
+              </td><td>
+                <p dir="ltr">Below this distance from the origin, the grid is presented in a
+                  Linear scaling fashion, and beyond this distance the grid is Logarithmic. These
+                  two scaling methods function as follows:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li dir="ltr" class="listitem"><p><span class="bold"><strong>Linear Scaling</strong></span>: Shows the Audio Objects
+                      with their position scaled linearly from the listener. This scaling is useful
+                      if the Audio Objects are positioned within a limited range to the listener. As
+                      a reference for distance, a representation of a human head is included, the
+                      size of which can be configured using the <span class="bold"><strong>Inter-Ear
+                        Distance (cm)</strong></span> setting.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When the game connects the scaling factor of game units per meter will
+                        be automatically set in the view settings. In order to get an accurate head
+                        scaling, ensure the game units per meter value is set correctly.</p></td></tr></table></div></li><li class="listitem"><p><span class="bold"><strong>Logarithmic Scaling</strong></span>: Shows the Audio
+                      Objects with their position scaled logarithmically from the listener. This
+                      scaling is useful if the Audio Objects are positioned in a wide range, such as
+                      an exterior world.</p></li></ul></div>
+              </td></tr><tr><td>
+                <p>Grid Max (meters)</p>
+              </td><td>
+                <p>Maximum value for all Audio Objects to be shown. All Audio Objects outside
+                  this range will be shown outside the grid range.</p>
+              </td></tr><tr><td>
+                <p>Grid Size</p>
+              </td><td>
+                <p>In the logarithmic portion of the grid (beyond the Linear threshold) this
+                  visually scales the grid up and down. This has an effect that is very similar to
+                  zooming. In the linear portion of the grid (within the Linear Threshold), the grid
+                  does not scale, nor do the head and sphere.</p>
+              </td></tr><tr><td>
+                <p>Grid Units</p>
+              </td><td>
+                <p>Allows the user to select how the grid numbers (distances) are presented. The
+                  available choices are <span class="bold"><strong>Meters</strong></span> and <span class="bold"><strong>Game Units</strong></span>. The <span class="bold"><strong>Game Units To
+                    Meters</strong></span> setting specifies the ratio between the two.</p>
+              </td></tr><tr><td>
+                <p>Show X-Y-Z Axis</p>
+              </td><td>
+                <p>Shows the three axes in the lower left corner. These correspond to the
+                  listener coordinate space.</p>
+              </td></tr><tr><td>
+                <p>Inter-Ear Distance (cm)</p>
+              </td><td>
+                <p dir="ltr">Sets the distance between the ears of the head in linear scaling
+                  mode.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p dir="ltr">Audio Object distances shown in relation to the head must be in
+                    the same units. Use the Game Units Per Meter setting in order to change the number of game units
+                    in a meter.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Game Units Per Meter</p>
+              </td><td>
+                <p>Sets the scaling factor of the game units per meter for the view. For example,
+                  for game units that are in centimeters, this value will be 100. </p>
+                <p>You don't need to adjust this setting if it is set by your game with the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_init_settings_acbb4594e7634edbe91adec361e2cf111.html" target="_blank">
+                  <code class="code">fGameUnitsToMeters</code></a> initialization setting.</p>
+              </td></tr></tbody></table></div></div><HR></body></html>

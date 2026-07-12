@@ -1,0 +1,128 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Music Segment Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s08.html" title="Music Editor"><link rel="prev" href="ch61s01s04s08s02.html" title="Music Playlist Editor"><link rel="next" href="ch61s01s04s08s03s01.html" title="Music Segment Editor keyboard shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s08.html">Music Editor</a></span> &gt; <span class="breadcrumb-node">Music Segment Editor</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="music_editor_music_segment_editor"></a>Music Segment Editor</h5></div></div></div><p>
+        The Music Segment Editor is where you arrange and edit the tracks and sub-tracks that Music Segments contain. The basic component of a track is a clip, a rectangular area representing a single source file.
+			</p><p>You can adjust when a clip plays by dragging it left or right along its track. You can move clips from one track to another by dragging them up or down. You can also overlap clips on a single track. You can make a clip shorter by dragging one of its handles inwards, or extend it by dragging the handle outwards. When you extend a clip, it repeats itself. Each repeat is called a loop.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You must create at least one track before most options in the Music Segment Editor are available.</p></td></tr></table></div><p>Cues and the play cursor are also part of the Music Segment Editor. Cues are markers appended to segments to indicate key points, such as its entry and exit points. You can also create custom cues to indicate when property changes or transitions should occur, or when Stingers should be played. The play cursor moves along as you play a segment, but you can also move it to control where playback begins.</p><div class="informaltable"><a name="music_segment_editor_ui_ref"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>(Music Segment Name)</p>
+							</td><td>
+								<p>The name of the Music Segment whose tracks you are currently editing appears in the editor's header band. Go to the <a class="xref" href="ch61s01s04s03.html" title="Property Editor: Music Segment">Property Editor: Music Segment</a> to edit the name.</p>
+							</td></tr><tr><td rowspan="3">
+								<p>Snap to</p>
+							</td><td>
+								<p>Snaps a clip, cue, or cursor to the nearest example of the selected interval when you slide it horizontally. The three options available are:</p>
+								<p>
+										<span class="bold"><strong>Bars/Beats</strong></span> to snap to the
+										beginning of the nearest bar or beat. These are indicated as
+										pale gray lines on the music timeline.</p>
+							</td></tr><tr><td>
+								<p>
+									<span class="bold"><strong>Cues</strong></span> to snap to the nearest cue. This can be an entry, exit, or custom cue.
+								</p>
+							</td></tr><tr><td>
+								<p>
+									<span class="bold"><strong>Clips/Loops</strong></span> to snap to the beginning of the nearest clip or loop. These are indicated by small blue triangles on the music timeline.
+								</p>
+								<p>
+                  To move an object directly to a specified interval, hold <span class="bold"><strong>Alt</strong></span> while dragging the object.
+								</p>
+							</td></tr><tr><td>
+								<p>Envelopes</p>
+								<div class="mediaobject"><img src="Images/btn_lowpass_highpass_volume.png"></div>
+								<div class="mediaobject"><img src="Images/clip_volume_env.png"></div>
+							</td><td>
+								<p>Enable envelope editing for the following properties:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low-pass</strong></span>: dark blue curve</p></li><li class="listitem"><p><span class="bold"><strong>High-pass</strong></span>: light blue curve</p></li><li class="listitem"><p><span class="bold"><strong>Volume</strong></span>: red curve</p></li></ul></div>
+								<p>When envelope editing is enabled, the associated curve can be modified in each music clip.</p>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>When a curve is enabled, double-click a curve to add a point in a segment. Right-click a curve segment to change the segment shape.</p></td></tr></table></div>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>(Music Timeline)</strong></span></p>
+							</td></tr><tr><td align="center">
+							  <p>
+							    <span class="inlinemediaobject"><img src="Images/Music_Play_Cursor.png" width="17"></span> /
+							    <span class="inlinemediaobject"><img src="Images/Music_Play_Cursor_Dark.png" width="17"></span>
+							  </p>
+								<p>(Play cursor)</p>
+							</td><td>
+								<p>
+                  When a segment is playing or paused, indicates current playback position within the segment. When a segment is stopped, indicates the point at which playback will begin.
+								</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="16"><tr style="height: 16px"><td><img src="Images/Music_Entry_Cue.png" width="16"></td></tr></table></div>
+								<p>(Entry cue)</p>
+							</td><td>
+								<p>Defines the entry cue of the segment. The area to the left of the entry cue is the pre-entry area of a segment. The pre-entry area may or may not be played in game, depending on transition settings.</p>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>When moving the entry cue, the whole segment will move with the entry cue (including clips and other cues). When holding the CTRL key and dragging the entry cue, only the entry cue will move.</p></td></tr></table></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="16"><tr style="height: 16px"><td><img src="Images/Music_Exit_Cue.png" width="16"></td></tr></table></div>
+								<p>(Exit cue)</p>
+							</td><td>
+								<p>Defines the exit cue of the segment. The area to the right of the entry cue is the post-exit area of a segment. The post-exit area may or may not be played in game, depending on transition settings.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="16"><tr><td><img src="Images/Music_User_Cue.png" width="16"></td></tr></table></div>
+								<p>(Custom cue)</p>
+							</td><td>
+								<p>Defines a custom cue for the segment. This cue may be used for defining transitions, locating where Stingers will play, or specifying where state changes will occur.</p>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Shift+Click the segment editor ruler to quickly create custom cues at a specific time.</p></td></tr></table></div>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Cue names can be retrieved using callbacks in your game. This can be useful receive metadata in sequence when the music is playing.</p></td></tr></table></div>
+								<p>Double-click the custom cue to set its name.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>(Track Editor)</strong></span></p>
+							</td></tr><tr><td>
+								<p>(Music track name)</p>
+							</td><td>
+								<p>The icon and name of the music track you are currently editing.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 16px"><td><img src="Images/music_F.png" width="15"></td></tr></table></div>
+								<p>(Force Usage)</p>
+							</td><td>
+								<p>Forces the current sub-track to be played in the Transport Control or Soundcaster. Only one sub-track in a track can be forced at a time.</p>
+								<p>This applies to random step or sequence step tracks only.</p>
+							</td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>(Track)</strong></span></p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="9"><tr style="height: 9px"><td><img src="Images/music_handle_blue.png" width="9"></td></tr></table></div>
+								<p>(Clip handle)</p>
+							</td><td>
+								<p>Shortens or extends a clip. When you extend a clip, you create loops.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 6px"><td><img src="Images/music_handle_clip_loop.png" height="6"></td></tr></table></div>
+								<p>(Clip separator)</p>
+							</td><td>
+								<p>Indicates the boundary between individual clips in a loop.</p>
+							</td></tr><tr><td>
+		<p>Clip Fade-in Mode</p>
+	</td><td>
+		<p>Shorten or extend a clip fade-in or fade out.</p>
+		<p>By default, the music clip fade-in and fade-out are set to automatically fade when crossing or overlapping.</p>
+		<p>When the fade handle has a disabled look, the fade is automatic and will have a duration equal to the overlap duration. Just move the handle to fall in manual mode and set the duration manually.</p>
+		<p>When the fade handle has an enabled look, the fade duration has been set manually by the user. Right-click the handle to open the shortcut menu and select Automatically fade when crossing to go back to automatic mode.</p>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> Right-click a fade curve to open a shortcut menu allowing to change its shape.</p></td></tr></table></div>
+		<p>Default value: Manual</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="16"><tr style="height: 16px"><td><img src="Images/music_end_cursor.png" width="16"></td></tr></table></div>
+								<p>(End cursor)</p>
+							</td><td>
+								<p>Shortens or extends all the music tracks in a segment within the Music Segment Editor. Shortening or extending music tracks does not affect the length or playback of clips on these tracks.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="80"><tr style="height: 21px"><td><img src="Images/event_cue.png" height="21"></td></tr></table></div>
+								<p>(Event cue)</p>
+							</td><td>
+								<p>Triggers the cue's Event when the play cursor reaches that point of the timeline.</p>
+							</td></tr></tbody></table></div></div><HR></body></html>

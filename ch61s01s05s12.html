@@ -1,0 +1,106 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Advanced category: sound and motion objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s11.html" title="HDR category: Containers hierarchy objects"><link rel="next" href="ch61s01s06.html" title="Source Editor: Audio Sources"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">Advanced category: sound and motion objects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="advanced_settings_tab_actor_mixer_objects"></a>Advanced category: sound and motion objects</h4></div></div></div><p>The properties in the Advanced category for sound and motion objects 
+					contain a series of controls that allow you to define the advanced
+					playback behaviors of the objects. You can define the number
+					of instances that can be played simultaneously per game object, specify the
+					playback priority of each object, and determine whether object will continue to
+					play, will be killed, or will move into the virtual voice list when their volume
+					falls below the volume threshold.       </p><div class="informaltable"><a name="wwiseobject_sound_advanced"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Advanced</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Playback Limit</strong></span>
+        </td></tr><tr><td>
+		<p>Ignore Parent Playback Limit</p>
+	</td><td>
+		<p>Determines if the current object and its children are considered part of the parent&#8217;s playback limit (unchecked) or defined at this level (checked). If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Limit Sound Instances</p>
+	</td><td>
+		<p>The number of sound or motion instances within the same hierarchical structure that can play simultaneously.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Sound Instance Limit</p>
+	</td><td>
+		<p>Default value: 50</p>
+		<p>Range: 1 to 1000</p>
+	</td></tr><tr><td>
+		<p>Limitation sound instances to:</p>
+	</td><td>
+		<p>The number of sound or motion instances within the same hierarchical structure that can play simultaneously. This limit applies to the selected list option:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Per game object:</strong></span> Each game object, within this node of the hierarchy, individually.</p></li><li class="listitem"><p><span class="bold"><strong>Globally:</strong></span> All game objects, within this node of the hierarchy, combined.</p></li></ul></div>
+		<p>Default value: Game object</p>
+	</td></tr><tr><td>
+		<p>When limit is reached:</p>
+	</td><td>
+		<p>Determines what happens when the playback limit is reached. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Kill voice for lowest priority:</strong></span> Stops playing instance with the lowest priority. When an object is killed, a small fade out of a few milliseconds is performed.</p></li><li class="listitem"><p><span class="bold"><strong>Use virtual voice settings for lowest priority:</strong></span> Sets the sound with the lowest priority to adopt its virtual voice behavior. Refer to the <span class="bold"><strong>Virtual voice behavior</strong></span> section in this table.</p></li></ul></div>
+		<p>Keep in mind that each entity can override its own behavior so that the virtual behavior of a sound can still be to discard the sound or to continue to play.</p>
+		<p>Default value: Kill voice</p>
+	</td></tr><tr><td>
+		<p>When priority is equal:</p>
+	</td><td>
+		<p>Determines what happens when the playback limit is reached and there is more than one object with the lowest priority. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Discard oldest instance</strong></span> to discard the oldest playing instance with the lowest priority.</p></li><li class="listitem"><p><span class="bold"><strong>Discard newest instance</strong></span> to discard the newest playing instance with the lowest priority.</p></li></ul></div>
+		<p>Default value: Discard oldest</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Virtual Voice</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the virtual voice settings will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the virtual voice controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Virtual voice behavior</p>
+	</td><td>
+		<p>Determines the behavior of objects when their volume falls below the volume threshold or when their number goes over the playback limit. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Continue to play</strong></span> to continue playing the object even though it will no longer be heard.</p></li><li class="listitem"><p><span class="bold"><strong>Kill voice</strong></span> to stop playing the object. No fade out is applied with this option.</p></li><li class="listitem"><p><span class="bold"><strong>Send to virtual voice</strong></span> to send the object to the virtual voice list. When an object is sent to the virtual voice list, certain parameters of the object are monitored by the sound engine, but no processing for audio or motion occurs.</p></li><li class="listitem"><p><span class="bold"><strong>Kill if finite else virtual</strong></span> to send the object to the virtual voice list if it is looping infinitely, or if it is part of a continuous context (e.g. child of a continuous container). Otherwise, the object will stop playing.</p></li></ul></div>
+		<p>For music objects, if <span class="bold"><strong>Send to virtual voice</strong></span> or <span class="bold"><strong>Kill if finite else virtual</strong></span> is selected, the object plays from elapsed time upon return to physical voice.</p>
+		<p>Default value: Continue to play</p>
+	</td></tr><tr><td>
+		<p>On return to physical voice</p>
+	</td><td>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> These options are not available for music objects. For Container objects, they are only available if the Virtual voice behavior is set to <span class="bold"><strong>Send to virtual voice</strong></span> or <span class="bold"><strong>Kill if finite else virtual</strong></span>.</p></td></tr></table></div>
+		<p>Determines the behavior of objects that move from the virtual voice list back to the physical voice.</p>
+		<p><span class="bold"><strong>You can select one of the following options:</strong></span></p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Play from beginning</strong></span> to play the object from its beginning. This option resets the object&#8217;s loop count.</p></li><li class="listitem"><p><span class="bold"><strong>Play from elapsed time</strong></span> to continue playing the object as if it had never stopped playing. This option is not sample accurate, so sounds returning to the physical voice may be out of sync with other sounds playing.</p></li><li class="listitem"><p><span class="bold"><strong>Resume</strong></span> to pause the object when it moves from the physical voice to the virtual voice list and then resume playback when it moves back to the physical voice.</p></li></ul></div>
+		<p>Default value: Play from elapsed time</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Playback Priority</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Determines whether the Playback Priority will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the Playback Priority controls are unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Priority</p>
+	</td><td>
+		<p>Objects with a priority of 1 have the lowest priority, and those with a priority of 100 have the highest priority.</p>
+		<p>This value determines which objects will be played when the playback limit has been reached.</p>
+		<p>The importance given to the object in relation to other objects within the same structure.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Use Priority Distance Factor</p>
+	</td><td>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Offset priority by x at max distance</p>
+	</td><td>
+		<p>Specifies a value by which the priority of an object is offset when it reaches the max distance value specified in the Attenuation Editor.</p>
+		<p>When selected, an offset is applied to the priority of the object when it falls anywhere within the attenuation max distance value. The amount of offset applied will depend on the object&#8217;s relative position to the listener.</p>
+		<p>When this option is not selected, the distance from the listener does not affect the priority of an object.</p>
+		<p>Default value: -10</p>
+		<p>Range: -100 to 100</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch24s02.html" title="Limiting object playback instances">Limiting object playback instances</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch24s03.html" title="Defining playback priority">Defining playback priority</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch24s04.html" title="Managing low-volume objects">Managing low-volume objects</a>
+						</p></li></ul></div></div><HR></body></html>

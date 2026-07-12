@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Property Editor: State Group</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s04s02.html" title="States"><link rel="prev" href="ch61s04s02.html" title="States"><link rel="next" href="ch61s04s02s02.html" title="Property Editor: State"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04.html">Game Syncs Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04s02.html">States</a></span> &gt; <span class="breadcrumb-node">Property Editor: State Group</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="state_group_property_editor"></a>Property Editor: State Group</h4></div></div></div><p>In the State Group property editor you can define the time it takes to change between two states in the same State Group. For example, there may be a difference in volume between two states, and you can define how long it will take for the new volume in the second State to be applied. You can use a default transition time that is applied to all states within the State Group, or you can define custom transitions times for individual states within the State Group.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the State Group.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Additional information about the State Group</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Transitions</strong></span></p>
+								</td></tr><tr><td>
+		<p>Default Transition Time</p>
+	</td><td>
+		<p>The duration of the transition that will be applied between all the States in the State Group.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 60</p>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Custom Transition Time</strong></span></p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>From </p>
+								</td><td>
+									<p>The source state for the transition.</p>
+								</td></tr><tr><td>
+									<p>Time</p>
+								</td><td>
+									<p>The duration of the transition that will be applied between the selected source and destination states.</p>
+								</td></tr><tr><td>
+									<p>To</p>
+								</td><td>
+									<p>The destination state for the transition.</p>
+									<p>The source and destination states cannot be the same for a transition.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_bi_directional_transition.png"></div>
+									<p>(Bi-directional)</p>
+								</td><td>
+									<p>Specifies whether the transition time specified applies in both directions.</p>
+									<p>When this check box is selected, the transition time between the two states is applied in both directions. For example, the duration of the transition that you define will be applied when going from the source state to the destination state as well as in the reverse order.</p>
+									<p>When unselected, the transition time is unidirectional, from left to right. This means that the transition time will only be applied when going from the source state to the destination state and not in the reverse order, from destination to source state.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_insert_alt.png"></div>
+								</td><td>
+									<p>Adds a new entry in the Custom Transition Time table where you can modify the duration of the transitions between individual states.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+								</td><td>
+									<p>Removes the selected entry in the Custom Transition Time table.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch17s01.html#working_with_states_creating_state_group" title="Creating State Groups">Creating State Groups</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch17s01.html#working_with_states_creating_state" title="Creating States">Creating States</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch17s02.html#defining_transitions_for_all_states_in_state_group" title="Defining transitions for all States in a State Group">Defining transitions for all States in a State Group</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch17s02.html#customizing_transitions_between_states_in_state_group" title="Customizing transitions between States in a State Group">Customizing transitions between States in a State Group</a>
+						</p></li></ul></div></div><HR></body></html>

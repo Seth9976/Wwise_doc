@@ -1,0 +1,124 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Stingers tab: music objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s05.html" title="Common tabs and categories: music objects"><link rel="prev" href="ch61s01s04s05s02.html" title="Transitions tab: music objects"><link rel="next" href="ch61s01s04s05s04.html" title="MIDI category: music objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s05.html">Common tabs and categories: music objects</a></span> &gt; <span class="breadcrumb-node">Stingers tab: music objects</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="stingers_tab_music_objects"></a>Stingers tab: music objects</h5></div></div></div><p>The Stingers tab allows you to create and define Stingers, which are brief musical phrases that are superimposed and mixed over the currently playing music. In the game, Stingers are called by Triggers. In this tab, you can map a Music Segment to a Trigger, and then define playback options for the Music Segment when the Trigger is called.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+								<p>Stingers</p>
+							</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+								<p><span class="bold"><strong>Stinger Settings</strong></span></p>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>Trigger</p>
+							</td><td>
+								<p>The name of the Trigger being used for the current Stinger.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_selector.png"></div>
+							</td><td>
+								<p>Opens the selector menu where you can select the Trigger that will call the current Stinger.</p>
+							</td></tr><tr><td>
+								<p>Segment To Play</p>
+							</td><td>
+								<p>The name of the Music Segment that will play when the Trigger Event occurs.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+							</td><td>
+								<p>Opens the Project Explorer - Browser where you can select the segment that will play when the Trigger calls the Stinger.</p>
+							</td></tr><tr><td>
+		<p>Play Segment At</p>
+	</td><td>
+		<p>Determines the point at which the Stinger will play. The following options are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Immediate</strong></span>: Play occurs immediately.</p></li><li class="listitem"><p><span class="bold"><strong>Next Grid</strong></span>: Play occurs at next pre-defined grid interval. The grid is an arbitrary method by which music objects can be virtually partitioned. By adding another level of granularity to the music object, you have a great deal of flexibility to define sync points for stingers.</p></li><li class="listitem"><p><span class="bold"><strong>Next Bar</strong></span>: Play occurs at next bar.</p></li><li class="listitem"><p><span class="bold"><strong>Next Beat</strong></span>: Play occurs at next beat.</p></li><li class="listitem"><p><span class="bold"><strong>Next Cue</strong></span>: Play occurs at next cue. The next cue could be Entry, Exit, or a custom cue.</p></li><li class="listitem"><p><span class="bold"><strong>Next Custom Cue</strong></span>: Play occurs at next custom cue.</p></li><li class="listitem"><p><span class="bold"><strong>Entry Cue</strong></span>: Play occurs at Entry cue.</p></li><li class="listitem"><p><span class="bold"><strong>Exit Cue</strong></span>: Play occurs at Exit cue.</p></li></ul></div>
+		<p>Default value: Immediate</p>
+	</td></tr><tr><td>
+		<p>Custom cue match name</p>
+	</td><td>
+		<p>Determines which custom cues are eligible to be selected as the &#8216;Play At&#8217; position. If no name is specified, any custom cue will match.</p>
+		<p>String comparison is not case-sensitive, but it must be exact (there is no wildcard).</p>
+		<p>This option can only be used when &#8216;Play At&#8217; is set to &#8216;Next Cue&#8217; or &#8216;Next Custom Cue&#8217;.</p>
+		<p>Name matching affects the selection of custom cues only; it has no effect on the eligibility of the entry or exit cues.</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_dots.png"></div>
+							</td><td>
+								<p>Adds a new row to the Stinger table where you can define the following: </p>
+								<p>the Trigger that will drive the Stinger.</p>
+								<p>the Music Segment that will play.</p>
+								<p>the point at which the Music Segment will play.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+							</td><td>
+								<p>Removes the currently selected Stinger and its associated components from the Stinger list.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Stinger Options</strong></span></p>
+							</td></tr><tr><td>
+		<p>Don&#8217;t play this Stinger again for x seconds.</p>
+	</td><td>
+		<p>The number of seconds that must elapse before the Stinger can be used again.</p>
+		<p>If the Trigger calls this Stinger within the specified number of seconds, the Trigger is ignored or dropped. A message saying that the Stinger could not be played will appear in the Capture Log. Note that the &#8220;don&#8217;t play Stinger again for&#8221; time is relative to the stinger&#8217;s synchronization point, that is, the moment in time where the stinger&#8217;s entry cue occurs.</p>
+		<p>For example, say you have a segment with 1 second-long beats, which defines a Stinger that has a 1.5 second long pre-entry, a &#8220;next beat&#8221; synchronization rule, and a &#8220;don&#8217;t play Stinger again&#8221; property of 3 seconds. Imagine now that this segment is playing and that the cursor is precisely over a beat boundary when the Trigger is posted. Because of its 1.5 second long pre-entry, the stinger&#8217;s entry cue cannot be synchronized to the next segment&#8217;s beat, so it is synchronized to the next beat instead (that is, in 2 seconds). Consequently, all Triggers that will be posted for the next 5 seconds (2 seconds before synchronization time, plus 3 seconds of &#8220;don&#8217;t play again time&#8221;) will be dropped.</p>
+		<p>Furthermore, this time value is inclusive. For example, with a &#8220;don&#8217;t play again&#8221; time of 0, all Triggers are dropped until the synchronization point is reached, inclusively. It is thus impossible to have two or more Stingers scheduled precisely at the same time.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 3600</p>
+	</td></tr><tr><td>
+		<p>Allow playing Stinger in next segment (if applicable)</p>
+	</td><td>
+		<p>Determines whether this Stinger can be played in the next segment in the playlist. If a Stinger is called by a Trigger and the next opportunity to play the Stinger occurs too late in the current segment, the Stinger is not played. When you select this option, however, the Stinger will play at the first defined opportunity of the next segment in the playlist. The Stinger entry points are defined in the Play At field.</p>
+		<p>Default value: Yes</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch34.html#adding_stingers" title="Adding Stingers">Adding Stingers</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch34.html#removing_stingers" title="Removing Stingers">Removing Stingers</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch34.html#defining_playback_settings_for_stingers" title="Defining playback settings for Stingers">Defining playback settings for Stingers</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch34.html#auditioning_stingers" title="Auditioning Stingers">Auditioning Stingers</a>
+					</p></li></ul></div></div><HR></body></html>

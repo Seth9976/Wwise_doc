@@ -1,0 +1,132 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Limiting object playback instances</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch24.html" title="Managing priority"><link rel="prev" href="ch24s01.html" title="Understanding how Wwise prioritizes objects"><link rel="next" href="ch24s03.html" title="Defining playback priority"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch24.html">Managing priority</a></span> &gt; <span class="breadcrumb-node">Limiting object playback instances</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="limiting_object_playback_instances"></a>Limiting object playback instances</h2></div></div></div><p>To deal with limited game resources or game-design constraints, you must optimize the objects that are playing at any one point in the game. You can manage the simultaneous playback of the various objects in your project by:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Limiting the number of instances that can be played per game object or globally on one or more Containers hierarchy objects and their children;</p></li><li class="listitem"><p>Limiting the overall number of instances that can pass through a bus; or</p></li><li class="listitem"><p>Limiting the overall number of instances in the entire game.</p></li></ul></div><p>When a limit is reached, Wwise uses the priority setting of the object to determine which one to discard based on the selected behavior to adopt when the limit is reached. If objects have equal priority, you have the option to discard the newest or oldest instance that is playing.</p><p>When you set a playback limit at the level of the Containers hierarchy, you control the number of instances within the same structure that can be played either globally or per game object. If a child object ignores the playback limit set at the parent level, it is no longer part of the limit hierarchy. Instead, the total number of instances that can play is their sum. This means that if, for example, you have a parent with a limit of 20 and a child object set to <span class="bold"><strong>Ignore parent</strong></span> with a limit of 10, the total possible number of instances is 30. If, however, the child were not set to <span class="bold"><strong>Ignore parent</strong></span>, then the total possible number of instances would be 20, the same as the parent. As seen in the illustration below, limits can be placed on child objects whether or not the parent is ignored. This allows for minute playback control over the maximum number of instances for a particular object and its descendants.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="550"><tr style="height: 169px"><td><img src="Images/Playback_limit_online.png" height="169"></td></tr></table></div><p>When you set the Playback Limit at the Busses level, it specifies the number of sound, music, and/or motion instances that can pass through the bus at any one time. Since the priority of each object has already been specified at the level of the Containers hierarchy, there is no playback priority setting for busses.</p><p>When you set the Playback Limit at the project/game level, it specifies the number of instances that can be active at any one time.  Each sound will adopt its own Virtual Voice behavior set in its Advanced Settings. </p><div class="orderedlist"><p class="title"><b>To define a Playback Limit:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Load an object into the Property Editor.</p></li><li class="listitem"><p>Switch to the Advanced category.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Playback Limit</strong></span> group, select the <span class="bold"><strong>Limit sound instances to</strong></span> option.</p><p>The Playback Limit options become available.</p></li><li class="listitem"><p>In the corresponding text box, type the maximum number of instances that can be played simultaneously per game object.</p></li><li class="listitem"><p>To define the scope for the Playback Limit, select one of the following options: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Global</strong></span> to apply the limit globally.</p></li><li class="listitem"><p><span class="bold"><strong>Per game object</strong></span> to apply the limit per game object.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is not available on busses because the limit is always global.</p></td></tr></table></div></li><li class="listitem"><p>To determine what happens when the Playback Limit is reached, select one of the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Kill voice</strong></span> to stop the playing instance with the lowest priority.</p></li><li class="listitem"><p><span class="bold"><strong>Use virtual settings</strong></span> to adopt the defined virtual voice
+							behavior for the sounds. The sounds' virtual behaviors are <span class="bold"><strong>Continue to play</strong></span>, <span class="bold"><strong>Kill
+								voice</strong></span>, <span class="bold"><strong>Send to virtual
+								voice</strong></span>, and <span class="bold"><strong>Kill if finite else
+								virtual</strong></span>. For more details about these options, see <a class="xref" href="ch61s01s05s12.html" title="Advanced category: sound and motion objects">Advanced category: sound and motion objects</a>.</p></li></ul></div></li><li class="listitem"><p>To determine what happens when the Playback Limit is reached and there is more than one object with the lowest priority, select one of the following options from the <span class="bold"><strong>When priority is equal</strong></span> list:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Discard oldest instance</strong></span> to stop the oldest playing instance with the lowest priority.</p></li><li class="listitem"><p><span class="bold"><strong>Discard newest instance</strong></span> to stop the newest playing instance with the lowest priority.</p></li></ul></div></li><li class="listitem"><p>The Project/Game limit can be modified in the Wwise <span class="bold"><strong>Project Settings</strong></span>, per platform. It may also be changed by the game using the Wwise SDK API once the sound engine is properly initialized.</p></li></ol></div><p>When working with the voice limitation system, it is good to know the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Virtual voices do not count as valid voices.</p></li><li class="listitem"><p>Sounds with the virtual voice setting set to <span class="bold"><strong>Continue to play</strong></span> may cause the limit to be exceeded. </p></li><li class="listitem"><p>Sounds that are sent to virtual voice can normally be set to <span class="bold"><strong>Play from beginning</strong></span>, <span class="bold"><strong>Play from elapsed time</strong></span>, or <span class="bold"><strong>Resume</strong></span> upon return to physical voice (no longer virtual). However, in the case of the <span class="bold"><strong>Kill if finite else virtual</strong></span> option, sounds that are sent to virtual voice are always set to <span class="bold"><strong>Play from elapsed time</strong></span> upon return to physical voice.
+        </p></li></ul></div><p>For example, let us suppose you have:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>A limit on a bus set to 4 simultaneous sounds.</p></li><li class="listitem"><p>The <span class="bold"><strong>When limit is reached</strong></span> behavior on this bus is set to <span class="bold"><strong>Use virtual voice settings</strong></span>.
+        </p></li><li class="listitem"><p>The Volume Threshold is set to -60 dB.</p></li><li class="listitem"><p>You have 8 voices playing at this frame in this bus.</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="380px"><colgroup><col width="90px" class="SoundName"><col width="80px" class="Priority"><col width="80px" class="Volume"><col width="125px" class="VirtualBehavior"></colgroup><thead><tr><th>
+							<p>Sound name</p>
+						</th><th>
+							<p>Priority</p>
+						</th><th>
+							<p>Volume</p>
+						</th><th>
+							<p>Virtual Behavior</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Sound_1</p>
+						</td><td align="right">
+							<p>100</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Go Virtual</p>
+						</td></tr><tr><td>
+							<p>Sound_2</p>
+						</td><td align="right">
+							<p>90</p>
+						</td><td align="right">
+							<p>-90 dB</p>
+						</td><td>
+							<p>Go Virtual</p>
+						</td></tr><tr><td>
+							<p>Sound_3</p>
+						</td><td align="right">
+							<p>80</p>
+						</td><td align="right">
+							<p>-90 dB</p>
+						</td><td>
+							<p>Continue to play</p>
+						</td></tr><tr><td>
+							<p>Sound_4</p>
+						</td><td align="right">
+							<p>70</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Go Virtual</p>
+						</td></tr><tr><td>
+							<p>Sound_5</p>
+						</td><td align="right">
+							<p>60</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Kill voice</p>
+						</td></tr><tr><td>
+							<p>Sound_6</p>
+						</td><td align="right">
+							<p>50</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Kill voice</p>
+						</td></tr><tr><td>
+							<p>Sound_7</p>
+						</td><td align="right">
+							<p>40</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Go Virtual</p>
+						</td></tr><tr><td>
+							<p>Sound_8</p>
+						</td><td align="right">
+							<p>30</p>
+						</td><td align="right">
+							<p>0 dB</p>
+						</td><td>
+							<p>Continue to play</p>
+						</td></tr></tbody></table></div><p>The result would be:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="90px" class="SoundName"><col width="120px" class="Result"><col class="Reason"></colgroup><thead><tr><th>
+							<p>Sound name</p>
+						</th><th>
+							<p>Result</p>
+						</th><th>
+							<p>Reason</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Sound_1</p>
+						</td><td>
+							<p>Play (1/4)</p>
+						</td><td>
+							<p>Highest priority and over volume threshold.</p>
+						</td></tr><tr><td>
+							<p>Sound_2</p>
+						</td><td>
+							<p>Will go virtual</p>
+						</td><td>
+							<p>Volume under threshold.</p>
+						</td></tr><tr><td>
+							<p>Sound_3</p>
+						</td><td>
+							<p>Play (2/4)</p>
+						</td><td>
+							<p>Continues to play even when under volume threshold.</p>
+						</td></tr><tr><td>
+							<p>Sound_4</p>
+						</td><td>
+							<p>Play (3/4)</p>
+						</td><td>
+							<p>-</p>
+						</td></tr><tr><td>
+							<p>Sound_5</p>
+						</td><td>
+							<p>Play (4/4)</p>
+						</td><td><p>-</p></td></tr><tr><td>
+							<p>Sound_6</p>
+						</td><td>
+							<p>Will be killed</p>
+						</td><td>
+							<p>Over limit, already 4 sounds with higher priority are playing</p>
+						</td></tr><tr><td>
+							<p>Sound_7</p>
+						</td><td>
+							<p>Will go virtual</p>
+						</td><td>
+							<p>Over limit, already 4 sounds with higher priority are playing</p>
+						</td></tr><tr><td>
+							<p>Sound_8</p>
+						</td><td>
+							<p>Play (5/4)*</p>
+						</td><td>
+							<p>*Will play even if the limit is exceeded, this is a special situation where this sound is not allowed to go virtual nor be killed, and is not allowed to take over the 4 sounds already playing with a higher priority.</p>
+						</td></tr></tbody></table></div><p><span class="bold"><strong>FAQ</strong></span></p><p>Q: The limit does not seem to be working? Why?</p><p>A: Check if the sound's virtual behavior is not set to <span class="bold"><strong>Continue to play</strong></span>, it is the default value for compatibility reasons. Any sound with this setting will neither be kicked nor virtualized when over the limit (unless the over limit behavior was set to kill voice explicitly). Once you start using the <span class="bold"><strong>Use virtual voice settings</strong></span> when over the limit, you must set this setting for any sound that would be considered &#8220;kickable&#8221; or &#8220;virtualizable&#8221; to start saving some CPU.</p><p>Also keep in mind that the limit applies only to sound objects that are within the selected object's hierarchy. If a child object has the <span class="bold"><strong>Ignore Parent</strong></span> option enabled, it is no longer part of that limiter hierarchy and is not controlled by the parent's limit.</p><br><p>Q: The limit seems to be working most of the time but the profiler sometimes shows values that are over the specified limit even if none of these sounds are set to <span class="bold"><strong>Continue to play</strong></span>.</p><p>A: When sounds are becoming virtual, they stay active for a few ms (one audio frame) to fade out and avoid clicking. For example, if the limit is set to 1 and one sound is already playing, then another sound pops in with a higher priority, the number of active voices will temporarily be 2 while the first sound is fading out to go virtual.</p><br><p>Q: Why is sending to virtual voices not the default setting when over limit? Why are all sounds set to continue to play by default?</p><p>A: Some source codecs may not be perfectly accurate in virtual mode and/or could require a seek table to be added in the source to be able to work as a virtual voice using the <span class="bold"><strong>Play from elapsed time</strong></span> option for its <span class="bold"><strong>return to physical voice</strong></span>. For this reason, and to ensure that everything runs fine by default, this is not the default setting. For example, Vorbis will require a seek table to be able to properly adopt a virtual behavior with the <span class="bold"><strong>Play from elapsed time</strong></span> setting.
+		</p></div><HR></body></html>

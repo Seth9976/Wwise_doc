@@ -1,0 +1,250 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Vorbis Encoder Parameters</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s05s03.html" title="Conversion Settings Editor"><link rel="prev" href="ch61s05s03s01.html" title="ADPCM Parameters"><link rel="next" href="ch61s05s03s03.html" title="Opus Parameters"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05.html">ShareSets Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05s03.html">Conversion Settings Editor</a></span> &gt; <span class="breadcrumb-node">Vorbis Encoder Parameters</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="vorbis_encoder_parameters"></a>Vorbis Encoder Parameters</h4></div></div></div><p>In the Vorbis Encoder Parameters dialog you can define properties for Vorbis audio files. The Vorbis encoder is a perceptual audio codec that maintains a specified constant quality while varying the bitrate. In most cases, using the default mode results in the most consistent quality for the bits used.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Vorbis format supported by Audiokinetic has been optimized for interactive media and gaming platforms. It does not follow the standard Ogg/Vorbis file format. Do not expect media players or other standard Ogg/Vorbis tools to be able to read those streams properly.</p></td></tr></table></div><p>In certain circumstances where you need to manage the bitrate closely, you can define the bitrate settings. This has been implemented using a bitrate reservoir that maintains the bitrate within the range that you specify by banking bits, using the average rate as a set-point. In many cases this can result in reduced quality. This option should be reserved for particular situations when it is essential to manage the bitrate closely.</p><p>
+        In addition, if you plan to use the Vorbis encoder, you will need to enable the seek table to use the <span class="bold"><strong>Play from elapsed time</strong></span> virtual voice behavior.
+		</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+      When remote connected, the Source Editor's Play Cursor will only work on a Vorbis encoded source if the latter is converted with a seek table.
+    </p></td></tr></table></div><p>By default, the seek table option is turned off to save disk space. Be sure to turn this setting on when selecting either of the virtual voice behaviors; otherwise, the sound will not play when either of these virtual voice behaviors is used.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            For more general information about the Vorbis codec, refer to: <a class="link" href="http://vorbis.com/faq" target="_blank">http://vorbis.com/faq</a>.
+				</p></li><li class="listitem"><p>
+            For more technical information on the Vorbis codec, refer to: <a class="link" href="http://xiph.org/vorbis/doc/Vorbis_I_spec.html" target="_blank">http://xiph.org/vorbis/doc/Vorbis_I_spec.html</a>.
+				</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+							<p>Quality Factor</p>
+						</td><td>
+							<p>A decimal float value for the quality setting of the compressed file where -2 is intended as an ultra-low setting in which low bitrate is much more important than quality consistency and 0.0 is intended to produce consistent results at all times.</p>
+							<p>A higher quality setting translates into:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>More disk space required</p></li><li class="listitem"><p>Better audio quality</p></li><li class="listitem"><p>Consistent results at all times</p></li></ul></div>
+							<p>The Vorbis variable rate codec will keep the encoding quality value that you specify constant while varying the bitrate. A high compression rate can result in reduced quality. To achieve a higher quality, and therefore a lower compression rate, select a value close to the top range.</p>
+							<p>
+								Default value: +4<br>Range: -2 to +10
+							</p>
+							<p>The Vorbis decoder will take approximately 24 KB of the lower engine memory for each stereo file encoded in a quality setting less than 0.</p>
+						</td></tr><tr><td>
+							<p>Managed Bitrate</p>
+						</td><td>
+							<p>Enables the functionality for managing the average as well as the minimum and maximum bitrates per channel.</p>
+							<p>Although the Vorbis codec is natively variable bitrate codec, it includes infrastructure for 'managing' the bitrate of streams by setting minimum and maximum usage constraints, as well as functionality for nudging a stream toward a desired average value. These features should only be used when there is a requirement to limit bitrate in some way, such as guaranteeing certain bandwidth limitations for file streaming. Although the difference is usually slight, managed bitrate modes will always produce output inferior to variable bitrate encodings (given equal bitrate usage).</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Note that setting overly or impossibly tight bitrate management requirements can affect output quality dramatically for the worse.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Average bitrate (kbps per channel)</p>
+						</td><td>
+							<p>The value of the average bitrate that will be used by the bitrate reservoir as a set-point for tracking the bitrate in the encoder.</p>
+							<p>
+								Default value: 64 <br>Range: 16 to 240<br>Units: kbps per channel
+							</p>
+						</td></tr><tr><td>
+							<p>Min bitrate (kbps per channel)</p>
+						</td><td>
+							<p>The minimum bitrate per channel encoded.</p>
+							<p>
+								Default value: 64 <br>Range: 16 to 240 <br>Units: kbps per channel
+							</p>
+							<p>
+								The Vorbis codec supports limited ranges of valid bitrate settings depending on the sample rate of the file to encode. For more information about the valid ranges, consult the <a class="xref" href="ch61s05s03s02.html#valid_vorbis_bitrate_settings" title="Valid Vorbis Bitrate Settings">Valid Vorbis Bitrate Settings</a>.
+							</p>
+						</td></tr><tr><td>
+							<p>Max bitrate (kbps per channel)</p>
+						</td><td>
+							<p>The maximum bitrate per encoded channel.</p>
+							<p>
+								Default value: 64 <br>Range: 16 to 240 <br>Units: kbps per channel
+							</p>
+							<p>
+								The Vorbis codec supports limited ranges of valid bitrate settings depending on the sample rate of the file to encode. For more information about the valid ranges, consult the <a class="xref" href="ch61s05s03s02.html#valid_vorbis_bitrate_settings" title="Valid Vorbis Bitrate Settings">Valid Vorbis Bitrate Settings</a>.
+							</p>
+						</td></tr><tr><td>
+							<p>Advanced Settings</p>
+						</td><td>
+							<p>Enables the functionality for managing the reservoir settings.</p>
+							<p>This functionality should only be used by users with expertise in encoding.</p>
+						</td></tr><tr><td>
+							<p>Bit reservoir time</p>
+						</td><td>
+							<p>The minimum/maximum bitrate constraints that will be used in the bit tracking reservoir. The reservoir averages out localized surges and dips in bitrates by managing the frame size and banking bits within the range defined for this setting.</p>
+							<p>
+								Default value: 2 <br>Range: 0 to 10 <br>Units: seconds
+							</p>
+						</td></tr><tr><td>
+							<p>Reservoir bias factor</p>
+						</td><td>
+							<p>The setting that determines how the reservoir will manage banking of bits - a higher setting results in the reservoir hoarding bits so that there are many to draw on should the bitrate go down. A lower setting results in storing less bits to deal with bitrate changes.</p>
+							<p>
+								Default value: 0.1<br>Range: 0 to 1
+							</p>
+						</td></tr><tr><td>
+							<p>Average track slew time</p>
+						</td><td>
+							<p>The transition time before the reservoir tracker will respond to defined minimum and maximum bitrate times.</p>
+							<p>
+								Default value: 1.5 <br>Range: 0 to 10 <br>Units: seconds
+							</p>
+						</td></tr><tr><td>
+							<p>Seek table granularity (sample frames)</p>
+						</td><td>
+							<p>
+								The settings that determine how many seek locations or key frames will be used in the audio file.  The seek table is normally used for virtual voice sounds that use the Play from elapsed time option.  The lower the settings, the closer the sound will be to the accurate elapsed time for the sound.
+							</p>
+							<p>
+								Default: 16,384 <br>Range: 1,024 to 32,768<br>Units: PCM frames (each frame is 1/sample frequency)
+							</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+						</td><td>
+							<p>Closes the Vorbis Encoder Parameters dialog and saves your settings.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+						</td><td>
+							<p>Closes the Vorbis Encoder Parameters dialog without saving your settings.</p>
+						</td></tr></tbody></table></div><br><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="valid_vorbis_bitrate_settings"></a>Valid Vorbis Bitrate Settings</h5></div></div></div><p>Bitrate management is implemented using a bit-reservoir algorithm. The encoder has a fixed-size reservoir used as a 'savings account' in encoding. When a frame is smaller than the target rate, the unused bits go into the reservoir so that they may be used by future frames. When a frame is larger than target bitrate, it draws 'banked' bits out of the reservoir. Encoding is managed so that the reservoir never goes negative (when a maximum bitrate is specified) or fills beyond a fixed limit (when a minimum bitrate is specified). An 'average bitrate' request is used as the set-point in a long-range bitrate tracker which adjusts the encoder's aggressiveness up or down depending on whether or not frames are coming in larger or smaller than the requested average point.</p><p>The Vorbis codec supports limited ranges of valid bitrate settings depending on the sample rate of the file to encode. If the bitrate specified (average, minimum, and maximum) are outside the valid ranges for the file to encode, the values will be clamped to the nearest value within the valid range and a warning will be displayed in the conversion dialog specifying the actual bitrate used for encoding. Refer to the table below to determine valid bitrates for given sample rates.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"><col class="col3"><col class="col4"><col class="col5"></colgroup><thead><tr><th>
+								<p>Sample (Hz)</p>
+							</th><th>
+								<p>Mono Min (kbps)</p>
+							</th><th>
+								<p>Mono Max (kbps)</p>
+							</th><th>
+								<p>Stereo Min (kbps / channel)</p>
+							</th><th>
+								<p>Stereo Max (kbps / channel)</p>
+							</th></tr></thead><tbody><tr><td align="right">
+								<p>8,000      </p>
+							</td><td align="right">
+								<p>8          </p>
+							</td><td align="right">
+								<p>42          </p>
+							</td><td align="right">
+								<p>5          </p>
+							</td><td align="right">
+								<p>32          </p>
+							</td></tr><tr><td align="right">
+								<p>10,000      </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>50          </p>
+							</td><td align="right">
+								<p>8          </p>
+							</td><td align="right">
+								<p>44          </p>
+							</td></tr><tr><td align="right">
+								<p>12,000      </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>50          </p>
+							</td><td align="right">
+								<p>8          </p>
+							</td><td align="right">
+								<p>44          </p>
+							</td></tr><tr><td align="right">
+								<p>14,000      </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>50          </p>
+							</td><td align="right">
+								<p>8          </p>
+							</td><td align="right">
+								<p>44          </p>
+							</td></tr><tr><td align="right">
+								<p>16,000      </p>
+							</td><td align="right">
+								<p>16          </p>
+							</td><td align="right">
+								<p>100          </p>
+							</td><td align="right">
+								<p>10          </p>
+							</td><td align="right">
+								<p>86          </p>
+							</td></tr><tr><td align="right">
+								<p>18,000      </p>
+							</td><td align="right">
+								<p>16          </p>
+							</td><td align="right">
+								<p>100          </p>
+							</td><td align="right">
+								<p>10          </p>
+							</td><td align="right">
+								<p>86          </p>
+							</td></tr><tr><td align="right">
+								<p>20,000      </p>
+							</td><td align="right">
+								<p>22          </p>
+							</td><td align="right">
+								<p>90          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>86          </p>
+							</td></tr><tr><td align="right">
+								<p>22,050      </p>
+							</td><td align="right">
+								<p>22          </p>
+							</td><td align="right">
+								<p>90          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>86          </p>
+							</td></tr><tr><td align="right">
+								<p>24,000      </p>
+							</td><td align="right">
+								<p>22          </p>
+							</td><td align="right">
+								<p>90          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>86          </p>
+							</td></tr><tr><td align="right">
+								<p>28,000      </p>
+							</td><td align="right">
+								<p>24          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td></tr><tr><td align="right">
+								<p>32,000      </p>
+							</td><td align="right">
+								<p>24          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td></tr><tr><td align="right">
+								<p>36,000      </p>
+							</td><td align="right">
+								<p>24          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td><td align="right">
+								<p>14          </p>
+							</td><td align="right">
+								<p>190          </p>
+							</td></tr><tr><td align="right">
+								<p>44,100      </p>
+							</td><td align="right">
+								<p>26          </p>
+							</td><td align="right">
+								<p>240          </p>
+							</td><td align="right">
+								<p>16          </p>
+							</td><td align="right">
+								<p>250          </p>
+							</td></tr><tr><td align="right">
+								<p>48,000      </p>
+							</td><td align="right">
+								<p>26          </p>
+							</td><td align="right">
+								<p>240          </p>
+							</td><td align="right">
+								<p>16          </p>
+							</td><td align="right">
+								<p>250          </p>
+							</td></tr></tbody></table></div></div></div><HR></body></html>

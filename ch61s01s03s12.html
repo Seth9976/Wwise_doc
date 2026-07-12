@@ -1,0 +1,77 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Contents Editor: Sound SFX</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03.html" title="Containers hierarchy: sound and motion objects"><link rel="prev" href="ch61s01s03s11.html" title="Contents Editor: Blend Container"><link rel="next" href="ch61s01s03s13.html" title="Contents Editor: Sound Voice"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-node">Contents Editor: Sound SFX</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="contents_editor_audio_source_sfx"></a>Contents Editor: Sound SFX</h4></div></div></div><p>This Contents Editor gives you quick access to the properties associated with the SFX object's audio and plug-in sources. You must click an audio source to display the associated column headings.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Click the <span class="bold"><strong>Configure Columns</strong></span> shortcut (right-click) option from the column header band.</p>
+		<p>The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> opens. Specify which columns to display and their order.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot configure the columns for Source Contents Editors.</p></td></tr></table></div>
+	</td></tr><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td>
+              <p>Use</p>
+            </td><td>
+              <p>Determines which version of the source is:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Played during playback.</p></li><li class="listitem"><p>Included in the SoundBanks.</p></li></ul></div>
+              <p>This option is only visible when you have more than one source within the sound object.</p>
+            </td></tr><tr><td>
+              <p>Audio File</p>
+            </td><td>
+              <p>The name of the original audio file to which the source is linked.</p>
+            </td></tr><tr><td>
+		<p>Make-up Gain</p>
+	</td><td>
+		<p>Volume gain in decibels (dB) applied to the voice, after all other volume adjustments.  The make-up gain is additive across the Containers.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a>
+			 to learn about how voices are being processed, how they are being routed and where the different volumes and Effects are being applied.
+		</p>
+		<p>
+			For more information about the Make-up Gain, refer to 
+			<a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness Normalization or Make-up gain to Adjust Volume</a>
+			.
+		</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12.  You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+              <p>Duration</p>
+            </td><td>
+              <p>The duration of the audio source.</p>
+            </td></tr><tr><td>
+		<p>Notes</p>
+	</td><td>
+		<p>Any additional information about the object properties.</p>
+	</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_add_source_arrows.png"></div>
+            </td><td>
+              <p>Adds a new source to the sound object.</p>
+              <p>When you click the Add Source button, a list of possible sources that can be added is displayed.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Your sound objects can also contain a variety of plug-in sources. The column headings that will appear in the Contents Editor will depend on the plug-in that you are using. When using plug-in sources, you may encounter the following:
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Plug-ins that are not supported on a given platform.</p></li><li class="listitem"><p>Plug-ins that are not installed on a given machine.</p></li></ul></div><p>
+  </p><p>
+    If the plug-in you are using is not supported on the current platform, the source will appear dimmed in the Contents Editor. If the plug-in is not installed, it will be displayed in the Contents Editor; but, instead of the property controls that normally appear, a &#8220;Source plug-in not installed&#8221; message is displayed between the <span class="bold"><strong>Use</strong></span> button and the <span class="bold"><strong>Notes</strong></span> field.
+  </p></td></tr></table></div>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch11s09.html" title="Creating sources using plug-ins">Creating sources using plug-ins</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch36s01.html#customizing_object_properties_per_platform" title="Customizing object properties per platform">Customizing object properties per platform</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch36s01.html#selecting_sources_per_platform" title="Selecting sources per platform">Selecting sources per platform</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s02.html" title="Adding objects to the Contents Editor">Adding objects to the Contents Editor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s03.html" title="Re-ordering objects within the Contents Editor">Re-ordering objects within the Contents Editor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s05.html" title="Expanding or collapsing lists">Expanding or collapsing lists</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s06.html" title="Deleting objects">Deleting objects</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s07.html" title="Auditioning objects and sources within the Contents Editor">Auditioning objects and sources within the Contents Editor</a>
+        </p></li></ul></div></div><HR></body></html>

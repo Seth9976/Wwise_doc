@@ -1,0 +1,464 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Defining the SoundBank settings for your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03s02.html" title="Defining the conversion settings for your project"><link rel="next" href="ch07s03s04.html" title="Managing messages that appear in the logs"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Defining the SoundBank settings for your project</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="defining_soundbank_settings_for_project"></a>Defining the SoundBank settings for your project</h3></div></div></div><p>Before generating the SoundBanks for each of your platforms and languages, use the <a class="xref" href="ch07s03s03.html#project_settings_soundbanks_tab" title="Soundbanks tab of the Project Settings dialog">Soundbanks tab of the Project Settings dialog</a> to define your SoundBank settings.
+				You can define the following SoundBank settings at the project level: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s03.html#defining_soundbank_project_settings" title="Defining SoundBank project settings">Defining SoundBank project settings</a> - Determine what information is to be included with the generated SoundBanks.</p></li><li class="listitem"><p><a class="xref" href="ch07s03s03.html#specifying_location_for_saved_soundbanks" title="Specifying a location for your saved SoundBank">Specifying a location for your saved SoundBank</a> - Determine the location on your hard drive or network to save a SoundBank.</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s03.html#defining_steps_to_be_performed_pre_post_soundbank_generation" title="Defining steps to be performed pre/post SoundBank generation">Defining steps to be performed pre/post SoundBank generation</a> - Determine which tasks will be performed immediately before SoundBank generation.</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s03.html#defining_steps_to_be_performed_pre_post_soundbank_generation" title="Defining steps to be performed pre/post SoundBank generation">Defining steps to be performed pre/post SoundBank generation</a> - Determine which tasks will be performed immediately after the SoundBank generation.</p></li></ul></div><p>Although these settings are defined at the project level, you can create custom user settings by overriding these project settings. For more information on overriding the SoundBank project settings, refer to <a class="xref" href="ch41s04.html" title="Configuring user SoundBank settings">Configuring user SoundBank settings</a>.</p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_soundbank_project_settings"></a>Defining SoundBank project settings</h4></div></div></div><p>Before generating your SoundBanks, you need to determine what information will be part of the generation process, how it will be included, and in what format will it be generated. The settings you choose will depend on how the data and media within the SoundBanks are accessed by your game.</p><div class="orderedlist"><p class="title"><b>To define SoundBank project settings:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the SoundBanks tab.</p></li><li class="listitem"><p>In the <span class="bold"><strong>SoundBank Settings</strong></span> group, select any of the following options to define custom settings for your SoundBanks:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<span class="bold"><strong>Allow SoundBanks to exceed maximum size</strong></span> to generate SoundBanks even if they exceed the maximum size specified.</p></li><li class="listitem"><p>              
+							<span class="bold"><strong>Generate SoundBank content files</strong></span> to create files that list the contents of each SoundBank. The content files include information on Events, Busses, States, and Switches, as well as a complete list of streamed and in memory audio files. </p></li><li class="listitem"><p>
+							<span class="bold"><strong>Generate header file</strong></span> to create a header file that maps Event, State, Switch, and Game Parameter names to IDs.</p></li><li class="listitem"><p>
+							<span class="bold"><strong>Max attenuation</strong></span> to include maximum attenuation information in the SoundbanksInfo.xml file for each Event. </p></li><li class="listitem"><p>
+							<span class="bold"><strong>Estimated duration</strong></span> to include the estimated maximum and minimum duration for each Event, as well as whether a sound loops infinitely or is a one-shot sound, in the SoundbanksInfo.xml file for each Event. </p></li><li class="listitem"><p>
+							<span class="bold"><strong>Use SoundBank Names</strong></span> to use SoundBank names (checked) or IDs (unchecked) to name generated SoundBank files (BNK) and to reference one bank within another bank. For more information, refer to <a class="xref" href="ch07s03s03.html#project_settings_soundbanks_tab" title="Soundbanks tab of the Project Settings dialog">Soundbanks tab of the Project Settings dialog</a>.
+						</p></li></ul></div></li><li class="listitem"><p>If you chose to generate a header file, you must decide where it will be saved. To do so, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Click the text box and directly type a path into it.</p></li><li class="listitem"><p>Double-click the text box or click the browse button [&#8230;] to prompt a browser to navigate to the location of your choice.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can use a full path or a relative path to specify the location where the header file will be saved. When using a relative path, use the project folder as the origin of the path.</p></td></tr></table></div></li><li class="listitem"><p>If you chose to generate SoundBank content files, you can select the desired text file format with the <span class="bold"><strong>SoundBank content file format</strong></span> option.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>If you have file paths, object names or object notes that contain non-ANSI characters, you should use the Unicode format.</p></td></tr></table></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to apply the settings.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="specifying_location_for_saved_soundbanks"></a>Specifying a location for your saved SoundBank</h4></div></div></div><p>When you generate the SoundBanks for your project, the default save folder is:</p><p>ProjectName\GeneratedSoundBanks\Platform\</p><p>If this location is not convenient for you, you can change it to any directory on your workstation or network.</p><p>When specifying the location for your saved SoundBank, you can use a full path or a relative path. When using a relative path, use the project folder as the origin of the path. For example, the following full path and relative path specify the same location:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>C:\Wwise Projects\My Project\GeneratedSoundBanks\Windows</p></li><li class="listitem"><p>GeneratedSoundBanks\Windows\</p></li></ul></div><div class="orderedlist"><p class="title"><b>To specify a new location for your saved SoundBank:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the SoundBanks tab.</p></li><li class="listitem"><p>In the <span class="bold"><strong>SoundBank Paths</strong></span> group, specify a path by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Type a path directly in the text box.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Browse</strong></span> and use the browser to navigate to the location of your choice.</p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to apply any changes you made.</p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If <span class="bold"><strong>Copy Loose/Streamed Media</strong></span> is enabled in your project settings, then this setting also determines where your media files will be copied. Refer to <a class="xref" href="ch07s03s03.html#project_settings_soundbanks_tab" title="Soundbanks tab of the Project Settings dialog">Soundbanks tab of the Project Settings dialog</a> for more details.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_steps_to_be_performed_pre_post_soundbank_generation"></a>Defining steps to be performed pre/post SoundBank generation</h4></div></div></div><p>Depending on your workflow, you may have a certain step or task that needs to be performed immediately before or immediately following the generation of your SoundBanks. For example, you may want to check out specific SoundBank files from your source control system before generating them or you may want the streamed files to be copied to the SoundBanks directory immediately following generation. </p><p>In Wwise, these types of tasks are defined by creating command lines. A special command line editor exists within Wwise making it easy for you to build as many command lines as you need. To simplify the process even further, the editor contains a list of all the Wwise-specific and other Windows environmental variables that can be used in a command line.
+				</p><p>The specific Wwise variables available for writing custom command lines are as follows:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Command Line Variable</p>
+								</th><th>
+									<p>Description</p>
+								</th></tr></thead><tbody><tr><td>
+									<p><code class="code">$(AllowExceedMaximum)</code></p>
+								</td><td>
+									<p>Specifies whether SoundBanks can be generated even if they exceed the maximum size specified.</p>
+                  <p>
+                    This variable is set to true when the <span class="bold"><strong>Allow SoundBanks to exceed maximum size</strong></span> option is selected.
+                  </p>
+								</td></tr><tr><td>
+									<p><code class="code">$(GenerateContentFile)</code></p>
+								</td><td>
+									<p>Specifies whether files that list the contents of each SoundBank are created. The content files include information on Events, Busses, States, and Switches, as well as a complete list of streamed and in-memory audio files. </p>
+									<p>This variable is set to true when the Generate SoundBank content files option is selected.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(GenerateHeaderFile)</code></p>
+								</td><td>
+									<p>Specifies whether a header file is generated that maps Event, State, Switch, and Game Parameter names to IDs.</p>
+									<p>This variable is set to true when the <span class="bold"><strong>Generate header file</strong></span> option is enabled.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(GenerateMaxAttenuationInfo)</code></p>
+								</td><td>
+									<p>Specifies whether the maximum attenuation information is generated for Events.</p>
+									<p>This variable is set to true when the <span class="bold"><strong>Metadata Options</strong></span>: <span class="bold"><strong>Max attenuation</strong></span> option is enabled.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(GenerateEstimatedDuration)</code></p>
+								</td><td>
+									<p>Specifies whether the estimated maximum and minimum duration and duration type information is generated for events.</p>
+									<p>This variable is set to true when the <span class="bold"><strong>Metadata Options</strong></span>: <span class="bold"><strong>Estimated Duration</strong></span> option is enabled.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(HeaderFileFullFilePath)</code></p>
+								</td><td>
+									<p>The full path of the header file, which is: $(HeaderFilePath)\Wwise_IDs.h</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(HeaderFilePath)</code></p>
+								</td><td>
+									<p>The path or location where the header file will be saved. </p>
+									<p>This path is taken from the Header file path text box.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(InfoFilePath)</code></p>
+								</td><td>
+									<p>The full file name of the current platform's Info file.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(IsRunningFromCmdLine)</code></p>
+								</td><td>
+									<p>Specifies whether Wwise was launched from the command line with the <code class="code">-generatesoundbanks</code> flag.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(LanguageList)</code></p>
+								</td><td>
+									<p>The list of languages passed to the command line or the selected languages in the SoundBank Manager.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The list is a space-separated list.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p><code class="code">$(Platform)</code></p>
+								</td><td>
+									<p>The name of the current platform.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(SoundBankList)</code></p>
+								</td><td>
+									<p>The list of SoundBanks passed to the command line or the selected SoundBanks in the SoundBank Manager.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The list is a space-separated list. Use double-quotes to enclose the list in one single argument.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p><code class="code">$(SoundBankListAsTextFile)</code></p>
+								</td><td>
+									<p>A text file containing the list of SoundBanks passed to the command line or the selected SoundBanks in the SoundBank Manager. This option may prove useful when dealing with a long list of SoundBanks.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The list is a space-separated list. Use double-quotes to enclose the list in one single argument.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p><code class="code">$(SoundBankPath)</code></p>
+								</td><td>
+									<p>The path or location where the current platform's SoundBanks are saved.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(UseSoundBankNames)</code></p>
+								</td><td>
+									<p>Specifies whether SoundBank names (<code class="code">true</code>) or IDs (<code class="code">false</code>) are used to name generated SoundBank (BNK) files, as well as within SoundBanks to refer to media in other banks.</p>
+									<p>This variable is set to <code class="code">true</code> when the <span class="bold"><strong>Use SoundBank names</strong></span> option is enabled.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseExeDriveLetter)</code></p>
+								</td><td>
+									<p>The drive letter on your workstation where the Wwise executable (Wwise.exe) is located.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseExePath)</code></p>
+								</td><td>
+									<p>The path or location of the Wwise executable (Wwise.exe).</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseExeProcessID)</code></p>
+								</td><td>
+									<p>
+                    The numerical Process Identifier of the
+                    Wwise executable (Wwise.exe). </p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseProjectDriveLetter)</code></p>
+								</td><td>
+									<p>The drive letter on your workstation where the Wwise project is located.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseProjectName)</code></p>
+								</td><td>
+									<p>The name of the current project.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WwiseProjectPath)</code></p>
+								</td><td>
+									<p>The path or location of the Wwise project.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WaapiWampPort)</code></p>
+								</td><td>
+									<p>The port used by WAAPI for the WAMP protocol.</p>
+								</td></tr><tr><td>
+									<p><code class="code">$(WaapiHttpPort)</code></p>
+								</td><td>
+									<p>The port used by WAAPI for the HTTP protocol.</p>
+								</td></tr></tbody></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Additionally, all environment variables, such as <code class="code">$(WWISESDK)</code>, are available.</p></td></tr></table></div><p>To be as flexible as possible, Wwise allows to define different command lines for the following types of steps:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<span class="bold"><strong>Global opening step</strong></span>: A command line
+							that applies to all platforms and is performed before any other
+							step.</p></li><li class="listitem"><p>
+							<span class="bold"><strong>Platform-specific pre-generation step</strong></span>:
+							A command line that applies to a specific platform and is performed
+							before the SoundBanks are generated.</p></li><li class="listitem"><p>
+							<span class="bold"><strong>Platform-specific post-generation step</strong></span>:
+							A command line that applies to a specific platform and is performed
+							after the SoundBanks are generated.</p></li><li class="listitem"><p>
+							<span class="bold"><strong>Global closing step</strong></span>: A command line
+							that applies to all platforms and is performed after all other
+							steps.</p></li></ul></div><p>By default, every project includes a platform-specific post-generation step command line that copies the streamed files to the SoundBank directory. You can, however, automate any type of task by executing a different command line.  Wwise also ships with another Factory command line that uses the File Packager to generate a package containing all data and media within your SoundBanks. For more information about the File Packager, refer to <a class="xref" href="ch42.html" title="Managing file packages"><i>Managing file packages</i></a>.  For more information about loading factory command lines, refer to <a class="xref" href="ch07s03s03.html#loading_factory_custom_command_lines" title="Loading factory/custom command lines">Loading factory/custom command lines</a>.</p><p>You can also save the command lines you create to a file (WCMDLINE) so that you can use them later on, within the same project, across projects, or if you want to share them with other users. For more information on saving commands, refer to <a class="xref" href="ch07s03s03.html#saving_custom_command_lines_to_file" title="Saving custom command lines to a file">Saving custom command lines to a file</a>.</p><div class="orderedlist"><p class="title"><b>To define tasks to be performed before SoundBank generation:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the SoundBanks tab.</p></li><li class="listitem"><p>To create a global Pre-Generation Step, click the browse button [&#8230;] to open the Global Opening Step Editor.</p><p>The Pre-Generation Step Editor opens.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Description</strong></span> text box, type a name that clearly describes the step or task that will be performed.</p></li><li class="listitem"><p>Click in the <span class="bold"><strong>Commands</strong></span> text box to begin creating your command line.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The <span class="bold"><strong>Commands</strong></span> text box works like most other text editors, which means you can add new lines of text by pressing Enter, delete text by selecting it and pressing Delete, and so on.</p></td></tr></table></div></li><li class="listitem"><p>If you want to insert built-in macros and environment variables in your command, do the following:</p><p>In the <span class="bold"><strong>Macros</strong></span> group, select one of the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+									<span class="bold"><strong>Built-in Macros</strong></span> - To display a list of ­Wwise-specific variables that can be used within the Wwise command lines.</p></li><li class="listitem"><p>
+									<span class="bold"><strong>Environment Variables</strong></span> - To display a list of Windows-specific environment variables that can be used within the Wwise command lines.</p></li></ul></div><p>To add a variable to the command line, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Double-click a variable in list.</p></li><li class="listitem"><p>Select a variable from the list and then click <span class="bold"><strong>Insert</strong></span>.</p></li></ul></div><p>Continue to add variables to your command line, as required.</p></li><li class="listitem"><p>If you need to perform a second global pre-generation step, simply go to the end of the first line, press <span class="bold"><strong>Enter</strong></span>, and then start creating a new command line. </p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save the command line and to close the Pre-Generation Step Editor.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you want to save the command line to file, click the <span class="bold"><strong>Save As</strong></span> button in the editor. For more information on saving custom command lines, refer to <a class="xref" href="ch07s03s03.html#saving_custom_command_lines_to_file" title="Saving custom command lines to a file">Saving custom command lines to a file</a>.</p></td></tr></table></div></li><li class="listitem"><p>To create a platform-specific pre-generation step, repeat steps 3-8 for each platform.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can load factory and previously saved custom command lines into the editor by clicking the <span class="bold"><strong>Load</strong></span> button. For more information on loading factory/custom commands, refer to <a class="xref" href="ch07s03s03.html#loading_factory_custom_command_lines" title="Loading factory/custom command lines">Loading factory/custom command lines</a>.</p></td></tr></table></div></li></ol></div><div class="orderedlist"><p class="title"><b>To define tasks to be performed after SoundBank generation:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the SoundBanks tab.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Post-Generation Step</strong></span> group, you will notice that the <span class="bold"><strong>Copy Streamed Files</strong></span> command line is added by default. To modify this command line or to add an additional one, click one of the browse buttons [...]. </p><p>The Post-Generation Step Editor opens.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Description</strong></span> text box, type a name that clearly describes the step(s) or task(s) that will be performed.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Commands</strong></span> text box, click at the end of the current command line and press <span class="bold"><strong>Enter</strong></span>. You can now begin to create a new command line.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The <span class="bold"><strong>Commands</strong></span> text box works like most other text editors, which means you can add new lines of text by pressing Enter, delete text by selecting it and pressing Delete, and so on.</p></td></tr></table></div></li><li class="listitem"><p>If you want to insert built-in macros and environment variables in your command, do the following:</p><p>In the <span class="bold"><strong>Macros</strong></span> group, select one of the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                  <span class="bold"><strong>Built-in Macros</strong></span> - To display a list of ­Wwise-specific variables that can be used within the Wwise command lines.
+                </p></li><li class="listitem"><p>
+                <span class="bold"><strong>Environment Variables</strong></span> - To display a list of Windows-specific environment variables that can be used within the Wwise command lines.
+              </p></li></ul></div><p>To add a variable to the command line, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Double-click a variable in list.</p></li><li class="listitem"><p>Select a variable from the list and then click <span class="bold"><strong>Insert</strong></span>.</p></li></ul></div><p>Continue to add variables to your command line, as required.</p></li><li class="listitem"><p>If you need to perform an additional pre-generation step, simply go to the end of the first line, press Enter, and then start creating a new command line.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save the command line and to close the Post-Generation Step Editor.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you want to save the command line to file, click the <span class="bold"><strong>Save As</strong></span> button in the editor. For more information on saving custom command lines, refer to <a class="xref" href="ch07s03s03.html#saving_custom_command_lines_to_file" title="Saving custom command lines to a file">Saving custom command lines to a file</a>.</p></td></tr></table></div></li><li class="listitem"><p>Repeat steps 3-8 for the global closing step and/or for each additional platform.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                You can load factory and previously saved custom command lines into the editor by clicking the <span class="bold"><strong>Load</strong></span> button. For more information on loading factory/custom commands, refer to <a class="xref" href="ch07s03s03.html#loading_factory_custom_command_lines" title="Loading factory/custom command lines">Loading factory/custom command lines</a>.</p></td></tr></table></div></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="loading_factory_custom_command_lines"></a>Loading factory/custom command lines</h4></div></div></div><p>Wwise ships with a few command lines that have already been created, including one that copies the streamed files to the SoundBank directory, and another that groups the streamed files and SoundBanks into a package. These are called factory command lines. You can load these factory command lines or custom command lines that you previously saved to file.</p><div class="orderedlist"><p class="title"><b>To load a factory/custom command line:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the Pre/Post Generation Step Editor, click <span class="bold"><strong>Load</strong></span>.</p></li><li class="listitem"><p>From the shortcut menu, click one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<span class="bold"><strong>From Factory Folder</strong></span> - To open the Explorer/Finder to the directory where the Wwise factory command lines are located.</p></li><li class="listitem"><p>
+							<span class="bold"><strong>From Last Location</strong></span> - To open the Explorer/Finder to the directory from which you last loaded a command line.</p></li></ul></div><p>The Open dialog opens.</p></li><li class="listitem"><p>Select the command line you want to load and click <span class="bold"><strong>Open</strong></span>.</p><p>The command line is loaded into the editor.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="saving_custom_command_lines_to_file"></a>Saving custom command lines to a file</h4></div></div></div><p>You can save the custom command lines you create to file so that you can use them later within the same project, across projects, or if you want to share them with other users.</p><div class="orderedlist"><p class="title"><b>To save a command line to file:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Pre-Post Generation Step Editor, write your command line(s).</p></li><li class="listitem"><p>When you are finished, click <span class="bold"><strong>Save As</strong></span>.</p><p>The Save As dialog opens.</p></li><li class="listitem"><p>Navigate to the folder where you want to save your command line, name it, and then press <span class="bold"><strong>Save</strong></span>.</p><p>The command line is saved as a WCMDLINE file and can now be re-used at any time.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="project_settings_soundbanks_tab"></a>Soundbanks tab of the Project Settings dialog</h4></div></div></div><p>In the SoundBanks tab of the Project Settings dialog, you can define the
+					settings for your SoundBanks. For example, you can specify whether to generate
+					content and header files with your SoundBanks, whether SoundBank names can be
+					used, and the location where your SoundBanks will be saved. Within this tab, you
+					can also specify predefined or custom steps that will be performed before and/or
+					after the SoundBanks are generated.</p><p>These settings will be applied to all SoundBanks that are generated for this
+					project. Although these settings are defined at the project level, each user can
+					create custom SoundBank settings by overriding the project settings in the
+					SoundBank User Settings dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+									<p><span class="bold"><strong>SoundBank Settings</strong></span></p>
+								</td></tr><tr><td>
+		<p>Enable Auto-Defined SoundBanks</p>
+	</td><td>
+		<p>Configures whether Wwise automatically defines a SoundBank for individual objects. When set, Wwise might automatically define SoundBanks for some objects. See <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for details.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>SoundBanks automatically defined by Wwise for Events only include the Event and referenced Structures, and explicitly exclude media.
+				Using such a SoundBank requires extra code within the game code. Refer to <a class="xref" href="ch41s01.html" title="Understanding how SoundBanks are loaded in a game">Understanding how SoundBanks are loaded in a game</a> for more details.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Copy Loose/Streamed Media</p>
+	</td><td>
+		<p>Configures whether Wwise automatically copies media to the output folder during SoundBank generation. When enabled, Wwise:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> Copies media files required by the generated SoundBanks from the Cache folder to the output folder. The files are copied to the folder &lt;output-folder-name&gt;/Media. </p></li><li class="listitem"><p>Removes unnecessary files from the Media folder if <span class="bold"><strong>Remove Unused
+						Generated Files</strong></span> is enabled.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option replaces CopyStreamedFiles.exe. Previously, the copying of media files was done via a post-build step using CopyStreamedFiles.exe. The application has been removed.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Create Sub-Folders for Generated Files</p>
+	</td><td>
+		<p>Configures whether sub-folders are created in output folders. When enabled, Wwise creates sub-folders for:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Copied media files. Refer to <a class="xref" href="ch41s07.html" title="Managing SoundBank media">Managing SoundBank media</a> for details. </p></li><li class="listitem"><p>Automatically defined SoundBanks. Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for details. </p></li></ul></div>
+		<p>Files are placed in sub-folders using the ID of the associated item. The first two decimal digits of the ID are determined as follows:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>For media files, the media's ID is used for the file name.</p></li><li class="listitem"><p>For SoundBank files, the ID can be found in the associated metadata file, &lt;soundbank-name&gt;.(json|xml).</p></li></ul></div>
+		<p>Refer to <a class="xref" href="ch41s06.html" title="SoundBank output folder layout">SoundBank output folder layout</a> for more details.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Consider enabling this option if your project's output folder will be under source control. Some source control systems impose a fixed limit on the number of files per folder. This option evenly distributes the files amongst sub-folders.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Remove Unused Generated Files</p>
+	</td><td>
+		<p>If selected, unused generated files are removed from the output folder during SoundBank generation. Files removed include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>SoundBank (.bnk) files.</p></li><li class="listitem"><p>Metadata files (.json, .xml, .txt). A file with this extension is removed only if its name is known (e.g. SoundBanksInfo.json) or the associated SoundBank (.bnk) file is also present.</p></li><li class="listitem"><p>Media (.wem) files.</p></li></ul></div>
+		<p>If selected, empty folders are also removed. Folders removed include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Auto-Defined SoundBank folders: Event and Bus.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Consider selecting this option if your project's output folder will be under source control. Removed files will also be removed from source control.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Use Source Control for Generated Files</p>
+	</td><td>
+		<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If this option is disabled, the status of generated files is not updated even if
+				the files are under source control.</p></td></tr></table></div>
+		<p>If selected, source control status is updated with changes (add, delete, or edit) to
+			generated files during SoundBank generation. Files updated include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>SoundBank (.bnk) files.</p></li><li class="listitem"><p>Metadata files (.json, .xml, .txt). A file with this extension is removed only if its name is known (e.g. SoundBanksInfo.json) or the associated SoundBank (.bnk) file is also present.</p></li><li class="listitem"><p>Media (.wem) files.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is valid only if Source control is configured. Refer to <a class="xref" href="ch07s03s01.html#general_tab" title="General tab of the Project Settings dialog">General tab of the Project Settings dialog</a> for more details.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Use SoundBank Names for Filenames</p>
+	</td><td>
+		<p>Determines whether SoundBank names or IDs are used to:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Name the generated SoundBank files (for example &#8220;Init.bnk&#8221; or &#8220;1355168291.bnk&#8221;)</p></li><li class="listitem"><p>Identify the target when one SoundBank refers to media in another SoundBank.</p></li></ul></div>
+		<p>
+			Depending on the Low-Level I/O implementation used in your game, this option may affect how AK::SoundBank::LoadBank() can be called. For more information, refer to 
+			<a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine__banks__general.html" target="_blank">Using SoundBank Names</a>
+			 in the Wwise SDK documentation (under Sound Engine Integration Walkthrough &gt; Integrate Wwise Elements into Your Game &gt; Integrating Banks &gt; Integration Details - Banks &gt; General Information).
+		</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Allow SoundBanks to Exceed Maximum Size</p>
+	</td><td>
+		<p>Determines whether SoundBanks that exceed the maximum size will be generated or not.</p>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Metadata Files</strong></span></p>
+								</td></tr><tr><td>
+		<p>Generate All Banks Metadata File</p>
+	</td><td>
+		<p>Creates a single file for each specified type (XML and/or JSON), SoundbanksInfo.xml/SoundbanksInfo.json, which lists information for all generated SoundBanks. This file includes information on the SoundBank name, path, language, included Events and files (AMB, WAV, and WEM), as well as the specific details specified for the Metadata Options.</p>
+		<p>This option also creates the following files (XML and/or JSON):</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>PluginInfo</strong></span>: Contains information on all the plug-ins used in the project.</p></li><li class="listitem"><p><span class="bold"><strong>PlatformInfo</strong></span>: Contains platform specific information for the project.</p></li><li class="listitem"><p><span class="bold"><strong>ProjectInfo</strong></span>: Contains global project information, such as the list of platforms and languages.</p></li></ul></div>
+	</td></tr><tr><td>
+		<p>Generate Per Bank Metadata Files</p>
+	</td><td>
+		<p>Creates files for each specified type (XML and/or JSON) and each individually generated SoundBank, listing their information. These files include information on the SoundBank name, path, language, included Events and files (AMB, WAV, and WEM), as well as the specific details specified for the Metadata Options.</p>
+		<p>This option also creates the following files (XML and/or JSON):</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>PluginInfo</strong></span>: Contains information on all the plug-ins used in the project.</p></li><li class="listitem"><p><span class="bold"><strong>PlatformInfo</strong></span>: Contains platform specific information for the project.</p></li><li class="listitem"><p><span class="bold"><strong>ProjectInfo</strong></span>: Contains global project information, such as the list of platforms and languages.</p></li></ul></div>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Files Types</strong></span></p>
+								</td></tr><tr><td>
+		<p>Generate XML Metadata</p>
+	</td><td>
+		<p>If either of the Generate Metadata File options are enabled, then this specifies the creation of an XML version. This option is disabled if neither of the Generate Metadata File options are enabled.</p>
+	</td></tr><tr><td>
+		<p>Generate JSON Metadata</p>
+	</td><td>
+		<p>If either of the Generate Metadata File options are enabled, then this specifies the creation of a JSON version. This option is disabled if neither of the Generate Metadata File options are enabled.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Include in Metadata</strong></span></p>
+	</td></tr><tr><td>
+		<p>Object GUID</p>
+	</td><td>
+		<p>Adds globally unique identifiers to referenced objects.</p>
+	</td></tr><tr><td>
+		<p>Object Path</p>
+	</td><td>
+		<p>Adds object paths to referenced objects.</p>
+	</td></tr><tr><td>
+		<p>Object Color</p>
+	</td><td>
+		<p>Adds the color index to referenced objects. To determine the RGB values, consult the theme color definitions in <code class="code">Authoring\Data\Themes\dark\main.json</code>, and locate the <code class="code">ObjectColor_PaletteColor</code> entries.</p>
+	</td></tr><tr><td>
+		<p>Max Attenuation</p>
+	</td><td>
+		<p>
+			Determines whether maximum attenuation information&#8212;see the Max distance property in the 
+			<a class="link" href="ch61s05s02.html" title="Attenuation Editor">Attenuation Editor</a>
+			&#8212;is included in the metadata files for each Event. Only Play and Post Event Actions can have a non-zero value.
+		</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Estimated duration</p>
+	</td><td>
+		<p>Attempts to determine the expected duration of each Event in a SoundBank. For each event, a DurationType, MinDuration, and MaxDurations attribute will be included in the soundbanksinfo.xml file. The DurationType may be one of: &#8220;OneShot&#8221;, &#8220;Infinite&#8221;, &#8220;Mixed&#8221; or &#8220;Unknown&#8221;. &#8220;OneShot&#8221; indicates a non-looping sound; &#8220;Infinite&#8221;, a looping sound; &#8220;Mixed&#8221;, a sound which may or may not loop infinitely (possibly based on random chance or a Switch), and &#8220;Unknown&#8221; indicates that Wwise was not able to determine the duration. The MinDuration and MaxDuration attributes attempt to place a lower and upper bound on the duration of an event. Note that these bounds are only an estimate and may or may not be accurate depending on runtime conditions.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Root Output Path</p>
+	</td><td>
+		<p>The folder where global, platform agnostic generated files are saved. These file include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Header (.h) file.</p></li><li class="listitem"><p>ProjectInfo (.json, .xml) metadata file.</p></li></ul></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_dots.png"></div>
+	</td><td>
+		<p>Opens Windows Explorer or Mac Finder to allow you to change the default location where the SoundBank header file will be saved.</p>
+	</td></tr><tr><td>
+		<p>Generate header file</p>
+	</td><td>
+		<p>Creates a header file that maps names to IDs. The header file maps Events, States, Switches, and Game Parameters.</p>
+		<p>The header file is saved in the header file path under the name &#8220;Wwise_IDs.h&#8221;.</p>
+		<p>If your programmers prefer to work with IDs in the code, you must generate the header file.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Generate Bank Content TXT Files</p>
+	</td><td>
+		<p>Creates files that list the contents of each SoundBank. The content files include information on Events, busses, States, and Switches, as well as a complete list of streamed and in-memory media files.</p>
+		<p>The associated list specifies the text file type for SoundBank content files.</p>                
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>SoundBank Paths</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform associated with a specific path or location.</p>
+	</td></tr><tr><td>
+		<p>SoundBank Folder</p>
+	</td><td>
+		<p>The path or specific folder where the SoundBanks will be saved.</p>
+		<p>The path or location may be different depending on whether you are using the project location or a custom location for the current user.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Browse)</p>
+	</td><td>
+		<p>Opens the Browse For Folder dialog which allows you to specify a new folder where the SoundBanks for each platform will be saved.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Pre-Generation Step</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform on which the custom step will be performed, such as Windows, Mac, iOS, and PlayStation 4.</p>
+		<p>The Global opening step is a non-platform specific step that is performed before any of the other steps.</p>
+	</td></tr><tr><td>
+		<p>Description</p>
+	</td><td>
+		<p>Specific information that describes the command line.</p>
+		<p>Click the description and then Press F2 to edit the description directly in the table.</p>
+	</td></tr><tr><td>
+		<p>Command Line</p>
+	</td><td>
+		<p>A form of command line shell that allows you to write commands that will perform custom jobs post SoundBank generation. The default command line copies the streamed files to the location where the SoundBanks are saved.</p>
+		<p>Click the command and then press F2 to edit the command line directly in the table. If you have multiple lines in your command, you will have to open the Post-Generation Step Editor to edit the additional command lines.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Browse)</p>
+	</td><td>
+		<p>Opens the Browse For Folder dialog which allows you to specify a new folder where the SoundBanks for each platform will be saved.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Post-Generation Step</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform on which the custom step will be performed, such as Windows, Mac, iOS, and PlayStation 4.</p>
+		<p>The Global opening step is a non-platform specific step that is performed before any of the other steps.</p>
+	</td></tr><tr><td>
+		<p>Description</p>
+	</td><td>
+		<p>Specific information that describes the command line.</p>
+		<p>Click the description and then Press F2 to edit the description directly in the table.</p>
+	</td></tr><tr><td>
+		<p>Command Line</p>
+	</td><td>
+		<p>A form of command line shell that allows you to write commands that will perform custom jobs post SoundBank generation. The default command line copies the streamed files to the location where the SoundBanks are saved.</p>
+		<p>Click the command and then press F2 to edit the command line directly in the table. If you have multiple lines in your command, you will have to open the Post-Generation Step Editor to edit the additional command lines.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Browse)</p>
+	</td><td>
+		<p>Opens the Browse For Folder dialog which allows you to specify a new folder where the SoundBanks for each platform will be saved.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+	</td><td>
+		<p>Saves the project settings and closes the dialog.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+	</td><td>
+		<p>Closes the Project Settings dialog without saving the settings.</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s03.html#defining_soundbank_project_settings" title="Defining SoundBank project settings">Defining SoundBank project settings</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s03.html#specifying_location_for_saved_soundbanks" title="Specifying a location for your saved SoundBank">Specifying a location for your saved SoundBank</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s03.html#defining_steps_to_be_performed_pre_post_soundbank_generation" title="Defining steps to be performed pre/post SoundBank generation">Defining steps to be performed pre/post SoundBank generation</a></p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="pre_generation_post_generation_step_editor"></a>Pre-Generation/Post-Generation Step editor</h4></div></div></div><p>The Pre-Generation/Post-Generation Step Editor allows you to build and edit
+					global opening and closing command lines as well as command lines per platform.
+					These command lines allow you to perform custom jobs either right before or
+					right after the generation of your SoundBanks. For example, you can create a
+					pre-generation step command line that checks out specific files from your source
+					control system or you can create a post-generation command line that groups your
+					SoundBanks into packages using the File Packager. You can load existing command
+					lines that are provided with Wwise, or you can save your command lines to file
+					so that you can use them across projects.</p><p> Since the same editor is used to define pre and post generation steps for all
+					platforms, the following information is clearly displayed in the title bar: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Whether you are creating a pre or post-generation step.</p></li><li class="listitem"><p>The platform for which you are creating the command line.</p></li><li class="listitem"><p>Whether the command line is a project or user setting.</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Description</p>
+								</td><td>
+									<p>A name or other information that describes the type of
+										commands that will be performed.</p>
+								</td></tr><tr><td>
+									<p>Commands</p>
+								</td><td>
+									<p>A form of command line shell where you can build the
+										global and platform-specific command line(s).</p>
+									<p>You can perform several different jobs pre or post
+										SoundBank generation by creating multiple global and
+										platform-specific command lines.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Macros</strong></span></p>
+								</td></tr><tr><td>
+									<p>Built-in Macros</p>
+								</td><td>
+									<p>A list of Wwise variables that are available for writing
+										custom command lines.</p>
+									<p>For a description of each of these variables, refer to
+											<a class="xref" href="ch41s04.html#defining_custom_user_steps_to_be_performed_pre_post_soundbank_generation" title="Overriding the project pre-generation and post-generation steps">Overriding the project pre-generation and post-generation steps</a>.</p>
+								</td></tr><tr><td>
+									<p>Environment Variables</p>
+								</td><td>
+									<p>A list of Windows environment variables that can be used
+										to write custom command lines.</p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the macro or environment variable.</p>
+								</td></tr><tr><td>
+									<p>Current Value</p>
+								</td><td>
+									<p>The current value or setting of the corresponding macro or
+										environment variable. For example, if the <span class="bold"><strong>Use SoundBank names</strong></span> option is
+										selected in the <span class="bold"><strong>SoundBank
+											Settings</strong></span> group, the current value for the
+										macro <code class="code">$(UseSoundBankNames)</code> would be set to
+											<code class="code">true</code>.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_insert.png"></div>
+								</td><td>
+									<p>Adds the selected macro or environment variable to the
+										command line.</p>
+									<p>The variable will either be added at the position of the
+										cursor or will replace the selected text in the command
+										line.</p>
+									<p>As an alternative to clicking Insert, you can simply
+										double-click a variable in the list to add it to the command
+										line.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_load_dots.png"></div>
+								</td><td>
+									<p>Opens the Windows Open File dialog where you can load a
+										previously saved or factory command line. When you click the
+										Load button, you can choose from the following
+										options:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>From Factory
+												Folder</strong></span> - Opens the dialog to the folder
+												where the factory command lines are saved.</p></li><li class="listitem"><p><span class="bold"><strong>From Last
+												Location</strong></span> - Opens the dialog to the
+												folder from which you last loaded a command
+												line.</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_save_as_dots.png"></div>
+								</td><td>
+									<p>Saves the command line data as a .wcmdline file so that
+										you can use the command lines you create at a later time,
+										within the same project or across projects.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Saves the command line and closes the dialog.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the Pre-Generation/Post-Generation Editor without
+										saving the command line.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch41s04.html#defining_custom_user_steps_to_be_performed_pre_post_soundbank_generation" title="Overriding the project pre-generation and post-generation steps">Overriding the project pre-generation and post-generation steps</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s03.html#defining_steps_to_be_performed_pre_post_soundbank_generation" title="Defining steps to be performed pre/post SoundBank generation">Defining steps to be performed pre/post SoundBank generation</a></p></li></ul></div></div></div><HR></body></html>

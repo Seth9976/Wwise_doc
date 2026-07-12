@@ -1,0 +1,227 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBanks Settings - SoundBanks Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59s09s01.html" title="SoundBanks Settings"><link rel="prev" href="ch59s09s01.html" title="SoundBanks Settings"><link rel="next" href="ch59s09s01s02.html" title="SoundBanks Settings - External Sources Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch59s09.html">SoundBank Manager</a></span> &gt; <span class="breadcrumb-link"><a href="ch59s09s01.html">SoundBanks Settings</a></span> &gt; <span class="breadcrumb-node">SoundBanks Settings - SoundBanks Tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="soundbank_settings_soundbanks_tab"></a>SoundBanks Settings - SoundBanks Tab</h4></div></div></div><p>The SoundBanks tab of the SoundBanks Settings dialog is where you define custom settings for your own personal SoundBanks. For example, you can specify whether to generate content and header files with your SoundBanks, whether SoundBank names can be used, and the location where your SoundBanks will be saved. Within this dialog, you can also specify pre-defined or custom steps that will be performed before and/or after the SoundBanks are generated. These user settings override the SoundBank project settings which are defined in the Project Settings dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                  <p>Override Project SoundBank Settings</p>
+                </td><td>
+                  <p>Overrides the project SoundBank settings, which allows you to create your own custom settings for your SoundBanks.</p>
+                </td></tr><tr><td>
+		<p>Enable Auto-Defined SoundBanks</p>
+	</td><td>
+		<p>Configures whether Wwise automatically defines a SoundBank for individual objects. When set, Wwise might automatically define SoundBanks for some objects. See <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for details.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>SoundBanks automatically defined by Wwise for Events only include the Event and referenced Structures, and explicitly exclude media.
+				Using such a SoundBank requires extra code within the game code. Refer to <a class="xref" href="ch41s01.html" title="Understanding how SoundBanks are loaded in a game">Understanding how SoundBanks are loaded in a game</a> for more details.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Copy Loose/Streamed Media</p>
+	</td><td>
+		<p>Configures whether Wwise automatically copies media to the output folder during SoundBank generation. When enabled, Wwise:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> Copies media files required by the generated SoundBanks from the Cache folder to the output folder. The files are copied to the folder &lt;output-folder-name&gt;/Media. </p></li><li class="listitem"><p>Removes unnecessary files from the Media folder if <span class="bold"><strong>Remove Unused
+						Generated Files</strong></span> is enabled.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option replaces CopyStreamedFiles.exe. Previously, the copying of media files was done via a post-build step using CopyStreamedFiles.exe. The application has been removed.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Create Sub-Folders for Generated Files</p>
+	</td><td>
+		<p>Configures whether sub-folders are created in output folders. When enabled, Wwise creates sub-folders for:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Copied media files. Refer to <a class="xref" href="ch41s07.html" title="Managing SoundBank media">Managing SoundBank media</a> for details. </p></li><li class="listitem"><p>Automatically defined SoundBanks. Refer to <a class="xref" href="ch41s02s06.html" title="Auto-defined SoundBanks">Auto-defined SoundBanks</a> for details. </p></li></ul></div>
+		<p>Files are placed in sub-folders using the ID of the associated item. The first two decimal digits of the ID are determined as follows:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>For media files, the media's ID is used for the file name.</p></li><li class="listitem"><p>For SoundBank files, the ID can be found in the associated metadata file, &lt;soundbank-name&gt;.(json|xml).</p></li></ul></div>
+		<p>Refer to <a class="xref" href="ch41s06.html" title="SoundBank output folder layout">SoundBank output folder layout</a> for more details.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Consider enabling this option if your project's output folder will be under source control. Some source control systems impose a fixed limit on the number of files per folder. This option evenly distributes the files amongst sub-folders.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Remove Unused Generated Files</p>
+	</td><td>
+		<p>If selected, unused generated files are removed from the output folder during SoundBank generation. Files removed include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>SoundBank (.bnk) files.</p></li><li class="listitem"><p>Metadata files (.json, .xml, .txt). A file with this extension is removed only if its name is known (e.g. SoundBanksInfo.json) or the associated SoundBank (.bnk) file is also present.</p></li><li class="listitem"><p>Media (.wem) files.</p></li></ul></div>
+		<p>If selected, empty folders are also removed. Folders removed include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Auto-Defined SoundBank folders: Event and Bus.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Consider selecting this option if your project's output folder will be under source control. Removed files will also be removed from source control.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Use Source Control for Generated Files</p>
+	</td><td>
+		<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If this option is disabled, the status of generated files is not updated even if
+				the files are under source control.</p></td></tr></table></div>
+		<p>If selected, source control status is updated with changes (add, delete, or edit) to
+			generated files during SoundBank generation. Files updated include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>SoundBank (.bnk) files.</p></li><li class="listitem"><p>Metadata files (.json, .xml, .txt). A file with this extension is removed only if its name is known (e.g. SoundBanksInfo.json) or the associated SoundBank (.bnk) file is also present.</p></li><li class="listitem"><p>Media (.wem) files.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is valid only if Source control is configured. Refer to <a class="xref" href="ch07s03s01.html#general_tab" title="General tab of the Project Settings dialog">General tab of the Project Settings dialog</a> for more details.</p></td></tr></table></div>                
+	</td></tr><tr><td>
+		<p>Use SoundBank Names for Filenames</p>
+	</td><td>
+		<p>Determines whether SoundBank names or IDs are used to:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Name the generated SoundBank files (for example &#8220;Init.bnk&#8221; or &#8220;1355168291.bnk&#8221;)</p></li><li class="listitem"><p>Identify the target when one SoundBank refers to media in another SoundBank.</p></li></ul></div>
+		<p>
+			Depending on the Low-Level I/O implementation used in your game, this option may affect how AK::SoundBank::LoadBank() can be called. For more information, refer to 
+			<a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine__banks__general.html" target="_blank">Using SoundBank Names</a>
+			 in the Wwise SDK documentation (under Sound Engine Integration Walkthrough &gt; Integrate Wwise Elements into Your Game &gt; Integrating Banks &gt; Integration Details - Banks &gt; General Information).
+		</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Allow SoundBanks to Exceed Maximum Size</p>
+	</td><td>
+		<p>Determines whether SoundBanks that exceed the maximum size will be generated or not.</p>
+	</td></tr><tr><td>
+		<p>Generate All Banks Metadata File</p>
+	</td><td>
+		<p>Creates a single file for each specified type (XML and/or JSON), SoundbanksInfo.xml/SoundbanksInfo.json, which lists information for all generated SoundBanks. This file includes information on the SoundBank name, path, language, included Events and files (AMB, WAV, and WEM), as well as the specific details specified for the Metadata Options.</p>
+		<p>This option also creates the following files (XML and/or JSON):</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>PluginInfo</strong></span>: Contains information on all the plug-ins used in the project.</p></li><li class="listitem"><p><span class="bold"><strong>PlatformInfo</strong></span>: Contains platform specific information for the project.</p></li><li class="listitem"><p><span class="bold"><strong>ProjectInfo</strong></span>: Contains global project information, such as the list of platforms and languages.</p></li></ul></div>
+	</td></tr><tr><td>
+		<p>Generate Per Bank Metadata Files</p>
+	</td><td>
+		<p>Creates files for each specified type (XML and/or JSON) and each individually generated SoundBank, listing their information. These files include information on the SoundBank name, path, language, included Events and files (AMB, WAV, and WEM), as well as the specific details specified for the Metadata Options.</p>
+		<p>This option also creates the following files (XML and/or JSON):</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>PluginInfo</strong></span>: Contains information on all the plug-ins used in the project.</p></li><li class="listitem"><p><span class="bold"><strong>PlatformInfo</strong></span>: Contains platform specific information for the project.</p></li><li class="listitem"><p><span class="bold"><strong>ProjectInfo</strong></span>: Contains global project information, such as the list of platforms and languages.</p></li></ul></div>
+	</td></tr><tr><td>
+		<p>Generate XML Metadata</p>
+	</td><td>
+		<p>If either of the Generate Metadata File options are enabled, then this specifies the creation of an XML version. This option is disabled if neither of the Generate Metadata File options are enabled.</p>
+	</td></tr><tr><td>
+		<p>Generate JSON Metadata</p>
+	</td><td>
+		<p>If either of the Generate Metadata File options are enabled, then this specifies the creation of a JSON version. This option is disabled if neither of the Generate Metadata File options are enabled.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Include in Metadata</strong></span></p>
+	</td></tr><tr><td>
+		<p>Object GUID</p>
+	</td><td>
+		<p>Adds globally unique identifiers to referenced objects.</p>
+	</td></tr><tr><td>
+		<p>Object Path</p>
+	</td><td>
+		<p>Adds object paths to referenced objects.</p>
+	</td></tr><tr><td>
+		<p>Object Color</p>
+	</td><td>
+		<p>Adds the color index to referenced objects. To determine the RGB values, consult the theme color definitions in <code class="code">Authoring\Data\Themes\dark\main.json</code>, and locate the <code class="code">ObjectColor_PaletteColor</code> entries.</p>
+	</td></tr><tr><td>
+		<p>Max Attenuation</p>
+	</td><td>
+		<p>
+			Determines whether maximum attenuation information&#8212;see the Max distance property in the 
+			<a class="link" href="ch61s05s02.html" title="Attenuation Editor">Attenuation Editor</a>
+			&#8212;is included in the metadata files for each Event. Only Play and Post Event Actions can have a non-zero value.
+		</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Estimated duration</p>
+	</td><td>
+		<p>Attempts to determine the expected duration of each Event in a SoundBank. For each event, a DurationType, MinDuration, and MaxDurations attribute will be included in the soundbanksinfo.xml file. The DurationType may be one of: &#8220;OneShot&#8221;, &#8220;Infinite&#8221;, &#8220;Mixed&#8221; or &#8220;Unknown&#8221;. &#8220;OneShot&#8221; indicates a non-looping sound; &#8220;Infinite&#8221;, a looping sound; &#8220;Mixed&#8221;, a sound which may or may not loop infinitely (possibly based on random chance or a Switch), and &#8220;Unknown&#8221; indicates that Wwise was not able to determine the duration. The MinDuration and MaxDuration attributes attempt to place a lower and upper bound on the duration of an event. Note that these bounds are only an estimate and may or may not be accurate depending on runtime conditions.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Root Output Path</p>
+	</td><td>
+		<p>The folder where global, platform agnostic generated files are saved. These file include:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Header (.h) file.</p></li><li class="listitem"><p>ProjectInfo (.json, .xml) metadata file.</p></li></ul></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_dots.png"></div>
+	</td><td>
+		<p>Opens Windows Explorer or Mac Finder to allow you to change the default location where the SoundBank header file will be saved.</p>
+	</td></tr><tr><td>
+		<p>Generate header file</p>
+	</td><td>
+		<p>Creates a header file that maps names to IDs. The header file maps Events, States, Switches, and Game Parameters.</p>
+		<p>The header file is saved in the header file path under the name &#8220;Wwise_IDs.h&#8221;.</p>
+		<p>If your programmers prefer to work with IDs in the code, you must generate the header file.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Generate Bank Content TXT Files</p>
+	</td><td>
+		<p>Creates files that list the contents of each SoundBank. The content files include information on Events, busses, States, and Switches, as well as a complete list of streamed and in-memory media files.</p>
+		<p>The associated list specifies the text file type for SoundBank content files.</p>                
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>SoundBank Paths</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform associated with a specific path or location.</p>
+	</td></tr><tr><td>
+		<p>SoundBank Folder</p>
+	</td><td>
+		<p>The path or specific folder where the SoundBanks will be saved.</p>
+		<p>The path or location may be different depending on whether you are using the project location or a custom location for the current user.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Browse)</p>
+	</td><td>
+		<p>Opens the Browse For Folder dialog which allows you to specify a new folder where the SoundBanks for each platform will be saved.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Pre-Generation Step</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform on which the custom step will be performed, such as Windows, Mac, iOS, and PlayStation 4.</p>
+		<p>The Global opening step is a non-platform specific step that is performed before any of the other steps.</p>
+	</td></tr><tr><td>
+		<p>Description</p>
+	</td><td>
+		<p>Specific information that describes the command line.</p>
+		<p>Click the description and then Press F2 to edit the description directly in the table.</p>
+	</td></tr><tr><td>
+		<p>Command Line</p>
+	</td><td>
+		<p>A form of command line shell that allows you to write commands that will perform custom jobs post SoundBank generation. The default command line copies the streamed files to the location where the SoundBanks are saved.</p>
+		<p>Click the command and then press F2 to edit the command line directly in the table. If you have multiple lines in your command, you will have to open the Post-Generation Step Editor to edit the additional command lines.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Edit)</p>
+	</td><td>
+		<p>Opens the Pre-Generation Step Editor where you can build and edit a command line that will perform custom jobs. For example, you could write a command line that checks out specific SoundBank files from your source control system.</p>
+		<p>As an alternative to clicking the <span class="bold"><strong>Edit</strong></span> button, you can simply double-click a row in the table to open command line in the Pre-Generation Step Editor.</p>
+	</td></tr><tr><td colspan="2">
+		<p><span class="bold"><strong>Post-Generation Step</strong></span></p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Platform</p>
+	</td><td>
+		<p>The name of the platform on which the custom step will be performed, such as Windows, Mac, iOS, and PlayStation 4.</p>
+		<p>The Global opening step is a non-platform specific step that is performed before any of the other steps.</p>
+	</td></tr><tr><td>
+		<p>Description</p>
+	</td><td>
+		<p>Specific information that describes the command line.</p>
+		<p>Click the description and then Press F2 to edit the description directly in the table.</p>
+	</td></tr><tr><td>
+		<p>Command Line</p>
+	</td><td>
+		<p>A form of command line shell that allows you to write commands that will perform custom jobs post SoundBank generation. The default command line copies the streamed files to the location where the SoundBanks are saved.</p>
+		<p>Click the command and then press F2 to edit the command line directly in the table. If you have multiple lines in your command, you will have to open the Post-Generation Step Editor to edit the additional command lines.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+		<p>(Edit)</p>
+	</td><td>
+		<p>Opens the Post-Generation Step Editor where you can build and edit a command line that will perform custom jobs. For example, you could write a command line that checks out specific SoundBank files from your source control system.</p>
+		<p>As an alternative to clicking the <span class="bold"><strong>Edit</strong></span> button, you can simply double-click a row in the table to open command line in the Post-Generation Step Editor.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+	</td><td>
+		<p>Saves the project settings and closes the dialog.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+	</td><td>
+		<p>Closes the Project Settings dialog without saving the settings.</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch41s04.html" title="Configuring user SoundBank settings">Configuring user SoundBank settings</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch41s04.html#specifying_custom_location_for_saved_soundbanks" title="Overriding project SoundBank paths">Overriding project SoundBank paths</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch41s04.html#defining_custom_user_steps_to_be_performed_pre_post_soundbank_generation" title="Overriding the project pre-generation and post-generation steps">Overriding the project pre-generation and post-generation steps</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch42s02.html" title="Managing file packages in File Packager projects">Managing file packages in File Packager projects</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch42s06.html" title="Using File Packager arguments in the command line">Using File Packager arguments in the command line</a>
+            </p></li></ul></div></div><HR></body></html>

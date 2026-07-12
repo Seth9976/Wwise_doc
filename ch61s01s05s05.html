@@ -1,0 +1,71 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Switch Container tab: sound and motion objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s04.html" title="Sequence Container tab"><link rel="next" href="ch61s01s05s06.html" title="States tab: sound and motion objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">Switch Container tab: sound and motion objects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="switch_container_main"></a>Switch Container tab: sound and motion objects</h4></div></div></div><p>In the Switch Container tab you can assign the objects within a Switch Container to a
+					particular Switch or State. See <a class="xref" href="ch22s03.html#adding_and_removing_objects_from_switch_state" title="Adding and removing objects from Switches and States">Adding and removing objects from Switches and States</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+									<p>Switch Container</p>
+								</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_more_options_off.png"></div>
+									<p>(More Options)</p>
+								</td><td>
+									<p>Opens the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Clear All</strong></span>:
+												Removes all associations from the list.</p></li><li class="listitem"><p><span class="bold"><strong>Automatically Assign
+												with Best Match</strong></span>: Assigns objects to
+												matching groups.</p></li><li class="listitem"><p><span class="bold"><strong>Expand All</strong></span>:
+												Expands all groups in the Primary Editor.</p></li><li class="listitem"><p><span class="bold"><strong>Collapse All</strong></span>:
+												Collapses  all groups in the Primary
+												Editor.</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_delete_icon.png"></div>
+									<p>(Remove Selected Association(s))</p>
+								</td><td>Click Remove Selected Association(s) to remove the selected associations from the
+									list.</td></tr><tr><td>
+									
+									<p>Assigned Objects</p>
+								</td><td>
+									<p>The list of objects within the Switch Container that have
+										been assigned to a particular Switch or State. By assigning
+										objects, you define which objects will be played for each
+										Switch or state. If several objects are assigned to a
+										Switch, they will all be played back simultaneously at
+										runtime.</p>
+									<p>Click <span class="inlinemediaobject"><img src="Images/btn_plus.png"></span> to add objects to a group.</p>
+								</td></tr><tr><td>
+									
+									<p>Waveform</p>
+								</td><td>
+									<p>The waveform of the Sound SFX or Sound Voice.</p>
+								</td></tr><tr><td>
+		<p>First Occurrence Only</p>
+	</td><td>
+		<p>Determines whether an object will play each time the Switch Container is triggered by the game engine, or just when a Switch is changed.</p>
+		<p>If the First Occurrence Only option is enabled, the object will only play the first time after the Switch is changed. Subsequent triggers of the same Switch Container will not play the object. If the First Occurrence Only option is disabled, the object will play each time the Switch Container is triggered by the game engine.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Continue to play on Switch change</p>
+	</td><td>
+		<p>Determines whether a music object that is in more than one Switch will continue to play when a new Switch is triggered.</p>
+		<p>If this option is selected and the music object is in both Switches, it will continue playing as if no Switch change had occurred. If a change in Switch occurs and this option is unselected, the music object will stop playing at the next sync point and will start again from the beginning.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Fade-in Time</p>
+	</td><td>
+		<p>The time used to fade in the object when a change in Switch occurs.</p>
+		<p>This option is only available when the Switch behavior is set to Continuous.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 60</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Fade-out Time</p>
+	</td><td>
+		<p>The time used to fade out the object when a change in Switch occurs.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 60</p>
+		<p>Units: s </p>
+	</td></tr></tbody></table></div></div><HR></body></html>

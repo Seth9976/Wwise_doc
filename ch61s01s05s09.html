@@ -1,0 +1,76 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Conversion category: Containers hierarchy objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s08.html" title="Effects tab: Containers hierarchy objects"><link rel="next" href="ch61s01s05s10.html" title="Positioning category: Containers hierarchy objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">Conversion category: Containers hierarchy objects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="common_properties_source_settings_tab"></a>Conversion category: Containers hierarchy objects</h4></div></div></div><p>The properties in the Conversion category allow you, among other things, to apply Conversion
+					Setting ShareSets to an object. When you apply Conversion Settings to an
+					object, you must decide whether the Conversion Settings will be applied using a
+					ShareSet or a custom instance. At any point, you can click the Edit button to
+					edit the Conversion Settings.</p><p>The Conversion category also allows you to enable loudness normalization to adjust
+					the volume.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you apply a Conversion Settings ShareSet to a parent object, the
+						settings are automatically applied to all child objects as well. You can,
+						however, override these settings at any level in the hierarchy by selecting
+						the Override parent option and applying a different ShareSet.</p></td></tr></table></div><div class="informaltable"><a name="wwiseobject_sound_conversion"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Conversion</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Conversion Settings</strong></span>
+        </td></tr><tr><td>
+		<p>Override Conversion Settings</p>
+	</td><td>
+		<p>Determines whether the Conversion Settings are inherited from the parent or defined at the current level in the hierarchy.</p>
+		<p>If the object is a top-level object, the Override parent option is not available.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Conversion Settings</p>
+	</td><td>
+		<p>The list of conversion setting instances that can be applied to the object. The name of the selected instance is displayed in the corresponding text box.</p>
+		<p>To remove a conversion setting instance, select the <span class="bold"><strong>None</strong></span> option.</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Loudness Normalization</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the loudness normalization settings are inherited from the parent or defined at the current level in the hierarchy.</p>
+		<p>If the object is a top-level object, the Override parent option is not available.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Enable Loudness Normalization</p>
+	</td><td>
+		<p>Determines if loudness normalization is active.</p>
+		<p>Provides normalization of the sources, by applying an automatic gain calculated from the measured loudness of the source recording.</p>
+		<p>
+			For more information about Loudness Normalization, refer to 
+			<a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness Normalization or Make-up gain to Adjust Volume</a>
+			.
+		</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Loudness Normalization Type</p>
+	</td><td>
+		<p>Defines the loudness measurement type for normalization.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Integrated (default): loosely following the ITU-R BS 1770 standard.</p></li><li class="listitem"><p>Momentary Max: highest loudness value obtained with a very short (100ms) window evaluation.</p></li></ul></div>
+		<p>
+			For more information about Loudness Normalization, refer to 
+			<a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness Normalization or Make-up gain to Adjust Volume</a>
+			.
+		</p>
+		<p>Default value: Integrated</p>
+	</td></tr><tr><td>
+		<p>Loudness Normalization Target</p>
+	</td><td>
+		<p>Determines the target loudness level for normalization, in LUFS.</p>
+		<p>
+			For more information about Loudness Normalization, refer to 
+			<a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness Normalization or Make-up gain to Adjust Volume</a>
+			.
+		</p>
+		<p>Default value: -23</p>
+		<p>Range: -96 to 0</p>
+		<p>Units: dB</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch35s10s03.html" title="Assigning Conversion Settings ShareSets to Objects">Assigning Conversion Settings ShareSets to Objects</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch35s10s05.html" title="Converting audio files">Converting audio files</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch35s10s01.html" title="Creating audio Conversion Settings ShareSets">Creating audio Conversion Settings ShareSets</a>
+						</p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,114 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Source Editor: Synth One</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch66s13.html" title="Synth One"><link rel="prev" href="ch66s13.html" title="Synth One"><link rel="next" href="ch66s13s02.html" title="Contents Editor: Synth One"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66.html">Source plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66s13.html">Synth One</a></span> &gt; <span class="breadcrumb-node">Source Editor: Synth One</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="source_plug_in_editor_wwise_synth_one_plug_in"></a>Source Editor: Synth One</h3></div></div></div><p>The Source Editor displays all the properties associated with the Synth One plug-in. You can create different audio tones by modifying the various property values.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>To avoid clicks that may occur when transitioning between pure tones created by Synth One and other one-shot, unlooped sounds, use a fade-in and fade-out of 5 ms.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The user-defined name given to this instance of the Synth One plug-in.</p>
+							</td></tr><tr><td>
+								<p>Source Plugin</p>
+							</td><td>
+								<p>The type of source plug-in.</p>
+							</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Any additional information about the Synth One plug-in.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Input</strong></span></p>
+							</td></tr><tr><td>
+		<p>Frequency Mode</p>
+	</td><td>
+		<p>The source of the input frequency used by the oscillators.</p>
+		<p><span class="bold"><strong>Base Frequency</strong></span>: frequency is obtained from the Base Frequency property</p>
+		<p><span class="bold"><strong>MIDI Note</strong></span>: frequency is obtained from received MIDI note events</p>
+		<p>Default value: Base Frequency</p>
+	</td></tr><tr><td>
+								<p>Base Frequency</p>
+							</td><td>
+								<p>Input frequency for oscillators in Hz; enabled only when <span class="bold"><strong>Frequency Mode</strong></span> is set to <span class="bold"><strong>Base Frequency</strong></span>.</p>
+								<p>Default value: 1000</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Oscillators</strong></span></p>
+							</td></tr><tr><td>
+		<p>Waveform</p>
+	</td><td>
+		<p>Type of waveform used to create the oscillator&#8217;s output.</p>
+		<p>The following waveforms are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sine</p></li><li class="listitem"><p>Triangular</p></li><li class="listitem"><p>Square</p></li><li class="listitem"><p>Sawtooth</p></li></ul></div>
+		<p>Default value: Sine</p>
+	</td></tr><tr><td>
+		<p>Transpose</p>
+	</td><td>
+		<p>Transposition of input frequency, in cents.</p>
+		<p>Default value: 0</p>
+		<p>Range: -3600 to 3600</p>
+		<p>Units: Cents</p>
+	</td></tr><tr><td>
+		<p>Level</p>
+	</td><td>
+		<p>Level applied to output of oscillator, in dB. The level is applied before the oscillators are combined.</p>
+		<p>Default value: -6.0</p>
+		<p>Range: -96.0 to 24.0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>PWM</p>
+	</td><td>
+		<p>Pulse Width Modulation, in percent.</p>
+		<p>Note that setting PWM to 50 bypasses all associated computations, improving performance.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0.0 to 100.0</p>
+	</td></tr><tr><td>
+		<p>Invert</p>
+	</td><td>
+		<p>Whether the output of the oscillator is inverted or not.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Noise</strong></span></p>
+							</td></tr><tr><td>
+		<p>Noise Shape</p>
+	</td><td>
+		<p>Type of noise generated.</p>
+		<p>The following noise types are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>White Noise</p></li><li class="listitem"><p>Pink Noise</p></li><li class="listitem"><p>Red Noise</p></li><li class="listitem"><p>Purple Noise</p></li></ul></div>
+		<p>Default value: White Noise</p>
+	</td></tr><tr><td>
+		<p>Noise Level</p>
+	</td><td>
+		<p>Level applied to output of noise module, in dB. The level is applied before the output of the noise module is mixed with the combined oscillator outputs.</p>
+		<p>Note that setting the noise level to -96 bypasses all associated noise computations, improving performance.</p>
+		<p>Default value: -96.0</p>
+		<p>Range: -96.0 to 24.0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Quality</strong></span></p>
+							</td></tr><tr><td>
+		<p>Over-sampling</p>
+	</td><td>
+		<p>If over-sampling is used to generate the oscillator outputs.</p>
+		<p>Enabling this option improves sound quality, but decreases performance.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Output</strong></span></p>
+							</td></tr><tr><td>
+		<p>Operation Mode</p>
+	</td><td>
+		<p>How the oscillator outputs are combined.</p>
+		<p>The following output modes are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Mix: the samples are added</p></li><li class="listitem"><p>Ring: the samples are multiplied</p></li></ul></div>
+		<p>Default value: Mix</p>
+	</td></tr><tr><td>
+		<p>FM Amount</p>
+	</td><td>
+		<p>Frequency modulation. This value determines how much of oscillator 2&#8217;s output is used to generate oscillator 1&#8217;s output.</p>
+		<p>Note that setting FM to 0 bypasses all associated computations, improving performance.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Output Level</p>
+	</td><td>
+		<p>Level applied to the final signal (combined oscillator outputs mixed with noise generator output).</p>
+		<p>Default value: 0.0</p>
+		<p>Range: -96.0 to 24.0</p>
+		<p>Units: dB</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

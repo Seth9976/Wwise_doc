@@ -1,0 +1,140 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Dialogue Event Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s02.html" title="Events Tab"><link rel="prev" href="ch61s02s01s01.html" title="Event Actions List"><link rel="next" href="ch61s02s03.html" title="Contents Editor: Events"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s02.html">Events Tab</a></span> &gt; <span class="breadcrumb-node">Dialogue Event Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="dialogue_event_editor"></a>Dialogue Event Editor</h3></div></div></div><p>The Dialogue Event Editor is where you arrange and combine States or Switches to create the different "paths" that will be used to dynamically determine what word or phrase is chosen to be played in your game. In the editor, you can add and arrange different State Groups or Switch Groups that you want included in the Event. You then select different combinations of States or Switches to define paths, each of which can then be associated with a particular voice or sound object. At runtime, the sound engine matches the triggered States or Switches against the pre-defined paths to determine which sound to play. You can also use weighting values to determine the likelihood that a particular pre-defined path will be selected.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the Dialogue Event.</p>
+							</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Any additional information about the Dialogue Event.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Settings</strong></span></p>
+							</td></tr><tr><td>
+		<p>Probability</p>
+	</td><td>
+		<p>The likelihood that the particular path results in audio being played back.</p>
+		<p>The final playback probability is the combination of the probability of the selected path and the Dialogue Event.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_generic_path.png"></div>
+							</td><td>
+								<p>Creates a completely generic path (*.*) regardless of which States or Switches are selected.</p>
+								<p>This option is only available when a generic path does not already exist.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_path.png"></div>
+							</td><td>
+								<p>Creates a path from the selected states/switches or state/switch values.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_update_path.png"></div>
+							</td><td>
+								<p>Updates the path for a selected audio structure. This option replaces the selected object's path with the States or Switches that are currently selected.</p>
+								<p>This option is only available when the path selected does not already have a corresponding entry in the list, and an object in the list is currently selected.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove_path.png"></div>
+							</td><td>
+								<p>Removes the selected path from the path list.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_unselect_all.png"></div>
+							</td><td>
+								<p>Deselects all states and Switches in the pane.</p>
+							</td></tr><tr><td>
+								<p>(State/Switch pane)</p>
+							</td><td>
+								<p>Displays the State Groups and Switch Groups that have been assigned to the currently selected Dialogue Event. You can select different States or Switches to create a combination of different paths.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_selector.png"></div>
+							</td><td>
+								<p>Opens a menu that allows the user to choose from a list of available Switch Group or State Group objects. The user may also create a new State Group or Switch Group from this menu by selecting "New".</p>
+							</td></tr><tr><td>
+		<p>Mode</p>
+	</td><td>
+		<p>Specifies how the sound engine will determine which path to select when there is more than one pre-defined path that matches the States or Switches triggered at runtime.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Best Match</strong></span> - Selects the path that best matches the States or Switches that are triggered at runtime. If there is not an exact match, the path with the least amount of wildcards (*) will be selected.</p></li><li class="listitem"><p><span class="bold"><strong>Weighted</strong></span> - Randomly selects one of the matching paths based on their respective weighting values.</p></li></ul></div>
+		<p>Several pre-defined paths can match the States or Switches triggered at runtime due to the use of wildcards (*) in fallback paths.</p>
+		<p>Default value: Best Match</p>
+	</td></tr><tr><td>
+								<p>Path Filter</p>
+							</td><td>
+								<p>Displays a list of filters that can be used to filter the path list. The following filters are available:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>All</strong></span> - Displays all the created paths.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Current Selection</strong></span> - Displays only those paths that contain the selected Switches or states.
+										</p></li></ul></div>
+							</td></tr><tr><td>
+								<p>Object Filter</p>
+							</td><td>
+								<p>Displays a list of filters that can be used to filter the path list. The following filters are available:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>All</strong></span> - Displays all the created paths.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Assigned object</strong></span> - Displays only the paths that are associated with an object.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Missing</strong></span> - Displays only the paths that are associated with an object that has been deleted from the project.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>None</strong></span> - Displays only the paths that are not associated with an object.
+										</p></li></ul></div>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>Path</p>
+							</td><td>
+								<p>A specific path that contains one of the many combinations of Switches or States that can exist for a Dialogue Event. These paths are associated with a voice or sound object.</p>
+								<p>A path may contain a wildcard, which will match any corresponding Switch or state. It is represented by an asterisk.</p>
+							</td></tr><tr><td>
+		<p>Probability</p>
+	</td><td>
+		<p>The likelihood that the particular path results in audio being played back.</p>
+		<p>The final playback probability is the combination of the probability of the selected path and the Dialogue Event.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Weight</p>
+	</td><td>
+		<p>The likelihood that the path will be selected in the case where there are other matching paths.</p>
+		<p>When a matching path has a weight of 100, other matching paths with a weight below 100 are automatically discarded. When a matching path has a weight of 0, it is discarded unless all other matching paths also have a weight of 0.</p>
+		<p>This option only applies when the Dialogue Event is in &#8216;Weighted&#8217; mode.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: %</p>
+	</td></tr><tr><td>
+								<p>Object</p>
+							</td><td>
+								<p>The object assigned to the path.</p>
+								<p>The object assigned to the path can be unlinked from the other platforms so that you can assign different objects to the same path on different platforms.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+								<p>(Browse)</p>
+							</td><td>
+								<p>Opens the Project Explorer - Browser where you can select the object that will be assigned to this path.</p>
+								<p>You can also drag and drop object directly from the Project Explorer.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch16s01s01.html" title="Creating Dialogue Events">Creating Dialogue Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s03.html" title="Adding State Groups to Dialogue Events">Adding State Groups to Dialogue Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s04.html#creating_paths_using_states" title="Creating paths using states">Creating paths using states</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s04.html#creating_fallback_paths" title="Creating fallback paths">Creating fallback paths</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s05.html#filtering_path_list" title="Filtering the path list">Filtering the path list</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s06.html" title="Assigning probability and weighting to paths">Assigning probability and weighting to paths</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s01s05.html" title="Assigning objects to paths">Assigning objects to paths</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s02.html#re_ordering_state_groups_in_dialogue_event" title="Re-ordering State Groups in Dialogue Events">Re-ordering State Groups in Dialogue Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s02.html#removing_state_groups_from_dialogue_event" title="Removing State Groups from Dialogue Events">Removing State Groups from Dialogue Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch16s02.html#playing_back_objects_within_dialogue_event" title="Playing back objects within Dialogue Events">Playing back objects within Dialogue Events</a>
+					</p></li></ul></div></div><HR></body></html>

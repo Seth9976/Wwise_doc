@@ -1,0 +1,71 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Generating motion for game controllers</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch26s03s03.html" title="Creating dedicated objects to generate motion"><link rel="prev" href="ch26s03s03.html" title="Creating dedicated objects to generate motion"><link rel="next" href="ch26s04.html" title="Motion tips and best practices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch26.html">Managing motion</a></span> &gt; <span class="breadcrumb-link"><a href="ch26s03.html">Creating motion for your game</a></span> &gt; <span class="breadcrumb-link"><a href="ch26s03s03.html">Creating dedicated objects to generate motion</a></span> &gt; <span class="breadcrumb-node">Generating motion for game controllers</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="generating_motion_for_game_controllers"></a>Generating motion for game controllers</h4></div></div></div><p> Since game controllers are only capable of recreating a limited range of motion effects based on the speed of their motors, the Motion source plug-in 
+						was specifically designed to generate motion for these types of devices.</p><p>In conjunction with <a class="link" href="ch19.html" title="Working with RTPCs">RTPCs</a>, this plug-in allows you to specify motion intensity and duration with up to eight different Drivers. These Drivers can then be applied to different actuators (motors) for different configurations. Using standard Wwise <a class="link" href="ch36s01.html#customizing_object_properties_per_platform" title="Customizing object properties per platform">platform linking</a>, all the Drivers, Actuator Configurations, and individual Actuators can be set differently per platform.</p><div class="mediaobject"><img src="Images/motion_source_editor.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout1.png"></div>
+								</td><td>
+									<p>The Settings tab lists the Drivers and Driver Assignments.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout2.png"></div>
+								</td><td>
+									<p>List of driver assignments and their selected Actuator Configuration.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout3.png"></div>
+								</td><td>
+									<p>Opens a list of predefined Actuator Configurations. Indicates the selected Actuator
+										Configuration is Generic 4-Channel. Applies to only the
+										selected platform.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout4.png"></div>
+								</td><td>
+									<p>Click the expander arrow on the left of this pane to select a drive for which to
+										apply an RTPC curve for the Y axis.</p>
+									<p>Click the expander for the X axis to select a list of game
+										parameters, MIDI, and modulator sublists. Wwise delivers
+										Factory Motion Assets that you can use to define your Motion
+										curves.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout5.png"></div>
+								</td><td>The RTPC curve(s) for the pinned drivers. Right-click the
+									curve to select a type of curve.</td></tr></tbody></table></div><p>To view the properties for basis of your RTPC curve, click the Driver row. </p><div class="mediaobject"><img src="Images/motion_driver_settings.png"></div><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="idm1563190752"></a>Basic setup of the Motion plug-in</h5></div></div></div><p>To ensure the actuators of your motion device (game controller) are working well with Wwise, you can very quickly select an Actuator Configuration and apply a Value offset to the applicable Driver or Drivers. While the Value offset could technically be used for real game scenarios, in practical terms you'll want to <a class="link" href="ch26s03s03s01.html#using_rtpcs_with_wwise_motion_source" title="Using RTPCs with the Motion plug-in">use RTPCs</a> to create and control rumble curves with associated parameters, such as time.</p><div class="orderedlist"><p class="title"><b>To create motion effects using the Motion plug-in's Value offset:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Load a <a class="link" href="ch26s03s03.html#create_motionspecific_objects_list" title="To create motion-specific objects:">motion-specific object</a> into the Property Editor.</p></li><li class="listitem"><p>
+                In the Contents Editor, double-click the listed Motion to load it into the Source Editor.</p></li><li class="listitem"><p>
+                From the Internal Driver Channels group, move a Driver's Value slider to the right so that it is more than 0.
+              </p><p>If this Driver is used, then this will create a constant intensity of motion for the full duration of the object playing. (In other words, until an Event stops it.)</p></li><li class="listitem"><p>
+                In the Driver Assignment group, select <span class="bold"><strong>1 Channel</strong></span> from the Actuator Configuration list.
+              </p><p>Channel 1 becomes the only active actuator.</p></li><li class="listitem"><p>From the Channel 1 list, select the Driver whose value you adjusted.</p><p> If the object plays to a properly set up motion output, there will be a
+								constant motion intensity emanating from a single channel of the
+								controller for the full duration of the object.</p><p>This confirms that your device and Wwise Motion are working well together.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="idm1563166944"></a>Trying different actuator configurations</h5></div></div></div><p>
+                With confirmation of a working setup, you can then proceed along similar lines to try other Actuator Configurations and find the ones that are right for your different <a class="link" href="ch36s01.html#switching_to_different_platform" title="Switching to a different platform">selected platforms</a>. You could, for example, set one Driver's Value offset to 0.1, and another's to 1.0. This would allow you to test and then discern which controller motor corresponds to which named Actuator for your default sink. 
+              </p><p>The platform names given to the Actuator Configurations indicate what is known to work for the Wwise default sink. This does not in any way limit these configurations to only the named platform. In fact, you might want to choose something different for certain platforms. For example, some Android tablets have two actuators and, therefore, could be better served with a 2 Channel configuration instead of our default sink&#8217;s single anonymous channel Android configuration. Having a mismatch in number of channels will not prevent motion; rather, multiple actuators will use the same Driver channels or, if there are too many channels defined, some will be ignored.
+              </p></div><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="using_rtpcs_with_wwise_motion_source"></a>Using RTPCs with the Motion plug-in</h5></div></div></div><p>For most situations, a simple Value offset is not your end goal. Instead, you'll want to define specific curves based on time or the lifespan of game parameters or a predefined MIDI event. <a class="link" href="ch19.html" title="Working with RTPCs">RTPCs</a> give you the power to do just this.</p><div class="orderedlist"><p class="title"><b>To use RTPCs for motion effects using the Motion plug-in:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>
+                Load a <a class="link" href="ch26s03s03.html#create_motionspecific_objects_list" title="To create motion-specific objects:">motion-specific object</a> into the Property Editor.
+              </p></li><li class="listitem"><p>
+                In the Contents Editor, double-click the listed Motion to load it into the Source Editor.
+              </p></li><li class="listitem"><p>In the RTPC tab, click the selector button.</p><p>A list of all the Drivers appears.</p></li><li class="listitem"><p>Select a Driver.</p><p>It appears under the Y Axis column and new selector button appears in the column to its right.</p></li><li class="listitem"><p>Click the new selector button.</p><p>A list of Game Parameters, MIDI, and modulators appears.</p></li><li class="listitem"><p>Select an option. For simplicity, let's assume you choose <span class="bold"><strong>Time</strong></span>.</p><p>A sublist allowing the selection of an existing Time Modulator or the creation of new one appears.</p></li><li class="listitem"><p>Select <span class="bold"><strong>New&#8230;</strong></span>.</p><p>The New Modulator Time dialog appears.</p></li><li class="listitem"><p>
+                Enter a name for the new Time Modulator. Then click <span class="bold"><strong>OK</strong></span>.
+              </p><p>The newly created Time Modulator appears under the X Axis, and its flat curve populates the graph view.</p></li><li class="listitem"><p>
+                Double-click on the graph curve around 0.2 s of the Time Modulator (X) axis.
+              </p><p>A new control point it created.</p></li><li class="listitem"><p>
+                Drag the new control point up to 1.00 on the Driver (Y) axis. 
+              </p><p> If the object plays to a properly set up motion output, there will be a quick
+								rise to full motion intensity emanating from any controller set up
+								to use the Driver you specified; and, much more gradually, it will
+								completely dissipate. </p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="using_states_with_wwise_motion_source"></a>Using States with the Motion plug-in</h5></div></div></div><p>
+              Usually as a complement to the <a class="link" href="ch26s03s03s01.html#using_rtpcs_with_wwise_motion_source" title="Using RTPCs with the Motion plug-in">use of RTPCs</a>, State-specific Value offsets can be defined to augment or reduce the rumble based on the currently active <a class="link" href="ch17.html" title="Working with States">States</a>. 
+            </p><div class="orderedlist"><p class="title"><b>To create motion effects using the Motion plug-in with States:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>
+                  Load a <a class="link" href="ch26s03s03.html#create_motionspecific_objects_list" title="To create motion-specific objects:">motion-specific object</a> into the Property Editor.
+                </p></li><li class="listitem"><p>
+                  In the Contents Editor, double-click the listed Motion to load it into the Source Editor.
+                </p></li><li class="listitem"><p>
+                  Select the States tab.
+                </p></li><li class="listitem"><p>
+                  Click the <span class="bold"><strong>Add State Group</strong></span> selector button to select the desired State Group.
+                </p><p>The State Group with its child States appears in the tab's table along with Driver columns.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>If you do not see the Driver columns, click right-click the table header band and select <span class="bold"><strong>Configure Columns&#8230;</strong></span>. The State Properties dialog will appear, from which you'll be able to select the Driver columns that should appear.</p></td></tr></table></div></li><li class="listitem"><p>
+                  Move a State's Driver Value slider to the right, or left, so that it is not 0.
+                </p><p> If the object plays to a properly set up motion output, the Driver in
+								question is used in the called Actuator, and the State in question
+								is in effect, then the defined motion rumble will be offset by that
+								amount. </p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>These Presets are only available when Motion is installed and the Motion Factory Presets
+							have been added to your project. If the Presets haven't been added, you
+							can add them using the <a class="xref" href="ch07s02.html" title="Import Factory Assets">Import Factory Assets</a> dialog.
+							These presets consist of a variety of Sound SFX objects with a Motion
+							plug-in, predefined to output to a Motion Factory Bus, within the
+							Containers hierarchy.</p></td></tr></table></div></div></div><HR></body></html>

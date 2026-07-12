@@ -1,0 +1,150 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>3D Audio Bed Mixer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67.html" title="Effect plug-ins"><link rel="next" href="ch67s02.html" title="AK Channel Router"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">3D Audio Bed Mixer</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_3daudiobedmixer_plug_in_effect"></a>3D Audio Bed Mixer</h2></div></div></div><p>The 3D Audio Bed Mixer plug-in is built into Wwise. For information on applying it to
+		objects, see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>
+		(See the <a class="xref" href="ch67s01.html#wwise_3daudiobedmixer_properties" title="3D Audio Bed Mixer properties">3D Audio Bed Mixer properties</a> below.)
+	</p><p>The 3D Audio Bed Mixer is a plug-in that can reduce the number of Audio Objects passing
+		through a bus by mixing some of them. This, in turn, reduces the amount of CPU resources
+		consumed by Audio Object processing. The plug-in is typically inserted on an Audio Objects
+		bus and generates three possible outputs: a Main Mix, a Passthrough Mix, and a collection of
+		unmixed Audio Objects that are eligible for promotion to <a class="glossterm" href="go01.html#glossary_system_audio_object"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_system_audio_object" title="System Audio Object">System Audio Objects</a></em></a> at the end of
+		the pipeline.</p><p>The plug-in works by replicating the behavior of the System Audio Device's Audio Object
+		routing mechanism. You can learn more about this mechanism in <a class="xref" href="ch13s03s02.html" title="The role of the System Audio Device">The role of the System Audio Device</a>.</p><p>The 3D Audio Bed Mixer plug-in can only be inserted on a bus; it cannot be inserted on
+		objects in the Containers hierarchy.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_3daudiobedmixer_mainmix"></a>The Main Mix</h3></div></div></div><p>The Main Mix represents a spatialized bed, which would traditionally use a surround or ambisonics channel configuration to build a soundscape of diegetic sounds around the listener. This is a mix suitable for binauralization at the endpoint.</p><p>The 3D Audio Bed Mixer always generates a single Audio Object for the Main Mix. By default, the plug-in consults the Audio Device at the end of the pipeline to determine the Main Mix channel configuration. Alternatively, the channel configuration of the Main Mix can be set in the plug-in properties.</p><p>If the Audio Object representing the Main Mix reaches the Audio Device, it is guaranteed to
+			be mixed into that Audio Device's own Main Mix.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_3daudiobedmixer_passthroughmix"></a>The Passthrough Mix</h3></div></div></div><p>The Passthrough Mix is a flat stereo bed intended to be panned directly to a user's
+			headphones. The Passthrough Mix is specifically intended to bypass any
+			binauralization.</p><p>The 3D Audio Bed Mixer does not always generate an Audio Object for the Passthrough Mix.
+			This depends on the <span class="bold"><strong>Passthrough Mix</strong></span> property and the 3D
+			Audio capabilities of the Audio Device at the end of the pipeline. By default, a
+			Passthrough Mix is only generated if the Audio Device supports the Passthrough
+			Mix.</p><p>If an Audio Object is produced for the Passthrough Mix, and it reaches the Audio Device, it
+			is guaranteed to be mixed into that Audio Device's own Passthrough Mix (if
+			available).</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_3daudiobedmixer_systemaudioobjects"></a>The System-Eligible Audio Objects</h3></div></div></div><p>System-Eligible Audio Objects are Audio Objects that meet all requirements to be promoted to <a class="glossterm" href="go01.html#glossary_system_audio_object"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_system_audio_object" title="System Audio Object">System Audio Objects</a></em></a> by the Audio Device.</p><p>The 3D Audio Bed Mixer might decide to let such System-Eligible Audio Objects through without mixing them into one of the above mixes. This depends on the properties and the <a class="glossterm" href="go01.html#glossary_3daudio"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_3daudio" title="3D audio">3D Audio</a></em></a> capabilities of the Audio Device at the end of the pipeline. By default, the plug-in only outputs System-Eligible Audio Objects if the Audio Device supports them.</p><p>The maximum number of System-Eligible Audio Objects is controlled via the plug-in's <span class="bold"><strong>System-Eligible Audio Object Limit</strong></span> property. Any eligible System Audio Objects beyond this limit are mixed.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The plug-in does not consider the System Audio Object limit of the Audio Device because it cannot guarantee that other System-Eligible Audio Objects will not reach the Audio Device.</p></td></tr></table></div><p>The following diagram provides a high level overview of the plug-in's behavior.</p><div class="mediaobject"><img src="Images/3d_audio_bed_mixer_plugin.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout1.png"></div>
+						</td><td>
+							<p>Voices are routed to a bus.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout2.png"></div>
+						</td><td>
+							<p>A channel-based format comes from a previous mixing bus.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout3.png"></div>
+						</td><td>
+							<p>A stream of Audio Objects comes from a previous bus Processing
+								Audio Objects.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout4.png"></div>
+						</td><td>
+							<p>Inputs to the bus are provided to the plug-in as follows:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If the bus is Mixing, all inputs, including voices,
+											channel-based input, and Audio Objects are mixed
+											together and provided to the plug-in as a single Audio
+											Object.</p></li><li class="listitem"><p>If the bus is Processing Audio Objects, any input that
+											is not already an Audio Object, such as voices, and
+											channel-based input, are transformed into individual
+											Audio Objects. These are then passed on to the plug-in
+											along with any other Audio Objects received by the
+											bus.</p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout5.png"></div>
+						</td><td>
+							<p>The plug-in consults the System Audio Device settings. These settings affect the
+								plug-in&#8217;s behavior as described in the following table.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout6.png"></div>
+						</td><td>
+							<p>Audio Objects received by the bus are checked for System Audio
+								Object eligibility. Audio Objects that do not meet the requirements
+								are redirected to the Main Mix.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout7.png"></div>
+						</td><td>
+							<p>The System-Eligible Audio Object Limit is applied. Audio Objects
+								beyond the limit are redirected to the Main Mix.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout8.png"></div>
+						</td><td>
+							<p>Mono and stereo Audio Objects without 3D spatialization are
+								redirected to the Passthrough Mix.</p>
+						</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_3daudiobedmixer_properties"></a>3D Audio Bed Mixer properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+		<p>Main Mix Configuration</p>
+	</td><td>
+		<p>Channel configuration of the Main Mix produced by the plug-in. When selecting <span class="bold"><strong>Same as Audio Device</strong></span>, the configuration is chosen based on the capabilities of the Audio Device at the end of the bus pipeline. This is the same behavior as if <span class="bold"><strong>Same as Main Mix</strong></span> was chosen as the Bus Configuration for the bus itself.</p>
+		<p>Default value: Same as Audio Device</p>
+	</td></tr><tr><td>
+		<p>Passthrough Mix</p>
+	</td><td>
+		<p>Dictates whether the plug-in should generate an additional Audio Object representing a passthrough (non-spatialized) mix.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>When Audio Device supports it</strong></span>: The plug-in consults the Audio Device at the end of the bus pipeline to determine whether to produce a passthrough mix or not. A passthrough mix will only be produced if the Audio Device supports it.</p></li><li class="listitem"><p><span class="bold"><strong>Always</strong></span>: A passthrough mix will be produced, regardless of Audio Device capabilities.</p></li><li class="listitem"><p><span class="bold"><strong>Never</strong></span>: A passthrough mix will not be produced, regardless of Audio Device capabilities.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> If a passthrough mix is not produced, Audio Objects that would be mixed into the passthrough mix will be mixed to the Main Mix instead.</p></td></tr></table></div>
+		<p>Default value: When Audio Device supports it</p>
+	</td></tr><tr><td>
+		<p>Preserve System-Eligible Audio Objects</p>
+	</td><td>
+		<p>Dictates whether the plug-in should let Audio Objects with 3D spatialization through without mixing them into the Main Mix.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>When Audio Device supports it</strong></span>: The plug-in consults the Audio Device at the end of the bus pipeline to determine whether to mix System-Eligible Audio Objects or let them through. If the Audio Device supports System Audio Objects, they will be preserved, otherwise they will be mixed.</p></li><li class="listitem"><p><span class="bold"><strong>Always</strong></span>: System-Eligible Audio Objects are preserved until the System-Eligible Audio Object Limit is reached, regardless of Audio Device capabilities.</p></li><li class="listitem"><p><span class="bold"><strong>Never</strong></span>: System-Eligible Audio Objects are always mixed into the Main Mix, regardless of Audio Device capabilities.</p></li></ul></div>
+		<p>Default value: When Audio Device supports it</p>
+	</td></tr><tr><td>
+		<p>System-Eligible Audio Object Limit</p>
+	</td><td>
+		<p>Maximum number of eligible System Audio Objects that can be output by the plug-in. Any eligible System Audio Object beyond this limit will be mixed.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This limit is only applicable when System Audio Objects are preserved, as dictated by the Preserve System-Eligible Audio Objects property.</p></td></tr></table></div>
+		<p>Default value: 64</p>
+		<p>Range: 0 to 512</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

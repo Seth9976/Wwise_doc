@@ -1,0 +1,723 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Understanding the visual elements in Wwise</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch04.html" title="Wwise interface basics"><link rel="prev" href="ch04.html" title="Wwise interface basics"><link rel="next" href="ch04s02.html" title="Understanding file length limitations and naming conventions"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt01.html">Getting started</a></span> &gt; <span class="breadcrumb-link"><a href="ch04.html">Wwise interface basics</a></span> &gt; <span class="breadcrumb-node">Understanding the visual elements in Wwise</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="understanding_visual_elements_in_wwise"></a>Understanding the visual elements in Wwise</h2></div></div></div><p>Wwise uses several icons or visual identifiers to help represent different elements in the
+      interface. The following table describes each of the different visual elements used in
+      Wwise.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+              <p>Icon</p>
+            </th><th>
+              <p>Name</p>
+            </th><th>
+              <p>Represents</p>
+            </th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/physical_folder_icon.png"></div>
+            </td><td>
+              <p>Physical Folder</p>
+            </td><td>
+              <p>A folder that represents an actual directory on disk. All Wwise Work Units are
+                found within a Physical Folder.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/folder_icon.png"></div>
+            </td><td>
+              <p>Virtual Folder</p>
+            </td><td>
+              <p>A folder that can be added throughout the Project Explorer to group project
+                elements.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Busses Hierarchy Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/audio_bus_icon.png"></div>
+            </td><td>
+              <p>Audio Bus</p>
+            </td><td>
+              <p>A sound object grouping that allows you to work with different structures within
+                a game. For example, you can group all the environmental sound structures under one
+                Audio Bus and all the player sound structures under another.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/aux_bus_icon.png"></div>
+            </td><td>
+              <p>Auxiliary Bus</p>
+            </td><td>
+              <p>
+                A sub-grouping of sound objects anywhere in the project for adjusting
+                  volume, bus configuration, positioning, and RTPC, as well as applying Effects or
+                  States before routing back to a parent Audio Bus.
+                Ducking, HDR, and voice mix adjustments are not possible in an Auxiliary
+                  Bus. 
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/audio_bus_mix_icon.png"></div>
+              <p>(Audio)</p>
+              <div class="mediaobject"><img src="Images/aux_bus_mix_icon.png"></div>
+              <p>(Auxiliary)</p>
+            </td><td>
+              <p>Mixing</p>
+            </td><td>
+              <p>A processing status that Wwise can apply to both Audio Busses and Auxiliary
+                Busses. The properties of a Mixing bus are passed down to objects routed to the bus
+                and to child busses. Any Effects defined on the bus are processed, and the result is
+                output in a channel-based format.</p>
+              <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>When sounds are routed to a Mixing bus, any Metadata associated with the sound
+                  will be lost or used in the channel-based mix. This Metadata cannot be restored
+                  and will no longer be available for use by any Audio Object Processor or endpoint.</p></td></tr></table></div>
+              <p>Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for further
+                details.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/audio_bus_object_icon.png"></div>
+              <p>(Audio)</p>
+              <div class="mediaobject"><img src="Images/aux_bus_object_icon.png"></div>
+              <p>(Auxiliary)</p>
+            </td><td>
+              <p>Processing Audio Objects</p>
+            </td><td>
+              <p>A processing status that Wwise can apply to both Audio Busses and Auxiliary
+                Busses. All properties of this bus are passed down to objects routed to the bus and
+                to child busses. Any Effects defined on the bus are processed, and the result is
+                output as Audio Objects.</p>
+              <p>Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for further
+                details.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/audio_bus_nonmix_icon.png"></div>
+              <p>(Audio)</p>
+            </td><td>
+              <p>Not Mixing</p>
+            </td><td>
+              <p>A processing status that Wwise can apply to Audio Busses. The properties of a
+                Non-Mixing bus are passed down to objects routed to the bus and to child busses,
+                however, no processing is performed and hence the format of the objects and children
+                is not modified. Any properties authored on a Non-Mixing bus are applied to the
+                routed objects at voice level.</p>
+              <p>Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for further
+                details.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/audio_bus_unresolved_icon.png"></div>
+              <p>(Audio)</p>
+              <div class="mediaobject"><img src="Images/aux_bus_unresolved_icon.png"></div>
+              <p>(Auxiliary)</p>
+            </td><td>
+              <p>Processing</p>
+            </td><td>
+              <p>A processing status that Wwise can apply to both Audio Busses and Auxiliary
+                Busses. The processing status of this bus will be resolved as either Mixing or
+                Processing Audio Objects when the Wwise sound engine connects to the endpoint and
+                receives information concerning the format(s) supported.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When profiling in Wwise, the resolved status will be displayed in the Property
+                  Editor, but not in the Project Explorer.</p></td></tr></table></div>
+              <p>Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for further
+                details.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Containers Hierarchy Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/AudioSource_icon.png"></div>
+            </td><td>
+              <p>Audio source </p>
+            </td><td>
+              <p> A separate abstraction layer between the audio file and the object. It is
+                linked to the audio file imported into your project and is where you define the
+                Conversion Settings (for the active game platforms). </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Plugin_icon.png"></div>
+            </td><td>
+              <p>Source Plug-in</p>
+            </td><td>
+              <p>An audio source that is created by a source plug-in coming from outside of
+                Wwise.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Sound_icon.png"></div>
+            </td><td>
+              <p>Sound SFX</p>
+            </td><td>
+              <p>A sound object containing sound effects.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Voice_icon.png"></div>
+            </td><td>
+              <p>Sound Voice</p>
+            </td><td>
+              <p>A sound object containing voice-over or character dialogue.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/workunit_icon.png"></div>
+            </td><td>
+              <p>Work Unit</p>
+            </td><td>
+              <p>A distinct XML file that allows you to divide up your project into separate
+                segments so that different members of your team can work on different parts of the
+                project concurrently. These XML files can be easily managed by your source control
+                system.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ActorMixer_icon.png"></div>
+            </td><td>
+              <p>Property Container</p>
+            </td><td>
+              <p>A hierarchical structure of one or more sounds, containers, or Property Containers.
+                You can use a Property Container to apply properties to all objects below it.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Layer_container_icon.png"></div>
+            </td><td>
+              <p>Blend Container</p>
+            </td><td>
+              <p>A group of one or more objects and/or containers that are played back
+                simultaneously. The sounds and containers within the Blend Container can be grouped
+                into blend tracks where sound properties are mapped to Game Parameter values using
+                RTPCs. Crossfades can also be applied between the objects within a blend track based
+                on the value of a Game Parameter.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Random_Container_icon.png"></div>
+            </td><td>
+              <p>Random Container</p>
+            </td><td>
+              <p>A group of one or more objects and/or containers that are played back in a
+                random order.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Sequence_Container_icon.png"></div>
+            </td><td>
+              <p>Sequence Container</p>
+            </td><td>
+              <p>A group of one or more objects and/or containers that are played back according
+                to a specific order or playlist.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Switch_Container_icon.png"></div>
+            </td><td>
+              <p>Switch Container</p>
+            </td><td>
+              <p>A group of objects and/or containers that are organized into a series of
+                Switches or States, so that they can be played when the associated Switch or State
+                is called by the game. </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Music_Track_icon.png"></div>
+            </td><td>
+              <p>Music Track</p>
+            </td><td>
+              <p>A music object that contains arrangements of individual music clips that are
+                displayed in waveform so that you can visually align them in a Music Segment.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/random_track_icon.png"></div>
+            </td><td>
+              <p>Music Track - Random Step</p>
+            </td><td>
+              <p>A Music Track that plays back its sub-tracks in random order each time its
+                parent Music Segment is played.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/sequence_track.png"></div>
+            </td><td>
+              <p>Music Track - Sequence Step</p>
+            </td><td>
+              <p>A Music Track that plays back its sub-tracks in sequential order each time its
+                parent Music Segment is played.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/switch_track_icon.png"></div>
+            </td><td>
+              <p>Music Track - Switch</p>
+            </td><td>
+              <p>A type of Music Track that plays back its sub-tracks according to the associated
+                Switches/States of the specified Switch/State Group.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Music_Segment_icon.png"></div>
+            </td><td>
+              <p>Music Segment</p>
+            </td><td>
+              <p>A music object that contains Music Tracks that can be aligned using sync points
+                for musical arrangements in interactive music.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Music_Playlist_Cont_icon.png"></div>
+            </td><td>
+              <p>Music Playlist Container</p>
+            </td><td>
+              <p>A group of one or more segments that are organized in a particular way so that
+                they can be played back in a random order or according to a specific order.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Music_Switch_Cont_icon.png"></div>
+            </td><td>
+              <p>Music Switch Container</p>
+            </td><td>
+              <p>A group of one or more Music Segments and containers that are organized into
+                series of Switches or States, so they can be played when the associated Switch or
+                State is called by the game. </p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Other Project Element Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Event_icon.png"></div>
+            </td><td>
+              <p>Event</p>
+            </td><td>
+              <p>A method to trigger audio or motion in game using an action or series of
+                actions, such as Play, Mute, and Pause, that have been applied to one or more Wwise
+                objects.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Dialogue_Event_icon.png"></div>
+            </td><td>
+              <p>Dialogue Event</p>
+            </td><td>
+              <p>A method to trigger audio, which may or may not be dialogue, or motion in game
+                using a combination of State/Switch Groups and States/Switches arranged into paths
+                that have been assigned to an object in the Wwise Containers hierarchy.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/SoundBank_icon.png"></div>
+            </td><td>
+              <p>SoundBank</p>
+            </td><td>
+              <p>A group of Events, Wwise objects, and media that will be loaded into the game's
+                platform memory at a particular point in a game. </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Switch_Group_icon.png"></div>
+            </td><td>
+              <p>Switch Group</p>
+            </td><td>
+              <p>A collection of related Switches that have been grouped together to help manage
+                the different alternatives that exist for a given element within the game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Switch_icon.png"></div>
+            </td><td>
+              <p>Switch</p>
+            </td><td>
+              <p>An alternative that exists for a particular element within the game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/State_Group_icon.png"></div>
+            </td><td>
+              <p>State Group</p>
+            </td><td>
+              <p>A collection of related states that have been grouped together to help manage
+                the global changes that occur in the game environment.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/State_icon.png"></div>
+            </td><td>
+              <p>State</p>
+            </td><td>
+              <p>A global offset or adjustment to the game audio properties that represent
+                changes in the physical and environmental conditions in the game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Game_Param_icon.png"></div>
+            </td><td>
+              <p>Game Parameter (RTPC)</p>
+            </td><td>
+              <p>A parameter in your game, such as speed and RPMs in a car racing game, that can
+                be mapped to Wwise property values using RTPCs.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/trigger_icon.png"></div>
+            </td><td>
+              <p>Trigger</p>
+            </td><td>
+              <p>A particular action in game that leads to the playback of one short piece of
+                music.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Effect_icon.png"></div>
+            </td><td>
+              <p>Effect ShareSet</p>
+            </td><td>
+              <p>Audio Effect settings that can be used to enhance the audio in your game. These
+                settings have been saved as a ShareSet and can be shared between objects. </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Attenuation_icon.png"></div>
+            </td><td>
+              <p>Attenuation ShareSet</p>
+            </td><td>
+              <p>Attenuation settings related to the volume of a sound based on its distance from
+                the listener. These settings have been saved as a ShareSet and can be shared between
+                objects.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Conversion_Settings_icon.png"></div>
+            </td><td>
+              <p>Conversion Settings ShareSet</p>
+            </td><td>
+              <p>Conversion settings, which include sample rate, audio format, and number of
+                channels, help to define the overall quality of your audio output. These settings
+                have been saved as a ShareSet and can be applied and shared between objects.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Soundcaster_icon.png"></div>
+            </td><td>
+              <p>Soundcaster Session</p>
+            </td><td>
+              <p>A group of sound, music, motion, and Event modules arranged in a particular
+                order that have been saved along with Game Sync settings for the purposes of a
+                simulation.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Mixing_Desk_icon.png"></div>
+            </td><td>
+              <p>Mixing Session</p>
+            </td><td>
+              <p>A group of busses and/or objects, along with their corresponding properties,
+                that have been saved within a type of mixing console for the purposes of fine-tuning
+                the audio mix of your game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Query_icon.png"></div>
+            </td><td>
+              <p>Query</p>
+            </td><td>
+              <p>A specific set of search criteria used to find a particular object or project
+                element.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Property Editor and Effect Editor Splitters</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/PropertySheet_NoSplit.png"></div>
+            </td><td>
+              <p>No split</p>
+            </td><td>
+              <p>The editor displays a single tab of information.</p>
+            </td></tr><tr><td align="center"> <span class="inlinemediaobject"><img src="Images/PropertySheet_ColumnSplit.png"></span> </td><td>
+              <p>Column split</p>
+            </td><td>
+              <p>The editor displays two tabs of information in vertical panels.</p>
+            </td></tr><tr><td align="center"> <span class="inlinemediaobject"><img src="Images/PropertySheet_RowSplit.png"></span> </td><td>
+              <p>Row split</p>
+            </td><td>
+              <p>The editor displays two tabs of information in horizontal panels.</p>
+            </td></tr><tr><td colspan="3"><a name="property_value_indicators"></a>
+              <p><span class="bold"><strong>Property Value Indicators</strong></span></p>
+            </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_icon.png"></div>
+      </td><td>
+        <p>Link</p>
+      </td><td>
+        <p>The property value is linked to the values of other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Unlink_icon.png"></div>
+      </td><td>
+        <p>Unlink</p>
+      </td><td>
+        <p>The property value is not linked to the values of the other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_Half_icon.png"></div>
+      </td><td>
+        <p>Partial Unlink</p>
+      </td><td>
+        <p>The property value for the current platform is linked to the other active platforms, but one or more corresponding values of other platforms are unlinked.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/unlink_icon_multiplevalues.png"></div>
+      </td><td>
+        <p>Link Mixed</p>
+      </td><td>
+        <p>Some of the selected objects have different link statuses. Some may be linked, while others are unlinked or partially unlinked.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_Off.png"></div>
+      </td><td>
+        <p>RTPC Disabled</p>
+      </td><td>
+        <p>This property value is not tied to an in-game parameter value.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_On.png"></div>
+      </td><td>
+        <p>RTPC Enabled</p>
+      </td><td>
+        <p>An in-game parameter value is tied to this property value. This means, for example, that the speed of a car in-game can be tied directly to the pitch property in Wwise. As the speed of the car increases in-game, the pitch in Wwise will increase in real time.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_MultipleValues.png"></div>
+      </td><td>
+        <p>RTPC Mixed</p>
+      </td><td>
+        <p>
+          In-game parameter values are tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Enable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Enabled</p>
+      </td><td>
+        <p>A property value to which a Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Disable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Disabled</p>
+      </td><td>
+        <p>A property value to which no Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Randomizer_Mixed.png"></div>
+      </td><td>
+        <p>Randomizer Mixed</p>
+      </td><td>
+        <p>A Randomizer effect applies to the property value of one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+        
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Off.png"></div>
+      </td><td>
+        <p>State Disabled</p>
+      </td><td>
+        <p>This property value is not tied to a State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_On.png"></div>
+      </td><td>
+        <p>State Enabled</p>
+      </td><td>
+        <p>A State Group is tied to this property value. This means, that the property in question, such as the Volume, may change according to the applied State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Mixed.png"></div>
+      </td><td>
+        <p>State Mixed</p>
+      </td><td>
+        <p>A State Group is tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td colspan="3">
+              <p><span class="bold"><strong>Property Shading</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Shading_Unsupported.png"></div>
+            </td><td>
+              <p>"Unsupported feature"</p>
+            </td><td>
+              <p>If a property is shaded in blue, it means that the feature is not supported on
+                the current platform.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Preset Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/icn_preset_save.png"></div>
+            </td><td>
+              <p>Save Preset</p>
+            </td><td>
+              <p>A command to save the current state of all values within the current view to a
+                Preset.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/icn_preset_open.png"></div>
+            </td><td>
+              <p>Load Preset</p>
+            </td><td>
+              <p>A command to load a previously saved Preset.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Selected Controls</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/focus_border.png"></div>
+            </td><td>
+              <p>"Selected Control"</p>
+            </td><td>
+              <p>A focus border (white when using the Wwise Classic theme) that appears around
+                selected controls.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>View Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/icn_help.png"></div>
+            </td><td>
+              <p>Help</p>
+            </td><td>
+              <p>A command to display the reference topic related to that particular view,
+                window, or dialog. The reference topic could be either online or offline, depending
+                on your settings in the Help menu. See <a class="xref" href="ch05s04.html#setting_documentation_preferences" title="Setting the Wwise documentation preferences">Setting the Wwise documentation preferences</a>.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_display_options_dots.png"></div>
+            </td><td>
+              <p>View Settings</p>
+            </td><td>
+              <p>A command to display a dialog with a series of settings that can be used to
+                define the view.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_selection_channel_2.png"></div>
+            </td><td>
+              <p>Selection Channel</p>
+            </td><td>
+              <p>A command to change the view to a particular Selection Channel (1-4).</p>
+              <p>Refer to <a class="xref" href="ch05s01s01.html" title="Understanding Selection Channels and Meter Instances">Understanding Selection Channels and Meter Instances</a> for details.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_letter_x.png"></div>
+            </td><td>
+              <p>Close View</p>
+            </td><td>
+              <p>A command to close the floating view.</p>
+            </td></tr><tr><td colspan="3">
+              <p><span class="bold"><strong>Voice Inspector Icons</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Project_nor.png"></div>
+            </td><td>
+              <p>Project Value</p>
+            </td><td>
+              <p>A standard volume change which drives a contribution to the voice pipeline when
+                there is no game connection.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Project_nor.png"></div>
+            </td><td>
+              <p>SoundBank Value</p>
+            </td><td>
+              <p>A standard volume change which drives a contribution to the voice pipeline when
+                connected to a game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Live_nor.png"></div>
+            </td><td>
+              <p>Live Value</p>
+            </td><td>
+              <p>A volume contribution to the voice pipeline resulting from a change in property
+                value while connected to a game.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_API_nor.png"></div>
+            </td><td>
+              <p>API</p>
+            </td><td>
+              <p>An API call which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_HDR_nor.png"></div>
+            </td><td>
+              <p>HDR</p>
+            </td><td>
+              <p>An HDR window which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Ducking_nor.png"></div>
+            </td><td>
+              <p>Ducking</p>
+            </td><td>
+              <p>A ducking (lowering) of a sound which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Fade_nor.png"></div>
+            </td><td>
+              <p>Fade</p>
+            </td><td>
+              <p>A fade in or out, which appears only for Events when they disappear while doing
+                something.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Distance_nor.png"></div>
+            </td><td>
+              <p>Attenuation Distance</p>
+            </td><td>
+              <p>A distance from emitter to listener, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_BlendTrack_nor.png"></div>
+            </td><td>
+              <p>Blend Track</p>
+            </td><td>
+              <p>A blend track, which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_AttenuationCone_nor.png"></div>
+            </td><td>
+              <p>Cone Attenuation</p>
+            </td><td>
+              <p>A Cone Angle Attenuation, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_Ray_nor.png"></div>
+            </td><td>
+              <p>Ray</p>
+            </td><td>
+              <p>A ray distance, between the emitter and the listener, which drives a
+                contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_RayOcclusion_nor.png"></div>
+            </td><td>
+              <p>Occlusion</p>
+            </td><td>
+              <p>A ray occlusion, which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_RayTransmissionLoss_nor.png"></div>
+            </td><td>Transmission Loss</td><td>A ray transmission, which drives a contribution to the voice
+              pipeline.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_RayObstruction_nor.png"></div>
+            </td><td>
+              <p>Obstruction or Diffraction</p>
+            </td><td>
+              <p>A ray obstruction or diffraction, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolume_nor.png"></div>
+            </td><td>
+              <p>Volume</p>
+            </td><td>
+              <p>A Volume property/slider change, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolumeSend_nor.png"></div>
+            </td><td>
+              <p>Send Volume</p>
+            </td><td>
+              <p>An Aux Bus Send Volume property/slider change, which drives a contribution to
+                the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolumeOutputBus_nor.png"></div>
+            </td><td>
+              <p>Output Bus Volume</p>
+            </td><td>
+              <p>An output bus Volume property/slider change, which drives a contribution to the
+                voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropBusVolume_nor.png"></div>
+            </td><td>
+              <p>Bus Volume</p>
+            </td><td>
+              <p>A bus Volume property/slider change, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolumeGain_nor.png"></div>
+            </td><td>
+              <p>Make-up Gain</p>
+            </td><td>
+              <p>A volume gain applied to the voice after all other volume adjustments, which
+                drives a contribution to the voice pipeline.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Unlike other volume adjustments, make up gain is applied into the signal are
+                  all volume adjustments are made to the voice.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolumeMute_nor.png"></div>
+            </td><td>
+              <p>Volume Mute</p>
+            </td><td>
+              <p>A Mute Action in an Event, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropVolumePause_nor.png"></div>
+            </td><td>
+              <p>Volume Pause</p>
+            </td><td>
+              <p>A Pause Action in an Event, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropLowpass_nor.png"></div>
+            </td><td>
+              <p>Low Pass</p>
+            </td><td>
+              <p>An LPF, which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropLowpassSend_nor.png"></div>
+            </td><td>
+              <p>Send Low Pass</p>
+            </td><td>
+              <p>An LPF, from an aux bus send, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropLowpassOutputBus_nor.png"></div>
+            </td><td>
+              <p>Output Bus Low Pass</p>
+            </td><td>
+              <p>An LPF on the output bus, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropHighpass_nor.png"></div>
+            </td><td>
+              <p>High Pass</p>
+            </td><td>
+              <p>An HPF, which drives a contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropHighpassSend_nor.png"></div>
+            </td><td>
+              <p>Send High Pass</p>
+            </td><td>
+              <p>An HPF, from an aux bus send, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropHighpassOutputBus_nor.png"></div>
+            </td><td>
+              <p>Output Bus High Pass</p>
+            </td><td>
+              <p>An HPF on the output bus, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropHighShelfSend_nor.png"></div>
+            </td><td>
+              <p>Send Dual Shelf</p>
+            </td><td>
+              <p>A DSF, from an aux bus send, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropHighShelfOutputBus_nor.png"></div>
+            </td><td>
+              <p>Output Bus Dual Shelf</p>
+            </td><td>
+              <p>A DSF on the output bus, which drives a contribution to the voice
+                pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropMulti_nor.png"></div>
+            </td><td>
+              <p>Multiple Properties</p>
+            </td><td>
+              <p>Multiple Properties, affecting Volume, LPF, and/or HPF, which drive a
+                contribution to the voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropMultiSend_nor.png"></div>
+            </td><td>
+              <p>Send Multiple Properties</p>
+            </td><td>
+              <p>Multiple properties, from an aux bus send, which drive a contribution to the
+                voice pipeline.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/ObjectIcons_PropMultiOutputBus_nor.png"></div>
+            </td><td>
+              <p>Output Bus Multiple Properties</p>
+            </td><td>
+              <p>Multiple properties on the output bus, which drive a contribution to the voice
+                pipeline.</p>
+            </td></tr></tbody></table></div></div><HR></body></html>

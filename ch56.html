@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Copying and pasting object properties</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch55.html" title="Using Presets"><link rel="next" href="ch57.html" title="Using control surfaces"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Copying and pasting object properties</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="paste_properties"></a>Copying and pasting object properties</h2></div></div></div><p>When you are working on a complex project that contains a large number of objects, you
+            might want to ensure that multiple objects have identical settings for certain
+            properties. For example, you might want to use the same list of RTPCs or Stingers in
+            multiple SFX objects or Music Tracks, perhaps to reflect common environmental effects in
+            a game. You can use the Paste Properties view to propagate a set of properties across
+            objects efficiently.</p><p>There are two types of information that you can copy and paste through the Paste
+            Properties view, and each appears in a separate pane:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Properties, which are configuration settings that correspond to the
+                        various options available in the Property Editor, such as Output Bus,
+                        Loudness Normalization, and so on.</p></li><li class="listitem"><p>List Elements, which are a type of object that you can add to other
+                        objects as lists. The Paste Properties view supports the following Lists:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>RTPCs</p></li><li class="listitem"><p>Stingers</p></li><li class="listitem"><p>Metadata</p></li><li class="listitem"><p>Music Cues</p></li></ul></div></li></ul></div><p>The following image shows the Paste Properties view with some sample data:</p><div class="mediaobject"><img src="Images/paste_properties.png"></div><p>At the top of the view, you select the source and target objects. The source and
+            target objects can be different types (SFX Objects and Music Tracks, for example),
+            although you would typically copy Properties and List Elements between objects of the
+            same type. In this example, there is a source SFX object and two target SFX
+            objects.</p><p>The Properties pane displays a partial comparison between the source and target object
+            properties. The list shows the properties that exist in the source. However, it does not
+            display any properties that exist in the target but not in the source.</p><p>The List Element pane displays the List Elements that are unique to the source or
+            whose values differ from the target's values. This section, like the Properties pane,
+            does not display extra items that exist in the target but not the source, although it
+            indirectly indicates whether such items exist in the Objs with Removed column, as
+            explained in the <a class="xref" href="ch56.html#paste_properties_mode" title="Paste mode">Paste mode</a> section later in this
+            topic.</p><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="paste_properties_list_view"></a>Viewing object details</h2></div></div></div><p>The number of target objects are indicated in the Objs Changed on Paste column in
+                the Properties pane and in the Objs with Added, Objs with Replaced, and Objs with
+                Removed columns in the List Element pane. However, the columns don't indicate
+                exactly which objects will be affected. If you are working with a large number of
+                objects, though, these details might be important to you.</p><p>You can see the names of the affected objects in a tooltip if you hover over the
+                number in any of the relevant columns:</p><div class="mediaobject"><img src="Images/paste_properties_hover.png"></div><p>As you can see, the tooltip contains the object names. For more information, you
+                can follow the tooltip's suggestion: right-click the number and then click <span class="bold"><strong>Show Changed in List View</strong></span> to open the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, which displays the objects that will be changed when you
+                paste the properties. Be aware that this option is different than the <span class="bold"><strong>Show in List View</strong></span> menu option, which also opens the List
+                View but displays <span class="emphasis"><em>all</em></span> target objects.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="paste_properties_mode"></a>Paste mode</h2></div></div></div><p>The appearance of the data in the Objs with Replaced and Objs with Removed columns
+                changes depending on the Paste Mode, which determines the effect of the paste
+                operation on the target objects. If nothing will be replaced or removed, then the
+                numbers in the corresponding columns change to dashes, which indicates that the
+                column data isn't relevant for the selected Paste Mode.</p><p>The following example shows the List Element pane when the Paste Mode is Replace
+                Entire List. If you paste properties with this mode, you delete the Lists that exist
+                in the targets and replace them with the selected List Elements from the source.</p><div class="mediaobject"><img src="Images/paste_properties_replace_all.png"></div><p>If the Paste Mode is Add New, Replace Existing, then you don't remove extra List
+                Elements from targets so the numbers in the Objs with Removed column are replaced by dashes:</p><div class="mediaobject"><img src="Images/paste_properties_replace_existing.png"></div><p>Finally, if you select Add New, Keep Existing as the Paste Mode, then you paste
+                new List Elements to target objects but don't replace any existing elements or
+                remove extra elements:</p><div class="mediaobject"><img src="Images/paste_properties_keep_existing.png"></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="paste_properties_paste"></a>Pasting object properties</h2></div></div></div><p>You can copy and paste properties from a source object to one or more target objects
+            through the Paste Properties view. You can therefore ensure that a set of objects has
+            exactly the same settings for selected properties and list elements (RTPCs, Stingers,
+            Music Cues, and Metadata).</p><p>
+            </p><div class="orderedlist"><p class="title"><b>To paste properties:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click <span class="bold"><strong>Views &gt; Utilities &gt; Paste
+                            Properties</strong></span>. The Paste Properties window opens.</p></li><li class="listitem"><p>Select the source object that contains the properties you want to copy in
+                        one of the following ways:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Drag an object from the Project Explorer to the Copy from Object
+                                selection box.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Follow Clipboard</strong></span>, then copy
+                                an object in the Project Explorer either through the shortcut menu
+                                or with the <span class="bold"><strong>Ctrl+C</strong></span> keyboard
+                                shortcut.</p></li><li class="listitem"><p>Click the browse button (<span class="bold"><strong>&#8230;</strong></span>) and
+                                select an object from the Project Explorer-Browser.</p></li></ul></div></li><li class="listitem"><p>Select one or more target objects in one of the following ways:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Select one or more objects in the Project Explorer and drag them
+                                to the Paste to Object(s) selection box.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Follow Selection</strong></span>, then
+                                select one or more objects in the Project Explorer.</p></li></ul></div><p>The Properties pane in the top half of the view lists the object
+                        properties in the source object. Similarly, the List Element pane displays
+                        any RTPCs, Metadata, Stingers, or Music Cues in the source object. The
+                        columns at the right of each pane display the number of objects that will
+                        change when you click <span class="bold"><strong>Paste</strong></span>.</p></li><li class="listitem"><p>Review the lists to ensure that all desired Properties and List Elements
+                        are selected. To exclude certain properties or list objects, clear the
+                        corresponding check boxes.</p></li><li class="listitem"><p>Select the Paste Mode from the menu in the upper-right corner of the List
+                        Element pane:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Replace Entire List</strong></span>.
+                                    Completely removes the target object List Elements and copies
+                                    the selected List Elements from the source to the
+                                    targets.</p></li><li class="listitem"><p><span class="bold"><strong>Add New, Replace Existing</strong></span>.
+                                    Pastes all List Elements from the source to the targets and
+                                    replaces any List Elements that are already present in the
+                                    targets, but does not remove any extra List Elements from the
+                                    targets.</p></li><li class="listitem"><p><span class="bold"><strong>Add New, Keep Existing</strong></span>.
+                                    Pastes any List Elements that exist in the source and not the
+                                    targets, but does not replace or remove any List Elements that
+                                    exist in the targets already.</p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>Paste</strong></span>. The selected Properties and
+                        List Elements are pasted to the target objects.</p></li></ol></div><p>
+        </p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="paste_properties_revert"></a>Reverting your changes</h2></div></div></div><p>If you need to revert the changes you made when you pasted properties, perhaps after
+            testing or just to review the details, you can undo an entire paste command. Although
+            paste operations follow the standard Wwise undo and redo guidelines (see <a class="xref" href="ch04.html#undoing_and_redoing_actions_in_wwise" title="Undoing and redoing actions in Wwise">Undoing and redoing actions in Wwise</a>), be aware that there is no way to
+            selectively undo specific parts of the original paste, such as a single RTPC or all
+            changes to one of multiple target objects.</p><div class="itemizedlist"><p class="title"><b>To undo a Paste Properties command:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the menu bar, click <span class="bold"><strong>Edit &gt; Undo Paste
+                        Properties</strong></span>.</p><p>All changes are reverted.</p></li></ul></div></div></div><HR></body></html>

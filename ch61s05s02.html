@@ -1,0 +1,302 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Attenuation Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s05.html" title="ShareSets Tab"><link rel="prev" href="ch61s05s01.html" title="Effect Plug-in Editor"><link rel="next" href="ch61s05s03.html" title="Conversion Settings Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05.html">ShareSets Tab</a></span> &gt; <span class="breadcrumb-node">Attenuation Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="positioning_attenuation_editor"></a>Attenuation Editor</h3></div></div></div><p>The Attenuation Editor allows you to define the attenuation properties for a particular object. By creating a series of curves to define the relationship between specific Wwise properties, such as volume and Low-Pass Filter, and specific drivers, such as distance or obstruction between the emitting source and the listener, you can simulate sophisticated attenuation for the sounds, music, and motion in your game. You can further refine your attenuation using sound cones, which simulate attenuation based on the orientation of the emitter in relation to the listener.</p><p>You can create detailed and complex attenuation curves by defining the shape of each curve segment. A curve segment is any part of the curve between two control points. You can choose from a variety of curve shapes, including linear, constant, logarithmic, exponential, and s-curve.</p><p>These attenuation settings can also be saved as ShareSets, which means you can share these settings across several objects in your project.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The attenuation values are always added to the existing property values of the associated objects. So if you have a hierarchy of sounds or music with a cumulative volume level of -20 dB and then attenuate the volume by -64 dB, the volume of the object will be -84 dB.</p></td></tr></table></div><p>A few of the attenuation properties can be controlled using RTPCs. For a description of the RTPC properties, switch to the <a class="xref" href="ch61s01s05s02.html" title="RTPC tab">RTPC tab</a> and click the Help icon. For more information on how to apply RTPCs, refer to <a class="xref" href="ch19.html" title="Working with RTPCs"><i>Working with RTPCs</i></a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the Attenuation ShareSet.</p>
+							</td></tr><tr><td>
+								<p>Shared by</p>
+							</td><td>
+								<p>A list of objects that currently subscribe to the selected ShareSet.</p>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Additional information about the ShareSet or the attenuation settings that have been applied.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Attenuation Settings</strong></span></p>
+							</td></tr><tr><td>
+								<p>Graph view</p>
+							</td><td>
+								<p>A graphical representation of the relationship between specific Wwise properties, such as Volume and Low-Pass Filter, and different drivers, such as distance and obstruction. The combination of all of these curves simulates the attenuation for the sounds, music, and motion objects within your game based on distance, obstruction, occlusion, diffraction, and transmission. 
+								</p>
+								<p>For distance-driven curves, the X axis is represented in distance units. The minimum value is 0 and the maximum value is determined by the current Max distance value. For curves driven by obstruction, occlusion, diffraction, and transmission, the X axis is a percentage. The values along the Y axis will depend on which property curves are selected in the Curves list.</p>
+								<p>The two default control points in the Graph view represent the values for Radius center and Max distance.</p>
+								<p>
+									The radius center cannot be deleted or moved along the X axis because it is defined by the game object (3D game-defined) or listener's position (3D Automation) in game.  You can add additional points to modify the shape of the attenuation curve.
+								</p>
+								<p>You can preview the effect of attenuation curves by dragging the Distance, Obstruction, Occlusion, Diffraction, and Transmission cursors during playback.</p>
+								<p>The graph view can display several curves simultaneously.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+							</td><td>
+								<p>Zooms in towards the center of the graph view.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+							</td><td>
+								<p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+							</td><td>
+								<p>Zooms out from the center of the graph view.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Visibility_ShowGameObjects_Normal.png"></div>
+							</td><td>
+								<p>Show Game Object values in the curve graph when capturing.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Coordinates</strong></span></p>
+							</td></tr><tr><td>
+								<p>X</p>
+							</td><td>
+								<p>The coordinate along the X axis of the selected control point. The values along the X axis may vary depending on which curve is selected in the Curves list.</p>
+								<p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the X text box, both control points will move to the left by 5 units.</p>
+							</td></tr><tr><td>
+								<p>Y</p>
+							</td><td>
+								<p>The coordinate along the Y axis of the selected control point. The values along the Y axis may be different depending on which curve is selected in the Curves list.</p>
+								<p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the Y text box, both control points will move down by 5 units.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Curves</strong></span></p>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+	<div class="mediaobject"><img src="Images/pin_icon.png"></div>
+	<div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+	<p>(Pinned/Unpinned)</p>
+</td><td>
+								<p>Determines whether the attenuation curve is displayed in the graph view.</p>
+								<p>When the Pin icon is selected, the attenuation curve will be displayed in the graph view whether the curve is selected or not.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/Color_Red.png" width="13"></td></tr></table></div>
+								<p>(Color block)</p>
+							</td><td>
+								<p>Displays the color of the attenuation curve in the graph view. Each property curve is assigned a different color.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="7"><tr style="height: 23px"><td><img src="Images/Link_icon.png" width="7"></td></tr></table></div>
+								<p>(Link/Unlink)</p>
+							</td><td>
+								<p>Displays whether the curve is applied across all platforms.</p>
+							</td></tr><tr><td>
+								<p>Property</p>
+							</td><td>
+								<p>The Wwise property upon which attenuation is applied. Properties are categorized by their driver.</p>
+								<p>Drivers are displayed along the X axis in the graph view. You can create attenuation curves for the following drivers:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>Distance</strong></span> - The distance
+											between an emitter and its listener. The distance
+											attenuation is applied on the signal between a voice and
+											a bus. Its maximum value is determined by the Max
+											distance slider. </p></li><li class="listitem"><p>
+											<span class="bold"><strong>Obstruction</strong></span> - The percentage of obstruction between an emitter game object and its listener. Its value can range from 0 to 100.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Occlusion</strong></span> - The percentage of occlusion between an emitter game object and its listener. Its value can range from 0 to 100.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Diffraction</strong></span> - The percentage of diffraction on a diffraction path between an emitter and its listener. This value is set by Spatial Audio and can range from 0 to 100.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Transmission</strong></span> - The percentage of transmission loss on the transmission path between an emitter and the listener. This value is set by Spatial Audio and can range from 0 to 100.
+										</p></li></ul></div>
+								<p>Properties are displayed along the Y axis in the graph view. You can create attenuation curves for the following Wwise properties:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>Volume</strong></span> - Offsets the volume of the sound. Corresponds to the dry portion in a wet/dry scenario.
+										</p></li><li class="listitem"><p>
+											
+												<span class="bold"><strong>Auxiliary send volumes</strong></span> - Offsets the game-defined and user-defined auxiliary send volumes.
+											 Corresponds to the wet portion in a wet/dry scenario.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Low-pass filter</strong></span> - The recursive filter that attenuates high frequencies based on a specified value.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>High-pass filter</strong></span> - The recursive filter that attenuates low frequencies based on a specified value.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Dual-shelf filter</strong></span> - The recursive filter that attenuates high frequencies based on a specified gain.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Spread</strong></span> - The amount or percentage of audio that is spread to neighboring speakers allowing for sounds to change over distance from a point source at low values to a completely diffused propagation at high values. For multi-channel sounds, each channel is spread separately.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Focus</strong></span> - The percentage value used to condense the virtual emitters generated by the spread value. For a focus of 0%, the virtual emitters remain unchanged, but at higher values each virtual points are moved closer around the source channel origin.
+										</p></li></ul></div>
+								<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Obstruction, Occlusion, Diffraction, and Transmission drivers can only be associated with the Volume, Low-pass filter, and High-pass filter properties.</p><p>The Auxiliary send volumes, Spread, and Focus properties can only be associated with the Distance driver.</p></td></tr></table></div>
+							</td></tr><tr><td>
+								<p>Curve</p>
+							</td><td>
+								<p>Specifies which attenuation curve will be used for each property. You can chose one of the following options:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>None</strong></span> - No attenuation curve is created and the corresponding property is <span class="bold"><strong>not</strong></span> attenuated in relation to the associated driver. However, the property may still be attenuated if it is included in other curves.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Use Distance Volume</strong></span> - The Distance Volume attenuation curve is used. This option is only available for the Distance Auxiliary send volume curves.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Use Project Obstruction</strong></span> - The Project's Obstruction curve of the same property is used. This option is only available for curves driven by Obstruction.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Use Project Occlusion</strong></span> - The Project's Occlusion curve of the same property is used. This option is only available for curves driven by Occlusion.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Use Project Diffraction</strong></span> - The Project's Diffraction curve of the same property is used. This option is only available for curves driven by Diffraction.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Use Project Transmission</strong></span> - The Project's Transmission curve of the same property is used. This option is only available for curves driven by Transmission.
+										</p></li><li class="listitem"><p>
+											<span class="bold"><strong>Custom</strong></span> - A custom attenuation curve is created for the corresponding driver property pair.
+										</p></li></ul></div>
+								<p>
+                    Keep in mind that each new curve you create will require additional processing power.
+								</p>
+							</td></tr><tr><td>
+								<p>Max distance</p>
+							</td><td>
+								<p>The distance from the emitting source at which the object's signal reaches its lowest level. Used only for distance-driven curves, this distance is represented in the Graph view by the last control point. The attenuation of the object's signal remains constant beyond this point.</p>
+								<p>
+									Sound and motion propagation is omni-directional, so the max distance value creates a spherical boundary around the emitting source. 
+								</p>
+								<p>
+                    Default Value: 100<br>Default Slider Range: 1 to 200<br>Input Range: 1 to 10,000,000,000<br>Units: Wwise distance units
+								</p>
+								<p>Wwise distance units will match the distance units that you are using in game, for example, centimeters, meters, and so on.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Objects using this Attenuation</strong></span></p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/General_Refresh_Normal.png"></div>
+							</td><td>
+								<p>Refresh the list of objects using this Attenuation.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Checkbox_Eye_nor.png"></div>
+							</td><td>
+								<p>Select this icon to scale the curve graph to the scaled max distance of the object. If <span class="bold"><strong>Show Game Object Values</strong></span> is enabled, all game objects with the same effective max distance will be shown in the curve graph. Icon is grayed out if the object is not using this Attenuation.</p>
+							</td></tr><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the object using the current attenuation. Clicking on this opens the object in a new tab.</p>
+							</td></tr><tr><td>
+		<p>Distance Scaling %</p>
+	</td><td>
+		<p>Scales the max distance of the attenuation applied on this object. You can add an RTPC on this property to scale the max distance of a sound&#8217;s attenuation at runtime.</p>
+		<p>Default value: 100</p>
+		<p>Range: 1 to 10000</p>
+	</td></tr><tr><td>
+								<p>Effective Max Distance</p>
+							</td><td>
+								<p>The effective max distance value using the object's distance scaling percentage.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Properties</strong></span></p>
+							</td></tr><tr><td>
+		<p>Height Spread</p>
+	</td><td>
+		<p>Height Spread automatically computes a minimal spread based on elevation, if and only if panning occurs on a planar configuration, or based on negative elevation alone if panning occurs on hemispherical configurations like 7.1.4. This helps smooth out panning when 3D sounds pass above or below the listener.</p>
+		<p>Height Spread is always enabled by default even if a sound doesn&#8217;t have an attenuation. Height Spread can only be disabled by deselecting this property. If a sound doesn&#8217;t have an attenuation, and you would like to disable Height Spread, an Attenuation ShareSet with a constant Output Bus Volume must be created specifically for this purpose.</p>
+		<p>
+			For more information, refer to 
+			<a class="link" href="ch23s06s05.html" title="Effect of Height Spread">Effect of Height Spread</a>
+			.
+		</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Cone Use</p>
+	</td><td>
+		<p>Creates a sound cone where attenuation is controlled using a series of cones with varying angles. The direction of the cone-shaped boundaries are ultimately controlled by the orientation of the game object.</p>
+		<p>The cone attenuation value is added to the distance-based attenuation values.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Cone max attenuation</p>
+	</td><td>
+		<p>The amount by which the volume is attenuated when the emitting source falls outside the transition area.</p>
+		<p>
+			Cone max attenuation has a link indicator and an RTPC indicator. Refer to 
+			<a class="link" href="ch46s11.html" title="Working with the Property Editor">Working with the Property Editor</a>
+			 for more information.
+		</p>
+		<p>Default value: -6.0</p>
+		<p>Range: -200 to 0</p>
+		<p>Units: dB </p>
+	</td></tr><tr><td>
+		<p>Cone inner angle</p>
+	</td><td>
+		<p>The angle that defines an area where no attenuation occurs.</p>
+		<p>The Cone inner angle defines the top boundary in the Cone Preview. It is redrawn in real time as the value is modified.</p>
+		<p>The area between the inner and outer angle is called the transition area. The volume attenuation within this area is linearly interpolated between zero attenuation and the Cone max attenuation value.</p>
+		<p>Default value: 90</p>
+		<p>Range: 0 to 360</p>
+		<p>Units: ° </p>
+	</td></tr><tr><td>
+		<p>Cone outer angle</p>
+	</td><td>
+		<p>The angle that defines the area where Volume, Low-Pass Filter, Spread, and Focus Attenuation remain at their maximum levels.</p>
+		<p>The Cone outer angle defines the bottom boundary in the Cone Preview. It is redrawn in real time as the value is modified.</p>
+		<p>The area between the inner and outer angle is called the transition area. The volume attenuation within this area is linearly interpolated between zero attenuation and the Cone max attenuation value.</p>
+		<p>Default value: 245</p>
+		<p>Range: 0 to 360</p>
+		<p>Units: ° </p>
+	</td></tr><tr><td>
+		<p>Cone Low-pass filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of low-pass filtering that will be applied, where 0 means no low-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			The Cone Low-pass filter has a link indicator and an RTPC indicator, see 
+			<a class="link" href="ch46s11.html" title="Working with the Property Editor">Working with the Property Editor</a>
+			 for more information.
+		</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Cone High-pass filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates low frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of high-pass filtering that will be applied, where 0 means no high-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			The Cone High-pass filter has a link indicator and an RTPC indicator. Refer to 
+			<a class="link" href="ch46s11.html" title="Working with the Property Editor">Working with the Property Editor</a>
+			 for more information.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Cone Preview</strong></span></p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="111"><tr style="height: 111px"><td><img src="Images/PPE_Cone_Attenuation_Display.png" width="111"></td></tr></table></div>
+							</td><td>
+								<p>A graphical representation of the maximum radius attenuation of a sound, where the source of the sound is located directly in the middle of the circle.</p>
+								<p>
+									<span class="bold"><strong>This tool is not a panner so moving the red circle won't position your sound in the surround field. This tool can only be used to preview your attenuation settings.</strong></span>
+								</p>
+								<p>The Cone Preview has the following two functions:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Displays the different areas of the cone attenuation. The different areas of the sound cone are updated in real time as the inner and outer angle values are modified.</p></li><li class="listitem"><p>Allows you to preview the attenuation of a sound by modifying the position of the listener during playback. The position of the listener is defined by its angle (black line) and distance (red circle) from the sound source. You can modify the distance and angle controls by clicking/dragging directly in the Cone Preview display.</p></li></ul></div>
+								<p>The Cone Preview only works for objects that use a listener position.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch23s07s03.html" title="Defining the attenuation curves for various object properties">Defining the attenuation curves for various object properties</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch23s07s04.html" title="Simulating directivity using cone-shaped boundaries">Simulating directivity using cone-shaped boundaries</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch23s07s05.html" title="Previewing the attenuation settings of a sound">Previewing the attenuation settings of a sound</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch23s07s01.html" title="Managing attenuation instances">Managing attenuation instances</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch23s09.html" title="Routing audio signals to the center speaker">Routing audio signals to the center speaker</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch50s01.html" title="Changing the display of the graph view">Changing the display of the graph view</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch50s02.html#adding_control_points" title="Adding control points">Adding control points</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch50s03.html#specifying_shape_of_curve_between_control_points" title="Specifying the shape of the curve between control points">Specifying the shape of the curve between control points</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch50s01.html#defining_scaling_method_of_graph_view" title="Defining the scaling method of the graph view">Defining the scaling method of the graph view</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch19s02.html#creating_game_parameter" title="Creating Game Parameters">Creating Game Parameters</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch19s03s01.html" title="Assigning Wwise properties to Game Parameters">Assigning Wwise properties to Game Parameters</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch19s03s02.html" title="Mapping values in the RTPC graph">Mapping values in the RTPC graph</a>
+					</p></li></ul></div></div><HR></body></html>

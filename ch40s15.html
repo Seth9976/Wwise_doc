@@ -1,0 +1,47 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Troubleshooting remote connection issues</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40.html" title="Profiling"><link rel="prev" href="ch40s14.html" title="Profiling tips and best practices"><link rel="next" href="ch40s16.html" title="Profiling keyboard shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-node">Troubleshooting remote connection issues</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="troubleshooting_remote_connection_issues"></a>Troubleshooting remote connection issues</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If you try to connect Wwise to your game, but the computer/console does not appear in the
+					Remote Connections dialog, do the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Verify that the sound engine is in either debug or profile. You can't
+							connect to a release build of the sound engine.</p></li><li class="listitem"><p>Verify that the Communications module is properly initialized in your game. For more
+							information, refer to the "Initializing Communications" section of the
+								<a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=workingwithsdks__initialization.html#initialization_comm" target="_blank">Wwise SDK documentation</a>.</p></li><li class="listitem"><p>Make sure the same port number is specified for the "Game Discovery Broadcast Port" in
+							your project settings and in the AkCommSettings structure used in your
+							game to initialize communications. For more information, refer to <a class="xref" href="ch07s03s07.html" title="Specifying network ports">Specifying network ports</a> and the "Initializing
+							Communications" section of the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=workingwithsdks__initialization.html#initialization_comm" target="_blank">Wwise SDK documentation</a>.</p></li><li class="listitem"><p>Verify that the computer/console is properly connected to the network. Note that some
+							consoles have multiple network adapters, including one for debugging and
+							one for regular network traffic. Make sure to connect all of them before
+							trying to re-connect from Wwise.</p></li><li class="listitem"><p>Verify that the computer/console is on the same subnet as the computer running
+							Wwise.</p></li><li class="listitem"><p>Check if an active firewall is blocking the connection. If you have an active firewall
+							on the computer running Wwise, try adding the Wwise application to the
+							list of exceptions in your firewall (refer to your firewall's
+							documentation for instructions). If you need to change the ports used
+							for Wwise communication (including using fixed ports instead of dynamic
+							ports), refer to <a class="xref" href="ch07s03s07.html" title="Specifying network ports">Specifying network ports</a> and the
+							"Initializing Communications" section of the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=workingwithsdks__initialization.html#initialization_comm" target="_blank">Wwise SDK documentation</a>. </p></li><li class="listitem"><p>A port might be blocked by Windows. The Game Discovery Broadcast Port
+							is a UDP connection. Check that this port and type of connection isn't
+							blocked by your network or machine. This port might be somewhere other
+							than on your computer.</p></li><li class="listitem"><p>If you know the IP address of the remote computer/console, you can click <span class="bold"><strong>Connect to IP</strong></span> in the Remote Connections dialog and enter the IP address manually. If you can connect to the game in this manner, then it's only the broadcast from the remote computer/console that is blocked. After connecting a computer/console once, it will automatically appear in the History tab of the Remote Connections dialog, so you won't have to enter the IP address when you try to reconnect in the future.</p></li><li class="listitem"><p>Verify if  Wwise or the network might be causing a connection failure. To test if this
+							is the cause, set a known open port to the Command Port in the game
+								<code class="filename">Comm::init</code> and run the game. Make sure the call
+							to <code class="filename">Comm::init</code> initializes successfully. On the
+							Windows machine you are connecting from, open a PowerShell window and
+							type the following command:</p><p><code class="code">Test-NetConnection -computername &lt;ipAddress&gt; -port
+								&lt;commandPort&gt;</code></p><p>Where &lt;ipAddress&gt; is the IP address or the name of the machine
+								the game is running on. The &lt;commandPort&gt; is the Command Port
+								specified, for example, port 24025.</p><p>The result should show <code class="code">TcpTestSucceeded : True</code>. If
+								that isn't the result, something is blocking that port for that TCP
+								connection.</p></li></ul></div></li><li class="listitem"><p>If you try to connect to your game from a very large project and Wwise seems to hang on the connect screen, try the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>
+								Open your project, try emptying the current Soundcaster and Mixing Desk sessions, remove what is loaded into the Transport Control, and then try to connect to the game with <span class="bold"><strong>Profile and Edit (Sync Inspected Objects Only)</strong></span> instead of <span class="bold"><strong>Profile and Edit (Sync All Modified Objects)</strong></span>. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When Wwise connects to a game with <span class="bold"><strong>Profile and Edit (Sync All
+										Modified Objects)</strong></span> selected, it pushes to the game
+									all information needed to ensure what is displayed in Wwise is
+									in sync with what is in the game. This can take some time and
+									use more memory in the game. But, with <span class="bold"><strong>Profile and Edit (Sync Inspected Objects Only)</strong></span>,
+									Wwise does not push everything. Instead, Wwise pushes only what
+									is selected in the Property Editor, Transport Control, and what
+									is present in the active Soundcaster and Mixing Desk sessions.
+									If you are trying to connect to your game from a Wwise project
+									that has an active Soundcaster or Mixing Desk session containing
+									a large amount of data, you may experience this problem. </p><p>Also, modified media (sounds, MIDI, Convolution IR, etc.) that is currently in use by the
+									game will be transferred to the game too. This can also increase
+									the time it takes to start profiling the game.</p><p>If the remote connection is only for profiling purposes, you can also connect using
+                    <span class="bold"><strong>Profile Only</strong></span> which will prevent any
+                  synchronization between the Authoring tool and the game. Note that you will not be
+                  able to play sounds in the Authoring tool when connected with this option. </p></td></tr></table></div></li></ul></div></li></ul></div></div><HR></body></html>

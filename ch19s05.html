@@ -1,0 +1,82 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with envelopes</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch19.html" title="Working with RTPCs"><link rel="prev" href="ch19s04.html" title="Working with LFOs"><link rel="next" href="ch19s06.html" title="Working with time"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt03.html">Interacting with the game</a></span> &gt; <span class="breadcrumb-link"><a href="ch19.html">Working with RTPCs</a></span> &gt; <span class="breadcrumb-node">Working with envelopes</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="working_with_envelopes"></a>Working with envelopes</h2></div></div></div><p>Envelopes are used to control property values with a predefined shape. An envelope has an <a class="glossterm" href="go01.html#glossary_adsr"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_adsr" title="ADSR (Attack-Decay-Sustain-Release)">ADSR</a></em></a> shape:</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>Attack Time</p>
+	</td><td>
+		<p>Defines the time taken for initial run-up of level from nil to peak, beginning when the key is first pressed.</p>
+		<p>Default value: 0.2</p>
+		<p>Range: 0 to 10000</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Attack Curve</p>
+	</td><td>
+		<p>Adjusts the Attack Curve from its linear default slope (50%) to either:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>an exponential-style envelope (0%) where the rate of change starts slow and then increases</p></li><li class="listitem"><p>a logarithmic envelope (100%) where the rate of change starts fast, then decreases</p></li></ul></div>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Decay Time</p>
+	</td><td>
+		<p>Defines the time taken for the subsequent run down from the attack level to the designated sustain level.</p>
+		<p>Default value: 0.2</p>
+		<p>Range: 0 to 10000</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Sustain Level</p>
+	</td><td>
+		<p>Defines the level during the main sequence of the sound&#8217;s duration, until the key is released.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Release Time</p>
+	</td><td>
+		<p>Defines the time taken for the level to decay from the sustain level to zero after the key is released.</p>
+		<p>Default value: 0.5</p>
+		<p>Range: 0 to 10000</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Scope</p>
+	</td><td>
+		<p>Define how envelope instances are created:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Voice</strong></span>: An envelope instance is created for every sound/object playback.</p></li><li class="listitem"><p><span class="bold"><strong>Note/Event</strong></span>: An envelope instance is created for every playing instance, or note when used in MIDI context.</p></li></ul></div>
+		<p>Default value: Note or Event</p>
+	</td></tr><tr><td>
+		<p>Trigger On</p>
+	</td><td>
+		<p>The Actions/MIDI Events that may Trigger the envelope (i.e. enter the attack phase):</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Play</strong></span>: Either a Play Action or a MIDI note Event</p></li><li class="listitem"><p><span class="bold"><strong>Note-Off</strong></span>: Only a MIDI Note-Off Event</p></li></ul></div>
+		<p>Default value: Play</p>
+	</td></tr><tr><td>
+		<p>Auto Release</p>
+	</td><td>
+		<p>Determines if the envelope requires an Action/MIDI Event to exit the sustain phase and enter the release phase. If set, the envelope exits the sustain phase after <span class="bold"><strong>Sustain Time</strong></span>. If not set, the envelope exits the sustain phase following a certain condition:</p>
+		<p>
+			The envelope may be released by the game via a 
+			<a class="link" href="ch61s02s01s01.html#release_envelope">Release Envelope</a>
+			 Event.
+		</p>
+		<p>An envelope may also enter the release phase via a MIDI Note-Off Event, provided the envelope was triggered by a MIDI Note-On Event.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Maximum Sustain Time</p>
+	</td><td>
+		<p>Defines the time which the envelope will remain in the sustain phase before entering the release phase. This value is valid only if <span class="bold"><strong>Auto Release</strong></span> is set.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 10000</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Stop playback after release</p>
+	</td><td>
+		<p>If set, the playback of the associated sound is terminated once the release phase is complete.</p>
+		<p>Default value: true</p>
+	</td></tr></tbody></table></div><p>Envelopes can either be used in the context of MIDI or in the context of a normal playback.</p><p>When used in the context of MIDI, the envelope is configured for a sound to be played either on note-on or note-off. In the case of a sound to be played on note-on:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The envelope is configured to trigger on note-on (<span class="bold"><strong>Trigger On</strong></span> parameter).</p></li><li class="listitem"><p>The envelope sustains until the first occurrence of:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>reception of a <span class="bold"><strong>Release Envelope</strong></span> Event,</p></li><li class="listitem"><p>reception of a MIDI note-off Event,</p></li><li class="listitem"><p>max duration of sustain phase (<span class="bold"><strong>Auto Release</strong></span> is set).</p></li></ul></div></li></ul></div><p>In the case of a sound to be played on note-off:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The envelope is configured to trigger on note-off (<span class="bold"><strong>Trigger On</strong></span> parameter).</p></li><li class="listitem"><p>The envelope sustains until the first occurrence of:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>reception of a <span class="bold"><strong>Release Envelope</strong></span> Event,</p></li><li class="listitem"><p>max duration of sustain phase (<span class="bold"><strong>Auto Release</strong></span> is set).</p></li></ul></div></li></ul></div><p>When used in the general context of a play sound:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The envelope is configured to trigger on a Play Action (<span class="bold"><strong>Trigger On</strong></span> parameter).</p></li><li class="listitem"><p>The envelope sustains until the first occurrence of:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>reception of a <span class="bold"><strong>Release Envelope</strong></span> Event,</p></li><li class="listitem"><p>max duration of sustain phase (<span class="bold"><strong>Auto Release</strong></span> is set).</p></li></ul></div></li></ul></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>
+    LFO and Envelope modulators' processing time depends on their RTPC usage. For most properties, a modulator is evaluated once per audio control frame. However, for the property <span class="bold"><strong>Voice Volume</strong></span>, these modulators are evaluated at every audio sample frame. Use them selectively because they can consume a significant amount of a platform's memory and CPU.
+  </p></td></tr></table></div><p>
+  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+      The RTPC cursors for LFO and Envelope modulators do not tell you their specific values at any point in time since they are determined by the modulator's internal properties.
+    </p></td></tr></table></div><p>
+</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="using_envelope_with_midi_objects"></a>Using envelopes with MIDI objects</h3></div></div></div><p>Envelopes can be used to control property values and also to control the life of sounds. Envelopes have the option of stopping the owner when the release is completed.</p><div class="orderedlist"><p class="title"><b>To add a Voice Volume envelope to an Containers hierarchy object (instrument):</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Project Explorer, select an object in the Containers hierarchy.</p></li><li class="listitem"><p>In the Primary Editor, go to the RTPC tab.</p></li><li class="listitem"><p>Click the [&gt;&gt;] button in the RTPC list.</p></li><li class="listitem"><p>From the selector menu, select <span class="bold"><strong>Voice Volume</strong></span>.</p></li><li class="listitem"><p>Click the [&gt;&gt;] button for the X axis</p></li><li class="listitem"><p>From the selector menu, select <span class="bold"><strong>Envelope &gt; Default (Custom)</strong></span></p></li><li class="listitem"><p>Click the [&#8230;] button to edit the envelope</p></li><li class="listitem"><p>Edit the curve to set the range of modulation.</p></li></ol></div></div></div><HR></body></html>

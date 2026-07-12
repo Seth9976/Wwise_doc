@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Speaker Panner</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01.html" title="Audio tab"><link rel="prev" href="ch61s01s06.html" title="Source Editor: Audio Sources"><link rel="next" href="ch61s01s08.html" title="Position Editor (3D Automation)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-node">Speaker Panner</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="position_editor_2d_panner"></a>Speaker Panner</h3></div></div></div><p>The behavior of the Speaker Panner varies depending on the Speaker Panning setting in the
+    Positioning tab of an object's Property Editor. By default, Speaker Panning is set to <span class="bold"><strong>Direct Assignment</strong></span>, which means the channels of 2D sounds and music are
+    assigned directly to the corresponding channels of their output bus, regardless of the position
+    or orientation of the listener or game object. In this case, the Speaker Panner view is not
+    available. </p><p>However, you can select either of the other two Speaker Panning options to enable the
+    Speaker Panner view. It can then be used to adjust the way the source audio is associated with
+    the channels of its output bus as follows:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Balance-Fade</strong></span>: The Speaker Panner contains a
+        two-dimensional graph view with X and Y coordinates, and a circle in the center. The X
+        coordinate controls the left-right speaker balance, while the Y coordinate controls the
+        front-rear speaker balance. You can drag the circle anywhere within this graph view to
+          <span class="emphasis"><em>adjust the volumes of the channels of the output bus</em></span>. Channels closer
+        to the circle will have their volume increased, while channels further from the circle will
+        have their volume decreased.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Y coordinate has no impact when the output bus is stereo. The side speakers of a
+          7.1 configuration are at their maximum level when the circle is in the middle of the graph
+          view. </p><p>The Z coordinate only works for 7.1.4 sounds routed to 7.1.4 busses. Only the height 
+        channels are heard when Z is 100, and only the channels of the plane are heard when the Z is 
+        -100.</p></td></tr></table></div></li><li class="listitem"><p><span class="bold"><strong>Steering</strong></span>: The Speaker Panner contains a
+        three-dimensional graph view with X, Y, and Z coordinates, and a circle in the center. The X
+        coordinate controls the left-right distribution, the Y coordinate controls the front-rear
+        distribution, and the Z coordinate controls the up-down distribution. You can drag the
+        circle anywhere within this graph view to <span class="emphasis"><em>redistribute the source audio amongst
+          the channels of its output bus</em></span>. The distribution will be weighted towards the
+        location of the circle.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Z axis is not represented in the graph view; its value is controlled and
+            indicated solely by the Z axis slider. Additionally, it has no impact on a configuration
+            that does not have channels in the height layer.</p></td></tr></table></div></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>Name</p>
+            </td><td>
+              <p>The name of the object.</p>
+            </td></tr><tr><td>
+              <p>Notes</p>
+            </td><td>
+              <p>Any additional information about the object properties.</p>
+            </td></tr><tr><td>
+              <p>(Graph View)</p>
+            </td><td>
+              <p>A graphical representation of the location of the circle in relation to the
+              listener and the speakers in a 5.1 environment.</p>
+            <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The center channels are defined in the Positioning tab of the object's Property
+                Editor, using the <span class="bold"><strong>Center %</strong></span> slider.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+            </td><td>
+              <p>Zooms in towards the center of the graph view.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+            </td><td>
+              <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+            </td><td>
+              <p>Zooms out from the center of the graph view.</p>
+            </td></tr><tr><td>
+		<p>Pan Left-Right</p>
+	</td><td>
+		<p>The coordinate along the X axis of the circle.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Pan Front-Rear</p>
+	</td><td>
+		<p>The coordinate along the Y axis of the circle. (No impact on a stereo configuration.)</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Pan Up-Down</p>
+	</td><td>
+		<p>The coordinate along the Z axis of the circle. (No impact on a configuration that does not have channels in the height layer.)</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Z axis slider is only available when the Speaker Panning mode is set to Steering, or when it is set to Balance-Fade and a 7.1.4 sound or bus is routed to a 7.1.4 bus.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Z axis is not represented in the graph view; its value is controlled and indicated solely by the Z axis slider.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch23s02.html" title="Working with speaker panning">Working with speaker panning</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch23s09.html" title="Routing audio signals to the center speaker">Routing audio signals to the center speaker</a>
+        </p></li></ul></div></div><HR></body></html>

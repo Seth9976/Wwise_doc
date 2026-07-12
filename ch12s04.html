@@ -1,0 +1,89 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>About properties in the project hierarchy</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch12.html" title="Building your sound and motion hierarchies"><link rel="prev" href="ch12s03.html" title="Building sound and motion hierarchies"><link rel="next" href="ch12s04s01.html" title="Defining absolute properties"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch12.html">Building your sound and motion hierarchies</a></span> &gt; <span class="breadcrumb-node">About properties in the project hierarchy</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="about_properties_in_project_hierarchy"></a>About properties in the project hierarchy</h2></div></div></div><p>Since you will be building complex structures in your game, you will need to understand how the different properties are applied to objects within the hierarchy. In Wwise, the properties of an object are divided into two categories: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Relative properties</strong></span> - Cumulative properties that are defined at each level of the hierarchy, for example pitch and volume. The sum of all these values determines the final property value. It is important to know that each relative property will be capped when it reaches either the minimum or maximum limit. The limits for each property are described below:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Volume: (-200 to +200) in dB</p></li><li class="listitem"><p>Pitch: (-2,400 to 2,400) in cents</p></li><li class="listitem"><p>Low-pass filter: (0 to 100) in percent</p></li><li class="listitem"><p>High-pass filter: (0 to 100) in percent</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Not all relative properties are available for all objects and on all platforms.</p></td></tr></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The cumulative behavior of filter properties, such as Low-pass filter and High-pass
+            filter, can be configured. Refer to <a class="xref" href="ch12s04s03.html" title="Understanding property filter behavior (LPF, HPF)">Understanding property filter behavior (LPF, HPF)</a>.</p></td></tr></table></div></li><li class="listitem"><p><span class="bold"><strong>Absolute properties</strong></span> - Properties that are defined at one level, usually the highest, in the hierarchy and then passed down to all child objects below it. For example, output routing for objects. While you can configure these settings at the highest level in the hierarchy, they will actually be applied at each level below.  An absolute property can be overridden at each level in the hierarchy. </p></li></ul></div><p>The following illustration demonstrates how the two types of property values work within the project hierarchy.</p><div class="mediaobject"><img src="Images/dgm_hierarchy_properties_absolute_relative.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Callout1.png"></div>
+            </td><td>
+              <p dir="ltr"><span class="bold"><strong>Absolute properties</strong></span>: In this example the
+              <span class="italic">Output Bus</span> is specified by the Property Container object. This
+              specifies the Output Bus for the Property Container object and all its descendants that do not
+              specify an Output Bus.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/Callout2.png"></div>
+            </td><td>
+              <p dir="ltr"><span class="bold"><strong>Relative properties</strong></span>: In this example
+              each object specifies a relative offset to the <span class="italic">Volume</span>
+              property. The sum of the property values is the Volume offset applied to the Sound object.</p>
+            </td></tr></tbody></table></div><p>After you have imported the assets into your project and organized them into a logical structure using the different object types, you can start defining the specific properties and behaviors of each asset.</p><p>Each object in Wwise has its own set of properties and behaviors that you can use to define and differentiate it. The properties, such as volume and pitch, define the characteristics of each object. The behaviors, such as looping and streaming, determine how the object is played back. </p><p>You can also define the properties and behaviors for all object types within the hierarchy. This allows you to control the properties of an entire group of objects, and to determine which objects within the group will be played back and in which order.</p><p>You can also apply certain Effects to the different objects to create that unique experience that you are aiming for. When applying Effects at the highest level in the hierarchy, it is important to note these Effects are actually applied at each level below.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="about_properties_in_project_hierarchy_property_indicators"></a>Property indicators</h3></div></div></div><p>You may notice that certain property values in both the Property and Contents Editors have one or more indicators beside them.  These indicators show whether the property value is linked to other active platforms, whether the property value is associated with RTPCs or States, and whether a Randomizer has been applied on the property value. </p><div class="mediaobject"><img src="Images/property_indicators.png"></div><p>The following table describes the indicators that are used in each of these situations:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+                <p>Indicator</p>
+              </th><th>
+                <p>Name</p>
+              </th><th>
+                <p>Description</p>
+              </th></tr></thead><tbody><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="7"><tr style="height: 23px"><td><img src="Images/Link_icon.png" width="7"></td></tr></table></div>
+              </td><td>
+                <p>Link</p>
+              </td><td>
+                <p>A property value that is linked to the corresponding values of other active game platforms.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="7"><tr style="height: 23px"><td><img src="Images/Unlink_icon.png" width="7"></td></tr></table></div>
+              </td><td>
+                <p>Unlink</p>
+              </td><td>
+                <p>A unique property value that is not linked to the corresponding values of other active game platforms. </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="7"><tr style="height: 23px"><td><img src="Images/Link_Half_icon.png" width="7"></td></tr></table></div>
+              </td><td>
+                <p>Partial Unlink</p>
+              </td><td>
+                <p>The property value for the current platform is linked, but one or more corresponding values of other active platforms is unlinked.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="9"><tr style="height: 23px"><td><img src="Images/RTPC_Indicator_On.png" width="9"></td></tr></table></div>
+              </td><td>
+                <p>RTPC - On</p>
+              </td><td>
+                <p>A property value that is tied to an in-game parameter value using RTPCs. </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="9"><tr style="height: 23px"><td><img src="Images/RTPC_Indicator_Off.png" width="9"></td></tr></table></div>
+              </td><td>
+                <p>RTPC - Off</p>
+              </td><td>
+                <p>A property value is not tied to an in-game parameter value.</p>
+              </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Off.png"></div>
+      </td><td>
+        <p>State Disabled</p>
+      </td><td>
+        <p>This property value is not tied to a State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_On.png"></div>
+      </td><td>
+        <p>State Enabled</p>
+      </td><td>
+        <p>A State Group is tied to this property value. This means, that the property in question, such as the Volume, may change according to the applied State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Mixed.png"></div>
+      </td><td>
+        <p>State Mixed</p>
+      </td><td>
+        <p>A State Group is tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="10"><tr style="height: 11px"><td><img src="Images/Modifier_Enable_icon.png" width="10"></td></tr></table></div>
+              </td><td>
+                <p>Randomizer - On</p>
+              </td><td>
+                <p>A property value to which a Randomizer effect has been applied.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="10"><tr style="height: 11px"><td><img src="Images/Modifier_Disable_icon.png" width="10"></td></tr></table></div>
+              </td><td>
+                <p>Randomizer - Off</p>
+              </td><td>
+                <p>A property value to which no Randomizer effect has been applied.</p>
+              </td></tr></tbody></table></div><p>
+        You can enable or disable the link and Randomizer features by right-clicking on a particular property value.  The RTPC, State, and Randomizer indicators can be double-clicked to open their respective view/tab where their settings are defined.
+      </p><p>For more information on linking/unlinking property values, using RTPCs, and randomizing property values, refer to the following sections:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch36s01.html#customizing_object_properties_per_platform" title="Customizing object properties per platform">Customizing object properties per platform</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch19s03.html" title="Controlling property values using Game Parameters">Controlling property values using Game Parameters</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch12s05.html" title="Enhancing playback by randomizing property values">Enhancing playback by randomizing property values</a>
+          </p></li></ul></div></div></div><HR></body></html>

@@ -1,0 +1,330 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Property Editor: Random Container and Sequence Container</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03.html" title="Containers hierarchy: sound and motion objects"><link rel="prev" href="ch61s01s03s01.html" title="Property Editor: Property Container"><link rel="next" href="ch61s01s03s03.html" title="Property Editor: Switch Container"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-node">Property Editor: Random Container and Sequence Container</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="random_sequence_container_property_editor"></a>Property Editor: Random Container and Sequence Container</h4></div></div></div><p>
+      The Property Editor contains the properties and behavior options for the selected Random or Sequence Container. Object properties determine the characteristics of the sound and motion objects when they are played in-game.  Object behaviors determine which sound and motion objects are played back at any given point in the game. 
+    </p><p>A Random Container is a group of one or more objects that are played back in a random order. A Sequence Container, on the other hand, is a group of one or more objects that are played back according to a specific playlist.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>An object, in this case, includes containers.</p></td></tr></table></div><p>The General properties include relative properties, such as volume and pitch, as well as behaviors. See <a class="xref" href="ch12s04.html" title="About properties in the project hierarchy">About properties in the project hierarchy</a> to understand the difference between relative and absolute properties.
+    </p><p>For a
+    description of the MIDI and Advanced properties, refer to <a class="xref" href="ch61s01s03s06.html" title="Common tabs and categories: Containers hierarchy objects">Common tabs and categories: Containers hierarchy objects</a>.</p><p>
+Refer to <a class="xref" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a> to learn about how voices are being processed, how they are being routed and where the different volumes and Effects are being applied.
+</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/pe_search.png"></div>
+    </td><td>
+        <p>Enter text in the search field to find specific properties or property groups. Results are displayed as you type. The search is not case-sensitive and searches all properties associated with an object, even if their category is not selected for display.</p>
+        <p>When a search is active, an <span class="bold"><strong>x</strong></span> appears at the far-right side of the field and all category buttons are unavailable. Click the <span class="bold"><strong>x</strong></span> to clear the search.</p>
+    </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_modified.png"></div>
+        <p>(Only Show Modified)</p>
+    </td><td>
+        <p>When selected, only properties that have been modified from their default value are displayed and all category filter buttons are unavailable. If a search is active, it is only applied to modified properties.</p>
+        <p>Modified properties are displayed with an orange band at the left side of the property list and at the left side of the corresponding category button.</p>
+    </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_display_options_arrow.png"></div>
+        <p>(Show/Hide Category Filters)</p>
+    </td><td>
+        <p>Opens a list of all categories associated with the object currently loaded in the
+            Property Editor. For each category selected in the list, a corresponding button is
+            displayed at the top of the list of properties. Select these buttons to display the
+            related properties. Ctrl+click or Shift+click to select multiple buttons.</p>
+        <p><span class="bold"><strong>Always Show Additional Properties</strong></span> expands the less
+            frequently used properties, which are collapsed by default.</p>
+    </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_more_options_off.png"></div>
+        <p>(More Options)</p>
+    </td><td>
+        <p>Opens the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Reset Expand/Collapse to Default</strong></span>: Returns to the default expansion.</p></li><li class="listitem"><p><span class="bold"><strong>Collapse All</strong></span>: Collapses all categories and groups in the Property Editor.</p></li><li class="listitem"><p><span class="bold"><strong>Expand All</strong></span>: Expands all categories and groups in the Property Editor.</p></li></ul></div>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+    <p>(Open Property Editor Settings)</p>
+  </td><td>
+    <p>Opens the <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> dialog, which allows you to configure which properties are available for display in the Property Editor.</p>
+  </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_popout_editor.png"></div>
+    <p>(Open in New Window)</p>
+  </td><td>
+    <p>Duplicates the Property Editor as a floating view. An instance of the editor remains in the Object Tab.</p>
+  </td></tr></tbody></table></div><div class="informaltable"><a name="wwiseobject_randomsequencecontainer_randomsequencecontainer"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Random Sequence Container</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Specific</strong></span>
+        </td></tr><tr><td>
+		<p>Initial Delay</p>
+	</td><td>
+		<p>Initial delay applied before playing. This delay will be added to parents and children Initial delay.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This delay changes the behavior of a container in Trigger rate mode as the delay of its children will be applied additionally to the Trigger rate duration.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+				 The Source Editor&#8217;s Play Cursor start position is not respected when there is an Initial Delay. For more information, refer to the 
+				<a class="link" href="ch61s01s06.html#play_cursor">Source Editor documentation</a>
+				.
+			</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Using the built-in parameters to control an RTPC can lead to problems if that RTPC is tied to Initial Delay or Priority. Built-in parameters are computed when a sound plays on a given game object, so they work great for most sound properties. Logical control of playback items like Initial Delay and Priority are not suited while using the built-in parameters to control an RTPC since their value is unknown at the moment the Play Action is posted.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 3600</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Random or Sequence</p>
+	</td><td>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Random</strong></span>: Defines the container as a Random Container, which means that objects within the container will be played back in a random order. There are two different modes of random playback: Standard and Shuffle.</p></li><li class="listitem"><p><span class="bold"><strong>Sequence</strong></span>: Defines the container as a Sequence Container, which means that objects within the container will be played according to a user-specified playlist.</p></li></ul></div>
+		<p>Default value: Random</p>
+	</td></tr><tr><td>
+		<p>Random type</p>
+	</td><td>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Standard</strong></span>: Keeps the pool of objects within the container intact. After an object is played, it is not removed from the possible list of objects that can be played and can therefore be repeated.</p></li><li class="listitem"><p><span class="bold"><strong>Shuffle</strong></span>: Removes objects from the pool after they have been played. This option avoids repetition of sounds until all objects have been played. The last object played cannot be repeated when the list is reset.</p></li></ul></div>
+		<p>Default value: Standard</p>
+	</td></tr><tr><td>
+		<p>Limit Repetition</p>
+	</td><td>
+		<p>Determines how many other objects must be played before an object can be repeated.</p>
+		<p>The behavior of this option is affected by whether you are in Standard or Shuffle mode.</p>
+		<p>In Standard mode, the object played is selected completely randomly, but the last x objects played are excluded from the list.</p>
+		<p>In Shuffle mode, when the container is looped, the last x objects played will be excluded from the list.</p>
+		<p>If you have a non-looping Random Container that is set to shuffle and continuous, the &#8220;Limit Repetition To&#8221; option has no effect on the playback of your container.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Limit Repetition To</p>
+	</td><td>
+		<p>Determines how many other objects must be played before an object can be repeated.</p>
+		<p>The behavior of this option is affected by whether you are in Standard or Shuffle mode.</p>
+		<p>In Standard mode, the object played is selected completely randomly, but the last x objects played are excluded from the list.</p>
+		<p>In Shuffle mode, when the container is looped, the last x objects played will be excluded from the list.</p>
+		<p>If you have a non-looping Random Container that is set to shuffle and continuous, the &#8220;Limit Repetition To&#8221; option has no effect on the playback of your container.</p>
+		<p>Default value: 1</p>
+		<p>Range: 1 to 999</p>
+	</td></tr><tr><td>
+		<p>Sequence At End of Playlist</p>
+	</td><td>
+		<p>Defines the playback behavior of the sequence after it has played the last object in the playlist. There are two options to choose from:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Restart</strong></span>: Plays the list in its original order, from start to finish, after the last object in the playlist is played.</p></li><li class="listitem"><p><span class="bold"><strong>Play in reverse order</strong></span>: Plays the list in reverse order, from last to first, after the last object in the playlist is played.</p></li></ul></div>
+		<p>Default value: Restart</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Mode</strong></span>
+        </td></tr><tr><td>
+		<p>Step or Continuous</p>
+	</td><td>
+		<p>Step: Plays only one object in the container each time it is played.</p>
+		<p>Continuous: Plays the complete list of objects in the container each time it is played. The container has to be stopped with a Stop Action if configured to loop indefinitely.</p>
+		<p>Default value: Step</p>
+	</td></tr><tr><td>
+		<p>Scope</p>
+	</td><td>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Global</strong></span>: All instances of the container used in the game are treated as one object so that repetition across game objects is avoided. For example, when a group of characters within your game all use the same sentences, you can use the Global option to ensure, using the Random, Shuffle, and Step features, that a different sentence will be spoken each time a character speaks.</p></li><li class="listitem"><p><span class="bold"><strong>Game object</strong></span>: Each instance of the container is treated as a separate entity and therefore no sharing occurs across game objects.</p></li></ul></div>
+		<p>Default value: Global</p>
+	</td></tr><tr><td>
+		<p>Always reset playlist</p>
+	</td><td>
+		<p>Determines whether playback continues or returns to the beginning of the playlist when a container is replayed after being stopped during playback.</p>
+		<p>If selected, the container returns to the beginning of the playlist. If unselected, the container will begin playback at the next object in the playlist.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Loop</strong></span>
+        </td></tr><tr><td>
+		<p>Loop</p>
+	</td><td>
+		<p>Enables controls that define the number of times the container will be played.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Infinite</p>
+	</td><td>
+		<p>Specifies that the container will be repeated indefinitely.</p>
+		<p>Default value: Infinite</p>
+	</td></tr><tr><td>
+		<p>No. of loops</p>
+	</td><td>
+		<p>The number of times the container will be played.</p>
+		<p>Default value: 2</p>
+		<p>Range: 1 to 32767</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Transitions</strong></span>
+        </td></tr><tr><td>
+		<p>Transitions</p>
+	</td><td>
+		<p>Enables controls that allow you to create and define a transition between the objects in the container.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Type</p>
+	</td><td>
+		<p>A list of transitions that can be applied between objects in the container.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Xfade (amp)</strong></span> - Adds a crossfade between two objects using constant amplitude.</p></li><li class="listitem"><p><span class="bold"><strong>Xfade (power)</strong></span> - Adds a crossfade between two objects using constant power.</p></li><li class="listitem"><p><span class="bold"><strong>Delay</strong></span> - Adds a silence between two objects.</p></li><li class="listitem"><p><span class="bold"><strong>Sample accurate</strong></span> - Creates seamless transitions with no latency between objects.</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Trigger rate</strong></span> - Determines the rate at which new objects within the container will be played. This option is useful for simulating rapid gun fire. Alternatively, you can use MIDI to post each bullet sound with greater precision. Refer to 
+					<a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=goingfurther__rapidgunfire.html" target="_blank">Simulating Rapid Gunfire</a>
+					 in the SDK documentation for details.
+				</p></li></ul></div>
+		<p>There are some limitations and restrictions when using Xfade, Sample accurate, and Trigger rate transitions. A couple of notable ones are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Blend and Switch Containers do not work with crossfades (Xfade). A Random/Sequence Container&#8217;s Xfade will fail when any of its child Blend or Switch Containers play; and</p></li><li class="listitem"><p>Fade outs of stop Actions do not propagate on containers using Xfade or Trigger rate transitions. Whenever a StopEvent is called on the container, with a fade out value that is longer than the current segment that&#8217;s playing, the sound will just cut off abruptly when that segment ends. The workaround to this is to use a Set Voice Volume action to create the fade and delay the Stop action.</p></li></ul></div>
+		<p>Default value: Xfade (amp)</p>
+	</td></tr><tr><td>
+		<p>Duration</p>
+	</td><td>
+		<p>The length of the crossfades or delay between clips. If Trigger rate is selected as the transition type, the duration defines the amount of time that will pass before the next sound is triggered.</p>
+		<p>The Duration slider is unavailable when the Sample Accurate option is selected.</p>
+		<p>The maximum duration of a crossfade is equal to half the duration of the sound. In cases where the crossfade time is longer than half the duration of the sound, the crossfade duration is automatically adjusted to the maximum allowed. This automatic adjustment is performed by the sound engine at runtime. Wwise does not limit or indicate that the crossfade time is too long for some of the sounds in the container.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 3600</p>
+	</td></tr></tbody></table></div><div class="informaltable"><a name="wwiseobject_randomsequencecontainer_general"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>General</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Specific</strong></span>
+        </td></tr><tr><td>
+		<p>Override Color</p>
+	</td><td>
+		<p>Enables the Color slider to change the color chip of the selected objects.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Color</p>
+	</td><td>
+		<p>Displays a square filled with either the object&#8217;s defined color, or if none is set, a randomly applied color. This key helps identify the object line displayed in the graph view.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 26</p>
+	</td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Voice</strong></span>
+        </td></tr><tr><td>
+		<p>Voice Volume</p>
+	</td><td>
+		<p>
+			The attenuation (level or amplitude) applied on the current object before it is routed to a bus or sent to an Auxiliary Bus. Refer to 
+			<a class="link" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the Voice Pipeline</a>
+			 for more information about volumes.
+		</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Voice Pitch</p>
+	</td><td>
+		<p>The playback speed of an audio structure, where:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Pitch 0 = Normal speed.</p></li><li class="listitem"><p>Pitch 1,200 = 2 x speed.</p></li><li class="listitem"><p>Pitch 2,400 = 4 x speed.</p></li><li class="listitem"><p>Pitch -1,200 = 0.5 speed</p></li><li class="listitem"><p>Pitch -2,400 = 0.25 speed</p></li></ul></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> 1,200 cents is equivalent to one octave.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -2400 to 2400</p>
+		<p>Units: Cents</p>
+	</td></tr><tr><td>
+		<p>Voice Low-pass Filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of low-pass filtering that has been applied, where 0 means no low-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Voice High-pass Filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates low frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of high-pass filtering that has been applied, where 0 means no high-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Make-up Gain</p>
+	</td><td>
+		<p>Volume gain in decibels (dB) applied to the voice, after all other volume adjustments.  The make-up gain is additive across the Containers.</p>
+		<p>You can select either a Horizontal Slider or Vertical Fader by right-clicking the Make-Up Gain setting.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a>
+			 to learn about how voices are being processed, how they are being routed and where the different volumes and Effects are being applied.
+		</p>
+		<p>
+			For more information about the Make-up Gain, refer to 
+			<a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness Normalization or Make-up gain to Adjust Volume</a>
+			.
+		</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12.  You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 96</p>
+		<p>Units: dB</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch35s01.html" title="Specifying the output routing for objects">Specifying the output routing for objects</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch12s04s02.html" title="Defining relative properties (volume, pitch, LPF, HPF)">Defining relative properties (volume, pitch, LPF, HPF)</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s01.html" title="Creating Random Containers">Creating Random Containers</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s02.html" title="Creating Sequence Containers">Creating Sequence Containers</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s03.html#adding_and_removing_objects_from_playlist" title="Adding and removing objects from playlists">Adding and removing objects from playlists</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s03.html#re_ordering_objects_in_playlist" title="Re-ordering objects in playlists">Re-ordering objects in playlists</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s03.html#playing_playlist" title="Playing playlists">Playing playlists</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s04.html#playing_one_object_within_container" title="Step play mode">Step play mode</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s04.html#playing_all_objects_within_container" title="Continuous play mode">Continuous play mode</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s02s05.html" title="Defining the scope of containers">Defining the scope of containers</a>
+        </p></li></ul></div></div><HR></body></html>

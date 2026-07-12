@@ -1,0 +1,171 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Transport Control</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s09s05.html" title="Generating SoundBanks - Stopped"><link rel="next" href="ch59s11.html" title="Paste Properties"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Transport Control</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="playback_controls_transport_control"></a>Transport Control</h2></div></div></div><p>When you select a Wwise object, it is loaded into the Transport Control where you can
+		audition it. Selectable objects are sounds, containers, Music Segments and Containers, and
+		Events (not Dialogue Events). With them, you can:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Audition an imported but unconverted version of a file. See <a class="xref" href="ch48s01.html#using_original_audio_files_during_playback" title="Using original audio files during playback">Using original audio files during playback</a>.</p></li><li class="listitem"><p>Specify objects to audition based on platform. See <a class="xref" href="ch48s01.html#including_excluding_audio_and_motion_content_for_playback" title="Including or excluding audio and motion content for playback">Including or excluding audio and motion content for playback</a>.</p></li><li class="listitem"><p>Use the <a class="xref" href="ch48.html#playback_control_area" title="Playback Control area">Playback Control area</a> to monitor the playback of fades and delays.</p></li><li class="listitem"><p>Audition any applied States, Switches, and RTPCs. See <a class="xref" href="ch48s04.html" title="Using game syncs during playback">Using game syncs during playback</a></p></li></ul></div><p>The Transport Control is a <a class="link" href="ch05s01.html" title="Working with views">view</a> you can open by selecting
+		<span class="bold"><strong>Views</strong></span> &gt; <span class="bold"><strong>Transport Control</strong></span> (Shift+T) from the menu bar.
+		Some layouts include the Transport Control by default. They are listed in <a class="xref" href="ch05s02.html" title="Working with layouts">Working with layouts</a>.</p><p>The Transport Control title bar displays the name and icon of a selected object.</p><p>To learn more about the Transport Control, see <a class="xref" href="ch48.html" title="Getting to know the Transport Control"><i>Getting to know the Transport Control</i></a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+						<p><span class="bold"><strong>Transport Controls</strong></span></p>
+					</td></tr><tr><td rowspan="10">
+						<p>(Name)</p>
+					</td><td>
+						<p>The name and icon for the Wwise object that has been loaded into the Transport Control. The following Wwise objects can be added to the Transport Control: </p>
+						<p>
+							<span class="bold"><strong>Event</strong></span><span class="inlinemediaobject"><img src="Images/Event_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong>Sound SFX </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Sound_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong> Sound Voice </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Voice_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong> Random Container </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Random_Container_icon.png" align="left"></span>
+						</p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong> Sequence Container </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Sequence_Container_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong> Blend Container </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Layer_container_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+						<p>
+							<span class="bold"><strong> Switch Container </strong></span>
+							<span class="inlinemediaobject"><img src="Images/Switch_Container_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+					  <p><span class="bold"><strong>Music Segment</strong></span>
+							<span class="inlinemediaobject"><img src="Images/Segment_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+					  <p><span class="bold"><strong>Music Playlist Container</strong></span>
+							<span class="inlinemediaobject"><img src="Images/playlist_icon.png" align="left"></span></p>
+					</td></tr><tr><td>
+					  <p><span class="bold"><strong>Music Switch Container</strong></span>
+							<span class="inlinemediaobject"><img src="Images/Music_Switch_Cont_icon.png" align="left"></span>
+						</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/icn_pin_diagonal_on.png"></div>
+						<div class="mediaobject"><img src="Images/icn_pin_diagonal_off.png"></div>
+						<p> (Pinned/Unpinned) </p>
+					</td><td>
+						<p>When selected, the currently loaded object is locked in the Transport Control, and new objects will not be loaded, even when you have other objects in the Property Editor.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Stop_Icon.png"></div>
+					</td><td>
+						<p>Stops playback.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Pause_icon.png"></div>
+					</td><td>
+						<p>Pauses playback. Clicking this button a second time will resume playback.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/Play_icon.png"></div>
+					</td><td>
+						<p>Plays the object loaded into the Transport Control.</p>
+						<p>
+  Hold Shift while clicking Play to have Wwise play the loaded sound while bypassing its properties. That is, somewhat like a PFL (Pre-Fader Listen) found in some DAWs, Wwise will play the object without its hierarchical properties (including such things as volume, pitch, filters, delays, Effects, Auxiliary Sends, Attenuation Curves, RTPC curves, States, positioning, and bus routing), but with its source edits (such as fades, trims, and loop points) still intact.
+  </p><div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p>If you use the Play - Bypass properties shortcut, the resulting sound might be uncomfortably loud or off-pitch.</p></td></tr></table></div><p>
+  Clicking on the Transport's Play button plays the clip from the Play Cursor's position. Clicking on the Play button while a Play Cursor continues to run will add another Play Cursor that will concurrently play from the same starting position as the first Play Cursor.
+</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_more_options_off.png"></div>
+						<div class="mediaobject"><img src="Images/btn_more_options_on.png"></div>
+						<p>(Transport Play Options)</p>
+					</td><td>
+						<p>Opens the Transport Play Options menu with the following options: </p>
+						<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Play Originals</strong></span> and <span class="bold"><strong>Play Converted</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Only Play Objects Included in
+										Platform</strong></span></p></li></ul></div>
+						<p>When <span class="bold"><strong>Play Originals</strong></span> is selected, the
+							object plays back in its original and pre-converted form. When <span class="bold"><strong>Play Converted</strong></span> is selected, the converted
+							version of the object is played back, if one exists.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you convert an audio file for a particular platform, it
+									is converted to meet the specific hardware requirements of that
+									platform. As a result, you may not be able to play back these
+									converted files in Wwise if the authoring tool is running on a
+									platform that does not support the file type.</p></td></tr></table></div>
+						<p>When <span class="bold"><strong>Only Play Objects Included in
+								Platform</strong></span> is selected, only objects included in the
+							selected platform are playable in the Transport Control.</p>
+						<p>Default values are <span class="bold"><strong>Play Originals</strong></span> and
+								<span class="bold"><strong>Only Play Objects Included in
+								Platform</strong></span> activated. If any of these values are changed,
+							the Transport Play Options button will be orange.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/delay_icon.png"></div>
+						<p>(Delay) </p>
+					</td><td>
+						<p>Indicates whether a delay has been applied to an Event Action or Random or Sequence
+							Container. When there is a delay, this icon becomes orange during the
+							delay period in the playback.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/fade_icon.png"></div>
+						<p>(Fade)</p>
+					</td><td>
+						<p>Indicates whether a Fade has been applied to an Event Action or Random or Sequence
+							Container. When there is a Fade, this icon becomes orange during the
+							fade period in the playback.</p>
+					</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_reset_icon_triangle.png"></div>
+		<p>(Reset Menu)</p>
+	</td><td>
+		<p>Opens the Reset menu with the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Reset All</strong></span> to reset all objects to their original settings.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Random and Sequence Containers</strong></span> to clear all random and sequence actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Game Parameters</strong></span> to clear all Game Parameters that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All States</strong></span> to clear all Set State actions for
+			objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Switches</strong></span> to clear all Set Switch actions
+			that have been set for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Mute</strong></span> to clear all mute actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Pitch</strong></span> to clear all pitch actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Volume</strong></span> to clear volume actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Bus Volume</strong></span> to clear volume actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Low-pass Filter</strong></span> to clear all Low-Pass Filter actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Bypass Effect </strong></span>to clear all bypass effects actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Effect</strong></span> to clear all set effect actions
+			that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Music Tracks Force Usage</strong></span> to clear forcing the playback of a specific track in the Soundcaster.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Source Editor Play Cursors</strong></span> to clear
+			manually triggered play cursors in the Source Editor. </p></li><li class="listitem"><p><span class="bold"><strong>Reset Attenuation Preview</strong></span> to reset the distance, angle, obstruction, occlusion, diffraction and transmission values set on the objects to their default values.</p></li></ul></div>
+	</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>Game Syncs</strong></span></p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_states.png"></div>
+					</td><td>
+						<p>Displays all the State Groups and States associated with the current object.</p>
+					</td></tr><tr><td>
+						<p>(State Group)</p>
+					</td><td>
+						<p>The name of each State Group assigned to the current object.</p>
+					</td></tr><tr><td>
+						<p>(State)</p>
+					</td><td>
+						<p>A list of corresponding states that you can modify during playback.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_switches.png"></div>
+					</td><td>
+						<p>Displays all the Switch Groups and Switches associated with the current object.</p>
+					</td></tr><tr><td>
+						<p>(Switch Group)</p>
+					</td><td>
+						<p>The name of each Switch Group associated with the current object.</p>
+					</td></tr><tr><td>
+						<p>(Switch)</p>
+					</td><td>
+						<p>A list of corresponding Switches that you can modify during playback.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_rtpcs.png"></div>
+					</td><td>
+						<p>Displays all the Game Parameters assigned to the current object in the Game Syncs area.</p>
+					</td></tr><tr><td>
+						<p>(Game Parameter Name)</p>
+					</td><td>
+						<p>The name of each Game Parameter assigned to the current object.</p>
+					</td></tr><tr><td>
+						<p>(Value)</p>
+					</td><td>
+						<p>The Game Parameter values that you can modify during playback to audition the RTPC.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_triggers.png"></div>
+					</td><td>
+						<p>Displays all the Triggers associated with the current music object in the Game Syncs area.</p>
+					</td></tr><tr><td>
+						<p>(Trigger Name)</p>
+					</td><td>
+						<p>The list of Triggers associated with the objects in the Soundcaster.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_play_arrow.png"></div>
+					</td><td>
+						<p>Calls the corresponding Stinger to play over the currently playing music object.</p>
+					</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch48s01.html" title="Setting playback properties">Setting playback properties</a></p></li><li class="listitem"><p><a class="xref" href="ch48s01.html#using_original_audio_files_during_playback" title="Using original audio files during playback">Using original audio files during playback</a></p></li><li class="listitem"><p><a class="xref" href="ch48s01.html#including_excluding_audio_and_motion_content_for_playback" title="Including or excluding audio and motion content for playback">Including or excluding audio and motion content for playback</a></p></li><li class="listitem"><p><a class="xref" href="ch48s01.html#resetting_in_transport_control" title="Resetting in the Transport Control">Resetting in the Transport Control</a></p></li><li class="listitem"><p><a class="xref" href="ch48s02.html" title="Pinning objects in the Transport Control">Pinning objects in the Transport Control</a></p></li><li class="listitem"><p><a class="xref" href="ch48s03.html" title="Playing, pausing, or stopping content">Playing, pausing, or stopping content</a></p></li><li class="listitem"><p><a class="xref" href="ch48s04.html#using_game_syncs_during_playback_enabling_states_during_playback" title="Enabling States during playback">Enabling States during playback</a></p></li><li class="listitem"><p><a class="xref" href="ch48s04.html#using_game_syncs_during_playback_assigning_switches_during_playback" title="Assigning Switches during playback">Assigning Switches during playback</a></p></li><li class="listitem"><p><a class="xref" href="ch48s04.html#changing_game_parameter_values_during_playback" title="Changing game parameter values during playback">Changing game parameter values during playback</a></p></li><li class="listitem"><p><a class="xref" href="ch48s04.html#calling_triggers_during_playback" title="Calling Triggers during playback">Calling Triggers during playback</a></p></li></ul></div></div><HR></body></html>

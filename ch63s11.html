@@ -1,0 +1,609 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Game Object 3D Viewer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s10.html" title="Voice Explorer"><link rel="next" href="ch63s11s01.html" title="Game Object 3D Viewer Options"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Game Object 3D Viewer</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="game_object_profiler_game_object_3d_viewer"></a>Game Object 3D Viewer</h2></div></div></div><p>The Game Object 3D Viewer is a three-dimensional dynamic visual representation of the game
+    objects (emitters and listeners) in a game.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+      By default in Wwise, you can switch to the Game Object Profiler layout by pressing <span class="bold"><strong>F12</strong></span>.
+    </p></td></tr></table></div><p>The Game Object 3D Viewer can be separated in three distinct sections: <a class="xref" href="ch63s11.html#game_object_3d_viewer_scene_graph" title="Scene Graph">Scene Graph</a>, <a class="xref" href="ch63s11.html#game_object_3d_viewer_3d_viewer" title="3D Viewer">3D Viewer</a>, and <a class="xref" href="ch63s11.html#game_object_3d_viewer_selection_properties" title="Selection Properties">Selection Properties</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+          <p>Game Object 3D Viewer</p>
+        </th></tr></thead><tbody><tr><td colspan="2" align="center">
+          <div class="mediaobject"><img src="Images/GameObject3DViewer_Sections.png"></div>
+        </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/Callout1.png"></div>
+          </td><td>
+            <p><span class="bold"><strong>Scene Graph</strong></span>: Shows a list of objects present in
+              the profiled game.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/Callout2.png"></div>
+          </td><td>
+            <p><span class="bold"><strong>3D Viewer</strong></span>: Shows a 3D representation of the profiled game.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/Callout3.png"></div>
+          </td><td>
+            <p><span class="bold"><strong>Selection Properties</strong></span>: Shows the properties of selected objects in the 3D Viewer.</p>
+          </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="game_object_3d_viewer_scene_graph"></a>Scene Graph</h3></div></div></div><p>The Scene Graph displays a list of Game Objects in the 3D Viewer.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_game_object_filter_on.png"></div>
+              <div class="mediaobject"><img src="Images/btn_game_object_filter_off.png"></div>
+              <p>(Enabled/Disabled)</p>
+            </td><td align="left">
+              <p>Select to enable all Game Object Filters in the Game Object
+                Filter list. When selected, the Game Object Filters and the Filtering Toolbar criteria
+                are applied to the Game Object List. When deselected, only the Filtering
+                Toolbar criteria are applied.</p>
+              <p>This button is selected by default.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If a Game Object Filter is not selected in the Game Object Filter list, it will not
+                  be enabled by selecting this button.</p></td></tr></table></div>
+            </td></tr><tr><td colspan="2" align="left">
+              <p><span class="bold"><strong>Game Object Filter</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/GameObject3DViewer_enable_disable_filter.png"></div>
+              <p>(Enabled/Disabled)</p>
+            </td><td align="left">
+              <p>Select to filter the Game Object List by name or ID. When a new filter is created, it is selected by default.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+              <p>(Selector)</p>
+            </td><td align="left">
+              <p>Allows you to create a new Game Object Filter by selecting
+                  <span class="bold"><strong>Name or ID</strong></span> and entering either
+                a game object name or ID. The filter is applied to the Game
+                Object List. </p>
+              <p>To remove a filter from the list, select the <span class="bold"><strong>Remove</strong></span> option.</p>
+            </td></tr><tr><td colspan="2" align="left">
+              <p><span class="bold"><strong>Game Object List</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/GameObject3DViewer_show_icon.png"></div>
+              <div class="mediaobject"><img src="Images/GameObject3DViewer_hide_icon.png"></div>
+              <p>(Shown/Hidden)</p>
+            </td><td>Shows/hides an object in the Game Object List from the 3D Viewer.</td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/pin_icon.png"></div>
+              <div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+              <p>(Pinned/Unpinned)</p>
+            </td><td>Pins/unpins an object in the Game Object List. A pinned object
+              is displayed in the list regardless of the Game Object Filter or its presence in the 3D Viewer.</td></tr><tr><td align="left">Emitting Voices</td><td>The number of voices emitted by the game object.</td></tr><tr><td align="left">Listening Voices</td><td>The number of voices listened to by the game
+              object. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_listeners.html" target="_blank">Integrating Listeners</a> for more
+              information.</td></tr><tr><td align="left">Virtual Voices</td><td>The number of virtual voices.</td></tr><tr><td align="left">ID</td><td>The ID of the Game Object, as specified at registration.</td></tr><tr><td align="left">Registered</td><td>The registration timestamp of the game object.
+              Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_gameobj.html#soundengine_gameobj_reg" target="_blank">Registering Game Objects</a> for more
+              information.</td></tr><tr><td align="left">Unregistered</td><td>The unregistration timestamp of the game object.
+              Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_gameobj.html#soundengine_gameobj_reg" target="_blank">Registering Game Objects</a> for more
+              information.</td></tr><tr><td align="left">Room ID</td><td>The ID of the Room that currently contains the Game Object. Room ID is only applicable for Spatial Audio Emitters and Spatial Audio Listeners. It is not applicable for Room Game Objects, nor for Game Objects that don't use Spatial Audio.</td></tr><tr><td colspan="2" align="left">
+              <p><span class="bold"><strong>Game Object List Context Menu</strong></span></p>
+            </td></tr><tr><td align="left">Add to Game Object Filters</td><td>Add the names of the selected game object(s) in the Game Object Filter section above.</td></tr><tr><td align="left">Hide Selected in 3D Viewer</td><td>Hide the selected game object(s) in the 3D Viewer.</td></tr><tr><td align="left">Show Only Selected in 3D Viewer</td><td>Show the selected game object(s) in the 3D Viewer and hide all other game objects.</td></tr><tr><td align="left">Show All in 3D Viewer</td><td>Show all the game objects of the list in the 3D Viewer.</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="game_object_3d_viewer_3d_viewer"></a>3D Viewer</h3></div></div></div><p>The 3D viewer is the middle section of the Game Object 3D Viewer. It shows a 3D representation of the profiled game.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>3D Viewer Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/View3D_Toolbar.png"></div>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Select Camera</strong></span>: Indicates the camera option currently being used. You can choose one of the following options:
+                    </p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                                <span class="bold"><strong>Perspective 1</strong></span> to switch to Camera 1, which you can move freely in the scene.
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Perspective 2</strong></span> to switch to Camera 2, which you can move freely in the scene.
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Top</strong></span> to position the camera above the scene.
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Bottom</strong></span> to position the camera below the scene. 
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Left</strong></span> to position the camera to the left of the scene. 
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Right</strong></span> to position the camera to the right of the scene. 
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Front</strong></span> to position the camera to the front of the scene. 
+                            </p></li><li class="listitem"><p>
+                                <span class="bold"><strong>Back</strong></span> to position the camera to the back of the scene. 
+                            </p></li></ul></div>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Reset Camera</strong></span>: Returns the camera to its default position.
+                    </p>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Locate Game Object</strong></span>: Displays a list of game objects from which you can choose one on which the camera will be centered.
+                    </p>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Follow Game Object</strong></span>: Sets the camera to follow the selected game object during capture.
+                    </p>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Frame All</strong></span>: Adjusts the Game Object 3D Viewer to show all followed game objects.
+                    </p>
+                </td></tr><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                </td><td>
+                    <p>
+                        <span class="bold"><strong>Display Options</strong></span>: Opens a context menu that you can use to select which categories are displayed or hidden in the Options Toolbar below.
+                    </p>
+                </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>3D Viewer Toolbar: Options</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                        <p>
+                            This toolbar displays the Game Object 3D Viewer options, allowing you to show and hide information in the 3D Viewer.
+                            See <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a> for further details.
+                        </p>
+                    </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/View3D_OptionsToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p>
+                            <span class="bold"><strong>View</strong></span>: Displays options about the 3D Viewer in general.
+                        </p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p>
+                            <span class="bold"><strong>Game Object</strong></span>: Displays options about game objects in the 3D Viewer.
+                        </p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p>
+                            <span class="bold"><strong>Acoustics</strong></span>: Displays options about Acoustics elements in the 3D Viewer.
+                        </p>
+                    </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/View3D_OptionsToolbarContextMenu.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p>
+                            <span class="bold"><strong>View Menu</strong></span>: Displays the options related to the View category. Each category has their own menu.
+                        </p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p>
+                            <span class="bold"><strong>Pin button</strong></span>: Adds or removes the option from the toolbar itself. This helps accessing frequently used options more easily. An option that doesn't have a pin button will be included in the option above when the latter is added to the toolbar.
+                        </p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>3D Viewer</p>
+            </td><td>
+              <p>A graphical representation of the relative locations of game
+                objects in a three-dimensional space.</p>
+              <p>The following camera movements are possible:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Hold the middle mouse button and drag to pan.</p></li><li class="listitem"><p>Use the mouse wheel or Alt+Right-click and drag to zoom.</p></li><li class="listitem"><p>Alt+click and drag to orbit the camera.</p></li><li class="listitem"><p>Right-click and drag to rotate (orient) the camera.</p></li><li class="listitem"><p>Hold the right mouse button and press WASD or the arrow keys to move the
+                      camera.</p></li><li class="listitem"><p>Hold the Shift key to move faster (only for walk movement).</p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="67"><tr style="height: 68px"><td><img src="Images/axis_indicator.png" width="67"></td></tr></table></div>
+              <p>(Axis indicator)</p>
+            </td><td>
+              <p>Indicates the camera orientation according to the three axes.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/View3D_Emitter.png"></div>
+            </td><td>
+              <p>Indicates an emitter Game Object.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/View3D_EmitterListener.png"></div>
+            </td><td>
+              <p>Indicates a Game Object that is both an emitter and a listener.</p>
+            </td></tr><tr><td align="left">
+              <p>Attenuation Radius and Cone</p>
+            </td><td>
+              <p>Visualization of the attenuation radius and cone of the emitted sound. If a sound has an attenuation, it has a max distance for its distance-driven curves. This distance is represented by the radius of a sphere around the emitter game object. If the attenuation also has a cone, the inner cone is represented in the 3D view as well. The angle of the inner cone corresponds to the inner cone value of the attenuation.</p>
+              <div class="mediaobject"><img src="Images/View3D_AttenuationRadiusCone.png"></div>
+            </td></tr><tr><td align="left">
+              <p>Direct Path</p>
+            </td><td>
+              <p>When a sound is playing from an emitter game object and a listener is within range, a direct path is drawn between them. Being within range means that the distance between the listener and the emitter is less than the attenuation radius.</p>
+              <div class="mediaobject"><img src="Images/View3D_DirectPath.png"></div>
+            </td></tr><tr><td align="left">
+              <p>Spread Cones</p>
+            </td><td>
+              <p>Visualization of the spread of the emitted sound. The angle of the spread changes depending on the Spread Attenuation Curve applied on the emitted sound. The size of the overall spread cone is adjustable in the <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a>.</p>
+              <p>Spread cones can also be applied by Spatial Audio, in which case they are displayed in other colors. Refer to <a class="link" href="ch63s11.html#sa_spread_cones">Spatial Audio Spread Cones</a> for further details.</p>
+              <div class="mediaobject"><img src="Images/View3D_SpreadCones.png"></div>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Spatial Audio</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/View3D_RoomEmitter.png"></div>
+            </td><td>
+              <p>Indicates a Game Object that is a Spatial Audio Room which is an Emitter and a
+                Listener.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/View3D_SpatialImageSource.png"></div>
+            </td><td>
+              <p>Indicates a Spatial Audio image source created with the Reflect plug-in Effect. They represent the position from where the reflected sound is emitted. They can come in three different colors depending on the order of reflection; first order, second order or higher orders.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/View3D_SpatialVirtualPosition.png"></div>
+            </td><td>
+              <p>Indicates the virtual position of a Spatial Audio emitter created from either diffraction or sound propagation through a Spatial Audio Portal. The virtual emitter icon takes the color of the path it is created from.</p>
+            </td></tr><tr><td align="center">
+              <p>Geometry</p>
+            </td><td>
+              <p>
+                Indicates geometry registered through Spatial Audio. They can appear as wire frames (1) or solid colored blocks (2) depending on the <span class="bold"><strong>Display as Wire Frame</strong></span> <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a>.
+              </p>
+              <p>
+                When grey, geometry is associated with a room and is not used for reflection or diffraction (a).
+              </p>
+              <p>When geometry is of other colors (b and c), they represent Spatial Audio Geometry. Sounds can reflect off, diffract from, and transmit through such geometries if they are configured to do so. The colors depend on the Acoustic Texture applied on each surface of the geometry. See <a class="xref" href="ch05s03.html" title="Setting colors">Setting colors</a> to learn more about how to set a Wwise object color. In (b) no Acoustic Texture is assigned. In (c) the Wood Deep Factory Acoustic Texture is assigned.</p>
+              <p>See also: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_apigeometry.html" target="_blank">Geometry</a></p>
+              <div class="mediaobject"><img src="Images/View3D_SpatialGeometry.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Portal</p>
+            </td><td>
+              <p>Indicates openings in Spatial Audio Rooms. They appear in the 3D Viewer as a colored ribbon. The sound can travel in the area that is not colored. The color of the Portal changes depending if it is opened or closed (Disabled). They can appear as wire frames (1) or solid colored blocks (2) depending on the <span class="bold"><strong>Display as Wire Frame</strong></span> <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a>.</p>
+              <p>See also: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=using_rooms_and_portals.html" target="_blank">Rooms and Portals</a></p>
+              <div class="mediaobject"><img src="Images/View3D_SpatialPortal.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Reflection Paths</p>
+            </td><td>
+              <p>These paths represent Reflect-enabled sound reflecting from Spatial Audio Geometry while traveling from emitters to the Spatial Audio Listener. We call order of reflection the number of surfaces a sound path reflects from before reaching the listener. Each order of reflections has a different color.</p>
+        <div class="informaltable"><table border="1" cellspacing="0" cellpadding="1" width="700"><tr><th>Color</th><th>Light Theme</th><th>Dark/Classic Theme</th></tr><tr><td>Red</td><td>1st order</td><td>4th order</td></tr><tr><td>Dark Orange</td><td>2nd order</td><td>3rd order</td></tr><tr><td>Light Orange</td><td>3rd order</td><td>2nd order</td></tr><tr><td>Yellow</td><td>4th order</td><td>1st order</td></tr></table></div>
+        <p>In the following image, which is using the light theme, we can see first order reflection paths in red and second order reflection paths in dark orange.</p>
+              <div class="mediaobject"><img src="Images/View3D_ReflectionPaths.png"></div>
+              <p>If the Geometry is diffraction-enabled, it is possible to observe diffracted reflection paths. There are two types of diffraction: view zone diffraction and shadow zone diffraction. At the edge of the Geometry, a percentage appears representing the amount of filtering applied to the reflected sound from the diffraction. The more filtering is applied, the more the path becomes transparent.</p>
+              <p>Shadow zone diffraction occurs when the reflection point is obstructed from the Spatial Audio Listener by a diffraction-enabled Geometry. </p>
+              <div class="mediaobject"><img src="Images/View3D_ReflectionPathsShadowZone.png"></div>
+              <p>View zone diffraction occurs when the diffraction-enabled Geometry ends. The reflection point snaps on the edge of the Geometry and a diffraction percentage and level appears on the path.</p>
+              <div class="mediaobject"><img src="Images/View3D_ReflectionPathsViewZone.png"></div>
+              <p>See also:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_apigeometry_er.html" target="_blank">Using the Geometry API for Simulating Early Reflections</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_apigeometry_diffract.html#spatial_audio_apigeometry_diffract_er" target="_blank">Geometric Diffraction of Early Reflections</a></p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <p>Diffraction and Transmission Paths</p>
+            </td><td>
+              <p>These paths represent diffraction and transmission-enabled sound traveling from Emitters to the Spatial Audio Listener positioned behind diffraction-enabled Geometry. The more a sound is filtered, the more the path becomes transparent.</p>
+              <p>On diffraction paths, each edge shows a percentage representing the amount of filtering applied to the sound from the diffraction edge. The following image shows geometric diffraction paths.</p>
+              <p>Transmission paths replace the direct path when the listener is behind a diffraction-enabled Geometry. A point on the surface of the geometry indicates that the transmission loss occurs due to the sound crossing a diffraction-enabled Geometry surface. The path might cross multiple surfaces, but only the greatest of the transmission loss values is applied on the sound and displayed on the path.</p>
+              <div class="mediaobject"><img src="Images/View3D_DiffractionPaths.png"></div>
+              <p>Transmission paths can also be caused by a sound crossing the walls of a room. In this case, "(Room)" is indicated under the transmission loss value. If the path crosses a room and a diffraction-enabled Geometry, the greater of the two values is shown on the transmission path.</p>
+              <div class="mediaobject"><img src="Images/View3D_TransmissionPathRoom.png"></div>
+              <p>Diffraction paths can be created on the edges of a portals. These paths are drawn differently to make the distinction with diffraction paths caused by diffraction-enabled Geometry.</p>
+              <div class="mediaobject"><img src="Images/View3D_PropagationPaths.png"></div>
+              <p>A diffraction path can be caused by both a portal and a diffraction-enabled Geometry, in which case it is displayed in both colors.</p>
+              <div class="mediaobject"><img src="Images/View3D_DiffractionAndPropagationPaths.png"></div>
+              <p>See also:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_apigeometry_diffract.html" target="_blank">Using the Geometry API for Simulating Diffraction and Transmission</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_roomsportals_apioverview.html#spatial_audio_roomsportals_modelingsoundpropagationfromotherrooms" target="_blank">Modeling Sound Propagation from Other Rooms</a></p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <p>Radial Emitter</p>
+            </td><td>
+              <p>Radial Emitters are shown with two spheres indicating their inner and outer radius. These radii determine the spread applied on the sound to simulate a radial sound source.</p>
+              <div class="mediaobject"><img src="Images/View3D_RadialEmitter.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Spatial Audio Spread Cones</p>
+            </td><td>
+              <p><a name="sa_spread_cones"></a>When the spread is produced by Spatial Audio, they can take different colors. In the following image, we can see (1) a Radial Emitter spread, (2) an obstructed Radial Emitter with different colored spread cones depending on the path being a diffraction or a transmission path, and (3) a spread cone constricted by the opening of a portal.</p>
+              <div class="mediaobject"><img src="Images/View3D_SpatialAudioSpread.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Room Extent</p>
+            </td><td>
+              <p>Room extent represents the volume of a room. It is used to measure the spread created by sounds transmitted through a room's walls. A room can only have an extent if its geometry is known by Spatial Audio. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_roomsportals_apiconfig.html#spatial_audio_roomsportals_apiconfigroomgeometry" target="_blank">Setting up Room Geometry</a> for further details. A convex shape is created from the vertices of that geometry. In the following image, you can see the extent of different room shapes.</p>
+              <div class="mediaobject"><img src="Images/View3D_RoomExtent.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Edge Receptors</p>
+            </td><td>
+              <p>Edge receptors are used by the ray casting engine to find potential intersections with diffraction edges. One or several edge receptors are associated with each diffraction edge.</p>
+              <div class="mediaobject"><img src="Images/View3D_EdgeReceptors.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Reflection Rays</p>
+            </td><td>
+              <p>Reflection rays are cast to sample the environment and find potential reflection paths.</p>
+              <div class="mediaobject"><img src="Images/go3dv_display_reflection_rays.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Diffraction Rays</p>
+            </td><td>
+              <p>Diffraction rays are cast to sample the environment and find potential diffraction paths.</p>
+              <div class="mediaobject"><img src="Images/go3dv_display_diffraction_rays.png"></div>
+            </td></tr><tr><td align="center">
+              <p>Emitter clusters</p>
+            </td><td>
+              <p>Emitter clusters group emitters based on distance to the listener and other criteria.</p>
+              <div class="mediaobject"><img src="Images/go3dv_display_emitter_clustering.png"></div>
+            </td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="game_object_3d_viewer_selection_properties"></a>Selection Properties</h3></div></div></div><p>The selection property panel is on the right of the Game Object 3D Viewer. It shows the properties of objects selected in the 3D Viewer. Selectable objects include Game Objects, Acoustic Paths, and Image Sources. For more information on how to select objects in the 3D Viewer, refer to <a class="xref" href="ch40s11.html#object_selection" title="Selecting objects in the 3D Viewer">Selecting objects in the 3D Viewer</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+              <p>Property</p>
+            </th><th>
+              <p>Description</p>
+            </th></tr></thead><tbody><tr><td colspan="2">
+              <p><span class="bold"><strong>Game Objects</strong></span></p>
+            </td></tr><tr><td>
+              <p>Type</p>
+            </td><td>
+              <p>The type of Game Object:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Listener: Listens to a sound source.</p></li><li class="listitem"><p>Distance Probe: An object that is used for distance calculations for a
+                      specified listener.</p></li><li class="listitem"><p>Emitter: Emits a sound source.</p></li><li class="listitem"><p>Virtual Position: The position of the game object that is created by
+                      diffraction or game object radius.</p></li><li class="listitem"><p>Room: A symbolic representation of a distinct acoustic environment within
+                      the simulation. Assigned to a game object, the room emits Reverb and Room
+                      Tone.</p></li></ul></div>
+            </td></tr><tr><td>
+              <p>Ray ID</p>
+            </td><td>
+              <p>The ID of the selected game object's position followed by the ID of its corresponding path, if there is one.</p>
+            </td></tr><tr><td>
+              <p>Position</p>
+            </td><td>
+              <p>The position of the Game Object</p>
+            </td></tr><tr><td>
+              <p>Input Channels</p>
+            </td><td>
+              <p>Indicates which channels are emitted by the Game Object if it only uses a subset of the possible source channels.</p>
+            </td></tr><tr><td>
+              <p>Emitting Voices</p>
+            </td><td>
+              <p>The number of voices emitted by the Game Object.</p>
+            </td></tr><tr><td>
+              <p>Listening Voices</p>
+            </td><td>
+              <p>The number of voices listened to by the Game Object.</p>
+            </td></tr><tr><td>
+              <p>Virtual Voices</p>
+            </td><td>
+              <p>The number of virtual voices.</p>
+            </td></tr><tr><td>
+              <p>Voice Names</p>
+            </td><td>
+              <p>The emitted voice names.</p>
+            </td></tr><tr><td>
+              <p>Registered</p>
+            </td><td>
+              <p>The registration timestamp of the Game Object.</p>
+            </td></tr><tr><td>
+              <p>Unregistered</p>
+            </td><td>
+              <p>The unregistration timestamp of the Game Object.</p>
+            </td></tr><tr><td>
+              <p>Outer Radius</p>
+            </td><td>
+              <p>The outer radius applied to the Game Object in game units.</p>
+            </td></tr><tr><td>
+              <p>Inner Radius</p>
+            </td><td>
+              <p>The inner radius applied to the Game Object in game units.</p>
+            </td></tr><tr><td>
+              <p>Room</p>
+            </td><td>
+              <p>The Room containing the selected Game Object.</p>
+            </td></tr><tr><td>
+              <p>Room Data</p>
+            </td><td>
+              <p>The monitoring data of the Room.</p>
+              <p>This data is only present if the selected Game Object is of type Room.</p>
+              <div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+                        <p>Property</p>
+                      </th><th>
+                        <p>Description</p>
+                      </th></tr></thead><tbody><tr><td>
+                        <p>Front</p>
+                      </td><td>
+                        <p>Front Room Orientation. Room orientation has an effect when the associated auxiliary bus is set with 3D Spatialization in Wwise, as 3D Spatialization implements relative rotation of the emitter (room) and listener.</p>
+                      </td></tr><tr><td>
+                        <p>Up</p>
+                      </td><td>
+                        <p>Up Room Orientation. Room orientation has an effect when the associated auxiliary bus is set with 3D Spatialization in Wwise, as 3D Spatialization implements relative rotation of the emitter (room) and listener.</p>
+                      </td></tr><tr><td>
+                        <p>Reverb Aux Bus</p>
+                      </td><td>
+                        <p>The reverb auxiliary bus that is associated with this room.</p>
+                      </td></tr><tr><td>
+                        <p>Reverb Level</p>
+                      </td><td>
+                        <p>The reverb control value for the send to Reverb Aux Bus. Valid range: (0.f-1.f).</p>
+                      </td></tr><tr><td>
+                        <p>Transmission Loss %</p>
+                      </td><td>
+                        <p>The transmission loss value for the Room, describing the average amount of sound energy dissipated by the walls of the room.</p>
+                      </td></tr><tr><td>
+                        <p>Aux Send Level</p>
+                      </td><td>
+                        <p>Send level for sounds that are posted on the room game object; adds reverb to ambience and room tones. Valid range: (0.f-1.f).</p>
+                      </td></tr><tr><td>
+                        <p>Prority</p>
+                      </td><td>
+                        <p>The prority of this room. Room priority is used by the room containment system to disambiguate cases where an object is inside several rooms at the same time. In this case, the room with the higher priority is selected.</p>
+                      </td></tr><tr><td>
+                        <p>Geometry Instance ID</p>
+                      </td><td>
+                        <p>The Geometry Instance which describes the size and shape of the Room.</p>
+                      </td></tr><tr><td>
+                        <p>Is a Reverb Zone</p>
+                      </td><td>
+                        <p>A Reverb Zone establishes a parent-child relationship between two Rooms and allows for sound propagation between them as if they were the same Room, without the need for a connecting Portal.</p>
+                      </td></tr><tr><td>
+                        <p>Parent Room</p>
+                      </td><td>
+                        <p>The Parent Room of the Reverb Zone.</p>
+                      </td></tr></tbody></table></div>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Diffraction Paths and Direct Paths</strong></span></p>
+            </td></tr><tr><td>
+              <p>Emitter</p>
+            </td><td>
+              <p>The Game Object emitting the source of this path.</p>
+            </td></tr><tr><td>
+              <p>Path Length</p>
+            </td><td>
+              <p>The length of the path in game units.</p>
+            </td></tr><tr><td>
+              <p>Transmission Loss %</p>
+            </td><td>
+              <p>The total transmission loss percentage applied on this path.</p>
+            </td></tr><tr><td>
+              <p>Diffraction %</p>
+            </td><td>
+              <p>The total diffraction percentage applied on this path.</p>
+            </td></tr><tr><td>
+              <p>Obstruction %</p>
+            </td><td>
+              <p>The total obstruction percentage applied on this path.</p>
+            </td></tr><tr><td>
+              <p>Occlusion %</p>
+            </td><td>
+              <p>The total occlusion percentage applied on this path.</p>
+            </td></tr><tr><td>
+              <p>Spread %</p>
+            </td><td>
+              <p>The percentage of spread applied on this path.</p>
+            </td></tr><tr><td>
+              <p>Aperture %</p>
+            </td><td>
+              <p>The smallest portal opening along the path. It restricts the maximum spread.</p>
+            </td></tr><tr><td>
+              <p>Gain</p>
+            </td><td>
+              <p>The propagation path gain. Includes volume tapering gain to ensure that diffraction paths do not cut in or out when the maximum diffraction angle is exceeded.</p>
+            </td></tr><tr><td>
+              <p>Hit Point</p>
+              <p>(Direct Paths with Transmission Loss Only)</p>
+            </td><td>
+              <p>The point where the path hits a geometry surface with the highest amount of transmission loss.</p>
+              <div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+                        <p>Property</p>
+                      </th><th>
+                        <p>Description</p>
+                      </th></tr></thead><tbody><tr><td>
+                        <p>Position</p>
+                      </td><td>
+                        <p>The position of the transmission hit point.</p>
+                      </td></tr><tr><td>
+                        <p>Transmission Loss %</p>
+                      </td><td>
+                        <p>The percentage of transmission loss at hit point.</p>
+                      </td></tr></tbody></table></div>
+            </td></tr><tr><td>
+              <p>Node</p>
+              <p>(Diffraction Paths Only)</p>
+            </td><td>
+              <p>A diffraction node in the path. Diffraction nodes are listed in order from listener to emitter.</p>
+              <div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+                        <p>Property</p>
+                      </th><th>
+                        <p>Description</p>
+                      </th></tr></thead><tbody><tr><td>
+                        <p>Position</p>
+                      </td><td>
+                        <p>The position of the diffraction edge.</p>
+                      </td></tr><tr><td>
+                        <p>Diffraction %</p>
+                      </td><td>
+                        <p>The diffraction percentage applied on this edge.</p>
+                      </td></tr><tr><td>
+                        <p>Portal</p>
+                      </td><td>
+                        <p>The node's Portal.</p>
+                      </td></tr></tbody></table></div>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Reflection Paths</strong></span></p>
+            </td></tr><tr><td>
+              <p>Emitter</p>
+            </td><td>
+              <p>Game Object emitting the sound of this Reflection path.</p>
+            </td></tr><tr><td>
+              <p>Distance</p>
+            </td><td>
+              <p>Length of the reflection path.</p>
+            </td></tr><tr><td>
+              <p>Level</p>
+            </td><td>
+              <p>Linear gain applied to the image source.</p>
+            </td></tr><tr><td>
+              <p>Diffraction %</p>
+            </td><td>
+              <p>Total diffraction percentage value of the reflection path.</p>
+            </td></tr><tr><td>
+              <p>Occlusion %</p>
+            </td><td>
+              <p>Total occlusion percentage value of the reflection path.</p>
+            </td></tr><tr><td>
+              <p>Reflection Order</p>
+            </td><td>
+              <p>The order of reflection.</p>
+            </td></tr><tr><td>
+              <p>Node</p>
+            </td><td>
+              <p>A reflection or diffraction node in the path. Nodes are listed in order from listener to emitter.</p>
+              <div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+                        <p>Property</p>
+                      </th><th>
+                        <p>Description</p>
+                      </th></tr></thead><tbody><tr><td>
+                        <p>Position</p>
+                      </td><td>
+                        <p>The position of the reflection point or the diffraction edge.</p>
+                      </td></tr><tr><td>
+                        <p>Diffraction %</p>
+                      </td><td>
+                        <p>The diffraction percentage applied on the diffraction edge.</p>
+                      </td></tr><tr><td>
+                        <p>Acoustic Texture</p>
+                      </td><td>
+                        <p>The Acoustic Texture of the surface at the reflection point.</p>
+                      </td></tr></tbody></table></div>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Image Sources</strong></span></p>
+            </td></tr><tr><td>
+              <p>Position</p>
+            </td><td>
+              <p>Position of the image source.</p>
+            </td></tr><tr><td>
+              <p>Level</p>
+            </td><td>
+              <p>Linear gain applied to the image source.</p>
+            </td></tr><tr><td>
+              <p>Game Object</p>
+            </td><td>
+              <p>The Game Object of the image source.</p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch63s11s02.html" title="Game Object 3D Viewer Keyboard Shortcuts">Game Object 3D Viewer Keyboard Shortcuts</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s11.html" title="Examining objects with the Game Object 3D Viewer">Examining objects with the Game Object 3D Viewer</a>
+        </p></li></ul></div></div></div><HR></body></html>

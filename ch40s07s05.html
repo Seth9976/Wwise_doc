@@ -1,0 +1,54 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Using profiler filter expressions</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40s07.html" title="Capturing data from the sound engine"><link rel="prev" href="ch40s07s04.html" title="Filtering in the profiling views"><link rel="next" href="ch40s07s06.html" title="Filtering the Capture Log"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-link"><a href="ch40s07.html">Capturing data from the sound engine</a></span> &gt; <span class="breadcrumb-node">Using profiler filter expressions</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="using_profiler_filter_expressions"></a>Using profiler filter expressions</h3></div></div></div><p>Most of the profiling views include a filter toolbar, which includes a text field. The specified text is used to filter the content, reducing the amount of information shown in the view and making it easier to find what you're looking for. The text filter can be used by simply typing text in it, and can also be used with advanced expressions, to better control the data filtered.</p><p>Refer to <a class="xref" href="ch40s07s06.html" title="Filtering the Capture Log">Filtering the Capture Log</a> to learn more about filtering.</p><p>Below are examples of expressions that can be used in the text field:</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="600"><tr><td><img src="Images/text_filtering.png" width="600"></td></tr></table></div><p>
+				</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="c1"><col class="c2"></colgroup><thead><tr><th align="left">Synopsis</th><th align="left">Description</th></tr></thead><tbody><tr><td><p>TEXT</p></td><td><p>Matches the beginning of words found in the source content. The matches
+										are not case sensitive.</p><p>The source content is matched to words with
+										non alpha numeric characters and case
+										changes.</p><p>For example, TEXT would match:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>TEXT</strong></span></p></li><li class="listitem"><p>This is some <span class="bold"><strong>TEXT</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>text</strong></span>ual</p></li><li class="listitem"><p>object_<span class="bold"><strong>text</strong></span></p></li><li class="listitem"><p>Object<span class="bold"><strong>Text</strong></span></p></li><li class="listitem"><p>some1<span class="bold"><strong>text</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Text</strong></span>ure</p></li></ul></div><p>TEXT would not match:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>context</p></li></ul></div>
+								</td></tr><tr><td><p>TEXT1 TEXT2</p><p>TEXT1 TEXT2 TEXT3</p></td><td><p>As above, but all of the words specified in the filter
+									toolbar must match in the source content.</p><p>For example,
+										TEXT1 TEXT2 would match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>text1 hello text2</p></li><li class="listitem"><p>text2 hello text1</p></li><li class="listitem"><p>text1_text2</p></li></ul></div><p>
+									</p><p>It would not match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>text1</p></li></ul></div><p>
+									</p></td></tr><tr><td><p>*TEXT</p><p>TE*XT</p></td><td><p>Wildcard case-insensitive match. Each wildcard can match 0 to
+									n characters. It can be used to match end characters of words,
+									or to match the beginning and end at the same time.</p><p>For
+										example, *TEXT would match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>con<span class="bold"><strong>text</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>text</strong></span></p></li></ul></div><p>
+									</p><p>*TEXT would not match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>text1</strong></span></p></li></ul></div><p>
+									</p></td></tr><tr><td>"TEXT"</td><td><p>Case-insensitive match, if and only if the source content matches exactly with the filter criteria.</p><p>"TEXT" would
+										match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>TEXT</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>text</strong></span></p></li></ul></div><p>
+									</p><p>"TEXT" would not match:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Some text</p></li><li class="listitem"><p>textual</p></li><li class="listitem"><p>context</p></li></ul></div><p>
+									</p></td></tr><tr><td><p>!TEXT</p><p>-TEXT</p></td><td><p>Excludes the specified matching source content from the
+										results.</p><p>This option can be used with any of the other
+										expressions in this table.</p><p>These filter criteria
+										would omit the following source content from the
+										results:</p><p>
+										</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>text</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>text</strong></span>ual</p></li><li class="listitem"><p>some <span class="bold"><strong>text</strong></span></p></li></ul></div><p>
+									</p><p>This can be combined to other filter expressions,
+										by simply adding ! or - in front of the
+									expression.</p></td></tr><tr><td>{67C4FB5B-764A-40CC-A754-1448D2B6E286}</td><td>Matches the specified GUID with source content
+									objects.</td></tr></tbody></table></div><p>
+			</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="c1"><col class="c2"></colgroup><thead><tr><th align="left">Prefixes</th><th align="left">Description</th></tr></thead><tbody><tr><td>sound:TEXT</td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Sound</strong></span> names. This match is not
+								case sensitive.</p></td></tr><tr><td><p>bus:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Bus</strong></span> and <span class="bold"><strong>Aux Bus</strong></span> names. This match is not case sensitive.</p></td></tr><tr><td><p>target:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Event's Target</strong></span> object names.
+								This match is not case sensitive.</p></td></tr><tr><td><p>event:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Event</strong></span> names. This match is not
+								case sensitive.</p></td></tr><tr><td><p>go:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Game Object </strong></span>names. This match
+								is not case sensitive. Also matches numerical <span class="bold"><strong>Game Object </strong></span>ID.
+							</p></td></tr><tr><td><p>fx:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>Effect </strong></span>names. This match is not
+								case sensitive.</p></td></tr><tr><td><p>rtpc:TEXT</p></td><td><p>Matches the beginning of words found in the source content, for
+									<span class="bold"><strong>RTPC driver </strong></span>names. RTPC drivers
+								include Game Parameters, LFO, Envelopes, Time Modulators and MIDI
+								parameters. This match is not case sensitive.</p></td></tr><tr><td>
+								<p>pipelineID:TEXT</p>
+							</td><td>
+								<p>Matches numerical <span class="bold"><strong>Pipeline ID</strong></span>. </p>
+							</td></tr><tr><td><p>PREFIX:*TEXT</p><p>PREFIX:"TEXT"</p><p>!PREFIX:TEXT</p><p>PREFIX:{67C4FB5B-764A-40CC-A754-1448D2B6E286}</p></td><td><p>"PREFIX" can be combined to the other filter expressions listed
+								above.</p></td></tr></tbody></table></div></div><HR></body></html>

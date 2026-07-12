@@ -1,0 +1,115 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Examining objects with the Game Object 3D Viewer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40.html" title="Profiling"><link rel="prev" href="ch40s10.html" title="Analyzing voices with the Voice Inspector"><link rel="next" href="ch40s12.html" title="Profiling Audio Objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-node">Examining objects with the Game Object 3D Viewer</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="examining_objects_with_game_object_3d_viewer"></a>Examining objects with the Game Object 3D Viewer</h2></div></div></div><p>The Game Object 3D Viewer allows you to see how objects interact and move relative to one another in real time. </p><div class="mediaobject"><img src="Images/game_object_3D_viewer.png"></div><p>Each game object is displayed in the Game Object 3D Viewer with an icon.
+			You can customize the view depending on the options you select in
+			the Options Toolbar. For example, you can add any cone
+			or radius that has been applied to a game object to the 3D Viewer. You can also
+			reduce the number of game objects in the view by using the show/hide button
+			in the Game Object List. The Game Object List can be filtered by using
+			the Game Object Filters.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Game objects are kept up to date only when being used. When a game object is registered but is not being used by any playing Event, Effect, or plug-in, the game object position might display the last known used position.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="enable_spatial_audio_objects"></a>Enabling Spatial Audio in the Game Object 3D Viewer</h3></div></div></div><p>To enable Spatial Audio visuals to appear in the Game Object 3D Viewer, you need
+				to profile them.</p><p> Spatial Audio profiling data includes visuals for the Spatial Audio Geometry and
+				Portals, new icons for Spatial Audio Emitters, Listeners and Rooms, as well as sound
+				paths and virtual objects created by Diffraction, Sound Propagation, and the Reflect
+				Effect plug-in.</p><div class="orderedlist"><p class="title"><b>To specify the data to be profiled:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Advanced Profiler, click the Settings icon.</p><p>The Profiler Settings dialog opens.</p></li><li class="listitem"><p>Select the Spatial Audio.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Close</strong></span>.</p><p>The data will be displayed in the Game Object 3D Viewer.</p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Spatial Audio uses a lot of resources. It is possible that some information,
+					e.g. the Spatial Audio Geometry, is missing from the Game Object 3D Viewer. Make
+					sure to increase the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=struct_ak_init_settings_acdb64f2cf024ac17b7db878eb135c523.html#acdb64f2cf024ac17b7db878eb135c523" target="_blank">uMonitorQueuePoolSize</a> from the 
+				    <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=struct_ak_init_settings.html" target="_blank">AkInitSettings</a>.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="specifying_data_to_be_displayed_in_game_object_3d_viewer"></a>Specifying the data to be displayed in the Game Object 3D
+				Viewer</h3></div></div></div><p>By toggling options in the 3D Viewer toolbar, you can have as
+				much or as little information displayed as you choose. The
+				more options you select, the more complex the view is.</p><div class="orderedlist"><p class="title"><b>To specify the information to be displayed in the Game Object 3D
+					Viewer:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Select from the four categories of options in the toolbar above the 3D Viewer.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>View</p></li><li class="listitem"><p>Text</p></li><li class="listitem"><p>Game Object</p></li><li class="listitem"><p>Acoustics</p></li></ul></div></li><li class="listitem"><p>Select an option from the chosen category.</p><p>The corresponding change will appear in the 3D Viewer.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For a description of each of the options see <a class="xref" href="ch63s11s01.html" title="Game Object 3D Viewer Options">Game Object 3D Viewer Options</a>.</p></td></tr></table></div></li><li class="listitem"><p>You can pin options that you use often to the toolbar by selecting their corresponding pin icon.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="working_with_camera"></a>Working with the camera</h3></div></div></div><p>To view game objects interacting with each other, you can move the 3D viewer camera in all three dimensions.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="130px" class="col2"><col width="590px" class="col3"></colgroup><thead><tr><th>Action</th><th>Control</th><th>Description</th></tr></thead><tbody><tr><td colspan="3" align="left">
+							<p><span class="bold"><strong>Perspective Camera</strong></span></p>
+							</td></tr><tr><td>Pan</td><td>
+								<p>Middle-mouse button+Drag</p>
+							</td><td>
+								<p>The camera pans left, right, up, and down.</p>
+							</td></tr><tr><td>Zoom</td><td>
+								<p>Mouse Wheel</p>
+								<p>Alt+Right-Click+Drag</p>
+							</td><td>
+								<p>The camera zooms in and out.</p>
+							</td></tr><tr><td>Orbit</td><td>
+								<p>Alt+Left-Click+Drag</p>
+							</td><td>
+								<p>The perspective camera rotates around the center point.</p>
+							</td></tr><tr><td>Rotate</td><td>
+								<p>Click+Drag</p>
+							</td><td>
+								<p>Orients the perspective camera.</p>
+							</td></tr><tr><td>Walk Navigation</td><td>
+								<p>Click+WASD</p>
+								<p>Click+Arrow Keys</p>
+							</td><td>
+								<p>The perspective camera moves in first-person, similar to how you would navigate in games.</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>W/Up: move forward</p></li><li class="listitem"><p>S/Down: move backward</p></li><li class="listitem"><p>A/Left: move left</p></li><li class="listitem"><p>D/Right: move right</p></li><li class="listitem"><p>E/Page Up: move up (relative to the world orientation)</p></li><li class="listitem"><p>Q/Page Down: move down (relative to the world orientation)</p></li></ul></div>
+								<p>Hold Shift to move faster.</p>
+							</td></tr><tr><td colspan="3" align="left">
+							<p><span class="bold"><strong>Orthographic Camera</strong></span></p>
+							</td></tr><tr><td>Pan</td><td>
+								<p>Middle-mouse button+Drag</p>
+								<p>Right-Click+Drag</p>
+							</td><td>
+								<p>The camera pans left, right, up, and down.</p>
+							</td></tr><tr><td>Zoom</td><td>
+								<p>Mouse Wheel</p>
+								<p>Alt+Right-Click+Drag</p>
+							</td><td>
+								<p>The camera zooms in and out.</p>
+							</td></tr><tr><td colspan="3" align="left">
+							<p><span class="bold"><strong>Camera Toolbar Options</strong></span></p>
+							</td></tr><tr><td>Reset Camera</td><td>
+								<div class="mediaobject"><img src="Images/btn_reset_icon.png"></div>
+							</td><td>
+								<p>The camera returns to its default position.</p>
+							</td></tr><tr><td>Locate Object</td><td>
+								<div class="mediaobject"><img src="Images/btn_locate_game_object.png"></div>
+							</td><td>
+								<p>The camera centers on the selected object from the list.</p>
+							</td></tr><tr><td>Follow Object</td><td>
+								<div class="mediaobject"><img src="Images/btn_follow_game_object_off.png"></div>
+							</td><td>
+								<p>The camera follows the object as it moves during capture.</p>
+								<p>Select the object to follow with the locate object action.</p>
+							</td></tr><tr><td>Frame All</td><td>
+								<div class="mediaobject"><img src="Images/btn_frame_all.png"></div>
+							</td><td>
+								<p>The camera adjusts to fit all game objects with in the 3D Viewer.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="using_game_object_filter"></a>Using the Game Object Filter</h3></div></div></div><p>By creating Game Object Filters, you can reduce the number of
+				game objects displayed in the Game Object List.
+				Filters can be enabled or disabled, and individual game objects
+				can be pinned to the Game Object List, allowing them to override
+				the filters.</p><div class="orderedlist"><p class="title"><b>To create a Game Object Filter:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Game Object Filter pane of the Game Object 3D
+						Viewer, click the Selector [&gt;&gt;] button.</p></li><li class="listitem"><p>Select the <span class="bold"><strong>Name or ID</strong></span>
+						option.</p></li><li class="listitem"><p>Enter the game object name or ID you would like to
+						retain in the Game Object List.</p><p>Game objects that do not have a name or ID matching
+						the filter are hidden from the Game Object List.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>An asterisk can be used as a wildcard in the
+							filter string.</p></td></tr></table></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Alternatively, you can select one or many items in
+							the Game Object List and then select <span class="bold"><strong>Add to Game Object
+								Filters</strong></span> in the shortcut menu. This
+							automatically creates a filter for each of the
+							selected game objects.</p><div class="mediaobject"><img src="Images/add_to_game_object_filters.png"></div></td></tr></table></div></li></ol></div><div class="orderedlist"><p class="title"><b>To delete a Game Object Filter:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Game Object Filter pane of the Game Object 3D
+						Viewer, click the Selector [&gt;&gt;] button to the left of
+						the filter you would like to delete.</p></li><li class="listitem"><p>Select the <span class="bold"><strong>Remove</strong></span>
+						option.</p><p>The filter is deleted.</p></li></ol></div><div class="itemizedlist"><p class="title"><b>To disable a Game Object Filter:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Game Object Filter pane of the Game Object 3D
+						Viewer, click the check box located to the left of the
+						filter you would like to disable.</p><p>The check box is unselected and all objects that were
+						removed by the filter reappear in the Game Object
+						List.</p></li></ul></div><div class="itemizedlist"><p class="title"><b>To disable all Game Object Filters:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Game Object 3D Viewer, click the <span class="inlinemediaobject"><img src="Images/btn_game_object_filter_on.png"></span> button.</p><p>The button turns gray and all objects that were removed by any of the Game
+						Object Filters reappear in the Game Object List.</p></li></ul></div><div class="itemizedlist"><p class="title"><b>To pin a game object:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Game Object List pane of the Game Object 3D
+						Viewer, click the <span class="inlinemediaobject"><img src="Images/unpin_icon.png"></span> button associated to the
+						game object you would like to pin. Multiselection is supported.</p><p>The pin button turns blue and the game object
+						remains in the Game Object List, regardless of the Game Object Filters.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="show_hide_game_object_3d_viewer"></a>Showing/hiding Game Objects from the 3D Viewer</h3></div></div></div><p>You can reduce the number of game objects displayed in the 3D Viewer by using the Game Object List.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>All game objects are shown by default.</p></li><li class="listitem"><p>Hide a game object by unselecting the <span class="inlinemediaobject"><img src="Images/GameObject3DViewer_show_icon.png"></span> button associated to the game object you would like to hide. Multiselection is supported.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Alternatively, you can select one or more game objects in the list, right-click and select <span class="bold"><strong>Hide Selected in 3D Viewer</strong></span>.</p><p>The shortcut menu also has two other options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Show Only Selected in 3D Viewer</strong></span>: Show all selected Game Objects and hide all the others from the 3D Viewer.</p></li><li class="listitem"><p><span class="bold"><strong>Show All in 3D Viewer</strong></span>: Show all Game Objects in the 3D Viewer, whether selected in the Game Object List or not.</p></li></ul></div><div class="mediaobject"><img src="Images/hide_selected_in_3d_viewer.png"></div></td></tr></table></div></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="object_selection"></a>Selecting objects in the 3D Viewer</h3></div></div></div><p>Select objects in the 3D viewer to view the list of properties in the Selection Property pane. Selectable objects include Game Objects, Acoustic paths, and Image Sources. For more information about the Selection Properties, refer to <a class="xref" href="ch63s11.html#game_object_3d_viewer_selection_properties" title="Selection Properties">Selection Properties</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="130px" class="col2"><col width="590px" class="col3"></colgroup><thead><tr><th>Action</th><th>Control</th><th>Description</th></tr></thead><tbody><tr><td>Single Select</td><td>
+								<p>Left-mouse button</p>
+							</td><td>
+								<p>Selects an object at the position of the mouse cursor in the 3D Viewer and displays the object properties in the Selection Property pane.</p>
+								<p>Replaces previously selected objects with the newly selected object.</p>
+								<p>If selected area contains multiple selectable objects close to each other, selects one of these objects. Repeating this action cycles through all possible selectable objects.</p>
+								<p>If selected area doesn't contain any selectable object, selection is cleared.</p>
+							</td></tr><tr><td>Multi-Select</td><td>
+								<p>Ctrl+Left-mouse button</p>
+							</td><td>
+								<p>Selects an object at the position of the mouse cursor in the 3D Viewer and displays the object properties in the Selection Property pane.</p>
+								<p>Adds the newly selected object to the selection.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch63s11s02.html" title="Game Object 3D Viewer Keyboard Shortcuts">Game Object 3D Viewer Keyboard Shortcuts</a>
+					</p></li></ul></div></div></div><HR></body></html>

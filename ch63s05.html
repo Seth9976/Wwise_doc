@@ -1,0 +1,91 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Object 3D Viewer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s04.html" title="Voice Inspector"><link rel="next" href="ch63s05s01.html" title="Audio Object 3D Viewer Options"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Audio Object 3D Viewer</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="audio_object_3d_viewer"></a>Audio Object 3D Viewer</h2></div></div></div><p dir="ltr">The Audio Object 3D Viewer provides detailed information about the positions of
+      Audio Objects relative to their listener position and orientation. It also shows the amount of
+      spread, represented by a sphere surrounding the listener. The information shown in this view
+      is based on the current profiler cursor time.</p><p dir="ltr">The Audio Object 3D Viewer works in conjunction with the <a class="xref" href="ch63s06.html" title="Audio Object List">Audio Object List</a>. In order to have content shown in the Audio Object 3D Viewer,
+      an Audio Object context needs to be selected in the Audio Object List. An Audio Object context
+      consists of a bus, a game object, and an Effect stage. The Audio Object contexts are
+      represented by the Visibility <span class="inlinemediaobject"><img src="Images/enable_filter_icon.png"></span> icons in the Audio Object List. Clicking Audio Objects in the Audio
+      Object List automatically selects a context in the Audio Object 3D Viewer. </p><p dir="ltr">The following controls are used to navigate in the 3D view:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li dir="ltr" class="listitem"><p dir="ltr">To orbit the camera position around the center, click, hold and drag the
+          left mouse button. (This is only possible in the Perspective camera mode.)</p></li><li dir="ltr" class="listitem"><p dir="ltr">To zoom: use the mouse wheel for incremental steps, or click, hold and drag
+          the right mouse button.</p></li><li dir="ltr" class="listitem"><p dir="ltr">To change camera presets: Use the camera menu button on the toolbar.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p dir="ltr">To have information in this view, you must enable <span class="bold"><strong>Audio
+          Object Data</strong></span> in the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> prior to capturing data,
+        and you must select a point in time from the capture. </p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+            </td><td>
+              <p>Click the View Settings icon in the upper right corner of the view to open the
+                  <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> dialog, where you can specify the type of
+                data to capture.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_camera.png"></div>
+            </td><td>
+              <p dir="ltr">Indicates the camera option currently being used.
+                You can choose any of the following options:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li dir="ltr" class="listitem"><p><span class="bold"><strong>Perspective</strong></span> to move freely around the
+                    center point.</p></li><li dir="ltr" class="listitem"><p><span class="bold"><strong>Top</strong></span> to position the camera above the
+                    listener.</p></li><li dir="ltr" class="listitem"><p><span class="bold"><strong>Front</strong></span> to position the camera in front of
+                    the listener.</p></li><li class="listitem"><p><span class="bold"><strong>Back</strong></span> to position the camera behind the listener.</p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_reset_icon.png"></div>
+            </td><td>
+              <p>Resets the zoom level to its default setting. When the <span class="bold"><strong>Perspective</strong></span> camera option is selected, this button also returns the
+                camera to its default position.</p>
+            </td></tr><tr><td align="center">
+              <p>
+                </p><div class="mediaobject"><img src="Images/btn_display_options_dots.png"></div><p>
+              </p>
+            </td><td>
+              <p>Opens the <a class="xref" href="ch63s05s01.html" title="Audio Object 3D Viewer Options">Audio Object 3D Viewer Options</a> dialog in which
+                you can select the options that you want to appear in the Audio Object 3D Viewer. </p>
+            </td></tr><tr><td align="left">
+              <p>Bus</p>
+            </td><td>
+              <p>The bus associated with the focused stage in the Audio Object List.</p>
+            </td></tr><tr><td align="left">
+              <p>Game Object</p>
+            </td><td>
+              <p>The game object associated with the focused stage in Audio Object List.</p>
+            </td></tr><tr><td align="left">
+              <p>Stage</p>
+            </td><td>
+              <p>The index of the focused stage from the Audio Object List that has been selected
+                to show its Audio Objects in the 3D viewer.</p>
+            </td></tr><tr><td align="left">
+              <p>3D Viewer</p>
+            </td><td>
+              <p>A graphical representation of the relative locations of Audio Objects in a
+                three-dimensional space.</p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch13s03.html" title="Understanding object-based audio">Understanding object-based audio </a></p></li><li class="listitem"><p><a class="xref" href="ch40s12.html" title="Profiling Audio Objects">Profiling Audio Objects</a></p></li></ul></div></div><HR></body></html>

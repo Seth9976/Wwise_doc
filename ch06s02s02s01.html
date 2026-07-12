@@ -1,0 +1,83 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Replacing content</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch06s02s02.html" title="Specifying Batch Rename settings"><link rel="prev" href="ch06s02s02.html" title="Specifying Batch Rename settings"><link rel="next" href="ch06s02s02s02.html" title="Removing content"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt01.html">Getting started</a></span> &gt; <span class="breadcrumb-link"><a href="ch06.html">Speeding up the way you work</a></span> &gt; <span class="breadcrumb-link"><a href="ch06s02.html">Using the Batch Rename</a></span> &gt; <span class="breadcrumb-link"><a href="ch06s02s02.html">Specifying Batch Rename settings</a></span> &gt; <span class="breadcrumb-node">Replacing content</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="replacing_content"></a>Replacing content</h4></div></div></div><p> The <span class="bold"><strong>Replace</strong></span> section is the first of three sections in the Batch Rename <span class="bold"><strong>Settings</strong></span> panel. In this section, users can replace text in object names or notes using very simple to very complex replacement patterns.</p><div class="orderedlist"><p class="title"><b>To replace content:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p> Specify in the <span class="bold"><strong>Apply To</strong></span> list if the rename
+              operation should apply to the listed objects' names or comments. </p></li><li class="listitem"><p> Select <span class="bold"><strong>Replace</strong></span>. </p></li><li class="listitem"><p> Enter the text to find, optionally in the form of a regular expression pattern,
+              in the <span class="bold"><strong>Find what</strong></span> field. </p></li><li class="listitem"><p> Enter the replacement text, optionally in the form of a regular expression back
+              reference, in the <span class="bold"><strong>Replace with</strong></span> field. </p></li><li class="listitem"><p> Select <span class="bold"><strong>Match case</strong></span> if you want to set the
+                <span class="bold"><strong>Find what</strong></span> entry to only find text with the same
+              letter case (upper or lower). </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                <span class="bold"><strong>Match case</strong></span> is not applicable to regular expression
+                patterns, which can be set as needed to recognize case. </p></td></tr></table></div></li><li class="listitem"><p> Select <span class="bold"><strong>Use Regular Expression</strong></span> if you want Wwise to interpret the <span class="bold"><strong>Find what</strong></span> and <span class="bold"><strong>Replace with</strong></span> entries as regular expression syntax. Refer to <a class="xref" href="ch06s02s04.html" title="Regular expression reference">Regular expression reference</a> for details on the syntax recognized by Wwise.</p></li><li class="listitem"><p> Specify in the <span class="bold"><strong>Occurrence</strong></span> list what to do if
+              there is more than one matching occurrence of the specified pattern: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                  <span class="bold"><strong>First</strong></span>: Include only the first matching
+                  occurrence. </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Last </strong></span>: Include only the last matching occurrence.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>All</strong></span>: Include every match of the pattern in the
+                  object name or comment. </p></li></ul></div></li><li class="listitem"><p> Review your changes then click <span class="bold"><strong>Rename All</strong></span> to
+              replace the content. </p></li></ol></div><div class="mediaobject"><a name="batch_regex_example_png"></a><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="575"><tr style="height: 240px"><td><img src="Images/batchrename_regex_example.png" height="240"></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h5 class="title"><a name="example_replacing_with_regular_expressions"></a>Example: Replacing with regular expressions</h5></div></div></div><p> Let's take the Wwise Sample Project as an example. In its Containers hierarchy,
+            the <span class="bold"><strong>MIDI Work Unit</strong></span> has dozens of MIDI objects that are,
+            in part, named by their corresponding absolute note: C00, D00, E00, F00, G00, A01, B01,
+            C02, and so on. But, imagine your project is transferred to your French studio where
+            they use fixed-doh solfège notes: Do, Re, Mi, Fa, Sol, La, Si, Do, and so on. The French
+            studio audio designers will appreciate it if we rename all these objects. Here is how
+            we'd do it: </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p> Press Ctrl and click on the <span class="bold"><strong>MIDI Work Unit</strong></span>. </p><p> The <span class="bold"><strong>MIDI Work Unit</strong></span> hierarchy expands,
+                revealing its many objects. </p></li><li class="listitem"><p> Select all the Kalimba, Sansula, Voice, and Wood Sansula objects in the Project
+                Explorer. Then open the shortcut menu and select <span class="bold"><strong>Batch
+                  Rename</strong></span>. </p><p> The Batch Rename view appears with the selected objects in its <span class="bold"><strong>Preview</strong></span> panel. </p></li><li class="listitem"><p> In the <span class="bold"><strong>Settings</strong></span> panel, if not already done,
+                set <span class="bold"><strong>Apply To</strong></span> to <span class="bold"><strong>Name</strong></span>. </p><p> The <span class="bold"><strong>Preview</strong></span> panel lists the current object
+                names under the <span class="bold"><strong>Before</strong></span> column. </p></li><li class="listitem"><p> Enable <span class="bold"><strong>Replace</strong></span> and, a few rows down, enable
+                  <span class="bold"><strong>Use Regular Expression</strong></span>. </p><p> The <span class="bold"><strong>Find what</strong></span> and <span class="bold"><strong>Replace with</strong></span> fields activate, ready to accept and interpret entries as
+                regular expressions. </p></li><li class="listitem"><p> Enter <code class="code">_C(#?\d{1,2})</code> in the <span class="bold"><strong>Find
+                  what</strong></span> field. Then click the <span class="bold"><strong>Preview</strong></span>
+                panel to see the forecast results. </p><p> All objects with names containing <code class="code">_C</code>, with="" or without #, and
+                followed by one or two digits are listed in the<span class="bold"><strong>
+                  After</strong></span> column without these matching characters, prompting an error
+                message, "<span class="bold"><strong>Resulting name is already used by a sibling object
+                  or is otherwise reserved</strong></span>", for a couple of these objects. All other
+                objects list a "<span class="bold"><strong>No replace match detected</strong></span>" message.
+              </p></li><li class="listitem"><p> Enter <code class="code">_Do$1</code> in the <span class="bold"><strong>Replace with</strong></span>
+                field. Then click the <span class="bold"><strong>Preview</strong></span> panel to see the
+                forecast results. Instead of just removing the matching C note, the <span class="bold"><strong>After</strong></span> column now lists Do in the place of the C. </p></li><li class="listitem"><p> Click <span class="bold"><strong>Rename All</strong></span> to apply the change. </p><p> For each matching object, names update and a <span class="bold"><strong>Successfully
+                  renamed</strong></span> message displays in the <span class="bold"><strong>Preview</strong></span> panel. </p></li></ol></div><p>We would then repeat the operation for the remaining six notes. </p><p>The following table gives a more detailed explanation of how our regular expression,
+            _C(#?\d{1,2}), with its replacement, _Do$1, worked.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th>
+                    <p>Before</p>
+                  </th><th>
+                    <p>After</p>
+                  </th><th>
+                    <p>Explanation</p>
+                  </th></tr></thead><tbody><tr><td>
+                    <p>VI_VOICE_33_C#6</p>
+                  </td><td>
+                    <p>VI_VOICE_33_Do#6</p>
+                  </td><td>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                          <span class="bold"><strong>_C</strong></span> literally matches _C in the name, just
+                          like a non-regular expression replacement would. </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>#?</strong></span>, zero or one match of #, matches the
+                          one instance of #. </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>\d{1,2}</strong></span>, one or two digits, matches the
+                          6. </p></li><li class="listitem"><p>The parentheses around #?\d{1,2} put the matching # and 6 in a
+                          group.</p></li></ul></div>
+                    <p>In the replacement:</p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> The match is replaced by <span class="bold"><strong>_Do</strong></span> and
+                        </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>$1</strong></span>, the first group, whose value is
+                            <span class="bold"><strong>#6</strong></span>. </p></li></ul></div>
+                  </td></tr><tr><td>
+                    <p>VI_WOOD_SANSULA_C00_HI</p>
+                  </td><td>
+                    <p>VI_WOOD_SANSULA_Do00_HI</p>
+                  </td><td>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                          <span class="bold"><strong>_C</strong></span> literally matches _C in the name, just
+                          like a non-regular expression replacement would. </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>#?</strong></span>, zero or one match of #, matches zero
+                          instances of #. </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>\d{1,2}</strong></span>, one or two digits, matches the
+                          00. </p></li><li class="listitem"><p>The parentheses around #?\d{1,2} put the matching 00 in a
+                          group.</p></li></ul></div>
+                    <p>In the replacement:</p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> The match is replaced by <span class="bold"><strong>_Do</strong></span> and
+                        </p></li><li class="listitem"><p>
+                          <span class="bold"><strong>$1</strong></span>, the first group, whose value is
+                            <span class="bold"><strong>00</strong></span>. </p></li></ul></div>
+                  </td></tr></tbody></table></div><br></div></div><HR></body></html>

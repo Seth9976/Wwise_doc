@@ -1,0 +1,78 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Contents Editor: Switch Container</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03.html" title="Containers hierarchy: sound and motion objects"><link rel="prev" href="ch61s01s03s09.html" title="Contents Editor: Sequence Container"><link rel="next" href="ch61s01s03s11.html" title="Contents Editor: Blend Container"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-node">Contents Editor: Switch Container</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="contents_editor_switch_container"></a>Contents Editor: Switch Container</h4></div></div></div><p>This Contents Editor provides a list of all objects in the Switch Container and gives you quick access to the properties associated with those objects.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Click the <span class="bold"><strong>Configure Columns</strong></span> shortcut (right-click) option from the column header band.</p>
+		<p>The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> opens. Specify which columns to display and their order.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot configure the columns for Source Contents Editors.</p></td></tr></table></div>
+	</td></tr><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Voice Pitch</p>
+	</td><td>
+		<p>The playback speed of an audio structure, where:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Pitch 0 = Normal speed.</p></li><li class="listitem"><p>Pitch 1,200 = 2 x speed.</p></li><li class="listitem"><p>Pitch 2,400 = 4 x speed.</p></li><li class="listitem"><p>Pitch -1,200 = 0.5 speed</p></li><li class="listitem"><p>Pitch -2,400 = 0.25 speed</p></li></ul></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> 1,200 cents is equivalent to one octave.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -2400 to 2400</p>
+		<p>Units: Cents</p>
+	</td></tr><tr><td>
+		<p>Voice Low-pass Filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of low-pass filtering that has been applied, where 0 means no low-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Notes</p>
+	</td><td>
+		<p>Any additional information about the object properties.</p>
+	</td></tr><tr><td>
+              <p>Assigned Objects</p>
+            </td><td>
+              <p>The list of objects within the Switch Container that have been assigned to a particular Switch or State. By assigning objects, you define which objects will be played for each Switch or state. If several objects are assigned to a Switch, they will all be played back simultaneously at runtime.</p>
+              <p>Each Switch/State is divided by a title bar that displays its name. The word &#8220;Default&#8221; appears within brackets on the title bar of the default Switch/State.</p>
+              <p>You can expand and collapse the State or Switch Groups by clicking the arrow on the title bar.</p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch22s03.html#defining_playback_behaviors_of_objects_within_switch_container" title="Defining the playback behaviors of objects within Switch Containers">Defining the playback behaviors of objects within Switch Containers</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s03.html#adding_and_removing_objects_from_switch_state" title="Adding and removing objects from Switches and States">Adding and removing objects from Switches and States</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch22s03.html#moving_objects_between_switches_states" title="Moving objects between Switches or States">Moving objects between Switches or States</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch36s01.html#customizing_object_properties_per_platform" title="Customizing object properties per platform">Customizing object properties per platform</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch12s05.html" title="Enhancing playback by randomizing property values">Enhancing playback by randomizing property values</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s02.html" title="Adding objects to the Contents Editor">Adding objects to the Contents Editor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s03.html" title="Re-ordering objects within the Contents Editor">Re-ordering objects within the Contents Editor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s05.html" title="Expanding or collapsing lists">Expanding or collapsing lists</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s06.html" title="Deleting objects">Deleting objects</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch47s16s07.html" title="Auditioning objects and sources within the Contents Editor">Auditioning objects and sources within the Contents Editor</a>
+        </p></li></ul></div></div><HR></body></html>

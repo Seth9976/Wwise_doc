@@ -1,0 +1,49 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Object Metadata</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s06.html" title="Audio Object List"><link rel="next" href="ch63s08.html" title="Audio Object Meter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Audio Object Metadata</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="audio_object_metadata"></a>Audio Object Metadata</h2></div></div></div><p dir="ltr">The Audio Object Metadata view provides detailed information about the metadata
+      of the currently selected Audio Object. In order to have content shown in this view, you must
+      select an Audio Object in the <a class="xref" href="ch63s06.html" title="Audio Object List">Audio Object List</a>. The information shown in
+      this view is based on the current profiler cursor time.</p><p dir="ltr">Metadata is a collection of information stored along with the Audio Object.
+      Metadata includes the positioning information from Wwise, as well as the custom Metadata
+      plug-in&#8217;s information inserted from the Containers hierarchy or the Busses
+      Hierarchy.</p><p dir="ltr">Metadata can be used by an Effect plug-in or by an endpoint to render Audio
+      Objects. For more information on Metadata, refer to <a class="xref" href="ch13s03s03.html" title="Metadata">Metadata</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p dir="ltr">To have information in this view, you must enable <span class="bold"><strong>Audio
+          Object Data</strong></span> in the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> prior to capturing data,
+        and you must select a point in time from the capture. </p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+            </td><td>
+              <p>Click the View Settings icon in the upper right corner of the view to open the
+                  <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a> dialog, where you can specify the type of
+                data to capture. </p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="left">
+              <p>Metadata</p>
+            </td><td>
+              <p>Shows the name of the metadata item and the names of individual values in the
+                metadata.</p>
+            </td></tr><tr><td>
+              <p>Value</p>
+            </td><td>
+              <p>Shows the value for a metadata item.</p>
+            </td></tr><tr><td>
+              <p>Source</p>
+            </td><td>
+              <p>Shows where this metadata was set in the Wwise project, if it is a user-applied
+                metadata. For example, if the metadata was added to a Property Container object, you would
+                see the Property Container object here. Double-clicking the object will open the view where
+                the metadata is defined.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch13s03.html" title="Understanding object-based audio">Understanding object-based audio </a></p></li><li class="listitem"><p><a class="xref" href="ch40s12.html" title="Profiling Audio Objects">Profiling Audio Objects</a></p></li></ul></div></div><HR></body></html>

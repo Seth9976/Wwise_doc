@@ -1,0 +1,268 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Soundcaster and Soundcaster Sessions</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s06.html" title="Sessions Tab"><link rel="prev" href="ch61s06.html" title="Sessions Tab"><link rel="next" href="ch61s06s01s01.html" title="Soundcaster Keyboard Shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s06.html">Sessions Tab</a></span> &gt; <span class="breadcrumb-node">Soundcaster and Soundcaster Sessions</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="playback_controls_soundcaster"></a>Soundcaster and Soundcaster Sessions</h3></div></div></div><p>
+          In the Wwise Soundcaster you can mix and play back audio and motion in real time in a simulation. This makes it possible for you to create prototypes and proofs of concept, as well as experiment and test your ideas.
+        </p><p>
+          Using the Soundcaster controls, you can make changes on the fly, edit and apply the properties for objects, Events, States, Switches, Triggers, and RTPCs, and then audition your changes, both in Wwise and in the game.  When you are connected to the game, you can play back sound and motion associated with selected game objects and audition your States, for example, in the game context.  You can also play back the pre-converted files if you want. Each Soundcaster layout that you have created can be saved as a Soundcaster session in the Sessions tab of the Project Explorer. A Soundcaster session is like a Preset that contains the Wwise objects and Events you have used in a simulation.
+        </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+                  <p>(Soundcaster Session Selector)</p>
+                </td><td>
+                  <p>A list of soundcaster sessions that currently exist within the project.</p>
+                  <p>The name of the selected soundcaster session is displayed in the corresponding field.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_clear.png"></div>
+                </td><td>
+                  <p>Removes all the modules in the Soundcaster and stops any playback.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Soundcaster Controls</strong></span></p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="38"><tr style="height: 37px"><td><img src="Images/Stop_Icon.png" width="38"></td></tr></table></div>
+                </td><td>
+                  <p>Stops playback of all Soundcaster modules.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="38"><tr style="height: 37px"><td><img src="Images/Pause_icon.png" width="38"></td></tr></table></div>
+                </td><td>
+                  <p>Pauses playback of all Soundcaster modules. Clicking this button a second time will resume playback.</p>
+                </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_more_options_off.png"></div>
+            <div class="mediaobject"><img src="Images/btn_more_options_on.png"></div>
+            <p>(Transport Play Options)</p>
+          </td><td>
+            <p>Opens the Transport Play Options menu with the following options: </p>
+            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Play Originals</strong></span> and <span class="bold"><strong>Play
+                    Converted</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Only Play Objects Included in Platform</strong></span></p></li></ul></div>
+            <p>When <span class="bold"><strong>Play Originals</strong></span> is selected, the object plays
+              back in its original and pre-converted form. When <span class="bold"><strong>Play
+                Converted</strong></span> is selected, the converted version of the object is played
+              back, if one exists.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you convert an audio file for a particular platform, it is converted to
+                  meet the specific hardware requirements of that platform. As a result, you may not
+                  be able to play back these converted files in Wwise if the authoring tool is
+                  running on a platform that does not support the file type.</p></td></tr></table></div>
+            <p>When <span class="bold"><strong>Only Play Objects Included in Platform</strong></span> is
+              selected, only objects included in the selected platform are playable in the Transport
+              Control.</p>
+            <p>Default values are <span class="bold"><strong>Play Originals</strong></span> and <span class="bold"><strong>Only Play Objects Included in Platform</strong></span> activated. If any of
+              those values are changed, the Transport Play Options button will be orange.</p>
+          </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 14px"><td><img src="Images/delay_icon.png" width="15"></td></tr></table></div>
+                  <p>(Delay) </p>
+                </td><td>
+                  <p>Indicates whether a delay has been applied to an Event Action or Random or Sequence Container. When there is a delay, this icon becomes blue during the delay period in the playback.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/fade_icon.png" width="15"></td></tr></table></div>
+                  <p>(Fade) </p>
+                </td><td>
+                  <p>Indicates whether a fade has been applied to an Event Action or Random or Sequence Container. When there is a fade, this icon becomes blue during the fade period in the playback.</p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/btn_reset_icon_triangle.png"></div>
+		<p>(Reset Menu)</p>
+	</td><td>
+		<p>Opens the Reset menu with the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Reset All</strong></span> to reset all objects to their original settings.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Random and Sequence Containers</strong></span> to clear all random and sequence actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Game Parameters</strong></span> to clear all Game Parameters that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All States</strong></span> to clear all Set State actions for
+			objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Switches</strong></span> to clear all Set Switch actions
+			that have been set for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Mute</strong></span> to clear all mute actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Pitch</strong></span> to clear all pitch actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Volume</strong></span> to clear volume actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Bus Volume</strong></span> to clear volume actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Voice Low-pass Filter</strong></span> to clear all Low-Pass Filter actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Bypass Effect </strong></span>to clear all bypass effects actions that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Set Effect</strong></span> to clear all set effect actions
+			that have been triggered for the objects.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Music Tracks Force Usage</strong></span> to clear forcing the playback of a specific track in the Soundcaster.</p></li><li class="listitem"><p><span class="bold"><strong>Reset All Source Editor Play Cursors</strong></span> to clear
+			manually triggered play cursors in the Source Editor. </p></li><li class="listitem"><p><span class="bold"><strong>Reset Attenuation Preview</strong></span> to reset the distance, angle, obstruction, occlusion, diffraction and transmission values set on the objects to their default values.</p></li></ul></div>
+	</td></tr><tr><td colspan="2"><p><span class="bold"><strong>Game Syncs</strong></span></p></td></tr><tr><td colspan="2">
+                  <p>States</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_show_all_on.png"></div>
+                </td><td>
+                  <p>When selected, displays all the State Groups and States that have been created in the project and not just the States and State Groups associated with the objects loaded into the Soundcaster.</p>
+                </td></tr><tr><td>
+                  <p>(State Group)</p>
+                </td><td>
+                  <p>The name of each State Group associated with the objects in the Soundcaster.</p>
+                </td></tr><tr><td>
+                  <p>(State)</p>
+                </td><td>
+                  <p>The name of each state associated with the currently selected State Group.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Switches</strong></span></p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_show_all_on.png"></div>
+                </td><td>
+                  <p>When selected, displays all the Switch Groups and Switches that have been created for the objects in the Soundcaster in the project and not just the Switches and Switch Groups associated with the object loaded into the Soundcaster.</p>
+                </td></tr><tr><td>
+                  <p>(Switch Group)</p>
+                </td><td>
+                  <p>The name of each Switch Group associated with the objects in the Soundcaster.</p>
+                </td></tr><tr><td>
+                  <p>(Switch)</p>
+                </td><td>
+                  <p>The name of each Switch associated with the Switch Groups.</p>
+                </td></tr><tr><td colspan="2">
+                  <p>RTPCs</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_show_all_on.png"></div>
+                </td><td>
+                  <p>When selected, displays all the RTPCs that have been created in the project and not just the RTPCs associated with the object loaded into the Soundcaster.</p>
+                </td></tr><tr><td>
+                  <p>(Game Parameter Name)</p>
+                </td><td>
+                  <p>The name of each Game Parameter in the object's hierarchy.</p>
+                </td></tr><tr><td>
+                  <p>(Value)</p>
+                </td><td>
+                  <p>The Game Parameter values that you can modify during playback to audition the RTPC effect.</p>
+                </td></tr><tr><td colspan="2">
+            <p>Triggers</p>
+          </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_show_all_on.png"></div>
+                </td><td>
+                  <p>Displays all the Triggers associated with the current music object in the Game Syncs area.</p>
+                </td></tr><tr><td>
+                  <p>(Trigger Name)</p>
+                </td><td>
+                  <p>The list of Triggers associated with the objects in the Soundcaster.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_play_arrow.png"></div>
+                </td><td>
+                  <p>Calls the corresponding Stinger to play over the currently playing music object.</p>
+                </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                  <p>Soundcaster Modules</p>
+                </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td rowspan="12">
+                  <p>(Title Bar)</p>
+                </td><td>
+                  <p>The name and icon of the project element that has been added as a Soundcaster module. The following project elements can be added to the Soundcaster:</p>
+                  <p>
+                    <span class="bold"><strong>Events</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Event_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Sound SFX</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Sound_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Sound Voice</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Voice_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Random Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Random_Container_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Sequence Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Sequence_Container_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Blend Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Layer_container_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Switch Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Switch_Container_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Property Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/ActorMixer_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Audio Bus</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/audio_bus_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Music Segment</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Segment_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Music Playlist Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/playlist_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Music Switch Container</strong></span>
+                    <span class="inlinemediaobject"><img src="Images/Music_Switch_Cont_icon.png" align="left" width="15"></span>
+                  </p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="26"><tr style="height: 26px"><td><img src="Images/Stop_Icon_small.png" width="26"></td></tr></table></div>
+                </td><td>
+                  <p>Stops playback of the Soundcaster module.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="26"><tr style="height: 26px"><td><img src="Images/Pause_icon_small.png" width="26"></td></tr></table></div>
+                </td><td>
+                  <p>Pauses playback of the Soundcaster module. Clicking this button a second time will resume paused playback.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="25"><tr style="height: 27px"><td><img src="Images/Play_icon_small.png" width="25"></td></tr></table></div>
+                </td><td>
+                  <p>Plays the selected Soundcaster module.</p>
+                  <p>
+  Hold Shift while clicking Play to have Wwise play the loaded sound while bypassing its properties. That is, somewhat like a PFL (Pre-Fader Listen) found in some DAWs, Wwise will play the object without its hierarchical properties (including such things as volume, pitch, filters, delays, Effects, Auxiliary Sends, Attenuation Curves, RTPC curves, States, positioning, and bus routing), but with its source edits (such as fades, trims, and loop points) still intact.
+  </p><div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p>If you use the Play - Bypass properties shortcut, the resulting sound might be uncomfortably loud or off-pitch.</p></td></tr></table></div><p>
+  Clicking on the Transport's Play button plays the clip from the Play Cursor's position. Clicking on the Play button while a Play Cursor continues to run will add another Play Cursor that will concurrently play from the same starting position as the first Play Cursor.
+</p>
+                </td></tr><tr><td align="center">
+                  <p>
+                    <span class="inlinemediaobject"><img src="Images/delay_icon.png" width="15"></span>
+                  </p>
+                  <p>(Delay)</p>
+                </td><td>
+                  <p>Indicates whether a delay has been applied to an Event Action or Random or Sequence Container. When there is a delay, this icon becomes blue during the delay period of the playback.</p>
+                </td></tr><tr><td align="center">
+                  <p>
+                    <span class="inlinemediaobject"><img src="Images/fade_icon.png" width="15"></span>
+                  </p>
+                  <p>(Fade)</p>
+                </td><td>
+                  <p>Indicates whether a Fade has been applied to an Event Action or Random or Sequence Container. When there is a Fade, this icon becomes blue during the fade period in the playback.</p>
+                </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td>
+    <p>Voice Volume</p>
+  </td><td>
+    <p>The attenuation (level or amplitude) applied on the current object before it is routed to a bus or sent to an Auxiliary Bus.  Refer to <a class="xref" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a> for more information about volumes. </p>
+    <p>Default value: 0<br>Range: -400 to 400<br>Units: dB</p>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+  </td></tr><tr><td>
+		<p>Voice Pitch</p>
+	</td><td>
+		<p>The playback speed of an audio structure, where:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Pitch 0 = Normal speed.</p></li><li class="listitem"><p>Pitch 1,200 = 2 x speed.</p></li><li class="listitem"><p>Pitch 2,400 = 4 x speed.</p></li><li class="listitem"><p>Pitch -1,200 = 0.5 speed</p></li><li class="listitem"><p>Pitch -2,400 = 0.25 speed</p></li></ul></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> 1,200 cents is equivalent to one octave.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -2400 to 2400</p>
+		<p>Units: Cents</p>
+	</td></tr><tr><td>
+		<p>Voice Low-pass Filter</p>
+	</td><td>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of low-pass filtering that has been applied, where 0 means no low-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr></tbody></table></div></div><HR></body></html>

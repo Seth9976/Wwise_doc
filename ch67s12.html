@@ -1,0 +1,122 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Matrix Reverb</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s11.html" title="Harmonizer"><link rel="next" href="ch67s13.html" title="Meter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Matrix Reverb</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_matrix_reverb_plug_in_effect"></a>Matrix Reverb</h2></div></div></div><p>To simulate the sound reflections in an acoustic space effect in game, you can use the Matrix Reverb plug-in. This plug-in effect has been created specifically for game developers who need optimized performance and great quality. Its unique controls allow you to balance the quality of the reverb with the CPU and memory usage so that you can achieve the best results within the restraints of your game and platform. Although this reverb plug-in uses less CPU than the RoomVerb effect plug-in, it has fewer controls available, which can make it more difficult to create realistic results.</p><p>The Matrix Reverb plug-in is built into Wwise. For information on applying it to objects,
+    see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>The Matrix Reverb plug-in considers all of the following concepts in its algorithm: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Direct sound</strong></span> - A sound wave that travels directly to the listeners ear and is not reflected off any surfaces. Most sounds are naturally reflected off walls or ceilings.</p></li><li class="listitem"><p><span class="bold"><strong>Early reflections</strong></span> - The first handful of sonic reflections produced by a sound. These reflections provide the brain with information about surfaces they have reflected from, and can give the listener an idea of the position of the sound source in relation to these surfaces.</p></li><li class="listitem"><p><span class="bold"><strong>Reverb tail</strong></span> - The remaining sonic reflections that occur as the sound waves continue to reflect off surface materials.</p></li><li class="listitem"><p><span class="bold"><strong>Echo density</strong></span> - The amount of echoes per second produced by the reverberation algorithm.</p></li><li class="listitem"><p><span class="bold"><strong>Modal density</strong></span> - Modes are the peaks in the frequency domain representation of an audio signal. Increasing the modal density improves the realism of the reverberation when simulating most acoustic spaces. Decreased modal density can cause ringing sounds.</p></li><li class="listitem"><p><span class="bold"><strong>Delay line</strong></span> - An algorithmic process that simulates the time taken for sound to propagate over varying distances. Increasing the number of delay lines increases the modal and echo density of the reverb.</p></li><li class="listitem"><p><span class="bold"><strong>Delay lengths</strong></span> - The time interval between the moment a sound enters and exits a delay line. Increasing delay lengths will augment the modal density but decreases the echo density.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Currently, this Effect does not work with ambisonics. If used on an ambisonic voice or Bus, it will not initialize.	
+	</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_matrix_reverb_properties"></a>Matrix Reverb properties</h3></div></div></div><p>Many of the Matrix Reverb properties can be edited in real time and can be mapped to specific Game Parameters using RTPCs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+		<p>Pre-delay</p>
+	</td><td>
+		<p>The delay that occurs before the signal enters the reverberation unit. A longer pre-delay time can be used to simulate larger rooms where the first echoes take longer to be heard. The first reflection will be heard at a time interval based on the sum of the pre-delay time and the shortest of the delay lines specified for the reverb. While pre-delay supports exclusive RTPC, it should only be used for initialization, before playback. If an RTPC is used to change pre-delay in real time during playback, the delay buffer will be continuously re-initialized, which will cause sudden silences or changes in the reverb signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 1</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Reverb Time</p>
+	</td><td>
+		<p>The time taken for the sound to decay by 60 dB from its original amplitude.</p>
+		<p>Default value: 4</p>
+		<p>Range: 0.1 to 10</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>HF Ratio</p>
+	</td><td>
+		<p>A rolloff factor to control the reverberation time for high relative to low frequencies. For example a ratio of 2 means that the reverberation time at Nyquist frequency will be twice as short as the reverberation time of DC, a 0 Hz oscillation frequency.</p>
+		<p>When the value of this ratio is less than 1, the high frequency reverberation time becomes longer than the lower frequencies. In some cases the HF Ratio used will be less than specified to avoid stability problems fundamental to the algorithm when using shorter reverb times combined with long delay times and higher HF ratio.</p>
+		<p>Default value: 2</p>
+		<p>Range: 0.5 to 10</p>
+	</td></tr><tr><td>
+		<p>Wet Level</p>
+	</td><td>
+		<p>Gain factor applied to reverberated sound.</p>
+		<p>Default value: -35</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Dry Level</p>
+	</td><td>
+		<p>Gain factor applied to direct path sound.</p>
+		<p>Default value: -96.3</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Process LFE</p>
+	</td><td>
+		<p>Determines whether the Effect is processed in the LFE channel or not. When selected, the Effect is always processed in the LFE channel. When unselected, either of the following occurs:</p>
+		<p>There will be silence in the LFE channel, if the Effect is used in an Auxiliary Bus.</p>
+		<p>The LFE channel will be unaffected, if the Effect is applied as an inserted effect.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Quality vs. Performance</p>
+	</td><td>
+		<p>A setting that specifies your preferences in the compromise between sound quality and performance (memory and processing) You can select one of the following:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Favor performance.</p></li><li class="listitem"><p>Balance quality and performance.</p></li><li class="listitem"><p>Favor quality</p></li><li class="listitem"><p>Maximize quality.</p></li></ul></div>
+		<p>Default value: Balance quality and performance</p>
+	</td></tr><tr><td>
+		<p>Delay Lengths Mode</p>
+	</td><td>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Default delay lengths</strong></span>: Specifies that the delay length&#8217;s default settings will be used.</p></li><li class="listitem"><p><span class="bold"><strong>Custom delay lengths</strong></span>: Specifies that a matrix comprised of individual delay lengths for each delay line will be used to change the &#8220;color&#8221; of the reverb and to add artistic effects. Longer delay lines increase the modal density of the reverb but also increase the memory usage, and decreases the echo density.</p></li></ul></div>
+		<p>Default value: Default delay lengths</p>
+	</td></tr><tr><td>
+		<p>Custom delay lengths time</p>
+	</td><td>
+		<p>The length of the delay for each delay line matrix entry, which all have their own default value.</p>
+		<p>Default value: 30.86</p>
+		<p>Range: 1 to 35</p>
+		<p>Units: ms </p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

@@ -1,0 +1,59 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Acoustic Texture Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s05.html" title="ShareSets Tab"><link rel="prev" href="ch61s05s04s03.html" title="Modulator Time"><link rel="next" href="ch61s06.html" title="Sessions Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05.html">ShareSets Tab</a></span> &gt; <span class="breadcrumb-node">Acoustic Texture Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="acoustic_texture_editor"></a>Acoustic Texture Editor</h3></div></div></div><p>The Acoustic Texture Editor is where you define properties for Acoustic Textures.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the Acoustic Texture.</p>
+							</td></tr><tr><td>
+								<p>Shared by</p>
+							</td><td>
+								<p>A list of objects that currently subscribe to the selected ShareSet.</p>
+							</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Any additional information about the Acoustic Texture.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Acoustic Texture Settings</strong></span></p>
+							</td></tr><tr><td>
+								<p>Frequency Absorption</p>
+							</td><td>
+								<p>The percentage by which sound within a relative frequency range is dampened. The adjustable percentage slider (0 to 100), for each of the following frequency bands, is potentially offset by the global slider at the bottom, ranging from -100 to 100%, to give the applied percentage value (-100 to 200) indicated in the boxes to the right of the frequency band sliders.</p>
+								<p>In the case of <a class="xref" href="ch67s20.html" title="Reflect">Reflect</a>, a negative value is understood as a zero. It indicates a full, undampened reflection, not a resonant one.</p>							            
+								<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Although the definitions below suggest absolute cutoffs between the different Frequency Absorption bands, there is some overlap.</p></td></tr></table></div>
+								<p>The Hz values for each band are defined by the plug-in, such as Reflect, that works with the Acoustic Texture.</p>
+								<p><span class="bold"><strong>Material Filtering</strong></span> in the Reflect plug-in is by default set to Favor Performance, which uses four times less CPU. You can change this setting to Favor Quality in the <a class="xref" href="ch67s20.html#wwise_reflect_properties" title="Reflect properties">Reflect properties</a>.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Frequency Bands</strong></span></p>
+							</td></tr><tr><td>
+		<p>Absorption Low</p>
+	</td><td>
+		<p>All frequencies below the Mid Low band.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Absorption Mid Low</p>
+	</td><td>
+		<p>All frequencies below the Mid High band but higher than the Low band.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Absorption Mid High</p>
+	</td><td>
+		<p>All frequencies below the High band but higher than the Mid Low band.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Absorption High</p>
+	</td><td>
+		<p>All frequencies higher than the Mid High band.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Absorption Offset</p>
+	</td><td>
+		<p>A slider value which moves all the values of the above frequency band sliders by that amount, giving an offset applied percentage value.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr></tbody></table></div><p>When using the Reflect plug-in and Material Filtering is set to Favor Performance in the <a class="xref" href="ch67s20.html#wwise_reflect_properties" title="Reflect properties">Reflect properties</a>, the Absorption Mid Low and Absorption Mid High together parameterize a single mid-absorption. This mid-absorption is calculated as sqrt(Absorption Mid Low * Absorption Mid High). For example, if Absorption Mid Low is 4 and Absorption Mid High is 25, the mid-absorption is 10 when Material Filtering is set to Favor Performance.</p></div><HR></body></html>

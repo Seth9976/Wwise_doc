@@ -1,0 +1,86 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Obs/Occ</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s12.html" title="CPU"><link rel="next" href="ch63s03s14.html" title="Listeners"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Obs/Occ</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="obstruction_occlusion"></a>Obs/Occ</h3></div></div></div><p>The Obs/Occ tab displays information about obstruction, occlusion, diffraction, transmission loss, spread and aperture affecting objects in your game.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Game Object</p>
+              </td><td>
+                <p>The unique ID of the game object.</p>
+              </td></tr><tr><td>
+                <p>Index/ID</p>
+              </td><td>
+                <p>The index of the sound position, and hashed ID of the Spatial Audio sound path, if applicable. The index (0-based) is that which was passed to the game object using the 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af723c685e94599084916e14874e5aaab.html" target="_blank">
+                    
+                      <code class="code">AK::SoundEngine::SetMultiplePositions()</code>
+                  </a>API. If a game object has only one position, then this column displays a dash ("-").
+                  In the case of Spatial Audio emitters using diffraction and transmission, you will see a position index followed by a string of characters, assigning a unique identifier to the sound path. This string of characters is a hash, which is generated and uniquely assigned by Spatial Audio. The hash can be cross-referenced with the Voice Inspector, to see the volume and filter contributions of the sound path, and with the Game Object 3d Viewer to view the sound path and see its virtual positions.
+                  </p>
+              </td></tr><tr><td>
+                <p>ListenerID</p>
+              </td><td>
+                <p>The unique ID for the listener.
+                                            </p>
+              </td></tr><tr><td>
+                <p>Obstruction</p>
+              </td><td>
+                <p>The percentage obstruction value on the game object for the given position index and listener.</p>
+              </td></tr><tr><td>
+                <p>Occlusion</p>
+              </td><td>
+                <p>The percentage occlusion value on the game object for the given position index and listener.</p>
+              </td></tr><tr><td>
+                <p>Diffraction</p>
+              </td><td>
+                <p>
+                The diffraction coefficient, expressed as a percentage (0-100%) for this particular sound position index and listener combination.
+                </p>
+              </td></tr><tr><td>
+                <p>Transmission Loss</p>
+              </td><td>
+                <p>
+                The transmission loss coefficient, expressed as a percentage (0-100%) for this particular sound position index and listener combination.
+                </p>
+              </td></tr><tr><td>
+                <p>Spread</p>
+              </td><td>
+                <p>
+                The source spread value assigned to this game object by Spatial Audio. Source spread is calculated from the radial extent of <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_radial_emitters.html" target="_blank">
+                    
+                      <code class="code">Radial Emitters</code>
+                  </a>, or if the game object is a Spatial Audio Room, from the extent of a portal with respect to the listener. 
+                  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                      The spread value calculated from the attenuation curve is not shown here, and if available for a given sound playing on the game object, will override the source spread value shown here. 
+                    </p></td></tr></table></div><p>
+                  </p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>The final spread value for any given sound can be visualized in the <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>, when Obstruction/Occlusion profiling data is enabled. Refer to <a class="xref" href="ch40s07s02.html" title="Specifying the type of information that will be captured">Specifying the type of information that will be captured</a>
+                    </p></td></tr></table></div><p>
+                </p>
+              </td></tr><tr><td>
+                <p>Aperture</p>
+              </td><td>
+                <p>
+                The aperture value represents the smallest portal opening traversed on a sound path from the emitter to listener, and has the effect of clamping the maximum possible spread for a particular sound. The spread for each sound is clamped to the aperture value, whether it is defined by the API, using the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_spatial_audio_a8c2e8f50769b6ae29dcbcb636e9c33f2.html" target="_blank">
+                    
+                      <code class="code">AK::SpatialAudio::SetGameObjectRadius()</code>
+                  </a>, or defined by a spread curve in an Attenuation ShareSet.
+                </p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Media Pool metadata</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch53.html" title="Working with the Media Pool"><link rel="prev" href="ch53s02.html" title="Similar Sound Search"><link rel="next" href="ch53s04.html" title="Auditioning audio files"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch53.html">Working with the Media Pool</a></span> &gt; <span class="breadcrumb-node">Media Pool metadata</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="media_pool_metadata"></a>Media Pool metadata</h2></div></div></div><p>The WAV (Waveform Audio File Format) is a standard digital audio file format used for
+            storing an audio bit stream. While the core of a WAV file contains the raw audio data,
+            it can also store a variety of metadata, providing additional information about the
+            audio content. This metadata can be found in different "chunks" within the file.</p><p>The following table lists the fields supported by the Media Pool, which include
+            standard WAV fields, Broadcast Wave Format (BWF) extension fields, and iXML
+            metadata:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="204px" align="center" class="c1"><col width="770px" class="c2"></colgroup><thead><tr><th align="center">Field Name</th><th>
+                            <p>Description</p>
+                        </th></tr></thead><tbody><tr><td align="center">Filename</td><td>
+                            <p>Name of the WAV file in the file system; a primary
+                                identifier.</p>
+                        </td></tr><tr><td align="center"><span class="bold"><strong>WAV</strong></span></td><td>
+                            <p>Standard audio file format.</p>
+                        </td></tr><tr><td align="center">Duration</td><td>
+                            <p>Total playing time of the audio samples, per channel.</p>
+                        </td></tr><tr><td align="center">Samples</td><td>
+                            <p>Total count of individual audio samples, per channel.</p>
+                        </td></tr><tr><td align="center">Data Size</td><td>
+                            <p>Size (in bytes) of the raw audio data within the 'data'
+                                chunk.</p>
+                        </td></tr><tr><td align="center">Loop Start</td><td>
+                            <p>Time of the beginning of a loop, in seconds; found in 'smpl'
+                                chunk.</p>
+                        </td></tr><tr><td align="center">Loop End</td><td>
+                            <p>Time of the end of a loop, returning to Loop Start, in seconds;
+                                found in 'smpl' chunk.</p>
+                        </td></tr><tr><td align="center">Marker Count</td><td>
+                            <p>Total number of defined markers (cue points) for specific time
+                                points in the audio; found in 'cue' chunk.</p>
+                        </td></tr><tr><td align="center">Sample Rate</td><td>Number of audio samples captured per second (Hz), indicating time
+                            resolution; found in the 'fmt' chunk.</td></tr><tr><td align="center">Bit Depth</td><td>Number of bits per audio sample, indicating amplitude resolution;
+                            found in the 'fmt' chunk. Wwise supports the following bit depths;
+                            16-bit integer, 24-bit integer, 32-bit float.</td></tr><tr><td align="center">Channels</td><td>Number of audio channels, for example, 1 for mono and 2 for stereo;
+                            found in the 'fmt' chunk.</td></tr><tr><td align="center">Channel Configuration</td><td>Specifies the channel arrangement and role of audio channels.</td></tr><tr><td align="center"><span class="bold"><strong>BWFXML</strong></span></td><td>
+                            <p>Root XML tag (&lt;BWFXML&gt;) enclosing iXML metadata within a WAV
+                                file.</p>
+                            <p>Open standard for embedding detailed XML-based production metadata
+                                in Broadcast Wave Format (BWF) files.</p>
+                            <p><a class="link" href="http://www.gallery.co.uk/ixml/" target="_blank">http://www.gallery.co.uk/ixml/</a></p>
+                        </td></tr><tr><td align="center">BWFXML/PROJECT</td><td>iXML field: Name of the associated project.</td></tr><tr><td align="center">BWFXML/FILE_UID</td><td>iXML field: Globally unique identifier for the audio file.</td></tr><tr><td align="center">BWFXML/ASWG</td><td>
+                            <p>iXML section: Sony PlayStation Studios' Audio Standards Working
+                                Group.</p>
+                            <p><a class="link" href="https://github.com/Sony-ASWG/iXML-Extension" target="_blank">https://github.com/Sony-ASWG/iXML-Extension</a></p>
+                        </td></tr><tr><td align="center">BWFXML/BWF</td><td>
+                            <p>iXML section (&lt;BEXT&gt;) for embedding or referencing BWF 'bext'
+                                chunk metadata.</p>
+                            <p><a class="link" href="https://tech.ebu.ch/docs/tech/tech3285.pdf" target="_blank">https://tech.ebu.ch/docs/tech/tech3285.pdf</a></p>
+                        </td></tr><tr><td align="center">BWFXML/USER</td><td>
+                            <p>iXML section for custom, user-defined metadata fields. Used by
+                                Strata to store additional information, including TRACKNAME and
+                                Universal Category System (UCS) fields, such as CATID and
+                                FXNAME.</p>
+                            <p><a class="link" href="https://universalcategorysystem.com/" target="_blank">https://universalcategorysystem.com/</a></p>
+                        </td></tr></tbody></table></div></div><HR></body></html>

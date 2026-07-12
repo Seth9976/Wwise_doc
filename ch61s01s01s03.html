@@ -1,0 +1,163 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Device Editor: Effects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s01.html" title="Audio Devices"><link rel="prev" href="ch61s01s01s02.html" title="Audio Device Editor: Others"><link rel="next" href="ch61s01s02.html" title="Busses hierarchy"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s01.html">Audio Devices</a></span> &gt; <span class="breadcrumb-node">Audio Device Editor: Effects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="audio_device_editor_effects"></a>Audio Device Editor: Effects</h4></div></div></div><p>In the Effects tab for Audio Devices, you can apply up to 255 Effects to an Audio Device if you have the Mastering Suite and/or the GME Real-time Voice Service plug-ins. Each plug-in provides a corresponding Effect type: Mastering Suite and Tencent GME Session, respectively.</p><p>The Mastering Suite has limitations. If you use the Mastering Suite Effect type, you can
+      only add a single Effect and you must add it to the final slot (other Effect types do not have
+      the same restrictions). Refer to <a class="xref" href="ch65s01.html" title="Mastering Suite">Mastering Suite</a> and <a class="xref" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a> for more information.</p><p>When applying Effects in Wwise, be aware that a voice can go through the following four
+      levels of Effects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Up to 255 Effects can be applied to a voice in the Containers 
+          hierarchy, but remember that child objects can also override their parent objects'
+          Effects.</p></li><li class="listitem"><p>Up to 255 Effects can be applied to each Audio Bus and Auxiliary Bus in the bus
+          hierarchy output path.</p></li><li class="listitem"><p>Up to 255 Effects can be applied to the final main bus (the Main Audio or the
+          Main Secondary Bus).</p></li><li class="listitem"><p>Up to 255 Effects can be applied to Audio Devices.</p></li></ul></div><p>This means that a chain of potentially many Effects will be applied to the final output.
+      You can do a couple of things to manage these Effects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use the Mode option to set the Effect as a ShareSet, through which you can adjust
+          multiple instances of the same Effect simultaneously. You can also set the Mode to Custom
+          to apply specific settings to an individual Effect instance, as needed.</p></li><li class="listitem"><p>Select the Bypass check box to temporarily remove the Effect, and clear the check box to restore
+          the Effect as desired. This is useful in testing, when you want to establish the impact of
+          the Effect. You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to
+          remove Effects for certain game scenarios or Events.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Effects on Audio Devices are slightly different from Effects on objects in the 
+        Containers hierarchy or Busses hierarchy. Be aware of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If you add a Mastering Suite Effect type, you can only add a single Effect to an Audio Device and you must add it to the
+              final Effect slot.</p></li><li class="listitem"><p>The available Effects are specific to Audio Devices.</p></li><li class="listitem"><p>Audio Device Effects don't support RTPCs.</p></li><li class="listitem"><p>Unlike Effects on objects in the Containers hierarchy, Audio Device Effects
+              cannot be rendered. For information on the Effects tab of objects
+              in the Containers hierarchy, see <a class="xref" href="ch61s01s05s08.html" title="Effects tab: Containers hierarchy objects">Effects tab: Containers hierarchy objects</a>.</p></li><li class="listitem"><p>On PS5, the Mastering Suite is processed on a dedicated unit of the platform just
+              before the audio is sent to the speakers or headphones. On other platforms, the
+              Mastering Suite is processed in software mode, in Wwise, at the final stage of the
+              audio pipeline.</p></li></ul></div></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+              <p>General</p>
+            </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+		<p>Notes</p>
+	</td><td>
+		<p>Any additional information about the object properties.</p>
+	</td></tr><tr><td align="center">
+    <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+  </td><td>
+    <p>Sets the display of the Property Editor's selected tabs. By default, there is one panel
+      that displays a single selected tab. You can, however, click a splitter button to display two
+      panels, divided horizontally or vertically. The selected option is highlighted with a
+      background color.</p>
+    <p>You cannot open the same tab in both panels. If you try to open the same tab in both
+      panels, the first panel automatically opens a different tab.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Press Ctrl and the number that corresponds to the number of the Property Editor
+              tab you want to view. For example, Ctrl+4 opens the RTPC tab if it is the fourth
+              visible tab.</p></li></ul></div><p>
+      </p></td></tr></table></div>
+  </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+              <p>Effects</p>
+            </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Effects</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+              <p>(Selector)</p>
+            </td><td>
+              <p>The list of Effects and corresponding instances that can be applied to Audio
+                Devices. You must first install at least one of the following plug-ins through the
+                Audiokinetic Launcher:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Mastering Suite plug-in provides Mastering Suite Effects.</p></li><li class="listitem"><p>The GME Real-time Voice Service plug-in provides Tencent GME Session
+                      Effects.</p></li></ul></div>
+              <p>To remove an Effect, select <span class="bold"><strong>None</strong></span>.</p>
+            </td></tr><tr><td>
+              <p>ID</p>
+            </td><td>
+              <p>The identification number assigned to the Effect. For Mastering Suite Effects, you can
+                only add a single Effect, and you must place it in the final slot.</p>
+            </td></tr><tr><td>
+              <p>Effect</p>
+            </td><td>
+              <p>The type of Effect applied to the Audio Device.</p>
+            </td></tr><tr><td>
+              <p>Name</p>
+            </td><td>
+              <p>The name of the Effect instance applied to the Audio Device. The Effect instance
+                can be a ShareSet or a custom instance of a ShareSet.</p>
+              <p>All Effect instances for the selected Effect type appear in the corresponding
+                list.</p>
+            </td></tr><tr><td>
+              <p>Prev.</p>
+              <div class="mediaobject"><img src="Images/btn_previous.png"></div>
+            </td><td>
+              <p>Selects the previous ShareSet in the Effects hierarchy.</p>
+            </td></tr><tr><td>
+              <p>Next</p>
+              <div class="mediaobject"><img src="Images/btn_next.png"></div>
+            </td><td>
+              <p>Selects the next ShareSet in the Effects hierarchy.</p>
+            </td></tr><tr><td>
+              <p>Mode</p>
+            </td><td>
+              <p>Determines whether the Effect instance is shared. The mode can either be:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                    <span class="bold"><strong>Define custom</strong></span>: Creates a custom Effect instance
+                    whose properties are not shared between objects. </p></li><li class="listitem"><p>
+                    <span class="bold"><strong>Use ShareSet</strong></span>: Uses a ShareSet of an Effect,
+                    which means that Effect properties can be shared between objects. </p></li></ul></div>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> If you add a custom Effect, then change the <span class="bold"><strong>Mode</strong></span> to <span class="bold"><strong>Use ShareSets</strong></span>, the Create
+                  ShareSet from Custom Object alert dialog opens. There are three options: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Convert</strong></span>: Opens the New Effect dialog, in
+                        which you can create a new ShareSet with the specified Effect Settings.
+                      </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Revert</strong></span>: Clears the Effect Editor and
+                        reverts the Effect to the original settings of the ShareSet. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Cancel</strong></span>: Returns to the unaltered Effect
+                        Editor with the Mode restored to Define custom. </p></li></ul></div></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>(Location in Hierarchy)</p>
+            </td><td>
+              <p>Displays the location of the ShareSet in the Effects hierarchy. If it is a
+                custom instance of the Effect, it shows the name of the custom instance.</p>
+            </td></tr><tr><td>
+		<p>Bypass</p>
+	</td><td>
+		<p>Determines whether the selected Effect instance is processed or not. Select the check box to remove the Effect. Clear the check box to restore the Effect.</p>
+		<p>This option is useful in the following scenarios:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When profiling your game, you can toggle this option on and off to establish the impact of an Effect on the sound design and on CPU usage as indicated in the Performance Monitor.</p></li><li class="listitem"><p>When customizing your sound design per platform, you can unlink the Effects on an object and then bypass certain Effects on that object for platforms with less processing power.</p></li></ul></div>
+		<p>You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to remove Effects for certain game scenarios or Events.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+              <p>Edit</p>
+              <div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+            </td><td>
+              <p>Opens the Effect Editor, in which you can edit the properties of the selected
+                Effect instance in real time.</p>
+            </td></tr><tr><td>
+		<p>Bypass All</p>
+	</td><td>
+		<p>Determines whether all Effects inserted on the object are processed or not. Select the check box to remove all Effects. Clear the check box to restore the Effects.</p>
+		<p>This option is useful in the following scenarios:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When profiling your game, you can toggle this option on and off to establish the impact of the Effects on the sound design and on CPU usage as indicated in the Performance Monitor.</p></li><li class="listitem"><p>When customizing your sound design per platform, you can unlink the Effects for an object and then bypass all Effects on that object for platforms with less processing power.</p></li></ul></div>
+		<p>You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to remove Effects for certain game scenarios or Events.</p>
+		<p>Default value: false</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

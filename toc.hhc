@@ -1,0 +1,3293 @@
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></HEAD>
+<BODY>
+<OBJECT type="text/site properties">
+<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise Help">
+<param name="Local" value="index.html"></OBJECT></LI>
+<UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Welcome to Wwise 2025.1.9">
+<param name="Local" value="pr01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting started">
+<param name="Local" value="pt01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise system requirements">
+<param name="Local" value="ch01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Starting and exiting Wwise">
+<param name="Local" value="ch02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="License Manager">
+<param name="Local" value="ch03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise interface basics">
+<param name="Local" value="ch04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the visual elements in Wwise">
+<param name="Local" value="ch04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding file length limitations and naming conventions">
+<param name="Local" value="ch04s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Personalizing your workspace">
+<param name="Local" value="ch05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with views">
+<param name="Local" value="ch05s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding Selection Channels and Meter Instances">
+<param name="Local" value="ch05s01s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with layouts">
+<param name="Local" value="ch05s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Docking and undocking views and Object Tabs">
+<param name="Local" value="ch05s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting colors">
+<param name="Local" value="ch05s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting user preferences">
+<param name="Local" value="ch05s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting authoring audio preferences">
+<param name="Local" value="ch05s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Speeding up the way you work">
+<param name="Local" value="ch06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Customizing keyboard shortcuts and commands">
+<param name="Local" value="ch06s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Batch Rename">
+<param name="Local" value="ch06s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Opening the Batch Rename view">
+<param name="Local" value="ch06s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying Batch Rename settings">
+<param name="Local" value="ch06s02s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Replacing content">
+<param name="Local" value="ch06s02s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Removing content">
+<param name="Local" value="ch06s02s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Inserting content">
+<param name="Local" value="ch06s02s02s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Applying Batch Rename changes">
+<param name="Local" value="ch06s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Regular expression reference">
+<param name="Local" value="ch06s02s04.html"></OBJECT></LI>
+</UL></UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting up your projects">
+<param name="Local" value="pt02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with projects">
+<param name="Local" value="ch07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing projects">
+<param name="Local" value="ch07s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Factory Assets">
+<param name="Local" value="ch07s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining your project settings">
+<param name="Local" value="ch07s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the general settings for your project">
+<param name="Local" value="ch07s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the conversion settings for your project">
+<param name="Local" value="ch07s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the SoundBank settings for your project">
+<param name="Local" value="ch07s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing messages that appear in the logs">
+<param name="Local" value="ch07s03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining environmental curves for your project">
+<param name="Local" value="ch07s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying project settings for External Sources">
+<param name="Local" value="ch07s03s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying network ports">
+<param name="Local" value="ch07s03s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining Custom Properties">
+<param name="Local" value="ch07s03s08.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying the default object values for your project">
+<param name="Local" value="ch07s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Troubleshooting your project">
+<param name="Local" value="ch07s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Project management tips and best practices">
+<param name="Local" value="ch07s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing platforms">
+<param name="Local" value="ch08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing languages">
+<param name="Local" value="ch09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with a team">
+<param name="Local" value="ch10.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dividing your project into Work Units">
+<param name="Local" value="ch10s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Viewing the status of your project files">
+<param name="Local" value="ch10s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Wwise with your source control system">
+<param name="Local" value="ch10s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Resolving project inconsistencies">
+<param name="Local" value="ch10s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing project files with a source control plug-in">
+<param name="Local" value="ch10s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source control tips and best practices">
+<param name="Local" value="ch10s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing media files in your project">
+<param name="Local" value="ch11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The importing process">
+<param name="Local" value="ch11s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="What media files are supported?">
+<param name="Local" value="ch11s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Wwise objects on import">
+<param name="Local" value="ch11s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The media file structure">
+<param name="Local" value="ch11s01s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise importer dialogs">
+<param name="Local" value="ch11s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio File Importer">
+<param name="Local" value="ch11s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voice Asset Importer">
+<param name="Local" value="ch11s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Conflict Manager">
+<param name="Local" value="ch11s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Completed">
+<param name="Local" value="ch11s02s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Stopped">
+<param name="Local" value="ch11s02s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing media files">
+<param name="Local" value="ch11s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing media files for SFX">
+<param name="Local" value="ch11s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing a folder containing media files">
+<param name="Local" value="ch11s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using a template to import media files">
+<param name="Local" value="ch11s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing media files for voice-overs">
+<param name="Local" value="ch11s03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing media files from tab delimited text files">
+<param name="Local" value="ch11s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing voice assets from a text file">
+<param name="Local" value="ch11s03s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Replacing media files">
+<param name="Local" value="ch11s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing file import issues">
+<param name="Local" value="ch11s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reorganizing media files within the Originals folder">
+<param name="Local" value="ch11s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Clearing your cache">
+<param name="Local" value="ch11s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Editing audio files in an external editor">
+<param name="Local" value="ch11s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating sources using plug-ins">
+<param name="Local" value="ch11s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media file management tips and best practices">
+<param name="Local" value="ch11s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing media asset IDs">
+<param name="Local" value="ch11s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File Manager">
+<param name="Local" value="ch11s12.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Work Units Tab">
+<param name="Local" value="ch11s12s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Files Tab">
+<param name="Local" value="ch11s12s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generated Files Tab">
+<param name="Local" value="ch11s12s03.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building your sound and motion hierarchies">
+<param name="Local" value="ch12.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="What is a sound object?">
+<param name="Local" value="ch12s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Grouping objects to create your Containers hierarchy">
+<param name="Local" value="ch12s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Types of containers">
+<param name="Local" value="ch12s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using containers and Property Containers in the Containers hierarchy">
+<param name="Local" value="ch12s02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building sound and motion hierarchies">
+<param name="Local" value="ch12s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="About properties in the project hierarchy">
+<param name="Local" value="ch12s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining absolute properties">
+<param name="Local" value="ch12s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining relative properties (volume, pitch, LPF, HPF)">
+<param name="Local" value="ch12s04s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Associating low-pass and high-pass filter values with their corresponding cutoff frequencies">
+<param name="Local" value="ch12s04s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding property filter behavior (LPF, HPF)">
+<param name="Local" value="ch12s04s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the dual-shelf filter">
+<param name="Local" value="ch12s04s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Enhancing playback by randomizing property values">
+<param name="Local" value="ch12s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building Containers hierarchy tips and best practices">
+<param name="Local" value="ch12s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building the structure of output busses">
+<param name="Local" value="ch13.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with busses">
+<param name="Local" value="ch13s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the properties of a bus">
+<param name="Local" value="ch13s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding object-based audio">
+<param name="Local" value="ch13s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Authoring Audio Objects">
+<param name="Local" value="ch13s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The role of the System Audio Device">
+<param name="Local" value="ch13s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Metadata">
+<param name="Local" value="ch13s03s03.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting up projects for DLC">
+<param name="Local" value="ch14.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Interacting with the game">
+<param name="Local" value="pt03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing Events">
+<param name="Local" value="ch15.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Types of Event Actions">
+<param name="Local" value="ch15s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Events">
+<param name="Local" value="ch15s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Events">
+<param name="Local" value="ch15s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event Limiting">
+<param name="Local" value="ch15s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event tips and best practices">
+<param name="Local" value="ch15s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing dynamic dialogue">
+<param name="Local" value="ch16.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dialogue Events">
+<param name="Local" value="ch16s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Dialogue Events">
+<param name="Local" value="ch16s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining Dialogue Event settings">
+<param name="Local" value="ch16s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Adding State Groups to Dialogue Events">
+<param name="Local" value="ch16s01s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Recreating the conditions in your game using paths">
+<param name="Local" value="ch16s01s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning objects to paths">
+<param name="Local" value="ch16s01s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning probability and weighting to paths">
+<param name="Local" value="ch16s01s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Dialogue Events">
+<param name="Local" value="ch16s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dialogue Events tips and best practices">
+<param name="Local" value="ch16s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with States">
+<param name="Local" value="ch17.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with State Groups">
+<param name="Local" value="ch17s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining transitions between States in a State Group">
+<param name="Local" value="ch17s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning States to objects and busses">
+<param name="Local" value="ch17s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining points within your music objects for State changes">
+<param name="Local" value="ch17s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Customizing State properties for objects">
+<param name="Local" value="ch17s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Copying State values between States">
+<param name="Local" value="ch17s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Copying State Groups between objects">
+<param name="Local" value="ch17s03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Example: creating a temporary loss of hearing effect">
+<param name="Local" value="ch17s03s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="States tips and best practices">
+<param name="Local" value="ch17s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Switches">
+<param name="Local" value="ch18.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Switch Groups">
+<param name="Local" value="ch18s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mapping Game Parameter values to Switches">
+<param name="Local" value="ch18s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switches tips and best practices">
+<param name="Local" value="ch18s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with RTPCs">
+<param name="Local" value="ch19.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding RTPCs in Wwise">
+<param name="Local" value="ch19s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing Game Parameters used in RTPCs">
+<param name="Local" value="ch19s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Controlling property values using Game Parameters">
+<param name="Local" value="ch19s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning Wwise properties to Game Parameters">
+<param name="Local" value="ch19s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mapping values in the RTPC graph">
+<param name="Local" value="ch19s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Copying RTPC curves">
+<param name="Local" value="ch19s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Removing RTPCs from the list">
+<param name="Local" value="ch19s03s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with LFOs">
+<param name="Local" value="ch19s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with envelopes">
+<param name="Local" value="ch19s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with time">
+<param name="Local" value="ch19s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Viewing game objects">
+<param name="Local" value="ch19s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using RTPCs to fine-tune the audio mix">
+<param name="Local" value="ch19s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="RTPC tips and best practices">
+<param name="Local" value="ch19s09.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Triggers">
+<param name="Local" value="ch20.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with States and State Groups for dynamic dialogue">
+<param name="Local" value="ch21.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using sounds and motion to enhance gameplay">
+<param name="Local" value="pt04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining object playback behaviors">
+<param name="Local" value="ch22.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the playback behavior for objects">
+<param name="Local" value="ch22s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Editing audio sources with the Source Editor">
+<param name="Local" value="ch22s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Resolving audio source integrity issues">
+<param name="Local" value="ch22s01s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the playback behavior for Random/Sequence Containers">
+<param name="Local" value="ch22s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Random Containers">
+<param name="Local" value="ch22s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Sequence Containers">
+<param name="Local" value="ch22s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating playlists">
+<param name="Local" value="ch22s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining how objects within a container are played">
+<param name="Local" value="ch22s02s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the scope of containers">
+<param name="Local" value="ch22s02s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the contents and behavior of Switch Containers">
+<param name="Local" value="ch22s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the contents and behavior of Blend Containers">
+<param name="Local" value="ch22s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Blend Tracks">
+<param name="Local" value="ch22s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing crossfades">
+<param name="Local" value="ch22s04s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auditioning the contents of Blend Containers">
+<param name="Local" value="ch22s04s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Object playback tips and best practices">
+<param name="Local" value="ch22s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining positioning">
+<param name="Local" value="ch23.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding positioning in Wwise">
+<param name="Local" value="ch23s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with speaker panning">
+<param name="Local" value="ch23s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Balance-Fade speaker panning illustrated">
+<param name="Local" value="ch23s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Steering speaker panning illustrated">
+<param name="Local" value="ch23s02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with 3D spatialized objects">
+<param name="Local" value="ch23s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Crossfading speaker panning and 3D spatialization">
+<param name="Local" value="ch23s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Applying positioning to busses">
+<param name="Local" value="ch23s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="3D positioning illustrated">
+<param name="Local" value="ch23s06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect of Spread">
+<param name="Local" value="ch23s06s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect of orientation">
+<param name="Local" value="ch23s06s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Focus">
+<param name="Local" value="ch23s06s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Panning a plane source onto a plane channel configuration">
+<param name="Local" value="ch23s06s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect of Height Spread">
+<param name="Local" value="ch23s06s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Panning on a 3D configuration">
+<param name="Local" value="ch23s06s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Applying attenuation">
+<param name="Local" value="ch23s07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing attenuation instances">
+<param name="Local" value="ch23s07s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Applying attenuation instances to objects">
+<param name="Local" value="ch23s07s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the attenuation curves for various object properties">
+<param name="Local" value="ch23s07s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Simulating directivity using cone-shaped boundaries">
+<param name="Local" value="ch23s07s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Previewing the attenuation settings of a sound">
+<param name="Local" value="ch23s07s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining spatial positioning using animation paths">
+<param name="Local" value="ch23s08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with animation paths">
+<param name="Local" value="ch23s08s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with points in the timeline">
+<param name="Local" value="ch23s08s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Routing audio signals to the center speaker">
+<param name="Local" value="ch23s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Positioning tips and best practices">
+<param name="Local" value="ch23s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding Bus Configurations">
+<param name="Local" value="ch23s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Speaker and headphone panning rules">
+<param name="Local" value="ch23s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using ambisonics">
+<param name="Local" value="ch23s13.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ambisonic component ordering">
+<param name="Local" value="ch23s13s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Preserving ambisonics to the final output">
+<param name="Local" value="ch23s13s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using ambisonics in plug-ins">
+<param name="Local" value="ch23s13s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Submixing ambisonics">
+<param name="Local" value="ch23s13s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Intermediate spatial representations for the purpose of 3D audio">
+<param name="Local" value="ch23s13s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting up a binauralizer Effect on an ambisonic bus">
+<param name="Local" value="ch23s13s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ambisonics versus Audio Objects">
+<param name="Local" value="ch23s13s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using ambisonics for head-mounted devices">
+<param name="Local" value="ch23s13s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cinematic VR">
+<param name="Local" value="ch23s13s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Environments">
+<param name="Local" value="ch23s13s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ambisonic panning versus VBAP">
+<param name="Local" value="ch23s13s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ambisonics as sound fields">
+<param name="Local" value="ch23s13s12.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing priority">
+<param name="Local" value="ch24.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding how Wwise prioritizes objects">
+<param name="Local" value="ch24s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Limiting object playback instances">
+<param name="Local" value="ch24s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining playback priority">
+<param name="Local" value="ch24s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing low-volume objects">
+<param name="Local" value="ch24s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Priority tips and best practices">
+<param name="Local" value="ch24s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing Effects">
+<param name="Local" value="ch25.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Effects with Audio Objects">
+<param name="Local" value="ch25s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Effects to implement environment acoustics">
+<param name="Local" value="ch25s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effects SoundBank management">
+<param name="Local" value="ch25s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Sidechain Mixes with Effects">
+<param name="Local" value="ch25s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effects tips and best practices">
+<param name="Local" value="ch25s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing motion">
+<param name="Local" value="ch26.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Methods for generating motion">
+<param name="Local" value="ch26s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Adding a Motion Bus to a Wwise Project">
+<param name="Local" value="ch26s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating motion for your game">
+<param name="Local" value="ch26s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating motion from existing sounds">
+<param name="Local" value="ch26s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Design considerations for Rumble and Advanced Haptics">
+<param name="Local" value="ch26s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating dedicated objects to generate motion">
+<param name="Local" value="ch26s03s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating motion for game controllers">
+<param name="Local" value="ch26s03s03s01.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Motion tips and best practices">
+<param name="Local" value="ch26s04.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating interactive music">
+<param name="Local" value="pt05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding interactive music">
+<param name="Local" value="ch27.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Interactive music project structure">
+<param name="Local" value="ch27s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building your interactive music hierarchies">
+<param name="Local" value="ch28.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="What is a Music Segment?">
+<param name="Local" value="ch28s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Types of containers">
+<param name="Local" value="ch28s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="About the properties of music objects">
+<param name="Local" value="ch28s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with music objects">
+<param name="Local" value="ch28s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building your music hierarchies tips and best practices">
+<param name="Local" value="ch28s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining music object playback behaviors">
+<param name="Local" value="ch29.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the time settings for music objects">
+<param name="Local" value="ch29s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the playback behavior of Music Playlist Containers">
+<param name="Local" value="ch29s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the contents and behaviors of Music Switch Containers">
+<param name="Local" value="ch29s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Interactive music playback tips and best practices">
+<param name="Local" value="ch29s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Music Tracks and Music Segments">
+<param name="Local" value="ch30.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Defining the playback behavior of Music Tracks">
+<param name="Local" value="ch30s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Adding sub-tracks to tracks">
+<param name="Local" value="ch30s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Associating sub-tracks with Switches and States">
+<param name="Local" value="ch30s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Populating tracks">
+<param name="Local" value="ch30s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Removing tracks and sub-tracks from segments">
+<param name="Local" value="ch30s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Snapping to increments in the Music Editor">
+<param name="Local" value="ch30s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with clips">
+<param name="Local" value="ch30s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auditioning segments">
+<param name="Local" value="ch30s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with cues">
+<param name="Local" value="ch30s09.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with MIDI">
+<param name="Local" value="ch31.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating MIDI instruments">
+<param name="Local" value="ch32.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with transitions">
+<param name="Local" value="ch33.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the transition matrix">
+<param name="Local" value="ch33s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting source and destination properties">
+<param name="Local" value="ch33s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using transition segments">
+<param name="Local" value="ch33s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Stingers">
+<param name="Local" value="ch34.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Finishing your projects">
+<param name="Local" value="pt06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing output">
+<param name="Local" value="ch35.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying the output routing for objects">
+<param name="Local" value="ch35s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the user-defined auxiliary sends">
+<param name="Local" value="ch35s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the game-defined auxiliary sends">
+<param name="Local" value="ch35s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using loudness normalization or make-up gain to adjust volume">
+<param name="Local" value="ch35s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the voice pipeline">
+<param name="Local" value="ch35s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Built-in Audio Devices">
+<param name="Local" value="ch35s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding secondary outputs">
+<param name="Local" value="ch35s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding HDR">
+<param name="Local" value="ch35s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using HDR">
+<param name="Local" value="ch35s09.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting the dynamics of HDR">
+<param name="Local" value="ch35s09s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the HDR threshold">
+<param name="Local" value="ch35s09s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with HDR ballistics">
+<param name="Local" value="ch35s09s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the HDR ratio">
+<param name="Local" value="ch35s09s01s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with amplitude envelopes">
+<param name="Local" value="ch35s09s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR and envelopes">
+<param name="Local" value="ch35s09s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR and the Wwise voice pipeline">
+<param name="Local" value="ch35s09s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR and distance attenuation">
+<param name="Local" value="ch35s09s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the HDR Window as an input variable">
+<param name="Local" value="ch35s09s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing audio file conversion">
+<param name="Local" value="ch35s10.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating audio Conversion Settings ShareSets">
+<param name="Local" value="ch35s10s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Removing DC offsets">
+<param name="Local" value="ch35s10s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning Conversion Settings ShareSets to Objects">
+<param name="Local" value="ch35s10s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio file conversion dialog">
+<param name="Local" value="ch35s10s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Converting audio files">
+<param name="Local" value="ch35s10s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conversion - In Progress/Stopped">
+<param name="Local" value="ch35s10s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conversion tips and best practices">
+<param name="Local" value="ch35s10s07.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating the final mix">
+<param name="Local" value="ch35s11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the bus icons and processing status">
+<param name="Local" value="ch35s11s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Monitoring the signal level">
+<param name="Local" value="ch35s11s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Busses Console">
+<param name="Local" value="ch35s11s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Mixing Desk">
+<param name="Local" value="ch35s11s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building a Mixing Session">
+<param name="Local" value="ch35s11s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Customizing the information displayed in the Mixing Desk">
+<param name="Local" value="ch35s11s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mixing audio using the Mixing Desk">
+<param name="Local" value="ch35s11s07.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Downmixing behavior">
+<param name="Local" value="ch35s12.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Standard configurations">
+<param name="Local" value="ch35s12s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Downmix tables">
+<param name="Local" value="ch35s12s02.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing platform and language versions">
+<param name="Local" value="ch36.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Authoring across platforms">
+<param name="Local" value="ch36s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Localizing your project">
+<param name="Local" value="ch36s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating simulations">
+<param name="Local" value="ch37.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Building simulations">
+<param name="Local" value="ch37s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing playback of your simulation">
+<param name="Local" value="ch37s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auditioning in the Soundcaster">
+<param name="Local" value="ch37s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Simulating with game syncs">
+<param name="Local" value="ch37s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Fine-Tuning properties in a simulation">
+<param name="Local" value="ch37s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating simulations tips and best practices">
+<param name="Local" value="ch37s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Optimizing CPU usage">
+<param name="Local" value="ch38.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing memory in Wwise">
+<param name="Local" value="ch39.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiling">
+<param name="Local" value="ch40.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the different types of profiling in Wwise">
+<param name="Local" value="ch40s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Exploring the game profiling views">
+<param name="Local" value="ch40s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Exploring the voice profiling views">
+<param name="Local" value="ch40s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Exploring the game object profiling views">
+<param name="Local" value="ch40s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Exploring the Audio Object profiling views">
+<param name="Local" value="ch40s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Connecting to a local/remote game system">
+<param name="Local" value="ch40s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Capturing data from the sound engine">
+<param name="Local" value="ch40s07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Settings dialog">
+<param name="Local" value="ch40s07s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Specifying the type of information that will be captured">
+<param name="Local" value="ch40s07s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Starting/stopping the capture process">
+<param name="Local" value="ch40s07s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Filtering in the profiling views">
+<param name="Local" value="ch40s07s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using profiler filter expressions">
+<param name="Local" value="ch40s07s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Filtering the Capture Log">
+<param name="Local" value="ch40s07s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Capture Log shortcut menu">
+<param name="Local" value="ch40s07s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Gathering statistical information from a capture session">
+<param name="Local" value="ch40s07s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Saving the Capture Log">
+<param name="Local" value="ch40s07s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Loading the data from a previous remote capture session">
+<param name="Local" value="ch40s07s10.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Editing while profiling a game">
+<param name="Local" value="ch40s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Monitoring and troubleshooting with the Performance Monitor">
+<param name="Local" value="ch40s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Analyzing voices with the Voice Inspector">
+<param name="Local" value="ch40s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Examining objects with the Game Object 3D Viewer">
+<param name="Local" value="ch40s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiling Audio Objects">
+<param name="Local" value="ch40s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Remote Connections dialog">
+<param name="Local" value="ch40s13.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Available Tab">
+<param name="Local" value="ch40s13s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="History Tab">
+<param name="Local" value="ch40s13s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiling tips and best practices">
+<param name="Local" value="ch40s14.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Troubleshooting remote connection issues">
+<param name="Local" value="ch40s15.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiling keyboard shortcuts">
+<param name="Local" value="ch40s16.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing SoundBanks">
+<param name="Local" value="ch41.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding how SoundBanks are loaded in a game">
+<param name="Local" value="ch41s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Strategies for managing SoundBanks">
+<param name="Local" value="ch41s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="All-in-one SoundBanks">
+<param name="Local" value="ch41s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multiple complete SoundBanks">
+<param name="Local" value="ch41s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Micromanaging media">
+<param name="Local" value="ch41s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Preparing Action Events">
+<param name="Local" value="ch41s02s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Preparing Events and game syncs (Switches and States)">
+<param name="Local" value="ch41s02s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auto-defined SoundBanks">
+<param name="Local" value="ch41s02s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with user-defined SoundBanks">
+<param name="Local" value="ch41s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating user-defined SoundBanks manually">
+<param name="Local" value="ch41s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating and populating SoundBanks by importing a definition file">
+<param name="Local" value="ch41s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Populating SoundBanks manually">
+<param name="Local" value="ch41s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing SoundBank contents">
+<param name="Local" value="ch41s03s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Including/excluding project elements from SoundBanks">
+<param name="Local" value="ch41s03s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Including/excluding project elements using game syncs">
+<param name="Local" value="ch41s03s04s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Including plug-in media in SoundBanks">
+<param name="Local" value="ch41s03s04s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Searching for elements in SoundBanks">
+<param name="Local" value="ch41s03s04s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Filtering the list of elements in SoundBanks">
+<param name="Local" value="ch41s03s04s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Moving project elements between SoundBanks">
+<param name="Local" value="ch41s03s04s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Removing project elements from SoundBanks">
+<param name="Local" value="ch41s03s04s07.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Renaming SoundBanks">
+<param name="Local" value="ch41s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Deleting SoundBanks">
+<param name="Local" value="ch41s03s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Configuring user SoundBank settings">
+<param name="Local" value="ch41s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating SoundBanks for a project">
+<param name="Local" value="ch41s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank output folder layout">
+<param name="Local" value="ch41s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing SoundBank media">
+<param name="Local" value="ch41s07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing loose media files in the output folder">
+<param name="Local" value="ch41s07s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks tips and best practices">
+<param name="Local" value="ch41s08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Requirements and best practices for DLC SoundBanks">
+<param name="Local" value="ch41s08s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank backward compatibility">
+<param name="Local" value="ch41s08s02.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing file packages">
+<param name="Local" value="ch42.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with File Packager projects">
+<param name="Local" value="ch42s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Managing file packages in File Packager projects">
+<param name="Local" value="ch42s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Assigning files to packages">
+<param name="Local" value="ch42s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ordering files within a package">
+<param name="Local" value="ch42s02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Configuring the block size">
+<param name="Local" value="ch42s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating file packages">
+<param name="Local" value="ch42s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Packaging DLC files">
+<param name="Local" value="ch42s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using File Packager arguments in the command line">
+<param name="Local" value="ch42s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Migrating your projects">
+<param name="Local" value="ch43.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Wwise">
+<param name="Local" value="pt07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Project Explorer">
+<param name="Local" value="ch44.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting display options">
+<param name="Local" value="ch44s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Project Explorer search">
+<param name="Local" value="ch44s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Project Explorer toolbar">
+<param name="Local" value="ch44s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Project Explorer keyboard shortcuts">
+<param name="Local" value="ch44s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Event Viewer">
+<param name="Local" value="ch45.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Property Editor">
+<param name="Local" value="ch46.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Object specific category">
+<param name="Local" value="ch46s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="General category">
+<param name="Local" value="ch46s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Routing category">
+<param name="Local" value="ch46s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conversion category">
+<param name="Local" value="ch46s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Positioning category">
+<param name="Local" value="ch46s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR category">
+<param name="Local" value="ch46s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="MIDI category">
+<param name="Local" value="ch46s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Advanced category">
+<param name="Local" value="ch46s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sources category">
+<param name="Local" value="ch46s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="All category">
+<param name="Local" value="ch46s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the Property Editor">
+<param name="Local" value="ch46s11.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Contents Editor">
+<param name="Local" value="ch47.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sound objects">
+<param name="Local" value="ch47s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Random Containers">
+<param name="Local" value="ch47s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sequence Containers">
+<param name="Local" value="ch47s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switch Containers">
+<param name="Local" value="ch47s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Blend Containers">
+<param name="Local" value="ch47s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Containers">
+<param name="Local" value="ch47s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Virtual Folders">
+<param name="Local" value="ch47s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Busses">
+<param name="Local" value="ch47s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Events">
+<param name="Local" value="ch47s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switch Groups">
+<param name="Local" value="ch47s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="State Groups">
+<param name="Local" value="ch47s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Tracks">
+<param name="Local" value="ch47s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Segments">
+<param name="Local" value="ch47s13.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Playlist Containers">
+<param name="Local" value="ch47s14.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Switch Containers">
+<param name="Local" value="ch47s15.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the Contents Editor">
+<param name="Local" value="ch47s16.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Displaying objects in the Contents Editor">
+<param name="Local" value="ch47s16s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Adding objects to the Contents Editor">
+<param name="Local" value="ch47s16s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Re-ordering objects within the Contents Editor">
+<param name="Local" value="ch47s16s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dragging objects between the panes of the Contents Editor">
+<param name="Local" value="ch47s16s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Expanding or collapsing lists">
+<param name="Local" value="ch47s16s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Deleting objects">
+<param name="Local" value="ch47s16s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auditioning objects and sources within the Contents Editor">
+<param name="Local" value="ch47s16s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor keyboard shortcuts">
+<param name="Local" value="ch47s16s08.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Transport Control">
+<param name="Local" value="ch48.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Setting playback properties">
+<param name="Local" value="ch48s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Pinning objects in the Transport Control">
+<param name="Local" value="ch48s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Playing, pausing, or stopping content">
+<param name="Local" value="ch48s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using game syncs during playback">
+<param name="Local" value="ch48s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transport Control keyboard shortcuts">
+<param name="Local" value="ch48s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the Schematic View">
+<param name="Local" value="ch49.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Schematic View keyboard shortcuts">
+<param name="Local" value="ch49s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the graph view">
+<param name="Local" value="ch50.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Changing the display of the graph view">
+<param name="Local" value="ch50s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with control points in the graph view">
+<param name="Local" value="ch50s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with curves in the graph view">
+<param name="Local" value="ch50s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Graph view keyboard shortcuts">
+<param name="Local" value="ch50s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Getting to know the timeline">
+<param name="Local" value="ch51.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Panning and zooming the timeline">
+<param name="Local" value="ch51s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Configuring the positioning timeline">
+<param name="Local" value="ch51s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the Music Segment Editor timeline">
+<param name="Local" value="ch51s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with Object Tabs and Object Tab Groups">
+<param name="Local" value="ch52.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding an Object Tab Group's title bar">
+<param name="Local" value="ch52s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Object Tab shortcut menu">
+<param name="Local" value="ch52s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Primary and Secondary Editors">
+<param name="Local" value="ch52s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effects tab">
+<param name="Local" value="ch52s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="RTPC tab">
+<param name="Local" value="ch52s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="States tab">
+<param name="Local" value="ch52s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auto-ducking tab">
+<param name="Local" value="ch52s03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transitions tab">
+<param name="Local" value="ch52s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Stingers tab">
+<param name="Local" value="ch52s03s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Metadata tab">
+<param name="Local" value="ch52s03s07.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with the Media Pool">
+<param name="Local" value="ch53.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with databases">
+<param name="Local" value="ch53s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Similar Sound Search">
+<param name="Local" value="ch53s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media Pool metadata">
+<param name="Local" value="ch53s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auditioning audio files">
+<param name="Local" value="ch53s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing audio files into your project">
+<param name="Local" value="ch53s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Importing regions into your project">
+<param name="Local" value="ch53s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Opening files in an external editor">
+<param name="Local" value="ch53s07.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with searches, queries, and references">
+<param name="Local" value="ch54.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Searching for elements within your project">
+<param name="Local" value="ch54s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Finding the project elements that reference a particular object">
+<param name="Local" value="ch54s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Working with queries">
+<param name="Local" value="ch54s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Queries tips and best practices">
+<param name="Local" value="ch54s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using Presets">
+<param name="Local" value="ch55.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Copying and pasting object properties">
+<param name="Local" value="ch56.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using control surfaces">
+<param name="Local" value="ch57.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Control Surface Devices dialog">
+<param name="Local" value="ch57s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Connecting a control surface device to Wwise">
+<param name="Local" value="ch57s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating Control Surface Sessions">
+<param name="Local" value="ch57s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Navigating Control Surface Sessions">
+<param name="Local" value="ch57s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Creating control surface bindings">
+<param name="Local" value="ch57s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding Control Surface View Groups">
+<param name="Local" value="ch57s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Handling conflicts in Control Surface Sessions">
+<param name="Local" value="ch57s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Control Surface Toolbar">
+<param name="Local" value="ch57s08.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reference topics">
+<param name="Local" value="pt08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Project">
+<param name="Local" value="ch58.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Nuendo Connection Settings">
+<param name="Local" value="ch58s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Views">
+<param name="Local" value="ch59.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Integrity Report">
+<param name="Local" value="ch59s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Details">
+<param name="Local" value="ch59s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Logs View">
+<param name="Local" value="ch59s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Logs Settings">
+<param name="Local" value="ch59s03s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device Meter">
+<param name="Local" value="ch59s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Loudness Meter">
+<param name="Local" value="ch59s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Loudness Meter Settings">
+<param name="Local" value="ch59s05s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Busses Console">
+<param name="Local" value="ch59s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Meter">
+<param name="Local" value="ch59s07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="3D Meter">
+<param name="Local" value="ch59s07s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contextual Help">
+<param name="Local" value="ch59s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Manager">
+<param name="Local" value="ch59s09.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks Settings">
+<param name="Local" value="ch59s09s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks Settings - SoundBanks Tab">
+<param name="Local" value="ch59s09s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks Settings - External Sources Tab">
+<param name="Local" value="ch59s09s01s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Definition Log">
+<param name="Local" value="ch59s09s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Import Completed">
+<param name="Local" value="ch59s09s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating SoundBanks">
+<param name="Local" value="ch59s09s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating SoundBanks - Stopped">
+<param name="Local" value="ch59s09s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transport Control">
+<param name="Local" value="ch59s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Paste Properties">
+<param name="Local" value="ch59s11.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Edit, Windows, and Help">
+<param name="Local" value="ch60.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Edit">
+<param name="Local" value="ch60s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Windows">
+<param name="Local" value="ch60s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Help">
+<param name="Local" value="ch60s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Project Explorer">
+<param name="Local" value="ch61.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio tab">
+<param name="Local" value="ch61s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Devices">
+<param name="Local" value="ch61s01s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device Editor: System">
+<param name="Local" value="ch61s01s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device Editor: Others">
+<param name="Local" value="ch61s01s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device Editor: Effects">
+<param name="Local" value="ch61s01s01s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Busses hierarchy">
+<param name="Local" value="ch61s01s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Main Audio and Main Secondary Busses">
+<param name="Local" value="ch61s01s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Audio Bus">
+<param name="Local" value="ch61s01s02s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Auto-Ducking tab: Audio Busses">
+<param name="Local" value="ch61s01s02s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR category: Audio Busses">
+<param name="Local" value="ch61s01s02s02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Auxiliary Busses">
+<param name="Local" value="ch61s01s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Common tabs and categories: Busses hierarchy objects">
+<param name="Local" value="ch61s01s02s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Bus tab and Auxiliary Bus tab: busses">
+<param name="Local" value="ch61s01s02s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effects tab: busses">
+<param name="Local" value="ch61s01s02s04s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="States tab: busses">
+<param name="Local" value="ch61s01s02s04s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Routing category: Audio and Auxiliary Busses">
+<param name="Local" value="ch61s01s02s04s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Positioning category: Audio and Auxiliary Busses">
+<param name="Local" value="ch61s01s02s04s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Advanced category: Audio Busses">
+<param name="Local" value="ch61s01s02s04s06.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Main Audio, Audio, and Auxiliary Busses">
+<param name="Local" value="ch61s01s02s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Containers hierarchy: sound and motion objects">
+<param name="Local" value="ch61s01s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Property Container">
+<param name="Local" value="ch61s01s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Random Container and Sequence Container">
+<param name="Local" value="ch61s01s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Switch Container">
+<param name="Local" value="ch61s01s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Blend Container">
+<param name="Local" value="ch61s01s03s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Blend Track Editor">
+<param name="Local" value="ch61s01s03s04s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Sound SFX and Sound Voice">
+<param name="Local" value="ch61s01s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Common tabs and categories: Containers hierarchy objects">
+<param name="Local" value="ch61s01s03s06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="MIDI category: Containers hierarchy objects">
+<param name="Local" value="ch61s01s03s06s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="MIDI Keymap Editor">
+<param name="Local" value="ch61s01s03s06s01s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sources category: Sound SFX and Sound Voice">
+<param name="Local" value="ch61s01s03s06s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Property Container">
+<param name="Local" value="ch61s01s03s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Random Container">
+<param name="Local" value="ch61s01s03s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Sequence Container">
+<param name="Local" value="ch61s01s03s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Switch Container">
+<param name="Local" value="ch61s01s03s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Blend Container">
+<param name="Local" value="ch61s01s03s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Sound SFX">
+<param name="Local" value="ch61s01s03s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Sound Voice">
+<param name="Local" value="ch61s01s03s13.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: plug-ins">
+<param name="Local" value="ch61s01s03s14.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Containers hierarchy: music objects">
+<param name="Local" value="ch61s01s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Music Switch Container">
+<param name="Local" value="ch61s01s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Music Playlist Container">
+<param name="Local" value="ch61s01s04s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Music Segment">
+<param name="Local" value="ch61s01s04s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Music Track">
+<param name="Local" value="ch61s01s04s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Common tabs and categories: music objects">
+<param name="Local" value="ch61s01s04s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="States tab: music objects">
+<param name="Local" value="ch61s01s04s05s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transitions tab: music objects">
+<param name="Local" value="ch61s01s04s05s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Stingers tab: music objects">
+<param name="Local" value="ch61s01s04s05s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="MIDI category: music objects">
+<param name="Local" value="ch61s01s04s05s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Advanced category: music objects">
+<param name="Local" value="ch61s01s04s05s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: music objects">
+<param name="Local" value="ch61s01s04s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Music Track">
+<param name="Local" value="ch61s01s04s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Editor">
+<param name="Local" value="ch61s01s04s08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Switch Container Association Editor">
+<param name="Local" value="ch61s01s04s08s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Playlist Editor">
+<param name="Local" value="ch61s01s04s08s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Segment Editor">
+<param name="Local" value="ch61s01s04s08s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Segment Editor keyboard shortcuts">
+<param name="Local" value="ch61s01s04s08s03s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music Fade Editor">
+<param name="Local" value="ch61s01s04s08s04.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Common tabs and categories: audio structures">
+<param name="Local" value="ch61s01s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Metadata tab">
+<param name="Local" value="ch61s01s05s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="RTPC tab">
+<param name="Local" value="ch61s01s05s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Build Smart Pitch Curve">
+<param name="Local" value="ch61s01s05s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Random Container tab">
+<param name="Local" value="ch61s01s05s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sequence Container tab">
+<param name="Local" value="ch61s01s05s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switch Container tab: sound and motion objects">
+<param name="Local" value="ch61s01s05s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="States tab: sound and motion objects">
+<param name="Local" value="ch61s01s05s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Routing category">
+<param name="Local" value="ch61s01s05s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effects tab: Containers hierarchy objects">
+<param name="Local" value="ch61s01s05s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conversion category: Containers hierarchy objects">
+<param name="Local" value="ch61s01s05s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Positioning category: Containers hierarchy objects">
+<param name="Local" value="ch61s01s05s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="HDR category: Containers hierarchy objects">
+<param name="Local" value="ch61s01s05s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Advanced category: sound and motion objects">
+<param name="Local" value="ch61s01s05s12.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Audio Sources">
+<param name="Local" value="ch61s01s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Speaker Panner">
+<param name="Local" value="ch61s01s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Position Editor (3D Automation)">
+<param name="Local" value="ch61s01s08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Position Editor (3D Automation) Interface Elements">
+<param name="Local" value="ch61s01s08s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Position Editor (3D Automation) Keyboard Shortcuts">
+<param name="Local" value="ch61s01s08s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Timeline Configuration">
+<param name="Local" value="ch61s01s08s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="State Properties Dialog">
+<param name="Local" value="ch61s01s09.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Events Tab">
+<param name="Local" value="ch61s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event Editor">
+<param name="Local" value="ch61s02s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event Actions List">
+<param name="Local" value="ch61s02s01s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dialogue Event Editor">
+<param name="Local" value="ch61s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Events">
+<param name="Local" value="ch61s02s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks Tab">
+<param name="Local" value="ch61s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Editor">
+<param name="Local" value="ch61s03s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Editor - Add Tab">
+<param name="Local" value="ch61s03s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Editor - Game Syncs Tab">
+<param name="Local" value="ch61s03s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Editor - Edit Tab">
+<param name="Local" value="ch61s03s01s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBank Editor - Details Tab">
+<param name="Local" value="ch61s03s01s04.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Syncs Tab">
+<param name="Local" value="ch61s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switches">
+<param name="Local" value="ch61s04s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Switch Group">
+<param name="Local" value="ch61s04s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Switch">
+<param name="Local" value="ch61s04s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Switch Group">
+<param name="Local" value="ch61s04s01s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="States">
+<param name="Local" value="ch61s04s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: State Group">
+<param name="Local" value="ch61s04s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: State">
+<param name="Local" value="ch61s04s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Copy States Values">
+<param name="Local" value="ch61s04s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: State Group">
+<param name="Local" value="ch61s04s02s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Parameters">
+<param name="Local" value="ch61s04s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Game Parameter">
+<param name="Local" value="ch61s04s03s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Parameter Settings">
+<param name="Local" value="ch61s04s03s01s01.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggers">
+<param name="Local" value="ch61s04s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Property Editor: Trigger">
+<param name="Local" value="ch61s04s04s01.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="ShareSets Tab">
+<param name="Local" value="ch61s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect Plug-in Editor">
+<param name="Local" value="ch61s05s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Attenuation Editor">
+<param name="Local" value="ch61s05s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Conversion Settings Editor">
+<param name="Local" value="ch61s05s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ADPCM Parameters">
+<param name="Local" value="ch61s05s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Vorbis Encoder Parameters">
+<param name="Local" value="ch61s05s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Opus Parameters">
+<param name="Local" value="ch61s05s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="PCM Parameters">
+<param name="Local" value="ch61s05s03s04.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Modulator Editor">
+<param name="Local" value="ch61s05s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Modulator LFO">
+<param name="Local" value="ch61s05s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Modulator Envelope">
+<param name="Local" value="ch61s05s04s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Modulator Time">
+<param name="Local" value="ch61s05s04s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Acoustic Texture Editor">
+<param name="Local" value="ch61s05s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sessions Tab">
+<param name="Local" value="ch61s06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundcaster and Soundcaster Sessions">
+<param name="Local" value="ch61s06s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundcaster Keyboard Shortcuts">
+<param name="Local" value="ch61s06s01s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mixing Desk and Mixing Sessions">
+<param name="Local" value="ch61s06s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mixing Desk Settings">
+<param name="Local" value="ch61s06s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Control Surface Bindings View and Control Surface Sessions">
+<param name="Local" value="ch61s06s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Queries Tab">
+<param name="Local" value="ch61s07.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Query Editor">
+<param name="Local" value="ch61s07s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Project Explorer - Browser">
+<param name="Local" value="ch61s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="New (Browser)">
+<param name="Local" value="ch61s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Work Units">
+<param name="Local" value="ch61s10.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="New Work Unit">
+<param name="Local" value="ch61s10s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Commit Filter/Submit Changes">
+<param name="Local" value="ch61s10s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Presets">
+<param name="Local" value="ch61s11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Load Preset dialog">
+<param name="Local" value="ch61s11s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Save Preset dialog">
+<param name="Local" value="ch61s11s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Searches and Project-wide Editing">
+<param name="Local" value="ch61s12.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Batch Rename View">
+<param name="Local" value="ch61s12s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="List View">
+<param name="Local" value="ch61s12s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multi Editor">
+<param name="Local" value="ch61s12s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Schematic View">
+<param name="Local" value="ch61s12s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Schematic View Settings">
+<param name="Local" value="ch61s12s04s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reference View">
+<param name="Local" value="ch61s12s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Object Property Settings">
+<param name="Local" value="ch61s12s06.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event Viewer">
+<param name="Local" value="ch62.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Filtered Tab">
+<param name="Local" value="ch62s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Current Selection Tab">
+<param name="Local" value="ch62s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Orphans Tab">
+<param name="Local" value="ch62s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Views">
+<param name="Local" value="ch63.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Capture Log">
+<param name="Local" value="ch63s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Capture Log Options">
+<param name="Local" value="ch63s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Errors Reported in the Capture Log">
+<param name="Local" value="ch63s01s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="3D Audio Object limit exceeded; object will be mixed.">
+<param name="Local" value="ch63s01s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AddOutput() needs unique Listeners for multi-instance outputs using the same Audio Device type.">
+<param name="Local" value="ch63s01s02s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AkInitSettings::uNumSamplesPerFrame set to a value that is not 256, 512, or 1024. 3D Audio will be disabled.">
+<param name="Local" value="ch63s01s02s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AkInitSettings::uNumSamplesPerFrame value unsupported by Opus hardware decoder. Supported size: 256, 512 and 1024. Opus will be disabled.">
+<param name="Local" value="ch63s01s02s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AkOutputDeviceID not found as an active device in call to function ...">
+<param name="Local" value="ch63s01s02s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AkPlatformInitSettings::uMaxSystemAudioObjects (...) does not meet minimum requirement of ... System Audio Objects. System Audio Objects will be mixed.">
+<param name="Local" value="ch63s01s02s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SoundEngine::AddOutput: Output already exists, not added a second time. Shareset: ... Device: ...">
+<param name="Local" value="ch63s01s02s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SoundEngine::SetMultiplePositions: Too many positions.">
+<param name="Local" value="ch63s01s02s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometry: error setting geometry.">
+<param name="Local" value="ch63s01s02s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::RemoveGeometry: error removing geometry set.">
+<param name="Local" value="ch63s01s02s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometryInstance: error setting a geometry instance.">
+<param name="Local" value="ch63s01s02s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::RemoveGeometryInstance: error removing a geometry instance.">
+<param name="Local" value="ch63s01s02s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGameObjectRadius: Outer radius must be greater than inner radius.">
+<param name="Local" value="ch63s01s02s13.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometry - More than two triangles are connected to the same edge.">
+<param name="Local" value="ch63s01s02s14.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometry - Triangle formed by vertices [v0, v1, v2] is too large.">
+<param name="Local" value="ch63s01s02s15.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometry - Triangle number ... is skipped because it is invalid; two or more of its vertices are at the same position.">
+<param name="Local" value="ch63s01s02s16.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometryInstance - Transform is not valid.">
+<param name="Local" value="ch63s01s02s17.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetPortal: Invalid extent. Extent dimensions must be positive.">
+<param name="Local" value="ch63s01s02s18.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetPortal: Portal must have a front room which is distinct from its back room.">
+<param name="Local" value="ch63s01s02s19.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK::SpatialAudio::SetGeometryInstance or AK::SpatialAudio::SetRoom: Geometry instances which are not watertight cannot be used for the definition of a room.">
+<param name="Local" value="ch63s01s02s20.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ambisonic is only available with 3D audio. 3D audio is not enabled in the Audio Device, reverting to standard configuration.">
+<param name="Local" value="ch63s01s02s21.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Another process is using Microsoft Spatial Sound objects. Some audio objects may be mixed.">
+<param name="Local" value="ch63s01s02s22.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Attempting to set a rendered Effect">
+<param name="Local" value="ch63s01s02s23.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio command is too large to fit in the command queue. Break the command in smaller pieces.">
+<param name="Local" value="ch63s01s02s24.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio command queue is full, blocking caller. Reduce number of calls to sound engine or boost command queue memory.">
+<param name="Local" value="ch63s01s02s25.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device could not honor the channel config requested with AkOutputSettings; default config will be used.">
+<param name="Local" value="ch63s01s02s26.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device not found in Init bank.">
+<param name="Local" value="ch63s01s02s27.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device not found in Init bank: ...">
+<param name="Local" value="ch63s01s02s28.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio node not found in call.">
+<param name="Local" value="ch63s01s02s29.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio thread resumed, audio restarts.">
+<param name="Local" value="ch63s01s02s30.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio thread suspended. Audio output will be silent.">
+<param name="Local" value="ch63s01s02s31.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Bank Load Failed.">
+<param name="Local" value="ch63s01s02s32.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Bank or Media pointer not aligned to ... bytes.">
+<param name="Local" value="ch63s01s02s33.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Bus not found in Init bank.">
+<param name="Local" value="ch63s01s02s34.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Bus &lt;name&gt; not found in Init bank.">
+<param name="Local" value="ch63s01s02s35.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot initialize passthrough. Passthrough and objects will be disabled.">
+<param name="Local" value="ch63s01s02s36.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot initialize with ambisonic channel configuration, reverting to standard configuration.">
+<param name="Local" value="ch63s01s02s37.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot open file ... in path(s): ...">
+<param name="Local" value="ch63s01s02s38.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot schedule music segments: Stopping music.">
+<param name="Local" value="ch63s01s02s39.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot schedule music switch transition in upcoming segments: using Exit Cue.">
+<param name="Local" value="ch63s01s02s40.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Cannot seek in sound that is within a continuous container with special transitions.">
+<param name="Local" value="ch63s01s02s41.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Can't call ... on child bus. Use on main busses only.">
+<param name="Local" value="ch63s01s02s42.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Codec plug-in not registered.">
+<param name="Local" value="ch63s01s02s43.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Container is not compatible with MIDI playback.">
+<param name="Local" value="ch63s01s02s44.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Convolution Reverb media type is not compatible with plug-in. Soundbanks may need to be re-generated due to plug-in version differences, or were generated for the wrong platform.">
+<param name="Local" value="ch63s01s02s45.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Convolution Reverb plug-in parameters are invalid, effect is disabled.">
+<param name="Local" value="ch63s01s02s46.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Could not allocate effect.">
+<param name="Local" value="ch63s01s02s47.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Could not initialize 3D audio.">
+<param name="Local" value="ch63s01s02s48.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Could not connect to audio input device. Audio input callback will not be called.">
+<param name="Local" value="ch63s01s02s49.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Could not find plug-in dynamic library.">
+<param name="Local" value="ch63s01s02s50.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Could not register plugin.">
+<param name="Local" value="ch63s01s02s51.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Critically high number of active playback instances.">
+<param name="Local" value="ch63s01s02s52.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value='Cross-Fade transition ignored: Estimated length not available. Make sure sounds with Cross-Fade transitions virtual mode are set to "Play from elapsed time" and that only sounds with finite duration are used.'>
+<param name="Local" value="ch63s01s02s53.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Device ID not recognized by the platform or is disabled.">
+<param name="Local" value="ch63s01s02s54.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dead game object ID used in function ... This object was unregistered with AK::SoundEngine::UnregisterGameObj some time prior this call.">
+<param name="Local" value="ch63s01s02s55.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Duplicated media has different length in bank X. Check previously unloaded bank. Stopping sound.">
+<param name="Local" value="ch63s01s02s56.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dynamic Sequence already closed.">
+<param name="Local" value="ch63s01s02s57.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Dynamic Sequence ID not found.">
+<param name="Local" value="ch63s01s02s58.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Early reflections are not supported on sounds using 3D Position: Listener with Automation. The assigned early reflections bus will be ignored.">
+<param name="Local" value="ch63s01s02s59.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect ShareSet not found in function ...">
+<param name="Local" value="ch63s01s02s60.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="End of pre-connection errors.">
+<param name="Local" value="ch63s01s02s61.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Error while computing virtual source elapsed time.">
+<param name="Local" value="ch63s01s02s62.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Error while loading bank.">
+<param name="Local" value="ch63s01s02s63.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Error processing convolution effect.">
+<param name="Local" value="ch63s01s02s64.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Event ID not found.">
+<param name="Local" value="ch63s01s02s65.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="External source missing from PostEvent call.">
+<param name="Local" value="ch63s01s02s66.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Failed creating hardware-accelerated voice.">
+<param name="Local" value="ch63s01s02s67.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Failed creating source.">
+<param name="Local" value="ch63s01s02s68.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Failed posting event: &lt;EventName&gt;.">
+<param name="Local" value="ch63s01s02s69.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Failed to connect System Audio Object to Apple Spatial Audio. Some sounds will not be audible.">
+<param name="Local" value="ch63s01s02s70.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File ... could not be opened due to permissions, access rights or conflicting open modes. (Found in path(s): ...).">
+<param name="Local" value="ch63s01s02s71.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File header too large due to markers or envelope.">
+<param name="Local" value="ch63s01s02s72.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File ... not found in path(s): ...">
+<param name="Local" value="ch63s01s02s73.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File access error during source creation. Look for previous file errors in the log.">
+<param name="Local" value="ch63s01s02s74.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File or loop region is too small to be played properly.">
+<param name="Local" value="ch63s01s02s75.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="FLT_MAX not supported in function ...">
+<param name="Local" value="ch63s01s02s76.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game message ...">
+<param name="Local" value="ch63s01s02s77.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Hardware accelerated audio decoding failed.">
+<param name="Local" value="ch63s01s02s78.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Hardware audio subsystem stopped responding. Silent mode is enabled.">
+<param name="Local" value="ch63s01s02s79.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Ignoring seek after end of playlist.">
+<param name="Local" value="ch63s01s02s80.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Impulse Response configuration type does not match input signal's configuration type.">
+<param name="Local" value="ch63s01s02s81.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Incompatible plug-in dynamic library file.">
+<param name="Local" value="ch63s01s02s82.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Inconsistent content for media ... between banks ... and ... Soundbanks will have to be regenerated and redeployed.">
+<param name="Local" value="ch63s01s02s83.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Inconsistent source status.">
+<param name="Local" value="ch63s01s02s84.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Initialization of output device failed.">
+<param name="Local" value="ch63s01s02s85.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Insufficient memory preparing media. Sound will not play.">
+<param name="Local" value="ch63s01s02s86.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Insufficient Space to Load Bank.">
+<param name="Local" value="ch63s01s02s87.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Internal error, contact Support with this information.">
+<param name="Local" value="ch63s01s02s88.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid channel configuration specified for SetSidechainMixConfig. Audio Objects configuration is not supported.">
+<param name="Local" value="ch63s01s02s89.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid file header.">
+<param name="Local" value="ch63s01s02s90.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid file size for ... at path ...">
+<param name="Local" value="ch63s01s02s91.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid floating point value detected : non-finite(or NaN) priority.">
+<param name="Local" value="ch63s01s02s92.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid float in parameter ... of function ...">
+<param name="Local" value="ch63s01s02s93.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid parameter ... in function call ...">
+<param name="Local" value="ch63s01s02s94.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid plug-in execution mode.">
+<param name="Local" value="ch63s01s02s95.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid Sound Engine command received. Command will be skipped.">
+<param name="Local" value="ch63s01s02s96.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid State Group ID.">
+<param name="Local" value="ch63s01s02s97.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid transform in function ...">
+<param name="Local" value="ch63s01s02s98.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="I/O Error: Stream ... did not terminate normally (code ...). Memory leak detected.">
+<param name="Local" value="ch63s01s02s99.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="I/O settings incompatible. Block size must be between one and Granularity and whole fraction of the granularity.">
+<param name="Local" value="ch63s01s02s100.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid configuration for Mastering Suite; processing halted.">
+<param name="Local" value="ch63s01s02s101.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Invalid File.">
+<param name="Local" value="ch63s01s02s102.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Job Manager ran out of memory. Significant loss of performance or instability may occur.">
+<param name="Local" value="ch63s01s02s103.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Job worker function was called more often than it was requested. Check your sound engine integration.">
+<param name="Local" value="ch63s01s02s104.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Load bank failed : incompatible bank version.">
+<param name="Local" value="ch63s01s02s105.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Lower engine command list is full.">
+<param name="Local" value="ch63s01s02s106.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mastering Suite: Unable to register to the ... callback.">
+<param name="Local" value="ch63s01s02s107.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mastering Suite: Unable to unregister the ... callback.">
+<param name="Local" value="ch63s01s02s108.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Maximum Impulse Response length of hardware Convolution Reverb reached.">
+<param name="Local" value="ch63s01s02s109.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Maximum number of hardware-accelerated voices reached. Voice will not play.">
+<param name="Local" value="ch63s01s02s110.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media not available.">
+<param name="Local" value="ch63s01s02s111.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media ... could not be updated from Wwise Project. Previous media, if available, will be used.">
+<param name="Local" value="ch63s01s02s112.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media updated: ... transferred from Wwise Project. Glitches might be heard. Previous media from other sources (bank, prepared, etc) will be ignored.">
+<param name="Local" value="ch63s01s02s113.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Media was not loaded for this source.">
+<param name="Local" value="ch63s01s02s114.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Memory allocation error in Mastering Suite; processing halted.">
+<param name="Local" value="ch63s01s02s115.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Memory allocation failed.">
+<param name="Local" value="ch63s01s02s116.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Microsoft Spatial Sound not enabled by user.">
+<param name="Local" value="ch63s01s02s117.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Microsoft Spatial Sound: Too many dynamic objects. Some sounds may not play.">
+<param name="Local" value="ch63s01s02s118.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mismatching media size error for file ... Possibly caused by mismatching sound bank or WEM resources.">
+<param name="Local" value="ch63s01s02s119.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Missing music node parent. Make sure all banks containing music structures are completely loaded.">
+<param name="Local" value="ch63s01s02s120.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Monitor Queue full. Increase the size of uMonitorQueuePoolSize. Message size ... bytes.">
+<param name="Local" value="ch63s01s02s121.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Monitor Queue message is too large. Increase the size of uMonitorQueuePoolSize. Message size ... bytes.">
+<param name="Local" value="ch63s01s02s122.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music engine: Seeking failed. Music will continue from current position.">
+<param name="Local" value="ch63s01s02s123.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Music system is stopped because a music playlist is modified.">
+<param name="Local" value="ch63s01s02s124.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No audio device found on system.">
+<param name="Local" value="ch63s01s02s125.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No default Switch value selected in group ...">
+<param name="Local" value="ch63s01s02s126.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No input files for Impact.">
+<param name="Local" value="ch63s01s02s127.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No marker in file; seeking to specified location.">
+<param name="Local" value="ch63s01s02s128.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No memory size provided in AkExternalSource structure, but data pointer was used. Fill uiMemorySize.">
+<param name="Local" value="ch63s01s02s129.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Non-compliant device memory detected. Device memory is required for hardware acceleration.">
+<param name="Local" value="ch63s01s02s130.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Non-empty array of listeners specified for AddOutput() but uNumListeners is set to zero.">
+<param name="Local" value="ch63s01s02s131.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Not a plug-in dynamic library.">
+<param name="Local" value="ch63s01s02s132.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Not a valid Switch value ... in group ...">
+<param name="Local" value="ch63s01s02s133.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Not enough memory in I/O pool to start stream.">
+<param name="Local" value="ch63s01s02s134.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Not enough memory to complete the operation in ...">
+<param name="Local" value="ch63s01s02s135.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Not enough memory to start sound.">
+<param name="Local" value="ch63s01s02s136.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Nothing to play in Dynamic Sequence.">
+<param name="Local" value="ch63s01s02s137.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="No Switch Group selected for this Switch Container.">
+<param name="Local" value="ch63s01s02s138.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Number of Resume and/or Play-From-Beginning virtual voices has reached warning limit (see Project Settings &gt; Log tab). There may be some infinite, leaked voices.">
+<param name="Local" value="ch63s01s02s139.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="NX audio device notification registration failed, output format changes will not be detected.">
+<param name="Local" value="ch63s01s02s140.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Opus decoder failure.">
+<param name="Local" value="ch63s01s02s141.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Output bus ... not found. Make sure that the Init bank is loaded first.">
+<param name="Local" value="ch63s01s02s142.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Pending action was destroyed because a critical memory allocation failed.">
+<param name="Local" value="ch63s01s02s143.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Play Failed.">
+<param name="Local" value="ch63s01s02s144.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Playing a trigger-rate container as part of a sample-accurate playlist is not supported and will sound out-of-sync.">
+<param name="Local" value="ch63s01s02s145.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Playing ID already exists. New playing IDs must be generated when posting events.">
+<param name="Local" value="ch63s01s02s146.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Playing ID ... not found in function ...">
+<param name="Local" value="ch63s01s02s147.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in does not support Audio Objects bus configuration.">
+<param name="Local" value="ch63s01s02s148.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in execution failure.">
+<param name="Local" value="ch63s01s02s149.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in initialization failure.">
+<param name="Local" value="ch63s01s02s150.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plugin media at index ... not available.">
+<param name="Local" value="ch63s01s02s151.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in media unavailable.">
+<param name="Local" value="ch63s01s02s152.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in ...">
+<param name="Local" value="ch63s01s02s153.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in ... Shareset ...">
+<param name="Local" value="ch63s01s02s154.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in not found.">
+<param name="Local" value="ch63s01s02s155.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in unsupported channel configuration.">
+<param name="Local" value="ch63s01s02s156.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Plug-in version doesn't match sound engine version. Ensure the plug-in is compatible with this version of Wwise.">
+<param name="Local" value="ch63s01s02s157.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Portal ... not found in function ...">
+<param name="Local" value="ch63s01s02s158.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Portals cannot connect rooms that are in the same Reverb Zone hierarchy.">
+<param name="Local" value="ch63s01s02s159.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Recorder: Cannot create output file.">
+<param name="Local" value="ch63s01s02s160.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ReplaceOutput could not properly remove old output device.">
+<param name="Local" value="ch63s01s02s161.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Rescheduling music clips because a track was modified.">
+<param name="Local" value="ch63s01s02s162.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reset Playlist action on a continuous container is ignored.">
+<param name="Local" value="ch63s01s02s163.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reset Playlist action with a game object specific scope is ignored on a global container.">
+<param name="Local" value="ch63s01s02s164.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reverting to default Built-in Audio Device.">
+<param name="Local" value="ch63s01s02s165.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reverting to Dummy Audio device (no output).">
+<param name="Local" value="ch63s01s02s166.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Seeking after end of file. Playback will stop.">
+<param name="Local" value="ch63s01s02s167.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Seek failed due to seeking past end of file.">
+<param name="Local" value="ch63s01s02s168.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Seek table required to seek in Opus sources. Please update conversion settings.">
+<param name="Local" value="ch63s01s02s169.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Seek table is not present, or seek table granularity is larger than the maximum decode buffer size. Conversion settings may need to be updated.">
+<param name="Local" value="ch63s01s02s170.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Segment look-ahead plus pre-entry duration is longer than previous segment in sequence.">
+<param name="Local" value="ch63s01s02s171.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Selected media ... not available.">
+<param name="Local" value="ch63s01s02s172.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Selected node not available. Make sure the structure associated to the event is loaded or that the event has been prepared.">
+<param name="Local" value="ch63s01s02s173.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SetBusConfig and ResetBusConfig cannot modify master bus speaker configuration, it is dictated by the output device.">
+<param name="Local" value="ch63s01s02s174.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Some errors occurred pre-connection, listed below:">
+<param name="Local" value="ch63s01s02s175.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sound Engine was already initialized. New settings ignored.">
+<param name="Local" value="ch63s01s02s176.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sound Engine is not initialized yet or Init bank has not been loaded. Function: ...">
+<param name="Local" value="ch63s01s02s177.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundbanks have been generated with Convolution Reverb parameters that do not match Sound Engine runtime conditions. No wet path will be heard.">
+<param name="Local" value="ch63s01s02s178.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source file is of different format than expected.">
+<param name="Local" value="ch63s01s02s179.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source plug-in not found in currently loaded banks.">
+<param name="Local" value="ch63s01s02s180.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source starvation.">
+<param name="Local" value="ch63s01s02s181.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Stinger could not be scheduled in this segment or was dropped.">
+<param name="Local" value="ch63s01s02s182.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switch ... is bound to RTPC ... It can not be set directly.">
+<param name="Local" value="ch63s01s02s183.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Switch Group ... has no Switch Values at all. Switch container will do nothing.">
+<param name="Local" value="ch63s01s02s184.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="System does not meet minimum requirement for System Audio Objects. System Audio Objects will be mixed.">
+<param name="Local" value="ch63s01s02s185.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="System ran out of resources while loading plug-in dynamic library.">
+<param name="Local" value="ch63s01s02s186.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The Audio Device specified by AddOutput() or Init() could not be initialized.">
+<param name="Local" value="ch63s01s02s187.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The game object for an event was not registered as an emitter. Make sure the game object is registered as an emitter before using it to post an event.">
+<param name="Local" value="ch63s01s02s188.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The hardware-accelerated voice subsystem failed to initialize.">
+<param name="Local" value="ch63s01s02s189.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="The playing sound is assigned the same Early Reflection Auxiliary Bus in the Authoring Tool that has been set via AK::SpatialAudio::SetImageSource. Use a unique bus to avoid image source conflicts.">
+<param name="Local" value="ch63s01s02s190.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Too many children in one single container.">
+<param name="Local" value="ch63s01s02s191.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Too many event posts on event.">
+<param name="Local" value="ch63s01s02s192.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Too many game objects in array in &lt;Function&gt;">
+<param name="Local" value="ch63s01s02s193.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate due to codec internal error.">
+<param name="Local" value="ch63s01s02s194.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate due to incompatible audio formats.">
+<param name="Local" value="ch63s01s02s195.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate due to incompatible encoding parameters.">
+<param name="Local" value="ch63s01s02s196.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate due to mixed channel configurations.">
+<param name="Local" value="ch63s01s02s197.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate due to source starvation.">
+<param name="Local" value="ch63s01s02s198.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Transition not sample-accurate, the new source is shorter than two audio frames. Use a software codec to support this case.">
+<param name="Local" value="ch63s01s02s199.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggered a game-object-scoped modulator in a global context (such as a bus or bus effect). Modulator will have global scope.">
+<param name="Local" value="ch63s01s02s200.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Triggered a note-scoped or playing-instance-scoped modulator in a global context (such as a bus or bus effect). Modulator will have global scope.">
+<param name="Local" value="ch63s01s02s201.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Type mismatch while loading bank. Object ... is a ... in the currently loading bank. It was a ... in bank ...">
+<param name="Local" value="ch63s01s02s202.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unexpected call to PrepareGameSyncs.">
+<param name="Local" value="ch63s01s02s203.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unexpected error in Mastering Suite; processing halted.">
+<param name="Local" value="ch63s01s02s204.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown Argument Value name.">
+<param name="Local" value="ch63s01s02s205.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown/Dead game object ID used in &lt;FunctionName&gt;. Make sure the game object is registered before using it and do not use it once it was unregistered.">
+<param name="Local" value="ch63s01s02s206.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown Dialogue Event: ...">
+<param name="Local" value="ch63s01s02s207.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown game object ID used in function ... This ID was not registered with AK::SoundEngine::RegisterGameObj before.">
+<param name="Local" value="ch63s01s02s208.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown IO device error. .. returned .. on file ...">
+<param name="Local" value="ch63s01s02s209.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unknown State Group referenced.">
+<param name="Local" value="ch63s01s02s210.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unload bank failed, requested bank was not found.">
+<param name="Local" value="ch63s01s02s211.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unsupported encoding, only PCM, ADPCM, and Vorbis are supported.">
+<param name="Local" value="ch63s01s02s212.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Virtual source failed becoming physical.">
+<param name="Local" value="ch63s01s02s213.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voice starvation.">
+<param name="Local" value="ch63s01s02s214.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Vorbis decoder allocation failed.">
+<param name="Local" value="ch63s01s02s215.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Vorbis decoder failure.">
+<param name="Local" value="ch63s01s02s216.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Warning: Bank contains rendered source effects which can't be edited in Wwise.">
+<param name="Local" value="ch63s01s02s217.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wrong number of Arguments for Dialogue Event argument list in function: ... Expected ..., got ...">
+<param name="Local" value="ch63s01s02s218.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise audio out of range ...">
+<param name="Local" value="ch63s01s02s219.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise audio out of range ... , bus ID ...">
+<param name="Local" value="ch63s01s02s220.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise audio out of range. Bus Effect ..., bus ID ...">
+<param name="Local" value="ch63s01s02s221.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise audio out of range. ..., ray ...">
+<param name="Local" value="ch63s01s02s222.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise disconnected during transfer of file ... Sound will be terminated. Other errors may occur.">
+<param name="Local" value="ch63s01s02s223.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise Motion Device Initialization.">
+<param name="Local" value="ch63s01s02s224.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Unsupported feedback connection to Audio Objects bus.">
+<param name="Local" value="ch63s01s02s225.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Performance Monitor">
+<param name="Local" value="ch63s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Performance Monitor Settings">
+<param name="Local" value="ch63s02s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Advanced Profiler">
+<param name="Local" value="ch63s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voices Graph">
+<param name="Local" value="ch63s03s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voices">
+<param name="Local" value="ch63s03s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Busses">
+<param name="Local" value="ch63s03s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sends">
+<param name="Local" value="ch63s03s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sidechain Mixes">
+<param name="Local" value="ch63s03s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Devices">
+<param name="Local" value="ch63s03s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Emitter-Listener Associations">
+<param name="Local" value="ch63s03s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Memory">
+<param name="Local" value="ch63s03s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Memory Arenas">
+<param name="Local" value="ch63s03s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Streams">
+<param name="Local" value="ch63s03s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Streaming Devices">
+<param name="Local" value="ch63s03s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="CPU">
+<param name="Local" value="ch63s03s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Obs/Occ">
+<param name="Local" value="ch63s03s13.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Listeners">
+<param name="Local" value="ch63s03s14.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SoundBanks">
+<param name="Local" value="ch63s03s15.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Loaded Media">
+<param name="Local" value="ch63s03s16.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Prepared Events and Busses">
+<param name="Local" value="ch63s03s17.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Prepared Game Syncs">
+<param name="Local" value="ch63s03s18.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="API Calls">
+<param name="Local" value="ch63s03s19.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voice Inspector">
+<param name="Local" value="ch63s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Object 3D Viewer">
+<param name="Local" value="ch63s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Object 3D Viewer Options">
+<param name="Local" value="ch63s05s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Object List">
+<param name="Local" value="ch63s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Object Metadata">
+<param name="Local" value="ch63s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Object Meter">
+<param name="Local" value="ch63s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voice Monitor">
+<param name="Local" value="ch63s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Voice Explorer">
+<param name="Local" value="ch63s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Object 3D Viewer">
+<param name="Local" value="ch63s11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Object 3D Viewer Options">
+<param name="Local" value="ch63s11s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Object 3D Viewer Keyboard Shortcuts">
+<param name="Local" value="ch63s11s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Sync Monitor">
+<param name="Local" value="ch63s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Statistics">
+<param name="Local" value="ch63s13.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Statistics (Query - Paths Used)">
+<param name="Local" value="ch63s13s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Statistics (Query - Dialogue Events Added)">
+<param name="Local" value="ch63s13s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Profiler Statistics (Query - Dialogue Events Distribution)">
+<param name="Local" value="ch63s13s03.html"></OBJECT></LI>
+</UL></UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audiokinetic plug-ins">
+<param name="Local" value="pt09.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device plug-ins">
+<param name="Local" value="ch64.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK ASIO Output">
+<param name="Local" value="ch64s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Third-party and custom Audio Devices">
+<param name="Local" value="ch64s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Device Effect plug-ins">
+<param name="Local" value="ch65.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Mastering Suite">
+<param name="Local" value="ch65s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Parametric EQ">
+<param name="Local" value="ch65s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multiband Compressor">
+<param name="Local" value="ch65s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Master Volume">
+<param name="Local" value="ch65s01s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Limiter">
+<param name="Local" value="ch65s01s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Performance">
+<param name="Local" value="ch65s01s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Changing Mastering Suite in game">
+<param name="Local" value="ch65s01s06.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source plug-ins">
+<param name="Local" value="ch66.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK ASIO Input">
+<param name="Local" value="ch66s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Audio Input">
+<param name="Local" value="ch66s02.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Audio Input">
+<param name="Local" value="ch66s02s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Audio Input">
+<param name="Local" value="ch66s02s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="External Source">
+<param name="Local" value="ch66s03.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: External Source">
+<param name="Local" value="ch66s03s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Impacter">
+<param name="Local" value="ch66s04.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Impacter">
+<param name="Local" value="ch66s04s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Impacter">
+<param name="Local" value="ch66s04s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Motion">
+<param name="Local" value="ch66s05.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Motion">
+<param name="Local" value="ch66s05s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Motion">
+<param name="Local" value="ch66s05s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Haptic Clip Player">
+<param name="Local" value="ch66s06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Haptic Clip Player">
+<param name="Local" value="ch66s06s01.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sidechain Source">
+<param name="Local" value="ch66s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Silence">
+<param name="Local" value="ch66s08.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Silence">
+<param name="Local" value="ch66s08s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Silence">
+<param name="Local" value="ch66s08s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sine">
+<param name="Local" value="ch66s09.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Sine">
+<param name="Local" value="ch66s09s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Sine">
+<param name="Local" value="ch66s09s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundseed Air Wind">
+<param name="Local" value="ch66s10.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Soundseed Wind">
+<param name="Local" value="ch66s10s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Soundseed Wind">
+<param name="Local" value="ch66s10s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundseed Air Woosh">
+<param name="Local" value="ch66s11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Soundseed Woosh">
+<param name="Local" value="ch66s11s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Soundseed Woosh">
+<param name="Local" value="ch66s11s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundseed Grain">
+<param name="Local" value="ch66s12.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Soundseed Grain tips">
+<param name="Local" value="ch66s12s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Soundseed Grain">
+<param name="Local" value="ch66s12s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Soundseed Grain plug-in">
+<param name="Local" value="ch66s12s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Synth One">
+<param name="Local" value="ch66s13.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Synth One">
+<param name="Local" value="ch66s13s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Synth One">
+<param name="Local" value="ch66s13s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Tone Generator">
+<param name="Local" value="ch66s14.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Source Editor: Tone Generator">
+<param name="Local" value="ch66s14s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Contents Editor: Tone Generator">
+<param name="Local" value="ch66s14s02.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect plug-ins">
+<param name="Local" value="ch67.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="3D Audio Bed Mixer">
+<param name="Local" value="ch67s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK Channel Router">
+<param name="Local" value="ch67s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK Convolution Reverb">
+<param name="Local" value="ch67s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="AK Custom Panner">
+<param name="Local" value="ch67s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Compressor">
+<param name="Local" value="ch67s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Delay">
+<param name="Local" value="ch67s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Expander">
+<param name="Local" value="ch67s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Flanger">
+<param name="Local" value="ch67s08.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Gain">
+<param name="Local" value="ch67s09.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Guitar Distortion">
+<param name="Local" value="ch67s10.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Harmonizer">
+<param name="Local" value="ch67s11.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Matrix Reverb">
+<param name="Local" value="ch67s12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Meter">
+<param name="Local" value="ch67s13.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multiband Meter">
+<param name="Local" value="ch67s14.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Parametric EQ">
+<param name="Local" value="ch67s15.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Peak Limiter">
+<param name="Local" value="ch67s16.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Pitch Shifter">
+<param name="Local" value="ch67s17.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Recorder">
+<param name="Local" value="ch67s18.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Recorder (ADM)">
+<param name="Local" value="ch67s19.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Reflect">
+<param name="Local" value="ch67s20.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="RoomVerb">
+<param name="Local" value="ch67s21.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sidechain Receive">
+<param name="Local" value="ch67s22.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Sidechain Send">
+<param name="Local" value="ch67s23.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Stereo Delay">
+<param name="Local" value="ch67s24.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Time Stretch">
+<param name="Local" value="ch67s25.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Tremolo">
+<param name="Local" value="ch67s26.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="VST3 plug-ins">
+<param name="Local" value="ch68.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Open source components in Audiokinetic plug-ins">
+<param name="Local" value="ch69.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Certified Partner plug-ins">
+<param name="Local" value="pt10.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="McDSP FutzBox Lo-Fi Distortion">
+<param name="Local" value="ch70.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="FutzBox overview">
+<param name="Local" value="ch70s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect Editor - McDSP FutzBox Lo-Fi Distortion Effect plug-in">
+<param name="Local" value="ch70s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the FutzBox plug-in">
+<param name="Local" value="ch70s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Understanding the basics">
+<param name="Local" value="ch70s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Taking a closer look at the FutzBox Lo-Fi Distortion Effect plug-in">
+<param name="Local" value="ch70s05.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="McDSP ML1 Mastering Limiter">
+<param name="Local" value="ch71.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Effect Editor - McDSP ML1 Mastering Limiter Effect plug-in">
+<param name="Local" value="ch71s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="A closer look at the ML1 Mastering Limiter plug-in">
+<param name="Local" value="ch71s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ML1 Mastering Limiter applications">
+<param name="Local" value="ch71s03.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="ReadSpeaker speechEngine">
+<param name="Local" value="ch72.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Platform Support">
+<param name="Local" value="ch72s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Game Engine Integration">
+<param name="Local" value="ch72s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Platform-Specific Setup">
+<param name="Local" value="ch72s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Parameters">
+<param name="Local" value="ch72s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Release Notes">
+<param name="Local" value="ch72s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Open source components">
+<param name="Local" value="ch72s06.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Base64">
+<param name="Local" value="ch72s06s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="ICONV">
+<param name="Local" value="ch72s06s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="expat">
+<param name="Local" value="ch72s06s03.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="cURL">
+<param name="Local" value="ch72s06s04.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="OpenSSL">
+<param name="Local" value="ch72s06s05.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="SSLeay">
+<param name="Local" value="ch72s06s06.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="zlib">
+<param name="Local" value="ch72s06s07.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="PCRE">
+<param name="Local" value="ch72s06s08.html"></OBJECT></LI>
+</UL></UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise tools">
+<param name="Local" value="pt11.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File Packager">
+<param name="Local" value="ch73.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="File Order Editor">
+<param name="Local" value="ch73s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Generating Packages dialog">
+<param name="Local" value="ch73s02.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Using the Multi-Channel Creator">
+<param name="Local" value="ch74.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multi-Channel Creator reference">
+<param name="Local" value="ch74s01.html"></OBJECT></LI>
+<UL>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Multi-Channel Creator window">
+<param name="Local" value="ch74s01s01.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Settings dialog">
+<param name="Local" value="ch74s01s02.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Log dialog">
+<param name="Local" value="ch74s01s03.html"></OBJECT></LI>
+</UL></UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Wwise Wave Viewer">
+<param name="Local" value="ch75.html"></OBJECT></LI>
+</UL><LI><OBJECT type="text/sitemap">
+<param name="Name" value="Additional resources">
+<param name="Local" value="pt12.html"></OBJECT></LI>
+<LI><OBJECT type="text/sitemap">
+<param name="Name" value="Glossary">
+<param name="Local" value="go01.html"></OBJECT></LI>
+</UL>
+</UL>
+</BODY></HTML>

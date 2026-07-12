@@ -1,0 +1,411 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Reflect</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s19.html" title="Recorder (ADM)"><link rel="next" href="ch67s21.html" title="RoomVerb"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Reflect</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_reflect_plug_in_effect"></a>Reflect</h2></div></div></div><p>The Reflect plug-in must be installed using the Launcher. For information on installing
+		plug-ins through the Launcher, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> in the Audiokinetic Launcher guide.</p><p>For information on applying plug-ins to objects, see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>
+      (See the <a class="xref" href="ch67s20.html#wwise_reflect_properties" title="Reflect properties">Reflect properties</a> below.)
+	</p><p>The Reflect Effect plug-in implements a multi-<a class="glossterm" href="go01.html#glossary_tap"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_tap" title="Tap">tap</a></em></a> time-varying <a class="glossterm" href="go01.html#glossary_delay_line"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_delay_line" title="Delay Line">delay line</a></em></a> with filters, for the purpose of simulating spatialized early reflections.</p><p> When considering geometrical modeling of acoustics, spatialized early reflections are typically calculated using the "<a class="link" href="http://interactiveacoustics.info/html/GA_IS.html" target="_blank">image source technique</a>". With this approach, early reflections can be represented by an image source, as if the geometry from which sound reflects were like a mirror. This is illustrated in the following figure.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="818"><tr style="height: 813px"><td><img src="Images/mirrorlike_earlyreflections.png" width="818"></td></tr></table></div><p>In this figure, an emitter E and a listener L exist in the same geometry (room), depicted by the enclosing box (black solid line). The reflection paths from the emitter to the listener are drawn in green (solid line). The image source technique consists of generating an "image" of the emitter for each surface. The image source is placed at the same distance behind the surface, on the line that is normal to the surface and connecting the emitter. The total distance traveled by the sound corresponds to the distance between the image source and the listener. Note that image source placement strictly depends on emitter position and geometry, and not on the listener's position.</p><p>The game pushes a list of image sources to a given plug-in instance. For each image source, a tap is added to the delay line, and is further filtered, panned, and scaled according to its relative 3D position, curves driven by distance and diffraction, and associated <a class="xref" href="ch67s20.html#acoustic_textures" title="Acoustic Textures">Acoustic Textures</a>. </p><p>Reflect is typically used on an Auxiliary Bus representing early reflections. It will correctly simulate early reflections if the bus is associated with the game object that emits the sounds sent to this bus.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="reflect_setup_wwise"></a>Setting up Reflect in a Wwise project</h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Add an Auxiliary Bus for early reflections:</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p>In the Project Explorer, right-click the bus under which you want to create an early reflections Auxiliary Bus.</p></li><li class="listitem"><p>Select <span class="bold"><strong>New Child</strong></span> &gt; <span class="bold"><strong>Presets</strong></span> and choose either <span class="bold"><strong>Physically-Based Early Reflection Auxiliary Bus</strong></span>, <span class="bold"><strong>Simplified Early Reflection Auxiliary Bus</strong></span> or <span class="bold"><strong>Legacy Early Reflection Auxiliary Bus</strong></span>. We recommend using the simplified or physically-based auxiliary bus to benefit from all of Reflect's features. See the <a class="xref" href="ch67s20.html#reflect_intended" title="Intended Reflect workflow">Intended Reflect workflow</a> below.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>These Presets are only available when Reflect is installed and the <span class="bold"><strong>Reflect</strong></span> and/or <span class="bold"><strong>Reflect (Physically-Based)</strong></span> Factory Presets have been added to your project. If the Presets haven't been
+								added, you can add them using the <a class="xref" href="ch07s02.html" title="Import Factory Assets">Import Factory Assets</a> dialog.</p></td></tr></table></div><div class="mediaobject"><img src="Images/ReflectERBus.png"></div><p>The new Auxiliary Bus is created with an instance of the Reflect Effect already mounted on it. Refer to <a class="xref" href="ch67s20.html#reflect_auxilary_bus_settings" title="Characteristics of the Reflect Auxiliary Bus">Characteristics of the Reflect Auxiliary Bus</a> for further details on this bus.</p></li></ol></div></li><li class="listitem"><p>Configure the sounds that you want to be reflected:</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p>If you will be <a class="xref" href="ch67s20.html#reflect_setup_spatialaudio" title="Setting up Reflect with spatial audio">Setting up Reflect with spatial audio</a>, which is the preferred method, or if you use the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_spatial_audio_aab4d85317c62724c00d25ba8913fb503.html" target="_blank">SpatialAudio::SetImageSource</a> API, assign your newly created bus to the Early Reflections' <span class="bold"><strong>Auxiliary Bus</strong></span> in the General Settings tab of the sound's Property Editor. Optionally, you can set a send volume.</p></li><li class="listitem"><p>If you will be <a class="xref" href="ch67s20.html#reflect_setup_nospatialaudio" title="Setting up Reflect without spatial audio">Setting up Reflect without spatial audio</a>, or if you will send it to other Auxiliary Busses for late reverberation, in the General Settings tab of the sound's Property Editor, select <span class="bold"><strong>Use game-defined auxiliary sends</strong></span>.</p><div class="mediaobject"><img src="Images/ReflectERSend.png"></div></li><li class="listitem"><p>Typically a sound that will be reflected is spatialized in 3D and uses an attenuation. In the Positioning tab of the sound's Property Editor:</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem"><p>Select <span class="bold"><strong>Listener Relative Routing</strong></span>.</p></li><li class="listitem"><p>Set 3D Spatialization to <span class="bold"><strong>Position + Orientation</strong></span>.</p></li><li class="listitem"><p>Add an attenuation in the <span class="bold"><strong>Attenuation</strong></span> group.</p></li></ol></div><div class="mediaobject"><img src="Images/ReflectSoundPositioning.png"></div></li></ol></div></li><li class="listitem"><p>Configure the Effect in the Reflect Effect Editor:</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p>Set the output channel to the desired configuration by modifying the <span class="bold"><strong>Output Config</strong></span> property. <span class="bold"><strong>Parent Bus</strong></span> represents the output bus configuration of the parent bus of the Auxiliary Bus.</p></li><li class="listitem"><p>By default, all curves are set to <span class="bold"><strong>Use Attenuation</strong></span>. If you have set some sounds' Early Reflections <span class="bold"><strong>Auxiliary Bus</strong></span> to an Auxiliary Bus mounted with this Reflect Effect, and if the sound has an attenuation, select the <span class="bold"><strong>Attenuations &gt;</strong></span> button to see the attenuation in the list. Selecting an attenuation from this list lets you visualize the different curves in the graph. Alternatively, you can set curves to <span class="bold"><strong>Custom</strong></span> and author them yourself.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p><span class="bold"><strong>Distance High-shelf Filter</strong></span> and <span class="bold"><strong>Diffraction High-shelf Filter</strong></span> curves are always custom, because these curves don't exist in Wwise Attenuation ShareSets.</p></td></tr></table></div></li><li class="listitem"><p>If you have a custom curve, make sure the <span class="bold"><strong>Max Distance</strong></span> is great enough for the sounds emitted by your image sources to reach the listener.</p><div class="mediaobject"><img src="Images/ReflectEffectEditor.png"></div></li></ol></div></li><li class="listitem"><p>Ensure you have a license for the Reflect plug-in.</p></li><li class="listitem"><p>Generate SoundBanks.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="reflect_auxilary_bus_settings"></a>Characteristics of the Reflect Auxiliary Bus</h3></div></div></div><p>When <a class="xref" href="ch67s20.html#reflect_setup_wwise" title="Setting up Reflect in a Wwise project">Setting up Reflect in a Wwise project</a>, an Auxiliary Bus is created. It is a standard Auxiliary Bus with the following settings:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The bus configuration is defined as follows, depending on the Preset chosen:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>The Simplified and Physically-Based Presets</strong></span>: The bus configuration is Audio Objects. Setting the input bus configuration to Audio Objects allows the Reflect plug-in to receive more information in its input sounds, for example, the attenuation applied on the sound. This lets the Reflect plug-in use the sound's attenuation curves to filter the output sounds, if specified by the user.</p></li><li class="listitem"><p><span class="bold"><strong>The Legacy Preset</strong></span>: The bus configuration is 1.0 (mono). While Reflect is capable of working with multichannel input sounds, the first thing it does is downmix them to mono. It is therefore more efficient to set the bus to mono, as it spares Wwise from needlessly computing spatialization of the voice into this Auxiliary Bus.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The bus configuration (Audio Objects or mono) does not affect Reflect's output configuration. The output configuration onto which early reflections are spatialized is determined by Reflect's Effect Settings.</p></td></tr></table></div></li><li class="listitem"><p>It has an instance of Reflect mounted on it. The Legacy, Simplified, and Physically-Based Presets include different instances of Reflect. The Legacy Reflect instance is set to use <span class="bold"><strong>Custom</strong></span> curves for its filtering, while the Simplified Reflect instance is set to <span class="bold"><strong>Use Attenuation</strong></span> distance curves instead. For the Physically-Based preset, its diffraction curves are set to use <span class="bold"><strong>Custom</strong></span> curves, which approximate the effect of lifelike diffraction using Shelf Filters. In all cases, this can be changed in the Reflect Effect Editor.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A Reflect Effect set to <span class="bold"><strong>Use Attenuation</strong></span> curves is only able to retrieve the attenuation curves if the bus configuration of the early reflection Auxiliary Bus it is mounted on is set to an Audio Objects bus configuration. Likewise, Occlusion from Portals is only supported if the bus configuration is set to <span class="bold"><strong>Audio Objects</strong></span> in the Simplified mode, by using the retrieved occlusion curve.</p></td></tr></table></div></li><li class="listitem"><p>In the Positioning tab, the <span class="bold"><strong>Listener Relative Routing</strong></span> option is selected, but 3D Spatialization is set to <span class="bold"><strong>None</strong></span>. Otherwise, Wwise would further transform (pan and attenuate) the image sources generated and spatialized by Reflect.</p><p>Note, any attenuation applied to this bus will affect the bus output in regards to the position of the emitter and the listener. To customize attenuation in regards to the position of the different image sources and the listener, refer to the Reflect Effect Editor instead.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="reflect_intended"></a>Intended Reflect workflow</h3></div></div></div><p>Reflect can be used in either legacy or simplified mode. In legacy mode, the user must author a series of custom curves to attenuate the early reflections. In simplified mode, Reflect uses each sound's own attenuation curves to attenuate the early reflections. The assumption is that the early reflections of a sound should be attenuated according to the same curves as the sound itself.</p><p>Reflect's simplified mode is activated by setting the early reflections auxiliary bus to an Audio Objects input bus configuration. This gives the sound engine access to the input sound's attenuation curves so that they can be used in the Reflect plug-in execution. This doesn't impact the output of the auxiliary bus because Reflect is an out-of-place Effect. Users can choose the output configuration in the Reflect Effect Editor with the Output Config property.</p><p>The mode is called 'simplified' because the user only needs to associate a sound with a simplified early reflection auxiliary bus to automatically have a reasonable design for the sound's early reflections. Since each sound can have its own attenuation, another advantage of the simplified mode is that the same Reflect Effect can attenuate multiple sounds differently. In contrast, in legacy mode, it is necessary to create different Reflect Effect ShareSets to have different sets of curves.</p><p>To allow for some customization in simplified mode, each Reflect ShareSet has distance and diffraction warping properties that can emphasize or de-emphasize the effect of distance and diffraction, respectively. For example, setting a positive distance warping value virtually positions the image sources further away from the listener. This means that the effect of the distance-driven curves are de-emphasized since the early reflections will be more attenuated than the direct signal. Distance warping always keeps the distance between 0 and the maximum distance of the curve. In the same way, warping diffraction emphasizes or de-emphasizes the effect of diffraction by moving the diffraction value between 0 and 100. These warping values can also be set with RTPCs to help emphasize or de-emphasize according to a game parameter.</p><p>If warping is not enough, it is possible to use custom curves. Each curve can be set independently to either use an attenuation curve or a custom curve. Note that the custom curve will be custom for all sounds using the same Reflect Effect. Warping also affects custom curves.</p><p>The Physically-Based preset is a hybrid between the legacy and simplified modes. It works on an Audio Objects bus configuration and uses the input sound's <span class="italic">distance</span> attenuation curves, like in the simplified mode. However, for diffraction, it uses custom curves. These custom curves approximate the effect of lifelike diffraction, using volume attenuation and a shelf filter. Although the input sound typically has diffraction-driven curves built-in in Wwise, the diffraction effect simulated in Reflect mostly happens in the View zone, instead of the Shadow zone, and these zones affect the sound in different ways. The custom curves of the Physically-Based preset are likely to be more adequate for modeling view zone diffraction than the built-in curves in Wwise. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_concepts.html#spatial_audio_concepts_diffraction" target="_blank">Spatial Audio Concepts - Diffraction</a> for an illustration of the View and Shadow diffraction zones.</p><p>The only scenario where legacy mode is recommended, is if all your curves will always be set to custom and you really want to avoid using Audio Objects.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="reflect_setup_spatialaudio"></a>Setting up Reflect with spatial audio</h3></div></div></div><p>After <a class="xref" href="ch67s20.html#reflect_setup_wwise" title="Setting up Reflect in a Wwise project">Setting up Reflect in a Wwise project</a>, you need to set it up on the game side. You can do so by using the Spatial Audio API.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Ensure Reflect is registered by including <code class="code">AK/Plugin/AkReflectFXFactory.h</code>.</p></li><li class="listitem"><p>Include the Spatial Audio header file: <code class="code">AK/SpatialAudio/Common/AkSpatialAudio.h</code>.</p></li><li class="listitem"><p>Initialize the Spatial Audio module and register the spatial audio listener.</p><pre class="programlisting">
+// Initialize Wwise Spatial Audio.
+AkSpatialAudioInitSettings settings;
+res = AK::SpatialAudio::Init(settings);
+
+// Register the listener game object if not already done, and then register it as the one and only spatial audio listener.
+static const AkGameObjectID LISTENER_ID = 10000;
+AK::SoundEngine::RegisterGameObj( LISTENER_ID, "Listener" );
+AK::SpatialAudio::RegisterListener( LISTENER_ID );
+</pre></li><li class="listitem"><p>Define and set the geometry that will make up the Reflect geometry surfaces.</p><p>Create an <code class="code">AkGeometryParams</code> and fill it with the triangles, vertices, and surfaces of your geometry.</p><pre class="programlisting">
+static const AkGeometrySetID GEOMETRY_ID = 200;
+AkGeometryParams geometryParam;
+
+// Fill triangles, vertices and surfaces into geometryParam.
+// See an example in the Integration Demo.
+// ...
+
+AK::SpatialAudio::SetGeometry( GEOMETRY_ID, geometryParams );</pre></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="reflect_setup_nospatialaudio"></a>Setting up Reflect without spatial audio</h3></div></div></div><p>After <a class="xref" href="ch67s20.html#reflect_setup_wwise" title="Setting up Reflect in a Wwise project">Setting up Reflect in a Wwise project</a>, you need to set it up on the game side.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Ensure Reflect is registered by including <code class="code">AK/Plugin/AkReflectFXFactory.h</code>.</p></li><li class="listitem"><p>Include the Reflect header file: <code class="code">AK/Plugin/AkReflectGameData.h</code>.</p></li><li class="listitem"><p>You may also need to add <code class="code">AkReflectFX.lib</code> to your executable's input libraries.</p></li><li class="listitem"><p>Use the Reflect API to create image sources and place them where you want sound to be reflected from.</p><pre class="programlisting">
+// Create an AkReflectGameData object.
+AkReflectGameData * reflectGameData = nullptr;
+reflectGameData = (AkReflectGameData *)_alloca(AkReflectGameData::GetSize(1));
+// Fill in the data.
+reflectGameData-&gt;listenerID = LISTENER_ID;
+reflectGameData-&gt;uNumImageSources = 1;
+reflectGameData-&gt;arSources[0].uID = 123;
+reflectGameData-&gt;arSources[0].params.sourcePosition = { 200, 0, 0 };
+// The following represents a distance factor between the listener and the image source.
+// If the source position corresponds to the reflective surface, the number should be two.
+reflectGameData-&gt;arSources[0].params.fDistanceScalingFactor = 1.f;
+reflectGameData-&gt;arSources[0].params.fLevel = 1.f;
+// Associate the image source with Acoustic Textures here if needed.
+reflectGameData-&gt;arSources[0].texture.uNumTexture = 0;
+reflectGameData-&gt;arSources[0].name.SetName("Img src 1");
+
+// Send to Reflect.
+AK::SoundEngine::SendPluginCustomGameData(AK::SoundEngine::GetIDFromString("ER"), EMITTER_ID, AkPluginTypeEffect, AKCOMPANYID_AUDIOKINETIC, 171, reflectGameData, AkReflectGameData::GetSize(1));</pre></li><li class="listitem"><p>Send a new <code class="code">AkReflectGameData</code> when you need to update the position of the image sources.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="acoustic_textures"></a>Acoustic Textures</h3></div></div></div><p>With each image source, you may pass up to four Acoustic Textures. Acoustic Textures, defined in the <a class="xref" href="ch61s05s05.html" title="Acoustic Texture Editor">Acoustic Texture Editor</a>, represent material properties. During execution of the plug-in, the four
+			absorption bands (Low, Mid Low, Mid High, and High) of each texture translate into four frequency band attenuations.
+			When Material Filtering is set to Favor Performance (see the <a class="xref" href="ch67s20.html#wwise_reflect_properties" title="Reflect properties">Reflect properties</a>), which is the
+			default value, then the Mid Low and Mid High frequency band attenuations are averaged and used as a single mid-band
+			frequency band attenuation. If, however, Material Filtering is set to Favor Quality, these four frequency band attenuations
+			are used as-is in four cascaded filters.
+			</p><p>When more than one Acoustic Texture is applied, band absorption coefficients are combined, as if the signal was successively filtered. This effectively simulates reflections resulting from hitting multiple surfaces.
+		</p><div class="mediaobject"><img src="Images/acoustic_texture_editing.png"></div><p><span class="bold"><strong>Reflect mapping of frequency absorption bands</strong></span></p><div class="itemizedlist"><p>If Material Filtering is set to Favor Performance (see the <a class="xref" href="ch67s20.html#wwise_reflect_properties" title="Reflect properties">Reflect properties</a>), the frequency band attentuations occur at:</p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low</strong></span>: &lt; 250 Hz</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Mid</strong></span>: =1,000 Hz</p></li><li class="listitem"><p>
+					<span class="bold"><strong>High</strong></span>: &gt; 5,000 Hz</p></li></ul></div><p>The frequencies for absorptions can not be changed when Material Filtering is set to Favor Performance.</p><div class="itemizedlist"><p>Otherwise, when Material Filtering is set to Favor Quality, the frequency band attenuations occur at:</p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low</strong></span>: &lt; 250 Hz</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Mid Low</strong></span>: &gt; 250 Hz and &lt; 1,000 Hz</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Mid High</strong></span>: &gt; 1,000 Hz and &lt; 4,000 Hz</p></li><li class="listitem"><p>
+					<span class="bold"><strong>High</strong></span>: &gt; 4,000 Hz</p></li></ul></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>The Reflect values for frequency absorption can be changed when Material Filtering is set to Favor Quality, but this should only be needed in very particular scenarios. To do so, directly edit the <code class="code">%Wwise%\Authoring\x64\Release\bin\plugins\AkReflect.xml</code> file by changing the <code class="code">Default Value</code> for the <code class="code">BaseTextureFrequency</code>. This defines the new default Low band; the other bands successively increase by two octaves.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508329808"></a>Using Reflect to simulate reflections for 3rd person sounds</h3></div></div></div><p>In order to use Reflect for 3rd-person sounds, it needs to run on
+			an instance of the bus that is associated with this emitter. See
+				<a class="link" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses">3D Busses</a> and <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af960fca0239e219b9d08c2659fe9e5d4.html" target="_blank">
+				
+					<code class="code">AK::SoundEngine::SetGameObjectAuxSendValues()</code></a>
+			for more details. You may use the services of <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=namespace_a_k_1_1_spatial_audio.html" target="_blank"><code class="code">AK::SpatialAudio</code></a>
+			to help set up bus instances accordingly.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508321616"></a>Tweaking Reflect settings</h3></div></div></div><p>Reflect comes with a simple set of parameters that you may use to tweak the resulting reflections.</p><p>Reflections are panned, filtered, and delayed versions of the downmixed input signal. The delay time is influenced by the game-driven image source's distance and Reflect's Speed of Sound. Filtering and volume scaling depend on the image source's distance and diffraction coefficient evaluated against its various curves. Filtering is also affected by the image source's Acoustic Texture(s).
+		</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Distance attenuation curves simulate air absorption and energy decay.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508322256"></a>Working with diffraction</h3></div></div></div><p>Image sources may also be given a diffraction coefficient. It will normally be zero if the reflection is specular, but will be non-zero when they need to bend around the edge of their reflecting surface in order to reach the listener. Such a reflection would typically be lower in amplitude and filtered. Reflect exposes curves that let you tweak these parameters against the diffraction coefficient. See <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_concepts.html#spatial_audio_concepts_diffraction" target="_blank">Spatial Audio Concepts - Diffraction</a> and <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_apigeometry_diffract.html#spatial_audio_apigeometry_diffract_er" target="_blank">Geometric Diffraction of Early Reflections</a> for more details on diffraction, how it interacts with early reflections, and how this can be simulated by <code class="code">AK::SpatialAudio</code>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508324432"></a>Working with occlusion</h3></div></div></div><p>Image sources can also have occlusion values. Spatial Audio assigns Portal occlusion according to the max of the Portal occlusion values for each Portal a reflection passed through. Reflect does not expose a bespoke curve for occlusion, therefore occlusion is only available when the bus configuration of the early reflection Auxiliary Bus is set to Audio Objects, which allows occlusion curves to be retrieved from each sound. See also: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_concepts.html#spatial_audio_concepts_obsocc" target="_blank">Spatial Audio Concepts - Obstruction and Occlusion</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508323792"></a>Reducing Doppler artifacts</h3></div></div></div><p>Delaying a signal using a time-varying delay causes its pitch to shift in proportion to the rate of change of the delay. This is called the Doppler effect. Although this phenomenon occurs in the real world, in the context of a game, it can cause undesirable artifacts. This is particularly true considering that game physics is often more abrupt than real world physics, and deals with geometries that can be unnatural. (They are typically optimized for gameplay and graphics, not audio.) Reflect offers mechanisms to minimize these artifacts.</p><p>Image sources undergo three consecutive transformations, which can help control Doppler. Here is an overview of the algorithms.</p><div class="mediaobject"><img src="Images/Doppler_algorithms.png"></div><p>The first step is delay smoothing. It applies a smoothing filter to each reflection time, causing them to update more gradually. It is especially useful for reducing artifacts caused by abrupt or irregular position updates from the game engine, such as when the game and audio engine run at different update rates or are not perfectly synchronized. The following figure depicts its effect on delay.</p><div class="mediaobject"><img src="Images/delay_smoothing.png"></div><p>Next, a pitch limiting step forces the audio signal to stay within the specified pitch shift limit. It does this by capping the rate of delay change. The following figures show how pitch is capped, and how this affects the effective delay time.</p><div class="mediaobject"><img src="Images/pitch_limit_pitch.png"></div><div class="mediaobject"><img src="Images/pitch_limit_delay.png"></div><p>When the rate of delay change is clamped at the value required to satisfy the pitch limit, a discrepancy occurs between the effective delay and the target delay. When this discrepancy exceeds a certain threshold, defined by the <span class="bold"><strong>Delay Error Tolerance</strong></span> property, the system corrects the delay using a short crossfade between the effective delay and the target delay. The following figure illustrates this process.</p><div class="mediaobject"><img src="Images/delay_error_correction.png"></div><p>Here are a few tips for using these properties. </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use <span class="bold"><strong>Delay Smoothing</strong></span> to smooth out position updates coming from the game. Increase the value if position changes occur in small, abrupt bursts rather than a continuous motion.</p></li><li class="listitem"><p>If you want to preserve the Doppler effect, keep the <span class="bold"><strong>Pitch Limit</strong></span> set to a high value.</p></li><li class="listitem"><p>If you want to reduce or eliminate the Doppler effect, lower the <span class="bold"><strong>Pitch Limit</strong></span> to 100 (one semitone) or less.</p></li><li class="listitem"><p>If you want to suppress the Doppler effect and you prefer a timing discrepancy over potential crossfade artifacts, increase the <span class="bold"><strong>Delay Error Tolerance</strong></span>.</p></li><li class="listitem"><p>If you want to suppress the Doppler effect and you don't mind crossfading, decrease the <span class="bold"><strong>Delay Error Tolerance</strong></span>. Crossfading is typically transparent with wideband sounds.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1508313168"></a>Reducing phasing artifacts</h3></div></div></div><p>In rare cases, you might be able to hear <a class="glossterm" href="go01.html#glossary_phasing"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_phasing" title="Phasing">phasing</a></em></a> artifacts when two or more image sources have very similar distances. The Reflect plug-in includes two tools you can use to reduce phasing:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use <a class="glossterm" href="go01.html#glossary_decorrelation_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_decorrelation_filter" title="Decorrelation Filter">decorrelation filters</a></em></a>, which slightly alter (decorrelate) audio signals that originate from the delay line taps.  Because each signal differs slightly from the others, phasing is less likely to occur when the signals are mixed.</p></li><li class="listitem"><p>Modify Direct Sound Time. This tool fuses image sources with delay times within a user-defined value into a single logical image source. Multiple images are therefore not rendered, so phasing artifacts are less likely to occur. However, fusing only mitigates phasing of reflections with the direct path; it does not help when reflections interfere at larger delays.</p></li></ul></div><p>Each tool has its own costs and benefits: fusing uses a relatively small amount of CPU resources but has limited use, whereas decorrelation is a more complex approach but yields a broader reduction in phasing in general.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_reflect_properties"></a>Reflect properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+							<p><span class="bold"><strong>General</strong></span></p>
+						</td></tr><tr><td>
+		<p>Speed Of Sound</p>
+	</td><td>
+		<p>Units per second. The units correspond to the distance units used by the game and sent to Reflect. The speed of sound in air is ~340 m/s. If your game&#8217;s units are centimeters, you should use a value of approximately 34,000(cm)/s. Image source delay time is calculated as distance divided by speed of sound.</p>
+		<p>Note: Small speed of sound or large image source distance values can cause long delay times, which in turn correspond to high memory usage. High memory usage can cause CPU spikes.</p>
+		<p>Default value: 345</p>
+		<p>Range: 0.001 to 2147483648</p>
+	</td></tr><tr><td>
+		<p>Distance Warping</p>
+	</td><td>
+		<p>Emphasize or de-emphasize the effect of distance on image sources. Distance values are warped to a higher or lower value between 0 and the curve&#8217;s max distance with a bilinear transform. Changing the distance warping value modifies the appearance of the plug-in&#8217;s distance-driven curves accordingly. This helps to visualize the effect.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Diffraction Warping</p>
+	</td><td>
+		<p>Emphasize or de-emphasize the effect of diffraction on image sources. Diffraction percentages are warped to a higher or lower value between 0 and 100 with a bilinear transform. Changing the diffraction warping value modifies the appearance of the plug-in&#8217;s diffraction-driven curves accordingly. This helps to visualize the effect.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Delay Smoothing</p>
+	</td><td>
+		<p>Applies a smoothing filter to each reflection time. Increasing the smoothing causes reflection times to update more gradually, which helps limit the Doppler pitch shift caused by movement.</p>
+		<p><span class="bold"><strong>Delay Smoothing</strong></span> is especially useful for reducing artifacts caused by abrupt or irregular position updates from the game engine&#8212;such as when the game and audio engine run at different update rates or are not perfectly synchronized.</p>
+		<p>The normalized value is between 0 and 1 and will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+		<p>Default value: 0.5</p>
+		<p>Range: 0 to 1</p>
+	</td></tr><tr><td>
+		<p>Smoothing Type</p>
+	</td><td>
+		<p><span class="bold"><strong>This property is deprecated.</strong></span></p>
+		<p>Defines the shape of the smoothing filter response over time. The curve icons for IIR and FIR indicate how the filter will shape sudden changes in ray distance.</p>
+	</td></tr><tr><td>
+		<p>Threshold Mode</p>
+	</td><td>
+		<p><span class="bold"><strong>This property is deprecated.</strong></span></p>
+		<p>Continous mode allows for a maximum tolerable Doppler pitch shift caused by movement. If movement is fast enough to exceed the threshold, the volume of the reflection will be ducked until the pitch returns to below the threshold. A threshold of 0 will cause the volume of the reflection to be ducked any time movement occurs.</p>
+		<p>Step mode allows for a distance threshold &#8216;bubble&#8217;, where reflections are not updated until a minimum amount of displacement occurs. A threshold of 0 will cause  Reflect to crossfade between the old and new reflections whenever movement occurs. Crossfading will result in time stretching effects that do not modify pitch.</p>
+	</td></tr><tr><td>
+		<p>Pitch Limit</p>
+	</td><td>
+		<p>Sets the maximum allowable Doppler pitch shift (in cents). Pitch shifting is caused by changes in delay time, so the rate of delay change is capped to stay within the specified pitch limit. When this rate is reduced to honor the limit, a discrepancy can occur between the effective delay and the desired delay. This discrepancy can be managed using the <span class="bold"><strong>Delay Error Tolerance</strong></span> property.</p>
+		<p>This value will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+		<p>Default value: 300</p>
+		<p>Range: 0 to 9600</p>
+	</td></tr><tr><td>
+		<p>Distance Threshold</p>
+	</td><td>
+		<p><span class="bold"><strong>This property is deprecated.</strong></span></p>
+		<p>When in step threshold mode, sets the minimum change in ray distance (in game units) needed to update the reflection delay time. When set to 0, reflections are crossfaded with movement. This value will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+	</td></tr><tr><td>
+		<p>Delay Error Tolerance</p>
+	</td><td>
+		<p>Sets the maximum allowable discrepancy between the effective delay and the desired delay. When the delay change rate is limited by the <span class="bold"><strong>Pitch Limit</strong></span>, a difference between the effective and desired delay may occur. If this difference exceeds the specified tolerance, the system adjusts the delay using a short crossfade between the effective delay and the target delay.</p>
+		<p>This tolerance is approximately expressed as a percentage of the target delay. For example, with a tolerance of 25% and a target delay of 100 ms, the maximum error allowed is 25 ms. However, the mapping is not strictly linear: a value of 100% means that any discrepancy is tolerated, regardless of its size.</p>
+		<p>Depending on the audio content, crossfading may introduce a slight artifact. Setting the <span class="bold"><strong>Delay Error Tolerance</strong></span> involves balancing the acceptable timing error against the potential artifacts caused by crossfading.</p>
+		<p>This value will not be updated if the reflect length/delay is actively changing. This parameter can be controlled by RTPCs and States; but, updating of the RTPC or State during game play is not recommended. Real-time updates are honored but not guaranteed to be handled without artifacts.</p>
+		<p>Default value: 25</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Image Source Fade Time</p>
+	</td><td>
+		<p>Applies a fade-in (in milliseconds) to the delay tap when a new image source is added and a fade-out when an image source is removed.</p>
+		<p>To preserve transients, fade-ins are not applied when Reflect is initialized. Fade-ins are only applied when an image source is added after the Reflect plugin starts processing audio.</p>
+		<p>A minimum fade-out time of 1 audio buffer is always applied to prevent clicks.</p>
+		<p>Default value: 500</p>
+		<p>Range: 0 to 10000</p>
+	</td></tr><tr><td>
+		<p>Direct Sound Max Delay</p>
+	</td><td>
+		<p>Image source delay (ms) under which image source reflections are fused with the direct sound. This suppresses phasing artifacts between reflections and the direct sound, such as those that might occur when the emitter and listener are both near a surface.</p>
+		<p>The default value of 20 ms typically removes most audible interference with the direct path. However, the ideal value depends on the sound&#8217;s frequency content.</p>
+		<p>Default value: 20</p>
+		<p>Range: 0 to 1000</p>
+	</td></tr><tr><td>
+		<p>Decorrelation Strength</p>
+	</td><td>
+		<p>
+			Sets the aggressiveness of the 
+			<a class="glossterm" href="go01.html#glossary_decorrelation_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_decorrelation_filter" title="Decorrelation Filter">decorrelation filter&#8217;s</a></em></a>
+			 phasing mitigation. As the strength increases, phasing decreases. However, greater strengths are more likely to add coloration to the output signal.
+		</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0 to 100.0</p>
+	</td></tr><tr><td>
+		<p>Decorrelation Mode</p>
+	</td><td>
+		<p>
+			Sets the mode of the 
+			<a class="glossterm" href="go01.html#glossary_decorrelation_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_decorrelation_filter" title="Decorrelation Filter">decorrelation filter&#8217;s</a></em></a>
+			 phasing mitigation to either:
+		</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Favor Performance</strong></span>: consumes less memory and CPU but introduces coloration in the output signal.</p></li><li class="listitem"><p><span class="bold"><strong>Favor Quality</strong></span>: consumes more memory and CPU but introduces less coloration.</p></li></ul></div>
+		<p>Default value: Favor Performance</p>
+	</td></tr><tr><td>
+		<p>Widen Stereo Field</p>
+	</td><td>
+		<p>
+			When enabled, the 
+			<a class="glossterm" href="go01.html#glossary_decorrelation_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_decorrelation_filter" title="Decorrelation Filter">decorrelation filter</a></em></a>
+			 is used to widen stereo image fields. The amount by which the width increases depends on the Decorrelation Strength. To enable this feature, Spread must be set to a value greater than 0 in the Distance Spread curve.
+		</p>
+		<p>Note, Reflect consumes more memory and CPU when this option is enabled.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Material Filtering</p>
+	</td><td>
+		<p>Sets the mode of material filtering to either:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="bold"><strong>Favor Performance</strong></span>: Approximates the acoustic properties of most materials with a shelf filter, using four times less CPU. When using Favor Performance, the two mid-band absorptions are not independent and together specify a mid-gain. See 
+					<a class="link" href="ch67s20.html#acoustic_textures" title="Acoustic Textures">Acoustic Textures</a>
+					.
+				</p></li><li class="listitem"><p><span class="bold"><strong>Favor Quality</strong></span>: Realistically models the acoustic properties of materials with a detailed and accurate four-band filter.</p></li></ul></div>
+	</td></tr><tr><td>
+		<p>Center %</p>
+	</td><td>
+		<p>
+			Center % used for 3D positioning. Refer to the 
+			<a class="link" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses">Positioning Tab: Audio and Auxiliary Busses</a>
+			 for more details on how Wwise handles Center% with 3D positioning.
+		</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Output Config</p>
+	</td><td>
+		<p>Reflect is an out-of-place Effect, meaning that it has the ability to output a signal in a different channel configuration than its input. Output Config lets designers choose the channel configuration on which early reflections are spatialized.</p>
+		<p>If the value is <span class="bold"><strong>Parent Bus</strong></span>, Reflect queries and uses the bus configuration of the parent of the bus on which it is inserted.</p>
+		<p>Note that if the output configuration is Audio Objects, Reflect will output one Audio Object per early reflection. This can represent a substantial number of Audio Objects. We recommend setting the Output Config to a spatialized configuration other than Audio Objects.</p>
+		<p>Default value: Same as main mix</p>
+	</td></tr><tr><td>
+		<p>Output Level</p>
+	</td><td>
+		<p>
+			The volume level (dB) of the 
+			<a class="glossterm" href="go01.html#glossary_wet_signal"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_wet_signal" title="Wet Signal">wet signal</a></em></a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+	</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Monitoring List</strong></span></p>
+						</td></tr><tr><td>
+							<p>Filter</p>
+						</td><td>
+							<p>Type anything that matches, in whole or in part, a game object's Name or ID content. Both the Monitoring List table and the curves cursors in the graph view will only display the matching image sources.
+							</p>
+						</td></tr><tr><td align="center">
+							<p>
+								</p><div class="mediaobject"><img src="Images/btn_reset_small.png"></div><p>
+							</p>
+						</td><td>
+							<p>Clears the Filter field and thereby displays all image sources on which Reflect applies in the columns below and the associated graph curves.
+							</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+							<div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+							<div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+							<div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+							<div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+						</td><td>
+							<p>Controls the Mute and Solo states for the image source and shows its implicit mute and solo states.</p>
+							<p>Muting an image source silences it for the current monitoring session. Soloing an image source silences all the other image sources in the current instance of Reflect.</p>
+							<p>
+                 A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the image source. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the image source's Mute or Solo state was implicitly set from another image source state.
+							</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Image Source ID</p>
+						</td><td>
+							<p>An identification number associated with the image source. This is a unique number assigned by the game.</p>
+						</td></tr><tr><td>
+							<p>Image Source Name</p>
+						</td><td>
+							<p>The name of the image source.</p>
+						</td></tr><tr><td>
+							<p>Game Object ID</p>
+						</td><td>
+							<p>An identification number associated with the game object. This is a unique number assigned by the game.</p>
+						</td></tr><tr><td>
+							<p>Game Object Name</p>
+						</td><td>
+							<p>The name of the game object.</p>
+						</td></tr><tr><td>
+							<p>Textures</p>
+						</td><td>
+							<p>The name (or ID, if name not found) of the <a class="link" href="ch61s05s05.html" title="Acoustic Texture Editor">Acoustic Texture(s)</a> on which the sound is reflected. More than one texture is listed for each reflection order.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When reflection paths are diffracted by the presence of an object blocking the way, (Edge) will appear for each of the edge diffracted on.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Distance</p>
+						</td><td>
+							<p>The distance in game units between the image source and the listener. This value is used to evaluate the image source curves that are based on distance.</p>
+						</td></tr><tr><td>
+							<p>Level</p>
+						</td><td>
+							<p>The gain of the sound emitted by the image source. This level can be set by the user with the AkImageSourceParams or controlled by Spatial Audio according to the diffraction angle caused by edge reflection. In the latter case, its value will be 1 when the reflection is specular and 0 when the reflected direction is parallel to the surface.</p>
+						</td></tr><tr><td>
+							<p>Diffraction</p>
+						</td><td>
+							<p>In the case of view zone diffraction, this is the angle between the specular direction and the reflected direction. In the case of shadow zone diffraction, this is the angle between the shadow zone boundary and the reflected direction.</p>
+						</td></tr><tr><td>
+							<p>Occlusion</p>
+						</td><td>
+							<p>The current value of occlusion.</p>
+						</td></tr><tr><td>
+							<p>Delay</p>
+						</td><td>
+							<p>The current value of the delay, in milliseconds, after distance smoothing is applied.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Distance column displays the absolute distance between the image source and the listener. However, the delay calculation is based on the difference between the absolute image source distance and the distance between the emitter and listener. The delay is calculated in this way because in Wwise, the direct sound is instantaneous (there is no inherent delay based on distance). The delay might therefore seem inconsistent with the distance displayed in the Distance column.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Pitch</p>
+						</td><td>
+							<p>When in continuous threshold mode, the current Doppler pitch shift (in cents) caused by changing reflection distance.</p>
+						</td></tr><tr><td>
+							<p>Doppler Suppression</p>
+						</td><td>
+							<p>The discrepancy between the target delay and the actual delay, caused by limiting pitch shift due to Doppler suppression. This value is an indication of how much the system is holding back delay updates to stay within the <span class="bold"><strong>Pitch Limit</strong></span>. It's influenced by the <span class="bold"><strong>Delay Error Tolerance</strong></span> setting.</p>
+							<p>When the value reaches 100%, the tolerance is exceeded, and the system crossfades to bring the actual delay in line with the target delay. This resets the value to 0.</p>
+							<p>When in step threshold mode (deprecated), this value indicates the accumulated displacement away from the current reflection length that has yet to be applied. It resets to 0 when the distance threshold is exceeded.</p>
+						</td></tr><tr><td>
+							<p>Attenuation Name</p>
+						</td><td>
+							<p>The name of the attenuation associated with the image source. If there are no associated attenuation, this column will show 'None'. If the information about attenuation could not be retrieved, because the ER Aux Bus was not set to an Audio Objects configuration, the column will show 'Unknown'. If all the curves of the Reflect effect are set to <span class="bold"><strong>Custom</strong></span>, the attenuation information will not be fetched and the column will show 'None'.</p>
+						</td></tr><tr><td>
+							<p>(Image Source Graph View)</p>
+						</td><td>
+							<p>A graphical representation of the relationship between the curve driver (X axis) and an image source property value (Y axis).</p>
+							<p>The graph view can display several curves simultaneously.</p>
+							<p>When using the distance and diffraction warping properties, corresponding curves will warp in the graph view. Custom curves will show an editable non-warped curve alongside its warped counterpart.</p>
+						</td></tr><tr><td>
+							<p>Attenuations &gt;</p>
+						</td><td>
+							<p>A contextual menu button allowing the user to switch between attenuations that could be associated to image sources using this reflect effect. Attenuations applied to sounds with an early reflections Auxiliary Bus mounted with the current reflect effect will appear in this button. While profiling, any attenuation that appeared in the <span class="bold"><strong>Attenuation Name</strong></span> column of an image source will also be added to the list.</p>
+						</td></tr><tr><td>
+							<p>(Attenuation Caption)</p>
+						</td><td>
+							<p>When an attenuation is selected from the <span class="bold"><strong>Attenuations &gt;</strong></span> button, it's name will appear in the attenuation caption. Clicking on this caption will open the corresponding attenuation editor.</p>
+						</td></tr><tr><td>
+		<p>Cursor Name Category</p>
+	</td><td>
+		<p>A list to specify the parameter flag to display (or not) in the graph view:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>No Flag</p></li><li class="listitem"><p>Image Source ID</p></li><li class="listitem"><p>Image Source Name</p></li><li class="listitem"><p>Game Object ID</p></li><li class="listitem"><p>Game Object Name</p></li><li class="listitem"><p>Texture(s)</p></li></ul></div>
+	</td></tr><tr><td>
+							<p>X</p>
+						</td><td>
+							<p>The coordinate along the X axis of the selected control point. The X value represents the value of a selected Distance or Diffraction depending on the curve driver.</p>
+							<p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and move the X slider -5, both control points will move to the left by 5 units.</p>
+						</td></tr><tr><td>
+							<p>Y</p>
+						</td><td>
+							<p>The coordinate along the Y axis of the selected control point. The Y value represents a property value (Distance Attenuation volume in decibels, Distance Spread in percentage, or Low/High-Pass Filter in Hertz).</p>
+							<p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type 5 in the Y text box, both control points will move up by 5 units.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+						</td><td>
+							<p>Zooms in towards the center of the graph view.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+						</td><td>
+							<p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+						</td><td>
+							<p>Zooms out from the center of the graph view.</p>
+						</td></tr><tr><td>
+		<p>Max Distance</p>
+	</td><td>
+		<p>Max distance for distance-driven curves set to Custom, in game units.</p>
+	</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/pin_icon.png"></div>
+							<div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+							<p>(Pinned/Unpinned)</p>
+						</td><td>
+							<p>When the Pin icon is selected, the property curve's outline remains in the graph view even if it is not currently selected.</p>
+						</td></tr><tr><td>
+							<p>Color</p>
+						</td><td>
+							<p>A color block legend for distinguishing the different graph view curves.
+							</p>
+						</td></tr><tr><td>
+							<p>Properties</p>
+						</td><td>
+							<p>Reflect image source curves, which appear in the graph view if selected.
+								</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Distance Volume</strong></span>: Volume attenuation based on the distance between the image source and the listener.</p></li><li class="listitem"><p><span class="bold"><strong>Distance Low-pass Filter</strong></span>: First order low-pass filter based on the distance between the image source and the listener.</p></li><li class="listitem"><p><span class="bold"><strong>Distance High-pass Filter</strong></span>: First order high-pass filter based on the distance between the image source and the listener.</p></li><li class="listitem"><p><span class="bold"><strong>Distance High-shelf Filter</strong></span>: High-shelf filter based on the distance between the image source and the listener. This curve sets the gain of the high frequency band, while the gain at low frequency is fixed to 0 dB. The frequency response smoothly transitions from 0 dB to the desired high-frequency gain, between approximately 200 Hz and 5000 Hz, mimicking the gentle slope of most natural phenomena.</p></li><li class="listitem"><p><span class="bold"><strong>Distance Spread</strong></span>: Spread used for 3D positioning, based on the distance between the image source and the listener. Refer to the Wwise Help's <a class="xref" href="ch23s03.html#how_3d_positioning_is_calculated" title="How 3D positioning is calculated:">How 3D positioning is calculated:</a> for more details on how Wwise handles Spread with 3D positioning.</p></li><li class="listitem"><p><span class="bold"><strong>Diffraction Volume</strong></span>: Volume attenuation based on the diffraction coefficient of this reflection. In order to ensure smooth interpolation between  specular and diffracted reflections, you should make sure that the value is 0 dB at 0% diffraction.</p></li><li class="listitem"><p><span class="bold"><strong>Diffraction Low-pass Filter</strong></span>: First order low-pass filter based on the diffraction coefficient of this image source. In order to ensure smooth interpolation between specular and diffracted reflections, you should make sure that the value is highest (no filtering) at 0% diffraction.</p></li><li class="listitem"><p><span class="bold"><strong>Diffraction High-pass Filter</strong></span>: First order high-pass filter based on the diffraction coefficient of this image source. In order to ensure smooth interpolation between specular and diffracted reflections, you should make sure that the value is lowest (no filtering) at 0% diffraction.</p></li><li class="listitem"><p><span class="bold"><strong>Diffraction High-shelf Filter</strong></span>: High-shelf filter based on the diffraction between the image source and the listener. This curve sets the gain of the high frequency band, while the gain at low frequency is fixed to 0 dB. The frequency response smoothly transitions from 0 dB to the desired high-frequency gain, between approximately 200 Hz and 5000 Hz, mimicking the gentle slope of natural phenomena.</p></li></ul></div><p>
+							</p>
+						</td></tr><tr><td>
+							<p>Curve</p>
+						</td><td>
+							<p>The curve used for the corresponding property.
+								</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Use Attenuation</strong></span>: The corresponding property curve will use the attenuation curve of the same property and driver.</p></li><li class="listitem"><p><span class="bold"><strong>Custom</strong></span>: The corresponding property will use a custom curve, which can be edited in the graph view, if selected.</p></li></ul></div><p>
+							</p>
+						</td></tr></tbody></table></div></div></div><HR></body></html>

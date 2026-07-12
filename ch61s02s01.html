@@ -1,0 +1,196 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Event Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s02.html" title="Events Tab"><link rel="prev" href="ch61s02.html" title="Events Tab"><link rel="next" href="ch61s02s01s01.html" title="Event Actions List"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s02.html">Events Tab</a></span> &gt; <span class="breadcrumb-node">Event Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="event_editor"></a>Event Editor</h3></div></div></div><p>The Event Editor is where you manage the Action Events in your project. Action Events contain Actions, such as Play, Pause All, and Stop All, that have been applied to different objects or structures. These Events are integrated into the game engine and are triggered at different points in the game. Each Event can contain several Actions. You can further specify particular properties for each Action and apply certain conditions.</p><p>The following colors are used in the Event Editor to help you identify the status of objects within an Event:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						
+						
+							<span class="bold"><strong>White</strong></span> - For objects included in the current platform.
+						
+					</p></li><li class="listitem"><p>
+						
+						
+							<span class="bold"><strong>Gray</strong></span> - For objects not included in the current platform.
+						
+					</p></li><li class="listitem"><p>
+						<span class="bold"><strong>Red</strong></span> - For Event Actions that are missing an associated object. The Target field will be outlined in red if there is no target object, including if there is a specified target that cannot be found. In that case, the object name will also be displayed in red.
+					</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the Event. Each Event must have a unique name.</p>
+							</td></tr><tr><td>
+								<p>Event ID</p>
+							</td><td>
+								<p>An identification number associated with the Event. Each Event is assigned a unique number by Wwise.</p>
+								<p>Event IDs can be used instead of Event names in projects where the game engine does not support text strings.</p>
+							</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Any additional information that you want to attach to the Event to further describe it.</p>
+							</td></tr><tr><td>
+								<p>[Event Actions]</p>
+							</td><td>
+								<p>The primary Event Editor pane. The Event's Actions are listed, added, removed, and edited from here.</p>
+							</td></tr><tr><td align="center">
+      <div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+    </td><td>
+      <p>
+        Click the <span class="bold"><strong>Configure Columns</strong></span> shortcut (right-click) option from the column header band.
+      </p>
+      <p>
+        The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> dialog opens. Select the individual properties for every possible Wwise object type that you want to display as a column.
+      </p>
+    </td></tr><tr><td>
+								<p>Icon</p>
+							</td><td>
+								<p>An icon representing individual or small logical groupings of Action types.</p>
+
+								<div class="itemizedlist"><p class="title"><b>Here is a comprehensive list of the different icons:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_play_nor.png" align="middle" width="15"></span>: Play
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/action_stop_nor.png" align="middle" width="15"></span>: Stop
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_pause_nor.png" align="middle" width="15"></span>: Pause
+										</p></li><li class="listitem"><p>
+
+											<span class="inlinemediaobject"><img src="Images/action_resume_nor.png" align="middle" width="15"></span>: Resume
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_break_nor.png" align="middle" width="15"></span>: Break
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/action_seek_nor.png" align="middle" width="15"></span>: Seek
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/event_nor.png" align="middle" width="15"></span>: Post Event
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_volume_nor.png" align="middle" width="15"></span>: Volume
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_pitch_nor.png" align="middle" width="15"></span>: Pitch
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_lowpass_nor.png" align="middle" width="15"></span>: LPF
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/action_hipass_nor.png" align="middle" width="15"></span>: HPF
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/action_mute_nor.png" align="middle" width="15"></span>: Mute
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/gameparameter_nor.png" align="middle" width="15"></span>: Game Parameter
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/state_nor.png" align="middle" width="15"></span>: State
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/switch_nor.png" align="middle" width="15"></span>: Switch
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/trigger_icon.png" align="middle" width="15"></span>: Trigger
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/action_bypass_nor.png" align="middle" width="15"></span>: Bypass
+										</p></li><li class="listitem"><p>
+											<span class="inlinemediaobject"><img src="Images/envelope_nor.png" align="middle" width="15"></span>: Reset Envelope
+										</p></li><li class="listitem"><p>                          
+											<span class="inlinemediaobject"><img src="Images/action_reset_playlist_nor.png" align="middle" width="15"></span>: Reset Playlist
+										</p></li></ul></div>
+							</td></tr><tr><td>
+								<p>Path</p>
+							</td><td>
+								<p>The location of the selected Event within the project hierarchy. The Action and its Target, or number of exceptions in the case of an "All" Actions, are listed in square brackets next to the Event location.</p>
+								<p>This field is read-only.</p>
+							</td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+								<p>Notes</p>
+							</td><td>
+								<p>Any additional information or comments that you want to add to the specific Event Action.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Playback Limit</strong></span></p>
+							</td></tr><tr><td colspan="2">
+								<p>For a complete description of the Event Limiting set of properties, See <a class="xref" href="ch15s04.html" title="Event Limiting">Event Limiting</a>.</p>
+							</td></tr><tr><td>
+								<p>Limit</p>
+							</td><td>
+								<p>The maximum number of concurrent instances of an Event that is allowed by the Event Limiting before Post Event commands are discarded. A value of 0 (displayed as Infinite) disables the property.</p>
+							</td></tr><tr><td>
+								<p>Cooldown Time</p>
+							</td><td>
+								<p>The time duration, in seconds, for which new Post Event commands will be discarded after a Post Event command is successfully processed. A value of 0 seconds disables the property.</p>
+							</td></tr><tr><td>
+								<p>Scope</p>
+							</td><td>
+								<p>The scope for which the Event Limiting properties are applied to Events.</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Event Properties</strong></span></p>
+							</td></tr><tr><td colspan="2">
+								<p>For a complete list and description of the Event property columns, see the Action Properties columns in the <a class="xref" href="ch61s02s01s01.html" title="Event Actions List">Event Actions List</a> reference table.</p>
+							</td></tr><tr><td>
+								<p>[Action Properties]</p>
+							</td><td>
+								<p>A contextual pane that displays all the properties of the selected Event Actions. Different properties will be listed depending on the type of Actions you select in the Event Actions list. These can be edited in much the same way as they would be in the <a class="xref" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>. 
+								</p>
+								<p>To view descriptions of the various Event Action properties, simply click on the appropriate Action link in the next page (<a class="xref" href="ch61s02s01s01.html" title="Event Actions List">Event Actions List</a>).
+								</p>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the property or behavior. The properties or behaviors listed here are based on the Event Actions selected.</p>
+							</td></tr><tr><td>
+								<p>Value</p>
+							</td><td>
+								<p>The property value applicable to the selected Event Actions' property. This can include a numerical value, but can also be a check box where you enable or disable certain behaviors or properties.</p>
+								<p>For numerical fields, such as volume, you can specify whether you want to create a relative or absolute property change. By adding a + or - sign after the value, you create an offset for the selected object property. By placing it before the value, you are changing the object's property to that absolute value.</p>
+								<p>
+                      Where applicable, the Value column includes a Link indicator on its left to determine if it's applicable across platforms. For more details, see <a class="xref" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Linking or unlinking property values</a>.
+								</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_arrows.png"></div>
+							</td><td>
+								<p>
+                      Displays a complete list of options to add Actions to the Event.</p>
+								<p>This can be done by prompting the <a class="xref" href="ch61s08.html" title="Project Explorer - Browser">Project Explorer - Browser</a> and navigating to then selecting an object to automatically apply a contextually appropriate Action. Or, you can directly select an Action from among the groupings in the list.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+							</td><td>
+								<p>Removes the selected Event Action.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_dots.png"></div>
+							</td><td>
+								<p>
+                      Opens the <a class="xref" href="ch61s08.html" title="Project Explorer - Browser">Project Explorer - Browser</a> where you can select the object that you want to assign as the Target of the selected Event Action.
+								</p>
+							</td></tr><tr><td align="center"><a name="add_exceptions"></a>
+								<div class="mediaobject"><img src="Images/btn_add_exception_dots.png"></div>
+							</td><td>
+								<p>
+                      Opens the <a class="xref" href="ch61s08.html" title="Project Explorer - Browser">Project Explorer - Browser</a> where you can select the target object that you want to <span class="bold"><strong>not</strong></span> be included in the currently selected "All" type Action. The exception will show up directly under the Action, along with any other exceptions. The Target property specifies the exception object. The list of exceptions can be collapsed or expanded. But, the number of exceptions will always be displayed in the Path and in the Target field.
+								</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch61s02s01s01.html" title="Event Actions List">Event Actions List</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#creating_new_event" title="Creating a new Event">Creating a new Event</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#adding_actions_to_an_event" title="Adding Actions to an Event">Adding Actions to an Event</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#assigning_objects_to_event_actions" title="Assigning targets to Event Actions">Assigning targets to Event Actions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#defining_scope_of_an_event_action" title="Defining the Scope of Event Actions">Defining the Scope of Event Actions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#setting_properties_for_an_event_action" title="Setting properties for Event Actions">Setting properties for Event Actions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s02.html#playing_back_an_event" title="Playing back Events">Playing back Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s03.html#renaming_an_event" title="Renaming Events">Renaming Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s03.html#removing_actions_from_an_event" title="Removing Actions from Events">Removing Actions from Events</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s03.html#replacing_objects_assigned_to_event_actions" title="Replacing targets assigned to Event Actions">Replacing targets assigned to Event Actions</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch15s03.html#deleting_events" title="Deleting Events">Deleting Events</a>
+					</p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with projects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt02.html" title="Setting up your projects"><link rel="prev" href="pt02.html" title="Setting up your projects"><link rel="next" href="ch07s01.html" title="Managing projects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-node">Working with projects</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="working_with_projects"></a>Working with projects</h2></div></div></div><p>In Wwise, a project contains all your assets, and the properties and behaviors that you set
+		for your assets for each platform and language that you are developing. That same project
+		also contains Wwise elements such as Events, Presets, logs, and simulations as well as the
+		SoundBanks that you generate. A project contains all your work and, if you work with others,
+		that of your colleagues as well.</p><p>You must use only one Wwise project per game. You can, however, divide up a project into
+		separate Work Units. For information on using Work Units, refer to <a class="xref" href="ch10s01.html" title="Dividing your project into Work Units">Dividing your project into Work Units</a>.</p><p>The starting point for developing your project in Wwise is the Project Launcher where you
+		can create and open your project. When you create a project, Wwise creates a series of
+		folders in the location that you choose on your workstation or the network.</p><div class="mediaobject"><img src="Images/Wwise_project_online.png"></div><p>The Wwise project folder structure consists of various folders containing XML files for the different project elements to make it easier to manage project versions and multiple users. A typical project folder contains the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+				<span class="bold"><strong>.cache</strong></span>: Converted versions of the SFX, Voice, and
+				Plugin assets imported into your project. It also contains a file named <span class="bold"><strong>SoundBankInfoCache.dat</strong></span> that Wwise uses to determine
+				whether a SoundBank has changed or not. If it didn't, Wwise won't regenerate it.
+				Wwise indicates this with an "Up to Date" entry in the Created column of the
+				Generating SoundBanks dialog. Don't include this folder in your source control
+				system.</p></li><li class="listitem"><p><span class="bold"><strong>Containers hierarchy</strong></span>: Default and user-created Work Units
+				for the project's sound, motion, and music objects.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Attenuations</strong></span>: Default and user-created Work Units
+				for the project's attenuations.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Conversion Settings</strong></span>: Default and user-created Work
+				Units for the project's Conversion Settings ShareSets.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Dynamic Dialogue</strong></span>: Default and user-created Work
+				Units for the project's Dialogue Events.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Effects</strong></span>: Default and user-created Work Units for
+				the project effect ShareSets.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Events</strong></span>: Default and user-created Work Units for the
+				project events.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Game Parameters</strong></span>: Default and user-created Work
+				Units for Game Parameters.</p></li><li class="listitem"><p><span class="bold"><strong> Busses hierarchy</strong></span>: Default and user-created Work Units
+				for the project output routing.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Mixing Sessions</strong></span>: Default and user-created Work
+				Units for mixing sessions.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Originals</strong></span>: Exact copies of the original versions of
+				the assets imported into your project. </p></li><li class="listitem"><p>
+				<span class="bold"><strong>Presets</strong></span>: Default and user-created Work Units for
+				project Presets.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Queries</strong></span>: Default and user-created Work Units for
+				Queries.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>SoundBanks</strong></span>: Default and user-created Work Units for
+				SoundBanks. After you generate SoundBanks for your project, Wwise displays a new
+				Generated SoundBanks folder.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Soundcaster Sessions</strong></span>: Default and user-created Work
+				Units for Soundcaster Sessions.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>States</strong></span>: Default and user-created Work Units for
+				States.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Switches</strong></span>: Default and user-created Work Units for
+				Switches.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Triggers</strong></span>: Default and user-created Work Units for
+				Triggers.</p></li><li class="listitem"><p>.<span class="bold"><strong>validationcache</strong></span>: A list of all project files that have
+				been validated against the current XML schema version. By keeping track of the
+				validated files, Wwise no longer needs to validate the files each time it loads the
+				project. This reduces the time it takes Wwise to load a project. This file shouldn't
+				be managed by your source control system.</p></li><li class="listitem"><p>.<span class="bold"><strong>wsettings</strong></span>: Default conversion and miscellaneous object
+				settings defined for the current project. These settings are saved per user. This
+				file shouldn't be managed by your source control system.</p></li><li class="listitem"><p>
+				<span class="bold"><strong>.wproj</strong></span>: Wwise project file. Double-click the
+				project icon to open your project.</p></li></ul></div><p>After you have created your project, you can begin dividing up the work into Work Units and building asset structures based on the game design. At the same time, you can also build the structure for your project routing in the Busses hierarchy, and create the project Game Syncs.</p><p>In addition to these folders in your project, you may also have other files such as integrity reports and SoundBank project header files.</p><p>The Wwise project and its folders are designed to easily integrate into your external source
+		control management tools. For more information about how to manage multiple project users,
+		refer to <a class="xref" href="ch10.html" title="Working with a team"><i>Working with a team</i></a>.</p></div><HR></body></html>

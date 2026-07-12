@@ -1,0 +1,119 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Optimizing CPU usage</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt06.html" title="Finishing your projects"><link rel="prev" href="ch37s05.html" title="Creating simulations tips and best practices"><link rel="next" href="ch39.html" title="Managing memory in Wwise"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-node">Optimizing CPU usage</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="optimizing_cpu"></a>Optimizing CPU usage</h2></div></div></div><p>When you are authoring audio in Wwise, CPU usage is an essential concern. It is also
+            important to balance performance and quality. If you are authoring for multiple
+            platforms, you will have to be aware of each platform's technical limitiations and
+            requirements, and also consider the CPU resources required by any accompanying
+            software.</p><p>Many Wwise features and plug-ins affect CPU usage. The topics in this section provide
+            an overview of the major factors that affect CPU usage and offer different strategies
+            and best practices for CPU optimization. In general, the process consists of using the
+            Profiler (refer to <a class="xref" href="ch40.html" title="Profiling"><i>Profiling</i></a>) to monitor CPU performance, determine
+            which factors you need to address, and then use the guidelines in this section as a
+            starting point to explore possible solutions.</p><p>Every Wwise project is different, available CPU resources vary by platform, and
+            quality and performance requirements also vary, so there is no single set of specific
+            guidelines or recommendations that apply to all cases. Instead, you will have to
+            experiment, listen to your sounds in Wwise, and determine the optimal settings. The
+            following major factors affect CPU usage:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Number of concurrent voices. The number of voices, especially physical
+                        voices, has a large impact on CPU. As the number increases, CPU usage
+                        increases with it.</p></li><li class="listitem"><p>Effects. Wwise audio Effects consume CPU and the amount varies depending
+                        on the specific Effect, where the Effect is used, and whether it is
+                        rendered.</p></li><li class="listitem"><p>Audio codecs. Audio file conversion with codecs uses CPU, and some codecs
+                        require more CPU resources than others.</p></li><li class="listitem"><p>Spatial Audio. The various options and settings that control 3D acoustics
+                        can have a major impact on CPU usage.</p></li></ul></div><p>Each of these topics is described in further detail in the following sections.</p><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_monitoring"></a>Monitoring CPU usage</h2></div></div></div><p>Because there are so many variables that contribute to CPU usage in Wwise, there is no
+            single, easy way to optimize CPU usage in all cases. Instead, you have to consider all
+            of the factors that are relevant to your project, determine acceptable levels of CPU
+            usage (which can vary by platform), then use the Wwise Profiler to identify which
+            properties and settings use the most CPU and adjust them accordingly. The right balance
+            between CPU and quality is ultimately a matter of judgment.</p><p>As a general approach, use the Profiler (refer to <a class="xref" href="ch40.html" title="Profiling"><i>Profiling</i></a>) to
+            monitor performance during Capture Sessions, identify overall CPU usage and peaks, and
+            then view the specific factors that contribute to CPU usage in the Advanced Profiler and
+            Performance Monitor. In particular, pay attention to the following things:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Advanced Profiler, the CPU tab displays all of the elements that
+                        contributed to CPU usage during the session. You can then identify which
+                        plug-ins, audio codecs, Effects, and so on use the most CPU
+                        resources.</p><p>
+                        </p><div class="mediaobject"><img src="Images/advanced_profiler.png"></div><p>
+                    </p></li><li class="listitem"><p>In the Performance Monitor Settings dialog, select any relevant items
+                        that include CPU in the name. The following options can be useful in the
+                        graph, the list, or both:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>CPU - Plug-in Total</p></li><li class="listitem"><p>CPU - Total</p></li><li class="listitem"><p>Spatial Audio - CPU</p></li><li class="listitem"><p>Spatial Audio - Path Validation CPU</p></li><li class="listitem"><p>Spatial Audio - Portal Path Validation CPU</p></li><li class="listitem"><p>Spatial Audio - Portal Raytracing CPU</p></li><li class="listitem"><p>Spatial Audio - Raytracing CPU</p></li></ul></div></li></ul></div><p>A combination of the options in the Advanced Profiler and Performance Monitor provide
+            a comprehensive portrait of CPU usage during a Capture Session. After you identify which
+            factors contribute to CPU usage, you can use the suggestions described in the other
+            topics in this section to optimize your project's performance.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_voices"></a>Optimizing voices</h2></div></div></div><p>The number of concurrent physical voices (that is, sounds that actually play) has a
+            major impact on CPU usage. To reduce the amount of CPU resources that voices use, you
+            can use the following settings to reduce the number of concurrent voices:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Playback limits</strong></span> determine the maximum number
+                    of instances of a sound that can play at the same time. </p></li><li class="listitem"><p><span class="bold"><strong>Priority</strong></span> determines which sounds to kill or
+                    send to virtual voice behavior in the event that the playback limit is
+                    exceeded.</p></li><li class="listitem"><p><span class="bold"><strong>Virtual voices</strong></span> are sounds that occur during
+                    runtime but do not actually play if they fall below a defined volume threshold
+                    or exceed the defined playback limits. The recommended virtual voice behavior is
+                    "Kill if finite else virtual". Refer to <a class="xref" href="ch61s01s05s12.html" title="Advanced category: sound and motion objects">Advanced category: sound and motion objects</a>.</p></li></ul></div><p>For more information, refer to <a class="xref" href="ch24.html" title="Managing priority"><i>Managing priority</i></a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_effects_plugins"></a>Optimizing Effects</h2></div></div></div><p>Effects consume CPU resources. In general, CPU usage increases with the number of
+            Effect instances that play at the same time, although there are several additional considerations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Number of channels</strong></span>. CPU usage increases
+                        with the number of audio channels, and the number of channels varies with
+                        the audio bus. For example, three instances of an Effect on a mono sound
+                        (three channels) use fewer CPU resources than a single instance of an Effect
+                        on a 7.1 bus (eight channels).</p><p>In addition, certain Effects such as Object Processors, are only
+                        instantiated once per bus instance. For more information on Effects, Audio
+                        Objects, and buses, refer to <a class="xref" href="ch25s01.html" title="Using Effects with Audio Objects">Using Effects with Audio Objects</a>.</p></li><li class="listitem"><p><span class="bold"><strong>Type of Effect</strong></span>. Different types of Effect
+                        use different amounts of CPU. Reverb Effects are a special case, because
+                        although most other Effects cause a linear increase in CPU usage as the
+                        number per channel increases, reverb Effects have a flatter rate of
+                        increase. Within the reverb Effect category, different types of reverb use
+                        different amounts of CPU: Matrix Reverb uses less CPU than RoomVerb, for
+                        example, although it has fewer options. Other Effects, such as Compressor or
+                        Parametric EQ, use less CPU than reverbs.</p></li><li class="listitem"><p><span class="bold"><strong>Effect rendering</strong></span>. One way to reduce
+                        Effect CPU consumption is to render Effects so that they are part of the WEM
+                        files themselves. When Effects are rendered, they are processed before they
+                        are packaged in SoundBanks and therefore do not consume runtime processing
+                        power. You can identify Effects that are good candidates for rendering
+                        through the <a class="xref" href="ch59s01.html" title="Integrity Report">Integrity Report</a>: select the
+                        Optimizations option and run the report. For more information about
+                        rendering, refer to <a class="xref" href="ch25.html#rendering_effects" title="Rendering Effects">Rendering Effects</a>.</p></li><li class="listitem"><p><span class="bold"><strong>Bypassing Effects</strong></span>. If certain Effects are
+                        only applicable in certain situations, you can selectively bypass them. For
+                        example, if you have a distortion Effect that only occurs during certain
+                        player states in a game, you can use an RTPC to apply a Bypass Effect linked
+                        to a Game Parameter that monitors player states.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_codecs"></a>Optimizing audio codecs</h2></div></div></div><p>Wwise uses audio codecs to compress and decompress audio files. Typically, you need to
+            compress audio files so that they fit within a project's memory budget. However, codecs
+            require CPU resources, and in general the codecs that produce the highest quality audio
+            also use the most CPU. When deciding which codecs to use, you will have to balance CPU
+            usage, memory usage, storage space, and audio quality.</p><p>If you need to support multiple platforms, you can use different codecs for different
+            platforms through Conversion Settings ShareSets. For more information, refer to <a class="xref" href="ch35s10s01.html" title="Creating audio Conversion Settings ShareSets">Creating audio Conversion Settings ShareSets</a>.</p><p>Wwise supports the following codecs:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>PCM</strong></span> is not an audio codec, but rather an
+                        uncompressed file format. It provides high-quality sound and uses minimal
+                        CPU processing power, but requires a lot of storage space. </p><p>To minimize CPU usage, use this format for short, repetitive sounds or
+                        high-fidelity audio.</p></li><li class="listitem"><p><span class="bold"><strong>Vorbis</strong></span> is a very popular codec that
+                        provides good quality audio for a modest amount of CPU resources, and in
+                        Wwise it is optimized for interactive media and gaming platforms. </p><p>To minimize CPU usage, avoid this format for audio files that repeat
+                        frequently because some CPU power is required to decompress the files
+                        whenever they play. Vorbis works well with most other types of sound,
+                        however.</p></li><li class="listitem"><p><span class="bold"><strong>Opus</strong></span> provides similar quality audio to
+                        Vorbis with greater file compression. However, it requires more CPU
+                        resources than Vorbis. It can be useful for long, non-repeating audio
+                        sources such as dialog or ambiences. Refer to the platform-specific sections
+                        in the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=index.html" target="_blank">Wwise SDK</a> for more details on decoding Opus files.</p></li><li class="listitem"><p><span class="bold"><strong>ADPCM</strong></span> provides good compression and uses
+                        minimal CPU power at the cost of quality. Use it with mobile platforms to
+                        minimize CPU usage and runtime memory.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_spatial_audio"></a>Optimizing spatial audio</h2></div></div></div><p>In Wwise, the term "spatial audio" refers to a variety of settings and configurations
+            that relate to sound in simulated 3D environments, such as attenuation, diffraction,
+            reflection, and so on. There are many aspects of spatial audio that require CPU
+            processing power so you will have to test different options and decide on the
+            appropriate balance between quality and performance.</p><p>In Wwise Authoring, many of the options are available in the Property Editor. See
+                <a class="xref" href="ch61s01s05s10.html" title="Positioning category: Containers hierarchy objects">Positioning category: Containers hierarchy objects</a> and <a class="xref" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses">Positioning category: Audio and Auxiliary Busses</a>).</p><p>Spatial audio uses CPU processing power for numerous calculations related to emitter
+            and listener positioning, sound attenuation, sound reflection off of 3D objects,
+            diffraction, and so on. There are many possible combinations of spatial audio Effects
+            and settings, so there are no simple guidelines for CPU optimization. However, the
+            following suggestions might be helpful if you notice that spatial audio is consuming a
+            lot of CPU resources in the Profiler:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Ensure that the spatial geometry is as simple as possible. Minimize the number
+                    of triangles and the number of diffraction edges.</p></li><li class="listitem"><p>Use finite attenuations for sounds. As the maximum attenuation radius
+                    increases, more CPU processing power is required to search for paths. When a
+                    finite attenuation curve reaches its maximum distance, the curve drops below the
+                    audibility threshold set in the project settings.</p></li><li class="listitem"><p>Avoid playing sounds if they are too far away to be heard, and stop them when
+                    they move beyond the attenuation radius and will not return.</p></li><li class="listitem"><p>Use rooms and portals to isolate independent sections of a scene.</p></li><li class="listitem"><p>When initializing spatial audio, you can set several <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_spatial_audio_init_settings.html" target="_blank">Spatial Audio Initialization Settings</a> to control CPU usage:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Use CPU load balancing.</p></li><li class="listitem"><p>Increase the movement threshold required to calculate reflections
+                                and diffraction, which reduces CPU usage at the cost of
+                                accuracy.</p></li><li class="listitem"><p>Reduce the number of primary rays used in the raytracing
+                                engine.</p></li><li class="listitem"><p>Reduce the maximum reflection order. First-order and second-order
+                                are sufficient in most cases.</p></li><li class="listitem"><p>Reduce the diffraction order. Start with 4, but even 2 or 1 can be
+                                usable.</p></li></ul></div></li></ul></div><p>For more information on spatial audio, including suggestions on CPU optimization,
+            refer to the following documents:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Wwise Help, refer to <a class="xref" href="ch23.html" title="Defining positioning"><i>Defining positioning</i></a>. </p></li><li class="listitem"><p>In the SDK, refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio.html" target="_blank">Spatial Audio</a>. In particular, refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=raytracing_geometry_guide.html#raytracing_geometry_guide_performance_tweaking" target="_blank">Improving Performance</a>.</p></li><li class="listitem"><p>In the Unreal integration documentation, refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=UE4&amp;id=spatialaudio.html" target="_blank">Unreal Spatial Audio Tutorials</a>.</p></li><li class="listitem"><p>In the Unity integration documentation, refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=Unity&amp;id=pg_spatialaudio.html" target="_blank">Spatial Audio in Unity</a>.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="optimizing_cpu_resources"></a>Additional CPU optimization resources</h2></div></div></div><p>In addition to this documentation, there are several resources that contain
+            information about CPU optimization:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=goingfurther_eventmgrthread.html" target="_blank">Optimizing CPU Usage</a> discusses optimization in the context of
+                        the SDK, which provides developers with additional options that are not
+                        available in the user interface.</p></li><li class="listitem"><p>Two blog articles, <a class="link" href="https://blog.audiokinetic.com/wwise-cpu-optimizations-general-guidelines/" target="_blank">Wwise CPU Optimizations: General Guidelines</a> and <a class="link" href="https://blog.audiokinetic.com/how-to-get-a-hold-on-your-voices-optimizing-for-cpu-part-1/" target="_blank">How to get a hold on your voices - Optimizing for CPU (PART 1)</a>,
+                        discuss optimization. However, note that the specific numbers in the
+                        articles might not be valid for the latest platforms.</p></li><li class="listitem"><p>The <a class="link" href="https://www.audiokinetic.com/learning/learn-wwise/wwise-performance-optimization" target="_blank">Performance 
+                            Optimization</a> learning material contains many examples and
+                        recommendations for CPU (and memory) optimization. It uses the Unity-based
+                        Wwise Adventure Game sample program as an example.</p></li></ul></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/en/courses/wwise101/?source=wwise101&amp;id=optimizing_game" target="_blank">Wwise Fundamentals Module 20: Optimizing your sound design</a></p></li></ul></div></div></div><HR></body></html>

@@ -1,0 +1,84 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Getting to know the Schematic View</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch48s05.html" title="Transport Control keyboard shortcuts"><link rel="next" href="ch49s01.html" title="Schematic View keyboard shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Getting to know the Schematic View</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="getting_to_know_schematic_view"></a>Getting to know the Schematic View</h2></div></div></div><p>The Schematic View displays a graphical representation of the structure of your Wwise
+    project. You can use the Schematic View to get an overview of a project, locate project objects,
+    or analyze project structure one object at a time. The Schematic View includes icons
+    representing each project object, the object names, and lines and nodes representing their
+    relationships. You can customize how the Schematic View displays project object details as
+    well.</p><div class="mediaobject"><img src="Images/schematic_view.png"></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="identifying_project_objects_and_connectors"></a>Identifying project objects and connectors</h2></div></div></div><p>The Schematic View is made up of icons representing project objects and connectors
+        representing their relationship to one another. The following table describes the connectors
+        between project objects. For information on the icons representing project objects, refer to
+          <a class="xref" href="ch04s01.html" title="Understanding the visual elements in Wwise">Understanding the visual elements in Wwise</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="40px" class="col1"><col width="130px" class="col2"><col width="235px" class="col3"></colgroup><thead><tr><th>
+                <p>Icon</p>
+              </th><th>
+                <p>Name</p>
+              </th><th>
+                <p>Description</p>
+              </th></tr></thead><tbody><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="19"><tr style="height: 5px"><td><img src="Images/schematic_solid_line.png" height="5"></td></tr></table></div>
+              </td><td>
+                <p>Solid line</p>
+              </td><td>
+                <p>These lines connect parent and child objects.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="20"><tr style="height: 5px"><td><img src="Images/schematic_dashed_line.png" height="5"></td></tr></table></div>
+              </td><td>
+                <p>Dashed line</p>
+              </td><td>
+                <p>These lines connect busses to child objects to demonstrate routing. </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/schematic_plus.png" width="13"></td></tr></table></div>
+              </td><td>
+                <p>Plus sign (white)</p>
+              </td><td>
+                <p>Click to expand the schema and show all children of the object.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="12"><tr style="height: 13px"><td><img src="Images/schematic_plus_yellow.png" width="12"></td></tr></table></div>
+              </td><td>
+                <p>Plus sign (yellow)</p>
+              </td><td>
+                <p>Click to show all children of the object, when not all children are currently
+                  displayed. </p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Children will be hidden if  <span class="bold"><strong>Show in Schematic
+                      View</strong></span> has been selected for other objects, or if the children do not
+                    match the current search criteria. </p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/schematic_minus.png" width="13"></td></tr></table></div>
+              </td><td>
+                <p>Minus sign</p>
+              </td><td>
+                <p>Click to collapse all children of the object.</p>
+              </td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="setting_schematic_view_display_options"></a>Setting the Schematic View display options</h2></div></div></div><p>You can customize the information shown about each project object in the schema by using the Schematic View Settings. </p><div class="orderedlist"><p class="title"><b>To specify the information to be displayed in the Schematic View:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click the options icon in the upper right corner of the Schematic View.</p><p>The Schematic View Settings dialog opens. </p></li><li class="listitem"><p>Select one or more of the following information types:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                <span class="bold"><strong>Icon Strip</strong></span> to display the row of icons representing object properties. If the object property has been changed, the icon is displayed in white and you can mouse over it for more information. If the property still has its default value, it is grayed out.
+              </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Mute/Solo</strong></span> to display the mute and solo buttons for each object.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Bus</strong></span> to display the bus through which the object is routed.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Conversion Settings </strong></span> to display the Conversion Settings ShareSet that is being used by the object.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Effect</strong></span> to display any effects that have been applied to the object.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Positioning Type</strong></span> to display the type of positioning (No Positioning, 3D Emitter, 3D Emitter with Automation, 3D Listener with Automation) applied to the object.
+                </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Game Parameters</strong></span> to display the Game Parameters affecting the object (through RTPCs).
+                </p></li><li class="listitem"><p>
+                <span class="bold"><strong>State Group</strong></span> to display the State Group to which the object subscribes.
+              </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Advanced Settings</strong></span> to display any changes made to the Advanced Settings of an object (such as playback limit or volume threshold).
+                </p></li><li class="listitem"><p>
+                <span class="bold"><strong>Volume</strong></span> to display the volume assigned to the object.
+              </p></li><li class="listitem"><p>
+                  <span class="bold"><strong>Pitch</strong></span> to display the pitch assigned to the object.
+                </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Pitch is not displayed for music objects, because it is not available for them.</p></td></tr></table></div></li><li class="listitem"><p>
+                  <span class="bold"><strong>Low Pass</strong></span> to display the Low-Pass Filter assigned to the object.
+                </p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p><p>The Schematic View displays the information you selected for each project object.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="searching_for_project_objects"></a>Searching for project objects</h2></div></div></div><p>You can find a project object quickly in the Schematic View by using the Search
+        function. </p><div class="orderedlist"><p class="title"><b>To search for a project object in the Schematic View:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the <span class="bold"><strong>Search</strong></span> field, type the name of the project object you want to find.</p><p>Wwise highlights project objects matching the name you have entered and unrelated
+            objects are hidden.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Reset </strong></span>to erase the Search field and reset the
+            Schematic View.</p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The search is not case-sensitive, and will find objects as you type in your search term. The search engine looks at the beginning of words, so typing &#8220;gun&#8221; will find &#8220;gun&#8221;, &#8220;big_gun&#8221;, and &#8220;gunner&#8221;,
+but not &#8220;shotgun&#8221;.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="showing_project_object"></a>Showing project objects</h2></div></div></div><p>You can simplify the project schema presented in the Schematic View by specifying one
+        project object to be highlighted.</p><div class="orderedlist"><p class="title"><b>To highlight a project object in the Schematic View:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Schematic View, right-click a project object.</p><p>The shortcut menu is displayed.</p></li><li class="listitem"><p>From the shortcut menu, select <span class="bold"><strong>Show in Schematic View</strong></span>.</p><p>The bus routing for the selected object is displayed. The object is highlighted, and unrelated objects are hidden. </p></li><li class="listitem"><p>To reset the Schematic View, click <span class="bold"><strong>Clear</strong></span>.</p></li></ol></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can also drag an object from the Project Explorer to show it in the Schematic
+          View. You can also right-click in the Property or Contents editors and select <span class="bold"><strong>Show in Schematic View</strong></span>.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="editing_project_objects_directly"></a>Editing project objects directly</h2></div></div></div><p>You can use the controls displayed under each project object in the Schematic View to
+          edit the object. These controls work identically to those in the Property Editor. For more
+          information on using these controls, refer to <a class="xref" href="ch04.html" title="Wwise interface basics"><i>Wwise interface basics</i></a>.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="317"><tr style="height: 239px"><td><img src="Images/schematic_settings_results.png" width="317"></td></tr></table></div><p>Use the Schematic View Settings to display these controls. For more information on these settings, refer to <a class="xref" href="ch49.html#setting_schematic_view_display_options" title="Setting the Schematic View display options">Setting the Schematic View display options</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="editing_project_objects_in_property_editor"></a>Editing project objects in the Property Editor</h2></div></div></div><p>If you prefer to edit object properties directly, you can quickly open the Property
+          Editor for a project object from the Schematic View.</p><div class="orderedlist"><p class="title"><b>To open the Property Editor for a project object:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Schematic View, right-click a project object.</p><p>The shortcut menu is displayed.</p></li><li class="listitem"><p>From the shortcut menu, select <span class="bold"><strong>Edit</strong></span>.</p><p>The Property Editor for that project object opens. </p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can leave the Schematic View open while you work in this Property Editor. The
+            changes you make to a project object in the Property Editor are reflected immediately in
+            the Schematic View.</p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/en/courses/wwise101/?source=wwise101&amp;id=submixing_with_additional_audio_busses" target="_blank">Wwise Fundamentals Module 13: Submixing with Additional Audio Busses</a></p></li></ul></div></div></div><HR></body></html>

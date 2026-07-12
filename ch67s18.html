@@ -1,0 +1,161 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Recorder</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s17.html" title="Pitch Shifter"><link rel="next" href="ch67s19.html" title="Recorder (ADM)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Recorder</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_recorder_plug_in_effect"></a>Recorder</h2></div></div></div><p>The Recorder plug-in effect allows designers to record to an AMB, WAV, or WEM file. This includes any customizations other than those, such as virtual voices, that result in silence. It may be used both within the Wwise authoring tool or in-game.</p><p>The Recorder plug-in is built into Wwise. For information on applying it to objects, see
+			<a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>Be careful when choosing the hierarchical position of your Recorder. It can be applied to any single object in the Containers hierarchy. An audio file will be saved as soon as audio begins passing through the recorder. This file will then be recorded to during playback until the object has fully finished playing (including all loops) once. The Recorder will rewrite the file for every additional playback (the moment playback begins for the object). It can also be applied to a bus, which implies that it will not output the file until the bus is unloaded, resulting in a typically larger AMB, WAV, or WEM. Note that if a recorder plug-in instance is added to a parent in the hierarchy (for example on a Property Container or a parent bus) then the file will be overwritten every time audio begins on one of the child objects or busses.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_recorder_properties"></a>Recorder properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+							<p><span class="bold"><strong>File Attributes</strong></span></p>
+						</td></tr><tr><td>
+		<p>Format</p>
+	</td><td>
+		<p>The file format: WAV, the industry standard Waveform Audio File Format for storing audio bitstreams; or WEM, the Wwise description file.</p>
+		<p>Default value: WAV</p>
+	</td></tr><tr><td>
+		<p>Ambisonic Channel Ordering</p>
+	</td><td>
+		<p>For ambisonic channel configurations, this setting can be used to switch between FuMa ordering and ACN ordering (AmbiX).</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> For ambisonic order above 3, this setting is ignored and files are always AmbiX, because FuMa is not defined above 3rd order.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> By default, Wwise considers imported ambisonic files to be FuMa when the order is below or equal to 3, and AmbiX above. Therefore, when this setting is set to FuMa, ambisonic files of any order will be properly imported into Wwise.</p></td></tr></table></div>
+		<p>Default value: FuMa</p>
+	</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Authoring Tool Output Path</strong></span></p>
+						</td></tr><tr><td>
+		<p>Path</p>
+	</td><td>
+		<p>The name of the full or relative path (to your Documents folder) and the filename of the recording file. Use the selector button to the right to search for a file or location. Adding &#8220;%s&#8221; to the filename will include the current date and time in the filename when the Effect is invoked.</p>
+	</td></tr><tr><td>
+							<p>Status</p>
+						</td><td>
+							<p>The full path to the specified filename. If there are no issues, it has black font. If there are errors, they are listed within square brackets and - except for blank filepaths - in red font. These include the following: 
+							</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>[Will not record in Authoring Tool]: The filename path is blank.</p></li><li class="listitem"><p>[Invalid Filename]: The resulting filename path contains reserved characters (&lt;,&gt;,:,",/,\,|,?,*) or exceeds system character length limit.</p></li><li class="listitem"><p>[Directory Not Found] - directory path: A directory in the specified filename path does not exist.</p></li><li class="listitem"><p>[Write Access Denied] - directory path: The user does not have write permission for the specified filename path.</p></li></ul></div><p>	
+								</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If there are any listed issues, the Authoring Tool Recoding Status becomes Cannot Record.</p></td></tr></table></div><p>
+							</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Game Output Path</strong></span></p>
+						</td></tr><tr><td>
+		<p>Path</p>
+	</td><td>
+		<p>The filename relative to the location of the SoundBanks.</p>
+		<p><span class="bold"><strong>Caution</strong></span>: Mac paths must use a forward slash. While Windows will interpret both slashes and backslashes as folder separators, on Mac, a backslash will be interpreted as part of the filename.</p>
+	</td></tr><tr><td>
+							<p>Status</p>
+						</td><td>
+							<p>
+                If there are no issues, it displays in black font the full path to the specified filename using the $(Game base path) relative variable. This variable corresponds to the location of the SoundBanks. For example, at runtime, if the SoundBanks are located at \Game\Audio\Soundbanks\Linux and the Path is set to Recording.wav, then $(Game base path)\Recording.wav represents \Game\Audio\Soundbanks\Linux\Recording.wav. If there are errors, they are listed within square brackets and&#8212;except for blank filepaths&#8212;in red font. These include the following:
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>[Will not record in Game]: The filename path is blank.</p></li><li class="listitem"><p>[Path Must Be Relative]: The path is absolute, which is not allowed.</p></li><li class="listitem"><p>[Invalid Filename]: The resulting filename contains invalid, reserved characters (&lt;,&gt;,:,",/,\,|,?,* on Windows, : on macOS).</p></li></ul></div><p>
+							</p>
+						</td></tr><tr><td>
+		<p>Stereo Downmix</p>
+	</td><td>
+		<p>Enable to downmix any input with more than two channels to a stereo file. It activates the following 7.1 configuration volume sliders to adjust the relative importance of the different input channels, whatever they may be, for the stereo downmix.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> For ambisonic channel configurations, the Stereo downmix does nothing.</p></td></tr></table></div>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Front</p>
+	</td><td>
+		<p>
+			The 
+			<a class="glossterm" href="go01.html#glossary_gain"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_gain" title="Gain">gain</a></em></a>
+			 applied to the front speakers.
+		</p>
+		<p>Default value: 0.0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Center</p>
+	</td><td>
+		<p>The applied gain to the center speaker.</p>
+		<p>Default value: -3.0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Surround</p>
+	</td><td>
+		<p>The gain applied to the surround speakers.</p>
+		<p>Default value: -3.0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Back</p>
+	</td><td>
+		<p>The gain applied to the back speakers.</p>
+		<p>Default value: -3.0</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>LFE</p>
+	</td><td>
+		<p>The gain applied to the distinct channel for the low frequency effect.</p>
+		<p>Default value: -96.3</p>
+		<p>Range: -96.3 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Recorder Input</strong></span></p>
+						</td></tr><tr><td>
+		<p>Apply Downstream Volume</p>
+	</td><td>
+		<p>When enabled, the gains applied at a higher level will apply to the output file. For example, if the volume of the Main Audio Bus is increased by 10 and that of a child Audio Bus is decreased by 15, then the child and all its children will inherit the sum total gain of -5. Although the gain is always audible, unless this option is enabled the audio file output by the recorder will not include it.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+							<p>Import in Wwise</p>
+						</td><td>
+							<p>Prompts the <a class="xref" href="ch11s02s01.html" title="Audio File Importer">Audio File Importer</a> to make it convenient to import recorded files.</p>	  
+						</td></tr><tr><td colspan="2">
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following features are only available in the Windows version of Wwise.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Authoring Tool Recording Status</p>
+						</td><td>
+							<p>The current state of the recording process among the following possibilities: 
+							</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Idle: Not currently recording.</p></li><li class="listitem"><p>Recording: Currently recording the applicable playing object.</p></li><li class="listitem"><p>Cannot Record: Not recording because the current Status of the Authoring Tool Output Path displays an error.</p></li></ul></div><p>
+							</p>		  
+						</td></tr><tr><td>
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="111"><tr style="height: 170px"><td><img src="Images/waveform.png" width="111"></td></tr></table></div>
+							</td><td>
+								<p>Shows the contents of the PCM (WAV or AMB) file in Peak mode over a detailed timeline for all its applicable channels.</p>
+							</td></tr></tbody></table></div></div></div><HR></body></html>

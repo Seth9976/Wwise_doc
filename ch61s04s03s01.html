@@ -1,0 +1,65 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Property Editor: Game Parameter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s04s03.html" title="Game Parameters"><link rel="prev" href="ch61s04s03.html" title="Game Parameters"><link rel="next" href="ch61s04s03s01s01.html" title="Game Parameter Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04.html">Game Syncs Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s04s03.html">Game Parameters</a></span> &gt; <span class="breadcrumb-node">Property Editor: Game Parameter</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="game_parameter_property_editor"></a>Property Editor: Game Parameter</h4></div></div></div><p>The Game Parameter Property Editor is where you define the maximum and minimum values for each Game Parameter, so that you can map property values to the range of values in between. For example, you could set values in a car racing game that are mapped to the acceleration of the car. As the car accelerates the mapped properties are applied to the sounds.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the Game Parameter that will be used for the RTPC.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the Game Parameter.</p>
+								</td></tr><tr><td>
+		<p>Bind to Built-In Param:</p>
+	</td><td>
+		<p>Bind this Game Parameter to a built-in value calculated inside the sound engine. Choose one of the following:</p>
+		<p>
+			<span class="bold"><strong>(See more about the following built-in parameters in 
+			<a class="link" href="ch19s02.html#avaialble_builtin_parameters" title="Available built-in parameters:">Available built-in parameters</a>
+			.)</strong></span>
+		</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Distance</strong></span>: Distance to game object.</p></li><li class="listitem"><p><span class="bold"><strong>Azimuth</strong></span>: Horizontal angle.</p></li><li class="listitem"><p><span class="bold"><strong>Elevation</strong></span>: Vertical angle.</p></li><li class="listitem"><p><span class="bold"><strong>Emitter Cone</strong></span>: Angle between object&#8217;s orientation and the listener.</p></li><li class="listitem"><p><span class="bold"><strong>Obstruction</strong></span>: As set by the game on the game object.</p></li><li class="listitem"><p><span class="bold"><strong>Occlusion</strong></span>: As set by the game on the game object.</p></li><li class="listitem"><p><span class="bold"><strong>Listener Cone</strong></span>: Angle between the object and the listener&#8217;s orientation (front).</p></li><li class="listitem"><p><span class="bold"><strong>Diffraction</strong></span>: As set by Wwise Spatial Audio on the game object.</p></li><li class="listitem"><p><span class="bold"><strong>Transmission Loss</strong></span>: As set by Wwise Spatial Audio on the game object.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Using the built-in parameters to control an RTPC can lead to problems if that RTPC is tied to Initial Delay or Priority. Built-in parameters are computed when a sound plays on a given game object, so they work well for most sound properties. Logical control of playback items like Initial Delay and Priority are not suited while using the built-in parameters to control an RTPC since their value is unknown at the moment the Play Action is posted.</p></td></tr></table></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Range</strong></span></p>
+								</td></tr><tr><td>
+									<p>Min/Max</p>
+								</td><td>
+									<p>The minimum and maximum values of the Game Parameter that is mapped to properties in
+										Wwise. See <a class="xref" href="ch61s04s03s01s01.html" title="Game Parameter Settings">Game Parameter Settings</a>.</p>
+								</td></tr><tr><td>
+									<p>Default</p>
+								</td><td>
+									<p>A global value used by game objects that do not explicitly specify a particular value.</p>
+									<p>The default value will also be ignored if your game programmer defines a global RTPC value for game objects using the SDK.</p>
+								</td></tr><tr><td>
+		<p>Interpolation Mode</p>
+	</td><td>
+		<p>Select Game parameter interpolation mode:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>None</strong></span>: Jump straight to the target value.</p></li><li class="listitem"><p><span class="bold"><strong>Slew Rate</strong></span>: Limit the Game Parameter variation rate to the specified Attack and Release rate.</p></li><li class="listitem"><p><span class="bold"><strong>Filtering Over time</strong></span>: Filter the Game Parameter current value to target 99.5% of the target value within the specific Attack/Release time.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Attack</p>
+	</td><td>
+		<p>Rate (or time) used by the interpolation mode when variations are going upward.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 1000000</p>
+	</td></tr><tr><td>
+		<p>Release</p>
+	</td><td>
+		<p>Rate (or time) used by the interpolation mode when variations are going downward.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100000</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch19s02.html#creating_game_parameter" title="Creating Game Parameters">Creating Game Parameters</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s02.html#defining_range_of_values_for_game_parameter" title="Defining the range of values for a Game Parameter">Defining the range of values for a Game Parameter</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s03s01.html" title="Assigning Wwise properties to Game Parameters">Assigning Wwise properties to Game Parameters</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s02.html#deleting_game_parameter" title="Deleting Game Parameters">Deleting Game Parameters</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s02.html#binding_game_parameter_to_built_in_parameter" title="Binding Game Parameters to built-in parameters">Binding Game Parameters to built-in parameters</a>
+						</p></li></ul></div></div><HR></body></html>

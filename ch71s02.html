@@ -1,0 +1,25 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>A closer look at the ML1 Mastering Limiter plug-in</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch71.html" title="McDSP ML1 Mastering Limiter"><link rel="prev" href="ch71s01.html" title="Effect Editor - McDSP ML1 Mastering Limiter Effect plug-in"><link rel="next" href="ch71s03.html" title="ML1 Mastering Limiter applications"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt10.html">Certified Partner plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch71.html">McDSP ML1 Mastering Limiter</a></span> &gt; <span class="breadcrumb-node">A closer look at the ML1 Mastering Limiter plug-in</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="a_closer_look_at_ml1_mastering_limiter_plug_in"></a>A closer look at the ML1 Mastering Limiter plug-in</h2></div></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="knee_and_mode"></a>Knee and Mode</h3></div></div></div><p>The ML1 mastering limiter is one of the most flexible limiters in existence. The primary purpose of a limiter is to prevent the input signal from exceeding the selected output ceiling. This process, however, can impart many subjective changes in the audio. In order to insure the ML1 can offer the "right" effect on any given material, two important and unique controls have been added to the ML1 user interface &#8211; Knee and Mode.</p><p>The Knee control modifies the gain structure of the limiter in an effort to reduce distortion while maximizing output levels. Increasing the knee control will add a soft shape to the limiting response curve. The following table lists approximate "knee sizes" for Knee control values.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+								<p>Knee Value</p>
+							</th><th>
+								<p>Approximate Knee Size</p>
+							</th></tr></thead><tbody><tr><td>
+								<p>0%</p>
+							</td><td>
+								<p>0 dB</p>
+							</td></tr><tr><td>
+								<p>25%</p>
+							</td><td>
+								<p>3 dB</p>
+							</td></tr><tr><td>
+								<p>50%</p>
+							</td><td>
+								<p>6 dB</p>
+							</td></tr><tr><td>
+								<p>75%</p>
+							</td><td>
+								<p>9 dB</p>
+							</td></tr><tr><td>
+								<p>100%</p>
+							</td><td>
+								<p>12 dB</p>
+							</td></tr></tbody></table></div><p>The ML1 has three detection algorithms all working together to make the best use of signal data to maximize levels and reduce distortion. The Mode control affects how the stages of peak detection interact. Note the effect of the Mode control is most audible when the Release time in less than 200 milliseconds, and even more noticeable for Release times less than 20 milliseconds.</p><p>All the modes still interact with the Knee control. As each mode is auditioned, we recommend you vary the Knee control. In many cases, the Knee control is more than adequate in adjusting the limiting effect to suit the incoming audio.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="release_tricks"></a>Release tricks</h3></div></div></div><p>Although the ML1 Threshold and Ceiling control setup the maximum amount of signal increase, the Release control can play a role in increasing perceived loudness.</p><p>When signal peaks occur, the limiter makes a set of decisions on how to best reduce the signal peaks and minimize distortion. After the peak passes, the limiter recovers. During this recovery the limiter resumes the role of increasing overall signal levels. When the recovery time is faster, the overall signal levels are increased more frequently, and the perceived loudness of the signal is increased. The Release control determines this recovery time, and for this reason, has such a tremendous range. Typically release times faster than 50 milliseconds produce a significant amount of distortion. In the ML1, the Release time can be as fast as 1 millisecond (even faster under certain conditions), allowing the absolute maximum perceived loudness increase, with little (if any) distortion.</p><p>So in use, when the Threshold, Ceiling, Knee and Mode controls are not increasing the perceived loudness sufficiently, reducing the Release control time to anywhere below 25 milliseconds (to even as fast as 1 millisecond) is another way to adjust signal levels. Conversely, if the signal level is too loud, some level reduction will occur as the Release time is made slower, say anywhere above 300 milliseconds.</p></div></div><HR></body></html>

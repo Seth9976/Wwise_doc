@@ -1,0 +1,141 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voice Asset Importer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s02.html" title="Wwise importer dialogs"><link rel="prev" href="ch11s02s01.html" title="Audio File Importer"><link rel="next" href="ch11s02s03.html" title="Import Conflict Manager"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s02.html">Wwise importer dialogs</a></span> &gt; <span class="breadcrumb-node">Voice Asset Importer</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="voice_asset_importer"></a>Voice Asset Importer</h3></div></div></div><p>In the Voice Asset Importer, you can import the contents of a tab delimited text file
+        into Wwise to automatically create multiple Sound Voice objects in your project. The Voice
+        Asset Importer not only speeds up the creation process but also reduces the potential for
+        error.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The tab delimited text file can be generated from an external application such as
+          Microsoft Excel.</p></td></tr></table></div><p>Although your spreadsheets can have many different types of information, Wwise will read
+        only the following four types of information:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>Filenames</strong></span>: This information is used to create the Sound
+            Voice object and its corresponding audio source. Initially, the audio source will be
+            empty, but it does contain a reference to an audio file with the same name. This means
+            you can replace it in the same way you would any other audio file in Wwise. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Random Container names</strong></span>: This information, if included
+            in the text file, is used to create a parent Random Container for the corresponding
+            Sound Voice object. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Sound Voice notes</strong></span>: This information is added to the
+            Notes field of the Sound Voice object. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Audio source notes</strong></span>: This information is added to the
+            Notes field of the audio source. </p></li></ul></div><p>The order and amount of information in your text file is not important because before
+        importing the file, you must specify which columns in your text file you want to import. You
+        do this by assigning a column in the text file to one of the four information types. If a
+        column in your text file has not been assigned to one of the four information types, it will
+        be ignored by Wwise.</p><p>The only mandatory piece of information that you must import is the filename. Since this
+        filename is used to create the Sound Voice object and the audio source in Wwise, each
+        filename in your text file must be unique. The filename is also given to the audio file
+        (WAV) that is linked to the audio source.</p><p>To help you make sure you have correctly assigned the columns, the Voice Assets Importer
+        also displays a preview of the objects that will be created and the information that will be
+        imported.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>File to import</p>
+              </td><td>
+                <p>Displays the name and location of the tab delimited text file that you want to
+                  import.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+              </td><td>
+                <p>Opens a dialog where you can specify which tab delimited text file you want to
+                  import.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Import Options</strong></span></p>
+              </td></tr><tr><td>
+                <p>Use header</p>
+              </td><td>
+                <p>Determines whether the header row names appear in the Column Index list. If
+                  this option is not selected, the Column Index list uses numbers to identify the
+                  columns, for example, Column 1, Column 2, and so on.</p>
+              </td></tr><tr><td>
+                <p>Header row</p>
+              </td><td>
+                <p>Specifies which row in the text file contains the column headers.</p>
+              </td></tr><tr><td>
+                <p>Start import at row</p>
+              </td><td>
+                <p>Specifies the row at which Wwise will begin reading the voice asset
+                  information.</p>
+              </td></tr><tr><td>
+                <p>Column Type</p>
+              </td><td>
+                <p>The four types of information that Wwise can import are as follows: </p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Filename</strong></span>: The name that will be given to the
+                      Sound Voice object and the audio source. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Random Container Name</strong></span>: The name that will be
+                      given to the Random Container. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Sound Voice Note</strong></span>: Additional information that
+                      will be added to the <span class="bold"><strong>Notes</strong></span> field of the Sound
+                      Voice object. For example, you might want to add the name of the character
+                      speaking the dialogue. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Audio Source Note</strong></span>: Additional information
+                      that will be added to the <span class="bold"><strong>Notes</strong></span> field of the
+                      audio source. For example, you might want to include the actual line of
+                      dialogue that is spoken. </p></li></ul></div>
+                <p>Only the Filename information is required to create voice assets in
+                  Wwise.</p>
+              </td></tr><tr><td>
+                <p>Column Index</p>
+              </td><td>
+                <p>A list of available columns in the tab delimited text file. You can map the
+                  columns in the text file to the different column types in Wwise.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Voice Assets Preview</strong></span></p>
+              </td></tr><tr><td>
+                <p>Sound Voice</p>
+              </td><td>
+                <p>The name given to the Sound Voice object in Wwise. If no filename exists, the
+                  table cell will contain a dash.</p>
+                <p>This is a preview of what will be created in Wwise.</p>
+              </td></tr><tr><td>
+                <p>Random Container</p>
+              </td><td>
+                <p>The name given to the Random Container in Wwise. If no Random Container
+                  exists, the table cell will contain a dash.</p>
+                <p>This is a preview of what will be created in Wwise.</p>
+              </td></tr><tr><td>
+                <p>Sound Note</p>
+              </td><td>
+                <p>The information that will be added to the Notes field of the corresponding
+                  Sound Voice object. If no comments exist for the Sound Voice object, the table
+                  cell will contain a dash.</p>
+                <p>This is a preview of what will be created in Wwise.</p>
+              </td></tr><tr><td>
+                <p>Source Note</p>
+              </td><td>
+                <p>The information that will be added to the Notes field of the corresponding
+                  audio source. If no comments exist for the audio source, the table cell will
+                  contain a dash.</p>
+                <p>This is a preview of what will be created in Wwise.</p>
+              </td></tr><tr><td>
+                <p>Import Destination</p>
+              </td><td>
+                <p>The location in the project hierarchy where the new voice assets will be
+                  created.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_browse_dots.png"></div>
+              </td><td>
+                <p>Opens the Project Explorer - Browser where you can specify into which Wwise
+                  object or folder the new voice assets will be created.</p>
+              </td></tr><tr><td>
+                <p>
+                  <span class="bold"><strong>Custom Properties</strong></span> button </p>
+              </td><td>
+                <p>Shows the Custom Properties editor dialog used to set custom properties on the
+                  imported objects.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is only available when custom properties are set in the Project
+                    Settings.</p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_import.png"></div>
+              </td><td>
+                <p>Opens the Importing dialog where you can view the progress of the file import
+                  and stop the import if required.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_close.png"></div>
+              </td><td>
+                <p>Closes the Voice Asset Importer dialog without importing the assets from the
+                  text file.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch11s03s06.html" title="Importing voice assets from a text file">Importing voice assets from a text file</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s04.html#replacing_sound_voice_media_files" title="Replacing sound voice media files">Replacing sound voice media files</a>
+          </p></li></ul></div></div><HR></body></html>

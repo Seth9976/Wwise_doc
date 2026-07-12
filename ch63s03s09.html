@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Memory Arenas</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s08.html" title="Memory"><link rel="next" href="ch63s03s10.html" title="Streams"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Memory Arenas</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="memory_arena"></a>Memory Arenas</h3></div></div></div><p>The Advanced Profiler - Memory Arenas tab displays information about how memory is managed when using the default memory allocator. This tab is primarily used to monitor the total memory reserved for the Wwise sound engine, and to review memory fragmentation over time. For more information about tuning memory arenas, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=goingfurther_memoryarenas.html" target="_blank">Configuration and Tuning of AkMemoryArenas</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2"><span class="bold"><strong>Global
+                Statistics</strong></span></td></tr><tr><td>Total Heap Used</td><td>The sum of used memory across all arenas.</td></tr><tr><td>Total Reserved</td><td>The total amount of memory reserved across all arenas.</td></tr><tr><td>Num Spans Reserved</td><td>The total number of spans reserved across all arenas.</td></tr><tr><td colspan="2"><p><span class="bold"><strong>Heap Details</strong></span></p></td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Name/Span Address Name</p>
+              </td><td>
+                <p>The name of the memory arena is listed for the root nodes. The different memory arenas are as follows:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Primary</strong></span>: The default memory arena used by most memory categories.</p></li><li class="listitem"><p><span class="bold"><strong>Media</strong></span>: The memory arena used for memory allocations that go to the Media memory category, usually from loading SoundBanks.</p></li><li class="listitem"><p><span class="bold"><strong>Profiler</strong></span>: The memory arena used for memory allocations that go to the Profiler and Monitor Queue memory category. This memory arena does not exist in the Release build configuration.</p></li><li class="listitem"><p><span class="bold"><strong>Device</strong></span>: The memory arena used for handling any device-specific memory allocations. This is present only on specific platforms that use device-specific memory for audio processing.</p></li></ul></div>
+                <p>Below each memory arena name, all of the spans that belong to the memory arena is listed. Each span is identified by the location of its address in memory in the runtime being profiled.</p>
+              </td></tr><tr><td>
+                <p>Used</p>
+              </td><td>
+                <p>The amount of memory used for the arena as a whole, or the amount of memory used in each span.</p>
+              </td></tr><tr><td>
+                <p>Free</p>
+              </td><td>
+                <p>The amount of free memory available across all spans in the arena, or the amount of memory available in each span. Free memory is characterized by any memory that is reserved but unused.</p>
+              </td></tr><tr><td>
+                <p>Reserved</p>
+              </td><td>
+                <p>The amount of reserved memory across all spans in the arena, or the amount of memory reserved by each span.</p>
+              </td></tr><tr><td>
+                <p>Largest Free/Fragmentation</p>
+              </td><td>
+                <p>The largest contiguous free space of memory across every span in the arena is listed for the root nodes of the tree. This is the largest memory allocation that the arena can service before it needs to request a new span or recycle an unused span.</p>
+                <p>For each span, a map is displayed, which shows the portions of the span that have memory allocated. The map is up to 32 cells in length, each representing the amount of reserved space that is used. Spans with a reserved size that is not a power-of-two have fewer visible cells. For example, a span that is 4MiB in size shows 32 cells, each representing 128KiB of memory, but a span that is 6MiB in size only shows 24 cells, each representing 256KiB of memory.</p>
+              </td></tr><tr><td>
+                <p>Allocs</p>
+              </td><td>
+                <p>The number of allocations that the memory arena has performed since initialization, including small-block allocations, or the number of allocations that each span has performed since initialization of the span.</p>
+              </td></tr><tr><td>
+                <p>Frees</p>
+              </td><td>
+                <p>The number of deallocations that the memory arena has performed since initialization, including small-block allocations, or the number of deallocations that each span has performed since initialization of the span.</p>
+              </td></tr><tr><td>
+                <p>Cur. Allocs</p>
+              </td><td>
+                <p>The number of memory allocations the memory arena currently has active, including small-block allocations, or the number of active allocations for each span.</p>
+              </td></tr><tr><td>
+                <p>Type</p>
+              </td><td>
+                <p>The span type, between Base, Medium, Large, and Huge. Base spans are created when the memory arena is initialized, Medium spans are secondary spans that are created on demand as memory is required, Large spans are secondary spans for allocations of a certain size (but are only present when support for Large allocations is enabled), and Huge spans are secondary spans that were created for a single memory allocation. This column is empty for memory arenas, and is only populated for span rows.</p>
+              </td></tr><tr><td>
+                <p>User Data</p>
+              </td><td>
+                <p>The value of the user data provided from the callback to allocate a new span, or just a hyphen if zero was returned. This column is  empty for memory arenas, and is only populated for span rows.</p>
+              </td></tr><tr><td colspan="2"><p><span class="bold"><strong>Small Block Allocator (SBA) Details</strong></span></p></td></tr><tr><td>
+                <p>Name/Small Block Size Class</p>
+              </td><td>
+                <p>The name of the memory arena for the root items in the tree, or the different size classes for the SBA.</p>
+              </td></tr><tr><td>
+                <p>Used</p>
+              </td><td>
+                <p>The amount of memory used by the SBA in the arena, or the amount of memory used in each SBA size class.</p>
+              </td></tr><tr><td>
+                <p>Free</p>
+              </td><td>
+                <p>The amount of memory that is reserved and unused for the entire SBA in the arena, or the amount of memory that is reserved and unused for just the SBA size class.</p>
+              </td></tr><tr><td>
+                <p>Reserved</p>
+              </td><td>
+                <p>The amount of memory that is reserved for the entire SBA in the arena, or the amount of memory that is reserved for just the SBA size class.</p>
+              </td></tr><tr><td>
+                <p>SBA Spans Reserved</p>
+              </td><td>
+                <p>The number of spans that are reserved for the entire SBA in the arena, or the number of spans that are reserved for just the SBA size class.</p>
+              </td></tr><tr><td>
+                <p>Allocs</p>
+              </td><td>
+                <p>The number of allocations that have been performed for the entire SBA in the arena since initialization, or the number of allocations that have been performed for just the SBA size class.</p>
+              </td></tr><tr><td>
+                <p>Frees</p>
+              </td><td>
+                <p>The number of deallocations that have been performed for the entire SBA in the arena since initialization, or the number of deallocations that have been performed for just the SBA size class.</p>
+              </td></tr><tr><td>
+                <p>Cur. Allocs</p>
+              </td><td>
+                <p>The number of allocations that are currently active for the entire SBA in the arena, or the number of allocations that are currently active for just the SBA size class.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch39.html" title="Managing memory in Wwise"><i>Managing memory in Wwise</i></a>
+          </p></li></ul></div></div><HR></body></html>

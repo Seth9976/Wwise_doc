@@ -1,0 +1,79 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Modulator Time</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s05s04.html" title="Modulator Editor"><link rel="prev" href="ch61s05s04s02.html" title="Modulator Envelope"><link rel="next" href="ch61s05s05.html" title="Acoustic Texture Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05.html">ShareSets Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05s04.html">Modulator Editor</a></span> &gt; <span class="breadcrumb-node">Modulator Time</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="modulator_time"></a>Modulator Time</h4></div></div></div><p>
+      The table below lists the properties of the time modulator. For more information on working with time, refer to <a class="xref" href="ch19s06.html" title="Working with time">Working with time</a>.
+    </p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+			  <p>Name</p>
+			</td><td>
+			  <p>The name of the modulator ShareSet.</p>
+			</td></tr><tr><td>
+			  <p>Shared by</p>
+			</td><td>
+			  <p>A list of objects that currently subscribe to the selected ShareSet.</p>
+			</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+			  <p>Notes</p>
+			</td><td>
+			  <p>Additional information about the ShareSet or the modulator settings that have been applied.</p>
+			</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>Initial Delay</p>
+	</td><td>
+		<p>A period of time to wait before the time-based modulation starts.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> During this delay the property value will be maintained at its value at time 0, as determined by the RTPC graph.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 4</p>
+		<p>Units: s</p>
+	</td></tr><tr><td>
+		<p>Duration</p>
+	</td><td>
+		<p>The length of one iteration of the time-based modulation at normal playback rate.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The actual overall time will be affected by Initial Delay, Playback Rate and Loop Count.</p></td></tr></table></div>
+		<p>Default value: 1</p>
+		<p>Range: 0.1 to 100</p>
+		<p>Units: s</p>
+	</td></tr><tr><td>
+		<p>Loop Count</p>
+	</td><td>
+		<p>The number of times the modulation will be played. (Entering 0 means &#8220;infinite&#8221;.)</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Playback Rate</p>
+	</td><td>
+		<p>Adjusts the rate at which the associated sound is played:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>A value of 1 results in a normal playback</p></li><li class="listitem"><p>A value less than 1 results in a slower playback</p></li><li class="listitem"><p>A value greater than 1 results in a faster playback</p></li></ul></div>
+		<p>Default value: 1</p>
+		<p>Range: 0.25 to 4</p>
+	</td></tr><tr><td>
+		<p>Scope</p>
+	</td><td>
+		<p>Defines how time modulator instances are created:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Voice</strong></span>: A time modulator instance is created for every sound/object playback.</p></li><li class="listitem"><p><span class="bold"><strong>Note/Event</strong></span>: A time modulator instance is created for every playing instance or, when used in MIDI context, note.</p></li></ul></div>
+		<p>Default value: Note or Event</p>
+	</td></tr><tr><td>
+		<p>Trigger On</p>
+	</td><td>
+		<p>The Actions/MIDI Events that may trigger the time modulator:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Play</strong></span>: Either a Play Action or a MIDI note Event</p></li><li class="listitem"><p><span class="bold"><strong>Note-Off</strong></span>: Only a MIDI Note-Off Event</p></li></ul></div>
+		<p>Default value: Play</p>
+	</td></tr><tr><td>
+		<p>Stop playback at end</p>
+	</td><td>
+		<p>If set, the playback of the associated sound is terminated once the total time, taking into account initial delay, loop count, and playback rate, has been reached. If not set, the value of the modulated property after the total time has elapsed will be maintained at its final value as determined by the RTPC graph.</p>
+		<p>Default value: true</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch61s05s04.html" title="Modulator Editor">Modulator Editor</a>
+        </p></li></ul></div></div><HR></body></html>

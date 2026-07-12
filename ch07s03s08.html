@@ -1,0 +1,74 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Defining Custom Properties</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03s07.html" title="Specifying network ports"><link rel="next" href="ch07s04.html" title="Specifying the default object values for your project"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Defining Custom Properties</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="custom_properties_tab"></a>Defining Custom Properties</h3></div></div></div><p>Use the Custom Properties tab to define the custom properties for the
+				project.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The descriptions for this tab represent the legacy method for defining custom
+					properties. The more recent and powerful method for defining custom properties
+					uses XML files, and is described in the SDK doc's <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=defining__custom__properties.html" target="_blank"> Defining Custom Properties</a> page. While both approaches are still
+					valid, refer to SDK documentation to learn more about it. </p></td></tr></table></div><p>In the Custom Properties tab of the Project Settings dialog, you can define your
+				own properties for the Sound and Audio Source objects of the Containers hierarchy.
+				These custom properties can then be accessed from the following locations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch61s12s02.html" title="List View">List View</a></p></li><li class="listitem"><p>
+						<a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a></p></li><li class="listitem"><p>
+						<a class="xref" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>
+					</p></li></ul></div><p>It is also possible for the game to query the value of these properties. Changing
+				the Custom Property list will force a save and reload of the Wwise Project.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+								<p><span class="bold"><strong>Custom Properties</strong></span></p>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>ID</p>
+							</td><td>
+								<p>Identifier for the property. This identifier is used by the
+									game to query the value of this property using the Sound Engine
+									API. Cannot be edited.</p>
+							</td></tr><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>Name of the property. Note that a prefix "Custom:" is
+									automatically added to the property name when saved to the
+									XML.</p>
+							</td></tr><tr><td>
+								<p>Location</p>
+							</td><td>
+								<p>Location of the property. Can be one of:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Audio Source</p></li><li class="listitem"><p>Sound</p></li></ul></div>
+							</td></tr><tr><td>
+								<p>Type</p>
+							</td><td>
+								<p>Type of the property. Can be one of:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Boolean</p></li><li class="listitem"><p>Integer</p></li><li class="listitem"><p>Real</p></li></ul></div>
+							</td></tr><tr><td>
+								<p>Default</p>
+							</td><td>
+								<p>Default value of the property.</p>
+							</td></tr><tr><td>
+								<p>Min</p>
+							</td><td>
+								<p>Minimum value of the property.</p>
+							</td></tr><tr><td>
+								<p>Max</p>
+							</td><td>
+								<p>Maximum value of the property.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add.png"></div>
+							</td><td>
+								<p>Add a new custom property.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+							</td><td>
+								<p>Remove the selected custom property.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+							</td><td>
+								<p>Closes the Project Settings dialog and saves your
+									settings.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+							</td><td>
+								<p>Closes the Project Settings dialog without saving your
+									settings.</p>
+							</td></tr></tbody></table></div></div><HR></body></html>

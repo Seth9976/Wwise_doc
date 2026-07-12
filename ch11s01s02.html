@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Creating Wwise objects on import</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s01.html" title="The importing process"><link rel="prev" href="ch11s01s01.html" title="What media files are supported?"><link rel="next" href="ch11s01s03.html" title="The media file structure"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s01.html">The importing process</a></span> &gt; <span class="breadcrumb-node">Creating Wwise objects on import</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="creating_wwise_objects_on_import"></a>Creating Wwise objects on import</h3></div></div></div><p>After you have verified that the files that you want to import are supported by Wwise, you can determine what kind of object you want to create with the files. </p><p>Wwise distinguishes between Sound SFX, Sound Voice, and Music Track objects. This
+        allows, for example, Voice objects&#8212;which might be translated into different languages&#8212;to be
+        handled differently in Wwise. There are different structural objects, such as Containers and
+        Music Segments, which allow the grouping and organization of the base objects. To help you
+        differentiate between them, Wwise uses different icons to represent each object type.</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="30px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+                <p>Icon</p>
+              </th><th>
+                <p>Represents</p>
+              </th></tr></thead><tbody><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Sound_icon.png" width="15"></td></tr></table></div>
+              </td><td>
+                <p>
+                  <span class="bold"><strong>SFX</strong></span> - The default object type when you import media files into the Containers hierarchy.
+                </p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Voice_icon.png" width="15"></td></tr></table></div>
+              </td><td>
+                <p>
+                  <span class="bold"><strong>Voice</strong></span> - Created for dialogue that's likely to be
+                  translated for various language versions of the game. </p>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+                    Hold Ctrl and Shift while dragging a WAV file to the Containers hierarchy to automatically set the <span class="bold"><strong>Import As:</strong></span> list value to <span class="bold"><strong>Sound Voice</strong></span>, as opposed to the default <span class="bold"><strong>Sound SFX</strong></span>, for the Reference Language.
+                  </p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Random_Container_icon.png" width="15"></td></tr></table></div>
+              </td><td>
+                <p>
+                  <span class="bold"><strong>Random Container</strong></span> - Created by default when you
+                  drag a folder into the Containers hierarchy. The Audio File Importer appears where
+                  you can change the folder into another item selected from the <span class="bold"><strong>Object Type/Action</strong></span> list: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>No object</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Virtual Folder</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Property Container</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Sequence Container</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Switch Container</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Blend Container</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Sound SFX</strong></span></p></li></ul></div><p>
+                </p>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while dragging a folder to the Project Explorer in the
+                    Containers hierarchy to automatically create a Random Container with Sound SFX
+                    objects for every WAV file found in the folder.</p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Music_Track_icon.png" width="15"></td></tr></table></div>
+              </td><td>
+                <p>
+                  <span class="bold"><strong>Music Track</strong></span> - Created when dragging a source file (WAV or AMB) onto the Containers hierarchy under a Music Segment.
+                </p>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while dragging a WAV file on top of Music Segment in the Containers hierarchy of the Project Explorer to automatically create a Music Track object.</p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Music_Segment_icon.png" width="15"></td></tr></table></div>
+              </td><td>
+                <p>
+                  <span class="bold"><strong>Music Segment</strong></span> - Created, by default, when dragging a folder or a source file (WAV or AMB) onto the Containers hierarchy under a Music Switch Container or Music Playlist Container.
+                </p>
+                <p> The Audio File Importer appears where you can change the folder into another
+                  item selected from the <span class="bold"><strong>Object Type/Action</strong></span> list: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>No object</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Virtual Folder</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Music Switch Container</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Music Playlist Container</strong></span></p></li></ul></div><p>
+                </p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When dragging WAV files onto an existing Music Segment, Music Tracks are
+                    created for every WAV file.</p></td></tr></table></div>
+              </td></tr></tbody></table></div></div><HR></body></html>

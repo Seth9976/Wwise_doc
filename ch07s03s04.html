@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Managing messages that appear in the logs</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03s03.html" title="Defining the SoundBank settings for your project"><link rel="next" href="ch07s03s05.html" title="Defining environmental curves for your project"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Managing messages that appear in the logs</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="managing_messages_that_appear_in_logs"></a>Managing messages that appear in the logs</h3></div></div></div><p>There might be situations where you no longer want or need specific warnings and/or
+				messages to be displayed in the SoundBank or Conversion logs during the generation
+				process. To prevent these types of warnings and messages from appearing in the
+				SoundBank and Conversion logs, you can add them to the Log Ignore list in the <a class="xref" href="ch07s03s04.html#logs_tab" title="Logs tab of the Project Settings dialog">Logs tab of the Project Settings dialog</a>. When you want to include these messages again, you can
+				remove the message types from the Log Ignore List. This list of messages is managed
+				at the project level in the Project Settings dialog. </p><div class="orderedlist"><p class="title"><b>To add messages to the Log Ignore List:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project</strong></span> &gt; <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>In the Project Settings dialog, select the Logs tab.</p></li><li class="listitem"><p>Clear the check boxes of all messages you want to add to the Log Ignore List.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to close the Project Settings dialog.</p><p>The next time a log is generated, the cleared message types will be ignored by Wwise and will not be displayed in the log.</p><p>To remove a message type from the Log Ignore List, select the check mark for the corresponding message type.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can also add messages to the Log Ignore List by right-clicking one or more messages directly in the log and selecting <span class="bold"><strong>Add Message(s) to Ignore List</strong></span>.</p></td></tr></table></div></li></ol></div><div class="orderedlist"><p class="title"><b>To change the severity of a message:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project</strong></span> &gt; <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>In the Project Settings dialog, select the Logs tab.</p></li><li class="listitem"><p>Change the severity using list in the <span class="bold"><strong>Severity</strong></span> column.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to close the Project Settings dialog.</p><p>The next time a log is generated, the selected severity will be applied.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To limit the number of messages that will appear in the logs:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project</strong></span> &gt; <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>In the Project Settings dialog, select the Logs tab.</p></li><li class="listitem"><p>Enable the <span class="bold"><strong>Limit number of messages displayed to:</strong></span> option and type the maximum number of messages you want displayed in the log. Note that this number is used to limit all message types in the log.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to close the Project Settings dialog.</p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Manage messages that appear in the General, Project Load, and WAAPI logs through the Logs Settings dialog, which is opened by clicking the settings icon within the Logs view.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="logs_tab"></a>Logs tab of the Project Settings dialog</h4></div></div></div><p>There might be situations where you no longer want or need specific warnings
+					and/or messages to be displayed in the SoundBank Log during the generation
+					process or the Conversion Log during the conversion process. You might also want
+					to change the severity of a specific message depending on your policies. You can
+					also limit the number of messages (per type) that will be displayed in the
+					logs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Ignore</p>
+								</td><td>
+									<p>Determines whether a message type will be displayed in the
+										logs. By default all message types will be displayed. When
+										this check box is selected, the corresponding message type
+										will be ignored by Wwise and will not be displayed in the
+										logs.</p>
+								</td></tr><tr><td>
+									<p>ID</p>
+								</td><td>
+									<p>The ID assigned to a particular error, warning, or
+										message.</p>
+								</td></tr><tr><td>
+									<p>Message</p>
+								</td><td>
+									<p>A description of the type of issue that can be encountered
+										during conversion or SoundBank generation.</p>
+								</td></tr><tr><td>
+									<p>Severity</p>
+								</td><td>
+									<p>The severity to be applied when this issue is encountered
+										during conversion or SoundBank generation.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When using the command line SoundBank generation, the
+											WwiseConsole.exe process returns a code representing the
+											maximum severity value found during the SoundBank
+											generation. 0:Only Messages or no message, 1:Fatal
+											Errors or Errors, 2:Warnings. You can use this column to
+											control the return value.</p></td></tr></table></div>
+								</td></tr><tr><td>
+		<p>Max Messages Per Message Id</p>
+	</td><td>
+		<p>Determines whether Wwise will limit the number of messages (per type) that will be displayed in the log. You can specify the maximum number of messages that will be displayed.</p>
+		<p>The same number will be applied to all message types.</p>
+		<p>Default value: 100</p>
+	</td></tr><tr><td>
+									<p>Warn, while profiling, when number of
+										Resume/Play-From-Beginning virtual voices exceeds x</p>
+								</td><td>
+									<p>Determines whether Wwise will output an error to the
+										Capture Log when virtual voices of type Resume and Play from
+										beginning exceed the specified number.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Saves any changes you made to the list and closes the Log
+										Ignore List.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the Log Ignore List without saving your
+										changes.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s04.html" title="Managing messages that appear in the logs">Managing messages that appear in the logs</a></p></li></ul></div></div></div><HR></body></html>

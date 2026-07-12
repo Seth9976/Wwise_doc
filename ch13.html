@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Building the structure of output busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt02.html" title="Setting up your projects"><link rel="prev" href="ch12s06.html" title="Building Containers hierarchy tips and best practices"><link rel="next" href="ch13s01.html" title="Working with busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-node">Building the structure of output busses</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="building_structure_of_output_busses"></a>Building the structure of output busses</h2></div></div></div><p>A bus is a grouping of your project objects for mixing and final output, which we detail in <a class="link" href="ch35.html" title="Managing output">Managing Output</a>. But, well before finishing your project, it is important to understand the role of different busses and how they work within your overall project structure.</p><p>Just as you need to define the structure for your project assets to manage them strategically, you also need to organize the output for your project. By grouping output busses together in a hierarchical structure called the Busses hierarchy, you can define the relative properties, the States, RTPCs, as well as the Effects for the routing of your project.</p><p>You should spend some time considering how best to organize your project routing to streamline the mixing process. 
+For example, you would simplify the mixing of your game audio by routing such sounds as ambient music or gunfire through corresponding busses. </p><p>To begin, you must understand the default structure in your Busses hierarchy. It
+		consists of main busses, each with their own role and hierarchy: the Main Audio Bus
+		hierarchy and Secondary bus hierarchies.</p><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="the_master_audio_bus_hierarchy"></a>The Main Audio Bus hierarchy</h2></div></div></div><p>The Main Audio Bus hierarchy is a structure of
+				output busses through which the sounds and music in your project are routed. It
+				consists of three different levels of functionality:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Main Audio Bus</strong></span> - The top level element in the
+						hierarchy that determines the final output of your audio. You can rename or
+						delete any Main Audio Busses you create. You can also apply Effects to a
+						Main Audio Bus and move it to a different work unit or virtual
+						folder.</p></li><li class="listitem"><p><span class="bold"><strong>Audio Busses</strong></span> - One or more optional busses that can be
+						grouped under a Main Audio Bus to help in the organization and delivery of
+						your sound mix. These busses can be renamed, moved, and deleted; and you can
+						also apply Effects to them.</p></li><li class="listitem"><p><span class="bold"><strong>Auxiliary Busses</strong></span> - One or more optional busses that can be grouped under any Auxiliary or Audio Bus. Like Audio Busses, they can be renamed, moved, copied and deleted; and you can also apply effects to Auxiliary (commonly referred to as "aux") Busses. Sound objects anywhere in the project can be sent to Auxiliary Busses to adjust volume, bus configuration, positioning, and RTPC, as well as to apply Effects or States.  Ducking, HDR mix, and voice adjustments are not possible in an Auxiliary Bus. </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Auxiliary busses cannot have Audio Busses as children. They can only have other Auxiliary Busses as children.</p></td></tr></table></div><p>The following Wwise interface icons allow you to identify the two bus types: Audio Busses
+				and Auxiliary Busses.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+								<p>Icon</p>
+							</th><th>
+								<p>Represents</p>
+							</th></tr></thead><tbody><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/audio_bus_icon.png" width="15"></td></tr></table></div>
+							</td><td>
+								<p>Audio Bus</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/aux_bus_icon.png" width="15"></td></tr></table></div>
+							</td><td>
+								<p>Auxiliary Bus</p>
+							</td></tr></tbody></table></div><p>The following table shows all possible processing status icons for the Audio and Auxiliary
+				bus types. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more
+				information on processing status.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+								<p>Icon</p>
+							</th><th>
+								<p>Represents</p>
+							</th></tr></thead><tbody><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/audio_bus_mix_icon.png" width="15"></td></tr></table></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/aux_bus_mix_icon.png" width="15"></td></tr></table></div>
+								<p>(Auxiliary)</p>
+							</td><td>Mixing</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/audio_bus_object_icon.png" width="15"></td></tr></table></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/aux_bus_object_icon.png" width="15"></td></tr></table></div>
+								<p>(Auxiliary)</p>
+							</td><td>Processing Audio Objects</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/audio_bus_nonmix_icon.png" width="15"></td></tr></table></div>
+								<p>(Audio)</p>
+							</td><td>Not Mixing</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/audio_bus_unresolved_icon.png" width="15"></td></tr></table></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/aux_bus_unresolved_icon.png" width="15"></td></tr></table></div>
+								<p>(Auxiliary)</p>
+							</td><td>Processing</td></tr></tbody></table></div><p>By default, the sounds from the Containers hierarchy are routed through the Main Audio Bus. However, as you build your output structure, you can systematically route objects through the busses that you create.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>It is possible to create Work-Units and Virtual Folders under the Busses hierarchy. This can be useful to organize the bus structure in a team environment.</p></td></tr></table></div><p>You can change the default audio routing for your project in the <span class="bold"><strong>Default Object Values</strong></span> dialog. For more information about these default settings, refer to <a class="xref" href="ch07s04.html" title="Specifying the default object values for your project">Specifying the default object values for your project</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="the_master_secondary_bus_hierarchy"></a>Secondary bus hierarchies</h2></div></div></div><p>Secondary bus hierarchies are structures of Audio Busses used to mix the content that will go in any other outputs than the main (TV or speaker) output. You can create as many secondary Audio Busses as needed for the various types of outputs there will be in your project. Examples of secondary outputs are game controller speakers, chat headphones, or the DVR-bypass output. Like your primary output structure, the secondary structures can have any number of child busses and Auxiliary Busses.</p><p>Sounds routed to the main secondary bus hierarchy will be sent to the secondary output using one of the two following approaches:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Setting the <span class="bold"><strong>Output Bus</strong></span> property of a sound directly to any bus in a secondary bus hierarchy. This is the preferred method for sounds that are normally tied to only one secondary output instance. For example, player-initiated gunshots, tennis racket whacks, PDA sounds, gameplay feedback, and so on.</p></li><li class="listitem"><p>Routing a sound through any bus in a Main Audio Bus hierarchy and adding a user or game send to an Auxiliary Bus inside the secondary bus hierarchy. This is the preferred method if the same sound is going to be heard in multiple outputs and the TV at the same time, such as with a spy camera or announcements.</p></li></ul></div><p>The bus hierarchy only defines the mixing structure. To associate that mix to a specific output, choose the appropriate <span class="bold"><strong>Audio Device</strong></span> ShareSet on the corresponding main bus. See the list of <a class="xref" href="ch35s06.html" title="Built-in Audio Devices">Built-in Audio Devices</a> provided with Wwise. 
+			</p><p>In the case of player-related outputs (such as game controllers and headphones) which could have multiple instances in the game, it is important to know that the associated mixing hierarchy will be duplicated for each player. The project only defines the mixing "recipe" for a specific type of output. Actual routing into which copy of the structure will depend on the Listener and Game Object associations set up by the programmer.</p><p>By default, the authoring application will route all sounds to the main sound card so you
+			can hear your sound design. However, you can select different hardware devices for
+			testing. See <a class="xref" href="ch05s05.html#setting_output_devices" title="Selecting audio output devices">Selecting audio output devices</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="structuring_bus_hierarchy_example"></a>Structuring a bus hierarchy - example</h2></div></div></div><p>Wwise provides great flexibility in structuring a bus hierarchy. This means that there
+			is no universally correct way to organize your project's sound structure. Still, the
+			following simple example provides overall general practices for the development of a bus
+			structure regardless of a project's mix of assets and requirements.</p><p>In the following image, drawn from the Schematic View, we see a project organized
+			with four Audio Busses under a Main Audio Bus and three secondary master
+			busses.</p><div class="mediaobject"><img src="Images/schematic_bushierarchy.png"></div><p>For the Main Audio Bus, we have the following busses:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Environmental Bus</strong></span> - This bus groups the
+					various sounds the player is likely to hear based on different environmental
+					factors (reverbs for example), such as footsteps (the player's or other
+					characters') on gravel, wood, or cement floors.</p></li><li class="listitem"><p><span class="bold"><strong>Music</strong></span> - This bus groups all the music,
+					whether while playing in certain settings in the game or moving through UI menus
+					outside of the game.</p></li><li class="listitem"><p><span class="bold"><strong>Voices</strong></span> - This bus groups most of the
+					character dialogue.</p></li><li class="listitem"><p><span class="bold"><strong>Voices_Radio</strong></span> - With a lot of dialogue in this
+					game, and many voices needing special settings to represent their sound over a
+					radio, we've also added this bus separate from the Voices bus. Among other ways
+					we could have organized it, we might have set it as a child bus of the Voices
+					bus. But, although conceptually similar, the desired sound output and the mixing
+					it would imply made it easier for us to define it as a separate bus directly
+					under the Main Audio Bus.</p></li></ul></div><p>To make it easier to apply adjustments to sounds based on being located in a large
+			airplane hangar, we also added an Auxiliary Bus: <span class="bold"><strong>Hangar_Env</strong></span>. This way, when the game scene moves to the hangar, we can
+			send sounds - manually or through a game call - to this bus where we apply a reverb
+			reminiscent of the open echo one might hear in such an environment.</p><p>Then we have additional main busses, each feeding a secondary output:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Motion Bus</strong></span> - This bus receives all motion
+					signals (also known as rumble) and will output them to the appropriate
+					controller. In this example, there is no child bus, although it is possible to
+					have more complex mixing for motion too.</p></li><li class="listitem"><p><span class="bold"><strong>Non Recordable Bus</strong></span> - It is possible for a
+					system to have a separate output that will not be recorded by a DVR (Digital
+					Video Recorder). This is ideal for copyrighted music that should not be
+					distributed through player's recording. The sounds (or music) that are routed to
+					this bus will not be recorded.</p></li><li class="listitem"><p><span class="bold"><strong>Game Pad Bus</strong></span> - A controller speaker which can
+					output sounds that the player will hear more directly or, at least,
+					distinctively. This is ideal in such cases as the clunk of the character's head
+					hitting the wall.</p></li></ul></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p><span class="bold"><strong>It is not recommended to send the same sound at the same
+					time to both a secondary and an Audio Bus!</strong></span> Every system has its own
+				level of latency. Even if it's only a couple of milliseconds, the delay in two
+				outputs of the same sound will create a noticeable dissonance.</p></td></tr></table></div><p>
+</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can generate motion data from a sound object, including music files. For more information on generating motion from an existing sound object, refer to <a class="xref" href="ch26s03s01.html" title="Generating motion from existing sounds">Generating motion from existing sounds</a>.</p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/en/courses/wwise101/?source=wwise101&amp;id=submixing_with_additional_audio_busses" target="_blank">Wwise Fundamentals Module 13: Submixing with Additional Audio
+					Busses</a></p></li></ul></div></div></div><HR></body></html>

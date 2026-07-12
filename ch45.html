@@ -1,0 +1,68 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Getting to know the Event Viewer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch44s04.html" title="Project Explorer keyboard shortcuts"><link rel="next" href="ch46.html" title="Getting to know the Property Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Getting to know the Event Viewer</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="getting_to_know_event_viewer"></a>Getting to know the Event Viewer</h2></div></div></div><p>Wwise uses &#8220;Action&#8221; Events to apply specific Actions to the different sound, music, and
+		motion structures within your project hierarchy. In a typical game, you could have hundreds
+		of these Events, so it is crucial for you to be able to find the ones you are looking for
+		quickly. You can use the sorting and filter tools in the Event Viewer to find the different
+		Events that have been created for the current project.</p><div class="itemizedlist"><p class="title"><b>To open the Event Viewer:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Views &gt; Utilities &gt; Event Viewer</strong></span>
+					and then select a new pinned view (Shift+V) or a selection channel. For details
+					on Selection Channels, see <a class="xref" href="ch05s01s01.html" title="Understanding Selection Channels and Meter Instances">Understanding Selection Channels and Meter Instances</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can have multiple instances of the Event Viewer open at the same
+							time within the same layout.</p></td></tr></table></div></li></ul></div><p>The Event Viewer has three different tabs, each of which filters the Events in a different way:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Filtered tab</strong></span> - Displays all Events alphabetically. You can also sort this list by Action type using the Show All: Sorted option, or filter the list to display only those Events that contain a particular Action type. You can navigate through the filtered Events by clicking the plus (+) and minus (-) signs to expand and collapse the folders.</p><div class="mediaobject"><img src="Images/EV_filtered_action_online.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+									<div class="mediaobject"><img src="Images/Callout1.png"></div>
+								</td><td>
+									<p dir="ltr">Event Viewer filtered by action type
+										"Play".</p>
+								</td></tr></tbody></table></div></li><li class="listitem"><p><span class="bold"><strong>Current Selection tab</strong></span> - Displays a list of Events that are associated with the object or objects that are currently selected in the Audio tab of the Project Explorer. </p></li><li class="listitem"><p><span class="bold"><strong>Orphans tab</strong></span> - Displays orphaned Events or Events that have been created, but are not currently associated with a particular object.</p></li></ul></div><p>
+      You can also delete Events, open the Event Editor, as well as drag and drop one or more Events from the Event Viewer to other views within Wwise such as the Soundcaster or SoundBank Editor. 
+    </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Dialogue Events are not displayed in the Event Viewer. Dialogue Events can be viewed on the Events tab of the Project Explorer.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idm1577256560"></a>Setting expand and collapse behavior</h2></div></div></div><p>Depending on the situation or your own personal preference, you may want to change
+				the display of the Event Viewer. For example, you can expand or collapse all
+				groupings, or have the Event Viewer automatically expand every grouping each time
+				the list is filtered or sorted.</p><div class="orderedlist"><p class="title"><b>To change the Event Viewer display:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Right-click one of the group headings in the Event Viewer.</p><p>A shortcut menu appears.</p></li><li class="listitem"><p>Select one of the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Auto Expand</strong></span> to automatically
+								expand every grouping each time the list is filtered or
+								sorted.</p></li><li class="listitem"><p><span class="bold"><strong>Expand All</strong></span> to expand all category
+								and type groupings.</p></li><li class="listitem"><p>
+								<span class="bold"><strong>Collapse All</strong></span> to collapse all
+								category and type groupings. </p></li></ul></div></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="sorting_event_list"></a>Sorting the Event list</h2></div></div></div><p>By default, the Event Viewer displays the Filtered tab where all the Events in
+				your project are listed in alphabetical order. To find specific Events more quickly,
+				you can select the Show All - Sorted filter, which sorts Events by Event Action.
+				This means that all the Play Actions are grouped together, all the Stop Actions are
+				grouped together, and so on.</p><div class="orderedlist"><p class="title"><b>To sort the Event list:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Event Viewer, click the Filtered tab.</p><p>By default, all Events are listed alphabetically.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Filter</strong></span> button to display the
+						filter and sorting options.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Show All - Sorted</strong></span>
+						option.</p><p>All the Events in your project are sorted by Action category and then
+						Action type.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="filtering_list_by_action_type"></a>Filtering the list by Action type</h2></div></div></div><p>You can filter the Event list by Action type. For example, you can filter the list
+				to show only the Stop All Actions, or only the Mute Actions.</p><div class="orderedlist"><p class="title"><b>To filter the Event list by Action type:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Event Viewer, click the Filtered tab.</p><p>By default, all Events are listed alphabetically.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Filter</strong></span> button to display the
+						filter and sorting options.</p></li><li class="listitem"><p>Select an action category and then click an Action type from the
+						list.</p><p>The Events are filtered according to the filter option you
+						selected.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="filtering_list_by_current_selection"></a>Filtering the list by current selection</h2></div></div></div><p>You can filter the list to find specific Events that are associated with one or
+				more objects selected in the Audio tab of the Project Explorer.</p><div class="orderedlist"><p class="title"><b>To filter the Event list by current selection:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Audio tab of the Project Explorer, select one or more
+						objects.</p></li><li class="listitem"><p>In the Event Viewer, click the <span class="bold"><strong>Current
+							Selection</strong></span> tab.</p><p>The Events associated with the selected objects are displayed in the
+						Events list.</p></li></ol></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If more than one object is selected in the Audio tab of the Project Explorer,
+					the Events are sorted by object.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="filtering_list_by_orphaned_events"></a>Filtering the list by orphaned Events</h2></div></div></div><p>You can filter the list to find orphaned Events, which are Events that contain
+				Actions that are not associated with any object. The title of the Orphans tab
+				contains a number in brackets that specifies the total number of orphaned Events in
+				your project.</p><div class="orderedlist"><p class="title"><b>To filter the Event list by orphaned Events:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Event Viewer, click the <span class="bold"><strong>Orphans
+						</strong></span>tab.</p><p>The orphaned Events are displayed in the Events list.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="navigating_event_viewer"></a>Navigating the Event Viewer</h2></div></div></div><p>The information in the Event Viewer can be displayed in many different ways depending on how you have sorted or filtered the Event list. Some filter and sorting options create levels within the Event Viewer. To navigate through the different levels, you can expand and collapse the groups by clicking the plus (+) and minus (-) signs beside each Action category and type. </p><p>For example, to view a Stop Action when <span class="bold"><strong>Show All - Sorted</strong></span> is the selected <span class="bold"><strong>Filter</strong></span>, you must do the following:</p><div class="mediaobject"><img src="Images/EV_Navigation_online.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>
+								<p dir="ltr">Expand the Stop Action category and a Stop Action
+									type grouping to display the different Events.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="quick_navigation"></a>Keyboard shortcuts</h2></div></div></div><p>You can also use the following keyboard shortcuts to quickly navigate through the different levels in the Event Viewer. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Keyboard Shortcut</p>
+								</th><th>
+									<p>To</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Up arrow</p>
+								</td><td>
+									<p>Move up within the Event list.</p>
+								</td></tr><tr><td>
+									<p>Down arrow</p>
+								</td><td>
+									<p>Move down within the Event list.</p>
+								</td></tr><tr><td>
+									<p>Right arrow</p>
+								</td><td>
+									<p>Expand an Event Action category or type grouping.</p>
+								</td></tr><tr><td>
+									<p>Left arrow</p>
+								</td><td>
+									<p>Collapse an Event Action category or type grouping.</p>
+								</td></tr></tbody></table></div></div></div><HR></body></html>

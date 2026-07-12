@@ -1,0 +1,233 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Creating audio Conversion Settings ShareSets</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35s10.html" title="Managing audio file conversion"><link rel="prev" href="ch35s10.html" title="Managing audio file conversion"><link rel="next" href="ch35s10s02.html" title="Removing DC offsets"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-link"><a href="ch35s10.html">Managing audio file conversion</a></span> &gt; <span class="breadcrumb-node">Creating audio Conversion Settings ShareSets</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="creating_audio_conversion_settings_sharesets"></a>Creating audio Conversion Settings ShareSets</h3></div></div></div><p>The ShareSets you create to manage the Conversion Settings are based on the needs of your
+			project and the requirements of each active platform. Many of your choices here can have
+			a big impact on the performance and quality of your audio project. After applying the
+			ShareSets to the objects in your project, you can go back and tweak your Conversion
+			Setting ShareSets at any time to achieve the best possible quality within the
+			constraints of the platform and the game. When you import audio files you can also speed
+			up the process by re-using the same ShareSets that you have defined for language and
+			source versions. </p><p>You can use one of your ShareSets as the default Conversion Settings for your project. For more information, refer to <a class="xref" href="ch07s03s02.html#specifying_default_conversion_settings" title="Specifying the default conversion settings">Specifying the default conversion settings</a>.</p><p>The Conversion Settings Editor has the following sections:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Primary Editor</strong></span>: Use to set the conversion settings for
+					each platform, including sample rate, audio format, and number of channels. </p></li><li class="listitem"><p><span class="bold"><strong>Options pane</strong></span>: Use to configure the options for your
+					ShareSet.</p></li><li class="listitem"><p><span class="bold"><strong>Audio Sources</strong></span>: Use the list of audio sources to compare
+					the original and converted sources, including the number of channels, sample
+					rate, and file size.</p></li></ul></div><div class="mediaobject"><img src="Images/conversion_settings_editor.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout1.png"></div>
+						</td><td>
+							<p>List of platforms that you can configure. </p>
+							<p>The audio conversion process retains the same pitch and duration
+								as the original files; however, you can define the following
+								properties for your conversion:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Number of channels (See <a class="xref" href="ch35s10s01.html#about_audio_channels" title="About audio channels">About audio channels</a> below.)</p></li><li class="listitem"><p>Left-Right mix</p></li><li class="listitem"><p>Sample rate (See <a class="xref" href="ch35s10s01.html#about_sample_rates" title="About sample rates">About sample rates</a>
+										below.)</p></li><li class="listitem"><p>Audio format (See <a class="xref" href="ch35s10s01.html#about_audio_formats" title="About audio formats">About audio formats</a>
+										below.)</p></li><li class="listitem"><p>Audio format quality</p></li><li class="listitem"><p>Sample rate conversion quality</p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout2.png"></div>
+						</td><td>
+							<p>Configure the following options for the ShareSet.</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Sample rate conversion quality</strong></span>: Select <span class="bold"><strong>Normal</strong></span> or <span class="bold"><strong>High</strong></span> for the conversion quality.</p></li><li class="listitem"><p><span class="bold"><strong>Insert a filename marker</strong></span>: Enable for lip-syncing or
+										sub-titling.</p></li><li class="listitem"><p><span class="bold"><strong>Remove DC Offset</strong></span>: Enable to remove DC Offset. See
+											<a class="link" href="ch35s10s02.html" title="Removing DC offsets">Remove DC
+											offset</a>.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>We recommend retaining the DC offset for looping
+											sounds. The remove mechanism is a high-pass filter, so
+											it might modify the first and last samples of the loop
+											in different ways. This could create a discontinuity in
+											the signal, audible as a click, when the first and last
+											samples play contiguously.</p></td></tr></table></div></li><li class="listitem"><p>Apply dither.</p></li><li class="listitem"><p>Allow channel upmix, which means mono source files are
+										converted to stereo when channels are marked as <span class="bold"><strong>Stereo</strong></span> or <span class="bold"><strong>Stereo drop</strong></span>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you don't select this option, mono source files remain mono regardless of the
+											Channels settings.</p></td></tr></table></div></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout3.png"></div>
+						</td><td>The list of all your audio sources. Use it to compare the original
+							and converted sources, including the number of channels, sample rate,
+							and file size.</td></tr></tbody></table></div><p>For more information about the Conversion Settings Editor, see <a class="link" href="ch61s05s03.html" title="Conversion Settings Editor">Conversion Settings Editor</a>.</p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="about_audio_channels"></a>About audio channels</h4></div></div></div><p>When converting multichannel audio sources, you must decide which channels to preserve. See
+					<a class="xref" href="ch11s01s01.html#channel_configuration" title="Channel configuration">Channel configuration</a>.</p><p>You can choose from the following channel options, however, only ADPCM, WEM Opus, PCM, and
+				Vorbis audio formats support all configurations of multichannel files. When the
+				selected channel option isn't supported by the audio format, Wwise downmixes the
+				content to the next supported configuration.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="70px" class="col1"><col width="150px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+								<p>Channel Option</p>
+							</th><th>
+								<p>Description</p>
+							</th><th>
+								<p>Comments</p>
+							</th></tr></thead><tbody><tr><td>
+								<p>As Input</p>
+							</td><td>
+								<p>Preserves the same number of audio channels as the original media file.</p>
+							</td><td>
+								<p>Some audio formats might not be supported on some platforms, in which case
+									multichannel files will be downmixed to stereo.</p>
+                
+							</td></tr><tr><td>
+								<p>Mono</p>
+							</td><td>
+								<p>All channels are mixed into one.</p>
+							</td><td>
+								<p>The L-R Mix is only used for Stereo to Mono conversion. Other channel configurations are downmixed according to <a class="xref" href="ch35s12.html" title="Downmixing behavior">Downmixing behavior</a>.
+              </p>
+								<p>The LFE channel is always dropped.</p>
+							</td></tr><tr><td>
+								<p>Mono drop</p>
+							</td><td>
+								<p>All channels are dropped except the first one.</p>
+							</td><td>
+								<p>Depending on the channel configuration of the original file, the first channel can either be the Left or Center channel.</p>
+							</td></tr><tr><td>
+								<p>Stereo</p>
+							</td><td>
+								<p>All channels are mixed into front left and front right.</p>
+							</td><td>
+								<p>
+                  The L-R Mix is only used for Mono to Stereo conversion. Other channel configurations are downmixed according to <a class="xref" href="ch35s12.html" title="Downmixing behavior">Downmixing behavior</a>.
+                </p>
+								<p>The LFE channel is always dropped.</p>
+							</td></tr><tr><td>
+								<p>Stereo drop</p>
+							</td><td>
+								<p>All channels are dropped except channels that are defined as Left or Right.</p>
+							</td><td>
+								<p>In cases where no channel is defined as Left or Right, and there is a Center channel defined (mono), the following conversion occurs:</p>
+								<p>Left = 0.707C Right = 0.707C</p>
+								<p>The converted file will be twice the size of the original file.</p>
+							</td></tr><tr><td>
+								<p>5.1</p>
+							</td><td>
+								<p>Force convert to 5.1.</p>
+							</td><td>
+								<p>Channels defined as Left, Right, Center, LFE, Surround Right and Surround Left are preserved.</p>
+								<p>Standard height channels, if present, are mixed down into the matching channels.</p>
+								<p>If the input format doesn't include all required channels, the resulting output
+									creates the 5.1 content filled with no sound for channels that
+									were not provided content.</p>
+							</td></tr><tr><td>
+								<p>5.1 Drop</p>
+							</td><td>
+								<p>All channels are dropped except channels that are defined as Left, Right, Center, LFE, Surround Left and Surround Right.</p>
+							</td><td>
+							</td></tr><tr><td>
+								<p>7.1</p>
+							</td><td>
+								<p>Force convert to 7.1.</p>
+							</td><td>
+								<p>Channels defined as Left, Right, Center, LFE, Surround Right, Surround Left, Back Left and Back Right are preserved.</p>
+								<p>Standard height channels, if present, are mixed down into the matching channels.</p>
+								<p>If the input format didn't include all required channels, the resulting output
+									creates the 7.1 content filled with no sound for channels that
+									were not provided content.</p>
+							</td></tr><tr><td>
+								<p>7.1 Drop</p>
+							</td><td>
+								<p>All channels are dropped except channels that are defined as Left, Right, Center, LFE, Surround Left, Surround Right, Back Left and Back Right.</p>
+							</td><td>
+							</td></tr></tbody></table></div><p>Note that Wwise doesn't do any multichannel encoding; it simply provides LPCM data to the
+				console or system in either stereo, or 5.1 or 7.1 surround. Once the LPCM data is
+				received by the console or system, it can then be output in almost any format
+				supported by the particular console or system, including Dolby, DTS, or DPL2. Some
+				restrictions do exist, however, including:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Only stereo output is supported on the Android and iOS platforms.</p></li><li class="listitem"><p>Only stereo and 5.1 surround output is supported on the Switch platform.</p></li><li class="listitem"><p>Only stereo, and 5.1 and 7.1 surround output is supported on the Mac and tvOS platforms.</p></li><li class="listitem"><p>Other platforms, such as Windows, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X, natively support up to 7.1 channels at their output. Wwise is able to carry all standard channel configurations (up to 13.1 channels), as well as anonymous configurations (up to 256 channels). Note that these configurations require the use of a special sink plug-in that can interpret them and/or pass them to dedicated hardware.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="about_sample_rates"></a>About sample rates</h4></div></div></div><p>The sample rate determines the number of times per second a digital audio signal is
+				sampled. When deciding which sample rate to choose, many factors come into play and
+				like other quality/performance issues, setting the sample rate is a balancing act.
+				To give you as much control as possible, Wwise gives you many different sample rate
+				conversion options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>As Input</strong></span> - Converts the file using the same sample rate
+						as the original file. If the sample rate is not available for a particular
+						platform or audio format, then the closest sample rate available is used. </p></li><li class="listitem"><p><span class="bold"><strong>Auto (Low/Medium/High)</strong></span> - Converts the file using a sample rate selected by Wwise after performing an FFT analysis of the file. The difference between the low, medium, and high quality settings is the cutoff threshold value used by the algorithm. You can tweak the quality level of each setting by defining their threshold values in the Project Settings dialog. For more information on the automatic sample rate detection performed by Wwise, refer to <a class="xref" href="ch07s03s02.html#defining_sample_rate_automatic_detection_settings" title="Defining the sample rate automatic detection settings">Defining the sample rate automatic detection settings</a>.</p></li><li class="listitem"><p><span class="bold"><strong>300 to 48,000</strong></span> - Converts the file using a specific sample rate. The sample rate range varies for each platform up to a maximum of 48,000 Hz. </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For the <span class="bold"><strong>As Input</strong></span> and <span class="bold"><strong>Auto</strong></span> conversion settings, you can further restrict the sample
+					rate using the <span class="bold"><strong>Min Sample Rate</strong></span> and <span class="bold"><strong>Max Sample Rate</strong></span> drop-down lists.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="about_audio_formats"></a>About audio formats</h4></div></div></div><p>Wwise supports the following audio formats to give you flexibility and control to work around the limitations of each platform:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>
+              <a class="glossterm" href="go01.html#glossary_adpcm"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_adpcm" title="ADPCM (Adaptive Differential Pulse Code Modulation)">ADPCM</a></em></a>
+            </strong></span> - An audio file conversion encoding method that quantizes the difference between a sound signal and a prediction that has been made of that sound signal. The ADPCM quantization step is adaptive, which differs from PCM encoding where the signals are quantized directly. Fundamentally, ADPCM offers significant gains in storage and CPU usage at the cost of sound quality. As such, it is typically used on mobile platforms.
+          </p></li><li class="listitem"><p>
+            <span class="bold"><strong>
+              <a class="glossterm" href="go01.html#glossary_opus"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_opus" title="Opus">WEM Opus</a></em></a>
+            </strong></span> - A low-latency audio codec, supported on all platforms and optimized for both voice and general-purpose audio. WEM Opus outperforms other codecs for compression without compromising on sound quality. The balance between data compression efficiency and perceived sound quality is controlled using the Bitrate setting; the higher the rate, the better the sound quality. This version is a standard implementation of the Opus specification, but stored in a container that is better optimized for seeking and looping when streamed from disk. The WEM Opus decoder needs a lot of pre-roll to start decoding, which can incur a significant cost in CPU and streaming resources. Therefore, it is not suited for applications that need a lot of seeking or looping, such as in complex Interactive Music, sample-accurate loops, or trigger-rate containers. However, to offset this disadvantage, decoding is hardware-accelerated on some platforms.
+          </p></li><li class="listitem"><p>
+            <span class="bold"><strong>
+              <a class="glossterm" href="go01.html#glossary_pcm"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_pcm" title="PCM (Pulse Code Modulation)">PCM</a></em></a>
+            </strong></span> - Linear pulse-code modulation encoding, which is also referred to as uncompressed digital audio. PCM offers the best quality and performance at the expense of storage size. By default Wwise converts audio to a bit depth of 16, but you can select a conversion option to preserve 24-bit material at full resolution.
+          </p></li><li class="listitem"><p>
+						<span class="bold"><strong>
+							<a class="glossterm" href="go01.html#glossary_vorbis"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_vorbis" title="Vorbis">Vorbis</a></em></a>
+						</strong></span> - A perceptual encoding method that permits encoding of audio files at fixed and variable bitrates while maintaining a very good perceived sound quality. The balance between data compression efficiency and perceived sound quality is controlled using the Quality Factor setting or by specifying the maximum, minimum, and average bitrates per channel. The Vorbis encoder may require the use of a seek table. For more information, refer to <a class="xref" href="ch35s10s07.html#using_seek_tables_with_vorbis_encoder" title="Using seek tables with the Vorbis encoder">Using seek tables with the Vorbis encoder</a>. </p><p>Audiokinetic's special implementation of Vorbis is highly optimized for all platforms.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>There are several platform-specific audio formats supported by Wwise that aren't
+					described on this page for proprietary reasons. Licensed users who are logged in
+					to the Audiokinetic website have access to pages that provide details on these
+					formats.</p></td></tr></table></div><p> Each format has its advantages and disadvantages and the format you choose will depend on
+				the CPU and memory restrictions of your particular game. For information on when to
+				use which audio format, refer to <a class="xref" href="ch35s10s07.html#audio_formats" title="Audio formats">Audio formats</a>. </p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="about_dc_offsets"></a>About DC offsets</h4></div></div></div><p>It's a good idea to remove the DC offset using a DC offset filter because DC offsets can
+				affect volume and cause artifacts in Wwise. There are some cases, however, where you
+				shouldn't remove the DC offset, for example, for sample accurate containers. In
+				other cases, for example, where sounds are normalized to 0 dB, you may or may not
+				need to remove the DC offset. During the conversion process, DC offsets are removed
+				by default. You can, however, disable this setting if needed in the Conversion
+				Settings dialog. </p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If you are generating motion directly from your audio sources, removing the DC offset might alter the motion output for controllers.</p></td></tr></table></div><p>For more information, see <a class="xref" href="ch35s10s02.html" title="Removing DC offsets">Removing DC offsets</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1566170432"></a>Creating a Conversion Settings ShareSet</h4></div></div></div><p>Use the following step list to create your reusable conversion settings contained
+				in ShareSet in Wwise.</p><p>
+				</p><div class="orderedlist"><p class="title"><b>To create a Conversion Settings ShareSet:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Project Explorer, switch to the ShareSets tab.</p></li><li class="listitem"><p>In the Conversion Settings section, select the Work Unit into which
+							you want to create the new ShareSet.</p></li><li class="listitem"><p>From the Project Explorer toolbar, click the <span class="bold"><strong>Conversion
+								Settings</strong></span> icon <span class="inlinemediaobject"><img src="Images/Conversion_Settings_icon.png" width="19"></span>.</p><p>A new Conversion Settings ShareSet is created in the selected Work
+							Unit.</p></li><li class="listitem"><p>Name the ShareSet appropriately and press <span class="bold"><strong>Enter</strong></span>.</p></li><li class="listitem"><p>Double-click the new ShareSet to load it in the Conversion Settings
+							Editor.</p></li><li class="listitem"><p>Specify the Channels for each platform by selecting one of the
+							following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>As Input</strong></span> - To preserve the
+									same number of audio channels as the original media file.</p></li><li class="listitem"><p><span class="bold"><strong>Mono</strong></span> - To mix all channels
+									into one mono channel.</p></li><li class="listitem"><p><span class="bold"><strong>Mono drop</strong></span> - To drop all
+									channels except the first one.</p></li><li class="listitem"><p><span class="bold"><strong>Stereo - </strong></span>To mix all channels
+									into the front left and front right. </p></li><li class="listitem"><p><span class="bold"><strong>Stereo drop</strong></span> - To drop all
+									channels except the ones defined as Left and Right.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem"><p>By default, the channel settings are linked across all
+										platforms. To specify a unique channel setting for a
+										particular platform, unlink the property first and then
+										define the setting.</p></li><li class="listitem"><p>If you don't want to increase the number of channels for mono files, disable the
+											<span class="bold"><strong>Allow channel upmix</strong></span>
+										option.</p></li></ol></div></td></tr></table></div></li><li class="listitem"><p>If you are converting a stereo source to mono or vice versa, you can
+							use the L-R Mix settings to specify the power level of the signal
+							assigned to the left and right channels. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>By default, the L-R Mix settings are unlinked across all platforms. To specify a common
+								L-R Mix setting for particular platforms, link the property first
+								and then define the setting.</p></td></tr></table></div></li><li class="listitem"><p>From the Sample Rate drop-down list, select the frequency with which the audio files are
+							sampled per second during conversion. Select from one of the following
+							options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>As Input</strong></span> - To convert the file using the same sample
+									rate as the original file. If the sample rate is not available
+									for a particular platform or audio format, then the closest
+									sample rate available is used.</p></li><li class="listitem"><p><span class="bold"><strong>Auto (Low/Medium/High)</strong></span> - To
+									convert the file using a sample rate selected by Wwise after
+									performing an FFT analysis of the file. The difference between
+									the low, medium, and high quality settings is the cutoff
+									threshold value that identifies the frequency used to determine
+									the best sample rate in which to convert your files. You can
+									tweak the quality level of each setting by defining their
+									threshold values in the Project Settings dialog. For more
+									information on the automatic sample rate detection performed by
+									Wwise, refer to <a class="xref" href="ch07s03s02.html#defining_sample_rate_automatic_detection_settings" title="Defining the sample rate automatic detection settings">Defining the sample rate automatic detection settings</a>.</p></li><li class="listitem"><p><span class="bold"><strong>300 to 48,000</strong></span> - To convert
+									the file using a specific sample rate. The sample rate range
+									varies for each platform up to a maximum of 48,000 Hz. </p></li></ul></div></li><li class="listitem"><p> If the <span class="bold"><strong>Sample Rate</strong></span> is set to either
+								<span class="bold"><strong>As Input</strong></span> or <span class="bold"><strong>Auto</strong></span>, then use the <span class="bold"><strong>Min Sample
+								Rate</strong></span> and <span class="bold"><strong>Max Sample Rate</strong></span>
+							entries to restrict the conversion sampling rate.</p></li><li class="listitem"><p>From the Format list, select the audio format for the
+							conversion.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Some audio formats have encoding parameters that can be modified. When any of these
+								formats is selected, an <span class="bold"><strong>Edit</strong></span> button
+								appears in the Adv. column. Select the <span class="bold"><strong>Edit</strong></span> button to modify the encoding parameters for
+								the selected audio format. For a complete description of the
+								encoding parameters for each audio format, click the <span class="bold"><strong>Help</strong></span> button in the corresponding dialog.
+								For information on best practices for selecting parameters for the
+								Vorbis audio format, refer to the Vorbis Encoder Parameters page in
+								the reference documentation.</p></td></tr></table></div></li><li class="listitem"><p>From the Sample rate conversion quality list, select the method that
+							will be used to convert the file's sample rate. You can select either of
+							the following options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Normal (Faster)</strong></span> - Produces a good quality conversion
+									that is three to six times faster than the High option.</p></li><li class="listitem"><p><span class="bold"><strong>High (Slower)</strong></span> - Produces the
+									best quality conversion. </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you expect your content to contain high frequencies and you are
+								converting to sample rates below 24 kHz, it is recommended that you
+								use the High option.</p></td></tr></table></div></li><li class="listitem"><p> If you want a marker to be created at the beginning of each converted
+							file, select <span class="bold"><strong>Yes</strong></span> from the Insert
+							Filename Marker list.</p><p>The marker will only contain the filename and not the file's path and
+							extension. Having the name visible can be useful when you want to bind
+							an action to a sound playing in the sound engine, for example, when
+							lip-syncing or sub-titling.</p></li><li class="listitem"><p> If you want to keep DC offset during the conversion process, clear the <span class="bold"><strong>Remove DC Offset</strong></span> check box.</p><p>By default this option is selected. In most cases, it is preferable to
+							remove any DC offset. There are cases, however, where the DC offset may
+							not need to be removed, including:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sounds that will be added to sample accurate
+									containers.</p></li><li class="listitem"><p>Sounds that are normalized to 0 dB.</p><p> For more information about how DC offsets affect audio
+									signals in Wwise, refer to <a class="xref" href="ch35s10s02.html" title="Removing DC offsets">Removing DC offsets</a>. </p></li></ul></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If you are generating motion directly from your audio sources, be aware that the
+								removal of the DC offset will alter the motion output.</p></td></tr></table></div></li><li class="listitem"><p> If you don't want dithering to be applied during the bit rate
+							conversion, clear the <span class="bold"><strong>Apply Dither</strong></span>
+							check box.</p><p>Dither is the noise added to a signal prior to quantization to reduce the distortion and
+							noise modulation that results from the quantization process. Dithering
+							is only applied when the resolution changes, for example, from 24 bits
+							to 16. </p></li><li class="listitem"><p>Close the Conversion Settings Editor.</p><p>The settings that you have specified are automatically saved and the
+							ShareSet can now be assigned to one or more objects in your project
+							hierarchy.</p></li><li class="listitem"><p> Repeat steps 1-14 to create as many Conversion Settings ShareSets as
+							needed for your project.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Before the Audio Sources table is populated, you must assign the
+								Conversion Settings ShareSet to an object and then convert the audio
+								files using these settings. For more information on assigning a
+								Conversion Settings ShareSet to an object, refer to <a class="xref" href="ch35s10s03.html" title="Assigning Conversion Settings ShareSets to Objects">Assigning Conversion Settings ShareSets to Objects</a>.</p></td></tr></table></div></li></ol></div><p>
+			</p></div></div><HR></body></html>

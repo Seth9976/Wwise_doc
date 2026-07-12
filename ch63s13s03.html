@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Profiler Statistics (Query - Dialogue Events Distribution)</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s13.html" title="Profiler Statistics"><link rel="prev" href="ch63s13s02.html" title="Profiler Statistics (Query - Dialogue Events Added)"><link rel="next" href="pt09.html" title="Audiokinetic plug-ins"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s13.html">Profiler Statistics</a></span> &gt; <span class="breadcrumb-node">Profiler Statistics (Query - Dialogue Events Distribution)</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="profiler_statistics_query_dialogue_events_distribution"></a>Profiler Statistics (Query - Dialogue Events Distribution)</h3></div></div></div><p>The 'Dialogue Events Distribution' query displays statistical information about the Dialogue Events that were triggered during the capture session. Specifically, it shows you how many times each Dialogue Event was resolved versus how many times it actually resulted in the playback of an audio structure. You can drill down even further for each Dialogue Event to find out which paths were resolved, and how many times they were resolved, both in terms of actual numbers and as a percentage of the total. Several filters also exist allowing you to sort through the information quickly to determine if any actions are necessary.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+                  <p><span class="bold"><strong>Filters</strong></span></p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Filter</p>
+                </td><td>
+                  <p>The types of filters you can use to filter the information found for the selected query. You can filter the information using any of the following filters:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Event Name</strong></span> - Displays information for a particular Dialogue Event.
+                      </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Added</strong></span> - Filters information based on the number of times a Dialogue Event was added to the dynamic sequence.
+                    </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Played</strong></span> - Filters the information based on the number of times a Dialogue Event resulted in the playback of an audio structure.
+                    </p></li></ul></div>
+                </td></tr><tr><td>
+                  <p>Parameters</p>
+                </td><td>
+                  <p>A series of properties that allow you to define the specific criteria for each filter.</p>
+                  <p>For fields that accept text strings, you can type a portion of the name; however, wildcard symbols are not supported.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Results</strong></span></p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Event Name</p>
+                </td><td>
+                  <p>The name of the Dialogue Event.</p>
+                </td></tr><tr><td>
+                  <p>Added</p>
+                </td><td>
+                  <p>The number of times the corresponding Dialogue Event was resolved and an audio structure was added to the dynamic sequence list.</p>
+                </td></tr><tr><td>
+                  <p>Played</p>
+                </td><td>
+                  <p>The number of times the Dialogue Event resulted in the playback of an audio structure.</p>
+                </td></tr><tr><td>
+                  <p>Selected Event</p>
+                </td><td>
+                  <p>The Event selected in the Results list for which you want further statistical information.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Filters</strong></span></p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Filter</p>
+                </td><td>
+                  <p>The types of filters you can use to filter the information about the selected Dialogue Event. You can filter the information using any of the following filters:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Value</strong></span> - Displays information related to a particular State Group or State.
+                      </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Count</strong></span> - Filters information based on the number of times the path was resolved.
+                      </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>%</strong></span> - Filters the information based on the actual percentage the path was resolved.
+                      </p></li></ul></div>
+                </td></tr><tr><td>
+                  <p>Parameters</p>
+                </td><td>
+                  <p>Specific properties that allow you to define the specific criteria for each filter.</p>
+                  <p>For fields that accept text strings, you can type a portion of the name; however, wildcard symbols are not supported.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Value Distribution</strong></span></p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Value</p>
+                </td><td>
+                  <p>The name of the State Group and/or states associated with the selected Dialogue Event that were posted during the current capture session.</p>
+                </td></tr><tr><td>
+                  <p>Count</p>
+                </td><td>
+                  <p>The number of times the corresponding state has been posted in the current capture session.</p>
+                </td></tr><tr><td>
+                  <p>%</p>
+                </td><td>
+                  <p>The number of times the corresponding state has been posted represented as a percentage of the total number of states posted during the current capture session.</p>
+                </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch40s07s03.html" title="Starting/stopping the capture process">Starting/stopping the capture process</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch40s07s08.html" title="Gathering statistical information from a capture session">Gathering statistical information from a capture session</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch40s07s10.html" title="Loading the data from a previous remote capture session">Loading the data from a previous remote capture session</a>
+            </p></li></ul></div></div><HR></body></html>

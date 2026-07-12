@@ -1,0 +1,35 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Focus</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s06.html" title="3D positioning illustrated"><link rel="prev" href="ch23s06s02.html" title="Effect of orientation"><link rel="next" href="ch23s06s04.html" title="Panning a plane source onto a plane channel configuration"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s06.html">3D positioning illustrated</a></span> &gt; <span class="breadcrumb-node">Focus</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="focus"></a>Focus</h3></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+       For context, reference the <a class="link" href="ch23s06s01.html" title="Effect of Spread">first example</a>.
+     </p></td></tr></table></div><p>The Focus parameter contracts together the virtual sources of each input channel, before applying rotation and spread. This is used to mitigate the leakage of input channels into output channels, when panning a discrete multichannel file. The following figure shows the case with 70% Spread that we have seen before. No Focus was used, and thus we can see, for example, that the Red input channel will end up leaking in the Center channel, the Front Right channel, and even the Front Left channel.</p><p>With 80% Focus, below, the input channels are contracted and we see that the Red input channel will contributing to the Center channel, to the Front Right channel, but less magnitude than before, and not to the Front Left channel. Nevertheless, it is important to realize that even with 100% Focus, input channels always contribute to at least 2 output channels unless they are perfectly aligned.</p><p>This issue does not apply with ambisonics panning, which, by design, already leaks across output channels, albeit uniformly. Therefore, Focus is ignored when the channel configuration of the source is ambisonics.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="40px" class="col1"><col width="40px" class="col2"><col class="col3"><col class="col4"></colgroup><thead><tr><th colspan="4">
+                <p>
+                  Effective Panning of an Emitter Located 45 Degrees from the Listener's Azimuth,<br>with Relative Orientation of 90 degrees and a 70% Spread
+                </p>
+              </th></tr><tr><th>
+                <p>Spread</p>
+              </th><th>
+                <p>Focus</p>
+              </th><th>
+                <p>Relative emitter position and orientation</p>
+              </th><th>
+                <p>
+                  Placement of Virtual Sources<br>and Output Bus Channel Energy
+                </p>
+              </th></tr></thead><tbody><tr><td>
+                <p>70% Spread</p>
+              </td><td>
+                <p>0% Focus</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient45_70.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="311"><tr><td><img src="Images/pan_orient45_70.png" width="311"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>70% Spread</p>
+              </td><td>
+                <p>80% Focus</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient45_70.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="296"><tr><td><img src="Images/pan_spread_70_focus_80.png" width="296"></td></tr></table></div>
+              </td></tr></tbody></table></div><p>
+        Proceed to the next 3D positioning example: <a class="xref" href="ch23s06s04.html" title="Panning a plane source onto a plane channel configuration">Panning a plane source onto a plane channel configuration</a>. 
+      </p></div><HR></body></html>

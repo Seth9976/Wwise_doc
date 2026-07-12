@@ -1,0 +1,89 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Generating SoundBanks</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59s09.html" title="SoundBank Manager"><link rel="prev" href="ch59s09s03.html" title="Import Completed"><link rel="next" href="ch59s09s05.html" title="Generating SoundBanks - Stopped"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch59s09.html">SoundBank Manager</a></span> &gt; <span class="breadcrumb-node">Generating SoundBanks</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="generating_soundbanks"></a>Generating SoundBanks</h3></div></div></div><p>
+        The Generating SoundBanks dialogs are fundamentally the same, but they have different tag names to indicate their current status. So, while processing, the dialog is tagged "In Progress"; when stopped, a "Stopped" tag is added; and when the process completes, the tag is "Completed". So, you may start with a <span class="bold"><strong>Generating SoundBanks - In Progress</strong></span> dialog and finish with a dialog entitled <span class="bold"><strong>Generating SoundBanks - Completed</strong></span>.
+      </p><p>
+        All variations of these dialogs have three panels of information, detailed in the table below, which display:
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>the progress of different operations run during the file conversion process;</p></li><li class="listitem"><p>the results of the different SoundBanks' generation; and</p></li><li class="listitem"><p>a log of the process, including messages and warnings if something goes or could potentially go wrong.</p></li></ul></div><p>
+      </p><p>During the process, the top panel has a primary progress bar that displays the overall
+      progress as well as a set of secondary progress bars for each file that is being converted.
+      The number of secondary progress bars depends on the number of processing cores on your
+      machine. Wwise uses each processing core to convert the files in your SoundBank, making the
+      generation process as fast as possible. The Log panel displays information about the
+      generation process including the status of the generation and any errors.</p><p>
+        You can stop the generation process at any point. When the generation is interrupted, Wwise automatically displays the <span class="bold"><strong>Generating SoundBanks - Stopped</strong></span> dialog, which is the same dialog except that a red-font "Stopped" replaces all the operations listed in the upper panel. You can still see the Results and review the Log for any issues that appeared before stopping the generation.
+      </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Operation</p>
+              </td><td>
+                <p>As the SoundBanks are being generated, this column displays the name of each task that is being performed. When the generation process is complete, the word &#8220;Completed&#8221; is displayed.</p>
+              </td></tr><tr><td>
+                <p>Progress</p>
+              </td><td>
+                <p>As the SoundBanks are being generated, this column contains a series of progress bars that display the progression of the SoundBank generation process.</p>
+                <p>A primary progress bar displays the overall progress of the SoundBank
+                generation. A series of secondary progress bars display the progress of each
+                operation being performed as part of the SoundBank generation. If your machine has a
+                multi-core processor, each core is used to convert the files in your SoundBank and
+                will have its own progress bar.</p>
+                <p>This column is empty when the generation is complete.</p>
+              </td></tr><tr><td>
+                <p>Details</p>
+              </td><td>
+                <p>As the SoundBanks are being generated, this column displays additional information about the particular task being performed.</p>
+                <p>This column is empty when the generation is complete.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Results</strong></span></p>
+              </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>SoundBanks</p>
+              </td><td>
+                <p>The name of the SoundBanks that have been generated.</p>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                  <span class="bold"><strong>Init</strong></span> is the default name of the <a class="glossterm" href="go01.html#glossary_initialization_bank"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_initialization_bank" title="Initialization Bank">Initialization Bank</a></em></a>, a
+                  special bank every project has that is listed along with all the generated
+                  SoundBanks. </p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Platforms</p>
+              </td><td>
+                <p>The platforms for which the SoundBanks were generated.</p>
+                
+              </td></tr><tr><td>
+                <p>Language/SFX</p>
+              </td><td>
+                <p>
+                The languages for which the SoundBanks were generated.  If a
+                SoundBank doesn't contain any Voice objects, this column displays &#8220;SFX&#8221;. </p>
+              </td></tr><tr><td>
+                <p>Created</p>
+              </td><td>
+                <p>Displays "Yes" or "No" to indicate whether or not the SoundBank was successfully generated. Displays "Up to Date" if the SoundBank was not generated because there were no changes since the last time it was generated.</p>
+              </td></tr><tr><td>
+                <p>Status</p>
+              </td><td>
+                <p>A message that describes the status of the SoundBank generation. Any irregularities with the generation, such as missing files or SoundBanks that exceed the maximum, are reported.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Log</strong></span>: See <a class="xref" href="ch59s03.html#soundbank_generation_log" title="SoundBank Generation Tab">SoundBank Generation Tab</a>.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_close.png"></div>
+              </td><td>
+                <p>Closes the SoundBanks Generation - Completed dialog.</p>
+              </td></tr></tbody></table></div></div><HR></body></html>

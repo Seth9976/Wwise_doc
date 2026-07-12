@@ -1,0 +1,143 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Metadata tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="next" href="ch61s01s05s02.html" title="RTPC tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">Metadata tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="metadata_tab"></a>Metadata tab</h4></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Metadata tab for busses is exactly the same as the Metadata tab for objects in the Containers hierarchy except that the <span class="bold"><strong>Override parent</strong></span> check box does not apply. </p></td></tr></table></div><p>The Metadata tab allows you to associate an unlimited number of Metadata plug-ins with an object. When you associate a Metadata
+					plug-in with an object, you must choose the Metadata plug-in type, and whether the Metadata plug-in is a ShareSet or a
+					custom instance. Clicking the Edit [&#8230;] button opens the Metadata Editor, allowing you to edit the properties of the
+					Metadata plug-in.</p><p>The Metadata tab is divided into two panels. The left panel is where you add or remove Metadata plug-ins, assign their name and
+					mode, or open them in the Metadata Editor. The right panel, like a miniature
+						version of the <a class="xref" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>,  allows you to edit properties across multiple
+					selected plug-ins.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+									<p>Metadata</p>
+								</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Override parent</p>
+								</td><td>
+									<p>Determines whether the Metadata plug-ins are inherited from the parent or defined at the current
+										level in the hierarchy. When this option is not selected, the Metadata options are not
+										available.</p>
+									<p>If the object is a bus or a top-level object, the Override parent option is not available.</p>
+									<p>Default value: false<br></p>
+								</td></tr><tr><td>Link Indicator</td><td>
+									<p>Use the <a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a> (to the left of
+										the <span class="bold"><strong>Metadata</strong></span> heading) to determine or to set platform-specific
+										customizations.</p>
+									<p>The entire list of Metadata plug-ins is linked or unlinked, not individual items in the
+										list.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Metadata</strong></span></p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Type</p>
+								</td><td>The type of Metadata plug-in.</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the Metadata instance. The Metadata instance can be a ShareSet or a custom instance of a ShareSet. All Metadata
+										instances for the selected Metadata type will appear in the corresponding list.</p>
+								</td></tr><tr><td>
+									<p>Mode</p>
+								</td><td>
+									<p>Determines whether the Metadata instance is shared. The mode can be either:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Define custom</strong></span>: To create a custom Metadata plug-in
+												instance whose properties will not be shared between objects.</p></li><li class="listitem"><p><span class="bold"><strong>Use ShareSets</strong></span>: To use a ShareSet of a Metadata plug-in, which means that Metadata
+												properties can be shared between objects.</p></li></ul></div>
+								</td></tr><tr><td>
+									<p>Edit</p>
+								</td><td>Opens the Metadata Editor where you can edit the properties of the selected Metadata instance in real time.</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_plus_arrow.png"></div>
+								</td><td>The <span class="bold"><strong>Add</strong></span> button allows you to add Metadata plug-ins to the list. The list of Metadata
+									plug-ins and corresponding instances that can be selected are presented in a list.</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_delete_icon.png"></div>
+								</td><td>The <span class="bold"><strong>Delete</strong></span> button removes the selected Metadata plug-in(s) from the list.</td></tr><tr><td>
+									<p>(Name Field)</p>
+								</td><td>
+									<p>An editable text field which displays the name of the selected Metadata plug-in(s). If more than one plug-in is selected,
+										this field is blank.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+								</td><td>
+									<p>The References button displays the number of references in the project to the currently selected
+										Metadata plug-in.</p>
+									<p>Click the button to open the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>
+										loaded with all the project objects/elements that directly reference the selected Metadata
+										plug-in.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The button is dimmed and displays "0" when selecting multiple Metadata plug-ins.</p><p>The display maximum is 999.In the uncommon circumstance
+												of 1,000 or more references, the number will not increase but all the objects/elements will
+												show up in the Reference view.</p></td></tr></table></div>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="left">
+									<p>Name</p>
+								</td><td>
+									<p>The names of the properties of the currently selected Metadata plug-in(s). </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>ShareSets have the Color and Inclusion properties, while custom instances do not.</p></td></tr></table></div>
+								</td></tr><tr><td align="left">
+									<p>Value</p>
+								</td><td>
+									<p>The values of the properties of the currently selected Metadata plug-in(s). Modifications made in this panel are applied to
+										all plug-ins selected in the left panel that have the modified property.</p>
+									<p>When more than one selected plug-in has the same property but with different values, a dash appears in the Value column (as
+										shown in the following figure). In this case, you can still edit the property and your changes will
+										be applied, as usual, to all selected plug-ins that have the modified property.</p>
+									<div class="mediaobject"><img src="Images/metadata_dash.png"></div>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr></tbody></table></div></div><HR></body></html>

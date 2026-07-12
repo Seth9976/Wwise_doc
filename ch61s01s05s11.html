@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>HDR category: Containers hierarchy objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s10.html" title="Positioning category: Containers hierarchy objects"><link rel="next" href="ch61s01s05s12.html" title="Advanced category: sound and motion objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">HDR category: Containers hierarchy objects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="hdr_tab_actor_mixer_objects"></a>HDR category: Containers hierarchy objects</h4></div></div></div><p>You can adjust the properties in the HDR category for an object to further define
+					the behavior of the sound in the HDR system.</p><p>The HDR system performs an offline analysis on all sounds and extracts their
+					envelope. This information is used to drive the HDR dynamics, along with bus and
+					sound HDR settings.</p><p> Refer to <a class="xref" href="ch35s08.html" title="Understanding HDR">Understanding HDR</a> for more details. </p><div class="informaltable"><a name="wwiseobject_sound_hdr"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>H DR</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Envelope Tracking</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the HDR envelope tracking will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the envelope tracking controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Enable Envelope</p>
+	</td><td>
+		<p>When enabled, the HDR window follows the analyzed envelope of the loudest sound (if it is above threshold). It is also used to determine if the sound is within its active range (see the Active Range property below).</p>
+		<p>When it is disabled, the envelope of the sound is not considered for computing the window top.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch35s09s02.html" title="Working with amplitude envelopes">Working with Amplitude Envelopes</a>
+			 for more details.
+		</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>HDR Envelope Sensitivity</p>
+	</td><td>
+		<p>Defines the Envelope Sensitivity used in the algorithm to reduce the number of points in the Envelope.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>One point is always kept along the points at the two extremities.</p></li><li class="listitem"><p>At 0, no other points are kept.</p></li><li class="listitem"><p>At 100, all points are kept.</p></li></ul></div>
+		<p>The Sensitivity is used until the Envelope is edited by hand.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch35s09s02.html#envelope_sensitivity_and_manual_editing" title="Envelope sensitivity and manual editing">Envelope Sensitivity and Manual Editing</a>
+			 for more details.
+		</p>
+		<p>Default value: 20</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Active Range</p>
+	</td><td>
+		<p>Defines for each voice the range in decibels, from the sound&#8217;s peak, for which the HDR dynamics are active. The active range defines the region of interest in a sound, based on its analyzed envelope: it is &#8220;active&#8221; as long as the current envelope level is above &#8220;peak level&#8221; minus &#8220;active level&#8221;. When it is not active, the HDR dynamics do not consider the content of the sound. If the active range is 0, the sound has no influence on the position of the HDR window.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch35s09s02.html#region_of_interest_active_range" title="Region of interest: active range">Region of Interest: Active Range</a>
+			 for more details.
+		</p>
+		<p>Default value: 12</p>
+		<p>Range: 0 to 96</p>
+		<p>Units: dB </p>
+	</td></tr></tbody></table></div></div><HR></body></html>

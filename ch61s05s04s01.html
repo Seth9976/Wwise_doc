@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Modulator LFO</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s05s04.html" title="Modulator Editor"><link rel="prev" href="ch61s05s04.html" title="Modulator Editor"><link rel="next" href="ch61s05s04s02.html" title="Modulator Envelope"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05.html">ShareSets Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s05s04.html">Modulator Editor</a></span> &gt; <span class="breadcrumb-node">Modulator LFO</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="modulator_lfo"></a>Modulator LFO</h4></div></div></div><p>The table below lists the properties of the Low-Frequency Oscillator (LFO) modulator. For more information on working with LFO modulators, refer to <a class="xref" href="ch19s04.html" title="Working with LFOs">Working with LFOs</a>.</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+			  <p>Name</p>
+			</td><td>
+			  <p>The name of the modulator ShareSet.</p>
+			</td></tr><tr><td>
+			  <p>Shared by</p>
+			</td><td>
+			  <p>A list of objects that currently subscribe to the selected ShareSet.</p>
+			</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+			  <p>Notes</p>
+			</td><td>
+			  <p>Additional information about the ShareSet or the modulator settings that have been applied.</p>
+			</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>Depth</p>
+	</td><td>
+		<p>The amplitude variation of the oscillator. Maximum amplitude is 1.0.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Frequency</p>
+	</td><td>
+		<p>The number of cycles per second.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>Waveform</p>
+	</td><td>
+		<p>The shape of the modulator, from among the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Sine</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Triangle</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Square</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Saw up</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Saw down</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Random</strong></span>: Selecting Random will randomly apply a level each time the modulator runs.</p></li></ul></div>
+		<p>Default value: Sine</p>
+	</td></tr><tr><td>
+		<p>Smoothing</p>
+	</td><td>
+		<p>Low-pass filter over the waveform to smooth hard edges.</p>
+		<p>This parameter can reduce output gain depending on your configuration. For a square waveform with an LFO of 1 Hz, gain reduction can be observed with a smoothing value as low as 30%. The higher the LFO frequency, the lower the smoothing value for which gain reduction is observed (for example, 2 Hz = 25%, 4 Hz = 20%, 8 Hz = 10%). For triangular or sawtooth waveforms, gain reduction can be observed with a smoothing value as low as 10%.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>PWM</p>
+	</td><td>
+		<p>The width of the pulse wave; only applies to the Square waveform.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Attack</p>
+	</td><td>
+		<p>The time it takes for the oscillator to reach full amplitude.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100000</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Initial Phase Offset</p>
+	</td><td>
+		<p>The initial phase of the oscillator waveform.</p>
+		<p>Default value: 0</p>
+		<p>Range: -180 to 180</p>
+		<p>Units: ° </p>
+	</td></tr><tr><td>
+		<p>Scope</p>
+	</td><td>
+		<p>Define how LFO instances are created:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Voice</strong></span>: An instance of LFO is created for every sound/object playback.</p></li><li class="listitem"><p><span class="bold"><strong>Note/Event</strong></span>: An instance of LFO is created for every playing instance, or note when used in MIDI context.</p></li><li class="listitem"><p><span class="bold"><strong>Game Object</strong></span>: An instance of LFO is created for each game object.</p></li><li class="listitem"><p><span class="bold"><strong>Global</strong></span>: A single LFO is created for the whole project.</p></li></ul></div>
+		<p>Default value: Note or Event</p>
+	</td></tr></tbody></table></div><p>
+  </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+      The RTPC cursors for LFO and Envelope modulators do not tell you their specific values at any point in time since they are determined by the modulator's internal properties.
+    </p></td></tr></table></div><p>
+</p><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch61s05s04.html" title="Modulator Editor">Modulator Editor</a></p></li></ul></div></div><HR></body></html>

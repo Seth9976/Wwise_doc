@@ -1,0 +1,101 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Integrity Report</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59.html" title="Views"><link rel="next" href="ch59s02.html" title="Details"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Integrity Report</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="projects_integrity_report"></a>Integrity Report</h2></div></div></div><p>The Wwise Integrity Report is where you can generate a report that contains information about your project, including errors and how to resolve them. The Integrity Report lists errors such as:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Missing media files</p></li><li class="listitem"><p>
+              Missing audio or motion sources
+            </p></li><li class="listitem"><p>Plug-in problems</p></li><li class="listitem"><p>Missing Events in SoundBanks</p></li></ul></div><p>
+          By double-clicking an error in the Error list, you can open a corresponding Wwise dialog where you can resolve the error, or receive further information about how to handle it. For a complete list of project errors with corresponding suggestions, refer to <a class="xref" href="ch07s05.html#integrity_report_issues" title="Integrity report issues">Integrity report issues</a>.
+        </p><p>You can also filter the Integrity Report to display only the types of information that you specify, such as details about the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Platforms</p></li><li class="listitem"><p>Languages</p></li><li class="listitem"><p>Audio files and sources</p></li><li class="listitem"><p>Hierarchies</p></li><li class="listitem"><p>References</p></li><li class="listitem"><p>Optimizations</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Platforms </p>
+                </td><td>
+                  <p>Specifies whether errors associated with the selected platform will be displayed in the Integrity Report or not.</p>
+                </td></tr><tr><td>
+                  <p>Languages </p>
+                </td><td>
+                  <p>Enables the language list where you can select errors related to individual languages to be displayed in the Integrity Report.</p>
+                </td></tr><tr><td>
+                  <p>(Language List) </p>
+                </td><td>
+                  <p>Specifies that the errors related to one or more selected languages will be displayed in the Integrity Report.</p>
+                </td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Reports</strong></span></p>
+                </td></tr><tr><td>
+                  <p>Audio Files and Sources</p>
+                </td><td>
+                  <p>Specifies that only errors related to media files and sources will be displayed in the Integrity Report.</p>
+                </td></tr><tr><td>
+                  <p>Hierarchies</p>
+                </td><td>
+                  <p>Specifies that only errors related to the Busses and Containers hierarchies will be displayed in the Integrity Report.</p>
+                </td></tr><tr><td>
+                  <p>Broken References</p>
+                </td><td>
+                  <p>Specifies that only errors related to invalid references will be displayed in the Integrity Report.</p>
+                </td></tr><tr><td>
+                  <p>Optimizations</p>
+                </td><td>
+                  <p>Specifies that only errors related to optimizations will be displayed in the Integrity Report.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_generate.png"></div>
+                </td><td>
+                  <p>Generates the Integrity Report based on the options you have specified.</p>
+                  <p>
+                    Click the <span class="bold"><strong>Stop</strong></span> button to stop the generation process.
+                  </p>
+                </td></tr><tr><td>
+                  <p>Platform</p>
+                </td><td>
+                  <p>The platform in which the error occurs.</p>
+                </td></tr><tr><td>
+                  <p>Type</p>
+                </td><td>
+                  <p>The type of source associated with the error.</p>
+                  <p>SFX </p>
+                  <p>Language </p>
+                </td></tr><tr><td>
+                  <p>Object Name</p>
+                </td><td>
+                  <p>The name of the Wwise object associated with the error.</p>
+                </td></tr><tr><td>
+                  <p>Status</p>
+                </td><td>
+                  <p>Information about the error.</p>
+                </td></tr><tr><td>
+                  <p>Comments/Suggestions</p>
+                </td><td>
+                  <p>Information about how to resolve the error.</p>
+                </td></tr><tr><td>
+                  <p>Hierarchy</p>
+                </td><td>
+                  <p>The path or location in the hierarchy for the object associated with the error.</p>
+                </td></tr><tr><td>
+                  <p>Project Name</p>
+                </td><td>
+                  <p>The name of the current project.</p>
+                </td></tr><tr><td>
+                  <p>Date Generated</p>
+                </td><td>
+                  <p>The date and time that the report is generated.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_save_report_dots.png"></div>
+                </td><td>
+                  <p>Opens the Save As dialog where you can browse to the location where you want to save the integrity report as a tab delimited TXT file.</p>
+                </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch07s05.html#generating_an_integrity_report" title="Generating an integrity report">Generating an integrity report</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch07s05.html#saving_an_integrity_report" title="Saving an integrity report">Saving an integrity report</a>
+            </p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,30 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Nuendo Connection Settings</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch58.html" title="Project"><link rel="prev" href="ch58.html" title="Project"><link rel="next" href="ch59.html" title="Views"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch58.html">Project</a></span> &gt; <span class="breadcrumb-node">Nuendo Connection Settings</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="game_audio_connect_settings"></a>Nuendo Connection Settings</h2></div></div></div><p>The <span class="bold"><strong>Nuendo Connection Settings</strong></span> dialog allows you to configure the link between Wwise and the Nuendo® digital audio workstation software by Steinberg®. To enable this feature, however, some configuration in Nuendo is also necessary. See the Nuendo manual for details.
+	</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Access to the <span class="bold"><strong>Nuendo Connection Settings</strong></span> dialog is only
+				possible if you installed the Nuendo Game Audio Connect plug-in. See  <a class="link" href="https://www.audiokinetic.com/en/library/edge/?source=InstallGuide&amp;id=modyfing_wwise#adding_platform_components_to_your_current_installation" target="_blank">Adding Platform Components to Your Current Installation</a> in the
+				Audiokinetic Launcher documentation for details on how to add plug-ins to your Wwise
+				installation via the Audiokinetic Launcher.</p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>A Nuendo connection enables distinct interactions:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          Dragging the export region to the Game Audio Connect window in Nuendo: Sends the file directly to Wwise via the <a class="xref" href="ch11s02s01.html" title="Audio File Importer">Audio File Importer</a>. This works across machines on the network.
+			</p></li><li class="listitem"><p>
+          Exporting the audio mixdown in Nuendo: Notifies Wwise of an audio import and can work across machines if the export directory is a shared path, available to both machines, and configured in the Wwise <span class="bold"><strong>Nuendo Connection Settings</strong></span>.
+			</p></li><li class="listitem"><p>
+          Using the <span class="bold"><strong>Edit in Nuendo</strong></span> Wwise object shortcut menu option: Nuendo will find the source project and highlight the exported region.
+			</p></li><li class="listitem"><p>
+				<span class="bold"><strong>Create in Nuendo</strong></span> is a shortcut option only available for Music Segment objects. Selecting it will prompt the Steinberg Hub where you can create a new project in Nuendo. A prompt in Nuendo will ask you <span class="bold"><strong>Do you want to import the transferred Segment into this Project</strong></span>. Click <span class="bold"><strong>Yes</strong></span> to add your Music Segment to the Project Zone.
+			</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+						<p>Server Address</p>
+					</td><td>
+						<p>The network address of the machine running Nuendo, which can either be an IP address (such as '127.0.0.1') or a hostname (such as 'localhost'). Leaving this field blank applies the default value of '127.0.0.1'.</p>
+					</td></tr><tr><td>
+						<p>Port</p>
+					</td><td>
+						<p>The network port used for the Nuendo connection, which should match the value chosen in the 'Local Game Audio Connect TCP Port' field of the Game Audio Connect settings in Nuendo. Leaving this field blank uses a default value of '4444'.</p>
+					</td></tr><tr><td>
+						<p>Exported asset share path</p>
+					</td><td>
+						<p>The file system path used for exchanging assets with Nuendo via the network, which must be set for Wwise to be able to locate assets exported from Nuendo when running on a separate machine.</p>
+					</td></tr></tbody></table></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For more info on using Wwise with Nuendo, consult the Nuendo documentation on <a class="link" href="https://steinberg.help/nuendo/v8/en/cubase_nuendo/topics/game_audio_connect/game_audio_connect_exporting_audio_assets_to_a_game_audio_engine_c.html" target="_blank">
+				Exporting Audio Assets to a Game Audio Engine</a> and <a class="link" href="https://steinberg.help/nuendo/v8/en/cubase_nuendo/topics/game_audio_connect/game_audio_connect_c.html" target="_blank">Game Audio Connect</a>.</p></td></tr></table></div></div><HR></body></html>

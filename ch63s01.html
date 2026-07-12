@@ -1,0 +1,134 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Capture Log</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63.html" title="Profiler Views"><link rel="next" href="ch63s01s01.html" title="Capture Log Options"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Capture Log</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="game_profiler_capture_log"></a>Capture Log</h2></div></div></div><p>The Capture Log captures and records all information coming from the sound engine. This can include specific activities, such as Events triggered by the game or triggered manually in the Soundcaster or Game Simulator while prototyping. Each piece of information captured is recorded as a separate entry in the Capture Log. You can double-click an entry in the Capture Log to load the related Wwise object or Event in the Property Editor or Event Editor. You can also press Ctrl+\ on an entry to move the time cursor in the Performance Monitor and synchronize all other views to the same time.</p><p>You can filter the list using a number of different filter criteria, such as game object type, Wwise object name, or a specific type of activity performed by the sound engine. You can also save the list as a PROF file to reload it in Wwise later. Alternatively, choose a text file format and then import it into Microsoft Excel for sorting and further analysis.</p><p>You can also load data from a previous Profiler capture session by dragging and dropping a PROF file to the Capture Log view.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_display_options_dots.png"></div>
+            </td><td>
+              <p>Opens the Capture Log Options view where you can define the criteria by which the Capture Log output will be filtered.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_save_icon.png"></div>
+            </td><td>
+              <p>Saves the Capture Log contents either as a PROF file or as a tab delimited text file. The text file will include any filtering or sorting that has been applied to the list.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td rowspan="2" align="center">
+              <p>
+                <span class="inlinemediaobject"><img src="Images/GP_Green_Indicators.png" width="13"></span>
+                <span class="inlinemediaobject"><img src="Images/GP_Orange_Indicators.png" width="13"></span>
+              </p>
+              <p>(Indicators)</p>
+              <p>
+                <span class="inlinemediaobject"><img src="Images/GP_Blue_Indicator.png" width="13"></span>
+                <span class="inlinemediaobject"><img src="Images/GP_White_Indicator.png" width="13"></span>
+              </p>
+            </td><td>
+              <p>The varying shades of dots, whose colors are set by the theme wherein Classic is turquoise and Dark is orange, indicate which items in the Capture Log were captured within 100 ms of the Performance Monitor time cursor position. The brighter the indicator, the closer the entry is to the time cursor's position. You can force the cursor to the timestamp of a specific log entry by selecting 
+                <span class="bold"><strong>Move Cursor to Timestamp</strong></span>
+                from the shortcut menu (Ctrl+\). Alternatively, just double-click the timestamp.</p>
+            </td></tr><tr><td>
+              <p>The connected dots, whose colors are set by the theme wherein Classic is dark gray and Dark is white, indicate which items in the Capture Log are related to each other. They only appear when you select a single entry in the log. </p>
+            </td></tr><tr><td>
+              <p>Timestamp</p>
+            </td><td>
+              <p>The game time at which the item was captured. The timestamp helps to identify what has happened at a precise time during your simulation in Wwise or in game.</p>
+              <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Press Ctrl+\ or double-click a timestamp to set the Game Profiler cursor to
+                  the time of the entry. </p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Type</p>
+            </td><td>
+              <p>The type of item logged in the Capture Log. See the Capture Log Options page for a short list and explanation of the 
+                <a class="link" href="ch63s01s01.html#capture_log_types">different Types</a>
+                available.</p>
+            </td></tr><tr><td>
+              <p>Description</p>
+            </td><td>
+              <p>Descriptive information about the logged item. The description can also include information about changes to property values, changes to States, and so on.</p>
+            </td></tr><tr><td>
+              <p>Wwise Object Name</p>
+            </td><td>
+              <p>The name of the Wwise object that is related to the logged item, if any.</p>
+              <p>If multiple Wwise objects are associated with the logged item, "Multiple Objects" will be displayed. If no Wwise objects are associated with the logged item, "No Element" will be displayed.</p>
+            </td></tr><tr><td>
+              <p>Wwise Object ID</p>
+            </td><td>
+              <p>The ID of the Wwise object that is related to the logged item, if any.</p>
+              <p>If multiple Wwise objects are associated with the logged item, "Multiple Objects" will be displayed. If no Wwise objects are associated with the logged item, "No Element" will be displayed.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When using the search field in the Capture Log, IDs only match if they are complete and exact.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Game Object Name</p>
+            </td><td>
+              <p>The name of the game object that is associated with the logged item.</p>
+              <p>"Transport/Soundcaster" can relate to entries triggered by Wwise objects that are not associated with a particular game object.</p>
+            </td></tr><tr><td>
+              <p>Game Object ID</p>
+            </td><td>
+              <p>The ID of the game object that is associated with the logged item.</p>
+              <p>"Transport/Soundcaster" can relate to entries triggered by Wwise objects that are not associated with a particular game object.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When using the search field in the Capture Log, IDs only match if they are complete and exact.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Scope</p>
+            </td><td>
+              <p>The extent to which the logged item applies to objects within the game. The scope can be one of two types:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                    <span class="bold"><strong>Global</strong></span>, which means that the logged item applies to all game objects.</p></li><li class="listitem"><p>
+                    <span class="bold"><strong>Game object</strong></span>, which means that the logged item only applies to the game object specified in the Game Object column.</p></li></ul></div>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s02.html" title="Specifying the type of information that will be captured">Specifying the type of information that will be captured</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s03.html" title="Starting/stopping the capture process">Starting/stopping the capture process</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s06.html" title="Filtering the Capture Log">Filtering the Capture Log</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s07.html" title="Using the Capture Log shortcut menu">Using the Capture Log shortcut menu</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s08.html" title="Gathering statistical information from a capture session">Gathering statistical information from a capture session</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s09.html" title="Saving the Capture Log">Saving the Capture Log</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s10.html" title="Loading the data from a previous remote capture session">Loading the data from a previous remote capture session</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch63s01s01.html" title="Capture Log Options">Capture Log Options</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch63s01s02.html" title="Errors Reported in the Capture Log">Errors Reported in the Capture Log</a>
+        </p></li></ul></div></div><HR></body></html>

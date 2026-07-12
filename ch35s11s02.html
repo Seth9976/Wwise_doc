@@ -1,0 +1,95 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Monitoring the signal level</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35s11.html" title="Creating the final mix"><link rel="prev" href="ch35s11s01.html" title="Understanding the bus icons and processing status"><link rel="next" href="ch35s11s03.html" title="Getting to know the Busses Console"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-link"><a href="ch35s11.html">Creating the final mix</a></span> &gt; <span class="breadcrumb-node">Monitoring the signal level</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="monitoring_signal_level"></a>Monitoring the signal level</h3></div></div></div><p>Within Wwise, the signal can be measured in different ways. One example is loudness level. </p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="loudness_overview"></a>Loudness overview</h4></div></div></div><p>The ITU-R BS.1770 and EBU R128 standards provide recommendations and specifications for measuring the loudness level and loudness range of a given audio program in loudness units (LU or LUFS). It also provides specifications and recommendations for the True Peak level.  Wwise implements these specifications and recommendations in the Loudness Meter view and Meter view.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="measurements"></a>Measurements</h4></div></div></div><p>Wwise offers different measurements of the PCM signal:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Measurement</p>
+								</th><th>
+									<p>Description</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Loudness level</p>
+								</td><td>
+									<p>Provides a measurement of the perceptual loudness of a digital signal. The loudness level can be calculated using different time window sizes.</p>
+									<p>The Loudness level is available in the <span class="strong"><strong>Loudness Meter</strong></span> view.</p>
+									<p>Units: LUFS or LU</p>
+								</td></tr><tr><td>
+									<p>Loudness range</p>
+								</td><td>
+									<p>Provides a statistical analysis of the loudness values over a period of time and a measure of the dynamic range.</p>
+									<p>The Loudness range is available in the <span class="strong"><strong>Loudness Meter</strong></span> view.</p>
+									<p>Units: LU</p>
+								</td></tr><tr><td>
+									<p>True-Peak level</p>
+								</td><td>
+									<p>Provides an estimate of the maximum continuous signal level in the analogue world. This value is useful to ensure that the digital to analogue converter or an external codec is not saturated.</p>
+									<p>The True Peak level is available in the <span class="strong"><strong>Meter</strong></span> View.</p>
+									<p>Units: dBTP</p>
+								</td></tr><tr><td>
+									<p>Peak level</p>
+								</td><td>
+									<p>Provides a measurement of the maximum or minimum values of a PCM signal for a very short period of time.</p>
+									<p>The peak level is shown at the following locations in Wwise:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Wwise Toolbar</p></li><li class="listitem"><p>Busses Console</p></li><li class="listitem"><p>Mixing Desk</p></li><li class="listitem"><p>Meter view</p></li></ul></div>
+									<p>Units: dBFS</p>
+								</td></tr><tr><td>
+									<p>Root mean square (RMS)</p>
+								</td><td>
+									<p>The RMS level is measured with the peak meter values and does an average over a very short period of time.</p>
+									<p>The RMS level is available in the <span class="strong"><strong>Meter</strong></span> View.</p>
+									<p>Units: dBFS</p>
+								</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="loudness_units"></a>Loudness units</h4></div></div></div><p>The EBU R128 and ITU-R BS.1770 define units for measuring loudness.  Loudness is not measured in dBFS.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Unit</p>
+								</th><th>
+									<p>Description</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Loudness Unit (LU)</p>
+								</td><td>
+									<p>0 LU is equal to the reference level (by default -23 LUFS).</p>
+									<p>Note: The default value of 23 LUFS can be changed in the <span class="strong"><strong>Loudness Meter</strong></span> settings.</p>
+								</td></tr><tr><td>
+									<p>Loudness Unit Full Scale (LUFS)</p>
+								</td><td>
+									<p>0 LUFS/LKFS is equal to 0 dBFs @ 1 kHz according to ITU-R BS.1770-4 and EBU R128</p>
+								</td></tr><tr><td>
+									<p>LKFS</p>
+								</td><td>
+									<p>LKFS is the same as LUFS.</p>
+									<p>ITU-R BS.1770-4 are using the terms LKFS.</p>
+									<p>EBU R128 and using LUFS.</p>
+								</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="loudness_measurement_scopes"></a>Loudness measurement scopes</h4></div></div></div><p>Loudness can be measured using three different time scopes.  In the integrated mode, the loudness level of a game can be determined at a larger scope.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Term</p>
+								</th><th>
+									<p>Description</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Momentary</p>
+								</td><td>
+									<p>Loudness level calculated using a sliding rectangular time window of length 0.4 seconds. The measurement is not gated.</p>
+								</td></tr><tr><td>
+									<p>Short-term</p>
+								</td><td>
+									<p>Loudness level calculated using a sliding rectangular time window of length 3 seconds. The measurement is not gated.</p>
+								</td></tr><tr><td>
+									<p>Integrated</p>
+								</td><td>
+									<p>Loudness level calculated using the user capture. The integrated loudness uses gating (all values below -70 LUFS are ignored) and is a long term measurement (an integration over the entire measurement time) based on the momentary loudness. The measurement starts when clicking the <span class="strong"><strong>Measure</strong></span> button, and stops when clicking it again. Clicking the <span class="strong"><strong>Reset</strong></span> button restarts the measurement.</p>
+								</td></tr></tbody></table></div><p>EBU R128 recommends a target level of -23 LUFS for integrated loudness.  Selecting -23 LUFS specifically for a game as the target loudness level helps game users obtain a more consistent output level on the output device (television, mobile device etc.) they are using, with other sources.  Selecting a specific loudness target level for the whole game also ensures consistent loudness over the different levels or parts of the game.  A deviation of ±1.0 LU is acceptable for parts where an exact normalization to the target level of -23.0 LUFS is not practically achievable, due to the dynamic content of games.  The loudness levels of a game part are often unpredictable. When a part consists of only background elements (for example, the background music), or where parts are deliberately mixed lower, the loudness level may lie outside the tolerance.</p><p>The Sony Worldwide Studios Audio Standards Working Group (ASWG) recommends in ASWG-R001 the following elements:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Average Loudness Level of audio content within a title developed for home-based platforms should be normalized to a Target Level of -23 LUFS, with a tolerance of ±2 LU, and this tolerance is acceptable considering the non-linear nature of interactive entertainment audio content;</p></li><li class="listitem"><p>The Average Loudness Level of audio content within a title developed for portable platforms should be normalized to a Target Level of -18 LUFS, with a tolerance of ±2 LU;</p></li><li class="listitem"><p>Audio content should be measured as a whole, and should not focus on dialogue, sound effects or music specifically;</p></li><li class="listitem"><p>Audio content should be measured for as long as is practical and for a minimum of 30 minutes, and the measured sections of any title should be a representative cross section of all different parts of any title, in terms of game play;</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="more_on_loudness_range_lra"></a>More on loudness range (LRA)</h4></div></div></div><p>The recommended maximum LRA is dependent on the genre, the targeted audience, or the environment where the game is intended to be played. The maximum LRA value may also be different for distribution platforms such as the mobile game. Here are a few examples of loudness ranges depending on the listening environment:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+									<p>Environment</p>
+								</th><th>
+									<p>LRA</p>
+								</th></tr></thead><tbody><tr><td>
+									<p>Home Theater</p>
+								</td><td>
+									<p>20</p>
+								</td></tr><tr><td>
+									<p>Living Room</p>
+								</td><td>
+									<p>18</p>
+								</td></tr><tr><td>
+									<p>Kitchen</p>
+								</td><td>
+									<p>15</p>
+								</td></tr><tr><td>
+									<p>Living Room (Late night)</p>
+								</td><td>
+									<p>9</p>
+								</td></tr><tr><td>
+									<p>Public Transportation (mobile)</p>
+								</td><td>
+									<p>6</p>
+								</td></tr></tbody></table></div><p>As a general rule:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>A noisy environment requires a lower LRA so that the listener can hear all content correctly</p></li><li class="listitem"><p>Louder loudspeakers allow a greater LRA</p></li></ul></div><p>Loudness Range is a measure that also helps to decide if dynamic compression is necessary.</p><p>EBU suggests that with the measure of Loudness Range, it is possible to determine appropriate measures for potential dynamic compression of a program to fit within the tolerance window of the audience or distribution platform. In practice, overall low-level compression may lead to satisfactory results and ensure uniform compression of the whole signal range:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>a low threshold (&lt; -40 dBFS)</p></li><li class="listitem"><p>a moderate compression ratio (1:1.2 &#8211; 1:1.5)</p></li><li class="listitem"><p>a long release-time (&gt;1 s)</p></li></ul></div><p>Again, EBU suggests that depending on the original loudness level, a shift to the target level of -23 LUFS may be performed in parallel through adjusting the make-up gain of the compressor accordingly.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="more_on_true_peak"></a>More on True Peak</h4></div></div></div><p>The True Peak measurement detects analog clipping. Even when the peak lies in between samples, so that the distortion that can happen in subsequent Digital-to-Analogue converters, sample rate converters, or commonly used codecs can be predicted and avoided.</p><p>The Maximum Permitted True Peak Level recommended in EBU R 128 is -1 dBTP.</p><div class="orderedlist"><p class="title"><b>To monitor the true peak on the Main Audio Bus:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open one of four Meter views, using the menu: <span class="strong"><strong>Views &gt; Meter &gt; Meter - Instance A...D</strong></span>.</p></li><li class="listitem"><p>Click [&#8230;] and select the <span class="strong"><strong>Main Audio Bus</strong></span>.</p></li><li class="listitem"><p>From the list, select <span class="strong"><strong>True Peak</strong></span> to monitor the True Peak.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="measuring_loudness_in_wwise"></a>Measuring the loudness in Wwise</h4></div></div></div><div class="orderedlist"><p class="title"><b>To monitor the integrated loudness on the Main Audio Bus:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open one of four Loudness Meter views, using menu: <span class="strong"><strong>Views &gt; Loudness Meter &gt; Loudness Meter - Instance A...D.</strong></span></p></li><li class="listitem"><p>Click [&#8230;] and select the <span class="strong"><strong>Main Audio Bus.</strong></span></p></li><li class="listitem"><p>Click <span class="strong"><strong>Measure</strong></span> to start calculating the Integrated loudness.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To capture the momentary or short-term loudness level</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the<span class="strong"><strong> Loudness Meter</strong></span> view.</p></li><li class="listitem"><p>In the title bar of the view, select a loudness meter instance from the meter instance selection icon (a letter from A to D).</p></li><li class="listitem"><p>Select a bus to measure the loudness by clicking the selector [...].</p></li><li class="listitem"><p>On the Wwise Toolbar, click <span class="strong"><strong>Capture</strong></span>.</p></li></ol></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch59s05.html" title="Loudness Meter">Loudness Meter</a></p></li><li class="listitem"><p><a class="xref" href="ch59s07.html" title="Meter">Meter</a></p></li></ul></div></div></div><HR></body></html>

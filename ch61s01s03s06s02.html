@@ -1,0 +1,106 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Sources category: Sound SFX and Sound Voice</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03s06.html" title="Common tabs and categories: Containers hierarchy objects"><link rel="prev" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor"><link rel="next" href="ch61s01s03s07.html" title="Contents Editor: Property Container"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03s06.html">Common tabs and categories: Containers hierarchy objects</a></span> &gt; <span class="breadcrumb-node">Sources category: Sound SFX and Sound Voice</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="sources_properties"></a>Sources category: Sound SFX and Sound Voice</h5></div></div></div><p>See <a class="xref" href="ch22s01s01.html" title="Editing audio sources with the Source Editor">Editing audio sources with the Source Editor</a> for details on modifying the Sources properties.</p><div class="informaltable"><a name="wwiseobject_audiofilesource_audiofilesource"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Audio File Source</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Specific</strong></span>
+        </td></tr><tr><td>
+		<p>Channel Configuration Override</p>
+	</td><td>
+		<p>A list of possible channel configurations for the source, which can be selected for display in the graph view.</p>
+		<p>The audio waveform always has a Wwise display ordering. For 5.1, this corresponds to L + R + C + SL + SR + LFE, from top to bottom on the left side of the graph view. For 1st order ambisonics, this corresponds to W + Y + Z + X.</p>
+		<p>Wwise interprets the selected channel configurations and outputs them to the graph view, according to the display order. The source channel configuration can be interpreted according to any of the following file ordering schemes:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>SMPTE</strong></span>: By default, Wwise interprets the file order as SMPTE (the Microsoft standard), unless it has an ambisonics header. For 5.1, it appears as 5.1(L,R,C,LFE,SL,SR). However, the default is indicated in the list by displaying Detect [channelconfig], where &#8220;channelconfig&#8221; indicates the detected configuration. For 5.1, it appears as Detect [5.1(L,R,C,LFE,SL,SR)].</p></li><li class="listitem"><p><span class="bold"><strong>FuMa</strong></span>: By default, Wwise interprets the channel ordering for Ambisonics Component Ordering and 1st, 2nd and 3rd order ambisonics, as FuMa. For 1st order ambisonics, it appears as 4(Ambisonics) (FuMa). However, the default is indicated in the list by displaying Detect [channelconfig], where &#8220;channelconfig&#8221; indicates the detected configuration. For 1st order ambisonics, it appears as Detect [4(Ambisonics)(FuMa)]. FuMa is not defined for higher-order ambisonics, which are only interpreted as AmbiX (ACN ordering with SN3D normalization).</p></li><li class="listitem"><p><span class="bold"><strong>Anonymous</strong></span>: The anonymous Channel Config options simply number the channels in order of appearance in the graph view. An 1st order ambisonics file appears as 4 (Anonymous); and is simply displayed as 1 + 2 + 3 + 4 in the graph view. Likewise, a 5.1 file is listed as 6 (Anonymous); and is simply displayed as 1 + 2 + 3 + 4 + 5 + 6 in the graph view.</p></li><li class="listitem"><p><span class="bold"><strong>Film</strong></span>: Apart from ambisonics files, the alternative file orderings in the list are Film. For 5.1, it appears as 5.1(L,C,R,SL,SR,LFE).</p></li><li class="listitem"><p><span class="bold"><strong>AmbiX</strong></span>: For ambisonics, the alternative file orderings in the list are AmbiX (ACN ordering with SN3D normalization). For 1st order ambisonics, it appears as 4(Ambisonics)(AmbiX).</p></li></ul></div>
+		<p>Default value: 0</p>
+	</td></tr><tr><td>
+		<p>Make-Up Gain</p>
+	</td><td>
+		<p>The amount by which the volume level of the original audio file is increased or decreased.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to +24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Trim Start</p>
+	</td><td>
+		<p>Defines the trim begin position. Any content to the left of the Trim begin will be excluded during conversion and playback.</p>
+		<p>Default value: -0.001</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Trim End</p>
+	</td><td>
+		<p>Defines the trim end position. Any content to the right of the Trim end will be excluded during conversion and playback.</p>
+		<p>Default value: -0.001</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Override file loop points</p>
+	</td><td>
+		<p>Defines which loop points are being used:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Checked</strong></span>: The loop points from the project are used.</p></li><li class="listitem"><p><span class="bold"><strong>Unchecked</strong></span>: The loop points from the WAV file are used.</p></li></ul></div>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Loop Start</p>
+	</td><td>
+		<p>Defines the loop start.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The loop points are only used when the parent sound has looping enabled.</p></td></tr></table></div>
+		<p>Default value: -0.001</p>
+	</td></tr><tr><td>
+		<p>Loop End</p>
+	</td><td>
+		<p>Defines the loop end.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The loop points are only used when the parent sound has looping enabled.</p></td></tr></table></div>
+		<p>Default value: -0.001</p>
+	</td></tr><tr><td>
+		<p>Crossfade duration</p>
+	</td><td>
+		<p>Defines the region around the loop points for which a crossfade is applied at each loop. This enables smoother loops and can be used to remove clicks and pop that can occur for certain loop points.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 60000</p>
+		<p>Units: ms </p>
+	</td></tr><tr><td>
+		<p>Crossfade Shape</p>
+	</td><td>
+		<p>The shape of the cross-fade curve. The list options are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Logarithmic (Base 3)</p></li><li class="listitem"><p>Sine</p></li><li class="listitem"><p>Logarithmic (Base 1.41)</p></li><li class="listitem"><p>Inverted S-Curve</p></li><li class="listitem"><p>Linear</p></li><li class="listitem"><p>S-Curve</p></li><li class="listitem"><p>Exponential (Base 1.41)</p></li><li class="listitem"><p>Reciprocal Sine</p></li><li class="listitem"><p>Exponential (Base 3)</p></li></ul></div>
+		<p>Default value: Sine</p>
+	</td></tr><tr><td>
+		<p>Marker Input Mode</p>
+	</td><td>
+		<p>Determines how markers are managed. You can select one of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Import From File</strong></span> to use markers that are saved in the original audio file.</p></li><li class="listitem"><p><span class="bold"><strong>Detect From Transients</strong></span> to automatically detect transients (onsets) in the audio file and add markers where they are detected. When this option is selected, the detection sensitivity slider is shown. The detection sensitivity controls the sensitivity of the onset detection algorithm.</p></li><li class="listitem"><p><span class="bold"><strong>Manual Markers</strong></span> to manually place markers.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> When a marker is moved or removed, or a new marker is added, the mode is automatically changed to manual.</p></td></tr></table></div>
+		<p>Default value: Import From File</p>
+	</td></tr><tr><td>
+		<p>Marker Detection Sensitivity</p>
+	</td><td>
+		<p>The sensitivity of the transient detection algorithm. Higher sensitivity values will produce more transient markers.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Fade-in Duration</p>
+	</td><td>
+		<p>The length of the fade-in curve.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 3600</p>
+		<p>Units: ms </p>
+	</td></tr><tr><td>
+		<p>Fade-in Curve</p>
+	</td><td>
+		<p>The shape of the fade-in curve. The list options are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Logarithmic (Base 3)</p></li><li class="listitem"><p>Sine</p></li><li class="listitem"><p>Logarithmic (Base 1.41)</p></li><li class="listitem"><p>Inverted S-Curve</p></li><li class="listitem"><p>Linear</p></li><li class="listitem"><p>S-Curve</p></li><li class="listitem"><p>Exponential (Base 1.41)</p></li><li class="listitem"><p>Reciprocal Sine</p></li><li class="listitem"><p>Exponential (Base 3)</p></li></ul></div>
+		<p>Default value: Sine</p>
+	</td></tr><tr><td>
+		<p>Fade-out Duration</p>
+	</td><td>
+		<p>The length of the fade-out curve.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 3600</p>
+		<p>Units: ms </p>
+	</td></tr><tr><td>
+		<p>Fade-out Curve</p>
+	</td><td>
+		<p>The shape of the fade-out curve. The list options are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Logarithmic (Base 3)</p></li><li class="listitem"><p>Sine</p></li><li class="listitem"><p>Logarithmic (Base 1.41)</p></li><li class="listitem"><p>Inverted S-Curve</p></li><li class="listitem"><p>Linear</p></li><li class="listitem"><p>S-Curve</p></li><li class="listitem"><p>Exponential (Base 1.41)</p></li><li class="listitem"><p>Reciprocal Sine</p></li><li class="listitem"><p>Exponential (Base 3)</p></li></ul></div>
+		<p>Default value: Reciprocal Sine</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

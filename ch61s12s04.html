@@ -1,0 +1,92 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Schematic View</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s12.html" title="Searches and Project-wide Editing"><link rel="prev" href="ch61s12s03.html" title="Multi Editor"><link rel="next" href="ch61s12s04s01.html" title="Schematic View Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s12.html">Searches and Project-wide Editing</a></span> &gt; <span class="breadcrumb-node">Schematic View</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="schematic_view_schematic_view"></a>Schematic View</h3></div></div></div><p>The Schematic view displays the hierarchy of the bus, motion, music, and sound objects in your project as a graphical representation. By default, the Schematic view displays the hierarchy and the different routing connections for your entire project, but you can use the Search field to filter the view and display the hierarchy for one object.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>In contrast to the <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a>, which does not display non-mixing busses,
+			the Schematic view displays all busses, regardless of their processing status. Refer to
+				<a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more information on the
+			various processing statuses.</p></td></tr></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>By default in Wwise, you can switch to the Schematic layout by pressing <span class="bold"><strong>F9</strong></span>.</p></td></tr></table></div><p>The following list shows the different types of connectors between nodes.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+						<p>Connector Type</p>
+					</th><th>
+						<p>Description</p>
+					</th></tr></thead><tbody><tr><td align="center">
+						<div class="mediaobject"><img src="Images/schematic_connector_hierarchy.png"></div>
+					</td><td><p>Defines a hierarchical relation between two nodes. The node to the left is the parent of the node to the right (child).</p></td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/schematic_connector_bus.png"></div>
+					</td><td><p>Defines a routing relation between two nodes. The node to the left is an Audio Bus and the node to the right is an audio structure.</p></td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/schematic_connector_override_bus.png"></div>
+					</td><td><p>Defines a routing relation between two nodes where the node to the right overrides the parent's routing. The node to the left is a bus. The node to the right is an audio structure.</p></td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/schematic_connector_aux_bus.png"></div>
+					</td><td><p>Defines an auxiliary send routing relation between two nodes where the node to the right (audio structure) sends its audio to the Auxiliary Bus on the left.</p></td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/schematic_plus.png" width="13"></td></tr></table></div>
+					</td><td>
+						<p>Click to expand the schema and show all children of the object.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="12"><tr style="height: 13px"><td><img src="Images/schematic_plus_yellow.png" width="12"></td></tr></table></div>
+					</td><td>
+						<p>Click to show all children of the object, when not all children are
+							currently displayed.</p>
+						<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Children will be hidden if  <span class="bold"><strong>Show in
+									Schematic View</strong></span> has been selected for other objects,
+								or if the children do not match the current search criteria. </p></td></tr></table></div>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/schematic_minus.png" width="13"></td></tr></table></div>
+					</td><td>
+						<p>Click to collapse all children of the object.</p>
+					</td></tr></tbody></table></div><p>The following list shows the different interface elements in the Schematic View.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+						<p>Search</p>
+					</td><td>
+						<p>Filters the objects that appear in the Schematic view.</p>
+						<p>Type an object name or part of an object name in this text box to display the hierarchy for that object only.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_reset.png"></div>
+					</td><td>
+						<p>Clears the contents of the Search field.</p>
+						<p>When the Search field is cleared, the entire project hierarchy is displayed again in the Schematic view.</p>
+					</td></tr><tr><td>
+						<p>Schematic view</p>
+					</td><td>
+						<p>A graphical representation of your complete project hierarchy.</p>
+					</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>(Icon strip)</strong></span></p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_bus.png" width="17"></td></tr></table></div>
+						<p>(Bus)</p>
+					</td><td>
+						<p>Displays the bus through which the object is routed.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_aux_bus.png" width="17"></td></tr></table></div>
+						<p>(Bus)</p>
+					</td><td>
+						<p>Displays the list of user defined auxiliary sends for this object.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/schematic_icons_conversion.png" width="15"></td></tr></table></div>
+						<p>(Effect)</p>
+					</td><td>
+						<p>Displays the name of the Conversion Settings ShareSet that is being used by the object.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_fx.png" width="17"></td></tr></table></div>
+						<p>(Effect)</p>
+					</td><td>
+						<p>Displays any effects that have been applied to the object.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_position.png" width="17"></td></tr></table></div>
+						<p>(Positioning Type)</p>
+					</td><td>
+						<p>Displays the type of positioning (No Positioning, 3D Emitter, 3D Emitter with Automation, 3D Listener with Automation) applied to the object.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_game_param.png" width="17"></td></tr></table></div>
+						<p>(Game Parameters)</p>
+					</td><td>
+						<p>Displays the Game Parameters affecting the object (through RTPCs).</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_state.png" width="17"></td></tr></table></div>
+						<p>(State Group)</p>
+					</td><td>
+						<p>Displays the State Group to which the object belongs.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="17"><tr style="height: 17px"><td><img src="Images/schematic_icons_advanced.png" width="17"></td></tr></table></div>
+						<p>(Advanced Settings)</p>
+					</td><td>
+						<p>Displays any changes made to the advanced settings of an object (such as playback limit or volume threshold).</p>
+					</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch49.html" title="Getting to know the Schematic View"><i>Getting to know the Schematic View</i></a></p></li></ul></div></div><HR></body></html>

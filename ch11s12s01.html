@@ -1,0 +1,120 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Work Units Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s12.html" title="File Manager"><link rel="prev" href="ch11s12.html" title="File Manager"><link rel="next" href="ch11s12s02.html" title="Source Files Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s12.html">File Manager</a></span> &gt; <span class="breadcrumb-node">Work Units Tab</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="work_units_tab"></a>Work Units Tab</h3></div></div></div><p>The Work Units tab of the File Manager displays information about each of your Work
+        Units, including information about the status and owner of the files, as well as which files
+        are read-only.</p><p>You can also perform some project management tasks, such as file renaming and deletion.
+        If, however, you are using a source control plug-in, an additional set of commands, such as
+        check-in and check-out, are available by right-clicking the Wwise project file or a Work
+        Unit in the list. The specific commands that will be displayed depend on which source
+        control system you are using with Wwise.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>The Default Work Units are critical project files and should not be renamed or
+          deleted.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>Perforce:</p>
+                <div class="mediaobject"><img src="Images/btn_submit_changes_arrows.png"></div>
+                <p>Subversion (deprecated):</p>
+                <div class="mediaobject"><img src="Images/btn_commit_arrows.png"></div>
+              </td><td>
+                <p>Sends pending files to the server for processing. You can select any of the
+                  following options:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Work Units</strong></span>: Sends only the pending Work Units
+                      to the server for processing. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Sources</strong></span>: Sends only the pending source files
+                      to the server for processing. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>All</strong></span>: Sends both the pending Work Units and
+                      source files to the server for processing. </p></li></ul></div>
+                <p>This button is only available when you are using a source control
+                  plug-in.</p>
+              </td></tr><tr><td>
+                <p>Perforce:</p>
+                <div class="mediaobject"><img src="Images/btn_get_latest_version_arrows.png"></div>
+                <p>Subversion (deprecated):</p>
+                <div class="mediaobject"><img src="Images/btn_update_arrows.png"></div>
+              </td><td>
+                <p>Updates the working copy of your files by retrieving the latest version of the
+                  files from the depot. You can select any of the following options:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Work Units</strong></span>: Updates only the Work Unit files
+                      by retrieving the latest version of the files from the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Sources</strong></span>: Updates only the source files by
+                      retrieving the latest version of the files from the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>All</strong></span>: Updates both the Work Units and source
+                      files by retrieving the latest version of the files from the depot. </p></li></ul></div>
+                <p>This button is only available when you are using a source control
+                  plug-in.</p>
+              </td></tr><tr><td>
+                <p>Project Folder</p>
+              </td><td>
+                <p>The location or path of the folder in which the current project is
+                  saved.</p>
+              </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>File</p>
+              </td><td>
+                <p>The name of the current file or folder. The file can be a Wwise project file,
+                  a Work Unit file, or a folder.</p>
+              </td></tr><tr><td>
+                <p>Status</p>
+              </td><td>
+                <p>The source control status of the file, for example, edit or add. The status of
+                  the file comes from your source control software via the Wwise source control
+                  plug-in.</p>
+                <p>For example, if you are using the Perforce plug-in, your files can have any
+                  one of the following statuses:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Add</strong></span>: The file is in the changelist and ready
+                      to be checked in to the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Branch</strong></span>: A copy of an existing depot file has
+                      been added to the changelist and is ready to be checked in to the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Delete</strong></span>: The file is in the changelist and is
+                      ready to be deleted from the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Edit</strong></span>: A working copy of the depot file is
+                      checked out to your workspace for editing. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Local only</strong></span>: A file has been created locally
+                      and has not yet been checked in to the depot. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Lock</strong></span>: The depot file is locked so that no
+                      other user can check out the file for editing. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Normal</strong></span>: The file is checked in to the depot. </p></li></ul></div>
+                <p>If the status of the file is unknown, a hyphen (-) is displayed.</p>
+              </td></tr><tr><td>
+                <p>Owner(s)</p>
+              </td><td>
+                <p>The owner of the file.</p>
+                <p>If the owner of the file is unknown, a hyphen (-) is displayed.</p>
+              </td></tr><tr><td>
+                <p>Modified</p>
+              </td><td>
+                <p>Displays whether the file has been modified.</p>
+              </td></tr><tr><td>
+                <p>Read-Only</p>
+              </td><td>
+                <p>Displays whether the file is read-only.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_copy_to_clipboard.png"></div>
+              </td><td>
+                <p>Copies the contents of the dialog to the Windows clipboard so that you can
+                  paste the information into a new file.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_close.png"></div>
+              </td><td>
+                <p>Closes the File Manager.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch10s02.html" title="Viewing the status of your project files">Viewing the status of your project files</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch07s03s01.html#configuring_source_control_plug_ins" title="Configuring source control plug-ins">Configuring source control plug-ins</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch10s05.html" title="Managing project files with a source control plug-in">Managing project files with a source control plug-in</a>
+          </p></li></ul></div></div><HR></body></html>

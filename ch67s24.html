@@ -1,0 +1,148 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Stereo Delay</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s23.html" title="Sidechain Send"><link rel="next" href="ch67s25.html" title="Time Stretch"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Stereo Delay</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_stereo_delay_plug_in"></a>Stereo Delay</h2></div></div></div><p>The Stereo Delay plug-in can be used to create a variety of delay effects that can feedback to other channels in the Left-Right plane. It can be used to created expansive stereo effects (larger than life objects) or creative effects where the signal can bounce side to side (such as a ping-pong delay).</p><p>The Stereo Delay plug-in is built into Wwise. For information on applying it to objects, see
+      <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_stereo_delay_properties"></a>Stereo Delay properties</h3></div></div></div><p>The Stereo Delay plug-in contains a series of properties, many of which can be edited in real-time and can be mapped to specific Game Parameters using RTPCs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2"><p>
+              <span class="bold"><strong>Left/Right Delay Parameters</strong></span>
+            </p></td></tr><tr><td>
+		<p>Input</p>
+	</td><td>
+		<p>This parameter determines which channel(s) will be used to feed the corresponding (left or right) delay line.</p>
+		<p>Values:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Left/Right</strong></span>: The left or right channels will be used, respectively (default).</p></li><li class="listitem"><p><span class="bold"><strong>Center</strong></span>: The center channel (if present) will be used to feed the delay line.</p></li><li class="listitem"><p><span class="bold"><strong>Left/Right</strong></span> + Center: Left/Right signals will be downmixed with the center channel to feed the delay line.</p></li><li class="listitem"><p><span class="bold"><strong>None</strong></span>: The delay line input is silence.</p></li></ul></div>
+		<p>Default value: Right</p>
+	</td></tr><tr><td>
+		<p>Enable Feedback</p>
+	</td><td>
+		<p>This parameter determines whether the output of the delay line is fed back to the input of the same delay length.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Feedback</p>
+	</td><td>
+		<p>Gain applied to the feedback path before its re-injection into the same delay line input.</p>
+		<div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p> Using high feedback gains can build up very high signal levels depending on the input signal content. This could be uncomfortably loud and might damage equipment.</p></td></tr></table></div>
+		<p>Default value: -12</p>
+		<p>Range: -48 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Enable Crossfeed</p>
+	</td><td>
+		<p>This parameter determines whether the output of the delay line is fed back to the input of the delay length of the other channel&#8217;s delay line. Left delay output can thus feed the right delay input and vice versa. This setting allows to create ping-pong type stereo-delays.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Crossfeed</p>
+	</td><td>
+		<p>Gain applied to the feedback path before its re-injection into the other channel delay line input.</p>
+		<div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p> Using high crossfeed gains can build up very high signal levels depending on the input signal content. This could be uncomfortably loud and might damage equipment.</p></td></tr></table></div>
+		<p>Default value: -12</p>
+		<p>Range: -48 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2"><p>
+              <span class="bold"><strong>Filter Parameters</strong></span>
+            </p></td></tr><tr><td>
+		<p>Filter Type</p>
+	</td><td>
+		<p>Determines the type of filtering that can be applied to the wet signal. The following filters are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>None</strong></span> to disable the filter.</p></li><li class="listitem"><p><span class="bold"><strong>Low Pass</strong></span> to provide a fixed sloped attenuation of high frequencies from a specified frequency. Below this point the signal is almost unaffected but higher frequencies are progressively more attenuated past the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>High Pass</strong></span> to provide a fixed slope attenuation of low frequencies from a specified frequency. Above this point the signal is almost unaffected while lower frequencies are progressively more attenuated below the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>Band Pass</strong></span> to reject all frequencies around the specified center frequency. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Notch</strong></span> to provide a fixed attenuation of a specified frequency range with a varying width. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Low Shelf</strong></span> to provide gain/attenuation for a specified range of low frequencies. This curve type is also known as Bass Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>High Shelf</strong></span> to provide gain /attenuation for a specified range of high frequencies. This curve type is also known as Treble Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>Peaking</strong></span> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Filter Gain</p>
+	</td><td>
+		<p>The amount of the amplification of the wet signal for the selected frequency band. Increasing this value &#8220;boosts&#8221; the audio signal. Decreasing this value &#8220;cuts&#8221; or attenuates the audio signal.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Gain controls are not available when the Low Pass, High Pass, Notch, and Band Pass curves have been selected because these filter types have their passband normalized at 0 dB.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Filter Frequency</p>
+	</td><td>
+		<p>The portion of the frequency spectrum that will be affected by the gain.</p>
+		<p>Default value: 1000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>Filter Q Factor</p>
+	</td><td>
+		<p>The area around the center frequency that will be affected by the change in gain. A low Q value means that the bandwidth range will be wide, and conversely a high Q value means that the bandwidth range will be narrow.</p>
+		<p>This control is not available when the Low Pass, High Pass, Low Shelf, and High Shelf curves have been selected.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.1 to 20</p>
+	</td></tr><tr><td colspan="2"><p>
+              <span class="bold"><strong>Output Levels</strong></span>
+            </p></td></tr><tr><td>
+		<p>Dry Level</p>
+	</td><td>
+		<p>Gain applied to unprocessed signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Wet Level</p>
+	</td><td>
+		<p>Gain applied to the delayed signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Front/Rear Balance</p>
+	</td><td>
+		<p>Front/rear extent of the stereo effect. For example a value of -100 will only have wet signal in the front channels. A value of 0 will have wet signal in both front and rear speakers. A value of 100 will have wet signal only in the rear channels.</p>
+		<p>Default value: -100</p>
+		<p>Range: -100 to 100</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

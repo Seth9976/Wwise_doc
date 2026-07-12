@@ -1,0 +1,173 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Profiler Settings dialog</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40s07.html" title="Capturing data from the sound engine"><link rel="prev" href="ch40s07.html" title="Capturing data from the sound engine"><link rel="next" href="ch40s07s02.html" title="Specifying the type of information that will be captured"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-link"><a href="ch40s07.html">Capturing data from the sound engine</a></span> &gt; <span class="breadcrumb-node">Profiler Settings dialog</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="profiler_settings"></a>Profiler Settings dialog</h3></div></div></div><p>Use the Profiler Settings dialog to specify which types of information will be captured by
+				the Game Profiler during the capture process. If you select too many types of
+				information, Wwise's performance might be affected. By selecting fewer types,
+				you:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Save network transfer bandwidth.</p></li><li class="listitem"><p>Save memory space in Wwise.</p></li><li class="listitem"><p>Save CPU time in game by not calculating the data.</p></li><li class="listitem"><p>Save CPU time in Wwise by not processing or drawing the data.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When you deselect a data type in the Profiler Settings dialog, usually a corresponding tab
+					is removed from the Advanced Profiler. In the case of Spatial Audio information,
+					however, there is no tab. Instead, this data type corresponds to information
+					sent to the  <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>CPU Data</p>
+							</td><td>
+								<p>When selected, information related to CPU usage is captured by the Game Profiler. This
+									includes CPU usage attributed to the various plug-ins.</p>
+							</td></tr><tr><td>
+								<p>Memory Data</p>
+							</td><td>
+								<p>When selected, information related to the memory categories registered in the sound
+									engine's Memory Manager is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Stream Data</p>
+							</td><td>
+								<p>When selected, information related to each of the streams managed by the sound engine
+									is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Voices Data</p>
+							</td><td>
+								<p>When selected, information related to each of the voices managed by the sound engine
+									is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Listener Data</p>
+							</td><td>
+								<p>When selected, information related to each of the listeners managed by the sound
+									engine is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Obstruction/Occlusion Data</p>
+							</td><td>
+								<p>When selected, information affecting game objects and related to obstruction,
+									occlusion, diffraction, transmission loss, and emitter spread is
+									captured by the Game Profiler. This option must be enabled to
+									visualize spread cones in the <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>.</p>
+							</td></tr><tr><td>
+								<p>Markers Notification Data</p>
+							</td><td>
+								<p>When selected, information related to audio file markers and Music Segment custom cues
+									is captured by the Game Profiler. </p>
+							</td></tr><tr><td>
+								<p>SoundBanks</p>
+							</td><td>
+								<p>When selected, information related to the SoundBanks that have been loaded into memory
+									is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Loaded Media</p>
+							</td><td>
+								<p>When selected,  information related to the media loaded into memory is captured by the
+									Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Prepared Events and Busses</p>
+							</td><td>
+								<p>When selected, prepared object information is captured, and the Prepared Events and
+									Busses tab in the Advanced Profiler is displayed.</p>
+							</td></tr><tr><td>
+								<p>Prepared Game Syncs</p>
+							</td><td>
+								<p>When selected, information related to game syncs prepared using the
+										<code class="code">PrepareGameSyncs</code> function is captured by the
+									Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Interactive Music</p>
+							</td><td>
+								<p>When selected, information related to interactive music is captured by the Game
+									Profiler, that is, Music Playlist Container callbacks and
+									transitions between music objects. </p>
+							</td></tr><tr><td>
+								<p>Streaming Device Data</p>
+							</td><td>
+								<p>When selected, captures the information from all streaming devices, and usage of the
+									Streaming tab in the Advanced Profiler.</p>
+							</td></tr><tr><td>
+								<p>Meter</p>
+							</td><td>
+								<p>When selected, captures the usage of signal metering data to drive meters on busses
+									and meter views, as well as output peak and output DC
+									offset.</p>
+							</td></tr><tr><td>
+								<p>Auxiliary Sends Data</p>
+							</td><td>
+								<p>When selected, information related to each of the Auxiliary Sends managed by the sound
+									engine is captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>API Calls</p>
+							</td><td>
+								<p>When selected, calls to the Wwise API are captured by the Game Profiler.</p>
+							</td></tr><tr><td>
+								<p>Game Syncs</p>
+							</td><td>
+								<p>When selected, information related to Game Syncs is captured by the Game Profiler to
+									be displayed in the Game Sync Monitor.</p>
+							</td></tr><tr><td>
+								<p>Spatial Audio</p>
+							</td><td>
+								<p>When selected, data related to spatial audio is captured by the Game Profiler. This
+									includes emitters, listeners, geometry, rooms and their
+									associated portals.</p>
+							</td></tr><tr><td>
+								<p>Spatial Audio Ray Casting</p>
+							</td><td>
+								<p>When selected, data related to the spatial audio ray casting engine is captured by the
+									Game Profiler. This includes reflection rays, diffraction rays,
+									and edge receptors.</p>
+							</td></tr><tr><td>
+								<p>Voice Inspector Data</p>
+							</td><td>When selected, data related to the Voice Inspector and Game Sync
+								Monitor views is captured by the Game Profiler.</td></tr><tr><td>
+								<p>Audio Object Data</p>
+							</td><td>When selected, data related to Audio Objects is captured by the Game
+								Profiler.</td></tr><tr><td>
+								<p>Audio Output</p>
+							</td><td>When selected, records the game audio (mono) and displays it in the
+								Performance Monitor.</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Capture Log</strong></span></p>
+							</td></tr><tr><td>
+								<p>Maximum File Size (MB)</p>
+							</td><td>
+								<p>Specifies the maximum file size that can be written by the
+									Capture Log.</p>
+								<p>Min Value: 10 MB<br> Max Value: 32,000 MB<br> Default
+									Value: 2,000 MB</p>
+							</td></tr><tr><td>
+								<p>Number of sessions kept</p>
+							</td><td>
+								<p>Specifies the maximum number of capture sessions that are kept
+									as saved PROF files. Wwise erases the oldest capture session
+									when the limit is surpassed.</p>
+							</td></tr><tr><td>
+								<p>Enable CPU Timeline</p>
+							</td><td>
+								<p>When enabled, the CPU Timeline is displayed in the CPU tab of the Advanced Profiler.
+									The CPU Timeline provides detailed CPU timing information,
+									including information across multiple threads, in order to allow
+									for in-depth analysis of CPU activity in Wwise. Note that it is
+									intended to be used by advanced users, and alongside other tools
+									for in-depth CPU profiling across the entire process to provide
+									additional information on why certain scopes are taking time to
+									execute, or why work is not being scheduled on time.</p>
+							</td></tr><tr><td>
+								<p>Reduce thread heights dynamically</p>
+							</td><td>
+								<p>When enabled, this option reduces the height of the threads in
+									the CPU timeline to match the CPU timing scopes that are
+									currently in view, as opposed to the height of the CPU timing
+									scopes across the entire profile session. It can be helpful to
+									enable this option if your title has Wwise perform operations
+									across many threads, which can make it difficult to see a full
+									tick of activity all together.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+							</td><td>
+								<p>Applies the changes you made to the Game Profiler settings.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+							</td><td>
+								<p>Closes the Profiler Settings dialog without applying any of
+									the changes you made to the settings of the Game
+									Profiler.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch40s07s02.html" title="Specifying the type of information that will be captured">Specifying the type of information that will be captured</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+					</p></li></ul></div></div><HR></body></html>

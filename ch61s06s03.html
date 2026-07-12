@@ -1,0 +1,133 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Control Surface Bindings View and Control Surface Sessions</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s06.html" title="Sessions Tab"><link rel="prev" href="ch61s06s02s01.html" title="Mixing Desk Settings"><link rel="next" href="ch61s07.html" title="Queries Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s06.html">Sessions Tab</a></span> &gt; <span class="breadcrumb-node">Control Surface Bindings View and Control Surface Sessions</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="control_surface_bindings_view"></a>Control Surface Bindings View and Control Surface Sessions</h3></div></div></div><p>In the Control Surface Bindings view, you can define how Control Surface devices
+    behave in Wwise. You can use Control Surface devices to control Wwise functions or project
+    properties. Refer to <a class="xref" href="ch57.html" title="Using control surfaces"><i>Using control surfaces</i></a> for more information.</p><p>The Control Surface Bindings view shows the currently active Control Surface
+    Session.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+                    <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+                  </td><td>
+                    <p>A list of Control Surface Sessions that currently exist within the project.</p>
+                    <p>The name of the selected Control Surface Session is displayed in the corresponding field.</p>
+                    <p>Selecting a Control Surface Session loads its Bindings in Wwise.</p>
+                  </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/activate_control_surface.png"></div>
+          </td><td>
+            <p>Activates or deactivates a Control Surface Session and opens or closes the Control
+              Surface Toolbar.</p>
+          </td></tr><tr><td colspan="2">
+                    <p>
+                      <span class="bold"><strong>Groups</strong></span>
+                    </p>
+                  </td></tr><tr><td>
+                    <p>Global</p>
+                  </td><td>
+                    <p>The Global group defines the Bindings that are associated with specific objects.</p>
+                    <p>The targeted object is specified directly in the Binding.</p>
+                    <p>For more information, refer to:</p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                          <a class="xref" href="ch57s05.html#creating_binding_for_keyboard_shortcut" title="Creating bindings for keyboard shortcuts">Creating bindings for keyboard shortcuts</a>
+                        </p></li><li class="listitem"><p>
+                          <a class="xref" href="ch57s05.html#creating_binding_to_modify_specific_object_property_value" title="Creating a binding to modify a specific object property value">Creating a binding to modify a specific object property value</a>
+                        </p></li></ul></div>
+                  </td></tr><tr><td>
+                    <p>Current Selection</p>
+                  </td><td>
+                    <p>The Current Selection group defines the Bindings that are associated with the current selection.</p>
+                    <p>The targeted object of Bindings in this group is the current selected object in Wwise.</p>
+                    <p>
+                      For more information, refer to <a class="xref" href="ch57s05.html#creating_binding_to_modify_current_selection" title="Creating a binding to modify the current selection">Creating a binding to modify the current selection</a>.
+                    </p>
+                  </td></tr><tr><td>
+                    <p>View Groups</p>
+                  </td><td>
+                    <p>The View Groups root defines the list of View Groups that can be loaded in views to dynamically associate objects of a view with Bindings.</p>
+                    <p>The target object, of a View Group Binding, is defined by the view in which the binding group is loaded. An index is specified for each object loaded in the view.</p>
+                    <p>You can create View Groups by clicking the <span class="bold"><strong>Add
+                Group</strong></span> button.</p>
+                    <p>For more information about View Groups, refer to <a class="xref" href="ch57s06.html" title="Understanding Control Surface View Groups">Understanding Control Surface View Groups</a>. </p>
+                  </td></tr><tr><td colspan="2">
+                    <p>
+                      <span class="bold"><strong>Columns</strong></span>
+                    </p>
+                  </td></tr><tr><td>
+                    <p>Group/Binding</p>
+                  </td><td>
+                    <p>Displays the name of the Binding or Group.</p>
+                    <p>You can rename Bindings by using the shortcut menu on the Binding.</p>
+                  </td></tr><tr><td>
+                    <p>Learn</p>
+                  </td><td>
+                    <p>Activates/deactivates learning mode for the Binding.</p>
+                    <p>When activated, the Binding remains in learning mode until either learning mode is deactivated, or a valid property/command and hardware control are associated.</p>
+                  </td></tr><tr><td>
+                    <p>[&gt;&gt;]<br>(selector) </p>
+                  </td><td>
+                    <p>Opens a menu from which you can select a command or property for the
+              Binding.</p>
+                  </td></tr><tr><td>
+                    <p>Property/Command name</p>
+                  </td><td>
+                    <p>Defines the behavior for the Binding.</p>
+                    <p>Click the [&gt;&gt;] selector to select the property or command.</p>
+                    <p>For more information, refer to <a class="xref" href="ch57s05.html" title="Creating control surface bindings">Creating control surface bindings</a>.</p>
+                  </td></tr><tr><td>
+                    <p>Object/Index</p>
+                  </td><td>
+                    <p>Defines the target object for the Binding's property or command.</p>
+                    <p>Click the [&#8230;] button to browse for an object, for Bindings in the Global group.</p>
+                  </td></tr><tr><td>
+                    <p>[...]<br></p>
+                    <p>(button)</p>
+                  </td><td>
+                    <p>Browses for an object to set as the Binding's target.</p>
+                    <p>This button is only available for Bindings inside the Global group.</p>
+                  </td></tr><tr><td>
+                    <p>Controller Assignment</p>
+                  </td><td>
+                    <p>Defines which hardware control on the control surface device to use for
+              the Binding.</p>
+                  </td></tr><tr><td>
+                    <p>Status</p>
+                  </td><td>
+                    <p>Identifies the reason why a Binding is not loaded.</p>
+                    <p>Examples of possible status:</p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Controller assignment conflict</p></li><li class="listitem"><p>Target object not resolved (no current selection, or view does not contain such object)</p></li><li class="listitem"><p>Incomplete binding</p></li></ul></div>
+                    <p>For more information about conflicts, refer to <a class="xref" href="ch57s07.html" title="Handling conflicts in Control Surface Sessions">Handling conflicts in Control Surface Sessions</a>.</p>
+                  </td></tr><tr><td colspan="2">
+                    <p>
+                      <span class="bold"><strong>Buttons</strong></span>
+                    </p>
+                  </td></tr><tr><td>
+                    <p>Add &amp; Learn Binding</p>
+                  </td><td>
+                    <p>Adds a new Binding in the selected group and activates learning mode.</p>
+                    <p>The Binding remains in learning mode until either learning mode is deactivated, or a valid property/command and hardware control are associated.</p>
+                  </td></tr><tr><td>
+                    <p>Add Group</p>
+                  </td><td>
+                    <p>Creates a new View Group in the <span class="bold"><strong>View
+                Groups</strong></span> folder. View Groups can be loaded in Views to dynamically
+              associate objects of a view with Bindings.</p>
+                  </td></tr><tr><td>
+                    <p>Remove</p>
+                  </td><td>
+                    <p>Deletes the Bindings or View Groups selected in the Control Surface Bindings.</p>
+                    <p>The root groups (Global, Current Selection and View Groups) cannot be deleted.</p>
+                  </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                <a class="xref" href="ch57s08.html" title="Using the Control Surface Toolbar">Using the Control Surface Toolbar</a>
+              </p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,77 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Managing languages</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt02.html" title="Setting up your projects"><link rel="prev" href="ch08.html" title="Managing platforms"><link rel="next" href="ch10.html" title="Working with a team"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-node">Managing languages</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="managing_languages_for_project"></a>Managing languages</h2></div></div></div><p>With the Language Manager, you can define the languages used for localization and set a
+    Make-Up Gain (volume offset) for each. You can also set the stand-in reference language. See
+      <a class="xref" href="ch36s02.html" title="Localizing your project">Localizing your project</a>. After a language is defined, you can add audio sources
+    for it. See <a class="xref" href="ch36s02.html#importing_language_files" title="Importing language files">Importing language files</a>.</p><p>The Language Manager queues all requested actions (Add, Remove, Rename, or set Make-Up
+    Gain). Click <span class="bold"><strong>OK</strong></span> or <span class="bold"><strong>Cancel</strong></span> to
+    execute or discard all pending actions respectively. After clicking OK, you are prompted to
+    confirm the action.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>These actions cannot be undone with <span class="bold"><strong>Edit &gt; Undo</strong></span> (Ctrl+Z).
+      We recommend you back up your project before proceeding.</p></td></tr></table></div><p>All languages defined in a project are listed in the Language Selector in the toolbar and in
+    the Contents Editor for Sound Voice objects. See <a class="xref" href="ch36s02.html#switching_to_different_language_version" title="Switching to a different project language">Switching to a different project language</a> and <a class="xref" href="ch61s01s03s13.html" title="Contents Editor: Sound Voice">Contents Editor: Sound Voice</a>.</p><p>To open the Language Manager, from the Wwise menu bar, click <span class="bold"><strong>Project</strong></span> &gt; <span class="bold"><strong>Language Manager</strong></span> (Shift+J). </p><div class="mediaobject"><img src="Images/Language_manager.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+            <p>Language</p>
+          </td><td>
+            <p>The language name.</p>
+          </td></tr><tr><td>
+            <p>Make-Up Gain</p>
+          </td><td>
+            <p>The volume offset from -24 to +24 dB applied to the language's audio source.
+              Default: 0. See <a class="xref" href="ch09.html#make_up_gain" title="Setting the Make-Up Gain">Setting the Make-Up Gain</a>.</p>
+          </td></tr><tr><td>
+            <p>Pending Actions</p>
+          </td><td>
+            <p>A pending action to be performed upon clicking <span class="bold"><strong>OK</strong></span>. Can be Add, Rename, or Remove.</p>
+          </td></tr><tr><td>
+            <p>Reference language</p>
+          </td><td>
+            <p>The language used when importing a Sound Voice object into a project. Default:
+              English(US). See <a class="xref" href="ch09.html#changing_reference_Language" title="Configuring the reference language">Configuring the reference language</a>.</p>
+          </td></tr><tr><td>
+            <p>Use reference language as stand-in</p>
+          </td><td>
+            <p>If enabled, and no audio source is available for the current language, then the
+              audio source for the reference language is played. If disabled, and no audio source is
+              available for the current language, then no audio is played.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_add_dots.png"></div>
+          </td><td>
+            <p>Opens the Add language dialog, where a new language can be defined and added. See
+                <a class="xref" href="ch09.html#add_language" title="Adding languages">Adding languages</a>.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_remove.png"></div>
+          </td><td>
+            <p>Removes the selected language. See <a class="xref" href="ch09.html#removing_Language" title="Removing languages">Removing languages</a>.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_rename_dots.png"></div>
+          </td><td>
+            <p>Opens the Rename language dialog. See <a class="xref" href="ch09.html#rename_language" title="Renaming languages">Renaming languages</a>.</p>
+          </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="add_language"></a>Adding languages</h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Click <span class="bold"><strong>Add</strong></span>.</p></li><li class="listitem"><p>In the Add Language dialog, enter a language name using any OS-supported
+          characters.</p><p>
+          </p><div class="mediaobject"><img src="Images/add_language.png"></div><p>
+        </p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p><p>The Pending Actions column is updated. To remove or rename the new language, select it
+          and click the respective button. To cancel the action, click <span class="bold"><strong>Cancel</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to execute any pending actions.</p><p>The Process Log might open with messages for the executed actions.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="removing_Language"></a>Removing languages</h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Select a language and click <span class="bold"><strong>Remove</strong></span>.</p><p>If the language has the Pending Action Add, then it is removed immediately. Otherwise,
+          it is marked Remove.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to execute any pending actions.</p><p>Depending on your project setup, a message might appear warning that corresponding
+          audio files and plug-ins will be deleted, and the Process Log might open with messages for
+          the executed actions.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="rename_language"></a>Renaming languages</h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Select a language and click <span class="bold"><strong>Rename</strong></span>.</p></li><li class="listitem"><p>In the Rename Language dialog, enter the new language name using any OS-supported
+          characters.</p><p>
+          </p><div class="mediaobject"><img src="Images/rename_language.png"></div><p>
+        </p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p><p>The Pending Actions column is updated. If the language has the Pending Action Add,
+          then it is renamed immediately. Otherwise, the language is marked Rename.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to execute any pending actions.</p><p>The Process Log might open with messages for the executed actions.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="changing_reference_Language"></a>Configuring the reference language</h2></div></div></div><p>Because some language files might not be available when you add a language, you can set a
+      reference language as a substitute for languages that are not yet ready. The conversion
+      settings associated with the reference language can also be used as default conversion
+      settings for other imported language files.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Select a language from the <span class="bold"><strong>Reference language</strong></span>
+          list.</p></li><li class="listitem"><p><span class="bold"><strong>Use reference language as stand-in</strong></span> is enabled by
+          default. This results in the inclusion of reference language audio files in SoundBanks for
+          other languages that do not yet have a localized version of the file.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to execute any pending actions.</p><p>The Process Log opens with messages for the executed actions.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="make_up_gain"></a>Setting the Make-Up Gain</h2></div></div></div><p>If your localized assets contain dialogue from different studios with different actors and
+      recording conditions, you can balance them and match the levels for each language.</p><p>The Make-Up Gain is the volume gain in decibels applied to the voice after all other
+      volume adjustments. The make-up gain is additive across the Containers hierarchy. See <a class="link" href="ch35s05.html" title="Understanding the voice pipeline">Understanding the voice pipeline</a> and <a class="link" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume">Using Loudness
+        Normalization or Make-up gain to Adjust Volume</a>.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Select a language.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Make-up Gain</strong></span> column, use the slider to set a
+          value from -24 to 24, or type it in.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save the setting.</p></li><li class="listitem"><p>If the volume offset of some files differs from that of their language, a message box
+          appears offering to conserve or overwrite the file offset. Click <span class="bold"><strong>Conserve</strong></span> or <span class="bold"><strong>Overwrite</strong></span> to continue.</p></li></ol></div></div></div><HR></body></html>

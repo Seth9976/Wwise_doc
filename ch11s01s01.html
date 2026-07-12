@@ -1,0 +1,180 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>What media files are supported?</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s01.html" title="The importing process"><link rel="prev" href="ch11s01.html" title="The importing process"><link rel="next" href="ch11s01s02.html" title="Creating Wwise objects on import"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s01.html">The importing process</a></span> &gt; <span class="breadcrumb-node">What media files are supported?</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="what_media_files_are_supported"></a>What media files are supported?</h3></div></div></div><p>When looking at what type of media files are supported in Wwise, refer to the
+        following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch11s01s01.html#pcm_audio_file_format" title="PCM audio file formats">PCM audio file formats</a>
+          </p></li><li class="listitem"><p><a class="xref" href="ch11s01s01.html#adm_file_format" title="ADM file formats (Experimental)">ADM file formats (Experimental)</a></p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s01s01.html#channel_configuration" title="Channel configuration">Channel configuration</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s01s01.html#sample_rate" title="Sample rate">Sample rate</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s01s01.html#bit_depth" title="Bit depth">Bit depth</a>
+          </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Trying to import files that aren't supported by Wwise results in non-recoverable
+          errors that are displayed in the Import Conflict Manager. For information on how you can
+          deal with non-recoverable errors, refer to <a class="xref" href="ch11s05.html#managing_non_recoverable_errors" title="Managing non-recoverable errors">Managing non-recoverable errors</a>. </p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="pcm_audio_file_format"></a>PCM audio file formats</h4></div></div></div><p>You can import files in the Waveform audio format (WAV) and the ambisonics audio
+          format (AMB) into Wwise. By reading the file header, Wwise can apply the appropriate
+          channel configuration.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="adm_file_format"></a>ADM file formats (Experimental)</h4></div></div></div><p>Wwise provides experimental support for the import and playback of Audio Definition
+          Model (ADM) WAV files. These sources can contain complete object-based audio scenes, with
+          channel bed and 3D-positioned dynamic objects, providing an alternative for cinematics and
+          immersive music. These files are handled like regular WAV files as part of the audio file
+          import. An ADM file can be used as a Source or Clip in the Containers hierarchy.</p><p>The ADM specification is flexible, and Wwise supports some, but not all, of its
+          features. In particular, support is focused on ADM produced with the following
+          tools:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Avid Pro Tools and Steinberg Nuendo, when exporting a Dolby Atmos Master
+              ADM</p></li><li class="listitem"><p>REAPER with the EAR Production Suite</p></li><li class="listitem"><p>360 WalkMix Creator</p></li></ul></div><p>The following features are currently supported:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Channel beds as Direct Speaker Panning</p></li><li class="listitem"><p>Mono objects as dynamic 3D-positioned objects with animation</p></li></ul></div><p>Some hardware codec implementations cannot handle the high channel counts typically
+          used with ADM. ADM metadata is preserved when using the following codecs:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>PCM</p></li><li class="listitem"><p>ADPCM</p></li><li class="listitem"><p>Vorbis</p></li><li class="listitem"><p>Opus</p></li></ul></div><p>See <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=whatsnew_known_issues.html" target="_blank">Known Issues and Limitations</a> for a list of known issues for this experimental
+          feature.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="channel_configuration"></a>Channel configuration</h4></div></div></div><p>Wwise can import media files with multiple audio channels.</p><p>The following table lists each of the source channel configurations supported by Wwise and the default configuration used by Wwise.</p><p>
+        
+        </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Wwise follows the Microsoft standard for channel ordering. The ordering in the file is different from the display ordering in Wwise. The table below shows the ordering in Wwise.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="36px" class="col1"><col width="124px" class="col2"><col class="col3"></colgroup><thead><tr><th colspan="2">
+                  <p>Channel names - short and full</p>
+                </th><th>
+                  <p>Recommended angles</p>
+                </th></tr></thead><tbody><tr><td>
+                  <p>L</p>
+                </td><td>
+                  <p>Left</p>
+                </td><td>
+                  <p>22°-30°</p>
+                </td></tr><tr><td>
+                  <p>R</p>
+                </td><td>
+                  <p>Right</p>
+                </td><td>
+                  <p>22°-30°</p>
+                </td></tr><tr><td>
+                  <p>C</p>
+                </td><td>
+                  <p>Center</p>
+                </td><td>
+                  <p>0°</p>
+                </td></tr><tr><td>
+                  <p>SL</p>
+                </td><td>
+                  <p>Surround Left</p>
+                </td><td>
+                  <p>90°-110°</p>
+                </td></tr><tr><td>
+                  <p>SR</p>
+                </td><td>
+                  <p>Surround Right</p>
+                </td><td>
+                  <p>90°-110°</p>
+                </td></tr><tr><td>
+                  <p>BL</p>
+                </td><td>
+                  <p>Back Left</p>
+                </td><td>
+                  <p>135°-150°</p>
+                </td></tr><tr><td>
+                  <p>BR</p>
+                </td><td>
+                  <p>Back Right</p>
+                </td><td>
+                  <p>135°-150°</p>
+                </td></tr><tr><td>
+                  <p>LFE</p>
+                </td><td>
+                  <p>Low-Frequency Effects</p>
+                </td><td>
+                  <p>N/A</p>
+                </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="160px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+                  <p>Channels</p>
+                </th><th>
+                  <p>Channel configurations used by Wwise</p>
+                </th></tr></thead><tbody><tr><td>
+                  <p>0.1</p>
+                </td><td>
+                  <p>LFE</p>
+                </td></tr><tr><td>
+                  <p>1.0</p>
+                </td><td>
+                  <p>C</p>
+                </td></tr><tr><td>
+                  <p>1.1</p>
+                </td><td>
+                  <p>C + LFE</p>
+                </td></tr><tr><td>
+                  <p>2.0</p>
+                </td><td>
+                  <p>L + R</p>
+                </td></tr><tr><td>
+                  <p>2.1</p>
+                </td><td>
+                  <p>L + R + LFE</p>
+                </td></tr><tr><td>
+                  <p>3.0</p>
+                </td><td>
+                  <p>L + R + C</p>
+                </td></tr><tr><td>
+                  <p>3.1</p>
+                </td><td>
+                  <p>L + R + C + LFE</p>
+                </td></tr><tr><td>
+                  <p>4.0</p>
+                </td><td>
+                  <p>L + R + SL + SR</p>
+                </td></tr><tr><td>
+                  <p>4.1</p>
+                </td><td>
+                  <p>L + R + SL  + SR + LFE</p>
+                </td></tr><tr><td>
+                  <p>5.0</p>
+                </td><td>
+                  <p>L + R + C + SL + SR</p>
+                </td></tr><tr><td>
+                  <p>5.1</p>
+                </td><td>
+                  <p>L + R + C + SL + SR + LFE</p>
+                </td></tr><tr><td>
+                  <p>6.0</p>
+                </td><td>
+                  <p>L + R + BL + BR + SL + SR</p>
+                </td></tr><tr><td>
+                  <p>6.1</p>
+                </td><td>
+                  <p>L + R + BL + BR + SL + SR + LFE</p>
+                </td></tr><tr><td>
+                  <p>7.0</p>
+                </td><td>
+                  <p>L + R + C + BL + BR + SL + SR</p>
+                </td></tr><tr><td>
+                  <p>7.1</p>
+                </td><td>
+                  <p>L + R + C + BL + BR + SL + SR + LFE</p>
+                </td></tr><tr><td>
+                  <p>7.1.2</p>
+                </td><td>
+                  <p>L + R + C + BL + BR + SL + SR + HFL + HFR + LFE</p>
+                </td></tr><tr><td>
+                  <p>7.1.4</p>
+                </td><td>
+                  <p>L + R + C + BL + BR + SL + SR + HFL + HFR + HBL + HBR + LFE</p>
+                </td></tr><tr><td>
+                  <p>9.1</p>
+                </td><td>
+                  <p>L + R + C + SL + SR + HFL + HFR + HBL + HBR + LFE</p>
+                </td></tr><tr><td>
+                  <p>10.1</p>
+                </td><td>
+                  <p>L + R + C + SL + SR + T + HFL + HFR + HBL + HBR + LFE</p>
+                </td></tr><tr><td>
+                  <p>11.1</p>
+                </td><td>
+                  <p>L + R + C + SL + SR + T + HFL + HFC + HFR + HBL + HBR + LFE</p>
+                </td></tr><tr><td>
+                  <p>13.1</p>
+                </td><td>
+                  <p>L + R + C + BL + BR + SL + SR+ T + HFL + HFC + HFR + HBL + HBR + LFE</p>
+                </td></tr></tbody></table></div><p>If you have a specific multichannel configuration that you want Wwise to preserve on
+          import, you must define it in the WAVEFORMATEXTENSIBLE format chunk in the WAV header. If
+          the channels defined in the channel mask of the WAVEFORMATEXTENSIBLE aren't supported by
+          Wwise, they will be changed automatically to supported values. For example, if a
+          configuration defines a Left channel but no Right channel, the Left channel (0x01) is
+          changed to the Center channel (0x04), and if a configuration defines Side (Surround)
+          channels but no Rear (Back) channels, the Side channels (0x100 and 0x200) are changed to
+          Rear channels (0x10 and 0x20). </p><p>You can combine individual mono and stereo audio files into a single multi-channel
+          file using the Wwise Multi-Channel Creator application. This standalone utility is
+          installed as part of the Wwise package and can be found in the same directory as the Wwise
+          application. The Multi-Channel Creator allows you to create files with any multi-channel
+          configuration so that they can be imported into your Wwise projects. You can also use this
+          tool to flag specific mono files as the 0.1 component so they can be imported into Wwise
+          as the independent LFE channel. For more information on creating multi-channel files with
+          the Multi-Channel Creator, refer to Using the Multi-Channel Creator in the Wwise Tools
+          section of the Help documentation. </p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="sample_rate"></a>Sample rate</h4></div></div></div><p>Wwise can import media files with sample rates ranging from 300 Hz to 192 kHz.</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="bit_depth"></a>Bit depth</h4></div></div></div><p>Wwise can import media files with the following bit depths:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>16-bit</p></li><li class="listitem"><p>24-bit</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Wwise can also import 32-bit float PCM files; however, the maximum conversion format is only 24 bits.</p></td></tr></table></div></div></div><HR></body></html>

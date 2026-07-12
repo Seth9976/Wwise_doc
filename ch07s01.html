@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Managing projects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07.html" title="Working with projects"><link rel="prev" href="ch07.html" title="Working with projects"><link rel="next" href="ch07s02.html" title="Import Factory Assets"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-node">Managing projects</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="managing_projects"></a>Managing projects</h2></div></div></div><p>Because one Wwise project contains all the sound, music, motion assets, properties, and
+			SoundBanks for your game audio and motion, it's important to manage projects
+			carefully.</p><p>After you create your project, you can use your computer's file system to manage the project
+			and its project files. You can also open a project directly from its <code class="code">.wproj</code>
+			file in the project folder.</p><p>After you have opened a project in Wwise, you can manage it or create projects from the
+				<span class="bold"><strong>Project</strong></span> menu.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="project_launcher"></a>Using the Project Launcher</h3></div></div></div><p>The Project Launcher dialog opens when you start Wwise or when you close a project. With
+				the Project Launcher you can:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Browse the list of <span class="bold"><strong>Recent Projects</strong></span> and open one by
+						double-clicking it or by clicking <span class="bold"><strong>Open
+							Selection</strong></span>. To filter the list, click the search icon in the
+						upper-right corner (Ctrl+F3).</p></li><li class="listitem"><p>Click <span class="bold"><strong>Open Other</strong></span> to search for a project
+						file (<code class="code">.wproj</code>) on your computer.</p></li><li class="listitem"><p>Click <span class="bold"><strong>New</strong></span> to create a new project.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="creating_new_project"></a>Creating projects</h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Use the New Project dialog to create new projects. You can access the New Project dialog
+						from:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Project Launcher: click <span class="bold"><strong>New</strong></span>.</p></li><li class="listitem"><p>The menu bar: click <span class="bold"><strong>Project &gt; New</strong></span> (Ctrl+N).</p></li><li class="listitem"><p>The Wwise page of the Audiokinetic Launcher: see <a class="link" href="https://www.audiokinetic.com/library/wwise_launcher/?source=InstallGuide&amp;id=wwise" target="_blank">Wwise</a> in the Launcher documentation.</p></li></ul></div></li><li class="listitem"><p>In the New Project dialog, enter a <span class="bold"><strong>Name</strong></span>. For other
+						settings, see the following table for a complete reference to the New
+						Project dialog.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p></li></ol></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+								<p>New Project dialog</p>
+							</th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the new project.</p>
+								<p>Each project name in Wwise must be unique. You can't use the following characters:
+										<span class="bold"><strong>':&lt;&gt;*?&#8221;|.%</strong></span>. The
+										<span class="bold"><strong>OK</strong></span> button becomes active
+									after you enter a valid filename.</p>
+							</td></tr><tr><td>
+								<p>Location</p>
+							</td><td>
+								<p>If projects exist outside the default folder, their folders are listed in the
+									drop-down list.</p>
+								<p>Click the browse button [&#8230;] to browse to a folder to store the project.</p>
+								<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If you select a mapped network for your project, this might result in some audio
+										playback performance issues that Audiokinetic can't support. </p></td></tr></table></div>
+							</td></tr><tr><td>
+								<p>Original files</p>
+							</td><td>
+								<p>The location where the original media files that you import into Wwise will be stored.
+									You can keep the default, or click the browse button [&#8230;] to
+									navigate to a location where you want to create your
+										<code class="code">Originals</code> folder.</p>
+							</td></tr><tr><td>
+								<p>Project folder</p>
+							</td><td>
+								<p>The location of the new folder that will be created for the project. It is created by
+									appending the <span class="bold"><strong>Name</strong></span> to the
+										<span class="bold"><strong>Location</strong></span>.</p>
+							</td></tr><tr><td>
+								<p>Platforms</p>
+							</td><td>
+								<p>An integrated view of the <a class="xref" href="ch08.html#projects_platform_manager" title="Platform Manager dialog">Platform Manager dialog</a>, without the <span class="bold"><strong>Copy Settings</strong></span> option, where you can
+									define your project's platforms.</p>
+								<p>Click <span class="bold"><strong>Add</strong></span> for <a class="xref" href="ch08.html#adding_platforms" title="Adding platforms">Adding platforms</a>,
+										<span class="bold"><strong>Remove</strong></span> for <a class="xref" href="ch08.html#removing_platform" title="Removing platforms">Removing platforms</a>, or <span class="bold"><strong>Rename</strong></span> to change the name of any of the listed
+									platforms you select. You can change your project's platforms
+									later in the <a class="xref" href="ch08.html#projects_platform_manager" title="Platform Manager dialog">Platform Manager dialog</a>. To
+									access it, from the menu bar, click <span class="bold"><strong>Projects &gt; Platform Manager</strong></span>
+									(Shift+Alt+P).</p>
+							</td></tr><tr><td>
+								<p>Import factory assets to project</p>
+							</td><td>
+								<p>Imports selected assets to your project. Assets can include
+									sound examples, Effect Presets, or plug-in media files.</p>
+								<p>You can do this later with <a class="xref" href="ch07s02.html" title="Import Factory Assets">Import Factory Assets</a>. To access it, from
+									the menu bar, click <span class="bold"><strong>Project &gt; Import
+										Factory Assets</strong></span>.</p>
+								<p>To filter the list, click the search icon in the upper-right corner (Ctrl+F3).</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+							</td><td>
+								<p>Saves the new project, closes the New Project dialog, and
+									opens the new project in Wwise.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+							</td><td>
+								<p>Closes the New Project dialog without saving the
+									project.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="project_load_log"></a>Opening and closing projects</h3></div></div></div><p>You can open projects from the Wwise menu bar by clicking <span class="bold"><strong>Project &gt;
+					Open</strong></span> (Ctrl+O) or from the Audiokinetic Launcher.</p><p>Wwise validates a project before it's opened. If there are XML syntax errors, the project
+				doesn't load. If there are project inconsistencies, the Project Load Log dialog
+				opens. See <a class="xref" href="ch10s04.html" title="Resolving project inconsistencies">Resolving project inconsistencies</a>.</p><div class="orderedlist"><p class="title"><b>To use the Project Load Log dialog:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Project Load Log dialog, review the errors and how they were fixed. To filter the
+						list, click the search icon in the upper-right corner (Ctrl+F3).</p></li><li class="listitem"><p>Click <span class="bold"><strong>Accept</strong></span> to accept the suggested fixes and load the
+						project.</p></li><li class="listitem"><p>Save the project. Fixes that were made are saved only when you save the project.</p></li></ol></div><p>If your project is slow to load, you can unload certain Work Units, keeping only
+				those that you are working on. See <a class="xref" href="ch10s01.html#loading_unloading_work_units_from_project" title="Loading/unloading Work Units from your project">Loading/unloading Work Units from your project</a>.</p><p>After the project is loaded, you can consult all the Project Load Log entries in
+				the <a class="xref" href="ch59s03.html#project_load_tab_log" title="Project Load Tab">Project Load Tab</a> of the Logs view.</p><div class="itemizedlist"><p class="title"><b>To close a project</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project &gt;
+							Close.</strong></span> The project is closed and the Project Launcher opens.
+						If you have deleted objects in your project, the associated audio files are
+						not deleted when you close the project. To delete them, clear your cache.
+						See <a class="xref" href="ch11s07.html" title="Clearing your cache">Clearing your cache</a>.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="saving_project"></a>Saving projects</h3></div></div></div><p>To save a project, from the menu bar, click <span class="bold"><strong>Project &gt;
+					Save</strong></span> (Ctrl+S).</p><p>If the project contains unsaved content, an asterisk appears beside its name in the Wwise
+				title bar. In the Project Explorer, an asterisk also appears beside any Work Units
+				that contain unsaved content.</p><p>If a Work Unit is read-only on your file system, you can modify it in Wwise, but you can't
+				save it with the <span class="bold"><strong>Project &gt; Save</strong></span> command. This
+				command saves the rest of the project, but any read-only objects retain their
+				asterisks denoting unsaved content. Before you begin working on a Work Unit, verify
+				that you can save any changes that you might make. When using a source control
+				system to manage your project files, keep in mind that you must check out your
+				project files to save them. For more information on saving project files managed by
+				a source control system, see <a class="xref" href="ch10s05.html#saving_project_when_using_perforce" title="Saving your project when using Perforce">Saving your project when using Perforce</a>.</p></div></div><HR></body></html>

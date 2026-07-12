@@ -1,0 +1,215 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>File Packager</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt11.html" title="Wwise tools"><link rel="prev" href="pt11.html" title="Wwise tools"><link rel="next" href="ch73s01.html" title="File Order Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt11.html">Wwise tools</a></span> &gt; <span class="breadcrumb-node">File Packager</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="file_packager"></a>File Packager</h2></div></div></div><p>In the File Packager window, you can assign the SoundBanks, loose media, and/or streamed media files for a Wwise project to one or more packages. Depending on the requirements of your game, you can create package files that include any combination of these.</p><p>All information about a Wwise project's SoundBanks and streamed media files can be retrieved by importing the SoundbanksInfo.xml file into the File Packager. By default, all files are added to the default.pck package file, which is created in the root of the SoundBank path directory for each platform. You can, however, create new packages, manually add files to different packages, and modify the location where the packages will be saved.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>In the Project Settings' or the SoundBanks Settings' SoundBanks tab, ensure that the
+      <span class="bold"><strong>Generate All Banks Metadata File</strong></span> and <span class="bold"><strong>Generate XML Metadata</strong></span> options are selected. When these options are selected, Wwise
+    generates the <code class="code">SoundbanksInfo.xml</code> file whenever you generate SoundBanks.</p></td></tr></table></div><p>The File Packager window also contains file routing tools, which allow you to automatically assign SoundBanks and streamed media files to particular packages based on language and file type.</p><p>Each session created within the File Packager can also be saved as a project so that you can easily save your work mid-session and come back to it at any time.</p><p>For the command line options, refer to <a class="xref" href="ch42s06.html" title="Using File Packager arguments in the command line">Using File Packager arguments in the command line</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="106px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+							<p>Menu</p>
+						</th><th>
+							<p>Description </p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Tools &gt; Create and assign packages for all languages </p>
+						</td><td>
+              <p>Create one new package per language. For each package created, assign the streamed files, loose media, and SoundBanks to that package for the language. If a package already exists for this language, no package is created, and the existing package is not modified.</p>
+						</td></tr><tr><td>
+							<p>Tools &gt; Freeze selected packages </p>
+						</td><td>
+              <p>Take the selected packages and ensure all content becomes explicit (directly in the manually added files) and that no implicit content remains. The process will ensure no assignation rule references the selected packages. The resulting content for those packages will not change.</p>
+              <p>This function can be used after a game release for which you are ready to prepare the downloadable content. It will ensure that dynamically created packages that were shipped are frozen.</p>
+						</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="106px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+							<p>SoundBanks Info file</p>
+						</td><td>
+              <p>The path of the SoundbanksInfo.xml file that provides the list of SoundBanks, loose media, and streamed files within a Wwise project.</p>
+							<p>The contents of the SoundbanksInfo.xml file are displayed in the Files to package view.</p>
+							<p>This path can be absolute or relative. Relative paths are relative to the File Packager project file directory.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="25"><tr style="height: 22px"><td><img src="Images/FP_Browse_btn.png" width="25"></td></tr></table></div>
+						</td><td>
+							<p>Opens the Windows Open File dialog where you can select the SoundbanksInfo.xml file that creates a list of all SoundBanks and streamed media files that can be packaged.</p>
+						</td></tr><tr><td>
+							<p>Output directory</p>
+						</td><td>
+							<p>The location on the network where the packages will be saved.</p>
+							<p>This path can be absolute or relative. Relative paths are relative to the SoundbanksInfo.xml file directory. By default, the File Packager uses the SoundbanksInfo.xml file directory.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="25"><tr style="height: 22px"><td><img src="Images/FP_Browse_btn.png" width="25"></td></tr></table></div>
+						</td><td>
+							<p>Opens the Browse for Folder dialog where you can navigate to the location where you want the package files to be saved.</p>
+						</td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Files to package</strong></span></p>
+						</td></tr><tr><td>
+							<p>Filename</p>
+						</td><td>
+							<p>The name of the SoundBank, streamed file, or loose media that can be added to one or more packages.</p>
+						</td></tr><tr><td>
+							<p>File type</p>
+						</td><td>
+              <p>The type of file: SoundBank, streamed file, or loose media.</p>
+						</td></tr><tr><td>
+							<p>Language/SFX</p>
+						</td><td>
+							<p>The language to which the file is associated. If the file is not associated with any language, it is considered an SFX.</p>
+						</td></tr><tr><td>
+							<p>File size</p>
+						</td><td>
+							<p>The size of the file.</p>
+						</td></tr><tr><td>
+							<p>Packages</p>
+						</td><td>
+							<p>The package(s) in which the file has been included.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="130"><tr style="height: 25px"><td><img src="Images/FP_AddtoPackage_btn.png" height="25"></td></tr></table></div>
+						</td><td>
+							<p>Adds the selected files to the package selected in the Package Manager.</p>
+						</td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Packages</strong></span></p>
+						</td></tr><tr><td>
+							<p>Name</p>
+						</td><td>
+							<p>The name of the package.</p>
+							<p>The name is a relative path to the output directory and can contain sub folders, for example, 'my_folder\package1.pck'.</p>
+						</td></tr><tr><td>
+							<p>Added</p>
+						</td><td>
+							<p>The number of files manually added to the package.</p>
+						</td></tr><tr><td>
+							<p>Resulting</p>
+						</td><td>
+							<p>The total number of files included in the package.</p>
+						</td></tr><tr><td>
+							<p>Missing</p>
+						</td><td>
+							<p>The number of files missing in the package.</p>
+							<p>Files can become missing if they are manually added to a package and then later removed from the original Wwise project.</p>
+						</td></tr><tr><td>
+							<p>Data size</p>
+						</td><td>
+							<p>The sum of all files listed in the resulting contents for the package.</p>
+						</td></tr><tr><td>
+							<p>Header size</p>
+						</td><td>
+							<p>The approximate header size for the package. It represents the approximate memory usage to load the package in the Sound Engine.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="65"><tr style="height: 22px"><td><img src="Images/FP_Add_btn.png" height="22"></td></tr></table></div>
+						</td><td>
+							<p>Creates a new package.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="65"><tr style="height: 22px"><td><img src="Images/FP_Remove_btn.png" height="22"></td></tr></table></div>
+						</td><td>
+							<p>Deletes the currently selected package.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="77"><tr style="height: 22px"><td><img src="Images/FP_EditLayout_btn.png" height="22"></td></tr></table></div>
+						</td><td>
+							<p>Opens the File Order Editor where you can arrange the files within the package in a particular order.</p>
+							<p>Ordering the files within your package may optimize your disk seeking times.</p>
+						</td></tr><tr><td>
+							<p>Block Size</p>
+						</td><td>
+							<p>The number of bytes upon which the data within your packages is aligned. The number you specify will depend on the requirements of the platform's I/O device. For more information about block size and the constraints of each platform's I/O device, refer to the <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=streamingmanager__lowlevel.html" target="_blank">Streaming &gt; Low-Level I/O</a> section of the SDK documentation.</p>
+							<p>The typical value for each platform is 1.</p>
+							<p>The default value of 1 means that there is no alignment.</p>
+						</td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Default file assignments</strong></span></p>
+						</td></tr><tr><td>
+							<p>Assign Language/SFX files to:</p>
+						</td><td>
+              <p>The options within this section allow you to assign the SoundBanks, loose media, and streamed files associated with a specific language or SFX to a particular package.</p>
+							<p>Default assignments are only used if files are not manually assigned to a package.</p>
+						</td></tr><tr><td>
+							<p>Language</p>
+						</td><td>
+							<p>The list of languages/SFX for which SoundBanks and streamed files exist.</p>
+						</td></tr><tr><td>
+							<p>SoundBanks</p>
+						</td><td>
+							<p>The package to which the SoundBanks associated with the corresponding language/SFX are automatically assigned.</p>
+							<p>Default assignments are only used if files are not manually assigned to a package.</p>
+						</td></tr><tr><td>
+							<p>Streams</p>
+						</td><td>
+							<p>The package to which the streamed files associated with the corresponding language/SFX are automatically assigned.</p>
+							<p>Default assignments are only used if files are not manually assigned to a package.</p>
+						</td></tr><tr><td>
+              <p>LooseMedia</p>
+            </td><td>
+              <p>The package to which files that have no specific association with the corresponding language/SFX are automatically assigned.</p>
+			  <p>Default assignments are only used if files are not manually assigned to a package.</p>
+            </td></tr><tr><td>
+							<p>Assign remaining files to:</p>
+						</td><td>
+              <p>The options within this section allow you to route all remaining SoundBanks, streamed files, external sources, and loose media to a particular package.</p>
+						</td></tr><tr><td>
+							<p>SoundBanks</p>
+						</td><td>
+							<p>The package to which any remaining SoundBanks are automatically assigned.</p>
+						</td></tr><tr><td>
+							<p>Streamed files</p>
+						</td><td>
+							<p>The package to which any remaining streamed files are automatically assigned.</p>
+						</td></tr><tr><td>
+							<p>External sources</p>
+						</td><td>
+							<p>The package to which any remaining external sources are automatically assigned.</p>
+						</td></tr><tr><td>
+              <p>Loose media</p>
+            </td><td>
+              <p>The package to which any other remaining files are automatically assigned.</p>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Package contents</strong></span></p>
+						</td></tr><tr><td>
+							<p>Manually added files</p>
+						</td><td>
+              <p>The SoundBanks, streamed file, external sources, or loose media that have been manually added to the package.</p>
+						</td></tr><tr><td>
+							<p>Filename</p>
+						</td><td>
+              <p>The name of the SoundBank, streamed file, loose media, or external source.</p>
+						</td></tr><tr><td>
+							<p>File type</p>
+						</td><td>
+              <p>The type of file: SoundBank, streamed file, external source, or loose files.</p>
+						</td></tr><tr><td>
+							<p>Language/SFX</p>
+						</td><td>
+              <p>The language to which the file is associated. If the file is not associated with any language, it is considered an SFX.</p>
+						</td></tr><tr><td>
+							<p>File size</p>
+						</td><td>
+							<p>The size of the file.</p>
+						</td></tr><tr><td>
+              <p>Inclusion Mode (available only in the Manually added files tab)</p>
+						</td><td>
+              <p>Determines whether the SoundBank, its associated streamed files, and/or all the loose media are included in the package. You can select one of the following options:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>SoundBank only</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Streamed files</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>SoundBank and streamed files</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Loose media</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>SoundBank and loose media</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Streamed files and loose media</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>All files</strong></span></p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="65"><tr style="height: 22px"><td><img src="Images/FP_Remove_btn.png" height="22"></td></tr></table></div>
+						</td><td>
+							<p>Removes the selected file from the package.</p>
+						</td></tr><tr><td>
+							<p>Resulting contents</p>
+						</td><td>
+							<p>The complete list of SoundBanks, streamed media files, and/or loose media that are included in the package.</p>
+							<p>The number displayed on the title bar of this tab represents the total number of files included in the package.</p>
+							<p>The number on this tab may differ from the one on the Manually added files tab because when SoundBanks are manually added they can include references to several streamed media files that are automatically added to the same package.</p>
+						</td></tr><tr><td>
+							<p>Filename</p>
+						</td><td>
+              <p>The name of the SoundBank, loose media, or streamed file that has been added to the package.</p>
+						</td></tr><tr><td>
+							<p>File type</p>
+						</td><td>
+              <p>The type of file: SoundBank, streamed file, loose media, or a mix.</p>
+						</td></tr><tr><td>
+							<p>Language/SFX</p>
+						</td><td>
+							<p>The language to which the corresponding file is associated. If the file is not associated with any language, it is considered an SFX.</p>
+						</td></tr><tr><td>
+							<p>File size</p>
+						</td><td>
+							<p>The size of the file.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="101"><tr style="height: 21px"><td><img src="Images/FP_CopytoClip_btn.png" height="21"></td></tr></table></div>
+						</td><td>
+							<p>Copies the information in the Resulting Contents pane to the Windows clipboard so that you can paste it into a new file.</p>
+						</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch42s01.html" title="Working with File Packager projects">Working with File Packager projects</a></p></li><li class="listitem"><p><a class="xref" href="ch42s01.html#importing_soundbank_information_into_project" title="Importing SoundBank information into a project">Importing SoundBank information into a project</a></p></li><li class="listitem"><p><a class="xref" href="ch42s01.html#opening_existing_file_packager_projects" title="Opening File Packager projects">Opening File Packager projects</a></p></li><li class="listitem"><p><a class="xref" href="ch42s01.html#saving_file_packager_projects" title="Saving File Packager projects">Saving File Packager projects</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02.html#adding_file_packages_to_project" title="Adding file packages to a project">Adding file packages to a project</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02.html#removing_file_packages_from_project" title="Removing file packages from a project">Removing file packages from a project</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02s01.html" title="Assigning files to packages">Assigning files to packages</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02s01.html#assigning_files_to_package_automatically" title="Automatically assigning files to a package">Automatically assigning files to a package</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02s01.html#manually_adding_files_to_package" title="Manually assigning files to a package">Manually assigning files to a package</a></p></li><li class="listitem"><p><a class="xref" href="ch42s02s02.html" title="Ordering files within a package">Ordering files within a package</a></p></li><li class="listitem"><p><a class="xref" href="ch42s04.html" title="Generating file packages">Generating file packages</a></p></li></ul></div></div><HR></body></html>

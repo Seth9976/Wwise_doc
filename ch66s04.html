@@ -1,0 +1,29 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Impacter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch66.html" title="Source plug-ins"><link rel="prev" href="ch66s03s01.html" title="Contents Editor: External Source"><link rel="next" href="ch66s04s01.html" title="Source Editor: Impacter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66.html">Source plug-ins</a></span> &gt; <span class="breadcrumb-node">Impacter</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="impacter_plug_in_source"></a>Impacter</h2></div></div></div><p>The Impacter plug-in must be installed using the Launcher. For information on installing
+		plug-ins, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> in the Audiokinetic Launcher guide.</p><p>For information on creating sources using plug-ins, see  <a class="xref" href="ch11s09.html" title="Creating sources using plug-ins">Creating sources using plug-ins</a>.</p><p>The Impacter is a real-time audio source plug-in intended for use with impact-type sound
+		files. These are files that consist of a short sound with a fast or instantaneous onset and
+		an exponentially decaying envelope. The plug-in allows you to manipulate the source sounds
+		in the following ways:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Cross-synthesis</strong></span>: The Impacter separates each
+				source file into an impact component and a body component. The impact component
+				consists of the impulse of the sound while the body component consists of the
+				resonance of the sound. When using the Impacter with a collection of files, the
+				plug-in will randomly combine the impact component of one file with the body
+				component of another file for each play event. The plug-in allows you to
+				individually include or exclude the impact and body components of each file. </p></li><li class="listitem"><p><span class="bold"><strong>Physicality manipulation</strong></span>: The Impacter allows you
+				to modify the perceived mass, velocity, position, and roughness of the object
+				creating the impact sound. A randomizing parameter can be assigned to each of these
+				properties, creating sonic variety for each play event.</p></li><li class="listitem"><p><span class="bold"><strong>Mapping properties to game physics</strong></span>: Each instance
+				of the plug-in can be associated with a Game Object, Event, or RTPC. The parameters
+				of the Impacter are designed to respond to game engine physics related to materials
+				and collisions.</p></li></ul></div><p>The authoring tool supports dragging and dropping files into the source editor. All
+		analysis is handled within the authoring plug-in; there is no need for an external analysis
+		tool or an analysis results file. The resulting synthesis model is included in the project&#8217;s
+		SoundBanks for use during runtime.</p><p><span class="bold"><strong>Limitations</strong></span></p><p>The analysis and synthesis algorithms in the Impacter plug-in work well because they make
+		certain assumptions about the type of sounds they are treating. Specifically, they are
+		designed for short sounds with a fast or instantaneous onset and an exponentially decaying
+		envelope. Some degree of time variance or secondary transients in the decay can be handled,
+		but those characteristics are not as strongly affected by the synthesis parameters.</p><p>Other types of sounds can be dropped into the plug-in, but the sonic results may fall
+		outside of the expected behavior when trying to shape the sound using the provided
+		parameters. This may still be a desirable outcome, especially if the Impacter is being used
+		for novel sound design exploration. Longer sounds, however, will extend the
+		length-of-analysis time and may interrupt the authoring tool from playing sound until the
+		analysis is complete.</p><div class="itemizedlist"><p class="title"><b>Editors</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch66s04s01.html" title="Source Editor: Impacter">Source Editor: Impacter</a></p></li><li class="listitem"><p><a class="xref" href="ch66s04s02.html" title="Contents Editor: Impacter">Contents Editor: Impacter</a></p></li></ul></div></div><HR></body></html>

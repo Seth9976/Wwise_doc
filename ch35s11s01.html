@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Understanding the bus icons and processing status</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35s11.html" title="Creating the final mix"><link rel="prev" href="ch35s11.html" title="Creating the final mix"><link rel="next" href="ch35s11s02.html" title="Monitoring the signal level"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-link"><a href="ch35s11.html">Creating the final mix</a></span> &gt; <span class="breadcrumb-node">Understanding the bus icons and processing status</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="understanding_the_bus_icons"></a>Understanding the bus icons and processing status</h3></div></div></div><p>Bus icons represent the processing status of a bus as determined by Wwise. The following
+				table outlines the criteria used to determine the processing status of a bus. In
+				general, busses are handled as non-mixing unless the processing they would perform
+				cannot be deferred. This is because non-mixing busses provide a more efficient use
+				of CPU and memory by propagating their properties to their inputs without performing
+				any processing.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+								<p>Icon</p>
+							</th><th>
+								<p>Processing Status</p>
+							</th><th>
+								<p>Description</p>
+							</th></tr></thead><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/audio_bus_mix_icon.png"></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><img src="Images/aux_bus_mix_icon.png"></div>
+								<p>(Auxiliary)</p>
+							</td><td>
+								<p>Mixing</p>
+							</td><td>
+								<p>A processing status that Wwise can apply to both Audio Busses
+									and Auxiliary Busses. The properties of a Mixing bus are passed
+									down to objects routed to the bus and to child busses. Any
+									Effects defined on the bus are processed, and the result is
+									output in a channel-based format.</p>
+								<p>A bus is mixing if:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>It has a channel-based bus configuration, set explicitly or resolved by the Audio
+											Device for a top level bus</p><p>OR</p></li><li class="listitem"><p>Its bus configuration is <span class="bold"><strong>Same as parent</strong></span> and the
+											parent has a channel-based configuration</p><p>AND any of the following is true:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>It is an Auxiliary Bus</p></li><li class="listitem"><p>It is an HDR bus</p></li><li class="listitem"><p>It has at least one inserted Effect</p></li><li class="listitem"><p>It has Positioning enabled</p></li><li class="listitem"><p>It has an RTPC on the Bus Volume or on the
+												Output Bus's Volume, LPF, HPF, or DSF.</p></li></ul></div></li></ul></div>
+								<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>When sounds are routed to a Mixing bus, any Metadata associated with the sound will
+										be lost or used in the channel-based mix. This Metadata
+										cannot be restored and will no longer be available for use
+										by any Audio Object Processor or
+										endpoint.</p></td></tr></table></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/audio_bus_object_icon.png"></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><img src="Images/aux_bus_object_icon.png"></div>
+								<p>(Auxiliary)</p>
+							</td><td>
+								<p>Processing Audio Objects</p>
+							</td><td>
+								<p>A processing status that Wwise can apply to both Audio Busses
+									and Auxiliary Busses. All properties of this bus are passed down
+									to objects routed to the bus and to child busses. Any Effects
+									defined on the bus are processed, and the result is output as
+									Audio Objects.</p>
+								<p>A bus is Processing Audio Objects if:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>It has an Audio Objects bus configuration, set explicitly or resolved by the Audio
+											Device for a top level bus</p><p>OR</p></li><li class="listitem"><p>Its bus configuration is <span class="bold"><strong>Same as parent</strong></span> and the
+											parent has an Audio Objects bus configuration</p><p>AND any of the following is true:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>It is an Auxiliary Bus</p></li><li class="listitem"><p>It is an HDR bus</p></li><li class="listitem"><p>It has at least one inserted Effect</p></li><li class="listitem"><p>It has Positioning enabled</p></li><li class="listitem"><p>It has an RTPC on the Bus Volume or on the
+												Output Bus's Volume, LPF, HPF, or DSF.</p></li></ul></div></li></ul></div>
+								<p>Refer to <a class="xref" href="ch13s03.html" title="Understanding object-based audio">Understanding object-based audio </a> for
+									further details. </p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/audio_bus_nonmix_icon.png"></div>
+								<p>(Audio)</p>
+							</td><td>
+								<p>Not Mixing</p>
+							</td><td>
+								<p>A processing status that Wwise can apply to Audio Busses. The
+									properties of a Non-Mixing bus are passed down to objects routed
+									to the bus and to child busses, however, no processing is
+									performed and hence the format of the objects and children is
+									not modified. Any properties authored on a Non-Mixing bus are
+									applied to the routed objects at voice level.</p>
+								<p>A bus is Not Mixing if the following statements are true:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Its bus configuration is set to <span class="bold"><strong>Same as
+											Parent</strong></span>.</p></li><li class="listitem"><p>It is not using any of the features listed previously
+											that would cause it to mix or process audio
+											objects.</p></li></ul></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/audio_bus_unresolved_icon.png"></div>
+								<p>(Audio)</p>
+								<div class="mediaobject"><img src="Images/aux_bus_unresolved_icon.png"></div>
+								<p>(Auxiliary)</p>
+							</td><td>
+								<p>Processing</p>
+							</td><td>
+								<p>A processing status that Wwise can apply to both Audio Busses
+									and Auxiliary Busses. The processing status of this bus will be
+									resolved as either Mixing or Processing Audio Objects when the
+									Wwise sound engine connects to the endpoint and receives
+									information concerning the format(s) supported.</p>
+								<p>A bus is Processing if the following statements are
+									true:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Its bus configuration is set to <span class="bold"><strong>Same as Parent</strong></span> and the bus configuration
+											of all of its ancestors is also same <span class="bold"><strong>Same as Parent</strong></span>.</p></li><li class="listitem"><p>It is using any of the features listed previously that
+											would cause it to mix or process audio objects.</p></li></ul></div>
+								<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When profiling in Wwise, the resolved status will be displayed in the Property
+										Editor, but not in the Project Explorer.</p></td></tr></table></div>
+							</td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1568186224"></a>The effect of processing status on the Profiler views</h4></div></div></div><p>Non-mixing busses do not appear in the following locations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Busses tab of the Advanced Profiler</p></li><li class="listitem"><p>The Voices Graph tab of the Advanced Profiler</p></li><li class="listitem"><p>The Audio Object Profiler </p></li></ul></div><p>Busses that are Mixing, Processing Audio Objects, or Processing
+					do appear in these locations. This is demonstrated by the following figure.
+					Notice the Environmental and Environments busses do not appear in the Advanced
+					Profiler's Busses tab while their child Auxiliary busses env_corridor and
+					env_small_room do. This is because the Environmental and Environments busses are
+					non-mixing busses, while their child busses are Processing.</p><div class="mediaobject"><img src="Images/mixing_vs_nonmixing_bus.png"></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1568179312"></a>The effect of processing status on the meter</h4></div></div></div><p>For a non-mixing bus, the meter is not available in the Audio Bus tab of the Secondary
+					Editor. You will see a message to this effect (as shown in the following
+					figure). In the case of a bus that is Mixing, Processing Audio Objects, or
+					Processing, the meter is displayed.</p><div class="mediaobject"><img src="Images/not_mixing_meter.png"></div></div></div><HR></body></html>

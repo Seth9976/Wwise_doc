@@ -1,0 +1,103 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voice Monitor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s08.html" title="Audio Object Meter"><link rel="next" href="ch63s10.html" title="Voice Explorer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Voice Monitor</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="voice_monitor"></a>Voice Monitor</h2></div></div></div><p>The Voice Monitor view displays the volume of the voices playing in time when capturing with the profiler.  You can set the scope of the view on a specific bus, or for all voices currently playing. The voices shown in the list are the voices playing at a specific time, shown by the time cursor.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>All voices</p>
+            </td><td>
+              <p>This voice mode shows all voices playing in time. The volume shown is the final voice volume.</p>
+            </td></tr><tr><td>
+              <p>Bus input</p>
+            </td><td>
+              <p>This voice mode shows all voices playing into a bus. The volume shown is that calculated before HDR attenuation, in the context of the bus.</p>
+              <p>When selecting this mode, the bus needs to be specified.</p>
+            </td></tr><tr><td>
+              <p>Bus output</p>
+            </td><td>
+              <p>This voice mode shows all voices playing into a bus. The volume shown is volume at which the voice is being mixed when leaving the bus.</p>
+              <p>When selecting this mode, the bus needs to be specified.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+		<p>Color</p>
+	</td><td>
+		<p>Displays a square filled with either the object&#8217;s defined color, or if none is set, a randomly applied color. This key helps identify the object line displayed in the graph view.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 26</p>
+	</td></tr><tr><td>
+              <p>Wwise Object</p>
+            </td><td>
+              <p>The Wwise object name.</p>
+            </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td>
+              <p>Volume</p>
+            </td><td>
+              <p>The level of the voice as defined in the project's hierarchy, specific to the selected mode:
+                                                                              
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Voice Volume</strong></span>
+                    : The column header for the 
+                    <span class="bold"><strong>All voices</strong></span>
+                    mode.</p></li><li class="listitem"><p><span class="bold"><strong>Input Volume</strong></span>: The column header for the 
+                    <span class="bold"><strong>Bus input</strong></span>
+                    mode.</p></li><li class="listitem"><p><span class="bold"><strong>Mix Volume</strong></span>: The column header for the 
+                    <span class="bold"><strong>Bus output</strong></span>
+                    mode.</p></li></ul></div><p>
+              </p>
+            </td></tr></tbody></table></div><div class="orderedlist"><p class="title"><b>To use the Voice Monitor:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click 
+          <span class="strong"><strong>Start Capture</strong></span>
+          to begin capturing, or connect to game.</p></li><li class="listitem"><p>Play the sounds.</p></li><li class="listitem"><p>Open the Voice Monitor view.</p></li><li class="listitem"><p>Select a voice mode.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To filter the voices:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Use one of the following filters to dynamically update the content of the Voice Monitor table and graph view:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <span class="strong"><strong>Object filter</strong></span>: Click the selector, which prompts the 
+              <a class="xref" href="ch61s08.html" title="Project Explorer - Browser">Project Explorer - Browser</a>
+              . Select an object (such as an Event, container, Virtual Folder, Work Unit, sound, or Music Segment) to show the output from it and all its descendants. Select a bus to show all objects routed to this bus or the descendants of the bus.</p></li><li class="listitem"><p>
+              <span class="strong"><strong>Text filter</strong></span>: Enter text to filter to objects with matching substrings in their names.</p></li></ul></div></li></ol></div><p>See 
+      <a class="xref" href="ch50.html" title="Getting to know the graph view"><i>Getting to know the graph view</i></a>
+      to learn more about working with the graph view and 
+      <a class="xref" href="ch51.html" title="Getting to know the timeline"><i>Getting to know the timeline</i></a>
+      to learn more about the timeline.</p></div><HR></body></html>

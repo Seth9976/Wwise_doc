@@ -1,0 +1,272 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effect Editor - McDSP FutzBox Lo-Fi Distortion Effect plug-in</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch70.html" title="McDSP FutzBox Lo-Fi Distortion"><link rel="prev" href="ch70s01.html" title="FutzBox overview"><link rel="next" href="ch70s03.html" title="Using the FutzBox plug-in"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt10.html">Certified Partner plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch70.html">McDSP FutzBox Lo-Fi Distortion</a></span> &gt; <span class="breadcrumb-node">Effect Editor - McDSP FutzBox Lo-Fi Distortion Effect plug-in</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="effect_editor_mcdsp_futzbox_lo_fi_distortion_effect_plug_in"></a>Effect Editor - McDSP FutzBox Lo-Fi Distortion Effect plug-in</h2></div></div></div><p>The Effect Editor displays all the properties associated with the McDSP FutzBox Lo-Fi Distortion plug-in.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+							<p>In</p>
+						</td><td>
+							<p>Adjusts the level of the input signal.</p>
+							<p>Default value: 0<br>Slider range: -24 to 24 <br>Units: dB</p>
+						</td></tr><tr><td>
+			            <p><span class="bold"><strong>Pre-Filter</strong></span></p>
+			          </td><td>
+			            <p>Applies the following filters to the audio signal:</p>
+			            <p><span class="bold"><strong>High-Pass Filter (HPF)</strong></span> - The HPF controls define the characteristics of the High-Pass Filter that is applied to the audio signal. High-Pass Filters are useful for removing low frequency rumble, unwanted vocal plosives, and DC offsets. For "futzing" application, the loss of low end frequency content is typical of many communication devices, including phones, walkie-talkies, radios, megaphones, and so on.</p>
+			            <p><span class="bold"><strong>Low-Pass Filter (LPF)</strong></span> - The LPF controls define the characteristics of the Low-Pass Filter that is applied to the audio signal. Low-Pass Filters are useful for removing background noise, such as tape hiss, waterfalls, and general ambient background noise.</p>
+			          </td></tr><tr><td colspan="2">
+			            <p><span class="bold"><strong>HPF</strong></span></p>
+			          </td></tr><tr><td>
+			            <p>Freq</p>
+			          </td><td>
+			            <p>The cut-off frequency below which the audio signal is removed.</p>
+			            <p>Default value: 40<br>Slider range: 20 to 20,000 <br>Units: Hz</p>
+			          </td></tr><tr><td>
+							<p>12dB/24dB</p>
+						</td><td>
+							<p>Determines the shape and amount of signal reduction above or below the selected frequency, expressed in decibels per octave. This is referred to as the "slope".</p>
+						</td></tr><tr><td>
+			            <p>Q</p>
+			          </td><td>
+			            <p>The amount of resonant peak within each filter.</p>
+			            <p>Default value: 0<br>Slider range: 0 to 100</p>
+			          </td></tr><tr><td colspan="2">
+			            <p><span class="bold"><strong>LPF</strong></span></p>
+			          </td></tr><tr><td>
+			            <p>Freq</p>
+			          </td><td>
+			            <p>The cut-off frequency above which the audio signal is removed.</p>
+			            <p>Default value: 18,000<br>Slider range: 20 to 20,000 <br>Units: Hz</p>
+			          </td></tr><tr><td>
+							<p>12dB/24dB</p>
+						</td><td>
+							<p>Determines the shape and amount of signal reduction above or below the selected frequency, expressed in decibels per octave. This is referred to as the "slope".</p>
+						</td></tr><tr><td>
+			            <p>Q</p>
+			          </td><td>
+			            <p>The amount of resonant peak within each filter.</p>
+			            <p>Default value: 0<br>Slider range: 0 to 100</p>
+			          </td></tr><tr><td>
+			            <p><span class="bold"><strong>Distortion</strong></span></p>
+			          </td><td>
+			            <p>Applies distortion to the audio signal. Distortion causes the amplitude range of the audio signal to become non-linear. Several types of distortion are available emulating various degrees of sonic destruction.</p>
+			          </td></tr><tr><td>
+							<p>Amount</p>
+						</td><td>
+							<p>The level of distortion introduced in the audio signal.</p>
+							<p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+						</td></tr><tr><td>
+			            <p>Mode</p>
+			          </td><td>
+			            <p>The type of distortion applied to the audio signal. Different algorithms are used for each mode.</p>
+			          </td></tr><tr><td>
+			            <p>Intensity</p>
+			          </td><td>
+			            <p>Controls the tone of the distortion. Note there are two Intensity modes - original and tuned.</p>
+			            <p>Low settings create a "soft" distortion, whereas higher settings make the distortion sound "bright".</p>
+			            <p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+			          </td></tr><tr><td>
+                        <p>Chop</p>
+                      </td><td>
+                        <p>Controls how a portion of the distortion dynamic range is removed. Low settings add a bit of edge to the signal, whereas higher settings introduce a lot of sonic mayhem.</p>
+							<p>In Single mode, there is only one "chop" in the audio signal. In Multi mode, there are several "chops".</p>
+                        <p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+                      </td></tr><tr><td>
+			            <p>Rectify</p>
+			          </td><td>
+			            <p>Reduces the amplitude of the negative portion of the audio wave cycle until it reaches zero at the maximum setting.</p>
+			            <p>The Rectify control operates independently from the Distortion Amount and Intensity controls.</p>
+			            <p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+			          </td></tr><tr><td>
+                        <p>Wobble</p>
+                      </td><td>
+                        <p>Modulates the signal level to introduce low-frequency signal distortion.</p>
+                        <p>The Wobble control operates independently from the Distortion Amount and Intensity controls.</p>
+                        <p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+                      </td></tr><tr><td>
+			            <p><span class="bold"><strong>EQ/Filter</strong></span></p>
+			          </td><td>
+			            <p>Applies an equalizer to the incoming audio signal. The EQ controls can be used to add or subtract signals at the selected frequency, at the selected amount (gain), over the selected bandwidth (Q).</p>
+			          </td></tr><tr><td>
+			            <p>Freq</p>
+			          </td><td>
+			            <p>The cut-off frequency used to add or subtract a portion of the audio signal.</p>
+			            <p>Default value: 1000<br>Slider range: 120 to 12,000 <br>Units: Hz</p>
+			          </td></tr><tr><td>
+			            <p>Q</p>
+			          </td><td>
+			            <p>The shape of the equalizer.</p>
+			            <p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+			          </td></tr><tr><td>
+			            <p>Gain</p>
+			          </td><td>
+			            <p>Applies a boost or cut to the audio signal.</p>
+			            <p>Default value: 0<br>Slider range: -12 to 12 <br>Units: dB</p>
+			          </td></tr><tr><td>
+							<p>Type</p>
+						</td><td>
+							<p>The type of equalizer or filter applied to the audio signal. You can select one of the following options:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>HPF - High-Pass Filter</p></li><li class="listitem"><p>EQ - Peaking filter</p></li><li class="listitem"><p>LPF - Low-Pass Filter</p></li></ul></div>
+						</td></tr><tr><td>
+							<p><span class="bold"><strong>SIM (Synthetic Impulse Model)</strong></span></p>
+						</td><td>
+							<p>Enables the SIM controls, which allows you to pick from a library of modeled sonic footprints of a variety of devices commonly used in video game production.</p>
+						</td></tr><tr><td>
+							<p>Device</p>
+						</td><td>
+							<p>Use the left and right arrows to cycle through the library of devices. Or click the device name to open a menu of all available devices organized by category. For example, within the Radios category, you will find the following devices:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>AM BoomBox</p></li><li class="listitem"><p>Black Transistor Radio</p></li><li class="listitem"><p>Portable Radio</p></li></ul></div>
+							<p>Other categories include Cell Phones, Ear Buds, Speakers, Toys, and Vehicles.</p>
+						</td></tr><tr><td>
+							<p>Tune</p>
+						</td><td>
+							<p>Varies the SIM's overall frequency response.</p>
+							<p>Default value:100<br>Slider range: 50 to 200 <br>Units: Percent</p>
+						</td></tr><tr><td>
+							<p><span class="bold"><strong>Lo-Fi</strong></span></p>
+						</td><td>
+							<p>Enables the Lo-Fi controls, which allows you to manipulate the audio signal by modifying the sample rate, bit depth, and amount of filtering.</p>
+						</td></tr><tr><td>
+							<p>Rate</p>
+						</td><td>
+							<p>Reduces the sample rate of the lo-fi effect.</p>
+							<p>Default value: Off <br>Range: 1,455 to 24,000</p>
+						</td></tr><tr><td>
+							<p>Filter</p>
+						</td><td>
+							<p>The amount of filtering applied to the lo-fi effect.</p>
+							<p>This option can be used to reduce some of the aliasing artifacts that are created by downsampling the Effect.</p>
+							<p>Default value: 0<br>Slider range: 0 to 100 <br>Units: Percent</p>
+						</td></tr><tr><td>
+							<p>Bits</p>
+						</td><td>
+							<p>The number of bits of information used to define each audio sample.</p>
+							<p>Default value: Off Range: 2 to 23</p>
+						</td></tr><tr><td>
+			            <p><span class="bold"><strong>Noise Generator</strong></span></p>
+			          </td><td>
+			            <p>Adds background noise to the incoming audio.</p>
+			          </td></tr><tr><td>
+			            <p>Level</p>
+			          </td><td>
+			            <p>The amount of noise applied to the input signal.</p>
+			            <p>Default value: -96<br>Range: -96 to 0<br>Units: dB</p>
+			          </td></tr><tr><td>
+			            <p>HPF</p>
+			          </td><td>
+			            <p>The High-Pass Filter cut-off frequency below which the audio signal is removed.</p>
+			            <p>Default value: 40<br>Slider range: 20 to 20,000 <br>Units: Hz</p>
+			          </td></tr><tr><td>
+			            <p>LPF</p>
+			          </td><td>
+			            <p>The Low-Pass Filter cut-off frequency above which the signal is removed.</p>
+			            <p>Default value: 18000<br>Slider range: 20 to 20,000 <br>Units: Hz</p>
+			          </td></tr><tr><td>
+			            <p>Duck</p>
+			          </td><td>
+			            <p>The level of the input signal at which noise level is reduced by the Range value specified.</p>
+			            <p>Default value: 0<br>Slider range: -40 to 0 <br>Units: dB</p>
+			          </td></tr><tr><td>
+			            <p>Range</p>
+			          </td><td>
+			            <p>The amount of noise level reduction applied to the input signal when it is above the Threshold level.</p>
+			            <p>Default value: -20<br>Slider range: -40 to 0 <br>Units: dB</p>
+			          </td></tr><tr><td>
+			            <p>Recovery</p>
+			          </td><td>
+			            <p>The rate at which noise ducking changes from full noise ducking to no noise level change.</p>
+			            <p>Default value: 20<br>Slider range: 2 to 200 <br>Units: Milliseconds</p>
+			          </td></tr><tr><td>
+			            <p><span class="bold"><strong>Hyper-Gate</strong></span></p>
+			          </td><td>
+			            <p>Applies a gate to the incoming audio signal. The gate controls allow you to remove unwanted background or low-level noise by attenuating the input signal once it falls below a threshold.</p>
+			          </td></tr><tr><td>
+			            <p>Threshold</p>
+			          </td><td>
+			            <p>The level of the input signal at which the signal level is reduced by the Range value specified.</p>
+			            <p>Default value: -40<br>Slider range: -80 to 0 <br>Units: dB</p>
+			          </td></tr><tr><td>
+			            <p>Range</p>
+			          </td><td>
+			            <p>The amount by which the signal level is reduced when it falls below the Threshold level.</p>
+			            <p>Default value: 0<br>Slider range: -80 to 0 <br>Units: dB</p>
+			          </td></tr><tr><td>
+							<p>Hold</p>
+						</td><td>
+							<p>The amount of time the gate remains open after the input level initially exceeds the Threshold level.</p>
+							<p>Default value: 10<br>Slider range: 0.1 to 100 <br>Units: Milliseconds</p>
+						</td></tr><tr><td>
+			            <p>Attack</p>
+			          </td><td>
+			            <p>The rate at which the gate opens and no longer reduces the signal level.</p>
+			            <p>Default value: 1 <br>Range: 0.1 to 100 <br>Units: Milliseconds</p>
+			          </td></tr><tr><td>
+			            <p>Release</p>
+			          </td><td>
+			            <p>The rate at which the gate closes and reduces the signal level.</p>
+			            <p>Default value: 100<br>Slider range: 0.1 to 1,000 <br>Units: Milliseconds</p>
+			          </td></tr><tr><td>
+			            <p>Out</p>
+			          </td><td>
+			            <p>Adjusts the level of the output signal.</p>
+			            <p>Default value: 0<br>Slider range: -24 to 24 <br>Units: dB</p>
+			          </td></tr><tr><td>
+			            <p>Mix</p>
+			          </td><td>
+			            <p>Defines the balance between the processed (wet) and original (dry) signals.</p>
+			            <p>Default value: 100 (Wet) <br>Range: 0 to 100 <br>Units: Percent</p>
+			          </td></tr></tbody></table></div></div><HR></body></html>

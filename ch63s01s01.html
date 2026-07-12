@@ -1,0 +1,123 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Capture Log Options</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s01.html" title="Capture Log"><link rel="prev" href="ch63s01.html" title="Capture Log"><link rel="next" href="ch63s01s02.html" title="Errors Reported in the Capture Log"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s01.html">Capture Log</a></span> &gt; <span class="breadcrumb-node">Capture Log Options</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="capture_log_filter"></a>Capture Log Options</h3></div></div></div><p>The Capture Log Options view allows you to include or remove entries from the Capture Log based on a series of filter options, such as item type, Wwise object name, and scope.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+                <p><span class="bold"><strong>Include Relations</strong></span></p>
+              </td></tr><tr><td>
+                <p>Playback Relation (dots column)</p>
+              </td><td>
+                <p>Shows all notifications occurring in the same Event as the target objects, even if they don't apply to the target object directly. This shows all elements linked by a blue bullet.</p>
+              </td></tr><tr><td>
+                <p>Game Object Relations</p>
+              </td><td>
+                <p>Will include everything that occurs on the same game object as the selected
+                  object. For example, let's say that you have selected Sound A as the filtered
+                  object and it plays on a Game Object that already has Sound B playing. It will add
+                  all playback relations pertaining to Sound B on that Game Object in the Capture
+                  Log view.</p>
+              </td></tr><tr><td>
+                <p>Parents and Busses when using Object Filter</p>
+              </td><td>
+                <p>Will include the notifications for all the hierarchical parents of the selected object and all the busses the children may be routed to.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Scope</strong></span></p>
+              </td></tr><tr><td>
+                <p>Global</p>
+              </td><td>
+                <p>Displays entries that apply to all game objects.</p>
+              </td></tr><tr><td>
+                <p>Game object</p>
+              </td><td>
+                <p>Only displays entries that apply to specific game objects.</p>
+              </td></tr><tr><td colspan="2"><a name="capture_log_types"></a>
+                <p><span class="bold"><strong>Types</strong></span></p>
+              </td></tr><tr><td>
+                <p>Notifications</p>
+              </td><td>
+                <p>Displays notifications from the sound engine. Notifications include the status of sound engine processing actions.</p>
+                <p>Examples: Event plays. Delay starts.</p>
+              </td></tr><tr><td>
+                <p>Markers</p>
+              </td><td>
+                <p>
+                  
+                  Displays audio file markers and Music Segment custom cues. 
+                </p>
+              </td></tr><tr><td>
+                <p>Events</p>
+              </td><td>
+                <p>
+                  
+                  Displays both Action Events and Dialogue Events triggered by Wwise or the game engine.
+                </p>
+              </td></tr><tr><td>
+                <p>Actions</p>
+              </td><td>
+                <p>Displays Event Actions.</p>
+              </td></tr><tr><td>
+                <p>Properties</p>
+              </td><td>
+                <p>Displays changes made to property values.</p>
+              </td></tr><tr><td>
+                <p>States</p>
+              </td><td>
+                <p>Displays state changes.</p>
+              </td></tr><tr><td>
+                <p>Switches</p>
+              </td><td>
+                <p>Displays Switch changes.</p>
+              </td></tr><tr><td>
+                <p>SoundBanks 
+                  </p>
+              </td><td>
+                <p>Displays SoundBank related information, including the name of the SoundBank.</p>
+              </td></tr><tr><td>
+                <p>Events Preparation</p>
+              </td><td>
+                <p>Displays Events and Game Syncs that have been prepared using the 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a98b617d05618e6d18680d198845ff3d7.html" target="_blank">
+                    <code class="code">PrepareEvent()</code></a>and 
+                  <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_ad5fc8ab51eecee6511d5c61b03659fa4.html" target="_blank">
+                    <code class="code">PrepareGameSyncs()</code></a>functions.</p>
+              </td></tr><tr><td>
+                <p>Errors</p>
+              </td><td>
+                <p>Displays any errors encountered by the sound engine.</p>
+              </td></tr><tr><td>
+                <p>Messages</p>
+              </td><td>
+                <p>Displays any messages sent by the sound engine. Messages generally convey issues or special information. These can be programmed in the game engine.</p>
+                <p>Examples: Unknown Event name. Main character walks.</p>
+              </td></tr><tr><td>
+                <p>MIDI Events 
+                  </p>
+              </td><td>
+                <p>Displays any MIDI Events played by the sound engine.</p>
+                <p>Information derived from the MIDI file is displayed as per the MIDI Events,
+                  and especially the Filters, in the <a class="link" href="ch61s01s03s06s01.html#wwiseobject_sound_midi">MIDI
+                    properties</a>. In sum, it shows which channel (1 - 16), which Event (Note-on
+                  or Note-off), which note, and the Velocity.</p>
+                
+              </td></tr><tr><td>
+                <p>API Calls 
+                  </p>
+              </td><td>
+                <p>Displays any API calls to the sound engine. These are listed in broad categories, which can be selected or cleared as desired, including the following:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__events.html" target="_blank">Events</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__rtpc.html" target="_blank">RTPCs</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__states.html" target="_blank">Game</a></p><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__switches.html" target="_blank">Game Syncs</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__gameobjects.html" target="_blank">Game Objects</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=soundengine__listeners.html" target="_blank">Listener Spatialization</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__3dpos.html" target="_blank">Positions</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=quickstart__sample__integration__environments.html" target="_blank">Auxiliary Bus</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=soundengine__obsocc.html" target="_blank">Obstruction/Occlusion</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__motion.html" target="_blank">Motion</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__midi.html" target="_blank">MIDI</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=integrating__elements__dynamicdialogue.html" target="_blank">Dynamic Sequence</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=spatial__audio.html" target="_blank">Spatial Audio</a></p></li><li class="listitem"><p><a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=workingwithsdks__integratingelements.html" target="_blank">Others</a></p></li></ul></div>
+                <p>Each listed call gives the applicable function and, if any, the passed parameters.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_reset.png"></div>
+              </td><td>
+                <p>Resets the dialog to the default settings.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_select_all.png"></div>
+              </td><td>
+                <p>Selects all Types in the list.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_select_none.png"></div>
+              </td><td>
+                <p>Clears the selection for all Types in the list.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s07s06.html" title="Filtering the Capture Log">Filtering the Capture Log</a>
+          </p></li></ul></div></div><HR></body></html>

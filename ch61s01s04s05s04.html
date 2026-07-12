@@ -1,0 +1,39 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>MIDI category: music objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s05.html" title="Common tabs and categories: music objects"><link rel="prev" href="ch61s01s04s05s03.html" title="Stingers tab: music objects"><link rel="next" href="ch61s01s04s05s05.html" title="Advanced category: music objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s05.html">Common tabs and categories: music objects</a></span> &gt; <span class="breadcrumb-node">MIDI category: music objects</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="midi_tab_music_objects"></a>MIDI category: music objects</h5></div></div></div><p>The properties in the MIDI category allow you to specify the target and tempo of the MIDI content
+				of a music object. The target can be any playable sound or motion object. The tempo can be specified 
+				as a global value for all MIDI content in the music object, or it can be obtained from the MIDI
+				files.</p><div class="informaltable"><a name="wwiseobject_musictrack_midi"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>M ID I</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>MIDI Target</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the MIDI target will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the MIDI target controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Target</p>
+	</td><td>
+		<p>The node in the Containers to which all MIDI Events are routed.</p>
+		<p>A track that contains a MIDI clip requires a MIDI target. The track, or one of its ancestors, must specify a MIDI target.</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>MIDI Clip Tempo</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the MIDI clip tempo will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the MIDI clip tempo controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Source</p>
+	</td><td>
+		<p>Determines the tempo used to play a MIDI clip.</p>
+		<p><span class="bold"><strong>Hierarchy</strong></span>-the tempo is obtained from the time settings of the clip&#8217;s ancestors.</p>
+		<p><span class="bold"><strong>File</strong></span>-the tempo is obtained from the clip&#8217;s original MIDI file.</p>
+		<p>Note that this setting is used when creating a MIDI clip to determine its duration. Changing this field after the clip is created changes the tempo used to interpret the clip, but does not change the clip&#8217;s duration. To change a MIDI clip&#8217;s duration, use the clip handles.</p>
+		<p>Default value: Hierarchy</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

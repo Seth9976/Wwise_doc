@@ -1,0 +1,51 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Similar Sound Search</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch53.html" title="Working with the Media Pool"><link rel="prev" href="ch53s01.html" title="Working with databases"><link rel="next" href="ch53s03.html" title="Media Pool metadata"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch53.html">Working with the Media Pool</a></span> &gt; <span class="breadcrumb-node">Similar Sound Search</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="similar_sound_search"></a>Similar Sound Search</h2></div></div></div><p>Similar Sound Search allows you to search for sounds in your Media Pool databases
+            using either a text query or a reference audio clip. This removes the need for keyword
+            tagging and time-consuming manual navigation through vast sound libraries. It was
+            designed specifically for sound effects and discovers unexpected matches that would be
+            difficult to find using conventional search methods. For example, a sound labeled
+            &#8220;smashing fruit&#8221; might be found as a match for the query &#8220;footsteps in mud.&#8221;</p><p>In particular, Similar Sound Search allows for:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Text-to-audio retrieval:</strong></span> In the list to
+                        the right of the Search field, select <span class="bold"><strong>Audio
+                            Description</strong></span> and then type a description of the desired sound.
+                        Results are ranked based only on their audio content.</p></li><li class="listitem"><p><span class="bold"><strong>Audio-to-audio retrieval:</strong></span> Right-click any
+                        file in the Results pane and click  <span class="bold"><strong>Find
+                            Similar</strong></span>. The sonic qualities of the file are used as a
+                        reference to find similar results.</p></li></ul></div><p>In both cases, Similar Sound Search provides a new way to find audio,
+            even if it was recorded for a different purpose. These two techniques enrich traditional
+            filtering, which depends on metadata, extending the possibilities of existing sound
+            libraries.</p><p>Similar Sound Search uses a non-generative machine learning model to place audio and
+            text into a shared search space where sounds are grouped by acoustic and semantic
+            similarity. It is an optional package you can add to Wwise using the Audiokinetic
+            Launcher.</p><p>For more information about how Audiokinetic uses this non-generative machine learning
+            model, see <a class="link" href="https://www.audiokinetic.com/en/solutions/use-of-ai" target="_blank">Use of Artificial
+                Intelligence</a>.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="install_similar_sound_search"></a>Installing Similar Sound Search</h3></div></div></div><p>Similar Sound Search is an option in the Packages menu when installing Wwise or
+                modifying a Wwise installation. It is disabled by default. When enabled, more CPU is
+                used during scanning of the Original and Media Pool files after opening a project.
+                Additionally, more disk space is used in the <code class="code">.cache</code> directory for the
+                project and for Media Pool databases.</p><p>To install Similar Sound Search:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>From the Audiokinetic Launcher Wwise page, do one of the
+                            following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Select a version of Wwise to install and click <span class="bold"><strong>Install</strong></span>.</p></li><li class="listitem"><p>From an installed version of Wwise, click <span class="bold"><strong>Install options</strong></span> (wrench icon) and
+                                    then select <span class="bold"><strong>Modify</strong></span>.</p></li></ul></div></li><li class="listitem"><p>In the Packages list, select <span class="bold"><strong>Similar Sound
+                                Search</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Next</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Install</strong></span> or <span class="bold"><strong>Modify</strong></span>.</p></li></ol></div><p>To use Similar Sound Search, you must enable it after installing it.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1580734048"></a>Enabling Similar Sound Search</h3></div></div></div><p>Similar Sound Search is disabled by default. To enable it:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project &gt; User
+                                Preferences</strong></span> (Shift+U).</p></li><li class="listitem"><p>In the Similarity Search group, select <span class="bold"><strong>Enable
+                                Similar Sound Search in Media Pool</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and
+                            close the dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1580720608"></a>Searching or filtering files using Similar Sound Search</h3></div></div></div><p>You can search and filter for similar files in the following two ways:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Audio Description</strong></span>: Ranks audio files
+                            in the Results pane using text-to-audio similarity. When you type a
+                            description of a sound, that description is compared directly to the
+                            audio content of all the files in the Results pane. This allows you to
+                            search for candidate sounds regardless of how they were labeled. For
+                            example, the description &#8220;footsteps in mud&#8221; might be highly similar to
+                            recordings labeled as &#8220;smashing fruit". </p></li><li class="listitem"><p><span class="bold"><strong>Audio Similarity</strong></span>: Ranks audio files
+                            in the Results pane using audio-to-audio similarity. The audio content
+                            of the reference sound is compared to all of the audio files in the
+                            Results pane.</p></li></ul></div><p>In both cases, the results are reordered based on their similarity score. Search
+                by Audio Description directly in the Search bar. Search for Audio Similarity in the
+                waveform. Search by both Audio Description and Audio Similarity using
+                filters.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1580713696"></a>To search by Audio Description in the Search bar</h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>From the <span class="bold"><strong>Selected Fields</strong></span> drop-down list,
+                        select <span class="bold"><strong>Audio Description</strong></span>.</p></li><li class="listitem"><p>Type in a phrase to describe the sound you are looking for. For example,
+                        "loud car crash".</p><p>The search dynamically returns files that sound similar to the description
+                        as type, the most similar being at the top of the Results pane.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1580703456"></a>To search by Audio Similarity in the waveform</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right-click the waveform of a file in the Results pane or in the Audio
+                        Preview/Region Selector and select <span class="bold"><strong>Find
+                            Similar</strong></span>.</p></li><li class="listitem"><p>Right-click a region in waveform of the Audio Preview/Region Selector and
+                        select <span class="bold"><strong>Find Similar (Region)</strong></span>.</p></li></ul></div><p>The results are reordered with the most similar to the waveform or region you
+                selected at the top of the Results pane.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="idm1580694240"></a>To search by creating filters for both Audio Similarity and Audio
+                Description</h3></div></div></div><p>You can create filters for both Audio Similarity and Audio Description. For more
+                information, see <a class="xref" href="ch53s01.html#filtering_media_pool_databases" title="Filtering databases">Filtering databases</a>.</p></div></div><HR></body></html>

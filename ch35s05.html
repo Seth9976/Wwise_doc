@@ -1,0 +1,140 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Understanding the voice pipeline</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch35.html" title="Managing output"><link rel="prev" href="ch35s04.html" title="Using loudness normalization or make-up gain to adjust volume"><link rel="next" href="ch35s06.html" title="Built-in Audio Devices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch35.html">Managing output</a></span> &gt; <span class="breadcrumb-node">Understanding the voice pipeline</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="understanding_voice_pipeline"></a>Understanding the voice pipeline</h2></div></div></div><p>The following diagrams and tables show how voices are processed, how they are routed, and
+			where the different volumes and Effects are applied. The first diagram illustrates the
+			case when <a class="glossterm" href="go01.html#glossary_3daudio"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_3daudio" title="3D audio">3D Audio</a></em></a> is not active. The
+			second diagram illustrates the case when 3D Audio is active. For information on applying
+			positioning to busses, see <a class="xref" href="ch23s05.html" title="Applying positioning to busses">Applying positioning to busses</a>.</p><div class="mediaobject"><img src="Images/VoicePipeline3DAudioNotActive.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td colspan="2" align="left">
+							<p><span class="bold"><strong>When 3D Audio is Not
+								Active</strong></span></p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout1.png"></div>
+						</td><td>
+							<p dir="ltr">These busses are configured <span class="bold"><strong>Same
+									as parent</strong></span> and have no Effects, so their values will
+								be applied to all items routed to them, but they themselves will not
+								mix or do any processing.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout2.png"></div>
+						</td><td>
+							<p dir="ltr">This bus is configured <span class="bold"><strong>Same as
+									parent</strong></span> and has Effects, so its behavior changes will
+								be based on whether or not 3D Audio is enabled.</p>
+						</td></tr></tbody></table></div><p>
+			</p><div class="mediaobject"><img src="Images/VoicePipeline3DAudioActive.png"></div><p>
+		</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td colspan="2" align="left">
+							<p><span class="bold"><strong>When 3D Audio is Active</strong></span></p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout1.png"></div>
+						</td><td>
+							<p dir="ltr">These busses are configured <span class="bold"><strong>Same
+									as parent</strong></span> and have no Effects, so their values will
+								be applied to all items routed to them, but they themselves will not
+								mix or do any processing.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout2.png"></div>
+						</td><td>
+							<p dir="ltr">This bus is configured <span class="bold"><strong>Same as
+									parent</strong></span> and has Effects, so its behavior changes will
+								be based on whether or not 3D Audio is enabled.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout3.png"></div>
+						</td><td>
+							<p dir="ltr">The Main Audio Bus is Processing Audio Objects, so no mixing
+								will occur on input. Effects will be applied to each object passing
+								through the bus. </p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout4.png"></div>
+						</td><td>
+							<p dir="ltr">The Audio Objects output by the Main Audio Bus are
+								triaged/mixed here according to their Metadata and what the Sink
+								plug-in supports. By default, Objects with 3D positions will be
+								triaged as System Audio Objects and will not be mixed. Objects
+								without 3D positions will be mixed according to their channel
+								configuration: Mono and Stereo objects will be mixed in the
+								Passthrough Mix, and all other objects will be mixed in the Main
+								Mix. This default behavior can be overridden by adding a Wwise
+								System Output Settings Metadata plug-in somewhere in the bus
+								hierarchy or to individual sources.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/Callout5.png"></div>
+						</td><td>
+							<p dir="ltr">Audio Device Effects are 3D Audio-aware Effects that
+								receive all 3D Audio data (Main Mix, Passthrough Mix, and System
+								Audio Objects) and apply the Effect to all of them in one execution
+								pass.</p>
+						</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="col1"><col width="770px" class="col2"></colgroup><thead><tr><th align="center">
+							<p>Gain #</p>
+						</th><th align="left">
+							<p>Description - Applicable when 3D Audio is active and not active</p>
+						</th></tr></thead><tbody><tr><td align="center">
+							<div class="mediaobject"><img src="Images/OrangeCallout1.png"></div>
+						</td><td>
+							<p>Volumes apply to all channels</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Voice Volume* (<span class="bold"><strong>Voice Volume</strong></span> parameters on busses and for auto-ducking are applied at this level)</p></li><li class="listitem"><p>Normalization and Makeup Gain</p></li><li class="listitem"><p>HDR attenuation</p></li><li class="listitem"><p>Occlusion</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Project Setting "Occlusion Volume curve"</p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a1b3e18a25b405e55ba82de9b70cd11ba.html" target="_blank">
+												
+												<code class="code">SetObjectObstructionAndOcclusion()</code>
+												
+												</a></p></li></ul></div></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a9b71daa02c5d398d08c9eb0643d52555.html" target="_blank">
+											
+												<code class="code">SetScalingFactor()</code>
+											
+										</a></p></li></ul></div>
+							<p>LPF property and Occlusion LPF curve (Project Settings)</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/OrangeCallout2.png"></div>
+						</td><td>
+							<p>Independent volumes per channel</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Positioning</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>2D panning and 3D positioning</p></li><li class="listitem"><p>Center%</p></li><li class="listitem"><p>Distance Attenuation Curve</p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_adf1401ce64872af26cdff05b36e98161.html" target="_blank">
+												<code class="code">SetGameObjectOutputBusVolume()</code>
+												</a></p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a789e25bda32d1e11849afb6584942455.html" target="_blank">
+												<code class="code">SetPosition()</code>
+												</a></p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af723c685e94599084916e14874e5aaab.html" target="_blank">
+												<code class="code">SetMultiplePositions()</code>
+												</a>
+											</p></li></ul></div></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a3e3e9e5335df01fca37f9b3ed518e2bd.html" target="_blank">
+											<code class="code">SetListenerSpatialization()</code>
+										</a></p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject" align="center"><img src="Images/OrangeCallout3.png" align="middle"></div>
+						</td><td>
+							<p>"Dry Path"</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Output Bus Volume (+ RTPC)</p></li><li class="listitem"><p>Distance Attenuation Curve "Output Bus Volume"</p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_adf1401ce64872af26cdff05b36e98161.html" target="_blank">
+											<code class="code">SetGameObjectOutputBusVolume()</code>
+										</a></p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_speaker_volume_matrix_callback_info.html" target="_blank">
+                   <code class="code">AkSpeakerVolumeMatrixCallbackInfo()</code>
+                  </a></p></li><li class="listitem"><p>Obstruction</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Project Setting "Obstruction Volume curve"</p></li><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a1b3e18a25b405e55ba82de9b70cd11ba.html" target="_blank">
+												<code class="code">SetObjectObstructionAndOcclusion()</code>
+												</a></p></li></ul></div></li><li class="listitem"><p>Parent Bus without effects inserted: Volume* </p></li></ul></div>
+							<p>Obstruction LPF curve (Project Settings)</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject" align="center"><img src="Images/OrangeCallout4.png" align="middle"></div>
+						</td><td>
+							<p>"Wet Path"  
+							</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="inlinemediaobject"><img src="Images/OrangeCallout4a.png" align="middle"></span> - Distance Attenuation Curve "Aux Send
+										Volumes"</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_speaker_volume_matrix_callback_info.html" target="_blank">
+                       <code class="code">AkSpeakerVolumeMatrixCallbackInfo()</code>
+                      </a>
+                    </p></li></ul></div></li><li class="listitem"><p><span class="inlinemediaobject"><img src="Images/OrangeCallout4b.png" align="middle"></span> - User-Defined Auxiliary Sends Volumes
+										(+ RTPC)</p></li><li class="listitem"><p><span class="inlinemediaobject"><img src="Images/OrangeCallout4c.png" align="middle"></span> - Game-Defined Auxiliary Sends Volume
+										(+ RTPC)</p></li><li class="listitem"><p><span class="inlinemediaobject"><img src="Images/OrangeCallout4d.png" align="middle"></span> - API: <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af960fca0239e219b9d08c2659fe9e5d4.html" target="_blank">
+											
+												<code class="code">SetGameObjectAuxSendValues()</code>
+											
+										</a>
+									</p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/OrangeCallout5.png"></div>
+						</td><td>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Bus Volume**</p></li><li class="listitem"><p>Positioning</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>2D panning and 3D positioning</p></li><li class="listitem"><p>Center %</p></li><li class="listitem"><p>Distance Attenuation Curve</p></li></ul></div></li><li class="listitem"><p>API:<a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_speaker_volume_matrix_callback_info.html" target="_blank">
+                   <code class="code">AkSpeakerVolumeMatrixCallbackInfo()</code>
+                  </a>
+                </p></li><li class="listitem"><p>Parent Bus without Effects inserted: Bus Volume**</p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/OrangeCallout6.png"></div>
+						</td><td>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Bus Volume**</p></li><li class="listitem"><p>Positioning</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>2D panning and 3D positioning</p></li><li class="listitem"><p>Center %</p></li><li class="listitem"><p>Distance Attenuation Curve</p></li></ul></div></li><li class="listitem"><p>Parent Bus without Effects inserted: Bus Volume**  </p></li></ul></div>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/OrangeCallout7.png"></div>
+						</td><td>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Bus Volume**</p></li></ul></div>
+						</td></tr></tbody></table></div><p>* Voice Volume = Slider + RTPC + State + Set Voice Volume action</p><p>** Bus Volume = Slider + RTPC + State + Set Bus Volume action</p></div><HR></body></html>

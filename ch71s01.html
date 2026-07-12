@@ -1,0 +1,138 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effect Editor - McDSP ML1 Mastering Limiter Effect plug-in</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch71.html" title="McDSP ML1 Mastering Limiter"><link rel="prev" href="ch71.html" title="McDSP ML1 Mastering Limiter"><link rel="next" href="ch71s02.html" title="A closer look at the ML1 Mastering Limiter plug-in"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt10.html">Certified Partner plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch71.html">McDSP ML1 Mastering Limiter</a></span> &gt; <span class="breadcrumb-node">Effect Editor - McDSP ML1 Mastering Limiter Effect plug-in</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="effect_editor_mcdsp_ml1_mastering_limiter_effect_plug_in"></a>Effect Editor - McDSP ML1 Mastering Limiter Effect plug-in</h2></div></div></div><p>The Effect Editor displays all the properties associated with the McDSP ML1 Mastering Limiter plug-in.</p><p>For a general overview of the McDSP ML1 Mastering Limiter plug-in, refer to <a class="xref" href="ch71.html" title="McDSP ML1 Mastering Limiter"><i>McDSP ML1 Mastering Limiter</i></a>. For more detailed information, refer to the <a class="link" href="https://mcdsp.com/plugin-index/ml4000/" target="_blank">McDSP website</a>. Note that the Wwise implementation of the McDSP ML1 Mastering effect might differ slightly from the one discussed on their website.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The algorithm used in Audiokinetic's version of the McDSP ML1 Mastering Limiter is slightly different from the ProTools implementation. The changes were made to accommodate certain conditions where overloaded input signals (up to +12 dB) could not be handled without producing significant clipping distortion in the output.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+							<p>Ceiling</p>
+						</td><td>
+							<p>Specifies the maximum output signal level.</p>
+							<p>Default value: 0<br>Slider range: -36 to 0 <br>Units:
+								dB</p>
+						</td></tr><tr><td>
+							<p>Thresh</p>
+						</td><td>
+							<p>The signal level at which the limiter begins to detect input
+								signal peaks. The difference between the Ceiling and the Threshold
+								is the maximum makeup gain of the limiter.</p>
+							<p>Default value: 0<br>Slider range: -36 to 0 <br>Units:
+								dB</p>
+						</td></tr><tr><td>
+							<p>Knee</p>
+						</td><td>
+							<p>Specifies the limiting action transition, where 0 produces a
+								normal, hard knee, and 100 produces a soft knee.</p>
+							<p>The Knee control modifies the gain structure of the limiter in an
+								effort to reduce the distortion while maximizing output levels.
+								Increasing the Knee control will add a soft shape to the limiting
+								response curve.</p>
+							<p>Default value: 0<br>Slider range: 0 to 100 <br>Units:
+								Percent</p>
+						</td></tr><tr><td>
+							<p>Release</p>
+						</td><td>
+							<p>The rate at which the limiter recovers from reducing a signal
+								peak. Shorter release times increase overall output signal
+								levels.</p>
+							<p>Default value: 10<br>Slider range: 1 to 5,000 <br>Units:
+								Milliseconds</p>
+						</td></tr><tr><td>
+							<p>Mode</p>
+						</td><td>
+							<p>The type of secondary detection used to create various limiting
+								styles to suit a variety of input signals and applications. You have
+								the following options:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Clean</strong></span> - The most
+										transparent limiter mode. Signal levels are adjusted with
+										the least amount of measurable distortion.</p></li><li class="listitem"><p><span class="bold"><strong>Soft</strong></span> - Sightly louder
+										than the Clean mode, however, also very transparent.</p></li><li class="listitem"><p><span class="bold"><strong>Smart</strong></span> - Intelligent
+										limiting minimizing signal distortion while increasing
+										signal levels more than the Soft mode.</p></li><li class="listitem"><p><span class="bold"><strong>Dynamic</strong></span> - Louder than the
+										Smart mode, and adding a hint of compression pumping under
+										certain conditions.</p></li><li class="listitem"><p><span class="bold"><strong>Loud</strong></span> - As loud as
+										possible while keeping signal distortion minimal.</p></li><li class="listitem"><p><span class="bold"><strong>Crush</strong></span> - Louder than the
+										Loud mode, with some signal distortion.</p></li></ul></div>
+						</td></tr><tr><td>
+							<p>(VU Meters)</p>
+						</td><td>
+							<p>A series of meters that display the different levels of the audio
+								signal, including input levels, output levels, and gain reduction
+								levels applied to signal peaks.</p>
+							<p>To enable the VU meters, you must click the Start Capture button
+								in the Wwise toolbar.</p>
+							<p>The VU meters only work when the ML1 effect has been applied to a
+								bus in the Busses hierarchy. In the case of a ShareSet, the
+								bus must be selected in the Shared by list of the Effect
+								Editor.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Left and Right channels in the meter are only a true
+									representation when the Effect is used on a stereo bus. For all
+									other configurations, the Right channel is not used and the peak
+									is represented on the Left channel.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>In</p>
+						</td><td>
+							<p>Displays the level of the incoming audio signal.</p>
+						</td></tr><tr><td>
+							<p>GR</p>
+						</td><td>
+							<p>Displays the amount of gain reduction applied to the signal
+								peaks.</p>
+						</td></tr><tr><td>
+							<p>Out</p>
+						</td><td>
+							<p>Displays the level of the audio output.</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

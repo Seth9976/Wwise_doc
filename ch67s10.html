@@ -1,0 +1,183 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Guitar Distortion</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s09.html" title="Gain"><link rel="next" href="ch67s11.html" title="Harmonizer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Guitar Distortion</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_guitar_distortion_plug_in"></a>Guitar Distortion</h2></div></div></div><p>The Guitar Distortion plug-in is built into Wwise. For information on applying it to
+    objects, see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>(See the <a class="xref" href="ch67s10.html#guitar_distortion_plug_in_properties" title="Guitar Distortion properties">Guitar Distortion properties</a> below.) </p><p>Distortion is a form of non-linear processing that alters the shape of the waveform and introduces frequency components not present in the original signal. The Guitar Distortion plug-in mimics the behavior of commonly encountered distortion 'stomp boxes' to obtain typical guitar distortion sounds.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="distortion_types"></a>Distortion types</h3></div></div></div><p>The Guitar Distortion plug-in provides several flavors of distortion algorithms. The following transfer function figures show how different distortion types affect the signals. In these figures, when there is no distortion, the transfer function (on the left) shows that output amplitude is always the same as the input amplitude. The output of the algorithm when fed a sine wave (on the right) is not distorted.</p><div class="mediaobject"><img src="Images/Plugins/Distortion/DistortionNone.png"></div><p></p><div class="mediaobject"><img src="Images/Plugins/Distortion/DistortionClip.png"></div><p>Distortion type 'Clip'  clamps the levels symmetrically for negative and positive values with a hard knee transition (that is, no transition) when the amplitude reaches the overload level.</p><div class="mediaobject"><img src="Images/Plugins/Distortion/DistortionOverDrive.png"></div><p>Distortion type 'Overdrive' clamps the levels symmetrically for negative and positive values with a soft knee transition that slowly progresses towards total clipping when the amplitude reaches the overload level.</p><div class="mediaobject"><img src="Images/Plugins/Distortion/DistortionHeavy.png"></div><p>Distortion type 'Heavy' clamps the levels symmetrically for negative and positive values with a soft knee transition that slowly progresses towards total clipping when the amplitude reaches the overload level. The transfer function is more abrupt around zero values so that more sustain is achieved. This is typically used with higher values of drive parameter to get a heavy metal kind of distortion.</p><div class="mediaobject"><img src="Images/Plugins/Distortion/DistortionFuzz.png"></div><p>Distortion type 'Fuzz' clamps the levels asymmetrically for negative and positive values. It uses a soft knee transition that slowly progresses towards total clipping for negative amplitudes and a hard knee at higher level amplitude threshold for positive values. This type of distortion is more suited for monophonic solo type materials as it rapidly becomes very inharmonic when fed complex polyphonic tones. The additional tone parameter primarily controls the soft knee for negative amplitudes (figure uses a Tone parameter set to 10).</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_guitar_distortion_plug_in_rectification"></a>Rectification</h3></div></div></div><p>
+      </p><div class="mediaobject"><img src="Images/Plugins/Distortion/HalfWaveRectification.png"></div><p>
+      </p><p>The rectification parameter can perform half-wave rectification for parameter values up to 50% and full-wave rectification for parameter values between 50% and 100%. Half Wave rectification prevents the negative portion of the signal from going lower than a certain amplitude; for example, changing from -1 to 0 based on rectification control with 0% applying no half-wave rectification and 50% not allowing completely clipping negative signals.</p><div class="mediaobject"><img src="Images/Plugins/Distortion/FullWaveRectification.png"></div><p>Full-wave rectification goes further and makes the negative portion of the input signal gradually more positive based on the rectification parameter value. At 100%, full-wave rectification is achieved and the negative portion of the signal is essentially flipped in polarity. This has the effect of doubling the fundamental frequency of the signal and can be used as an 'octaver' Effect.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="equalizer_controls"></a>Equalizer controls</h3></div></div></div><p>Because distortion is a non-linear process (that is, applying a gain prior to the distortion is not equivalent to applying it after), it follows that frequency specific gains used when filtering also have a different effect when applied before or after the distortion algorithm. In fact, it is quite common to filter a signal in a way (for example, boost low frequencies) to get the distortion algorithm to behave in a desired way and then filter out the same frequency region afterwards to cancel the overall filtering effect that was applied prior to the distortion. For this reason, a fully fledged parametric EQ is provided before and after the distortion process to be able to customize the behavior of the distortion and obtain many different flavors of distortion.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="guitar_distortion_plug_in_properties"></a>Guitar Distortion properties</h3></div></div></div><p>The Guitar Distortion plug-in contains a series of properties, many of which can be edited in real time and can be mapped to specific Game Parameters using RTPCs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+                 <p>
+                   <span class="bold"><strong>Pre-Distortion EQ</strong></span>
+                 </p>
+               </td></tr><tr><td>
+		<p>Pre-Distortion EQ Band Enable</p>
+	</td><td>
+		<p>Enables the EQ band when selected.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Pre-Distortion EQ Band Curve</p>
+	</td><td>
+		<p>Determines the type of filtering that can be applied to the signal in a given EQ band. The following filters are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low Pass</strong></span> to provide a fixed sloped attenuation of high frequencies from a specified frequency. Below this point the signal is almost unaffected but higher frequencies are progressively more attenuated past the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>High Pass</strong></span> to provide a fixed slope attenuation of low frequencies from a specified frequency. Above this point the signal is almost unaffected while lower frequencies are progressively more attenuated below the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>Band Pass</strong></span> to reject all frequencies around the specified center frequency. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Notch</strong></span> to provide a fixed attenuation of a specified frequency range with a varying width. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Low Shelf</strong></span> to provide gain/attenuation for a specified range of low frequencies. This curve type is also known as Bass Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>High Shelf</strong></span> to provide gain /attenuation for a specified range of high frequencies. This curve type is also known as Treble Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>Peaking</strong></span> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q.</p></li></ul></div>
+		<p>Default value: Low Shelf</p>
+	</td></tr><tr><td>
+		<p>Pre-Distortion EQ Band Gain</p>
+	</td><td>
+		<p>The amount of the amplification of the audio signal for the selected frequency band. Increasing this value &#8220;boosts&#8221; the audio signal. Decreasing this value &#8220;cuts&#8221; or attenuates the audio signal.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Gain controls are not available when the Low Pass, High Pass, Notch, and Band Pass curves have been selected because these filter types have their passband normalized at 0 dB.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -48 to 48</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Pre-Distortion EQ Band Frequency</p>
+	</td><td>
+		<p>The portion of the frequency spectrum that will be affected by the gain.</p>
+		<p>Default value: 1000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>Pre-Distortion EQ Band Quality Factor</p>
+	</td><td>
+		<p>The area around the center frequency that will be affected by the change in gain. A low Q value means that the bandwidth range will be wide, and conversely a high Q value means that the bandwidth range will be narrow.</p>
+		<p>This control is not available when the Low Pass, High Pass, Low Shelf, and High Shelf curves have been selected.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.1 to 20</p>
+	</td></tr><tr><td colspan="2"><p><span class="bold"><strong>Distortion</strong></span></p></td></tr><tr><td>
+		<p>Type</p>
+	</td><td>
+		<p>The type of distortion algorithm that will be applied. The following options are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>None</strong></span>: No distortion will be applied.</p></li><li class="listitem"><p><span class="bold"><strong>Overdrive</strong></span>: Smooth, blues type distortion.</p></li><li class="listitem"><p><span class="bold"><strong>Heavy</strong></span>: Hard distortion introducing lots of high frequency harmonics.</p></li><li class="listitem"><p><span class="bold"><strong>Clip</strong></span>: Hard clipping with no transition. Often leads to unpleasant static noise (clipping distortion).</p></li><li class="listitem"><p><span class="bold"><strong>Fuzz</strong></span>: Asymmetrical hard and soft clipping with different thresholds for positive and negative values. This type of distortion introduces many harmonics and may quickly sound inharmonic with complex tonal input.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Drive</p>
+	</td><td>
+		<p>This parameter scales the input signal prior to the evaluation of the transfer function. It can be thought as the amount of distortion that will be applied.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Tone</p>
+	</td><td>
+		<p>Changes the transfer function as specified in the text above.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This parameter only has an effect when the distortion type is set to Fuzz.</p></td></tr></table></div>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Distortion Rectification</p>
+	</td><td>
+		<p>
+			Amount of half-wave or full-wave rectification that will affect the negative portions of the input signal. Refer to 
+			<a class="link" href="ch67s10.html#wwise_guitar_distortion_plug_in_rectification" title="Rectification">Rectification</a>
+			 for more details.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>Output</strong></span>
+              </p></td></tr><tr><td>
+		<p>Output Gain</p>
+	</td><td>
+		<p>The amount of gain applied to the output signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Wet/Dry Mix</p>
+	</td><td>
+		<p>Controls the balance between the wet path (the output of the Effect) and the dry path (the input of the Effect). A value of 0 yields the original signal unaffected by the Effect while the a value of 100 outputs only the output of the Effect.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>Post-Distortion EQ</strong></span>
+              </p></td></tr><tr><td>
+		<p>Post-Distortion EQ Band Enable</p>
+	</td><td>
+		<p>Enables the EQ band when selected.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Post-Distortion EQ Band Curve</p>
+	</td><td>
+		<p>Determines the type of filtering that can be applied to the signal in a given EQ band. The following filters are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low Pass</strong></span> to provide a fixed sloped attenuation of high frequencies from a specified frequency. Below this point the signal is almost unaffected but higher frequencies are progressively more attenuated past the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>High Pass</strong></span> to provide a fixed slope attenuation of low frequencies from a specified frequency. Above this point the signal is almost unaffected while lower frequencies are progressively more attenuated below the cutoff frequency point.</p></li><li class="listitem"><p><span class="bold"><strong>Band Pass</strong></span> to reject all frequencies around the specified center frequency. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Notch</strong></span> to provide a fixed attenuation of a specified frequency range with a varying width. The range of frequencies around the center is controlled by the Q.</p></li><li class="listitem"><p><span class="bold"><strong>Low Shelf</strong></span> to provide gain/attenuation for a specified range of low frequencies. This curve type is also known as Bass Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>High Shelf</strong></span> to provide gain /attenuation for a specified range of high frequencies. This curve type is also known as Treble Tone Control.</p></li><li class="listitem"><p><span class="bold"><strong>Peaking</strong></span> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q.</p></li></ul></div>
+		<p>Default value: Low Shelf</p>
+	</td></tr><tr><td>
+		<p>Post-Distortion EQ Band Gain</p>
+	</td><td>
+		<p>The amount of the amplification of the audio signal for the selected frequency band. Increasing this value &#8220;boosts&#8221; the audio signal. Decreasing this value &#8220;cuts&#8221; or attenuates the audio signal.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Gain controls are not available when the Low Pass, High Pass, Notch, and Band Pass curves have been selected because these filter types have their passband normalized at 0 dB.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -48 to 48</p>
+		<p>Units: dB </p>
+	</td></tr><tr><td>
+		<p>Post-Distortion EQ Band Frequency</p>
+	</td><td>
+		<p>The portion of the frequency spectrum that will be affected by the gain.</p>
+		<p>Default value: 1000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>Post-Distortion EQ Band Quality Factor</p>
+	</td><td>
+		<p>The area around the center frequency that will be affected by the change in gain. A low Q value means that the bandwidth range will be wide, and conversely a high Q value means that the bandwidth range will be narrow.</p>
+		<p>This control is not available when the Low Pass, High Pass, Low Shelf, and High Shelf curves have been selected.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.1 to 20</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

@@ -1,0 +1,124 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with the Property Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch46.html" title="Getting to know the Property Editor"><link rel="prev" href="ch46s10.html" title="All category"><link rel="next" href="ch47.html" title="Getting to know the Contents Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch46.html">Getting to know the Property Editor</a></span> &gt; <span class="breadcrumb-node">Working with the Property Editor</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="working_with_property_editor"></a>Working with the Property Editor</h2></div></div></div><p>The Property Editor may contain a series of options, fields, sliders, lists, buttons, and a graph view that you can use to define the properties and behaviors of the different objects and game syncs within your project. If you require help using these tools, refer to the following sections:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch04.html#using_text_boxes" title="Using text boxes and sliders">Using text boxes and sliders</a></p></li><li class="listitem"><p><a class="xref" href="ch04.html#using_lists" title="Using lists">Using lists</a></p></li><li class="listitem"><p><a class="xref" href="ch50.html" title="Getting to know the graph view"><i>Getting to know the graph view</i></a></p></li></ul></div><p>When modifying a property value in the Property Editor, you may have the option of applying a randomizer and/or linking or unlinking the value across platforms.  These features are represented in Wwise by a unique icon. Wwise also indicates whether a property value is assigned to a Game Parameter using an RTPC. The different icons are described in the following table. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+							<p>Icon</p>
+						</th><th>
+							<p>Name</p>
+						</th><th>
+							<p>Description</p>
+						</th></tr></thead><tbody><tr><td>
+              <p>
+                </p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="16"><tr style="height: 13px"><td align="center"><img src="Images/link_and_inclusion_check_box.png" align="middle" width="16"></td></tr></table></div><p>
+                
+              </p>
+            </td><td>
+              <p>
+                Inclusion
+              </p>              
+            </td><td>
+              <p>
+                Determines whether the element is included or excluded. When selected, the element is included. When unselected, the element is not included. 
+                  By default, this applies across all platforms. Use the <a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a> (to the left of the check box) to determine or to set platform-specific customizations.
+                
+              </p>
+              <p>When this option is unselected, the property and behavior options in the Property Editor become unavailable.</p>
+            </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_icon.png"></div>
+      </td><td>
+        <p>Link</p>
+      </td><td>
+        <p>The property value is linked to the values of other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Unlink_icon.png"></div>
+      </td><td>
+        <p>Unlink</p>
+      </td><td>
+        <p>The property value is not linked to the values of the other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_Half_icon.png"></div>
+      </td><td>
+        <p>Partial Unlink</p>
+      </td><td>
+        <p>The property value for the current platform is linked to the other active platforms, but one or more corresponding values of other platforms are unlinked.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/unlink_icon_multiplevalues.png"></div>
+      </td><td>
+        <p>Link Mixed</p>
+      </td><td>
+        <p>Some of the selected objects have different link statuses. Some may be linked, while others are unlinked or partially unlinked.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_Off.png"></div>
+      </td><td>
+        <p>RTPC Disabled</p>
+      </td><td>
+        <p>This property value is not tied to an in-game parameter value.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_On.png"></div>
+      </td><td>
+        <p>RTPC Enabled</p>
+      </td><td>
+        <p>An in-game parameter value is tied to this property value. This means, for example, that the speed of a car in-game can be tied directly to the pitch property in Wwise. As the speed of the car increases in-game, the pitch in Wwise will increase in real time.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_MultipleValues.png"></div>
+      </td><td>
+        <p>RTPC Mixed</p>
+      </td><td>
+        <p>
+          In-game parameter values are tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Enable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Enabled</p>
+      </td><td>
+        <p>A property value to which a Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Disable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Disabled</p>
+      </td><td>
+        <p>A property value to which no Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Randomizer_Mixed.png"></div>
+      </td><td>
+        <p>Randomizer Mixed</p>
+      </td><td>
+        <p>A Randomizer effect applies to the property value of one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+        
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Off.png"></div>
+      </td><td>
+        <p>State Disabled</p>
+      </td><td>
+        <p>This property value is not tied to a State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_On.png"></div>
+      </td><td>
+        <p>State Enabled</p>
+      </td><td>
+        <p>A State Group is tied to this property value. This means, that the property in question, such as the Volume, may change according to the applied State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Mixed.png"></div>
+      </td><td>
+        <p>State Mixed</p>
+      </td><td>
+        <p>A State Group is tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="randomizing_property_values"></a>Randomizing property values</h3></div></div></div><p>To enhance the realism of the sounds within the game, you can apply Randomizers to most of the property values within the Property Editor. The Randomizer specifies a possible range of values that can be used for a particular property. Each time the object is played, Wwise selects a different property value within the specified range. Applying Randomizers to each of the different property values will ensure that the object will sound differently each time it is played. </p><p>For more information on Randomizers and how to use them, refer to <a class="xref" href="ch12s05.html" title="Enhancing playback by randomizing property values">Enhancing playback by randomizing property values</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="linking_unlinking_property_values"></a>Linking or unlinking property values</h3></div></div></div><p>Wwise also allows you to simultaneously author on several platforms by linking and unlinking most of the property values associated with an object. By default, all property values across active platforms are linked and, therefore, set to the same value. Unlinking a property value allows you to customize it for a particular platform.</p><div class="mediaobject"><img src="Images/property_indicators.png"></div><p>For more information on linking and unlinking property values, refer to <a class="xref" href="ch36s01.html#customizing_object_properties_per_platform" title="Customizing object properties per platform">Customizing object properties per platform</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="assigning_property_values_to_game_parameters"></a>Assigning property values to Game Parameters</h3></div></div></div><p>As previously mentioned, you can assign Game Parameters to specific property values in Wwise. These are called real-time parameter controls (RTPCs). Wwise gives you visual feedback on which properties have been assigned as an RTPC. When a property value is assigned to a Game Parameter, the property's RTPC indicator turns a theme-specific color (e.g. blue in Classic and orange in Dark).</p><div class="mediaobject"><img src="Images/rtpc_indicator.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>RTPC in use.</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout2.png"></div>
+							</td><td>RTPC not in use.</td></tr></tbody></table></div><p>For more information on using RTPCs, refer to <a class="xref" href="ch19s03.html" title="Controlling property values using Game Parameters">Controlling property values using Game Parameters</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="displaying_project_element_properties"></a>Displaying a project element's properties</h3></div></div></div><p>The Property Editor displays all the properties associated with a particular project
+				element within your project. You can load a particular object into the Property
+				Editor by double-clicking the object in a number of different views, such as the
+				Audio tab of the Project Explorer, the Contents Editor, and the Capture Log. You can
+				load a Game Sync into the Property Editor by double-clicking any one of the
+				following in the Game Syncs tab of the Project Explorer:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Switch Group</p></li><li class="listitem"><p>Switch</p></li><li class="listitem"><p>State Group</p></li><li class="listitem"><p>State</p></li><li class="listitem"><p>Game parameter</p></li><li class="listitem"><p>Trigger</p></li></ul></div><div class="orderedlist"><p class="title"><b>To display a project element's properties from the Designer layout:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Designer layout, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Select an object in the Audio tab of the Project Explorer.</p></li><li class="listitem"><p>Select a game sync in the Game Syncs tab of the Project Explorer.</p></li></ul></div><p>The following occurs:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The object's properties are displayed in the Property Editor.</p></li><li class="listitem"><p>All child objects contained within the object or Game Sync are displayed in the Contents Editor.</p></li></ul></div><div class="mediaobject"><img src="Images/ce_display_objects.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+										<div class="mediaobject"><img src="Images/Callout1.png"></div>
+									</td><td>
+										<p>Select an object in the Audio tab of the Project Explorer.</p>
+									</td></tr><tr><td align="center">
+										<div class="mediaobject"><img src="Images/Callout2.png"></div>
+									</td><td>
+										<p>The object is loaded in the Property Editor.</p>
+									</td></tr><tr><td align="center">
+										<div class="mediaobject"><img src="Images/Callout3.png"></div>
+									</td><td>
+										<p>Its child objects are loaded in the Contents Editor.</p>
+									</td></tr></tbody></table></div></li></ol></div></div></div><HR></body></html>

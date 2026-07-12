@@ -1,0 +1,185 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Source Editor: Audio Sources</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01.html" title="Audio tab"><link rel="prev" href="ch61s01s05s12.html" title="Advanced category: sound and motion objects"><link rel="next" href="ch61s01s07.html" title="Speaker Panner"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-node">Source Editor: Audio Sources</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="source_editor"></a>Source Editor: Audio Sources</h3></div></div></div><p>The Source Editor for audio sources, different from the <a class="link" href="ch61s01s03s14.html" title="Source Editor: plug-ins">Source Editor for plug-ins</a>, can be opened
+				from the <a class="xref" href="ch61s01s03s12.html" title="Contents Editor: Sound SFX">Contents Editor: Sound SFX</a>, the <a class="xref" href="ch61s01s04s07.html" title="Contents Editor: Music Track">Contents Editor: Music Track</a>, or the <a class="xref" href="ch61s01s03s13.html" title="Contents Editor: Sound Voice">Contents Editor: Sound Voice</a>. Just double-click the audio
+				source icon or use the keyboard shortcut (Shift + X by default). </p><div class="mediaobject"><img src="Images/open_source_editors.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>Open audio source Source Editor</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout2.png"></div>
+							</td><td>Open plug-in Source Editor</td></tr></tbody></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Soundseed Grain, a premium plug-in that provides a granular synthesizer to Wwise users, is unlike other plug-ins in that it has a Source tab. Essentially, it is the same as the Source Editor for audio sources. However, in addition to the information provided in this page, Soundseed Grain users should consult <a class="xref" href="ch66s12s02.html#ssg_source_settings" title="Source settings">Source settings</a> for details on features specific to Soundseed Grain.</p></td></tr></table></div><p>It contains information about the audio source, including the filename and
+				duration of the audio file. An audio source is a separate abstraction layer between
+				the audio file and the object. The audio source is created and linked to the
+				original audio file when it is imported into your project.</p><p>For more information about the Source Editor, refer to <a class="xref" href="ch22s01s01.html" title="Editing audio sources with the Source Editor">Editing audio sources with the Source Editor</a>. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+								<p>Audio Source Properties</p>
+							</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td>
+								<p>[source name]</p>
+							</td><td>
+								<p>The name of the audio source file.</p>
+							</td></tr><tr><td>
+		<p>Notes</p>
+	</td><td>
+		<p>Any additional information about the object properties.</p>
+	</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+								<p>Source Tab</p>
+							</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2"><a name="graph_view_row"></a>
+								<p><span class="bold"><strong>Graph View</strong></span> (Refer to <a class="xref" href="ch50.html" title="Getting to know the graph view"><i>Getting to know the graph view</i></a> for an
+									overview.)</p>
+							</td></tr><tr><td align="center">
+								<p>Waveform</p>
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="111"><tr style="height: 170px"><td><img src="Images/waveform.png" width="111"></td></tr></table></div>
+							</td><td>
+								<p>Shows the contents of the PCM (WAV or AMB) file, in <a class="link" href="ch61s01s06.html#mode">Peak or RMS mode</a>, over a
+									timeline.</p>
+								<p>For more information on channel names and configurations,
+									refer to <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>.</p>
+							</td></tr><tr><td align="center">
+								<p>Envelope Edit - HDR</p>
+								<div class="mediaobject"><img src="Images/envelope_edit_HDR.png"></div>
+								<br>
+								<div class="mediaobject"><img src="Images/HDR_envelope.png"></div>
+							</td><td>
+								<p>Defines if the editing of the HDR envelope is enabled or not.
+									For this option to appear, the following conditions must be
+									present:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Parent object is routed to an HDR-enabled bus</p></li><li class="listitem"><p>Parent object enables the Envelope Tracking</p></li></ul></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/clip_fade_in_handle.png"></div>
+								<p>Fade-in handle</p>
+							</td><td>
+								<p>Defines a fade-in region. The fade-in curve can be
+									right-clicked to select which fade curve to apply.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/clip_fade_out_handle.png"></div>
+								<p>Fade-out handle</p>
+							</td><td>
+								<p>Defines a fade-out region. The fade-out curve can be
+									right-clicked to select which fade curve to apply.</p>
+							</td></tr><tr><td align="center">
+								<p>
+									<span class="inlinemediaobject"><img src="Images/Music_Play_Cursor.png" width="17"></span> / <span class="inlinemediaobject"><img src="Images/Music_Play_Cursor_Dark.png" width="17"></span>
+								</p>
+								<p>(Play cursor)</p>
+							</td><td>
+								<a name="play_cursor"></a>
+								<p> The timeline differs from the waveform in regards to the
+									manipulation of the Play Cursor's position. The timeline allows
+									you to drag and drop the Play Cursor to wherever you want the
+									playback to start from. The waveform's Play Cursor cannot be
+									dragged and dropped. However, the same result can be achieved by
+									clicking directly on the waveform. </p>
+								<p> Customizing the starting position of a Sound SFX or Sound
+									Voice by moving the Play Cursor to the desired starting point
+									will only affect the playback sound in the Authoring tool.
+									In-game, and through any indirect object (such as a parent or
+									Event which is linked to the Sound SFX or Sound Voice on which
+									the Play Cursor was modified), the playing of the clip will not
+									start from the custom start point, rather it will start from the
+									beginning. </p>
+								<p> Clicking on the Transport's Play button plays the clip from
+									the Play Cursor's position. Clicking on the Play button while a
+									Play Cursor continues to run will add another Play Cursor that
+									will concurrently play from the same starting position as the
+									first Play Cursor. </p>
+								<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Source Editor's Play Cursor will only work on a Vorbis
+										encoded source if the latter is converted with a seek table.
+									</p></td></tr></table></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="32"><tr style="height: 31px"><td><img src="Images/audio_source_integrity.png" width="32"></td></tr></table></div>
+							</td><td>
+								<p>Identifies an Audio Source integrity issue.</p>
+								<p>Place the mouse over the icon to see the integrity issue on
+									the tooltip.</p>
+								<p>Click the yellow triangle icon to attempt fixing the
+									issue.</p>
+								<p>For more information about integrity issues, refer to <a class="xref" href="ch22s01s02.html" title="Resolving audio source integrity issues">Resolving audio source integrity issues</a>.</p>
+								<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>If focused in to a specific region of the graph, the upper
+										right corner of the graph - where the alert icon appears -
+										may be hidden from view.</p></td></tr></table></div>
+							</td></tr><tr><td><a name="mode"></a>
+								<p>Mode</p>
+							</td><td>
+								<p>Defines which mode is used to display the waveform.</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="strong"><strong>Peak</strong></span>: The standard
+											display mode. Each channel is displayed. The values
+											represent the peak PCM values in decibels for the region
+											drawn. </p></li><li class="listitem"><p>
+											<span class="strong"><strong>RMS</strong></span>: Shows the RMS
+											(Root Mean Square) values. All channels are collapsed.
+											The values represent the peak RMS values for the region
+											drawn. </p></li></ul></div>
+							</td></tr><tr><td>
+								<p>Reset</p>
+							</td><td>
+								<p>Resets the following elements:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Trim start and end</p></li><li class="listitem"><p>Loop start and end</p></li><li class="listitem"><p>Override file loop points</p></li><li class="listitem"><p>Fade-in and fade-out</p></li><li class="listitem"><p>Crossfade duration</p></li><li class="listitem"><p>HDR envelope</p></li><li class="listitem"><p>Play Cursor</p></li></ul></div>
+							</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+								<p>Conversion Tab</p>
+							</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+								<p><span class="bold"><strong>Conversion Settings</strong></span></p>
+								<p>For a description of the Conversion Settings group
+									properties, refer to <a class="xref" href="ch61s01s05s09.html" title="Conversion category: Containers hierarchy objects">Conversion category: Containers hierarchy objects</a>. </p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>File Properties</strong></span></p>
+								<p>The File Properties group has three columns: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>[property name]</p></li><li class="listitem"><p>Original: Refers to the original version of the
+												file.</p></li><li class="listitem"><p>Converted: Refers to the converted version of the
+												file.</p></li></ul></div><p>
+								</p>
+							</td></tr><tr><td>
+								<p>File Path</p>
+							</td><td>
+								<p>The full path to the source file.</p>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>As paths can be too long to fit the group, you may
+										want to drag the column header splitters to see the full
+										path. More directly, you can also open the file location
+										using the <span class="bold"><strong>Open containing
+											folder</strong></span> shortcut menu option.</p></td></tr></table></div>
+							</td></tr><tr><td>
+								<p>Channels</p>
+							</td><td>
+								<p>The number of distinct audio channels included in the audio
+									source file.</p>
+							</td></tr><tr><td>
+								<p>Sample Rate</p>
+							</td><td>
+								<p>The value in Hertz (Hz) representing the number of times per
+									second the audio source's digital audio signal is
+									sampled.</p>
+							</td></tr><tr><td>
+								<p>File Size</p>
+							</td><td>
+								<p>The value and unit of measurement describing the memory size
+									of the audio source file.</p>
+							</td></tr><tr><td>
+								<p>Duration</p>
+							</td><td>
+								<p>The length in seconds, from start to finish, of the audio
+									source file.</p>
+							</td></tr><tr><td>
+								<p>Bandwidth</p>
+							</td><td>
+								<p>The maximum amount of data that can be transmitted in a given
+									amount of time.</p>
+								<p>Units: KB/s (kilobytes per second)</p>
+							</td></tr><tr><td>
+								<p>Format</p>
+							</td><td>
+								<p>The audio format, such as PCM or ADPCM, of the audio source
+									file.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch22s01s01.html" title="Editing audio sources with the Source Editor">Editing audio sources with the Source Editor</a>
+					</p></li></ul></div></div><HR></body></html>

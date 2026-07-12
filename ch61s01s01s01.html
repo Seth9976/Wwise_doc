@@ -1,0 +1,151 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Device Editor: System</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s01.html" title="Audio Devices"><link rel="prev" href="ch61s01s01.html" title="Audio Devices"><link rel="next" href="ch61s01s01s02.html" title="Audio Device Editor: Others"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s01.html">Audio Devices</a></span> &gt; <span class="breadcrumb-node">Audio Device Editor: System</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="audio_devices_editor"></a>Audio Device Editor: System</h4></div></div></div><p>The Audio Device Editor contains a series of properties associated with an Audio Device.
+      You can modify many of the properties in real time and insert Effects using the editor's
+      Effects tab. </p><p>The following table describes all of the interface elements included in the Audio Device
+      Editor for the System Audio Device.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+              <p>General</p>
+            </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>[name]</p>
+            </td><td>
+              <p>The name of the Audio Device.</p>
+            </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+              <p>Notes</p>
+            </td><td>
+              <p>Any additional information about the Audio Device.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_split.png"></div>
+            </td><td>
+              <p>Sets the display of the Audio Device Editor's selected tabs. By default, there
+                is one panel displaying only one selected tab. You can, however, click a splitter
+                button to split the panel into two, either side by side or one on top of the other,
+                for two different tabs. The currently selected option is highlighted with a
+                background color.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is
+                  currently displayed in the other panel, then the other panel will automatically
+                  display another tab.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+		<p>Allow 3D Audio</p>
+	</td><td>
+		<p>When selected, gives permission to the Audio Device to attempt to activate the 3D Audio features of the endpoint. Deselect this option to opt out of all 3D audio features.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Selecting this option is not a guarantee that 3D audio will be activated; 3D audio is only activated if the platform supports it.</p></td></tr></table></div>
+		<p>
+			Refer to 
+			<a class="link" href="ch13s03.html" title="Understanding object-based audio">Understanding Object-Based Audio</a>
+			 for further details.
+		</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Main Mix Configuration for Binauralization</p>
+	</td><td>
+		<p>When 3D audio is activated, this is the channel configuration assigned to the Main Mix when the endpoint is using 3D Audio technology optimized for binauralization, for example, when the user is using headphones.</p>
+		<p>Default value: Use Game-Defined Settings</p>
+	</td></tr><tr><td>
+		<p>Main Mix Configuration for Home Theater</p>
+	</td><td>
+		<p>When 3D audio is activated, this is the channel configuration assigned to the Main Mix when the endpoint is using 3D Audio technology optimized for a physical home theater setup.</p>
+		<p>Default value: Use Game-Defined Settings</p>
+	</td></tr><tr><td>
+		<p>Allow System Audio Objects</p>
+	</td><td>
+		<p>When 3D audio is activated, selecting this option allows the Audio Device to send System Audio Objects to the endpoint if the endpoint supports a number of Audio Objects greater than the specified threshold, (i.e., the value of <span class="bold"><strong>Minimum System Audio Objects Required</strong></span>).</p>
+		<p>Deselect this option to opt out of sending individual System Audio Objects.</p>
+		<p>When deselected, Audio Objects are mixed to the Main Mix, while keeping their spatial characteristics. The resulting spatial accuracy will depend on the configuration of the Main Mix.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Minimum System Audio Objects Requirement</p>
+	</td><td>
+		<p>Defines the minimum number of System Audio Objects that the endpoint must support for the sound engine to produce System Audio Objects.</p>
+		<p>You can use this property to ensure a certain level of capacity for the system&#8217;s 3D audio. For example, setting this value to 50 will effectively disable the use of System Audio Objects for any platform that does not support at least 50 concurrent Audio Objects. This avoids the situation where attempting to play more objects than the system supports causes some of them to be mixed differently. When this occurs, the audio will sound different on each play.</p>
+		<p>Therefore, you should set this value slightly higher than the number of System Audio Objects your game will play at any one time.</p>
+		<p>Default value: 32</p>
+		<p>Range: 0 to 65535</p>
+	</td></tr><tr><td>
+		<p>Override Color</p>
+	</td><td>
+		<p>Enables the Color slider to change the color chip of the selected objects.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+              <p>Color</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td>
+              <p>Inclusion</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td>
+              <p>Audio &gt; Effects</p>
+            </td><td>
+              <p>Effects can be inserted or bypassed.</p>
+            </td></tr><tr><td colspan="2"><p><span class="bold"><strong>Device Info</strong></span></p></td></tr><tr><td dir="ltr">Is 3D Audio Active</td><td dir="ltr">Indicates whether the 3D Audio features of the endpoint are
+              active.</td></tr><tr><td dir="ltr">
+              <p>Is Passthrough Active</p>
+            </td><td dir="ltr">
+              <p>Indicates whether the endpoint accepts a separate Passthrough Mix that bypasses
+                3D audio processing at the endpoint.</p>
+            </td></tr><tr><td dir="ltr">
+              <p>Available System Audio Objects</p>
+            </td><td dir="ltr">
+              <p>The number of System Audio Objects supported by the endpoint.</p>
+            </td></tr><tr><td dir="ltr">
+              <p>System Audio Objects Used</p>
+            </td><td dir="ltr">
+              <p>The number of System Audio Objects currently playing.</p>
+            </td></tr><tr><td dir="ltr">
+              <p>Main Mix Channel Configuration</p>
+            </td><td dir="ltr">
+              <p>Channel configuration of the Main Mix that is sent to the system
+                endpoint.</p>
+            </td></tr><tr><td dir="ltr">
+              <p>Passthrough Channel Configuration</p>
+            </td><td dir="ltr">
+              <p>Channel configuration of the Passthrough Mix that is sent to the system
+                endpoint.</p>
+            </td></tr><tr><td>
+              <p dir="ltr">Main Mix Buffer Size</p>
+            </td><td dir="ltr">
+              <p>The number of samples per audio frame.</p>
+            </td></tr></tbody></table></div></div><HR></body></html>

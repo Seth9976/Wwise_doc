@@ -1,0 +1,102 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with the Media Pool</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch52s03s07.html" title="Metadata tab"><link rel="next" href="ch53s01.html" title="Working with databases"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Working with the Media Pool</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="getting_to_know_media_pool"></a>Working with the Media Pool</h2></div></div></div><p>The Media Pool is where you can search, organize, audition, and select your audio files to
+        import into Wwise. This is invaluable if you have downloaded Strata libraries or are working
+        with third-party sound libraries. These libraries often contain large numbers of files,
+        which can make it time-consuming to find what you want. You can add these library folders to
+        Media Pool databases to search for and audition your files directly in Wwise.</p><p>When you create a database and point to a path on your local or network drive, the Media
+        Pool extracts the metadata of each file, such as duration, bit depth, and sample rate. The
+        Media Pool caches the metadata so you can quickly search your libraries and filter the
+        results to get the files you want.</p><p>The databases you create in the Media Pool are not project-specific. You can open a
+        different project in Wwise and the databases you created persist. The databases are created
+        locally. If someone else opens the same project on their computer, they do not have access
+        to your databases.</p><p>You can access the Media Pool through the following menus or by pressing <span class="bold"><strong>Ctrl+P</strong></span>:</p><p>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Views &gt; Utilities &gt; Media Pool</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Project &gt; Media Pool</strong></span></p></li></ul></div><p>
+    </p><p>
+        </p><div class="mediaobject"><img src="Images/media_pool.png"></div><p>
+    </p><p>
+        </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                        </td><td>
+                            <p>Databases pane lists the Project Originals folder and the User
+                                Databases folder where you can create databases and Virtual Folders
+                                to organize your databases. From here you can:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Create new Databases and Virtual folders.</p></li><li class="listitem"><p>Rename and organize your folders and databases.</p></li><li class="listitem"><p>Open the Database Settings dialog.</p></li><li class="listitem"><p>See the number of Databases you have in the Media Pool
+                                            beside name of the Databases tab.</p></li><li class="listitem"><p>Select which Databases to search.</p></li></ul></div>
+                            <p>For more information on Databases, see <a class="xref" href="ch53s01.html" title="Working with databases">Working with databases</a>.</p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                        </td><td>
+                            <p>Use the drop-down list to select a type of search:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Selected Fields</strong></span>: When
+                                            you type a text string, the Results pane displays the
+                                            closest matches for that string on the top of the list.
+                                            The string is searched in the metadata fields that you
+                                            selected to search by. Click the <span class="bold"><strong>Select Searchable Fields</strong></span> (gear) icon to
+                                            choose which fields to search by. See <a class="xref" href="ch53s01.html#searching_media_pool_databases" title="Searching for files by metadata">Searching for files by metadata</a>.</p></li><li class="listitem"><p><span class="bold"><strong>Audio Description</strong></span>:
+                                            Uses Similar Sound Search to find files that sound like
+                                            the description you type. For example if you type, "loud
+                                            car crash", the Media Pool searches your databases to
+                                            find files with similar sounds to a loud car crash. For
+                                            more information about Similar Sound Search, see <a class="xref" href="ch53s02.html" title="Similar Sound Search">Similar Sound Search</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You must have Similar Sound Search installed
+                                                  to use <span class="bold"><strong>Audio
+                                                  Description</strong></span>. See <a class="xref" href="ch53s02.html#install_similar_sound_search" title="Installing Similar Sound Search">Installing Similar Sound Search</a>.</p></td></tr></table></div></li></ul></div>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                        </td><td>
+                            <p>Type a text string to search by file fields or a description of a
+                                sound to search by Similar Sound Search.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Only text fields can be searched.</p></td></tr></table></div>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                        </td><td>
+                            <p>The Results pane displays the list of audio files based on your
+                                search and filter criteria. From here you can:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>View the audio files resulting in your search and
+                                            filter criteria.</p></li><li class="listitem"><p>Right-click a file or files to import them into your
+                                            project.</p></li><li class="listitem"><p>Right-click a file to find similar sounds in your
+                                            databases.</p></li><li class="listitem"><p>Right-click a file to import auto-detected
+                                            regions.</p></li><li class="listitem"><p>Configure the columns.</p></li><li class="listitem"><p>Open one or more files in an external editor.</p></li></ul></div>
+                            <p>For more information, see:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch53s01.html#configuring_media_pool_results" title="Configuring the Results columns">Configuring the Results columns</a></p></li><li class="listitem"><p><a class="xref" href="ch53s05.html#importing_from_results_list" title="Importing from the Results pane">Importing from the Results pane</a></p></li><li class="listitem"><p><a class="xref" href="ch53s02.html" title="Similar Sound Search">Similar Sound Search</a></p></li><li class="listitem"><p><a class="xref" href="ch53s07.html" title="Opening files in an external editor">Opening files in an external editor</a></p></li></ul></div><p>
+                            </p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                        </td><td>
+                            <p>Click <span class="bold"><strong>Stop Search</strong></span> to stop any
+                                search in progress. </p>
+                            <p>Click <span class="bold"><strong>Refresh Search</strong></span> if the
+                                contents of your database changes.</p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                        </td><td>
+                            <p>Metadata pane where you can view the metadata information for a
+                                selected file by which you can search and filter. Right-click on the
+                                metadata field and select to either add it as a column in the
+                                Results pane or add it as filter in the Filters pane. For
+                                information about the metadata fields, see <a class="xref" href="ch53s03.html" title="Media Pool metadata">Media Pool metadata</a>.</p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout7.png"></div>
+                        </td><td>
+                            <p>Filters pane where you can add, modify, and delete filters that
+                                can be included or excluded when searching for audio files. You can
+                                see the number of Filters you have created by the number in
+                                parentheses beside the name of the Filters tab.</p>
+                            <p>For more information on Filters, see <a class="xref" href="ch53s01.html#filtering_media_pool_databases" title="Filtering databases">Filtering databases</a>.</p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout8.png"></div>
+                        </td><td>
+                            <p>Transport pane where can control the following playback parameters:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Volume</p></li><li class="listitem"><p>Pitch</p></li><li class="listitem"><p>LPF</p></li><li class="listitem"><p>HPF</p></li><li class="listitem"><p>Loop</p></li><li class="listitem"><p>Auto-play on Selection</p></li><li class="listitem"><p>Stop or play the playback. Alternatively, you can
+                                            press the spacebar.</p></li></ul></div>
+                            <p>You can transfer all the changes that you make to the Volume,
+                                Pitch, LPF, HPF, and Loop properties when you import the files by
+                                clicking the <span class="bold"><strong>Apply on Import</strong></span> icon
+                                beside each option. </p>
+                            <p>For more information, see <a class="xref" href="ch53s04.html" title="Auditioning audio files">Auditioning audio files</a>.</p>
+                        </td></tr><tr><td align="center">
+                            <div class="mediaobject"><img src="Images/Callout9.png"></div>
+                        </td><td>
+                            <p>Audio Preview/Region Selector where you can:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Position the playback cursor using the mouse.</p></li><li class="listitem"><p>Play or stop playback with the spacebar.</p></li><li class="listitem"><p>Skip to next and previous regions using the arrow
+                                            keys.</p></li><li class="listitem"><p>Select regions by:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Manually clicking and dragging in the
+                                                  waveform.</p></li><li class="listitem"><p>Clicking on audio file markers.</p></li><li class="listitem"><p>Enabling <span class="bold"><strong>Auto Select
+                                                  Detected Regions</strong></span>.</p></li><li class="listitem"><p>Right-clicking the waveform and selecting
+                                                  <span class="bold"><strong>Select All Detected
+                                                  Regions</strong></span>.</p></li></ul></div></li><li class="listitem"><p>View the file path.</p></li><li class="listitem"><p>Add files or regions to the Audio File
+                                            Importer.</p></li><li class="listitem"><p>Find similar sounds to the selected regions or file
+                                            with Similar Sound Search.</p></li></ul></div>
+                            <p>For more information, see:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch53s05.html#importing_from_preview" title="Importing from the Audio Preview/Region Selector pane">Importing from the Audio Preview/Region Selector pane</a></p></li><li class="listitem"><p><a class="xref" href="ch53s06.html" title="Importing regions into your project">Importing regions into your project</a></p></li><li class="listitem"><p><a class="xref" href="ch53s02.html" title="Similar Sound Search">Similar Sound Search</a></p></li></ul></div>
+                        </td></tr></tbody></table></div><p>
+    </p></div><HR></body></html>

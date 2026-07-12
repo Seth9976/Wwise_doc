@@ -1,0 +1,246 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Batch Rename View</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s12.html" title="Searches and Project-wide Editing"><link rel="prev" href="ch61s12.html" title="Searches and Project-wide Editing"><link rel="next" href="ch61s12s02.html" title="List View"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s12.html">Searches and Project-wide Editing</a></span> &gt; <span class="breadcrumb-node">Batch Rename View</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="batch_rename_view"></a>Batch Rename View</h3></div></div></div><p>
+      The Batch Rename view, seen below, can be prompted by selecting it in the <span class="bold"><strong>Views</strong></span> menu or using its shortcut (Ctrl+F2 by default). It consists of a <span class="bold"><strong>Settings</strong></span> (left side) and a <span class="bold"><strong>Preview</strong></span> (right side) panel. Any editable objects from explorers, like the List View or the Project Explorer, can be dragged over to the <span class="bold"><strong>Preview</strong></span> panel for renaming.
+		</p><div class="mediaobject"><a name="batchrename_png"></a><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="575"><tr style="height: 309px"><td><img src="Images/batchrename_view.png" height="309"></td></tr></table></div><p>
+      The <span class="bold"><strong>Settings</strong></span> panel is where you enter your search and replace patterns. It consists of two primary columns:
+		</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="bold"><strong>Name</strong></span>, on the left, identifies the option.
+				</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Value</strong></span>, on the right, gives the entry.
+				</p></li></ul></div><p>The following table provides details on these options.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+							<p>
+								<span class="bold"><strong>Apply To</strong></span>
+							</p>
+						</td><td>
+							<p>Specifies the target for the search and potential rename from two list options:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Name - Applies the batch rename to the listed objects' names.</p></li><li class="listitem"><p>Notes - Applies the batch rename to the listed objects' notes.</p></li></ul></div>
+						</td></tr><tr><td>
+							<p>
+								<span class="bold"><strong>Replace</strong></span>
+							</p>
+						</td><td>
+							<p>Enable this option to activate the following replace settings.</p>
+						</td></tr><tr><td>
+							<p>Find what</p>
+						</td><td>
+							<p>Specifies the text or regular expression pattern to be replaced in the selected objects' names or notes.</p>
+						</td></tr><tr><td>
+							<p>Replace with</p>
+						</td><td>
+							<p>Specifies the replacement text or regular expression substitution.</p>
+						</td></tr><tr><td>
+							<p>Match case</p>
+						</td><td>
+							<p>
+                Specifies whether matching is case-sensitive for the <span class="bold"><strong>Find what</strong></span> text, if <span class="bold"><strong>Use Regular Expression</strong></span> is disabled.
+							</p>
+						</td></tr><tr><td>
+							<p>Use Regular Expression</p>
+						</td><td>
+							<p>
+                Specifies whether the <span class="bold"><strong>Find what</strong></span> and <span class="bold"><strong>Replace with</strong></span> fields recognize regular expression syntax.
+							</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                  Wwise uses the ECMAScript regex style detailed in <a class="xref" href="ch06s02s04.html" title="Regular expression reference">Regular expression reference</a>.
+								</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Occurrence</p>
+						</td><td>
+							<p>Specifies which matches to replace:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>First - The first occurrence of the matching text.</p></li><li class="listitem"><p>Last - The last occurrence of the matching text.</p></li><li class="listitem"><p>All - Every occurrence of the matching text.</p></li></ul></div>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This list is not applicable to regular expressions.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>
+								<span class="bold"><strong>Remove</strong></span>
+							</p>
+						</td><td>
+							<p>Enable this option to activate the following remove settings.</p>
+						</td></tr><tr><td>
+							<p>Count</p>
+						</td><td>
+							<p>Specifies the number of characters to be removed. It is possible to enter a value directly in the field or by using the slider (0 to 100 unless a greater value is entered in the field).</p>
+						</td></tr><tr><td>
+							<p>At position</p>
+						</td><td>
+							<p>Specifies the number of characters to skip before removing. It is possible to enter a value directly in the field or by using the slider.</p>
+						</td></tr><tr><td>
+							<p>From</p>
+						</td><td>
+							<p>
+                Specifies to remove from either the <span class="bold"><strong>beginning</strong></span> or the <span class="bold"><strong>end</strong></span> of the object name or comment.
+							</p>
+						</td></tr><tr><td>
+							<p>
+								<span class="bold"><strong>Insert</strong></span>
+							</p>
+						</td><td>
+							<p>Enable this option to activate the following insert settings.</p>
+						</td></tr><tr><td>
+							<p>Insert what</p>
+						</td><td>
+							<p>
+                Specifies how the <span class="bold"><strong>To insert</strong></span> field entry is interpreted. There are two options:
+							</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>Text</strong></span>, to insert only the text entered in the <span class="bold"><strong>To insert</strong></span> field; or
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Text with numbers</strong></span>, to insert the number defined according to the C++ printf format number pattern, along with any applicable text adjustments. Commonly used number patterns are available in the selector list.
+									</p></li></ul></div>
+						</td></tr><tr><td>
+							<p># start at</p>
+						</td><td>
+							<p>
+                Specifies the starting number value. The following numbers will increment this value by one for every object listed in the Batch Rename following alphabetical order of the <span class="bold"><strong>Before</strong></span> column.
+							</p>
+						</td></tr><tr><td>
+							<p>To insert</p>
+							<p>
+								</p><div class="mediaobject"><img src="Images/btn_selector.png"></div><p>
+							</p>
+						</td><td>
+							<p>Specifies an entry field to insert the text or the text containing a C++ printf format number pattern.</p>
+							<p>
+                The selector, which is active only if <span class="bold"><strong>Insert what</strong></span> is set to <span class="bold"><strong>Text with numbers</strong></span>, offers the following numerical C++ printf format pre-defined list options:
+							</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>Decimal (d%)</strong></span>
+										<span class="bold"><strong></strong></span>- Decimal, base 10, format (0-9)
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Decimal with zero padding (%02d)</strong></span>- Decimal, base 10, format with a zero padding single digits (00-09)
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Hexadecimal lower case (%X)</strong></span> - Hexadecimal, base 16, format where values 10 to 15 are represented by lower case letters (0-f)
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Hexadecimal upper case (%X)</strong></span> - Hexadecimal, base 16, format where values 10 to 15 are represented by upper case letters (0-F)
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Hexadecimal with zero padding (0x%04X)</strong></span>- Hexadecimal, base 16, format where values 10 to 15 are represented by upper case letters and there is zero padding for up to four characters (0x0000-0x000F)
+									</p></li></ul></div>
+						</td></tr><tr><td>
+							<p>At position</p>
+						</td><td>
+							<p>Specifies the number of characters to skip before the insert.</p>
+						</td></tr><tr><td>
+							<p>From</p>
+						</td><td>
+							<p>
+                Specifies the character position where the <span class="bold"><strong>At position</strong></span> starts its count:
+							</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>Beginning</strong></span> - Starts count before the first character of the name or note. For example, an <span class="bold"><strong>At position</strong></span> of 3 in the object "car engine" would insert the number after the "r", giving "car1 engine".
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>End</strong></span> - Starts count after the last character of the name or note. For example, an <span class="bold"><strong>At position</strong></span> of 3 in the object "car engine" would insert the number before the "i", giving "car eng1ine".
+									</p></li></ul></div>
+						</td></tr><tr><td>
+							<div class="mediaobject"><img src="Images/btn_reset_to_default.png"></div>
+						</td><td>
+							<p>Resets the above options to their default, empty, state. Use Ctrl+Z to undo a reset.</p>
+						</td></tr></tbody></table></div><p>
+      The <span class="bold"><strong>Preview</strong></span> panel on the right listing objects that will be included in the batch rename process. To add objects, drag them from a view, such as the Project Explorer, to the <span class="bold"><strong>Preview</strong></span> panel. Do this while holding Shift to add more objects; otherwise, dragging objects from a view to the <span class="bold"><strong>Preview </strong></span>panel will replace any objects that are listed there. To remove objects, select them then press Delete or choose <span class="bold"><strong>Remove from list</strong></span> in their shortcut menu. Other than selecting them all (using Ctrl+A or just manually) and deleting them, click <span class="bold"><strong>Remove All</strong></span> to clear the<span class="bold"><strong> Preview</strong></span> panel.
+		</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+							<p>Name</p>
+						</td><td>
+							<p>Displays the object name.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                  When <span class="bold"><strong>Apply to</strong></span> is set to <span class="bold"><strong>Name</strong></span>, the object name is equivalent to the <span class="bold"><strong>Before</strong></span> column. The <span class="bold"><strong>Name</strong></span> column is, therefore, only displayed when <span class="bold"><strong>Apply to</strong></span> is set to <span class="bold"><strong>Notes</strong></span>.
+								</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Before</p>
+						</td><td>
+							<p>Displays the unmodified object names or notes.</p>
+						</td></tr><tr><td>
+							<p>After</p>
+						</td><td>
+							<p>Displays the modified object names or notes.</p>
+						</td></tr><tr><td>
+							<p>(Type - Color)</p>
+						</td><td>
+							<p>Displays one of three possible colored squares corresponding to the type of message displayed. No square is displayed if there is no message.</p>
+							<p>
+								<span class="inlinemediaobject"><img src="Images/SoundBank_Log_Color_Green.png"></span>
+                Green - Success (Only appears after clicking <span class="bold"><strong>Rename All</strong></span>.)
+							</p>
+							<p>
+								<span class="inlinemediaobject"><img src="Images/SoundBank_Log_Color_Yellow.png"></span>
+                Yellow - Warning (Still possible to rename. <span class="bold"><strong>No Change</strong></span> is the one warning that can appear after renaming.)
+							</p>
+							<p>
+								<span class="inlinemediaobject"><img src="Images/SoundBank_Log_Color_Red.png"></span>
+                Red - Error (Not possible to rename.)
+							</p>
+						</td></tr><tr><td>
+							<p>Message</p>
+						</td><td>
+							<p>Displays messages of three possible types: success, warning, or error.</p>
+							<p>Success message:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>Successfully renamed</strong></span>
+									</p></li></ul></div>
+							<p>Warning messages:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+										<span class="bold"><strong>No Replace match detected.</strong></span>
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Insert text does not have a valid printf format number.</strong></span>
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>No change.</strong></span>
+									</p></li></ul></div>
+							<p>Error messages:</p>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+
+										<span class="bold"><strong>Resulting name is already used by a sibling object or is otherwise reserved</strong></span>.
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Resulting name would be blank.</strong></span>
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>File path would exceed system limit of characters.</strong></span>
+									</p></li><li class="listitem"><p>
+										<span class="bold"><strong>Name would contain invalid characters (&lt;&gt;*?:"/\|%) for this object type.</strong></span>
+									</p></li></ul></div>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If an object has more than one applicable message, only the latest found is displayed.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="230"><tr style="height: 22px"><td><img src="Images/message_summary.PNG" height="22"></td></tr></table></div>
+						</td><td>
+							<p>Summarizes the number of error and warning messages.</p>
+						</td></tr><tr><td>
+							<div class="mediaobject"><img src="Images/btn_remove_all.png"></div>
+						</td><td>
+							<p>Removes all objects from the panel.</p>
+						</td></tr><tr><td>
+							<div class="mediaobject"><img src="Images/btn_rename_all.png"></div>
+						</td><td>
+							<p>Applies the batch rename to all object's in the Preview panel, whether or not they are filtered out of view with the search filter.</p>
+							<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Press Ctrl+Z to undo the operation.</p></td></tr></table></div>
+							<p>
+                When renaming Work Units or Physical Folders, the <span class="bold"><strong>Source Control Operation</strong></span> dialog opens. You must confirm that you want to proceed with the operation because it is not possible to undo.
+							</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

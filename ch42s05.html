@@ -1,0 +1,28 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Packaging DLC files</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch42.html" title="Managing file packages"><link rel="prev" href="ch42s04.html" title="Generating file packages"><link rel="next" href="ch42s06.html" title="Using File Packager arguments in the command line"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch42.html">Managing file packages</a></span> &gt; <span class="breadcrumb-node">Packaging DLC files</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dlc_overview"></a>Packaging DLC files</h2></div></div></div><p>Downloadable content, or DLC, is additional game content that is delivered separately from
+			the base game. This topic explains how to use the Wwise File Packager to prepare audio
+			DLC packages, which you can combine with other game assets. However, if you are using
+			the Wwise Unreal Integration or the Wwise Unity Integration, we recommend that you use
+			the bulk asset packaging option in Unreal (see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=UE4&amp;id=using_features_package_as_bulk_data.html" target="_blank">Packaging Wwise Assets as Bulk Data</a>) or the Addressables system in Unity
+			(see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=Unity&amp;id=pg_addressables.html" target="_blank">The Wwise Addressables Package for Unity</a>), respectively.</p><p>If you are using the File Packager for your DLC, it is important to remember the following
+			best practices and requirements when planning:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When packaging content for the base game, set all of the default file
+						assignments to <span class="bold"><strong>None</strong></span> and manually assign
+						files to packages (see <a class="xref" href="ch42s02s01.html#manually_adding_files_to_package" title="Manually assigning files to a package">Manually assigning files to a package</a>) so that you can 
+						identify any DLC you add later.</p></li><li class="listitem"><p>After you generate the packages for the base game, save the project. You
+						can use it as a point of reference for the initial game release.</p></li><li class="listitem"><p>Ensure that you place any DLC-specific SoundBanks, streaming files, and
+						loose media in separate DLC packages.</p></li><li class="listitem"><p>When creating DLC assets, use the same version of Wwise and the same Wwise
+						project that you used for the base game to ensure compatibility of the
+						SoundBank and package formats.</p></li><li class="listitem"><p>If any DLC-specific changes affect SoundBanks that already exist in the
+						base game, add the SoundBanks to the DLC package as well. Package loading
+						order determines which SoundBanks take precedence in case of
+						conflict.</p></li><li class="listitem"><p>To determine loading order, use the File Package Low-Level I/O,
+						specifically the <code class="code">CAkFilePackageLowLevelIO::LoadFilePackage()</code>
+						method. For more information, see <a class="link" href="ch42.html" title="Managing file packages">Sample File Package Low-Level I/O
+							Implementation Walkthrough</a>.</p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="example"></a>Workflow example</h3></div></div></div><p>The following example demonstrates how to work with DLC packages.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>SoundBankA, which contains all of the base game assets, is assigned to
+						Package_Main.</p></li><li class="listitem"><p>The content of SoundBankA is modified after the initial release with
+						additional DLC sound structures. It is assigned to the new, DLC-specific
+						Package_DLC.</p></li><li class="listitem"><p>The File Package Low-Level I/O is updated to load Package_Main before
+						Package_DLC.</p></li><li class="listitem"><p>The game, which has the DLC, loads Package_Main and then
+						Package_DLC.</p></li><li class="listitem"><p>When the game loads SoundBankA, Wwise loads it from Package_DLC, which has a higher
+						priority than Package_Main.</p></li></ol></div><p>You can continue to deploy new content for your game in the same manner. Just
+				remember to manually assign all files to a package and to save your File Packager
+				project to create a point of reference for each release.</p></div></div><HR></body></html>

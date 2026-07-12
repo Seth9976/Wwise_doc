@@ -1,0 +1,144 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Time Stretch</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s24.html" title="Stereo Delay"><link rel="next" href="ch67s26.html" title="Tremolo"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Time Stretch</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_time_stretch_plug_in"></a>Time Stretch</h2></div></div></div><p>The Time Stretch plug-in can be used to change the speed or duration of an audio signal without affecting its pitch. The plug-in allows for both Time Stretching and time compression with possibly time-varying time scaling ratio during playback. The plug-in is suitable for use on monophonic as well as polyphonic sounds.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>This Effect is not recommended for music objects because it can have a negative
+            effect on timing. Alternatively, you can use the  <a class="link" href="https://www.audikinetic.com/library/edge/?source=Help&amp;id=wwise_pitch_shifter_plug_in" target="_blank">Pitch Shifter</a> plug-in for music objects.</p></li><li class="listitem"><p>Time compression below 50% is not recommended for streamed assets. Higher pitches
+            might cause source starvation due to higher throughput required. Time Stretching on the
+            other hand is not a problem for streaming assets.</p></li></ol></div><p>
+    </p></td></tr></table></div><p>The Time Stretch plug-in is built into Wwise. For information on applying it to objects, see
+      <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_time_stretch_plug_in_choosing_window_size"></a>Choosing the window size</h3></div></div></div><p>Choosing the window size parameter is an important step to obtain good quality results.
+      While the default value (2,048) should work well for most content, tuning this parameter is
+      essential for obtaining the best time scaling effect with as little artifacts as possible.
+      While larger window size settings give better frequency resolution, they have less accurate
+      time-domain resolution and thus result in more smearing of transients signal. The window size
+      parameter is thus a compromise between time resolution and frequency resolution.</p><p>The ideal window size setting is dependent on audio content where signals with lots of transients (such as punches, drums, and explosions) may benefit from smaller window size settings while harmonic signals with more stable frequency content (such as voices and musical instruments) may work best with larger window size parameter values which provide more accurate frequency resolution.</p><p>When planning to make the signal much slower by applying a large Time Stretch setting, larger window size parameter values are often desirable as the frequency resolution gets very noticeable when the sound is playing back very slowly.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_time_stretch_plug_in_algorith_choice"></a>Algorithm choice</h3></div></div></div><p>The Time Stretch plug-in allows you to choose between two time stretch algorithms: the Classic mode from Wwise version 2021.1 and earlier, and the Transient Preserving mode. The Transient Preserving mode further enables controls to fine tune quality level and stereo processing.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_time_stretch_properties"></a>Time Stretch properties</h3></div></div></div><p>The Time Stretch plug-in contains a series of properties, many of which can be edited in real-time and can be mapped to specific Game Parameters using RTPCs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2"><p>
+			<span class="bold"><strong>Time</strong></span>
+           </p></td></tr><tr><td>
+		<p>Time Stretch</p>
+	</td><td>
+		<p>Percentage of original sound duration. 100% corresponds to no Time Stretch while 200% is twice as long. Similarly time compression is possible using 50% to get the sound at half the duration. This value supports RTPC and may be smoothly changed during playback without additional artifacts.</p>
+		<p>Default value: 100</p>
+		<p>Range: 25 to 1600</p>
+		<p>Units: % of original duration </p>
+	</td></tr><tr><td>
+		<p>Time Stretch Random</p>
+	</td><td>
+		<p>Offsets the Time Stretch factor specified by a random amount up to plus or minus the Time Stretch random value. This will be effective for the whole duration of the voice on which the Time Stretch will be applied. RTPC received during the playback will be considered only on the next playback.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 200</p>
+		<p>Units: % of original duration </p>
+	</td></tr><tr><td colspan="2"><p>
+			<span class="bold"><strong>Pitch</strong></span>
+           </p></td></tr><tr><td>
+		<p>Pitch Shift</p>
+	</td><td>
+		<p>The pitch is raised or lowered by the amount specified by this parameter (in Cents). So, +1200 Cents transposes an octave up and -1,200 is an octave down. This value supports RTPC and may be smoothly changed during playback without additional artifacts.</p>
+		<p>Default value: 0</p>
+		<p>Range: -4800 to 4800</p>
+		<p>Units: cents </p>
+	</td></tr><tr><td>
+		<p>Pitch Shift Random</p>
+	</td><td>
+		<p>Offsets the Pitch Shift amount specified by a random amount up to plus or minus the Pitch Shift random value. This will be effective for the whole duration of the voice on which the Pitch Shift will be applied. RTPC received during the playback will be considered only on the next playback.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 4800</p>
+		<p>Units: cents </p>
+	</td></tr><tr><td colspan="2"><p>
+			<span class="bold"><strong>Quality</strong></span>
+           </p></td></tr><tr><td>
+		<p>Window Size</p>
+	</td><td>
+		<p>Larger window size gives better frequency resolution but more smearing of transients. This parameter is thus a compromise between time resolution and frequency resolution. See section above for a more detailed discussion on how to choose the value for this parameter.</p>
+		<p>Default value: 2048</p>
+		<p>Range: 256 to 8192</p>
+		<p>Units: Sample frames </p>
+	</td></tr><tr><td>
+		<p>Stretch Mode</p>
+	</td><td>
+		<p>The version of time stretch algorithm to be used.</p>
+		<p>The following options are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Classic</strong></span>: Time Stretch uses the algorithm from Wwise version 2021.1 and earlier.</p></li><li class="listitem"><p><span class="bold"><strong>Transient Preserving</strong></span>: Time Stretch uses an improved algorithm. With this mode selected, the Quality Level slider allows you to fine tune the performance of the algorithm, and the Stereo Processing control allows for improved handling of complex stereo mixes.</p></li></ul></div>
+		<p>Default value: Classic</p>
+	</td></tr><tr><td>
+		<p>Quality Level</p>
+	</td><td>
+		<p>Allows fine control of the performance of the improved time stretch algorithm, with the tradeoff of reduced sound quality. This control is only available when Stretch Mode is set to Transient Preserving.</p>
+		<p>With Quality Level at 100, all parts of the sound are processed. As the level decreases, the CPU demands of the algorithm are reduced, with an impact on sound quality. More specifically, lowering the quality slider will introduce a mild noise floor or phasing effect, as the algorithm skips over portions of the input sound spectrum to save on computation.</p>
+		<p>It is recommended to fine tune this parameter while watching the CPU % values in the Performance Monitor.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td colspan="2"><p>
+			<span class="bold"><strong>Output</strong></span>
+           </p></td></tr><tr><td>
+		<p>Output Gain</p>
+	</td><td>
+		<p>The amount of gain applied to the output signal after the dynamic compression that makes up for potential gain losses.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Stereo Processing</p>
+	</td><td>
+		<p>The method used for handling stereo inputs. This control is only available when Stretch Mode is set to Transient Preserving.</p>
+		<p>The following options are available:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Left Right</strong></span>: Stereo inputs are handled normally.</p></li><li class="listitem"><p><span class="bold"><strong>Center Cut</strong></span>: Stereo inputs are split into left, center, and right components before time stretching is applied. They are then reconstructed as left and right channels. Center Cut processing is only applied to stereo (2 channel) inputs.</p></li></ul></div>
+		<p>Since the Transient Preserving time stretch mode has a greater effect on the phase of the sound than the Classic stretch mode, the Center Cut option is provided as a way to better preserve complex stereo mixes.</p>
+		<p>Default value: Left Right</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

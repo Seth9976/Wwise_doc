@@ -1,0 +1,74 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Control Surface Devices dialog</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch57.html" title="Using control surfaces"><link rel="prev" href="ch57.html" title="Using control surfaces"><link rel="next" href="ch57s02.html" title="Connecting a control surface device to Wwise"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch57.html">Using control surfaces</a></span> &gt; <span class="breadcrumb-node">Control Surface Devices dialog</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="control_surface_devices"></a>Control Surface Devices dialog</h2></div></div></div><p>Use the Control Surface Devices dialog to configure the hardware controller devices to use
+      with Wwise.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>If a MIDI device is disconnected or turned off while Wwise is open, you can open the
+        Control Surface Device dialog to reconnect them automatically.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+              <p>
+                <span class="bold"><strong>Columns</strong></span>
+              </p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+              <p>Device Name</p>
+            </td><td>
+              <p>Displays the name of the control surface device.</p>
+              <p>This name is used in Control Surface Bindings.</p>
+            </td></tr><tr><td>
+              <p>Device Type</p>
+            </td><td>
+              <p>Specifies the type of device.</p>
+            </td></tr><tr><td>
+              <p>Receive From</p>
+            </td><td>
+              <p>Defines the input device to use.</p>
+            </td></tr><tr><td>
+              <p> Status<br>(Receive From) </p>
+            </td><td>
+              <p>Shows the connection status of the input device.</p>
+            </td></tr><tr><td>
+              <p>Send To</p>
+            </td><td>
+              <p>Defines the output device to use.</p>
+            </td></tr><tr><td>
+              <p> Status<br>(Send To) </p>
+            </td><td>
+              <p>Shows the connection status of the output device.</p>
+            </td></tr><tr><td colspan="2">
+              <p>
+                <span class="bold"><strong>Buttons</strong></span>
+              </p>
+            </td></tr><tr><td>
+              <p>Add</p>
+            </td><td>
+              <p>Adds a new device to Wwise.</p>
+              <p> After clicking <span class="bold"><strong>Add</strong></span>, enter a relevant name for
+                the device and click <span class="bold"><strong>OK</strong></span>. </p>
+            </td></tr><tr><td>
+              <p>Remove</p>
+            </td><td>
+              <p>Removes the selected device from the device list.</p>
+            </td></tr><tr><td>
+              <p>Rename</p>
+            </td><td>
+              <p>Changes the device name.</p>
+              <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Changing the device name breaks existing Bindings that use that device
+                  name.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Close</p>
+            </td><td>
+              <p>Closes the dialog.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The devices specified in the list are automatically saved.</p></td></tr></table></div>
+            </td></tr></tbody></table></div></div><HR></body></html>

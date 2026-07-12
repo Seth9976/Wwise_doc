@@ -1,0 +1,307 @@
+/* style definitions that came with the WebWorks template */
+
+/* Default style for links */
+a:link    { color: Blue }
+a:visited { color: Purple }
+a:hover   { background: #FFFACD }
+a:active  { }
+
+/* Default style */
+body 
+{
+  background-color: #FFFFFF;
+  margin-left:0.5em;
+  margin-right:0.5em;
+  margin-top:0.25em;
+  margin-bottom:0.5em;
+  font-family: serif, Garamond, Georgia, Times New Roman, Palatino;    /*Had been: Verdana, Arial, sans-serif;  serif, Garamond, Georgia, Times New Roman, Palatino;  */ 
+  font-size: 90%;
+}
+/* Added specifically for td, which had been included above in body. */
+td   
+{
+  background-color: #FFFFFF;
+  margin-left:0.5em;
+  margin-right:0.5em;
+  margin-top:0.25em;
+  margin-bottom:0.5em;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+}
+
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title
+{
+  color: #003366;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12.5pt;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 1pt;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 12pt;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
+
+.simplesect .titlepage h3.title
+{
+	font-size: 9.5pt;
+	margin-top: 6pt;
+	margin-bottom: -6pt;
+}
+
+.title a
+{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.listitem p
+{
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-right: 0em;
+  margin-top: 2px;
+}
+
+/* ROB: Not necessary to specify table width. It will show up as the sum of the columns, but if you specify it here for the whole table, multi-column tables do not react well.*/
+/* If you have multiple multi-column tables, use the CALS table parameter to specify their width: <?dbhtml table-width="800px" ?> */ 
+/*.informaltable table
+{
+	width:100%;
+}*/
+
+.informaltable table,.informaltable table tr th,.informaltable table tr td
+{
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+.informaltable table tr th p
+{
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+}
+
+.informaltable table
+{
+	margin-top:15px;
+}
+
+.informaltable table tr th 
+{
+	background-color: #E0E0E0; 
+}
+
+.informaltable table tr td, .informaltable table tr th
+{
+	padding:3px;
+}
+
+.note p
+{
+	color: #003366;	
+}
+
+.note th
+{
+  display: inline;
+  color: #003366; 
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 0pt;
+  margin-left: 0em;
+  margin-right: 6pt;
+  margin-top: 0pt;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
+
+.caution p
+{
+	color: #003366;
+}
+
+.caution th
+{
+  display: inline;
+  color: #aa8800;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 0pt;
+  margin-left: 0em;
+  margin-right: 6pt;
+  margin-top: 0pt;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
+
+.warning p
+{
+	color: #003366;
+	font-weight: 900;	
+}
+
+.warning th
+{
+  display: inline;
+  color: #aa0000;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 100%;
+  margin-bottom: 0pt;
+  margin-left: 0em;
+  margin-right: 6pt;
+  margin-top: 0pt;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
+
+.tip p
+{
+	color: #003366;
+}
+
+.tip th
+{
+  display: inline;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 70%;
+  color: #003366;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 100%;
+  margin-bottom: 0pt;
+  margin-left: 0em;
+  margin-right: 6pt;
+  margin-top: 0pt;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0em;
+  text-transform: none
+}
+
+.emphasis em
+{
+	font-weight: bold;
+	font-style: normal;
+}
+
+.note table, .tip  table, .caution  table, .warning table
+{
+	width: 90%;
+	border: 0px;
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+
+.note table tr td, .note table tr th
+{
+	border: 0px;
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+
+.tip table tr td, .tip table tr th
+{
+	border: 0px;
+	background-color: #FFFFFF;
+}
+
+.caution table tr td, .caution table tr th
+{
+	border: 0px;
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+
+.warning table tr td, .warning table tr th
+{
+	border: 0px;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+
+.mediaobject table, .mediaobject table tr td
+{
+	border-collapse: collapse;
+	border: 0px solid black;
+}
+
+.mediaobject table
+{
+	width:auto;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+/* We don't use the italic style in help, use always bold */
+.italic, .bold
+{
+	font-weight: bold;
+}
+
+
+pre.programlisting
+{
+	background: #F0F0F0;
+	font-family: Courrier New, Courrier, Monaco;
+	font-size: 80%;
+	/* padding: 0px 5px 5px 5px; */ /* left margin */	
+	border-collapse: collapse;
+	width: 850px;
+}
+
+.caption
+{
+	font-weight: bold;
+	text-align:left;
+}
+
+.maroon
+{
+	color: #A52A2A;
+}
+
+.red
+{
+	color: red;
+}
+
+.green
+{
+	color: green;
+}
+
+.blue
+{
+	color: blue;
+}
+
+.yellow
+{
+	color: yellow;
+}

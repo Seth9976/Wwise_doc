@@ -1,0 +1,166 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Positioning category: Containers hierarchy objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s09.html" title="Conversion category: Containers hierarchy objects"><link rel="next" href="ch61s01s05s11.html" title="HDR category: Containers hierarchy objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">Positioning category: Containers hierarchy objects</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="positioning_tab"></a>Positioning category: Containers hierarchy objects</h4></div></div></div><p>The properties in the Positioning category allow you to define how sounds will propagate in your
+					game. The propagation of a sound will depend on its type of positioning. In
+					Wwise, your sounds can use either speaker panning or 3D spatialization. The main
+					difference between the two types of positioning is the way in which the source
+					channels are mapped to the output speakers. By default, the source channels of a
+					panned sound are linked together and are played through the front left and right
+					speakers regardless of the position or orientation of the listener or game
+					object. You can, however, use the Speaker Panner to balance the volume of each
+					channel so the sound can be heard through different speakers.</p><p>For 3D spatialized sounds, each input
+					channel can be output to any speaker in a surround environment making it easy to
+					simulate movement of the sound in relation to the listener. With 3D spatialized
+					sounds, you can either predefine the spatialization yourself in Wwise or use the
+					actual position of the game object in game.</p><p>3D spatialization depends on the
+					position of the emitter relative to the listener. For 3D spatialization to
+					occur, both emitter and listener game objects should therefore be distinct. In
+					the Wwise Project, objects of the Containers hierarchy are associated to their
+					emitter when the game posts events. When Wwise Objects have the Listener
+					Relative Routing option enabled, their output busses are instead associated to
+					the listener. Normally, the Listener Relative Routing option is enabled in the
+					Containers hierarchy, so that busses that follow are associated with the
+					listener. Incidentally, 3D spatialization can only be performed with Wwise
+					Objects that have Listener Relative Routing enabled since it must happen at the
+					point where an object associated with an emitter is being mixed into a bus that
+					is associated with a listener.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You should enable Listener Relative Routing on sounds and other objects of
+						the Containers hierarchy even if they don't utilize 3D spatialization.
+						Otherwise, their output busses will be associated with the emitter instead
+						of the listener, resulting in distinct instances of busses.</p></td></tr></table></div><p>You can also apply distance
+					attenuation to sounds based on the distance between the emitter and listener
+					game objects, and then share these settings across many different objects within
+					Wwise using an Attenuation ShareSet.</p><p>Positioning for less sophisticated devices, such as game controllers, is not
+					an issue because the motors within these devices cannot simulate a 3D
+					environment. You can, however, use attenuation to reduce the intensity of the
+					motion signal as it moves away from the game player.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Although the positioning of busses must be considered in relation to its
+						impact on all objects that go through it, their <a class="link" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses">Positioning properties</a> is almost identical
+						to the Positioning properties of objects in the Containers hierarchy. Only the
+						Override parent option is inapplicable. </p></td></tr></table></div><div class="informaltable"><a name="wwiseobject_sound_positioning"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Positioning</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Specific</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the positioning and attenuation settings will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the positioning controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Center %</p>
+	</td><td>
+		<p>The amount or percentage of volume that is passed through the center speaker.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>For speaker panning with Direct Assignment, the Center % value applies only for mono objects output to a bus with a center channel. Container objects are mono when their underlying source file or plug-in is mono. Busses are mono when their Bus Configuration is set to 1.0.</p></li><li class="listitem"><p>For speaker panning with Balance-Fade applied, the Center % value applies only for output with a center channel (such as mono, 3.0, 5.1, and 7.1).</p></li><li class="listitem"><p>For 3D spatialization, the Center % value also applies only for output with a center channel; but, moreover, it needs to be set in order to have a signal sent to the center channel.</p></li></ul></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+				 For more information on using the Center %, refer to 
+				<a class="link" href="ch23s09.html" title="Routing audio signals to the center speaker">Routing Audio Signals to the Center Speaker</a>
+				.
+			</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Speaker Panning</p>
+	</td><td>
+		<p>The default is Direct Assignment, where FL maps to FL, FR maps to FR, and so on.</p>
+		<p>If set to Balance-Fade, allows you to adjust the volume of each channel in a 2.0 to 7.1 Audio Bus. In reference to the Speaker Panner, channels closer to the circle will have their volume increased, while channels further from the circle will have their volume decreased.</p>
+		<p>If set to Steering, allows you to redistribute the content of the sound&#8217;s channels amongst the channels of the output bus. The distribution will be weighted towards the circle in the Speaker Panner.</p>
+		<p>The Panner works independently of the number of channels within the source.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Panner has no effect on an ambisonic sound.</p></td></tr></table></div>
+		<p>Default value: Direct Assignment</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Listener Relative Routing</strong></span>
+        </td></tr><tr><td>
+		<p>Listener Relative Routing</p>
+	</td><td>
+		<p>When enabled, the emitter-listener association is evaluated at this Wwise object. Evaluating emitter-listener association is almost always required with objects in the Containers hierarchy, because these objects are associated with emitters, whereas busses are typically associated with the listener.</p>
+		<p>Make sure to enable Listener Relative Routing on at least one object in your signal chain, regardless of the positioning type; the opposite would result in a complete duplication of the mixing graph (that is, busses and their effects). Aside from using more CPU, most bus insert effects such as compressors will not work as intended.</p>
+		<p>This symptom should be apparent in the Voice Graph of the Wwise Profiler whenever the emitter and listener are different game objects. Note that it will not be apparent when playing sound from the authoring tool because the Transport/Soundcaster game object is both an emitter and listener.</p>
+		<p>Evaluating emitter-listener association is also required for any game object-driven 3D positioning to occur (attenuation and spatialization).</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>3D Spatialization</p>
+	</td><td>
+		<p>Specifies whether the positioning of the source is calculated to simulate movement within a 3D space. Select from the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>None</strong></span> (default): The sound is panned according to the Speaker Panning setting.</p></li><li class="listitem"><p><span class="bold"><strong>Position</strong></span>: The sound is panned according to the relative positions of the emitter and listener.</p></li><li class="listitem"><p><span class="bold"><strong>Position + Orientation</strong></span>: The sound is panned according to the relative positions of the emitter and listener. The multichannel content of the sound also rotates with respect to the relative orientations of the emitter and listener. Orientation only has an effect with multichannel input files and a spread greater than zero.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Speaker Panning / 3D Spatialization Mix</p>
+	</td><td>
+		<p>Crossfade between Speaker Panning and 3D Spatialization. Available when spatialization is anything but None.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Listener Relative Routing &gt; Attenuation</strong></span>
+        </td></tr><tr><td>
+		<p>Enable Attenuation</p>
+	</td><td>
+		<p>When set, the attenuation curves of the designated Attenuation ShareSet apply. You may add an RTPC on this property to enable and disable the application of attenuation curves at run-time.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Attenuation Instance</p>
+	</td><td>
+		<p>
+			The Wwise object&#8217;s Attenuation instance. The instance could be either a ShareSet or custom. For details, refer to 
+			<a class="link" href="ch23s07s02.html" title="Applying attenuation instances to objects">Applying Attenuation Instances to Objects</a>
+			.
+		</p>
+	</td></tr><tr><td>
+		<p>Distance Scaling %</p>
+	</td><td>
+		<p>Scales the max distance of the attenuation applied on this object. You can add an RTPC on this property to scale the max distance of a sound&#8217;s attenuation at runtime.</p>
+		<p>Default value: 100</p>
+		<p>Range: 1 to 10000</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Listener Relative Routing &gt; 3D Position</strong></span>
+        </td></tr><tr><td>
+		<p>3D Position</p>
+	</td><td>
+		<p>Defines how positions are calculated for the purpose of 3D positioning (attenuation and spatialization).</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Emitter: Positioning defined by the game.</p></li><li class="listitem"><p>Emitter + Automation: User-Defined position automation around the emitter game object. Edited using the <span class="bold"><strong>Automation</strong></span> button.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Wwise Spatial Audio features are limited for sounds that use Emitter + Automation. Diffraction and Transmission processing is disabled for sounds that use Emitter + Automation. Furthermore, the automation offset does not apply to early reflection processing. Reflections are calculated using the base Game Object position.</p></td></tr></table></div>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Listener + Automation: User-Defined position automation around listener game object. Edited using the <span class="bold"><strong>Automation</strong></span> button.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Wwise Spatial Audio features are disabled for sounds that use Listener + Automation. This includes early reflection processing, Distance Probe, diffraction and transmission, and room sends.</p></td></tr></table></div>
+		<p>Default value: Emitter</p>
+	</td></tr><tr><td>
+		<p>Hold Listener Orientation</p>
+	</td><td>
+		<p>Determines whether the position of the animation path is locked to the orientation of the listener.</p>
+		<p>When this option is not selected, the path moves with the listener. This means that the sound will always be heard through the same speakers regardless of the orientation of the listener. When selected, the listener moves independently of the path. This means that the sound will be heard through different speakers as the listener turns around.</p>
+		<p>For example, let&#8217;s say you are using automation around the listener to create non-localized bird sounds in your game. You have a one-point path that is located in the front-right quadrant. As the listener turns around in game, the following will occur:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Hold Listener Orientation (OFF) - The bird sound will always be heard through the front right speaker.</p></li><li class="listitem"><p>Hold Listener Orientation (ON) - The bird sound will pass through different speakers.</p></li></ul></div>
+		<p>This option can be useful for creating non-localized ambient sounds.</p>
+		<p>This option can only be tested in game because the listener concept has not been integrated into the Wwise authoring application.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Hold Emitter Position and Orientation</p>
+	</td><td>
+		<p>When enabled, stores the game object&#8217;s instantaneous position and orientation when the sound starts playing, and base positioning off of it for the whole duration of the sound.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Wwise Spatial Audio features are disabled for sounds that enable <span class="bold"><strong>Hold Emitter Position and Orientation</strong></span>. This includes early reflection processing, Distance Probe, diffraction and transmission, and room sends.</p></td></tr></table></div>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Diffraction and Transmission</p>
+	</td><td>
+		<p>Enables diffraction and transmission processing in Spatial Audio for the sound.</p>
+		<p>Diffraction simulates the acoustic phenomenon of sound bending around obstacles, whereas transmission simulates sound passing through obstacles, in a virtual environment. Obstacles are defined by rooms, portals, and/or geometry, which have been passed from the game to Spatial Audio via the API. A sound bending around an obstacle is subject to diffraction, and a sound passing through an obstacle is subject to transmission loss, both of which effect the resulting volume and filtering of a sound.</p>
+		<p>For diffraction and transmission simulation to take place, the game must define level geometry or rooms and portals and send it to Wwise Spatial Audio.</p>
+		<p>When diffraction and transmission are enabled for a sound, the following takes place in Wwise Spatial Audio:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sound paths between the emitter and the listener are calculated, comprised of a single direct or transmission path, and zero or more diffraction paths.</p></li><li class="listitem"><p>A transmission loss coefficient (0%-100%) is calculated for the direct/transmission path. The transmission loss is determined by the rooms and geometry that the sound passes through.</p></li><li class="listitem"><p>The transmission loss coefficient (%) is converted to a volume, a low-pass and a high-pass filter value using the <span class="bold"><strong>Transmission</strong></span> curves defined in the sound&#8217;s attenuation settings. The sound is attenuated and filtered accordingly.</p></li><li class="listitem"><p>A diffraction coefficient (0%-100%) is calculated based on the sum of angles in the diffraction paths. A straight line path would have 0% diffraction, and a path that bends 180 degrees or more is considered 100% diffraction.</p></li><li class="listitem"><p>The diffraction coefficient (%) is converted to a volume, a low-pass and a high-pass filter value using the <span class="bold"><strong>Diffraction</strong></span> curve defined in the sound&#8217;s attenuation settings. The sound is attenuated and filtered accordingly.</p></li><li class="listitem"><p>For diffraction paths, the apparent position of the sound relative to the listener is calculated to create &#8216;virtual&#8217; positions giving the listener the impression that the sound is propagating around a corner or through a portal.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The Game Object 3D Viewer enables the user to see what is going on inside of Wwise Spatial Audio, including level geometry, portals, and the sound&#8217;s diffraction/transmission paths and resultant virtual positions.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> For <span class="bold"><strong>Diffraction and Transmission</strong></span> to take effect, the Wwise Spatial Audio library must be initialized and the game must send level geometry or rooms and portals to Wwise Spatial Audio.</p></td></tr></table></div>
+		<p>Default value: false</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch23s02.html" title="Working with speaker panning">Working with speaker panning</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s03.html" title="Working with 3D spatialized objects">Working with 3D spatialized objects</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s07.html" title="Applying attenuation">Applying attenuation</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s07s02.html" title="Applying attenuation instances to objects">Applying attenuation instances to objects</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s08.html" title="Defining spatial positioning using animation paths">Defining spatial positioning using animation paths</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s08.html#creating_animation_paths_that_follow_orientation_of_listener" title="Creating animation paths that follow the orientation of the listener">Creating animation paths that follow the orientation of the listener</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch23s09.html" title="Routing audio signals to the center speaker">Routing audio signals to the center speaker</a>
+						</p></li></ul></div></div><HR></body></html>

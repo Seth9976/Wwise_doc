@@ -1,0 +1,193 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>ReadSpeaker speechEngine</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt10.html" title="Certified Partner plug-ins"><link rel="prev" href="ch71s03.html" title="ML1 Mastering Limiter applications"><link rel="next" href="ch72s01.html" title="Platform Support"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt10.html">Certified Partner plug-ins</a></span> &gt; <span class="breadcrumb-node">ReadSpeaker speechEngine</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="readspeaker_tts_speech_engine_plugin"></a>ReadSpeaker speechEngine</h2></div></div></div><p>The ReadSpeaker speechEngine plug-in provides text-to-speech support for your Wwise projects.
+		This plug-in uses a proprietary text-to-speech engine optimized for performance and memory
+		footprint, which ensures smooth integration and efficient resource usage. It processes text
+		and generates audio on the device in real time to support dynamic dialogue, narration,
+		reading of GUI elements, and so on.</p><p>The ReadSpeaker speechEngine plug-in provides the following features and benefits:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enhances accessibility in your games by providing narration of on-screen UI
+				elements.</p></li><li class="listitem"><p>Prototypes voice acting during early stages of development.</p></li><li class="listitem"><p>Supports speech-enabled in-game chat messages in multiplayer games and
+				more.</p></li><li class="listitem"><p>Reads AI-generated text and dialog aloud with effectively zero latency.</p></li><li class="listitem"><p>Makes localization easy with the many included languages, each recorded by native
+				speaking voice actors.</p></li></ul></div><p>Voices are recorded and processed only by ReadSpeaker, using full-disclosure contracts
+		with the voice actors.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>On Nintendo Switch and PS4, the voices sound slightly different than they do in Wwise
+			Authoring and on other platforms because different voice models are used on those
+			platforms.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_installation"></a>Installation</h2></div></div></div><p>Install the speechEngine plug-in through the Audiokinetic Launcher. See <a class="link" href="https://www.audiokinetic.com/library/wwise_launcher/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> for more information.</p><p>After installing the plug-in, add it to your project as a child in the Containers
+			hierarchy. You can also add it as a sound source, or link the speechEngine objects to
+			events, game syncs, and so on, as you would with any other object.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_dependencies"></a>Runtime Dependencies</h2></div></div></div><p>At runtime, the plug-in dynamically loads a language-specific library for each voice
+			in use. These libraries follow the <code class="code">vt_[lang]</code> naming convention (for
+			example, <code class="code">vt_eng.dll</code> for English on Windows or <code class="code">vt_bre.so</code> for
+			British English on Android). They must be on a path that the system's DLL load operation
+			can locate, typically in the same directory as the speechEngine library.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_loading"></a>Loading the Plug-in at Runtime</h2></div></div></div><p>The plug-in loading method depends on whether your project links to it dynamically or
+			statically.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="bold"><strong>Dynamic loading:</strong></span> Call <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a80939cdbab812ddba3b7923188012bc6.html" target="_blank"><code class="code">AK::SoundEngine::RegisterPluginDLL</code></a> with the name
+						<code class="code">"SpeechEngine"</code> before posting any speechEngine events. The
+					corresponding DLL or shared library must be on a path that the operating
+					system's dynamic linker can locate.</p><pre class="programlisting">AK::SoundEngine::RegisterPluginDLL(AKTEXT("SpeechEngine"));</pre></li><li class="listitem"><p>
+					<span class="bold"><strong>Static linking:</strong></span> Include the plug-in factory
+					header. This registers the plug-in automatically at startup without an explicit
+						<a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a80939cdbab812ddba3b7923188012bc6.html" target="_blank"><code class="code">RegisterPluginDLL</code></a> call.</p><pre class="programlisting">#include &lt;AK/Plugin/SpeechEngineSourceFactory.h&gt;</pre><p>When linking statically, you must also link against the <code class="code">libvtapi</code>
+					library distributed with the plug-in. For example, for the Windows 64-bit vc170
+					platform, the library is located at
+						<code class="code">SDK\x64_vc170\Release\lib\libvtapi.lib</code>.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_rtpcs"></a>Using RTPCs</h2></div></div></div><p>The following voice parameters support RTPCs. Use the listed RTPC names with
+				<code class="code">AK::SoundEngine::SetRTPCValue</code> to control them from game code.</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="Parameter"><col class="RTPCName"><col class="Range"><col class="Default"></colgroup><thead><tr><th><p>Parameter</p></th><th><p>RTPC Name</p></th><th><p>Range</p></th><th><p>Default</p></th></tr></thead><tbody><tr><td><p>Pitch</p></td><td><p><code class="code">speechEngine_Pitch</code></p></td><td><p>50 &#8211; 200</p></td><td><p>125</p></td></tr><tr><td><p>Speed</p></td><td><p><code class="code">speechEngine_Speed</code></p></td><td><p>50 &#8211; 400</p></td><td><p>125</p></td></tr><tr><td><p>Sentence Pause</p></td><td><p><code class="code">speechEngine_SentencePause</code></p></td><td><p>0 &#8211; 3000 ms</p></td><td><p>0</p></td></tr><tr><td><p>Comma Pause</p></td><td><p><code class="code">speechEngine_CommaPause</code></p></td><td><p>0 &#8211; 3000 ms</p></td><td><p>0</p></td></tr></tbody></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>RTPC changes are not applied to a synthesis that is already in progress. New values are
+				applied the next time a speechEngine event is posted.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_sending_text_during_runtime"></a>Sending Text During Runtime</h2></div></div></div><p>You can set text in Wwise Authoring in the plug-in's <span class="bold"><strong>Text</strong></span>
+			parameter. When text is also sent from game code via <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a25efe2a9b18ad130f4fc4c0c3599ec30.html" target="_blank"><code class="code">AK::SoundEngine::SendPluginCustomGameData</code></a>, the game code
+			text takes precedence over the value set in Wwise Authoring.</p><p>To send text from game code, call <code class="code"><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a25efe2a9b18ad130f4fc4c0c3599ec30.html" target="_blank">AK::SoundEngine::SendPluginCustomGameData</a></code> using the following
+			Company ID and Plug-in ID to target the speechEngine source:</p><pre class="programlisting">in_uCompanyID = 312
+in_uPluginID = 1</pre><p>Call <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a41e9ef8d42951871fe4a8ae58a29a68e.html" target="_blank"><code class="code">PostEvent</code></a> first, then <code class="code">SendPluginCustomGameData</code>
+			immediately after, in the same game loop iteration. The plug-in reads the custom game
+			data during its initialization, and it is dispatched asynchronously after the event is
+			posted. Send the data before the next audio rendering frame to ensure the plug-in
+			receives it in time.</p><p>The text must use UTF-8 character encoding. If no text is available &#8212; neither from
+			Wwise Authoring nor from game code &#8212; the plug-in logs a message to the Wwise Monitor and
+			produces no audio output.</p><p>
+			<span class="bold"><strong>Example:</strong></span>
+			</p><pre class="programlisting">const AkUInt32 kCompanyID = 312;
+const AkUInt32 kPluginID = 1;
+const AkGameObjectID GAME_OBJECT_SPEAKER = 100;
+
+std::string strTextToSynthesize = "This voice is generated using on-device text-to-speech technology.";
+
+// 1. Post the event to start audio playback.
+AkPlayingID playingID = AK::SoundEngine::PostEvent(
+    "Play_speechEngine",
+    GAME_OBJECT_SPEAKER,
+    AK_EndOfEvent | AK_Marker,
+    &amp;MyMarkersCallback,
+    pCookie);
+
+// 2. Immediately send the text to synthesize.
+AK::SoundEngine::SendPluginCustomGameData(
+    AK_INVALID_UNIQUE_ID,
+    GAME_OBJECT_SPEAKER,
+    AkPluginTypeSource,
+    kCompanyID,
+    kPluginID,
+    (void*)strTextToSynthesize.c_str(),
+    static_cast&lt;AkUInt32&gt;(strTextToSynthesize.length()) + 1);</pre><p>
+		</p><p>For a complete example in C++, refer to <code class="code">DemoSpeechEngine.cpp</code> as part of
+			the IntegrationDemo project.</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_ssml"></a>Speech Synthesis Markup Language (SSML)</h2></div></div></div><p>The plug-in supports SSML, which allows you to control pronunciation, emphasis, pauses, and
+			other speech characteristics by embedding markup tags directly in the text. SSML tags
+			are structured like XML and consist of a tag name and optional attributes enclosed in
+			angled brackets (<code class="code">&lt;&gt;</code>).</p><p>For example:</p><pre class="programlisting">&lt;emphasis level="strong"&gt;This is important.&lt;/emphasis&gt;</pre><p>To enable SSML processing, select the <span class="bold"><strong>SSML</strong></span> toggle on the
+			plug-in object in Wwise Authoring. When enabled, this setting applies to both the text
+			from Wwise Authoring and to text sent by <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a25efe2a9b18ad130f4fc4c0c3599ec30.html" target="_blank"><code class="code">SendPluginCustomGameData</code></a> at runtime. Enabling SSML has a
+			minor negative effect on performance during speech synthesis, even if no tags are
+			present in the text.</p><p>For a full reference of supported SSML tags, see <a class="link" href="https://cloud.google.com/text-to-speech/docs/ssml" target="_blank">Speech Synthesis
+				Markup Language (SSML)</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The plug-in does not support <code class="code">&lt;audio&gt;</code> or
+							<code class="code">&lt;voice&gt;</code> tags.</p></li><li class="listitem"><p>If the SSML text contains a syntax error, the synthesis fails. An error
+						message is logged to the Wwise Monitor and no audio is produced. Validate
+						your SSML markup before shipping.</p></li></ul></div></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_parsing_audio_markers"></a>Accessing Generated Word Information</h2></div></div></div><p> When generating speech, the plug-in produces audio markers alongside the audio data. These
+			markers carry timing and linguistic information, such as word boundaries and phoneme
+			transitions, that you can use to drive in-game visuals, such as highlighted subtitles or
+			lip-sync animation. For more information on audio markers in Wwise, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_markers.html" target="_blank">Integrating Markers</a>. </p><p>To receive audio markers, pass <code class="code">AK_Marker</code> as a callback flag when calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a41e9ef8d42951871fe4a8ae58a29a68e.html" target="_blank"><code class="code">PostEvent</code></a>, and handle <code class="code">AK_Marker</code> callbacks in
+			your callback function.</p><p>
+		Each audio marker has the following fields:
+		</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Marker ID</strong></span>: identifies the type of text-to-speech event
+						the marker represents (see the following table).</p></li><li class="listitem"><p><span class="bold"><strong>Position</strong></span>: the position in the audio stream where the
+						event occurs, in samples.</p></li><li class="listitem"><p><span class="bold"><strong>Label</strong></span>: a string containing additional data whose content
+						depends on the marker type.</p></li></ul></div><p>
+		</p><p>
+		</p><div class="table"><a name="idm1507017712"></a><p class="title"><b>Marker Types</b></p><div class="table-contents"><table class="table" summary="Marker Types" border="1"><colgroup><col class="Type"><col class="TypeID"><col class="Description"></colgroup><thead><tr><th>
+							<p>Marker Type</p>
+						</th><th>
+							<p>Marker ID</p>
+						</th><th>
+							<p>Label Content</p>
+						</th></tr></thead><tbody><tr><td>
+							<p>Begin Word</p>
+						</td><td>
+							<p><code class="code">'bwrd'</code></p>
+						</td><td>
+							<p>Two integers separated by a space: the zero-based start byte
+							index and the inclusive end byte index of the word in the synthesized
+							text, based on its UTF-8 representation. Use them to extract or 
+							highlight the word being spoken.</p>
+						</td></tr><tr><td>
+							<p>Begin Phoneme</p>
+						</td><td>
+							<p><code class="code">'bphm'</code></p>
+						</td><td>
+							<p>The viseme ID for the phoneme, encoded as a decimal integer string. Use this to drive
+									mouth animation for the speaking character.</p>
+							<p>For more information on interpreting the viseme IDs, refer to <a class="link" href="https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms720881(v=vs.85)" target="_blank">this page</a>.</p>
+						</td></tr><tr><td>
+							<p>End Phoneme</p>
+						</td><td>
+							<p><code class="code">'ephm'</code></p>
+						</td><td>
+							<p>Empty. Signals the end of the current phoneme.</p>
+						</td></tr><tr><td>
+							<p>End Word</p>
+						</td><td>
+							<p><code class="code">'ewrd'</code></p>
+						</td><td>
+							<p>Empty. Signals the end of the current word.</p>
+						</td></tr></tbody></table></div></div><p><br class="table-break">
+		</p><p>When the synthesized speech is played, audio markers are always received in the following
+			pattern:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>BEGIN WORD</p></li><li class="listitem"><p>BEGIN PHONEME</p></li><li class="listitem"><p>END PHONEME</p></li><li class="listitem"><p>...</p></li><li class="listitem"><p>BEGIN PHONEME</p></li><li class="listitem"><p>END PHONEME</p></li><li class="listitem"><p>END WORD</p></li></ol></div><p>
+			The number of Begin Phoneme / End Phoneme pairs within a word depends on the word's
+			length. At the end of the final word in the sentence, the synthesizer emits one additional
+			Begin Phoneme / End Phoneme pair representing the closing of the mouth.
+		</p><p>
+		Here is a simplified example of extracting speech synthesis information from audio markers.
+		For a complete working example, refer to the <code class="code">MarkersCallback</code> function in
+		<code class="code">DemoSpeechEngine.cpp</code> in the Wwise IntegrationDemo.
+		</p><pre class="programlisting">
+const AkUInt32 kBeginWordMarkerID = 'bwrd';
+const AkUInt32 kBeginPhonemeMarkerID = 'bphm';
+const AkUInt32 kEndPhonemeMarkerID = 'ephm';
+const AkUInt32 kEndWordMarkerID = 'ewrd';
+
+static void MarkersCallback(AkCallbackType in_eType, AkEventCallbackInfo* in_pEventInfo, void* in_pCallbackInfo, void* in_pCookie)
+{
+	if (in_eType == AK_Marker)
+	{
+		AkMarkerCallbackInfo* pMarkerCallbackInfo = (AkMarkerCallbackInfo*)in_pCallbackInfo;
+
+		AkUInt32 uMarkerID = pMarkerCallbackInfo-&gt;uIdentifier;
+		AkUInt32 uMarkerPositionInAudioSamples = pMarkerCallbackInfo-&gt;uPosition;
+		const char* szMarkerLabel = pMarkerCallbackInfo-&gt;strLabel;
+
+		switch (uMarkerID)
+		{
+			case kBeginWordMarkerID:
+			{
+				std::string strMarkerLabel(szMarkerLabel);
+				auto delimPos = strMarkerLabel.find(' ');
+				if (delimPos != std::string::npos)
+				{
+					unsigned long uStartOfWord = std::stoul(strMarkerLabel.substr(0, delimPos));
+					unsigned long uEndOfWord = std::stoul(strMarkerLabel.substr(delimPos));
+				}
+				break;
+			}
+			case kBeginPhonemeMarkerID:
+			{
+				AkInt16 visemeID = static_cast&lt;AkInt16&gt;(std::stoi(szMarkerLabel));
+				break;
+			}
+			case kEndPhonemeMarkerID:
+			case kEndWordMarkerID:
+			{
+				break; // No additional data in the label for these markers.
+			}
+		}
+	}
+}
+		</pre><p>
+		</p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="readspeaker_tts_additional_notes"></a>Limitations</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>One voice per language at a time.</strong></span> Only one speechEngine
+					voice per language or dialect can be played at one time. For example, you could
+					play a voice for US English and another voice for British English, but not two
+					voices for US English. If a second voice of the same language is triggered while
+					one is already playing, the second voice is not initialized. An error message is
+					logged to the Wwise Monitor and no audio is produced for that instance. Design
+					your event system to avoid overlapping voices of the same language.</p></li><li class="listitem"><p><span class="bold"><strong>First-playback latency.</strong></span> The first time a specific voice
+					is used after the application starts, the plug-in must load the voice model into
+					memory, which causes an extended delay before audio begins. Subsequent playback
+					requests using the same voice use the loaded model and respond with standard
+					latency. If this initial delay is a problem for your project, you can trigger a
+					silent warm-up event at startup to avoid it.</p></li><li class="listitem"><p><span class="bold"><strong>SSML syntax errors.</strong></span> If SSML is enabled and
+				the input text contains invalid markup, the synthesis fails silently from the
+				player's perspective: no audio is produced and an error message is logged to the
+				Wwise Monitor. Validate SSML content before passing it to the plug-in.</p></li><li class="listitem"><p><span class="bold"><strong>RTPC changes mid-playback.</strong></span> Changes to Pitch,
+				Speed, Sentence Pause, or Comma Pause via RTPC do not affect a synthesis that is
+				already in progress. Updated values are applied the next time a new event is
+				posted.</p></li></ul></div></div></div><HR></body></html>

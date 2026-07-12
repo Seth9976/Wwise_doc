@@ -1,0 +1,59 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Advanced category</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch46.html" title="Getting to know the Property Editor"><link rel="prev" href="ch46s07.html" title="MIDI category"><link rel="next" href="ch46s09.html" title="Sources category"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch46.html">Getting to know the Property Editor</a></span> &gt; <span class="breadcrumb-node">Advanced category</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="advanced_settings"></a>Advanced category</h2></div></div></div><p>Advanced properties are specified to limit the number of sounds playing concurrently and to
+			specify their behavior when they are inaudible, which respectively provide the following
+			advantages:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Performance improvements and help in cleaning up your mix</p></li><li class="listitem"><p>Memory and CPU savings</p></li></ul></div><p>The following figure shows the Advanced category for a Sound SFX.</p><div class="mediaobject"><img src="Images/advanced_settings_tab.png"></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="advanced_settings_and_mixing"></a>Advanced properties and mixing</h3></div></div></div><p>You shouldn't wait too late in the production process to adjust the advanced properties.
+				More precisely, you should at least perform a first pass before or while mixing. If
+				you spend time tweaking your mix too early, and later realize that audio is using
+				too many resources, you might end up using advanced properties so aggressively to
+				keep audio processing within bounds that it would have a dramatic impact on your
+				mix.</p><p>Playback limits should actually help you with mixing. Use them as a form of
+				dynamic mixing, to help players focus on what's important instead of drowning them
+				with sounds. You may also use bus ducking, <span class="bold"><strong>Set Voice
+					Volume</strong></span> Actions, States, or RTPCs to clean up your mix.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="playback_limit_priority_and_under_volume_threshold_behavior"></a>Playback limit, priority, and under volume threshold behavior</h3></div></div></div><p> Playback limits used on sound structures help you limit the number of sounds
+				playing at the same time, either per game object or globally as specified in the
+				Containers hierarchy. (In the Busses hierarchy, it is
+				always globally). Its logic is solely based on the number of sounds that play.
+				However, sound designers can apply separate limits to different objects throughout a
+				hierarchy. And, as desired, they can also create separate hierarchies by selecting
+				the <span class="bold"><strong>Ignore Parent</strong></span> option. In sum, the different
+				levels of playback limits provide sound designers with greater and easier control
+				over what will play. </p><p>Playback limiting conditions are checked before attempting to play a sound. When a
+				sound is about to start and the limit has already been reached, either this sound or
+				another one is stopped. The first criterion is the sound's priority. In the case
+				where the two candidates have the same priority, the sound engine stops either the
+				oldest or the newest instance of the sound, as specified by the <span class="bold"><strong>When limit is reached</strong></span> and <span class="bold"><strong>When
+					priority is equal</strong></span> properties.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When a sound is killed because of playback limit, it is not restarted when the
+					play count falls below the limit. So, be careful with infinitely looping ambient
+					sounds.</p></td></tr></table></div><p>Priority settings work together with the playback limit. Tweak priorities in the
+				hierarchy to balance the limiting system. Sounds that should never be killed by the
+				limiting system, like voice overs, background music, or looping ambient sounds,
+				should have the highest priority. Furthermore, the effective priority can be
+				affected by the distance between the sound and the listener.</p><p>The "under <span class="bold"><strong>Volume Threshold</strong></span>" behavior has nothing
+				to do with playback limits and priorities. It only tells what will be the sound's
+				behavior when it is inaudible. To determine whether a sound is inaudible, Wwise only
+				looks at the metadata volume, which is the resulting contribution of all volumes of
+				the hierarchy, Busses, States, RTPC, and Set Voice Volume Actions. It never analyzes
+				WAV data.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="dynamic_mixing_techniques"></a>Dynamic mixing techniques</h3></div></div></div><p>The following dynamic mixing techniques can be applied in the Advanced category.</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Limit playback on busses or on objects in the
+							Containers hierarchy to make room for important sounds</strong></span></p><p>For example, reduce the number of ambient and foley sounds when there's a
+						lot of action, explosions, or any element on which players should focus.
+						Find the bus where ambiance and foley meet guns and explosions, set a limit
+						on that bus, and lower the priority of the former.</p></li><li class="listitem"><p><span class="bold"><strong>Use distance offset for priority</strong></span></p><p>For example, among ambiance sounds, use playback limiting along with
+						distance-based priority in order to focus on those that are closer. The
+							<span class="bold"><strong>Offset priority by</strong></span> option specifies a
+						priority offset value at maximum distance, which is interpolated between 0
+						and <span class="bold"><strong>at max distance</strong></span>.</p></li><li class="listitem"><p><span class="bold"><strong>Duck volume of less important
+						sounds</strong></span></p><p> It is sometimes impossible to use playback limits. For example, if you
+						start infinitely looping ambient sounds once at the beginning of a level,
+						you should avoid having them stopped by playback limiting because they will
+						not be restarted when things calm down. In this case, or in any case you see
+						fit, use the technique you want to duck their volume when there is activity
+						in other, more important areas of the game's audio. For example, shut
+						ambiances down during voice overs or combat. You don't need to hear the buzz
+						of a lamp when a grenade explodes next to you. This process can be viewed as
+						metadata <a class="glossterm" href="go01.html#glossary_side_chaining"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_side_chaining" title="Side-Chaining">side-chaining</a></em></a>. Volume changes can be triggered using the
+						bus ducking feature on control busses or <span class="bold"><strong>Set Voice
+							Volume</strong></span> actions within specific events, and so on.</p><p>Once you have cleaned up your mix by lowering the volume of less important
+						sounds in specific situations, tweak their "under <span class="bold"><strong>Volume Threshold</strong></span>" behavior in order to have them use the
+						least CPU and memory possible while they are inaudible.</p></li><li class="listitem"><p><span class="bold"><strong>Implement a code-side dynamic mixing
+							system</strong></span></p><p>Notice that the playback limits, priorities and priority offsets can be exposed to the
+						game through RTPC. Nothing prevents you from implementing a system which
+						adapts these properties based on what's happening in the game.</p></li></ul></div></div></div><HR></body></html>

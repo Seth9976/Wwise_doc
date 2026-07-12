@@ -1,0 +1,36 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Profiler Statistics</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s12.html" title="Game Sync Monitor"><link rel="next" href="ch63s13s01.html" title="Profiler Statistics (Query - Paths Used)"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Profiler Statistics</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="profiler_statistics"></a>Profiler Statistics</h2></div></div></div><p>After you have completed a Capture Session, you can use the Profiler Statistics view to gather statistical information about certain audio elements in your Wwise project or game. You can even extract statistical information while you are capturing information from the sound engine.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+          Currently, only information about the dynamic dialogue elements can be extracted from the capture session. To completely understand the statistical information presented, it is important that you understand the different steps involved in generating dynamic dialogue with Wwise. For more information on dynamic dialogue, refer to <a class="xref" href="ch16.html#understanding_dynamic_dialogue_system" title="Understanding the dynamic dialogue system">Understanding the dynamic dialogue system</a>.
+        </p></td></tr></table></div><p>The Profiler Statistics view contains a series of predefined queries that provide you with statistics on different subsets of information. For example, you can determine which paths were resolved during the capture session, how many times they were resolved, and how many times this resulted in audio being played back. You can extract statistics from any active capture session, which means you can gather statistics on data captured remotely from a game or locally from within Wwise. A capture session remains active as long as the information is displayed in the Capture log.</p><p>The Profiler Statistics view is contextual, which means that different options are displayed in the view depending on the query you have selected. The following queries are available:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch63s13s01.html" title="Profiler Statistics (Query - Paths Used)">Profiler Statistics (Query - Paths Used)</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch63s13s02.html" title="Profiler Statistics (Query - Dialogue Events Added)">Profiler Statistics (Query - Dialogue Events Added)</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch63s13s03.html" title="Profiler Statistics (Query - Dialogue Events Distribution)">Profiler Statistics (Query - Dialogue Events Distribution)</a>
+          </p></li><li class="listitem"><p>None - no information is displayed in the Profiler Statistics view.</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>Queries</p>
+              </td><td>
+                <p>A series of pre-defined queries that use the current capture session to display statistics about a specific subset of information.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_run.png"></div>
+              </td><td>
+                <p>Runs the selected query on the information gathered during the current capture session. All Dialogue Event information is displayed in the Results pane.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_clear.png"></div>
+              </td><td>
+                <p>Clears the accumulated statistics in all queries.</p>
+              </td></tr><tr><td>
+                <p>Update automatically</p>
+              </td><td>
+                <p>When checked, the selected query will update live as the captured data arrives from the game. When unchecked, use "Run" to refresh the data manually.</p>
+              </td></tr><tr><td>
+                <p>Keep statistics across sessions</p>
+              </td><td>
+                <p>When enabled, the statistics are not cleared when a new capture session begins. This allows the accumulation of statistics for many different game scenarios.</p>
+                <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>
+                    Clicking the <span class="bold"><strong>Run</strong></span> button will clear the data accumulated across sessions and show the statistics for the current capture session only.
+                  </p></td></tr></table></div>
+              </td></tr></tbody></table></div></div><HR></body></html>

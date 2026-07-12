@@ -1,0 +1,97 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Device Editor: Others</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s01.html" title="Audio Devices"><link rel="prev" href="ch61s01s01s01.html" title="Audio Device Editor: System"><link rel="next" href="ch61s01s01s03.html" title="Audio Device Editor: Effects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s01.html">Audio Devices</a></span> &gt; <span class="breadcrumb-node">Audio Device Editor: Others</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="audio_devices_editor_others"></a>Audio Device Editor: Others</h4></div></div></div><p>The Audio Device Editor contains a series of properties associated with an Audio Device.
+      You can modify many of the properties in real time and insert Effects using the editor's
+      Effects tab. </p><p>The following table describes the interface elements included in the Audio Device Editor
+      for all of the Audio Device types other than System. This includes the following Audio Device
+      types: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Communication</p></li><li class="listitem"><p>Controller Headphones</p></li><li class="listitem"><p>DVR Bypass</p></li><li class="listitem"><p>No Output</p></li><li class="listitem"><p>Controller Speaker.</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+              <p>General</p>
+            </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>[name]</p>
+            </td><td>
+              <p>The name of the Audio Device.</p>
+            </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+              <p>Notes</p>
+            </td><td>
+              <p>Any additional information about the Audio Device.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_split.png"></div>
+            </td><td>
+              <p>Sets the display of the Audio Device Editor's selected tabs. By default, there
+                is one panel displaying only one selected tab. You can, however, click a splitter
+                button to split the panel into two, either side by side or one on top of the other,
+                for two different tabs. The currently selected option is highlighted with a
+                background color.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is
+                  currently displayed in the other panel, then the other panel will automatically
+                  display another tab.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+              <p>DVR Recordable</p>
+            </td><td>
+              <p>Determines whether the output of this Audio Device will be sent to the DVR.
+                Bypassing the DVR can avoid legal concerns with copyrighted music in the case that
+                game play may be recorded and published by a third party.</p>
+              <p>This is option is supported on the following platforms:</p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Xbox One</p></li><li class="listitem"><p>Xbox Series X</p></li><li class="listitem"><p>PS4</p></li><li class="listitem"><p>PS5</p></li></ul></div>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is only present on the DVR Bypass Audio Device.</p></td></tr></table></div>
+            </td></tr><tr><td>
+		<p>Override Color</p>
+	</td><td>
+		<p>Enables the Color slider to change the color chip of the selected objects.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+              <p>Color</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td>
+              <p>Inclusion</p>
+            </td><td>
+              <p>See description above.</p>
+            </td></tr><tr><td>
+              <p>Audio &gt; Effects</p>
+            </td><td>
+              <p>Effects can be inserted or bypassed.</p>
+            </td></tr></tbody></table></div></div><HR></body></html>

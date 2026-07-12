@@ -1,0 +1,103 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voices Graph</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03.html" title="Advanced Profiler"><link rel="next" href="ch63s03s02.html" title="Voices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Voices Graph</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="voices_graph"></a>Voices Graph</h3></div></div></div><p>The Advanced Profiler - Voices Graph tab displays the optimized bus hierarchy as it exists in the lower engine at runtime for each of the voices or playback instances managed by the sound engine. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>View</p>
+              </td><td>
+                <p>Click the 
+                  <span class="bold"><strong>View</strong></span>
+                  select button to show or hide from the graph the following elements:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Game Objects</strong></span>: Displays or hides the Game Objects in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Events</strong></span>: Displays or hides the Events in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Targets</strong></span>: Displays or hides the Targets in the graph view.</p><p>A Target refers to the object targeted for playing by the Event. The playing of the Target object triggers its child sources. In the case where a Random Container is the Target, enabling this view option will show both the Random Container targeted by the Event and the resulting source object.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Virtual Voices</strong></span>: Displays or hides the virtual voices in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Devices</strong></span>: Displays or hides the final output devices in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Volumes</strong></span>: Displays or hides the Volume values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>LPF</strong></span>: Displays or hides the LPF values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>HPF</strong></span>: Displays or hides the HPF values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>DSF</strong></span>: Displays or hides the DSF values in the graph view.</p></li></ul></div>
+              </td></tr><tr><td>
+                <p>Graph view</p>
+              </td><td>
+                <p>Displays the structure and contents of each voice generated by the sound engine. For more information, see the 
+                  <a class="xref" href="ch63s03s01.html#graph_view" title="Graph view">Graph view</a> section below.</p>
+              </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="graph_view"></a>Graph view</h4></div></div></div><p>Information about the elements played in-game is displayed in the graph. While the elements could be essentially any variety of Wwise object, they are displayed from left to right in order of their relationship starting with game objects, moving through possible Events and their targets (such as containers, States, and Switches), to sound and music objects, and finally the bus structure output.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can click any element in the graph to open it in the Property Editor.</p></td></tr></table></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Non-mixing busses are not displayed in the graph view. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more information on the various
+            processing statuses.</p></td></tr></table></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For the optimized bus hierarchy of motion objects to appear in the Voices tab, you need the appropriate motion device drivers installed on your workstation.</p></td></tr></table></div><p>The relationship between each element within the structure is displayed with lines,
+          along with information about the element. For example, hovering over or clicking on an
+          object highlights its entire path: parent objects, child objects, and connection lines. A
+          dotted line connects an audio structure to an Auxiliary Bus. A red dotted line indicates
+          latency. Next to the volume output, the amount of latency appears in ms. </p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="156"><tr style="height: 120px"><td><img src="Images/latency_line.png" width="156"></td></tr></table></div><p> This happens when an Auxiliary Send goes to an Auxiliary Bus
+            that is already mixing in the current audio frame. Wwise must wait for the next audio
+            frame to include the send in the mix. To avoid this possibility, do not direct Auxiliary
+            Sends to Auxiliary Busses lower in the hierarchy. </p><div class="mediaobject"><img src="Images/AP_Effect_Graph_Example1.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                </td><td>
+                  <p>The large light grey box (BP_WaterGush_01_Spigot4_3...) represents the Game
+                    Object that is associated with the Event (Fountain_Splash_02) and Sound SFX
+                    (Fountain Splash 02).</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                </td><td>
+                  <p>The blue boxes represent the Event (Fountain_Splash_02) and the Sound SFX
+                    (Fountain Splash 02) objects. Numbers and icons indicate the relative volume
+                    level in decibels, low-pass filter (0-100), and high pass filter (0-100).</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                </td><td>
+                  <p>The large light grey box represents the Listener Game Object
+                    (PlayerCameraManager_2147...) that is associated with the Busses and their
+                    applied effects. Numbers and icons indicate the relative volume level in
+                    decibels.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                </td><td>
+                  <p>The yellow box (AK Convolution Reverb) beneath the Bus (AkReverbZone_4)
+                    represents the Effect applied on the Bus. Numbers and icons indicate the
+                    relative volume level in decibels.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                </td><td>
+                  <p> Click the small grey circle to view the volume and amount of latency in
+                    milliseconds applied to this connection.</p>
+                </td></tr></tbody></table></div><p>The data in the Voices Graph tab is collected only once per capture period. You can, however, use the time cursor to navigate through the Performance/Voice Monitor to display data at different time periods.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+   Everywhere game objects are listed, such as in the <a class="xref" href="ch63s01.html" title="Capture Log">Capture Log</a> or the <a class="xref" href="ch63s03s02.html" title="Voices">Voices</a> and <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a> tabs of the Advanced Profiler, there is a specific shortcut menu with the following options:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Mute Game Object</strong></span>: Mutes all objects under this game object.</p></li><li class="listitem"><p><span class="bold"><strong>Unmute Game Object</strong></span>: Removes the mute on all objects under this game object.</p></li><li class="listitem"><p><span class="bold"><strong>Solo Game Object</strong></span>: Implicitly mutes all objects under other game objects.</p></li><li class="listitem"><p><span class="bold"><strong>Unsolo Game Object</strong></span>: Removes the implicit mute from all objects under other game objects.</p></li><li class="listitem"><p><span class="bold"><strong>Search Game Object in Voice Graph</strong></span>: Opens the <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a> tab of the Advanced Profiler with its Filter set to the specified game object.</p></li></ul></div><p>
+    </p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div></div><HR></body></html>

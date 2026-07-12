@@ -1,0 +1,169 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Routing category: Audio and Auxiliary Busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s02s04.html" title="Common tabs and categories: Busses hierarchy objects"><link rel="prev" href="ch61s01s02s04s03.html" title="States tab: busses"><link rel="next" href="ch61s01s02s04s05.html" title="Positioning category: Audio and Auxiliary Busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02.html">Busses hierarchy</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02s04.html">Common tabs and categories: Busses hierarchy objects</a></span> &gt; <span class="breadcrumb-node">Routing category: Audio and Auxiliary Busses</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="routing_properties_audio_aux_bus"></a>Routing category: Audio and Auxiliary Busses</h5></div></div></div><p>In the Routing category, you can define properties related to the output bus, as well as game-defined and user-defined auxiliary sends, and early reflections.</p><div class="informaltable"><a name="wwiseobject_bus_routing"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>Routing</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Output Bus</strong></span>
+        </td></tr><tr><td>
+		<p>Volume (to Output Bus)</p>
+	</td><td>
+		<p>The attenuation or amplitude of the signal routed to the audio output bus.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12. You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> When using the User-Defined Auxiliary Sends in a wet/dry mix scenario, the Output Bus Volume would be associated with the dry level, as opposed to the auxiliary send volume, which would relate to the wet level. Use an RTPC on Output Bus Volume and Auxiliary Send Volumes to control the balance from the game.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Low-pass Filter (to Output Bus)</p>
+	</td><td>
+		<p>A Low-Pass Filter for the signal routed to the audio output bus.</p>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of Low-Pass Filtering that has been applied, where 0 means no Low-Pass Filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>High-pass Filter (to Output Bus)</p>
+	</td><td>
+		<p>A High-Pass Filter for the signal routed to the audio output bus.</p>
+		<p>A recursive filter that attenuates low frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of High-Pass Filtering that has been applied, where 0 means no High-Pass Filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Dual-shelf Filter (to Output Bus)</p>
+	</td><td>
+		<p>A dual-shelf filter for the signal routed to the audio output bus.</p>
+		<p>A recursive filter that attenuates or boosts high frequencies based on the specified gain.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB </p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Game-Defined Auxiliary Sends</strong></span>
+        </td></tr><tr><td>
+		<p>Use game-defined aux sends</p>
+	</td><td>
+		<p>Determines whether the object uses the game-defined auxiliary sends of the associated game object. A game-defined auxiliary send is a combination of an Auxiliary Bus and a send volume.</p>
+		<p>If enabled, the object is affected by the values coming from the game for the following functions:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=ak__soundengine__setgameobjectauxsendvalues.html" target="_blank">AK::SoundEngine::SetGameObjectAuxSendValues()</a>
+				</p></li><li class="listitem"><p>
+					<a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=ak__soundengine__setgameobjectoutputbusvolume.html" target="_blank">AK::SoundEngine::SetGameObjectOutputBusVolume()</a>
+				</p></li></ul></div>
+		<p>Additionally, if the game has initialized Spatial Audio and sent Rooms and Portals data to Wwise, this option determines if the object sends to the Auxiliary Busses defined for Rooms and Portals based on the game object&#8217;s position.</p>
+		<p>
+			Refer to 
+			<a class="link" href="ch25s02.html#understanding_sends" title="Understanding sends">Understanding Sends</a>
+			 for further details this option.
+		</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Volume (Game-defined auxiliary sends)</p>
+	</td><td>
+		<p>Determines the attenuation on the game-defined auxiliary sends volumes set for the game object.</p>
+		<p>Use this volume to offset game-defined auxiliary send values.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12. You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Game-defined Auxiliary Sends LPF</p>
+	</td><td>
+		<p>A recursive filter that attenuates high frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of low-pass filtering that has been applied, where 0 means no low-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Game-defined Auxiliary Sends HPF</p>
+	</td><td>
+		<p>A recursive filter that attenuates low frequencies based on the value specified.</p>
+		<p>The units for this filter represent the percentage of high-pass filtering that has been applied, where 0 means no high-pass filtering (signal unaffected) and 100 means maximal attenuation.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Game-defined Auxiliary Sends DSF</p>
+	</td><td>
+		<p>A recursive filter that attenuates or boosts high frequencies based on the specified gain.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>User-Defined Auxiliary Sends &gt; Send 0, Send 1, Send 2, Send 3</strong></span>
+        </td></tr><tr><td>
+		<p>User Auxiliary Send</p>
+	</td><td>
+		<p>Determines the Auxiliary Bus this object is sending audio data to. Auxiliary sends can only target Auxiliary Busses.</p>
+		<p><span class="bold"><strong>To add an auxiliary send:</strong></span></p>
+		<div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Click the selector [&#8230;] button.</p></li><li class="listitem"><p>Select an Auxiliary Bus from the Busses.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p></li><li class="listitem"><p>Set the send volume for this newly added send.</p></li></ol></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Auxiliary Busses can be created anywhere in the Busses as children of an existing Bus or an existing Auxiliary Bus.</p></td></tr></table></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> You can drag and drop an Auxiliary Bus object from the Project Explorer to the User-Defined Auxiliary Sends list to quickly add a send.</p></td></tr></table></div>
+	</td></tr><tr><td>
+		<p>User-Defined Auxiliary Send Volume</p>
+	</td><td>
+		<p>Determine the attenuation of the signal sent to the Auxiliary Bus.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This control is only active when an Auxiliary Bus is selected for a specific send entry.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>User Auxiliary Send LPF</p>
+	</td><td>
+		<p>The Low-Pass Filter applied on the signal that is sent to the Auxiliary Bus via one of the User Auxiliary Sends (User-Defined Auxiliary Send 0 - 3).</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>User Auxiliary Send HPF</p>
+	</td><td>
+		<p>The High-Pass Filter applied on the signal that is sent to the Auxiliary Bus via one of the User Auxiliary Sends (User-Defined Auxiliary Send 0 - 3).</p>
+		<p>
+			For more detail, see 
+			<a class="link" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF Value Cutoff Frequencies</a>
+			.
+		</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Early Reflections</strong></span>
+        </td></tr><tr><td>
+		<p>Early Reflections Auxiliary Send</p>
+	</td><td>
+		<p>Enables reflection processing in Wwise Spatial Audio and determines the Auxiliary Bus this object is sending to for early reflections processing. </p>
+		<p>Early reflections processing simulates the acoustic phenomenon of sound bouncing off of virtual surfaces defined by geometry in the game. Since the first few reflections convey the most spatial information to the listener, it is advantageous to process the early reflections separately (from the late reverb) and with more detail using the Reflect plug-in. </p>
+		<p>To render early reflections, the Reflect plugin must be assigned to an effect slot on the Auxiliary Bus assigned to an early reflections send.</p>
+		<p>If no send is specified, then Wwise Spatial Audio will not compute early reflections paths for the sound. </p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>It is also possible to assign a reflections Auxiliary Bus per Game Object via the Spatial Audio API. In the case that a reflections bus is assigned both via the API and to the sound in the authoring tool, the bus used for the sound is taken from the authoring tool.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> For reflections to be computed, the Wwise Spatial Audio library must be initialized and the game must send level geometry to Wwise Spatial Audio.</p></td></tr></table></div>
+		<p><span class="bold"><strong>To add an auxiliary send:</strong></span></p>
+		<div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Click the selector [&#8230;] button.</p></li><li class="listitem"><p>Select an Auxiliary Bus from the Busses.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p></li><li class="listitem"><p>Set the send volume for this newly added send.</p></li></ol></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Auxiliary Busses can be created anywhere in the Busses as children of an existing Bus or an existing Auxiliary Bus.</p></td></tr></table></div>
+		<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p> You can drag and drop an Auxiliary Bus object from the Project Explorer to the User-Defined Auxiliary Sends list to quickly add a send.</p></td></tr></table></div>
+	</td></tr><tr><td>
+		<p>Early Reflections Auxiliary Send Volume</p>
+	</td><td>
+		<p>Determine the attenuation of the signal sent to the reflections Auxiliary Bus. This control also effects the volume of the reflections aux send specified by the API.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The default slider range is from -96 to +12 dB. You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -200 to 200</p>
+		<p>Units: dB</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

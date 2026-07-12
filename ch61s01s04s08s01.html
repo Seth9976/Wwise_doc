@@ -1,0 +1,104 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Music Switch Container Association Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s08.html" title="Music Editor"><link rel="prev" href="ch61s01s04s08.html" title="Music Editor"><link rel="next" href="ch61s01s04s08s02.html" title="Music Playlist Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s08.html">Music Editor</a></span> &gt; <span class="breadcrumb-node">Music Switch Container Association Editor</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="music_switch_container_association_editor"></a>Music Switch Container Association Editor</h5></div></div></div><p>The Switch Container Association Editor is where you arrange and combine States or Switches to create the different "paths" that will be used to dynamically determine what piece of music is chosen to be played in your game. In the editor, you can add and arrange different State Groups or Switch Groups that you want to effect the choice of music. You then select different combinations of States or Switches to define paths, each of which can then be associated with a particular music object. At runtime, the sound engine matches the current state or Switch value against the pre-defined paths to determine which piece of music to play. You can also use weighting values to determine the likelihood that a particular pre-defined path will be selected.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_generic_path.png"></div>
+							</td><td>
+								<p>Creates a completely generic path (*.*) regardless of which States or Switches are selected.</p>
+								<p>This option is only available when a generic path does not already exist.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_add_path.png"></div>
+							</td><td>
+								<p>Creates a path from the selected states/switches or state/switch values.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_update_path.png"></div>
+
+							</td><td>
+								<p>Updates the path for a selected audio structure. This option replaces the selected structure's path with the States or Switches that are currently selected.</p>
+								<p>This option is only available when the path selected does not already have a corresponding entry in the list, and an object in the list is currently selected.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_remove_path.png"></div>
+
+							</td><td>
+								<p>Removes the selected path from the path list.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_unselect_all.png"></div>
+
+							</td><td>
+								<p>Deselects all States and Switches in the States/Switches pane.</p>
+							</td></tr><tr><td>
+								<p>(States/Switches pane)</p>
+							</td><td>
+								<p>Displays the State Groups and Switch Groups that have been assigned to the currently selected Music Switch Container. You can select different States or Switches to create a combination of different paths.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_selector.png"></div>
+							</td><td>
+								<p>Opens a menu that allows the user to choose from a list of available Switch Group or State Group objects. The user may also create a new State Group or Switch Group from this menu by selecting "New".</p>
+							</td></tr><tr><td>
+		<p>Mode</p>
+	</td><td>
+		<p>Specifies how the sound engine will determine which path to select when there is more than one pre-defined path that matches the States or Switches triggered at runtime.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Best Match</strong></span> - Selects the path that best matches the States or Switches that are triggered at runtime. If there is not an exact match, the path with the least amount of wildcards (*) will be selected.</p></li><li class="listitem"><p><span class="bold"><strong>Weighted</strong></span> - Randomly selects one of the matching paths based on their respective weighting values.</p></li></ul></div>
+		<p>Several pre-defined paths can match the States or Switches triggered at runtime due to the use of wildcards (*) in fallback paths.</p>
+		<p>Default value: Best Match</p>
+	</td></tr><tr><td>
+								<p>Path Filter</p>
+							</td><td>
+								<p>Displays a list of filters that can be used to filter the path list. The following filters are available:</p>
+								<p>
+									<span class="bold"><strong>All</strong></span> - Displays all the created paths.
+								</p>
+								<p>
+									<span class="bold"><strong>Current Selection</strong></span> - Displays only those paths that contain the selected Switches or states.
+								</p>
+							</td></tr><tr><td>
+								<p>Object Filter</p>
+							</td><td>
+							<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Displays a list of filters that can be used to filter the path list. The following filters are available:</p></li><li class="listitem"><p>								
+									<span class="bold"><strong>All</strong></span> - Displays all the created paths.
+								</p></li><li class="listitem"><p>
+									<span class="bold"><strong>Assigned object</strong></span> - Displays only the paths that are associated with an object.
+								</p></li><li class="listitem"><p>
+									<span class="bold"><strong>Missing</strong></span> - Displays only the paths that are associated with an object that has been deleted from the project.
+								</p></li><li class="listitem"><p>
+									<span class="bold"><strong>None</strong></span> - Displays only the paths that are not associated with an object.
+								</p></li></ul></div>
+							</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>Path</p>
+							</td><td>
+								<p>A specific path that contains one of the many combinations of Switches or states that can exist for a Music Switch Container. These paths are associated with a music object.</p>
+								<p>A path may contain a wildcard, which will match any corresponding Switch or state. It is represented by an asterisk.</p>
+							</td></tr><tr><td>
+		<p>Weight</p>
+	</td><td>
+		<p>The likelihood that the path will be selected in the case where there are other matching paths.</p>
+		<p>When a matching path has a weight of 100, other matching paths with a weight below 100 are automatically discarded. When a matching path has a weight of 0, it is discarded unless all other matching paths also have a weight of 0.</p>
+		<p>This option only applies when the Dialogue Event is in &#8216;Weighted&#8217; mode.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: %</p>
+	</td></tr><tr><td>
+								<p>Object</p>
+							</td><td>
+								<p>The object assigned to the path.</p>
+								<p>The object assigned to the path can be unlinked from the other platforms so that you can assign different objects to the same path on different platforms.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+
+								<p>(Browse)</p>
+							</td><td>
+								<p>Opens the Project Explorer 	- Browser where you can select the object that will be assigned to this path.</p>
+								<p>You can also drag and drop object directly from the Project Explorer.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch29s03.html#associating_music_objects_with_states_and_or_switches" title="Associating music objects with States and Switches">Associating music objects with States and Switches</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch29s03.html#associating_music_switch_container_to_one_or_more_game_syncs" title="Associating Music Switch Containers with game syncs">Associating Music Switch Containers with game syncs</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch29s03.html#defining_behaviors_of_music_objects_within_music_switch_containers" title="Defining the behaviors of music objects within Music Switch Containers">Defining the behaviors of music objects within Music Switch Containers</a>
+					</p></li></ul></div></div><HR></body></html>

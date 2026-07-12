@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AK ASIO Output</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch64.html" title="Audio Device plug-ins"><link rel="prev" href="ch64.html" title="Audio Device plug-ins"><link rel="next" href="ch64s02.html" title="Third-party and custom Audio Devices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch64.html">Audio Device plug-ins</a></span> &gt; <span class="breadcrumb-node">AK ASIO Output</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_asio_output_plug_in"></a>AK ASIO Output</h2></div></div></div><p>The AK ASIO plug-in must be installed using the Launcher. For information on installing
+    plug-ins, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=InstallGuide&amp;id=installing_plugins" target="_blank">Installing Plug-ins</a> in the Audiokinetic Launcher guide.</p><p>(See the <a class="xref" href="ch64s01.html#asio_output_plug_in_properties" title="AK ASIO output properties">AK ASIO output properties</a> below.) </p><p>The AK ASIO Output plug-in uses the Steinberg Audio Stream Input/Output (ASIO) SDK in order to connect to ASIO-compatible output devices.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_asio_select_driver_in_authoring"></a>Monitoring in Wwise authoring through an AK ASIO output device</h3></div></div></div><p>To monitor your project in Wwise Authoring through an AK ASIO output device, an
+      ASIO driver can be selected for a main bus. See <a class="xref" href="ch05s05.html#setting_output_devices" title="Selecting audio output devices">Selecting audio output devices</a>.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_asio_select_driver_outside_authoring"></a>Selecting an ASIO driver outside of Wwise Authoring</h3></div></div></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The WWISEASIODRV environment variable also overrides the driver selected in
+            Authoring Audio Preferences.</p></li><li class="listitem"><p>Selecting AK ASIO Output as the Audio Device on multiple main busses is not
+            supported.</p></li><li class="listitem"><p>Selecting a System Audio Device on a bus while having an ASIO Audio Device on
+            another bus might cause device exclusivity conflicts.</p></li></ul></div></td></tr></table></div><p>To select an ASIO hardware device outside of the Wwise authoring tool, it is necessary to
+      create a "WWISEASIODRV" environment variable with a value set to match the ASIO driver name
+      specified for a main bus in Authoring Audio Preferences. See <a class="xref" href="ch05s05.html#setting_output_devices" title="Selecting audio output devices">Selecting audio output devices</a>.</p><p>For example, with an AK ASIO Output Audio Device ShareSet named "ASIO_Output", if "ASIO_Output - Name of an ASIO Driver" is shown in the Hardware Device column, WWISEASIODRV must be set to a value of "Name of an ASIO Driver".</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="asio_output_plug_in_properties"></a>AK ASIO output properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+              <p> <span class="bold"><strong>AK ASIO Output Properties</strong></span> </p>
+            </td></tr><tr><td>
+              <p>Channel Configuration</p>
+            </td><td>
+              <p> Sets the number of channels and the channel configuration of the output device.
+                See <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a> for more information. </p>
+              <p>Select <span class="bold"><strong>default</strong></span> to keep the number of channels
+                of the selected ASIO hardware device.</p>
+              <p>Anonymous configurations are also available to set the number of channels
+                without a standard configuration. To configure anonymous channels, open
+                  <code class="code">C:\Program Files (x86)\Audiokinetic\Wwise
+                  &lt;version&gt;\Authoring\x64\Release\bin\plugins\ASIO.xml</code> and add the line
+                indicated in the following figure. This example shows 6 channels, but any value from
+                1 to 255 is permitted.</p>
+              <div class="mediaobject"><img src="Images/asio_anonymous_config.png"></div>
+            </td></tr><tr><td>
+              <p>Base Channel</p>
+            </td><td>
+              <p>
+                Offsets all the output channels of the bus so that the first channel output is the base channel. Channels are output sequentially starting from the base channel.
+              </p>
+              <p>The default value is 1, which outputs starting from the first channel.</p>
+              <p>
+                For example, setting the base channel to 2 for a stereo configuration (two channels) will output to channels 2 and 3 instead of 1 and 2.
+              </p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                  <a class="xref" href="ch66s01.html" title="AK ASIO Input">AK ASIO Input </a>
+              </p></li></ul></div></div></div><HR></body></html>

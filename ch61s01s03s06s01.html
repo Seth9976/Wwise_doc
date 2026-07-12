@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>MIDI category: Containers hierarchy objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s03s06.html" title="Common tabs and categories: Containers hierarchy objects"><link rel="prev" href="ch61s01s03s06.html" title="Common tabs and categories: Containers hierarchy objects"><link rel="next" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03.html">Containers hierarchy: sound and motion objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s03s06.html">Common tabs and categories: Containers hierarchy objects</a></span> &gt; <span class="breadcrumb-node">MIDI category: Containers hierarchy objects</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="midi_tab_actor_mixer_objects"></a>MIDI category: Containers hierarchy objects</h5></div></div></div><p>For objects located in the Containers hierarchy, there are a series of
+        controls that allow you to define the object's behavior as a MIDI synthesizer:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Filter controls specify which MIDI Events are to be processed by the object.</p></li><li class="listitem"><p>Event controls specify what actions are to be taken for received MIDI events.</p></li></ul></div><div class="informaltable"><a name="wwiseobject_sound_midi"></a><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+          <p>M ID I</p>
+        </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2" align="left">
+          <span class="bold"><strong>MIDI Events</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the MIDI Events controls will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the MIDI Events controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Play On</p>
+	</td><td>
+		<p>Determines what type of MIDI note Event will cause the object to play.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Note-On</p></li><li class="listitem"><p>Note-Off</p></li></ul></div>
+		<p>Default value: Note-On</p>
+	</td></tr><tr><td>
+		<p>MIDI break on note-off</p>
+	</td><td>
+		<p>If <span class="bold"><strong>Play On</strong></span> is set to Note-On, then this property determines whether the playing object stops looping upon reception of a note-off. If so, the playback of looped sounds or continuous containers is stopped, while allowing the current object(s) to finish playing.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Note Tracking</strong></span>
+        </td></tr><tr><td>
+		<p>Override parent</p>
+	</td><td>
+		<p>Determines whether the Note Tracking controls will be inherited from the parent or defined at the current level in the hierarchy. When this option is not selected, the Note Tracking controls are unavailable.</p>
+		<p>If the object is a top-level object, this option is unavailable.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Enable MIDI note tracking</p>
+	</td><td>
+		<p>If selected, the node&#8217;s playback will be pitch-shifted. The amount of pitch-shifting is determined by the note of the received MIDI Event and the value of Root Note.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>MIDI tracking root note</p>
+	</td><td>
+		<p>The root note of the node&#8217;s sound. This value is used in conjunction with a received MIDI note to determine the pitch-shifting of the node&#8217;s sound.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> this value is ignored if note tracking is not enabled.</p></td></tr></table></div>
+		<p>Default value: 60</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Transformation</strong></span>
+        </td></tr><tr><td>
+		<p>Transposition</p>
+	</td><td>
+		<p>The offset applied to the MIDI event&#8217;s note. The transposition is applied before the Key Range filters.</p>
+		
+		
+		<p>Default value: 0</p>
+		<p>Range: -127 to 127</p>
+		
+	</td></tr><tr><td>
+		<p>Velocity Offset</p>
+	</td><td>
+		<p>The offset applied to the MIDI event&#8217;s note velocity. This applies to MIDI note Events only. The offset is applied before the Velocity filters.</p>
+		<p>Default value: 0</p>
+		<p>Range: -127 to 127</p>
+	</td></tr><tr><td colspan="2" align="left">
+          <span class="bold"><strong>Filters</strong></span>
+        </td></tr><tr><td>
+		<p>Key Range Min</p>
+	</td><td>
+		<p>Filter applied to received MIDI note events&#8217; note. A received MIDI note Event is ignored if its note is not within the Min-Max range.</p>
+		<p>Default Min: C-1 Default Max: G9</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+				 The mapping of numerical MIDI notes to octaves is specified via the user preferences; refer to 
+				<a class="link" href="ch05s04.html" title="Setting user preferences">User Preferences</a>
+				 for more details.
+			</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td>
+		<p>Key Range Max</p>
+	</td><td>
+		<p>Filter applied to received MIDI note events&#8217; note. A received MIDI note Event is ignored if its note is not within the Min-Max range.</p>
+		<p>Default Min: C-1 Default Max: G9</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+				 The mapping of numerical MIDI notes to octaves is specified via the user preferences; refer to 
+				<a class="link" href="ch05s04.html" title="Setting user preferences">User Preferences</a>
+				 for more details.
+			</p></td></tr></table></div>
+		<p>Default value: 127</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td>
+		<p>Velocity Min</p>
+	</td><td>
+		<p>Filter applied to received MIDI note events&#8217; velocity. A received MIDI note Event is ignored if its velocity is not within the Min-Max range.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td>
+		<p>Velocity Max</p>
+	</td><td>
+		<p>Filter applied to received MIDI note events&#8217; velocity. A received MIDI note Event is ignored if its velocity is not within the Min-Max range.</p>
+		<p>Default value: 127</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td>
+		<p>Channel Filter</p>
+	</td><td>
+		<p>Filter applied to received MIDI note events&#8217; channel. A received MIDI note Event is ignored if its channel is not in the filter.</p>
+		<p>Default value: 65535</p>
+		<p>Range: 0 to 65535</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

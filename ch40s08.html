@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Editing while profiling a game</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40.html" title="Profiling"><link rel="prev" href="ch40s07s10.html" title="Loading the data from a previous remote capture session"><link rel="next" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-node">Editing while profiling a game</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="editing_while_profiling"></a>Editing while profiling a game</h2></div></div></div><p>A remote connect session can be used to make modifications to a game that is currently
+			running, without regenerating SoundBanks. These changes to the Wwise project can be
+			extensive and even include new media. This is supported on all platforms and all game
+			engines. </p><p>Any changes made during a remote connect session do not change the files deployed on a game
+			console. This means that restarting the game reverts to the content available in the
+			SoundBanks deployed with the game. To reapply the changes made to the Wwise Project, you
+			must reconnect Wwise to the game. To make these changes permanent, you must regenerate
+			the SoundBanks and deploy them with the game. </p><p>To enable editing while profiling, in the Remote Connections dialog, set the
+			synchronization method to <span class="bold"><strong>Profile and Edit (Sync Inspected Objects
+				Only)</strong></span> or <span class="bold"><strong>Profile and Edit (Sync All Modified
+				Objects)</strong></span>.</p><p> With <span class="bold"><strong>Profile and Edit (Sync Inspected Objects Only)</strong></span>,
+			only objects that are currently inspected in the Transport Control are updated, in
+			addition to all necessary related objects, such as the Output Bus, Effects, and
+			Attenuation. Each time the object in the Transport Control changes, a new update is done
+			if necessary. With this method, only a small subset of objects is updated at a time. </p><p> With <span class="bold"><strong>Profile and Edit (Sync All Modified Objects)</strong></span>, all
+			objects that are modified in the Wwise project and are currently loaded in the game
+			through SoundBanks are updated at the moment of connection. They are also updated each
+			time additional changes are made to the Wwise project during the remote connect session.
+			Because a large number of sound structures can be loaded in game, the connection process
+			can take several seconds while Wwise verifies what needs to be updated. </p><p>With the synchronization method set to <span class="bold"><strong>Profile Only</strong></span>,
+			nothing is updated, so you won't hear any changes if you edit your project while
+			connected to a game. However, this is the preferred method for troubleshooting issues in
+			game. </p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="side_effects_editing_while_profiliing"></a>Side effects of editing while profiling</h3></div></div></div><p> When either of the <span class="bold"><strong>Profile and Edit</strong></span> methods is
+				selected, if you change a structure or a playlist that is currently playing, you
+				might hear audible glitches, sounds that start abruptly, or sounds that stop
+				abruptly. All these changes are reflected in the Capture Log. Wwise uses the new
+				structure as if the game loaded it from the start. If you are unsure about the
+				behavior of these new sounds, redo the scenario from the start in game; at this
+				point, the new structures will already be in memory, so no transitional glitches
+				will occur. </p><p>If you change media that is currently in use, you will probably hear a click.
+				Wwise automatically seeks to the same point in the new file that it was at in the
+				old file. If the content is different, the sound won't match. Also, the transfer of
+				media takes some time. For this reason, you might see errors related to source
+				starvation. </p><p> Editing while profiling increases memory usage in the game. New media is
+				transferred to a region of memory reserved specifically for this feature. This
+				memory is only used in the Debug and Profile configurations and does not count
+				toward the audio memory budget. You can control the maximum amount of memory used
+				for Live Media Transfer in the <a class="xref" href="ch05s04.html" title="Setting user preferences">Setting user preferences</a>. When this memory
+				limit is reached, unused media is evicted from this region of memory. If you
+				experience memory issues, you can disable Live Media Transfer by setting the maximum
+				to 0.</p></div></div><HR></body></html>

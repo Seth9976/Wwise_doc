@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Import Conflict Manager</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s02.html" title="Wwise importer dialogs"><link rel="prev" href="ch11s02s02.html" title="Voice Asset Importer"><link rel="next" href="ch11s02s04.html" title="Import Completed"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s02.html">Wwise importer dialogs</a></span> &gt; <span class="breadcrumb-node">Import Conflict Manager</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="import_conflict_manager"></a>Import Conflict Manager</h3></div></div></div><p> In the Import Conflict Manager dialog, you can view and resolve, if possible, the
+        following two types of errors that occur during the import process: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>Recoverable errors</strong></span> that you can correct or can be
+            corrected automatically. For example, the media file already exists, or the file name is
+            incorrect. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Non-recoverable errors</strong></span> that require that you replace
+            the file that cannot be imported, or make changes to the files before you can import
+            them. Non-recoverable errors are caused by importing audio formats that are not
+            supported by Wwise, or importing files whose properties are outside of the range
+            specified by Wwise. </p></li></ul></div><p>The Import Conflict Manager dialog has two sections:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Errors</p></li><li class="listitem"><p>Import Files</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Selecting the Replace operation in the Import Conflict Manager replaces the existing
+          file. This cannot be undone, even with an Undo operation. The only way to return to the
+          replaced file is to re-import it and replace the file with the first version of this
+          file.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>Import destination</p>
+              </td><td>
+                <p>The object into which the files will be imported.</p>
+              </td></tr><tr><td>
+                <p>Import language/SFX</p>
+              </td><td>
+                <p> The language specified for the files imported as Sound Voice objects. For
+                  sound SFX and music objects, SFX will be written. </p>
+              </td></tr><tr><td>
+                <p>Set all to</p>
+              </td><td>
+                <p>Selecting one of the command buttons applies an operation to all recoverable
+                  errors in the Error list:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Replace</strong></span>: When the media files exists,
+                      selecting this command replaces all existing media files with the imported
+                      files.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Use Existing</strong></span>: When the media files exist,
+                      selecting this command uses the existing files and not the imported
+                      files.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Cancel</strong></span>: When the media files exist, selecting
+                      this command cancels the media file import.</p></li></ul></div>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Selecting the Replace operation in the Import Conflict Manager replaces the
+                    existing file. This cannot be undone, even with an Undo operation. The only way
+                    to return to the replaced file is to re-import it and replace the file with the
+                    first version of this file.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Errors</strong></span></p>
+              </td></tr><tr><td>
+                <p>Audio File</p>
+              </td><td>
+                <p>The name of the media file with an error.</p>
+              </td></tr><tr><td>
+                <p>Status</p>
+              </td><td>
+                <p>The status of the imported file error:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Non-recoverable errors are displayed in red.</p></li><li class="listitem"><p>Recoverable errors are displayed in white.</p></li><li class="listitem"><p>Recovered errors are displayed as Ready in white.</p></li></ul></div>
+              </td></tr><tr><td>
+                <p>Message</p>
+              </td><td>
+                <p>Provides information about the error and the possible resolution.</p>
+              </td></tr><tr><td>
+                <p>Operation</p>
+              </td><td>
+                <p>The list of possible operations to resolve recoverable errors.</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Replace</strong></span>: When the media file exists,
+                      selecting this option replaces the existing file with the imported file. If
+                      you selected the <span class="bold"><strong>Create new objects</strong></span> import
+                      mode, this option will replace existing files and create new Wwise objects. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Use Existing</strong></span>: When the media file exists,
+                      selecting this option uses the existing file and not the imported file. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Cancel</strong></span>: When the media file exists, selecting
+                      this option cancels the audio import. When the error is non-recoverable, only
+                      the Cancel operation is available. </p></li></ul></div>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Selecting the Replace operation in the Import Conflict Manager replaces the
+                    existing file. This cannot be undone, even with an Undo operation. The only way
+                    to return to the replaced file is to reimport it and replace the file with the
+                    first version of this file.</p></td></tr></table></div>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_copy_to_clipboard.png"></div>
+              </td><td>
+                <p>Copies the information in the error log to the Windows clipboard so that you
+                  can paste the information into a new file.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Import Files</strong></span></p>
+              </td></tr><tr><td>
+                <p>Audio File</p>
+              </td><td>
+                <p>Displays the name of the files that are ready to be imported.</p>
+              </td></tr><tr><td>
+                <p>Status</p>
+              </td><td>
+                <p>Displays the Ready status of the files to be imported.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_import.png"></div>
+              </td><td>
+                <p>Opens the Importing dialog where you can view the progress of the file import
+                  and stop the import if required.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+              </td><td>
+                <p>Closes the Import Conflict Manager dialog without performing any operations on
+                  the files.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch11s05.html" title="Managing file import issues">Managing file import issues</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s05.html#managing_recoverable_errors" title="Managing recoverable errors">Managing recoverable errors</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch11s05.html#managing_non_recoverable_errors" title="Managing non-recoverable errors">Managing non-recoverable errors</a>
+          </p></li></ul></div></div><HR></body></html>

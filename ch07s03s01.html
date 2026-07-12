@@ -1,0 +1,327 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Defining the general settings for your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03.html" title="Defining your project settings"><link rel="next" href="ch07s03s02.html" title="Defining the conversion settings for your project"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Defining the general settings for your project</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="defining_general_settings_for_project"></a>Defining the general settings for your project</h3></div></div></div><p>In the <a class="xref" href="ch07s03s01.html#general_tab" title="General tab of the Project Settings dialog">General tab of the Project Settings dialog</a>, you can perform the following tasks:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch07s03s01.html#configuring_source_control_plug_ins" title="Configuring source control plug-ins">Configuring source control plug-ins</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s01.html#defining_originals_folder_settings" title="Defining Originals folder settings">Defining Originals folder settings</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s01.html#defining_cache_folder_settings" title="Defining cache folder settings">Defining cache folder settings</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s01.html#defining_event_creation_settings" title="Defining Event creation settings">Defining Event creation settings</a>
+					</p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="configuring_source_control_plug_ins"></a>Configuring source control plug-ins</h4></div></div></div><p>If you are using a source control system to manage your project assets and files, you can
+					select a source control plug-in for your project. You can also configure
+					plug-ins for your workspace if Wwise supports it.</p><p>Wwise comes with two source control plug-ins: Perforce® and Subversion
+					(deprecated).</p><p>For more information on what versions of Perforce and Subversion Wwise supports,
+					refer to <a class="xref" href="ch10s05.html#supported_perforce_subversion_versions" title="Supported Perforce/Subversion versions">Supported Perforce/Subversion versions</a> or the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=referencematerial_samplecode_source_control.html" target="_blank">Wwise SDK documentation</a>.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Each source control plug-in has different requirements for the configuration. Verify the
+						configuration settings with your system administrator.</p></td></tr></table></div><div class="orderedlist"><p class="title"><b>To define the source control plug-in for your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>From the <span class="bold"><strong>Plug-in</strong></span> list of the <span class="bold"><strong>Source Control</strong></span> group, select the &lt;Source Control&gt; plug-in for your project.</p></li><li class="listitem"><p>To configure the plug-in, click <span class="bold"><strong>Config</strong></span>.</p><p>The Source Control Plug-in Configuration dialog opens.</p></li><li class="listitem"><p>Enter the required information in the fields of the Source Control Plug-in Configuration dialog. If <span class="bold"><strong>Use Audiokinetic Wave Viewer to diff WAV files</strong></span> is enabled, then <a class="xref" href="ch75.html" title="Wwise Wave Viewer"><i>Wwise Wave Viewer</i></a> is used to compare WAV files.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Verify the configuration settings with your system administrator.</p></td></tr></table></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your configuration settings and to close the Plug-in Configuration dialog.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and close the Project Settings dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_originals_folder_settings"></a>Defining Originals folder settings</h4></div></div></div><p>The project's Originals folder contains copies of the original audio files that you import into your project. Its location is defined when you create the project. In the General tab, you can specify the location for the Original files. You can also include environment variables as part of the path, for example, <code class="code">$(WWISESDK)</code> or <code class="code">$(TEMP)</code>. You can select a location for the entire project, or you can choose to save these files in an alternate location for your own use. This option can be very useful in the following situations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>You are working remotely and don't have access to the Originals folder.</p></li><li class="listitem"><p>You do not have permission to alter the contents of the Originals folder.</p></li><li class="listitem"><p>You need to create a temporary location for your Originals folder without changing the location of the project Originals folder.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If the project-defined Originals folder is not accessible, the override setting will be automatically turned on, and the Originals folder will be moved to your project folder so that you can work in the project.</p></td></tr></table></div><p>For more information about the Originals folder, refer to <a class="xref" href="ch11s01s03.html" title="The media file structure">The media file structure</a>.</p><div class="orderedlist"><p class="title"><b>To define the location of the Originals folder for your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select<span class="bold"><strong> Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>To define the Originals file folder location for your project, do one of the following:</p><p>In the <span class="bold"><strong>Original Audio Files</strong></span> group, type or paste the path of the Original folder.  This path can be absolute or relative to the project's folder.  The default path is "Originals".</p><p>Click the <span class="bold"><strong>Browse</strong></span> button (...) to use the <a class="xref" href="ch07s03s01.html#advanced_folder_picker_dlg" title="Advanced Folder Picker">Advanced Folder Picker</a> to specify a location where you want to store your Originals audio file folder.</p></li><li class="listitem"><p>To define the Originals file folder location for your personal use, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="bold"><strong>Original Audio Files</strong></span> group, select the <span class="bold"><strong>Override location for current user</strong></span> option.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Browse</strong></span> button (...) to use the Advanced Folder Picker to specify a location where you want to store your Originals audio file folder.</p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and close the Project Settings dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_cache_folder_settings"></a>Defining cache folder settings</h4></div></div></div><p>The project's cache folder contains intermediate data generated by Wwise during audio file conversion and SoundBank generation. Its location is initially set to '.cache/' inside the project's directory when a new project is created. On the General tab of the Project Settings dialog, you can modify the location for the cache files. You can also include environment variables as part of the path, for example, <code class="code">$(WWISESDK)</code> or <code class="code">$(TEMP)</code>. You can select a location for the entire project, or you can choose to save these files in an alternate location for your own use. This option can be useful in the following situations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>You are working remotely and don't have access to the cache folder.</p></li><li class="listitem"><p>You do not have permission to alter the contents of the cache folder.</p></li><li class="listitem"><p>You need to create a temporary location for your cache folder without changing the location of the project cache folder.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If the project-defined cache folder is not accessible, the override setting will automatically be turned on, and the cache folder will be moved to your project folder so that you can work in the project.</p></td></tr></table></div><p>If you chose to override the location of the cache folder, the next time you open your Wwise project it will be in the new location. Other users, however, will still access the folder in its original location. Turn off this option to go back to accessing the cache folder at the project location. For more information about the cache folder, refer to <a class="xref" href="ch11s01s03.html" title="The media file structure">The media file structure</a>.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Multiple users should NOT access the same cache folder simultaneously.</p></td></tr></table></div><div class="orderedlist"><p class="title"><b>To define the location of the cache folder for your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select<span class="bold"><strong> Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>To define the cache file folder location for your project, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="bold"><strong>Cached Audio Files</strong></span> group, type or paste the path of the cache folder.  This path can be absolute or relative to the project's folder.  The default path is ".cache".</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Browse</strong></span> button (...) to use the <a class="xref" href="ch07s03s01.html#advanced_folder_picker_dlg" title="Advanced Folder Picker">Advanced Folder Picker</a> to specify a location where you want to store your cache file folder.</p></li></ul></div></li><li class="listitem"><p>To define the cache file folder location for your personal use, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the <span class="bold"><strong>Cached Audio Files</strong></span> group, select the <span class="bold"><strong>Override location for current user</strong></span> option.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Browse</strong></span> button (...) to use the Advanced Folder Picker to specify a location where you want to store your cache file folder.</p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and close the Project Settings dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="advanced_folder_picker_dlg"></a>Advanced Folder Picker</h4></div></div></div><p>The Advanced Folder Picker Dialog helps to specify and build paths for some
+					project settings such as Original and Cache folders. In particular, the dialog
+					can help with previewing the inclusion of any environment variables used by
+					those settings.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>Path</p>
+								</td><td>
+									<p>The string that is returned when the dialog is closed by
+										clicking OK.</p>
+								</td></tr><tr><td>
+									<p>Browse</p>
+								</td><td>
+									<p>Opens a folder picker dialog to allow you to navigate to
+										the location of a folder.</p>
+								</td></tr><tr><td>
+									<p>Preview</p>
+								</td><td>
+									<p>A preview of what the <span class="bold"><strong>Path</strong></span> will be evaluated to, with any
+										environment variable expanded to its real value. If
+											<span class="bold"><strong>Preview as Absolute
+											Path</strong></span> is set, then the preview also attempts
+										to convert the Path from a relative path to an absolute
+										path, matching how it is used by the corresponding system in
+										practice.</p>
+								</td></tr><tr><td>
+									<p>Environment Variables</p>
+								</td><td>
+									<p>A list of environment variables that can be used as macros
+										for the path.</p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the environment variable.</p>
+								</td></tr><tr><td>
+									<p>Current Value</p>
+								</td><td>
+									<p>The current value of the environment variable.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_insert.png"></div>
+								</td><td>
+									<p>Adds the selected environment variable to the Path.</p>
+									<p>The variable will either be added at the position of the
+										cursor or will replace the selected text in the command
+										line.</p>
+									<p>As an alternative to clicking Insert, you can double-click
+										a variable in the list to add it to the command line.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Closes the dialog, and returns the path.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the dialog without returning the path.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s01.html#defining_originals_folder_settings" title="Defining Originals folder settings">Defining Originals folder settings</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s01.html#defining_cache_folder_settings" title="Defining cache folder settings">Defining cache folder settings</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s06.html" title="Specifying project settings for External Sources">Specifying project settings for External Sources</a></p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_event_creation_settings"></a>Defining Event creation settings</h4></div></div></div><p>You can create Events in Wwise in a multitude of ways. If you create an Event without a
+					target object, Wwise gives the new Event a generic name. If however you create
+					the Event for a selected object, you can specify how Wwise constructs the new
+					Event's name.</p><div class="orderedlist"><p class="title"><b>To define the Event Creation Settings for your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select<span class="bold"><strong> Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Select whether to specify the Event Creation Settings for the project or the current user:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>To set the Event Creation Settings for the project, select <span class="bold"><strong>Define settings for project</strong></span>.</p></li><li class="listitem"><p>To set the Event Creation Settings for the current user, select <span class="bold"><strong>Override settings for current user</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Select the desired Event Creation Settings:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Enable <span class="bold"><strong>Add action name</strong></span> to include the Action name in the Event name.</p></li><li class="listitem"><p>Enable <span class="bold"><strong>Modify case</strong></span> to set the case of the Event name.</p></li></ul></div><p>See below for more details.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and close the Project Settings dialog.</p></li></ol></div><p>By default, the object's name is used as the new Event name.  The following options can modify the new Event name:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<span class="bold"><strong>Add action name</strong></span>: If enabled, the
+							Event's action name is added to the Event name.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+									<span class="italic">set as prefix</span>: the Action
+									name is used as a prefix to the object name:
+									&lt;action_name&gt;_&lt;object_name&gt;.</p></li><li class="listitem"><p>
+									<span class="italic">set as suffix</span>: the Action
+									name is used as a suffix to the object name:
+									&lt;object_name&gt;_&lt;action_name&gt;.</p></li></ol></div></li><li class="listitem"><p>
+							<span class="bold"><strong>Modify case</strong></span>: If enabled, the case of
+							the event's name is changed.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+									<span class="italic">all lowercase</span>: the event's
+									name is all lowercase.</p></li><li class="listitem"><p>
+									<span class="italic">all uppercase</span>: the event's
+									name is all uppercase.</p></li></ol></div></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can configure the Event Creation Settings for the entire project, or for the current
+						user.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="general_tab"></a>General tab of the Project Settings dialog</h4></div></div></div><p>In the General tab, you can define the following for your project:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Source control plug-in configuration</p></li><li class="listitem"><p>Originals folder location</p></li><li class="listitem"><p>Cache folder location</p></li><li class="listitem"><p>Event creation</p></li><li class="listitem"><p>User interface preferences</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Filter Behavior</strong></span></p>
+								</td></tr><tr><td>
+									<p>Voice LPF and HPF behavior</p>
+								</td><td>
+									<p>Determines how LPF and HPF property values are
+										calculated.</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+												<span class="bold"><strong>Sum All Values
+												(Default)</strong></span>. Property values are added
+												together. </p></li><li class="listitem"><p>
+												<span class="bold"><strong>Use Highest Value</strong></span>.
+												The highest property value is used. </p></li></ul></div>
+									<p>Refer to <a class="xref" href="ch12s04s03.html" title="Understanding property filter behavior (LPF, HPF)">Understanding property filter behavior (LPF, HPF)</a>.</p>
+								</td></tr><tr><td>
+									<p>DSF Emphasis</p>
+								</td><td>
+									<p>Applies a global emphasis property to all DSF filters in
+										the Wwise project. Refer to <a class="xref" href="ch12s04s04.html" title="Understanding the dual-shelf filter">Understanding the dual-shelf filter</a>.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Source Control</strong></span></p>
+								</td></tr><tr><td>
+									<p>Plug-in</p>
+								</td><td>
+									<p>The name of the project source control plug-in. You can
+										select any of the following options:</p>
+									<p>For more information on what versions Wwise supports, refer to <a class="xref" href="ch10s05.html#supported_perforce_subversion_versions" title="Supported Perforce/Subversion versions">Supported Perforce/Subversion versions</a>.</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+												<span class="bold"><strong>No Source Control</strong></span> -
+												If you don't use a source control system to manage
+												your assets and project files. </p></li><li class="listitem"><p>
+												<span class="bold"><strong>Perforce</strong></span>.</p></li><li class="listitem"><p>
+												<span class="bold"><strong>Subversion
+												(deprecated)</strong></span>: The Subversion option
+												will not appear in the Plug-in list if the version
+												of Subversion you have installed on your workstation
+												is not compatible with the version used to build the
+												source control plug-in. </p></li><li class="listitem"><p>
+												<span class="bold"><strong>Other Source
+												Control</strong></span> - If you use another source
+												control system for which you created a source
+												control plug-in. </p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_config_dots.png"></div>
+								</td><td>
+									<p>Available when a source control plug-in is selected. Opens
+										the Source Control Plug-in Configuration dialog where you
+										can define the settings for the plug-in, including <span class="bold"><strong>Use Audiokinetic Wave Viewer to diff WAV
+											files</strong></span>. Refer to <a class="xref" href="ch75.html" title="Wwise Wave Viewer"><i>Wwise Wave Viewer</i></a>.</p>
+								</td></tr><tr><td>
+									<p>Show source control file status in user interface</p>
+								</td><td>
+									<p>Enables file status queries to the source control plug-in
+										to show the source control status and owner.</p>
+									<p>When enabled, it shows:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The Work Units status icons</p></li><li class="listitem"><p>The Work Units status and owner in the views'
+												titlebar tooltips</p></li><li class="listitem"><p>The Wwise project (WPROJ) status and owner in
+												Wwise's title bar</p></li></ul></div>
+									<p>Disable this option when experiencing performance issues
+										with the source control plug-in or server.</p>
+								</td></tr><tr><td>
+									<p>Prompt for checkout on edit</p>
+								</td><td>
+									<p>If enabled, modifying files under source control that are
+										not checked out, will immediately trigger the Pending Source
+										Control Operations dialog. This dialog prompts you to
+										checkout the modified files.</p>
+									<p>If disabled, the prompt to checkout modified files won't open until you attempt to
+										save the Wwise project.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Original Audio
+										Files</strong></span></p>
+								</td></tr><tr><td>
+									<p>Use project's location</p>
+								</td><td>
+									<p>Specifies the location where the project's originals media
+										files folder will be saved. This path can be relative to the
+										project's directory or absolute. The default location is
+										"Originals".</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+								</td><td>
+									<p>Opens the Browse for Folder dialog where you can navigate
+										to the location you want to store the original media files. </p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When selecting a file with the browse button, Wwise
+											will automatically resolve the path to a relative path
+											(from the Project) if possible.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p>Override location for current user</p>
+								</td><td>
+									<p>Specifies a new location for the current user only. This
+										path can be relative to the project's directory or
+										absolute.</p>
+									<p>This is useful in the following types of
+										situations:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>You temporarily don't have access to the Originals folder.</p></li><li class="listitem"><p>You don't have permission to alter the contents of the Originals folder.</p></li><li class="listitem"><p>You need to create a temporary location for your
+												Originals folder without changing the location of
+												the project's Originals folder.</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+								</td><td>
+									<p>Opens the Browse for Folder dialog where you can navigate
+										to a new location for storing the original media files for
+										the current user.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When selecting a file with the browse button, Wwise
+											will automatically resolve the path to a relative path
+											(from the Project) if possible.</p></td></tr></table></div>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Cached Audio Files</strong></span></p>
+								</td></tr><tr><td>
+									<p>Use project's location</p>
+								</td><td>
+									<p>Specifies the location where the project's cache files
+										folder will be saved. This path can be relative to the
+										project's directory or absolute. The default location is
+										".cache".</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+								</td><td>
+									<p>Opens the Browse for Folder dialog where you can navigate
+										to the location where you want to store your project cache
+										files.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When selecting a file with the browse button, Wwise
+											will automatically resolve the path to a relative path
+											(from the Project) if possible.</p></td></tr></table></div>
+								</td></tr><tr><td>
+									<p>Override location for current user</p>
+								</td><td>
+									<p>Specifies a new location for the current user only. This
+										path can be relative to the project's directory or
+										absolute.</p>
+									<p>This is useful in the following types of
+										situations:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>You temporarily don't have access to the cache folder.</p></li><li class="listitem"><p>You don't have permission to alter the contents of the cache folder.</p></li><li class="listitem"><p>You need to create a temporary location for your
+												cache folder without changing the location of the
+												project's cache folder.</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+								</td><td>
+									<p>Opens the Browse for Folder dialog where you can navigate
+										to a new location for storing your project's cache files for
+										the current user.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>When selecting a file with the browse button, Wwise
+											will automatically resolve the path to a relative path
+											(from the Project) if possible.</p></td></tr></table></div>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Event Creation</strong></span></p>
+								</td></tr><tr><td> </td><td>
+									<p>The Event Creation settings determine the name given to a
+										newly created event.</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Define settings for
+												project</strong></span> - Event Creation settings are
+												specified for the project.</p></li><li class="listitem"><p><span class="bold"><strong>Override settings for
+												current user</strong></span> - Event Creation settings
+												are specified for the current user only.</p></li></ul></div>
+								</td></tr><tr><td>
+									<p>Add action name</p>
+								</td><td>
+									<p>If enabled, the new Event's Action name is used to create
+										the Event name:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>set as prefix</strong></span>: The Action name is used as a
+												prefix:
+												&lt;action_name&gt;_&lt;object_name&gt;.</p></li><li class="listitem"><p><span class="bold"><strong>set as suffix</strong></span>: The Action name is used as a
+												suffix:
+												&lt;object_name&gt;_&lt;action_name&gt;.</p></li></ul></div>
+								</td></tr><tr><td>
+									<p>Modify case</p>
+								</td><td>
+									<p>If enabled, the case of the new Event's name is set
+										to:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>all lowercase</strong></span> -
+												The new Event's name is all lowercase.</p></li><li class="listitem"><p><span class="bold"><strong>all uppercase</strong></span> -
+												The new Event's name is all uppercase.</p></li></ul></div>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>User Interface</strong></span></p>
+								</td></tr><tr><td align="center">
+									<p>Project color</p>
+									<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="20"><tr style="height: 20px"><td><img src="Images/project_color_icon.png" width="20"></td></tr></table></div>
+								</td><td>
+									<p>Clicking the icon opens the color selector.</p>
+									<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="297"><tr style="height: 46px"><td><img src="Images/color_selector.png" height="46"></td></tr></table></div>
+									<p>Select a color to apply it to the Wwise menu band for this
+										project.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Selecting the square at the far left of the color
+											selector causes the object to inherit its parent's
+											color. When a color has been explicitly chosen for an
+											object, it is displayed with the palette icon and a
+											yellow triangle in the lower-right corner, as
+											shown.</p></td></tr></table></div>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Saved Files</strong></span></p>
+								</td></tr><tr><td>Line Ending</td><td>
+									<p>Specifies the line endings in the following files:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>the project file: <code class="code">.wproj</code></p></li><li class="listitem"><p>the project settings file:
+												<code class="code">.wsettings</code></p></li><li class="listitem"><p>Work Unit files: <code class="code">.wwu</code></p></li><li class="listitem"><p><code class="code">Wwise_IDS.h</code></p></li><li class="listitem"><p>SoundBank files:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>bank, event, and bus files:
+												.<code class="code">xml</code>, <code class="code">.json</code>,
+												<code class="code">.txt</code></p></li><li class="listitem"><p><code class="code">ProjectInfo.xml</code>,
+												<code class="code">ProjectInfo.json</code></p></li><li class="listitem"><p><code class="code">PlatformInfo.xml</code>,
+												<code class="code">Platform.json</code></p></li><li class="listitem"><p><code class="code">SoundbanksInfo.xml</code>,
+												<code class="code">SoundbanksInfo,json</code></p></li><li class="listitem"><p><code class="code">PluginInfo.xml</code>,
+												<code class="code">PluginInfo.json</code></p></li></ul></div></li></ul></div>
+									<p>Options are:</p>
+									<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>LF
+												(default)</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>CRLF</strong></span> - might be
+												preferable in certain source control workflows. See
+												<a class="xref" href="ch10s03.html" title="Using Wwise with your source control system">Using Wwise with your source control system</a>.</p></li></ul></div>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog and saves your
+										settings.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog without saving your
+										settings.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s01.html#configuring_source_control_plug_ins" title="Configuring source control plug-ins">Configuring source control plug-ins</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s01.html#defining_originals_folder_settings" title="Defining Originals folder settings">Defining Originals folder settings</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s01.html#defining_cache_folder_settings" title="Defining cache folder settings">Defining cache folder settings</a></p></li><li class="listitem"><p><a class="xref" href="ch12s04s03.html" title="Understanding property filter behavior (LPF, HPF)">Understanding property filter behavior (LPF, HPF)</a></p></li></ul></div></div></div><HR></body></html>

@@ -1,0 +1,66 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>SoundBank Editor - Add Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s03s01.html" title="SoundBank Editor"><link rel="prev" href="ch61s03s01.html" title="SoundBank Editor"><link rel="next" href="ch61s03s01s02.html" title="SoundBank Editor - Game Syncs Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03.html">SoundBanks Tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s03s01.html">SoundBank Editor</a></span> &gt; <span class="breadcrumb-node">SoundBank Editor - Add Tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="soundbank_editor_add_tab"></a>SoundBank Editor - Add Tab</h4></div></div></div><p>The Add tab of the SoundBank Editor is where you build the contents of your SoundBank. You can drag different project elements, including Events, sound objects, and Work Units, from the Project Explorer or Event Viewer to add them to your SoundBank. When you add parent project elements, all corresponding child objects will be added to the SoundBank automatically. For each project element, you must also decide whether you want to include all corresponding events, object structures, and media within the SoundBank.</p><p>Wwise uses the following colors to highlight different issues with the project elements that have been added to a SoundBank:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<span class="bold"><strong>Red</strong></span> - The project element is missing from the project.
+						</p></li><li class="listitem"><p>
+							<span class="bold"><strong>Yellow</strong></span> - The project element has been unloaded from the project.
+						</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+									<p>Name</p>
+								</td><td>
+									<p>The name of the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Hierarchy Inclusion</p>
+								</td><td>
+									<p>The point within the hierarchy at which objects are included in the SoundBank. All objects below this point are automatically included in the SoundBank.</p>
+									<p>Project elements can be added to a SoundBank manually or by importing a SoundBank definition file. To help you distinguish between the two, an asterisk (*) is added to the name of project elements that have been added manually.</p>
+								</td></tr><tr><td>
+									<p>Events</p>
+								</td><td>
+									<p>Determines whether the Events associated with the particular project element will be included in the SoundBank.</p>
+								</td></tr><tr><td>
+									<p>Structures</p>
+								</td><td>
+									<p>
+										
+										Determines whether the sound, music, and motion structures associated with the particular project element will be included in the SoundBank. 
+									</p>
+								</td></tr><tr><td>
+									<p>Media</p>
+								</td><td>
+									<p>Determines whether the media associated with the particular project element will be included in the SoundBank.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_remove.png"></div>
+								</td><td>
+									<p>Removes the selected project element and corresponding events, structures, and media files from the SoundBank.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch41s03s02.html" title="Creating and populating SoundBanks by importing a definition file">Creating and populating SoundBanks by importing a definition file</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s03.html" title="Populating SoundBanks manually">Populating SoundBanks manually</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s01.html" title="Including/excluding project elements from SoundBanks">Including/excluding project elements from SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s02.html" title="Including/excluding project elements using game syncs">Including/excluding project elements using game syncs</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s06.html" title="Moving project elements between SoundBanks">Moving project elements between SoundBanks</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch41s03s04s07.html" title="Removing project elements from SoundBanks">Removing project elements from SoundBanks</a>
+						</p></li></ul></div></div><HR></body></html>

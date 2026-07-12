@@ -1,0 +1,63 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Performance Monitor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s01s02s225.html" title="Unsupported feedback connection to Audio Objects bus."><link rel="next" href="ch63s02s01.html" title="Performance Monitor Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Performance Monitor</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="game_profiler_performance_monitor"></a>Performance Monitor</h2></div></div></div><p>The Performance Monitor displays information about the performance, in terms of CPU, memory, and streaming for each activity performed by the sound engine. The information is displayed graphically in real time as it is captured from the sound engine. To the right of the graph view are a series of key performance counters that display the actual performance at each point in the graph. You can review the performance of each counter at specific points in the graph by dragging the Performance Monitor time cursor. You can also press <span class="bold"><strong>Alt+Comma</strong></span> (,) to move one audio frame to the left and <span class="bold"><strong>Alt+Period</strong></span> (.) to move one audio frame to the right.</p><p>You can add, remove, or change the counters that are displayed in the Performance Monitor in the 
+      <a class="xref" href="ch63s02s01.html" title="Performance Monitor Settings">Performance Monitor Settings</a>
+      dialog. To open the Performance Monitor Settings dialog, click the View Settings icon in the title bar of the Performance Monitor.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <p>
+                </p><div class="mediaobject"><img src="Images/btn_display_options_dots.png"></div><p>
+              </p>
+            </td><td>Click the View Settings icon in the upper right corner of the view to prompt the 
+              <a class="xref" href="ch63s02s01.html" title="Performance Monitor Settings">Performance Monitor Settings</a>
+              , where you can specify what is displayed in the Graph View and Performance Data list.</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+              <p>Graph View</p>
+            </td><td>
+              <p>A series of performance graphs that are updated in real time during the capture process. They display 
+                <a class="link" href="ch63s02s01.html#profiler_counters">counters</a>
+                , which are specified in the 
+                <a class="xref" href="ch63s02s01.html" title="Performance Monitor Settings">Performance Monitor Settings</a>
+                ' 
+                <span class="bold"><strong>Show in Graph</strong></span>
+                column.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The performance graphs will remain in the graph view until a new capture process is started.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+            </td><td>
+              <p>Zooms in towards the center of the Performance Monitor graph view.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+            </td><td>
+              <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+            </td><td>
+              <p>Zooms out from the center of the Performance Monitor graph view.</p>
+            </td></tr><tr><td>
+              <p>Performance Data list</p>
+            </td><td>
+              <p>A list of performance 
+                <a class="link" href="ch63s02s01.html#profiler_counters">counters</a>
+                with corresponding values updated in real time during the capture process and displayed according to the selected moment in the graph view's timeline.</p>
+              <p>The listed counters are specified in the 
+                <a class="xref" href="ch63s02s01.html" title="Performance Monitor Settings">Performance Monitor Settings</a>
+                ' 
+                <span class="bold"><strong>Show in List</strong></span>
+                column.</p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s09.html#customizing_performance_monitor" title="Customizing the Performance Monitor">Customizing the Performance Monitor</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s10.html" title="Loading the data from a previous remote capture session">Loading the data from a previous remote capture session</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch06.html#using_keyboard_shortcuts" title="Using keyboard shortcuts">Using keyboard shortcuts</a>
+        </p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effect of Spread</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s06.html" title="3D positioning illustrated"><link rel="prev" href="ch23s06.html" title="3D positioning illustrated"><link rel="next" href="ch23s06s02.html" title="Effect of orientation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s06.html">3D positioning illustrated</a></span> &gt; <span class="breadcrumb-node">Effect of Spread</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="effect_of_spread"></a>Effect of Spread</h3></div></div></div><p>Assume the Attenuation curve for Spread is as shown in the image below, such that it is 0% (point source) at large distances and 100% (completely enveloping) at short distances.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="650"><tr><td><img src="Images/spread_curve.png" width="650"></td></tr></table><div class="caption"><p>Spread curve used in the following examples</p></div></div><p>
+        In the following table, the source's channel configuration is 4.0. This allows you to clearly associate the distribution of input channels to the virtual sources (FL:yellow, FR:green, SL:blue, and SR:red).
+      </p><p>
+        In the second column, Listener Position Relative to Emitter, the emitter game object is depicted with its arrow pointing to the north, meaning that the game object orientation is set by the game towards the north. The listener game object also points to the north, and it is facing the direction of the emitter game object. In the four figures, the listener is placed at three different distances, which results in four different Spread values: 0, 30, 70, and 100%.
+      </p><p>
+        In the third column, Placement of Virtual Sources and Output Bus Channel Energy, you see the effect on the placement of the virtual sources (the small colored circles). Also, the triangles represent channels of the output bus, where the center channel is on top. Further, the color of the triangles illustrates the amount of energy resulting from panning. More red means more energy.
+      </p><p>In this example, we use a 5.0 configuration with angles of +/-72° and +/-144°, although +/-45° and +/-135° are the default angles of 5.x speaker configurations. But, we could have represented any other configuration, even ambisonics, because the placement of virtual sources would have been identical.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="60px" class="col1"><col align="center" class="col2"><col align="center" class="col3"></colgroup><thead><tr><th colspan="3">
+                <p>The Effect of Spread Values Where Emitter and Listener Orientations are Identical and the Emitter Faces the Listener</p>
+              </th></tr><tr><th>
+                <p>Spread</p>
+              </th><th align="center">
+                <p>Listener Position Relative to Emitter</p>
+              </th><th align="center">
+                <p>
+                  Placement of Virtual Sources<br>and Output Bus Channel Energy
+                </p>
+              </th></tr></thead><tbody><tr><td>
+                <p>0% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr style="height: 536px"><td><img src="Images/spread_0.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="292"><tr><td><img src="Images/pan_spread_0.png" width="292"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>30% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/spread_50.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="291"><tr><td><img src="Images/pan_spread_50.png" width="291"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>70% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/spread_70.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="312"><tr><td><img src="Images/pan_spread_70.png" width="312"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>100% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/spread_100.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="304"><tr><td><img src="Images/pan_spread_100.png" width="304"></td></tr></table></div>
+              </td></tr></tbody></table></div><p>
+         Proceed to the next 3D positioning example: <a class="xref" href="ch23s06s02.html" title="Effect of orientation">Effect of orientation</a>. 
+      </p></div><HR></body></html>

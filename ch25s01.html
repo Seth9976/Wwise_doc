@@ -1,0 +1,73 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Using Effects with Audio Objects</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch25.html" title="Managing Effects"><link rel="prev" href="ch25.html" title="Managing Effects"><link rel="next" href="ch25s02.html" title="Using Effects to implement environment acoustics"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch25.html">Managing Effects</a></span> &gt; <span class="breadcrumb-node">Using Effects with Audio Objects</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="using_effects_with_audio_objects"></a>Using Effects with Audio Objects</h2></div></div></div><p>The way in which Audio Objects are handled by Effects depends on which type of bus the Effect is inserted on and whether or not the Effect is an Object Processor. The following sections provide details on these different possibilities:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch25s01.html#effects_on_mixing_bus" title="Effects inserted on a mixing bus">Effects inserted on a mixing bus</a></p></li><li class="listitem"><p><a class="xref" href="ch25s01.html#effects_on_audio_objects_bus" title="Effects inserted on a Processing Audio Objects bus">Effects inserted on a Processing Audio Objects bus</a></p></li><li class="listitem"><p><a class="xref" href="ch25s01.html#object_processor_instantiation" title="Object Processors">Object Processors</a></p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="effects_on_mixing_bus"></a>Effects inserted on a mixing bus</h3></div></div></div><p>When Effects are inserted on a mixing bus, the mixing stage is always applied at the beginning of the bus processing. Therefore, the multiple inputs of a bus are mixed to a single stream of audio. The positioning transformations are also applied during the mixing stage. Each Effect inserted on the bus is then instantiated only once, and the pre-mixed audio stream feeds the Effect in series. In general, processing costs are proportional to the number of channels.</p><p>Note that when a bus is instantiated multiple times, where each instance is associated with a different Game Object, the Effects are instantiated once per bus instance.</p><p>The following figure illustrates the internal processing of a mixing bus with Effects:</p><div class="mediaobject"><img src="Images/bus_internal_processing_mixing.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>
+								<p>Voices are routed to a bus; their signal is sampled when mixing.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout2.png"></div>
+							</td><td>
+								<p>A channel-based format comes from a previous mixing bus.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout3.png"></div>
+							</td><td>
+								<p>A stream of Audio Objects comes from a previous bus Processing Audio Objects.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout4.png"></div>
+							</td><td>
+								<p>All inputs, including voices, channel-based input, and Audio Objects are mixed together.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout5.png"></div>
+							</td><td>
+								<p>A channel-based format is created from the internal mix; no individual Audio Objects remain.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout6.png"></div>
+							</td><td>
+								<p>A channel-based format is operated on by Effects.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout7.png"></div>
+							</td><td>
+								<p>A channel-based format is output by the bus.</p>
+								<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Some Effects can change the output format of a bus, for instance, Audio Objects could be output even though a bus is configured as mono.</p></td></tr></table></div>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="effects_on_audio_objects_bus"></a>Effects inserted on a Processing Audio Objects bus</h3></div></div></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>The following Effects are not supported by busses that are Processing Audio Objects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>AK Convolution Reverb</strong></span>: Running one instance of the Effect for each Audio Object would cause performance issues.</p></li><li class="listitem"><p><span class="bold"><strong>Matrix Reverb</strong></span>: Running one instance of the Effect for each Audio Object would cause performance issues.</p></li><li class="listitem"><p><span class="bold"><strong>Peak Limiter</strong></span>: Peak limiting at the Audio Object level would be unreliable. When authoring Audio Objects, use the Mastering Suite plug-in on an Audio Device to apply peak limiting.</p></li><li class="listitem"><p><span class="bold"><strong>Recorder</strong></span>: The Recorder cannot run multiple instances. Recorder (ADM) should be used instead.</p></li><li class="listitem"><p><span class="bold"><strong>RoomVerb</strong></span>: Running one instance of the Effect for each Audio Object would cause performance issues.</p></li><li class="listitem"><p><span class="bold"><strong>Auro Headphone</strong></span>: Not supported.</p></li></ul></div><p>If any of these Effects is inserted on such a bus, it will not be processed at runtime.</p></td></tr></table></div><p>When using Effects on a bus with the Processing Audio Objects status, there are a few considerations to be aware of. Unless the Effect is one of the <a class="xref" href="ch25s01.html#object_processor_instantiation" title="Object Processors">Object Processors</a>, each Effect is instantiated as many times as there are Audio Objects. For example, if a Guitar Distortion effect is inserted on an Audio Objects bus, and 10 Audio Objects are routed to this bus, the Guitar Distortion will be instantiated 10 times. In general, processing costs are proportional to the number of Audio Objects routed to the bus.</p><p>The following figure illustrates the internal processing of a Processing Audio Objects bus with Effects:</p><div class="mediaobject"><img src="Images/bus_internal_processing_not_mixing.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout1.png"></div>
+							</td><td>
+								<p>Voices are routed to a bus; their signal is sampled when mixing.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout2.png"></div>
+							</td><td>
+								<p>A channel-based format comes from a previous mixing bus.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout3.png"></div>
+							</td><td>
+								<p>A stream of Audio Objects comes from a previous bus Processing Audio Objects.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout4.png"></div>
+							</td><td>
+								<p>Any input that is not already an Audio Object, such as voices, and channel-based input, are transformed into individual Audio Objects. These are added to any other Audio Objects supplied to the bus.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout5.png"></div>
+							</td><td>
+								<p>A list of Audio Objects is created.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout6.png"></div>
+							</td><td>
+								<p>Each Audio Object is operated on individually by Effects.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/Callout7.png"></div>
+							</td><td>
+								<p>A list of Audio Objects is output by the bus.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="object_processor_instantiation"></a>Object Processors</h3></div></div></div><p>Certain Wwise Effects support Audio Objects intrinsically. Such Effects are called Object Processors and are instantiated only once per bus instance:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<span class="bold"><strong>3D Audio Bed Mixer</strong></span>: The 3D Audio Bed Mixer is instantiated once and directs incoming Audio Objects to one of three possible outputs: a main mix, a passthrough mix, or a collection of unmixed 3D Audio Objects.
+					</p></li><li class="listitem"><p><span class="bold"><strong>Compressor/Expander</strong></span>: The Compressor and Expander are instantiated once
+						and perform the analysis phase once on an internal downmix. The gain reduction is
+						common to all Audio Objects. </p></li><li class="listitem"><p><span class="bold"><strong>Meter/Multiband Meter</strong></span>: The meter is instantiated once and performs the
+						analysis phase once on an internal downmix. The dynamics stage is processed only once
+						for all Audio Objects. Therefore the effect only outputs one set of Game Parameter
+						values.</p></li><li class="listitem"><p><span class="bold"><strong>Mastering Suite</strong></span>: The Mastering Suite is also compatible with Audio Objects,
+						and its Multiband Compressor processes them in a manner similar to the Compressor.</p></li><li class="listitem"><p><span class="bold"><strong>Parametric EQ</strong></span>: Parametric EQ is instantiated once and
+						runs the same EQ process across all Audio Objects, with internal tracking of
+						each Audio Object's filter state.</p></li><li class="listitem"><p><span class="bold"><strong>Gain</strong></span>: Gain is instantiated once. When the same
+					gain is applied to the Full-Band and LFE components of the signal, the effect directly modifies the 
+					Cumulative Gain on each Object's metadata, instead of modifying the Audio Object signal.</p></li><li class="listitem"><p><span class="bold"><strong>Sidechain Send</strong></span>: The Sidechain Send is instantiated
+					once, and does a mixdown of all incoming Audio Objects to a signal with the same channel
+					configuration as the targeted Sidechain Mix.</p></li><li class="listitem"><p><span class="bold"><strong>Recorder ADM</strong></span>: The Recorder (ADM) is used to record
+					a collection of Audio Objects into a single WAV file using the ADM format.</p></li></ul></div><p>Reflect also supports Audio Objects, but in a particular way. While Reflect is often inserted on a mono bus, it can output Audio Objects if the configuration of the parent bus is set to Audio Objects. It then outputs one Audio Object per early reflection. This can represent a substantial number of Audio Objects.</p></div></div><HR></body></html>

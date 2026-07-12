@@ -1,0 +1,179 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Flanger</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s07.html" title="Expander"><link rel="next" href="ch67s09.html" title="Gain"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Flanger</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_flanger_plug_in_wwise_flanger_plug_in"></a>Flanger</h2></div></div></div><p>The Flanger plug-in is built into Wwise. For information on applying it to objects, see
+      <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>(See the <a class="xref" href="ch67s08.html#flanger_plug_in_properties" title="Flanger properties">Flanger properties</a> below.) </p><p>Flanging is an audio effect that occurs when two identical signals are mixed together, but with one signal time-delayed by a small and gradually changing amount. This produces a swept comb filter effect: peaks and notches are produced in the resultant frequency spectrum, related to each other in a linear harmonic series. Varying the time delay with an LFO oscillator causes these to sweep up and down the frequency spectrum.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="comb_filter_spectral_controls"></a>Comb filter spectral controls</h3></div></div></div><p>The Flanger algorithm is based on a 'unified comb filter' that allows for controlling the depth of notches and peaks as well as their relative location (for example, on odd or even harmonics). This allows the comb filter to provide a wide variety of spectrum shaping by directly modifying the 'feedforward' and 'feedback' coefficients.</p><div class="mediaobject"><img src="Images/Plugins/Flanger/FF1FB0.png"></div><div class="mediaobject"><img src="Images/Plugins/Flanger/FF0FB1.png"></div><p>The following figures exemplify the type of magnitude response that can be achieved using a fixed delay time of 0.5 ms. The feedforward coefficient controls the depth of notches in the spectrum, while the feedback coefficient controls the magnitude of peaks.</p><div class="mediaobject"><img src="Images/Plugins/Flanger/FFm1FB0.png"></div><div class="mediaobject"><img src="Images/Plugins/Flanger/FF0FBm1.png"></div><p>The sign of the coefficient can control whether the notches or peaks occur on odd harmonics (for positive coefficients) or even harmonics (for negative coefficients) as shown below.</p><div class="mediaobject"><img src="Images/Plugins/Flanger/FF1FB1.png"></div><div class="mediaobject"><img src="Images/Plugins/Flanger/FF1FBm1.png"></div><div class="mediaobject"><img src="Images/Plugins/Flanger/FFm1FB1.png"></div><p>The feedforward and feedback components can be used together to build different spectral shapes for combining the effect of notches and peak as shown below.</p><div class="mediaobject"><img src="Images/Plugins/Flanger/DoubledDelayFF1FB0.png"></div><p>The delay time effectively controls the spacing between notches and/or peaks. By doubling the delay time, the distance between notches is halved as shown in the example below.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="alternate_effects"></a>Alternate effects</h3></div></div></div><p>With the additional flexibility provided by the 'Blend' parameter which allows to mix the input to the delay line (including the feedback path) with the feedforward path of the delay line, effects other than flanging may be achieved.</p><div class="mediaobject"><img src="Images/Plugins/Flanger/UniComb.png"></div><p>One example of this is the vibrato effect (a regular pulsating change of pitch). Vibrato can be characterized by the amount of pitch variation and speed with which the pitch is varied. By setting both the feedback and blend values to 0, only the (modulated) feedforward path is preserved (vibrato component).</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="flanger_plug_in_properties"></a>Flanger properties</h3></div></div></div><p>The Flanger plug-in contains a series of properties, many of which can be edited in real-time and can be mapped to specific Game Parameters using RTPCs.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+		<p>Delay</p>
+	</td><td>
+		<p>The delay parameter used by the comb filter. Small delay values result in few spectral notches/peaks. Large delay values result in smaller spacing between frequency notches/peaks.</p>
+		<p>Default value: 5</p>
+		<p>Range: 0.2 to 100</p>
+		<p>Units: ms </p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>Color Settings</strong></span>
+              </p></td></tr><tr><td>
+		<p>Blend</p>
+	</td><td>
+		<p>Scaling factor for signal not entering the modulated delay line (sum of feedback and dry signal). Can be used to create a large range of effect from flanging to vibrato.</p>
+		<p>Default value: 1.0</p>
+		<p>Range: 0 to 1</p>
+	</td></tr><tr><td>
+		<p>Feedforward</p>
+	</td><td>
+		<p>Scaling factor for the contribution of the feedforward path out of the modulated comb filter. Large (absolute) values of this parameter results in stronger notches in the spectrum. Negative values places notches at even harmonic locations instead.</p>
+		<p>Default value: 1</p>
+		<p>Range: -1 to 1</p>
+	</td></tr><tr><td>
+		<p>Feedback</p>
+	</td><td>
+		<p>Scaling factor for the contribution of the feedback path out of the modulated comb filter. Large (absolute) values of this parameter result in stronger peaks in the spectrum. Negative values place peaks at even harmonic locations instead.</p>
+		<p>Default value: 0</p>
+		<p>Range: -1 to 1</p>
+		<p>Units: Linear gain </p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>Output Settings</strong></span>
+              </p></td></tr><tr><td>
+		<p>Wet/Dry Mix</p>
+	</td><td>
+		<p>Controls the balance between the wet path (the output of the Effect) and the dry path (the input of the Effect). A value of 0 yields the original signal unaffected by the Effect while the a value of 100 outputs only the output of the Effect.</p>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>Output Gain</p>
+	</td><td>
+		<p>The amount of gain applied to the output signal after the dynamic compression that makes up for potential gain losses.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Process Center</p>
+	</td><td>
+		<p>Determines whether the Effect is processing the center channel or not. When unselected, the center channel is unaffected by the Effect.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Process LFE</p>
+	</td><td>
+		<p>Determines whether the Effect is processing the LFE channel or not. When unselected, the LFE channel is unaffected by the Effect.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>LFO Section</strong></span>
+              </p></td></tr><tr><td>
+		<p>LFO Depth</p>
+	</td><td>
+		<p>Amount of amplitude modulation that controls the actual delay length, in percentage. At 0%, the delay length used by the comb filter is always as specified by the delay parameter. At 100%, the delay length is modulated to its full range.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>LFO Frequency</p>
+	</td><td>
+		<p>Frequency of the modulating signal.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.02 to 20000</p>
+		<p>Units: Hz </p>
+	</td></tr><tr><td>
+		<p>LFO Waveform</p>
+	</td><td>
+		<p>Shape of the modulating signal.</p>
+		<p>Values: Sine, Square, Triangle, Upward sawtooth, Downward sawtooth.</p>
+		<p><span class="bold"><strong>Caution</strong></span>: Although this parameter can be changed at run-time using RTPCs, the signal is not guaranteed to be continuous.</p>
+		<p>Default value: Sine</p>
+	</td></tr><tr><td>
+		<p>LFO Smoothing</p>
+	</td><td>
+		<p>Amount of smoothing applied to the modulating signal. It is low-pass filtered by a certain value, mapped from 0 to 100%. At 0%, the signal comes out intact. With higher values, edges and discontinuities are smoothed.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> This setting has no effect on the sine waveform.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td>
+		<p>PWM (Pulse Width Modulation)</p>
+	</td><td>
+		<p>Applies to the square waveform only. Modulates the width of the pulse during one cycle. At 50%, the signal is at its full amplitude for half of the cycle, and is 0 for the other half. Near 100%, the signal is at its full amplitude for almost all the cycle, while it drops to 0 for a very short amount of time.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0 to 100</p>
+		<p>Units: % </p>
+	</td></tr><tr><td colspan="2"><p>
+                <span class="bold"><strong>Initial Phase Section</strong></span>
+              </p></td></tr><tr><td>
+		<p>LFO Phase Offset</p>
+	</td><td>
+		<p>Offsets phase of the modulating signal of all channels by a specific value.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Although this parameter can be changed at run-time via RTPC, it has no effect when it is set after the instance of this effect has started playing.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -180 to 180</p>
+		<p>Units: ° </p>
+	</td></tr><tr><td>
+		<p>LFO Spread Mode</p>
+	</td><td>
+		<p>Defines how initial phase spread (see parameter &#8220;Spread&#8221;) is applied across channels. For example, with the spread mode set to &#8220;Front-Rear&#8221;, all front channels start playing with a phase equal to 0, and all rear channels start playing with a phase equal to &#8220;Spread&#8221;. If present (and processed), the LFE channel is always synchronized with the Front Left channel.</p>
+		<p>Values:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Left-Right</strong></span>: Front and rear left channels start with an offset of 0, front and rear right channels start with an offset of &#8220;Spread&#8221;. If present, the center channel starts with an offset of &#8220;Spread&#8221;/2.</p></li><li class="listitem"><p><span class="bold"><strong>Front-Rear</strong></span>: Front and center channels start with an offset of 0, and rear channels start with an offset of &#8220;Spread&#8221;.</p></li><li class="listitem"><p><span class="bold"><strong>Circular</strong></span>: This mode applies a spreading dipole between the left and right channels on 1.x, 2.x and 3.x configurations, and between the front left and rear right channel on 4.x and 5.x configurations. For example, a 3.0 signal would start with the following phases: L=0, C=&#8221;Spread&#8221;/2, R=&#8221;Spread&#8221;. A 5.0 signal would start with the following phases: FL=0, C=&#8221;Spread&#8221;/4, FR=&#8221;Spread&#8221;/2, RL=&#8221;Spread&#8221;/2, RR=&#8221;Spread&#8221;.</p></li><li class="listitem"><p><span class="bold"><strong>Random</strong></span>: Each channel starts with a random phase uniformly distributed between 0 and &#8220;Spread&#8221;.</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Although this parameter can be changed at run-time via RTPC, it has no effect when it is set after the instance of this effect has started playing.</p></td></tr></table></div>
+		<p>Default value: Left-Right</p>
+	</td></tr><tr><td>
+		<p>LFO Phase Spread</p>
+	</td><td>
+		<p>Amount of divergence in the initial phase spread across channels. The way in which this value affects each channel depends on the spread mode.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Although this parameter can be changed at run-time via RTPC, it has no effect when it is set after the instance of this effect has started playing.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 180</p>
+		<p>Units: ° </p>
+	</td></tr></tbody></table></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Keep in mind that the Feedback parameter can make the sound grow increasingly for large parameter values.</p></td></tr></table></div><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>The effect tail (that is, the time after the input sound is finished during which the Effect continues to output data that it has accumulated in its delay line) does not consider feedback. This means that for strong feedback value the Effect could terminate with a significant volume still processed.</p></td></tr></table></div><p>See also <a class="xref" href="ch67s26.html#Tremolo_LFO_Phase">Tremolo properties</a>  for more detailed explanations on LFO parameters.</p></div></div><HR></body></html>

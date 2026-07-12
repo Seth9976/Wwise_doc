@@ -1,0 +1,184 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Parametric EQ</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch67.html" title="Effect plug-ins"><link rel="prev" href="ch67s14.html" title="Multiband Meter"><link rel="next" href="ch67s16.html" title="Peak Limiter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch67.html">Effect plug-ins</a></span> &gt; <span class="breadcrumb-node">Parametric EQ</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="wwise_parametric_eq_plug_in"></a>Parametric EQ</h2></div></div></div><p>To enhance your sound, you might want to create effects that influence the frequency
+    components of the audio signal. Using the Parametric EQ plug-in, you can apply a variety of
+    filters to shape the spectrum of your sound.</p><p>Parametric EQ in Wwise is precise, which helps you save audio resources by letting you reuse
+    a single audio file for different sounds. For example, you could use the Low Pass Flat filter on
+    a waterfall sound to lower the high frequencies until it sounds like a low rumble similar to the
+    sound of something boiling in a pot. Using one file for multiple effects saves resources.</p><p>The Parametric EQ plug-in is built into Wwise. For information on applying it to objects,
+    see <a class="xref" href="ch25.html" title="Managing Effects"><i>Managing Effects</i></a>.</p><p>Parametric EQ contains a series of properties that you can use to create the Effects for
+    your audio environment. You can map any of these properties to Game Parameters using RTPCs.
+    Also, you have the flexibility of working in up to eight frequency bands where you can apply
+    different properties to each band.</p><p>Parametric EQ operates as an Object Processor, which means it is instantiated once per bus,
+    as opposed to once for each Audio Object on each bus. This is done for performance reasons only
+    and does not affect the result of the signal processing. Refer to <a class="xref" href="ch25s01.html" title="Using Effects with Audio Objects">Using Effects with Audio Objects</a> for more information.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_parametric_eq_graph"></a>Parametric EQ Graph</h3></div></div></div><p>The Parametric EQ plug-in contains a graph that displays the frequency response of the EQ's processing. When editing the Parametric EQ, the graph displays the frequency response of each band as individual curves as well as a curve of the frequency response of all bands accumulated together. When profiling, the graph displays an additional curve of the accumulated frequency response of all bands including any changes to properties from RTPCs and any contributions made from the Dynamic Gain.</p><p>You can use the graph to edit certain the properties of each band. You can enable or disable
+      each band by double-clicking their respective control point. You can drag the control points
+      horizontally to control the Frequency of each band. Depending on the band's filter type, you
+      can also drag the control points vertically to control the Gain or Q of each band. You can use
+      the mouse wheel to zoom the graph in and out vertically fine-tune adjustments to each
+      band.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_parametric_eq_dynamics"></a>Parametric EQ Dynamics</h3></div></div></div><p>In addition to being able to dynamically adjust properties of the Parametric EQ effect through RTPCs, the effect can also dynamically adjust the Gain of each band based on an audio signal.</p><p>When Dynamics are enabled for any band, the Parametric EQ effect either reads the specified Sidechain Mix or it uses the input audio signal itself as the Dynamics Input signal. The Dynamics Input is mixed down to a single channel of audio, run through a filter-bank based on the properties of the bands which have Dynamics enabled, and then the root mean square of each filtered band of the Dynamics Input is metered. The metered value of each band of the Dynamics Input is used to calculate a new Dynamic Gain, based on the Dynamics Threshold and Range specified for the band. Finally, this Dynamic Gain is added to whatever the Gain of the specified band is set to.</p><p>To monitor the processing for the Dynamics Input, expand the splitter to the right to view the Dynamics Input and Dynamics Gain meters. The Dynamics Input meter shows the metered result of each filtered band of the Dynamics Input. The Dynamics Gain meter shows the calculated Dynamic Gain being applied to each band.</p><p>With these Dynamics features, you can use the Parametric EQ as a dynamic EQ such as those used in some DAWs. For example, you can use these features to correct the volume of specific bands of audio when they get too loud, perform frequency-based ducking across different portions of your audio mix, or automatically apply other adjustments in order to improve the overall clarity of your mix.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_parametric_eq_solo_band"></a>Soloing Bands</h3></div></div></div><p>The Parametric EQ effect allows you to listen to specific bands of audio when profiling the
+      sound engine.</p><p>Click the <span class="bold"><strong>Solo Band</strong></span> button to enable a different
+      operating mode for the Parametric EQ effect. When Solo Band is active, the effect applies a
+      filter on the input audio based on the properties of the active band to isolate just the
+      portion of the audio affected by the active band and uses that as the output audio of the
+      effect. For example, when soloing a band configured as a Low Shelf filtered with a cut-off
+      frequency of 500Hz, the output audio is isolated to just the portion of the input audio at
+      500Hz and lower, and does not apply any other processing to the signal. You can use this to
+      understand what portion of the audio mix is affected by each band in the EQ.</p><p>Similarly, you can click the <span class="bold"><strong>Solo Band Dynamics Input</strong></span> button to listen to one of the filtered bands of the Dynamics Input in isolation from all other processing. When Solo Band Dynamics Input is active, the effect applies a filter on the Dynamic Input audio, and uses that as the output audio of the effect. This shows what audio is driving each band of the Dynamics Input.</p><p>When the Solo Band is active, note that all other audio rendering in the sound engine is still active, as this only affects the audio processing of the Parametric EQ effect. To listen to one of the bands of audio in isolation of your entire  mix, other audio busses might need to be muted or other effects might need to be bypassed.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="wwise_parametric_eq_properties"></a>Parametric EQ properties</h3></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the Effect instance.</p>
+        <p>Effect instances are a group of effect property settings. They can be one of two types: custom instances or ShareSets. Custom instances can be used by only one object, whereas ShareSets can be shared across several objects.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td>
+		<p>Inclusion</p>
+	</td><td>
+		<p>Determines whether the element is included in the SoundBanks when they are generated. When selected, the element is included. When unselected, the element is not included.</p>
+		<p>
+			To optimize your sound design for each platform, you might want to exclude certain elements on certain platforms. By default, this check box applies across all platforms. Use the 
+			<a class="link" href="ch46s11.html#linking_unlinking_property_values" title="Linking or unlinking property values">Link indicator</a>
+			 to the left of the check box to unlink the element. Then you can customize the state of the check box per platform.
+		</p>
+		<p>When this option is unselected, the property and behavior options in the editor become unavailable.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Additional information about the Effect.</p>
+      </td></tr><tr><td>
+        <p>Metering</p>
+      </td><td>
+        <p>Indicates the name of the object currently being metered.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/metering_browse_button.png"></div>
+      </td><td>
+        <p>Allows you to browse for other objects to meter.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The metering interface elements only appear in the Effect Editor for Effects that
+            include VU meters.</p></td></tr></table></div>
+      </td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Effect Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+		<p>Enable</p>
+	</td><td>
+		<p>Controls whether the specified band is active and doing any processing.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Type</p>
+	</td><td>
+		<p>The type of filter to apply for the specified band:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low Pass Flat</strong></span> to provide a fixed sloped attenuation of high frequencies from a specified frequency. Below this point the signal has a flat frequency response but higher frequencies are progressively more attenuated past the cutoff frequency point. The rate of attenuation can be controlled by the Rolloff property. For example, using Low Pass Flat, you can reduce the high-frequency sounds of a water fountain to make it sound more like a pot of boiling water.</p></li><li class="listitem"><p><span class="bold"><strong>High Pass Flat</strong></span> to provide a fixed slope attenuation of low frequencies from a specified frequency. Above this point the signal has a flat frequency response while lower frequencies are progressively more attenuated below the cutoff frequency point. The rate of attenuation can be controlled by the Rolloff. For example, using High Pass Flat you can reduce the low-frequency sounds of a water fountain to make it sound like sizzling bacon.</p></li><li class="listitem"><p><span class="bold"><strong>Low Pass Q</strong></span> to provide an attenuation of high frequencies from a specified frequency. This provides a boost in volume at the cutoff frequency based on the Q. Higher frequencies are progressively more attenuated above the cutoff frequency point. The rate of attenuation can be controlled by the Rolloff. For example, you can reduce the high frequencies and adjust the Q level  to make footsteps sound far away or muffled.</p></li><li class="listitem"><p><span class="bold"><strong>High Pass Q</strong></span> to provide an attenuation of low frequencies from a specified frequency. This provides a boost in volume at the cutoff frequency based on the Q. Lower frequencies are progressively more attenuated below the cutoff frequency point. The rate of attenuation can be controlled by the Rolloff property. For example, you can reduce the low frequencies and adjust the Q level to make footsteps sound sharper on a harder surface.</p></li><li class="listitem"><p><span class="bold"><strong>Band Pass</strong></span> to reject all frequencies around the specified center frequency. The range of frequencies around the center is controlled by the Q. For example, you can reduce or increase a wide band of frequencies to make a voice sound very close or muffled depending on the direction of the band.</p></li><li class="listitem"><p><span class="bold"><strong>Notch</strong></span> to provide a fixed attenuation of a specified frequency range with a varying width. The range of frequencies around the center is controlled by the Q. For example, use this narrow band to emphasize or underemphasize specific frequencies to make a voice sound more clear or give the effect of it being fuzzy.</p></li><li class="listitem"><p><span class="bold"><strong>Low Shelf</strong></span> to provide gain/attenuation for a specified range of low frequencies. This curve type is also known as Bass Tone Control. For example, use this to identify and cut muddy frequencies to have a cleaner instrument sound.</p></li><li class="listitem"><p><span class="bold"><strong>High Shelf</strong></span> to provide gain /attenuation for a specified range of high frequencies. This curve type is also known as Treble Tone Control. For example, configure the highest frequencies of the audio to provide crisper vocals.</p></li><li class="listitem"><p><span class="bold"><strong>Peaking (default)</strong></span> to provide amplification/attenuation of a specified frequency range with a varying width. The range of frequencies around the peak is controlled by the Q. Use to precisely boost or reduce frequencies, for example to add a crisper sound to a snare drum. Choose a narrow or wider band allowing for more precision.</p></li></ul></div>
+		<p>Default value: Peaking</p>
+	</td></tr><tr><td>
+		<p>Gain</p>
+	</td><td>
+		<p>The amount of amplification of the audio signal for the specified band.</p>
+		<p>The Gain controls are not available when the Low Pass Flat, High Pass Flat, Low Pass Q, High Pass Q, Notch, or Band Pass curves have been selected because these filter types have their passband normalized at 0 dB, or operate independent of a Gain.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Frequency</p>
+	</td><td>
+		<p>The portion of the frequency spectrum that is affected by the filter in the specified band.</p>
+		<p>Default value: 9000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Frequency</p>
+	</td></tr><tr><td>
+		<p>Quality Factor</p>
+	</td><td>
+		<p>The area around the center frequency that is affected by the change in gain for the specified band. For Band Pass, Peaking, and Notch filter types, a low Q value will result in a wide bandwidth range and a high Q value will result in a narrow bandwidth range. For Low Pass Q and High Pass Q filters, a low Q value lowers the volume of the filter around the cutoff frequency and a high Q value raises the volume of the filter around the cutoff frequency.</p>
+		<p>This control is not available when the Filter Type is set to Low Pass, High Pass, Low Shelf, or High Shelf.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.025 to 100</p>
+	</td></tr><tr><td>
+		<p>Rolloff</p>
+	</td><td>
+		<p>Defines the rate of attenuation of the filter for the specified band beyond the cutoff frequency.</p>
+		<p>The Rolloff is only available when the filter type for the specified band is set to Low Pass Flat, High Pass Flat, Low Pass Q, or High Pass Q.</p>
+		<p>Default value: 12 dB/oct</p>
+		<p>Units: decibels per octave</p>
+	</td></tr><tr><td>
+		<p>Dynamics Enable</p>
+	</td><td>
+		<p>Controls whether dynamic adjustment of the Gain of the specified band is active. Like other Dynamics properties, this is only available when the filter type of the specified band is set to Low Shelf, High Shelf, or Peaking.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Dynamics Threshold</p>
+	</td><td>
+		<p>The level of the band-filtered Dynamics Input above which the dynamics begins to apply a Dynamic Gain on the specified band.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+	</td></tr><tr><td>
+		<p>Dynamics Range</p>
+	</td><td>
+		<p>The maximum gain offset that can be applied by the Dynamic Gain on the specified band. If this value is negative, then the Dynamic Gain will be negative, acting as a form of compression for the specified band. If this value is positive, then the Dynamic Gain will be positive, giving an expansion effect for the specified band.</p>
+		<p>Default value: 0</p>
+		<p>Range: -30 to 30</p>
+	</td></tr><tr><td>
+		<p>Dynamics Attack</p>
+	</td><td>
+		<p>The amount of time it takes for the Dynamic Gain to reach its target value as the Dynamics Inputs metered volume rises above the threshold for the specified band.</p>
+		<p>Default value: 0.1</p>
+		<p>Range: 0 to 2</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Dynamics Release</p>
+	</td><td>
+		<p>The amount of time it takes for the Dynamic Gain to converge to zero as the Dynamics Inputs metered volume falls below the threshold for the specified band</p>
+		<p>Default value: 0.1</p>
+		<p>Range: 0 to 2</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Output Gain</p>
+	</td><td>
+		<p>The overall output level of the Parametric EQ Effect.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+		<p>Num Bands</p>
+	</td><td>
+		<p>Defines the number of bands that are available for the effect. A lower number can slightly reduce CPU and memory cost beyond just disabling the bands.</p>
+		<p>Default value: 3</p>
+		<p>Range: 1 to 8</p>
+	</td></tr><tr><td>
+		<p>Process LFE</p>
+	</td><td>
+		<p>Determines whether the Effect is processed in the LFE channel or not. When selected, the Effect is processed in the LFE channel. When unselected, the LFE channel will be unaffected.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Sidechain Mix Source</p>
+	</td><td>
+		<p>Reference to the Sidechain Mix object that is used for the Dynamics Input. If no Sidechain Mix is specified, then the Dynamics Input used is the effect&#8217;s input audio.</p>
+	</td></tr><tr><td>
+		<p>Sidechain Mix Scope</p>
+	</td><td>
+		<p>Defines the ID for the Sidechain Mix Scope when receiving audio from the Sidechain Mix.</p>
+		<p>When the Scope is set to Global, the ID for the Sidechain Mix Scope is 0.</p>
+		<p>When the Scope is set to Game Object, the ID for the Sidechain Mix Scope is the Game Object ID attached to the Bus or Voice.</p>
+		<p>Default value: Global</p>
+	</td></tr></tbody></table></div></div></div><HR></body></html>

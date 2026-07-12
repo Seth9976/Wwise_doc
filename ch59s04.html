@@ -1,0 +1,27 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Device Meter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s03s01.html" title="Logs Settings"><link rel="next" href="ch59s05.html" title="Loudness Meter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Audio Device Meter</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="audio_device_meter"></a>Audio Device Meter</h2></div></div></div><p>The Audio Device Meter view displays the levels of the three possible output streams of an Audio Device: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Main mix</p></li><li class="listitem"><p>Passthrough</p></li><li class="listitem"><p>Objects</p></li></ul></div><p>The Main mix and Passthrough meters show the values per channel, while the Objects meter shows the value per System Audio Object. Refer to <a class="xref" href="ch13s03s02.html" title="The role of the System Audio Device">The role of the System Audio Device</a> to understand how audio is sorted into these three streams. </p><p>The color of the meters are:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>green under -6 dB</p></li><li class="listitem"><p>yellow from -6 dB to 0 dB</p></li><li class="listitem"><p>red over 0 dB</p></li></ul></div><p>The meter data source can be synchronized with currently playing objects or, when a profiling session is present, with historical values. When the meter is showing the profiling session history, use the <span class="bold"><strong>LIVE</strong></span> button on the Wwise toolbar to return to current values.</p><p>For more information, refer to <a class="xref" href="ch35s11s02.html" title="Monitoring the signal level">Monitoring the signal level</a>. </p><p>For details on the Audio Device Meter Instance, A, B, C, or D, refer to <a class="xref" href="ch05s01s01.html" title="Understanding Selection Channels and Meter Instances">Understanding Selection Channels and Meter Instances</a></p><p>The Audio Device Meter view displays the following elements:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+						<p>[name]</p>
+					</td><td>
+						<p>The name of the Audio Device.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+					</td><td>
+						<p>Opens the Project Explorer - Browser where you can specify which Audio
+							Device you want to meter. The browse button is only available when the
+							view is floating.</p>
+					</td></tr><tr><td>
+						<p>Main mix</p>
+					</td><td>
+						<p>Displays the level of each channel of the main mix.</p>
+					</td></tr><tr><td>
+						<p>Passthrough</p>
+					</td><td>
+						<p>Displays the level of the two channels of the Passthrough Mix.</p>
+					</td></tr><tr><td>
+						<p>Objects</p>
+					</td><td>
+						<p>Displays the level of each System Audio Object.</p>
+					</td></tr></tbody></table></div></div><HR></body></html>

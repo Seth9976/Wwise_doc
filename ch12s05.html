@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Enhancing playback by randomizing property values</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch12.html" title="Building your sound and motion hierarchies"><link rel="prev" href="ch12s04s04.html" title="Understanding the dual-shelf filter"><link rel="next" href="ch12s06.html" title="Building Containers hierarchy tips and best practices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch12.html">Building your sound and motion hierarchies</a></span> &gt; <span class="breadcrumb-node">Enhancing playback by randomizing property values</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="enhancing_playback_by_randomizing_property_values"></a>Enhancing playback by randomizing property values</h2></div></div></div><p>During gameplay, the same sound is often played more than once. To prevent repetition of
+      the sound at each occurrence, you can use Randomizers to modify the sound each time it is
+      played.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="enabling_disabling_randomizers"></a>Enabling Randomizers and setting their properties</h3></div></div></div><p>You can apply a Randomizer to any property that has a Randomizer icon.</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="130px" class="col2"><col width="590px" class="col3"></colgroup><thead><tr><th>
+                <p>Icon</p>
+              </th><th>
+                <p>Status</p>
+              </th><th>
+                <p>Description</p>
+              </th></tr></thead><tbody><tr><td align="center">
+                <div class="mediaobject"><img src="Images/Modifier_Enable_icon.png"></div>
+              </td><td>
+                <p>Randomizer Enabled</p>
+              </td><td>
+                <p>A property value to which a Randomizer effect has been applied.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/Modifier_Disable_icon.png"></div>
+              </td><td>
+                <p>Randomizer Disabled</p>
+              </td><td>
+                <p>A property value to which no Randomizer effect has been applied.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/Randomizer_Mixed.png"></div>
+              </td><td>
+                <p>Randomizer Mixed</p>
+              </td><td>
+                <p>A Randomizer effect applies to the property value of one or more, but not all,
+                  objects loaded in the Multi Editor. You will not see this indicator in the
+                  Property Editor or the Contents Editor.</p>
+              </td></tr></tbody></table></div><div class="orderedlist"><p class="title"><b>To edit the properties of a Randomizer:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Double-click a property's Randomizer icon.</p></li><li class="listitem"><p>In the Randomizer view that opens, set the properties according to the following
+            table.</p></li></ol></div><p>You can also enable or disable a Randomizer by right-clicking a property's Randomizer
+        icon, and  selecting <span class="bold"><strong>Enable Randomizer</strong></span> or <span class="bold"><strong>Disable Randomizer</strong></span>.</p><p>To edit the properties of a Randomizer for several objects at the same time, select
+        several objects in the Project Explorer, right-click the selection, and select <span class="bold"><strong>Show in Multi Editor</strong></span>. </p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                <p>Randomizer view</p>
+              </th></tr><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>Enabled</p>
+	</td><td>
+		<p>Determines whether the Randomizer is applied to the object property value or not. If selected, the Randomizer is applied. If unselected, the Randomizer is not applied to the object property value.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Min Offset</p>
+	</td><td>
+		<p>An offset applied to the property value that defines the minimum possible value of the property.</p>
+		<p>Default value: 0</p>
+	</td></tr><tr><td>
+		<p>Max Offset</p>
+	</td><td>
+		<p>An offset applied to the property value that defines the maximum possible value of the property.</p>
+		<p>Default value: 0</p>
+	</td></tr></tbody></table></div><p>The Randomizer view title bar displays the name of the selected Wwise object, or the
+        number of objects selected if more than one, and the selected property.</p><p>Like the <a class="xref" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>, an open Randomizer view reloads
+        objects according to the UI focus. The initially loaded property persists until it is
+        explicitly changed. Objects without the currently loaded property do not open in the
+        Randomizer view.</p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="understanding_randomizer_properties"></a>Understanding Randomizer properties</h3></div></div></div><p>It's important to understand how Randomizers are applied to property values. When a sound object is played, for each property that supports Randomizers:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>The Randomizers of the sound object and all its ascendants, if enabled, each generate a random value.</p></li><li class="listitem"><p>The sum of the Randomizer values is added to the final property value. The final
+            property value consists of:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Object property value.</p></li><li class="listitem"><p>RTPCs on the property.</p></li><li class="listitem"><p>States on the property.</p></li></ul></div></li></ol></div><p>The final Randomizer value is added to the final property value regardless of how the
+        final property value is calculated. For the Volume and Pitch properties, the property values
+        are always calculated by addition of the many sources. For the Low-pass filter and High-pass
+        filter properties, it depends on the configured Filter Behavior. See:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch12s04s02.html" title="Defining relative properties (volume, pitch, LPF, HPF)">Defining relative properties (volume, pitch, LPF, HPF)</a></p></li><li class="listitem"><p><a class="xref" href="ch12s04s03.html" title="Understanding property filter behavior (LPF, HPF)">Understanding property filter behavior (LPF, HPF)</a></p></li></ul></div><p>The following illustration demonstrates the calculation of the final Randomzier value
+        for the Voice object's Volume property. Each object has enabled the Randomizer for the
+        Volume property. The final Randomizer value, Rand, is the sum of values x, y, and z. This
+        value will be added to the final Volume property for the Voice object.</p><div class="mediaobject"><img src="Images/dgm_hierarchy_properties_randomizers.png"></div></div></div><HR></body></html>

@@ -1,0 +1,66 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Using Presets</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt07.html" title="Working with Wwise"><link rel="prev" href="ch54s04.html" title="Queries tips and best practices"><link rel="next" href="ch56.html" title="Copying and pasting object properties"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-node">Using Presets</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="using_presets"></a>Using Presets</h2></div></div></div><p>Presets are a specific set of property values, related to an object, Effect, Positioning,
+      Attenuation, or Metadata, that are saved into a special file so that they can be reused at a
+      later time within the same project. By using Presets, you don't have to recreate particular
+      property setups that you want to reuse for other objects in your project. All you have to do
+      is set up the property values once, save the Preset, and then apply it to the other objects in
+      your project. You will save time and effort by working more efficiently.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Unlike ShareSets, the property values in a Preset cannot be shared across objects.</p></td></tr></table></div><p>The Preset icons appear in the title bar of each view where Presets can be saved and
+    loaded.</p><div class="mediaobject"><img src="Images/preset_icons.png"></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+            <div class="mediaobject"><img src="Images/Callout1.png"></div>
+          </td><td>Load Preset</td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/Callout2.png"></div>
+          </td><td>Save Preset</td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="contents_of_preset"></a>Contents of a Preset</h2></div></div></div><p>Since you can save Presets for object properties at different levels within the project
+      hierarchy, it is important to know what elements are saved with each Preset. The following
+      table describes all the Presets along with the information that is saved.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="105px" class="col1"><col width="110px" class="col2"><col width="155px" class="col3"></colgroup><thead><tr><th>
+              <p>Preset</p>
+            </th><th>
+              <p>Location in Hierarchy</p>
+            </th><th>
+              <p>Contents</p>
+            </th></tr></thead><tbody><tr><td rowspan="2">
+              <p>Object/Source Properties</p>
+            </td><td>
+              <p>Top-level object</p>
+            </td><td>
+              <p>All property values in the Property Editor.</p>
+            </td></tr><tr><td>
+              <p>Child object</p>
+            </td><td>
+              <p>All property values in the Property Editor.</p>
+              <p>If <span class="bold"><strong>Override parent</strong></span> options are not enabled when
+                saving the Preset, then nothing under those override settings will be saved to the
+                Preset. If enabled when saving to the Preset, then the Preset will include all its
+                corresponding override property values. However, the override option will not be
+                enabled by default. The override properties will only apply once the <span class="bold"><strong>Override parent</strong></span> is enabled.</p>
+            </td></tr><tr><td>
+              <p>Effect</p>
+            </td><td align="center">
+              <p>-</p>
+            </td><td>
+              <p>All property values of the Effect.</p>
+            </td></tr><tr><td>
+              <p>Positioning (2D)</p>
+            </td><td align="center">
+              <p>-</p>
+            </td><td>
+              <p>The location of the point source.</p>
+            </td></tr><tr><td>
+              <p>Positioning (3D Automation)</p>
+            </td><td align="center">
+              <p>-</p>
+            </td><td>
+              <p>All positioning paths, settings, and values in the Position Editor (3D
+                Automation).</p>
+            </td></tr><tr><td>
+              <p>Attenuation</p>
+            </td><td align="center">
+              <p>-</p>
+            </td><td>
+              <p>All curves and all attenuation settings.</p>
+            </td></tr><tr><td>Metadata</td><td align="center">
+              <p>-</p>
+            </td><td>
+              <p>All property values of the Metadata.</p>
+            </td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="saving_presets"></a>Saving Presets</h2></div></div></div><p>You can save Presets for any of the following elements in Wwise:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Property values and settings for objects and sources within the Containers hierarchy</p></li><li class="listitem"><p>Positioning values</p></li><li class="listitem"><p>Attenuation settings</p></li><li class="listitem"><p>Effect values in the Effect Editor</p></li><li class="listitem"><p>Metadata values in the Metadata Editor</p></li></ul></div><p>When you save Presets, Wwise saves every value on every tab within the view. When a Preset is saved, it is grouped according to one of the following categories:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Audio Bus</p></li><li class="listitem"><p>Auxiliary Bus</p></li><li class="listitem"><p>Property Container</p></li><li class="listitem"><p>Random or Sequence Container</p></li><li class="listitem"><p>Switch Container</p></li><li class="listitem"><p>Blend Container</p></li><li class="listitem"><p>Sound SFX/Voice</p></li><li class="listitem"><p>
+      Audio Source Plug-in
+    </p></li><li class="listitem"><p>Music Switch Container</p></li><li class="listitem"><p>Music Playlist Container</p></li><li class="listitem"><p>Music Segment</p></li><li class="listitem"><p>Music Track</p></li><li class="listitem"><p>Positioning (3D Automation)</p></li><li class="listitem"><p>Positioning (2D)</p></li><li class="listitem"><p>Attenuation</p></li><li class="listitem"><p>Effects</p></li><li class="listitem"><p>Metadata</p></li></ul></div><p>When you open the Save Preset dialog, the Presets will be filtered to show only those Presets that are in the same category.</p><div class="orderedlist"><p class="title"><b>To save a Preset:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the view title bar, click the <span class="bold"><strong>Save Preset</strong></span> icon.</p><p>The Save Preset dialog opens.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Name</strong></span> field, type the name of the Preset.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Notes</strong></span> field, type any information that further describes the Preset.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Save</strong></span> or press <span class="bold"><strong>Enter</strong></span>.</p><p>The Preset is saved and can be re-used at any time within the same project.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loading_presets"></a>Loading Presets</h2></div></div></div><p>After you have saved your Presets, you can apply them to other objects, Effects,
+      Positioning, Attenuation, or Metadata within your project.</p><p>When you open the Load Preset dialog, the Presets will be filtered to show only those Presets that are in the same category.</p><div class="orderedlist"><p class="title"><b>To load a Preset:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the view title bar, click the <span class="bold"><strong>Load Preset</strong></span> icon.</p><p>The Load Preset dialog opens.</p></li><li class="listitem"><p>Select a Preset from the list.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Load</strong></span> or press <span class="bold"><strong>Enter</strong></span>.</p><p>The Preset is applied to the object.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="deleting_presets"></a>Deleting Presets</h2></div></div></div><p>If you no longer need a Preset, you can delete it.</p><div class="orderedlist"><p class="title"><b>To delete a Preset:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the view title bar, click the <span class="bold"><strong>Load Preset</strong></span> icon.</p><p>The Load Preset dialog opens.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can also delete Presets from the Save Preset dialog.</p></td></tr></table></div></li><li class="listitem"><p>In the Preset list, click the Preset that you want to delete.</p><p>The Delete button becomes enabled.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Delete</strong></span>.</p><p>The Preset is removed from the Preset list and deleted from your project.</p></li></ol></div></div></div><HR></body></html>

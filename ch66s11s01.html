@@ -1,0 +1,279 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Source Editor: Soundseed Woosh</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch66s11.html" title="Soundseed Air Woosh"><link rel="prev" href="ch66s11.html" title="Soundseed Air Woosh"><link rel="next" href="ch66s11s02.html" title="Contents Editor: Soundseed Woosh"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66.html">Source plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66s11.html">Soundseed Air Woosh</a></span> &gt; <span class="breadcrumb-node">Source Editor: Soundseed Woosh</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="source_plug_in_editor_soundseed_air_woosh_plug_in"></a>Source Editor: Soundseed Woosh</h3></div></div></div><p>The Source Editor displays all the properties associated with the Soundseed Air (Woosh) plug-in.</p><p>For a general overview of the Soundseed Woosh plug-in, refer to <a class="xref" href="ch66s11.html" title="Soundseed Air Woosh">Soundseed Air Woosh</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Name</p>
+              </td><td>
+                <p>The user-defined name given to this instance of the Soundseed Air (Woosh) plug-in.</p>
+              </td></tr><tr><td>
+                <p>Source Plugin</p>
+              </td><td>
+                <p>The type of source plug-in.</p>
+              </td></tr><tr><td>
+                <p>Notes</p>
+              </td><td>
+                <p>Any additional information about the Soundseed Woosh plug-in.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Effect Settings</strong></span></p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Deflectors</strong></span></p>
+              </td></tr><tr><td>
+		<p>Anchor</p>
+	</td><td>
+		<p>Determines whether the moving object spins or turns around a given deflector. Specifying an anchor point allows deflector samples to encounter wind at different air velocities. If no anchor is defined, then all deflector samples are assumed to be moving at the same speed.</p>
+		<p>For example, let&#8217;s say we have an object with three deflectors, where the first deflector is defined as the anchor point.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Deflector</strong></span> 1: No speed.</p></li><li class="listitem"><p><span class="bold"><strong>Deflector 2</strong></span>: Travels at half the speed of deflector 3.</p></li><li class="listitem"><p><span class="bold"><strong>Deflector 3</strong></span>: Travels at full speed, which is defined defined by the Object speed property value.</p></li></ul></div>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+					<p>[M]</p>
+              </td><td>
+                <p>Silences the corresponding deflector. This can facilitate the authoring of the woosh scene.</p>
+                <p>It is possible to have more than one deflector muted at the same time. All deflectors will be rendered by Wwise regardless of whether a deflector is muted or not.</p>
+              </td></tr><tr><td>
+					<p>[S]</p>
+              </td><td>
+                <p>Mutes other deflectors so that the chosen deflector can be auditioned alone. This can facilitate the authoring of the woosh scene.</p>
+                <p>It is possible to have more than one deflector soloed at the same time. All deflectors will be rendered by Wwise regardless of whether a deflector is soloed or not.</p>
+                <p>To solo a single deflector when other deflectors are already soloed, simply Ctrl+click the solo button. This will select the current Solo button and clear all other Solo buttons that are already selected.</p>
+              </td></tr><tr><td>
+		<p>Frequency</p>
+	</td><td>
+		<p>The deflector&#8217;s resonant center frequency when exposed to wind at a medium velocity.</p>
+		<p>The Frequency value defines the size of the deflector circle in the Deflector Positions graph view.</p>
+		<p>Default value: 440</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Hz</p>
+	</td></tr><tr><td>
+		<p>Q Factor</p>
+	</td><td>
+		<p>The peakiness or sharpness of the deflector&#8217;s resonance curve. Q factor is inversely related to bandwidth, so a large Q factor results in a narrow bandwidth and a small Q factor results in a wide bandwidth.</p>
+		<p>A high Q factor value should be used to simulate regular or round surfaces, whereas a low Q factor value should be used to simulate irregular surfaces.</p>
+		<p>Default value: 10.0</p>
+		<p>Range: 0.1 to 50</p>
+	</td></tr><tr><td>
+		<p>Gain</p>
+	</td><td>
+		<p>The amount by which the deflector&#8217;s signal will be amplified. Increasing this value &#8220;boosts&#8221; the deflector signal. Decreasing this value &#8220;cuts&#8221; or attenuates the deflector signal.</p>
+		<p>The gain value also defines the color of the deflector circle in the Deflector Positions graph view. A dark gray color corresponds to a high gain value, whereas a light gray color corresponds to a low gain value.</p>
+		<p>Default value: 0</p>
+		<p>Range: -24 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td>
+                <p>Section</p>
+              </td><td>
+                <p>The number of deflector samples within the group. Creating a group of deflector samples can be used to divide up different areas of the air-deflecting object. If you have more than one section, Wwise interpolates the property settings between sections from the property settings of one deflector to another. This can be useful if the shape of your object changes from one end to the other, like a traffic cone.</p>
+                <p>Default value: 1 <br>Slider Range: 1 to 100</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75"><tr style="height: 23px"><td><img src="Images/Plugins/Wwise_SS_Air_Wind/New_btn.png" height="23"></td></tr></table></div>
+              </td><td>
+                <p>Creates a new deflector in the Deflectors list.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="75"><tr style="height: 23px"><td><img src="Images/Plugins/Wwise_SS_Air_Wind/Delete_btn.png" height="23"></td></tr></table></div>
+              </td><td>
+                <p>Deletes the selected deflector from the Deflectors list.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Object Path</strong></span></p>
+              </td></tr><tr><td>
+                <p>(Graph View)</p>
+              </td><td>
+                <p>A graphical representation of the woosh path that the object will follow. The path is used to define the object's trajectory within a Woosh scene as well as to define the attenuation of the sound as it moves farther away, if attenuation is enabled.</p>
+                <p>To add a new point to the path, simply double-click in the graph view.</p>
+                <p>The position reference point is displayed in both the Object path graph view and the Property graph view. This allows you to define the speed of the traveling object at specific points along the path.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+              </td><td>
+                <p>Zooms in towards the center of the graph view.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+              </td><td>
+                <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+              </td><td>
+                <p>Zooms out from the center of the graph view.</p>
+              </td></tr><tr><td>
+                <p>X</p>
+              </td><td>
+                <p>The coordinate along the X axis of the object.</p>
+              </td></tr><tr><td>
+                <p>Y</p>
+              </td><td>
+                <p>The coordinate along the Y axis of the object.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Properties</strong></span></p>
+              </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/pin_icon.png"></div>
+              <div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+              <p>(Pinned/Unpinned)</p>
+            </td><td>
+                <p>Determines whether a property curve will remain in the graph view when another curve is selected.</p>
+                <p>When the Pin icon is selected, the curve will be displayed in the graph view whether the curve is selected or not.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/Color_Red.png" width="13"></td></tr></table></div>
+                <p>(Color block)</p>
+              </td><td>
+                <p>Displays the color of the corresponding property curve in the graph view.</p>
+              </td></tr><tr><td>
+                <p>Name</p>
+              </td><td>
+                <p>The name of the property. You can edit the values for the following properties:</p>
+                <p><span class="bold"><strong>Object Speed</strong></span> - The average velocity at which the fastest-traveling deflector travels through the air. The fastest traveling deflector is the one farthest from the anchor point, if there is one.</p>
+                <p>Object speed is interpreted in terms of an offset in energy applied to the deflectors in a scene. This property basically defines the effect speed has on the deflectors' resonating frequencies.</p>
+                <p>By default, the Automate option is selected for the Object Speed property. The automation curve contains the following three points (t=0, 0), (t=0.25, 100), (t=0.5, 0).</p>
+                <p>Default value: 0 <br>Slider Range: -50 to 50</p>
+                <p><span class="bold"><strong>Frequency Shift</strong></span> - A global property that defines the amount by which all deflectors' center frequencies have been shifted up or down. For example, at a value of 1, the center frequencies will be doubled, whereas at a value of  -1 the center frequencies will be halved.</p>
+                <p>Default value: 0 <br>Slider Range: -4 to 4</p>
+                <p><span class="bold"><strong>Q Factor Scale</strong></span> - A global property that defines the amount by which all deflectors' Q factors have been shifted up or down. For example, at a value of 1, the Q factors will be doubled, whereas at a value of  -1 the Q factors will be halved.</p>
+                <p>Default value: 0 <br>Slider Range: -4 to 4</p>
+                <p><span class="bold"><strong>Gain Offset</strong></span> - A global property that defines the amount by which all deflector's gain is offset. This property can be used as a master gain control.</p>
+                <p>Default value: 0 <br>Slider Range: -96 to 24 <br>Units: dB</p>
+              </td></tr><tr><td>
+                <p>Value</p>
+              </td><td>
+                <p>The specific numerical value assigned to the corresponding property.</p>
+              </td></tr><tr><td>
+                <p>Random</p>
+              </td><td>
+                <p>An absolute offset applied to the corresponding property value that defines a range of possible values for the property. For example, adding a random value of 1 to a property value would mean that the possible range for that property would be  [(value - 1) to (value +1)].</p>
+                <p>When defining a Random value, Wwise randomly selects a value from within the range (value +/- random) each time the woosh sound is played. This has the effect of shifting the entire curve up or down.</p>
+              </td></tr><tr><td>
+		<p>Automate</p>
+	</td><td>
+		<p>Automates the values of the property over the duration of the sound using automation curves.</p>
+		<p>When this option is selected, you can edit the automation curve for the corresponding property in the graph view.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Time</strong></span></p>
+              </td></tr><tr><td>
+		<p>Duration</p>
+	</td><td>
+		<p>The length in seconds of the woosh sound.</p>
+		<p>You can create an infinitely looping woosh sound by setting the Loop property to Infinite for the parent sound object.</p>
+		<p>Default value: 0.5</p>
+		<p>Range: 0.1 to 3600.0</p>
+	</td></tr><tr><td>
+		<p>Duration Random</p>
+	</td><td>
+		<p>A positive and negative offset applied to the Duration property value that defines a range of possible values. For example, if you have the Duration set to 10 and the Duration random set 5, this would mean that the possible range for the Duration would be (5 to 15) or [(Duration value - 5) to (Duration value +5)].</p>
+		<p>When you define a Duration random value, Wwise will randomly select a value from within the range (value +/- random) each time the woosh sound is played. For looping sounds, every iteration will have a randomized duration.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 3600.0</p>
+	</td></tr><tr><td>
+		<p>Playback Rate</p>
+	</td><td>
+		<p>A factor applied to the duration property value that determines the rate at which the woosh sound is played back. For example, a value of 2 will render the synthesized sound 2 times faster, which makes the sound twice as short.</p>
+		<p>This option can be useful when you want the automation curve to be read at dynamic rates which follow a Game Parameter that the game cycles through at a variable speed. For example, imagine that a character in the game takes a potion which slows down time by a factor of two; then, cycling through automation curves with a playback rate of 0.5 would keep all air sounds in sync with the game&#8217;s time flow.</p>
+		<p>Default value: 1.0</p>
+		<p>Range: 0.1 to 10.0</p>
+	</td></tr><tr><td>
+                <p>(Graph View)</p>
+              </td><td>
+                <p>A graphical representation of the property value automation curve, where the X axis represents the duration of the sound and the Y axis represents an offset to the original property value.</p>
+                <p>Only curves with the Automate option selected can be edited in the graph view. You can move points along the curve by clicking and dragging. To add a point, double-click anywhere along the curve. Right-click on a section of the curve to select a different curve shape. Note that the object speed curve is limited to using linear curve shapes.</p>
+                <p>If RTPCs are applied to automated property values, Wwise will combine the property values defined in the automation curve with those in the RTPC curve.</p>
+                <p>The graph view can display several curves simultaneously by selecting multiple properties in the list or by using the pin option.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+              </td><td>
+                <p>Zooms in towards the center of the graph view.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+              </td><td>
+                <p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+              </td><td>
+                <p>Zooms out from the center of the graph view.</p>
+              </td></tr><tr><td>
+                <p>X</p>
+              </td><td>
+                <p>The coordinate along the X axis of the selected control point.</p>
+                <p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the X text box, both control points will move to the left by 5 units.</p>
+              </td></tr><tr><td>
+                <p>Y</p>
+              </td><td>
+                <p>The coordinate along the Y axis of the selected control point.</p>
+                <p>If more than one control point is selected, the field displays a value of 0, so that you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the Y text box, both control points will move down by 5 units.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Speed Point Random</strong></span></p>
+              </td></tr><tr><td>
+                <p>Speed</p>
+              </td><td>
+                <p>A positive and negative offset applied to the object speed property value for each point along the curve. This defines a range of possible speed values for each point. For example, adding a random value of 25 to the object speed property value would mean that the possible speed value for each point would be [(value - 25) to (value +25)].</p>
+                <p>When defining a Random value, Wwise randomly selects a value from within the range (value +/- random) for each point along the curve each time the woosh sound is played. This has the effect of shifting each point on the curve independently either up or down.</p>
+                <p>Default value: 10 <br>Slider Range: 0 to 50</p>
+              </td></tr><tr><td>
+		<p>Time</p>
+	</td><td>
+		<p>An absolute offset applied to the time property value for each point along the curve. This defines a range of possible time values for each point. For example, adding a random value of 1 to the property value would mean that the possible time value for each point would be [(value - 1) to (value +1)].</p>
+		<p>When defining a Random value, Wwise randomly selects a value from within the range (value +/- random) for each point along the curve each time the woosh sound is played. This has the effect of shifting each point on the curve independently, either left or right.</p>
+		<p>The points order cannot change which preserves the contour of the curve. As a result, each point can move randomly between the previous and next point.</p>
+		<p>Default value: .5</p>
+		<p>Range: 0 to 1</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Distance Attenuation</strong></span></p>
+              </td></tr><tr><td>
+		<p>Distance Attenuation</p>
+	</td><td>
+		<p>Determines whether the woosh sound will be attenuated over distance.</p>
+		<p>Default value: true</p>
+	</td></tr><tr><td>
+		<p>Minimum Distance</p>
+	</td><td>
+		<p>The distance from the center of the scene where no attenuation gain is applied (0 dB). This property is measured as a percentage of the scene.</p>
+		<p>
+			For more information about the attenuation model used by Soundseed Woosh, refer to 
+			<a class="link" href="ch66s11.html" title="Soundseed Air Woosh">Soundseed Air Woosh</a>
+			.
+		</p>
+		<p>Default value: 10</p>
+		<p>Range: 1 to 100</p>
+	</td></tr><tr><td>
+		<p>Roll-off Factor</p>
+	</td><td>
+		<p>Specifies the slope of the attenuation curve, where higher values produce steeper slopes or faster attenuation.</p>
+		<p>At a value of 1, a -6 dB attenuation is applied each time the deflector&#8217;s distance is doubled after the Minimum distance. A roll-off of 2 creates a steeper slope that attenuates the deflector twice as fast. A roll-off of 0.5, on the other hand, creates a flatter slope that attenuates the deflector two times slower.</p>
+		<p>
+			For more information about the attenuation model used by Soundseed Wind, refer to 
+			<a class="link" href="ch66s10.html" title="Soundseed Air Wind">Soundseed Air Wind</a>
+			.
+		</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.0 to 4</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Settings</strong></span></p>
+              </td></tr><tr><td>
+		<p>Noise Color</p>
+	</td><td>
+		<p>Determines the spectral tilt of the synthesized woosh signal. You can select any one of the following colors:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>White noise</strong></span> - Produces a signal with no spectral tilt.</p></li><li class="listitem"><p><span class="bold"><strong>Pink noise</strong></span> - Produces a signal with a -3 dB per octave spectral tilt. This results in a negative slope where less emphasis is placed on the higher frequencies.</p></li><li class="listitem"><p><span class="bold"><strong>Red noise</strong></span> - Produces a signal with a -6 dB per octave spectral tilt. This results in a steeper negative slope where even less emphasis than pink noise is placed on the higher frequencies.</p></li><li class="listitem"><p><span class="bold"><strong>Purple noise</strong></span> - Produces a +6 dB per octave tilt. This results in a positive slope where emphasis is placed on the higher frequencies.</p></li></ul></div>
+		<p>Default value: White</p>
+	</td></tr><tr><td>
+		<p>Channels</p>
+	</td><td>
+		<p>The channel output configuration. You can select any of the following options:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>1.0</strong></span> - Outputs in mono with no spatialization.</p></li><li class="listitem"><p><span class="bold"><strong>2.0</strong></span> - Outputs in stereo with left-right spatialization.</p></li><li class="listitem"><p><span class="bold"><strong>4.0</strong></span> - Outputs in 4.0 with surround spatialization.</p></li></ul></div>
+		<p>Default value: 2.0</p>
+		<p>Units: ° </p>
+	</td></tr><tr><td>
+		<p>Oversampling</p>
+	</td><td>
+		<p>The rate at which the control curves used for positioning and distance-based attenuation are sampled.</p>
+		<p>Woosh is typically used for very short sounds, often less than 1 second. As a result, you may need to use the Oversampling control to run the control curves and position along the path at a higher rate than the regular buffer period, which is approximately 21 ms on most platforms. This effectively brings the control rate down by the oversampling value. For example, a control rate oversampling of 8 will result in a sampling of control curves to happen every 2.63 ms (~21 ms/8).</p>
+		<p>Oversampling represents a computational cost and is best used only when needed.</p>
+		<p>Default value: 1</p>
+		<p>Range: 1 to 8</p>
+	</td></tr><tr><td>
+		<p>Dynamic Range</p>
+	</td><td>
+		<p>Determines the dynamic range or the ratio between the highest and lowest levels in the woosh signal that can result from changes in object speed.</p>
+		<p>Smaller values result in a compressed dynamic range, which means that changes in object speed will have a smaller impact on level changes. For the same change in woosh speed, larger values will result in a wider range of levels in the woosh signal.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 1</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

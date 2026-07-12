@@ -1,0 +1,115 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Auto-Ducking tab: Audio Busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s02s02.html" title="Property Editor: Audio Bus"><link rel="prev" href="ch61s01s02s02.html" title="Property Editor: Audio Bus"><link rel="next" href="ch61s01s02s02s02.html" title="HDR category: Audio Busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02.html">Busses hierarchy</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02s02.html">Property Editor: Audio Bus</a></span> &gt; <span class="breadcrumb-node">Auto-Ducking tab: Audio Busses</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="auto_ducking_tab"></a>Auto-Ducking tab: Audio Busses</h5></div></div></div><p>Use the Auto-Ducking tab to configure ducking. The bus whose properties you are editing is named in the tab. It is the current bus and it can lower the volume of other busses. To choose the busses to be ducked, click <span class="bold"><strong>Insert</strong></span>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                  <p>Auto-Ducking</p>
+                </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>Recovery Time</p>
+	</td><td>
+		<p>The amount of time from the termination of the audio signal in the current bus to the beginning of the fade-in for the signals that were ducked.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 10</p>
+		<p>Units: s </p>
+	</td></tr><tr><td>
+		<p>Maximum ducking volume</p>
+	</td><td>
+		<p>The maximum amount by which the volume of the current bus can be lowered due to ducking by other busses. Use the slider to select a value from 0 to -96. To select a value from -97 to -200, use the keyboard or mousewheel.</p>
+		<p>Default value: -96</p>
+		<p>Range: -200 to 0</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_insert_dots.png"></div>
+                </td><td>
+                  <p>Opens the Project Explorer - Browser where you can select an Audio Bus to add to the auto-ducking list.</p>
+                  <p>
+                    The <span class="bold"><strong>Main Audio Bus</strong></span> cannot be selected, and an Audio Bus cannot duck itself or any of its parent busses.
+                  </p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_remove.png"></div>
+                </td><td>
+                  <p>Deletes the selected bus from the list of busses to be ducked by the current bus.</p>
+                </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Busses</p>
+                </td><td>
+                  <p>The name of the Audio Bus.</p>
+                </td></tr><tr><td>
+                  <p>Volume</p>
+                </td><td>
+                  <p>The amount, in dB, by which the volume of the bus is reduced during ducking. The slider range is -96 to 0, defaulting to -6. To set a value below -96, use the keyboard.</p>
+                </td></tr><tr><td>
+                  <p>Fade Out</p>
+                </td><td>
+                  <p>The time to fade out from the original volume to the ducking volume.</p>
+                </td></tr><tr><td>
+                  <p>Fade In</p>
+                </td><td>
+                  <p>The time to fade in from the ducking volume back to the original volume.</p>
+                </td></tr><tr><td>
+                  <p>Curve</p>
+                </td><td>
+                  <p>The curve shape that defines how the signal will fade out and fade back in.</p>
+                </td></tr><tr><td>
+                  <p>Target</p>
+                </td><td>
+                  <p>Defines what property the ducking system will target.</p>
+                  <p>Here are the two possible values:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Bus Volume</strong></span>: Targets the final bus volume directly.
+                      </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Voice Volume</strong></span>: Targets the audio structures playing in the bus. This will also affect the sends applied to the targeted audio structures.
+                      </p></li></ul></div>
+                </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch13s02.html#ducking_signals" title="Ducking signals">Ducking signals</a>
+            </p></li></ul></div></div><HR></body></html>

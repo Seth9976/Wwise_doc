@@ -1,0 +1,159 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voices</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s01.html" title="Voices Graph"><link rel="next" href="ch63s03s03.html" title="Busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Voices</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="voices"></a>Voices</h3></div></div></div><p>The Advanced Profiler - Voices tab displays information about each of the voices or playback instances managed by the sound engine at any point in time.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For the motion objects to appear on the Voices tab, you need the appropriate motion device drivers installed on your workstation.</p></td></tr></table></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The 
+          <span class="bold"><strong>Game Object</strong></span>
+          , 
+          <span class="bold"><strong>Target</strong></span>
+          , 
+          <span class="bold"><strong>Wwise Object</strong></span>
+          , and 
+          <span class="bold"><strong>Bus</strong></span>
+          columns have associated mute and solo buttons (described in the 
+          <a class="xref" href="ch63s03s03.html" title="Busses">Busses</a>
+          tab documentation). Note, however, the particularity of the game object's impact on Wwise objects. If a game object is muted, then all its associated Wwise objects will be muted. If it is soloed, then only its associated Wwise objects could potentially play; but, that is evaluated according to their own mute and solo settings.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Game Object</p>
+              </td><td>
+                <p>The name of the game object to which the object is associated.</p>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+   Everywhere game objects are listed, such as in the <a class="xref" href="ch63s01.html" title="Capture Log">Capture Log</a> or the <a class="xref" href="ch63s03s02.html" title="Voices">Voices</a> and <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a> tabs of the Advanced Profiler, there is a specific shortcut menu with the following options:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Mute Game Object</strong></span>: Mutes all objects under this game object.</p></li><li class="listitem"><p><span class="bold"><strong>Unmute Game Object</strong></span>: Removes the mute on all objects under this game object.</p></li><li class="listitem"><p><span class="bold"><strong>Solo Game Object</strong></span>: Implicitly mutes all objects under other game objects.</p></li><li class="listitem"><p><span class="bold"><strong>Unsolo Game Object</strong></span>: Removes the implicit mute from all objects under other game objects.</p></li><li class="listitem"><p><span class="bold"><strong>Search Game Object in Voice Graph</strong></span>: Opens the <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a> tab of the Advanced Profiler with its Filter set to the specified game object.</p></li></ul></div><p>
+    </p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Event</p>
+              </td><td>
+                <p>The name of the Event which triggered the playing of the Target.</p>
+              </td></tr><tr><td>
+                <p>Target</p>
+              </td><td>
+                <p>The object targeted for playing by the Event. The playing of the target triggered the playing of the Wwise Object.</p>
+              </td></tr><tr><td>
+                <p>Wwise Object</p>
+              </td><td>
+                <p>The name of the object that is played by the sound engine.</p>
+              </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td>
+                <p>Bus</p>
+              </td><td>
+                <p>The name of the bus through which the object is output.</p>
+              </td></tr><tr><td>
+                <p>Voice Volume</p>
+              </td><td>
+                <p>The level of the voice as defined in the project's hierarchy. This value includes the voice volume levels of all parent objects and busses within the hierarchy, States, RTPCs, and Set Voice Volume Actions.</p>
+              </td></tr><tr><td>
+                <p>Panning Volumes</p>
+              </td><td>
+                <p>The output level of the voice when it is mixed into each channel of the first mixing bus.  This value strictly represents the per-channel spatialization gains.</p>
+                <p>Refer to 
+                  <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>
+                  for interpreting the channel order</p>
+              </td></tr><tr><td>
+                <p>Game-Defined Auxiliary Send Volume</p>
+              </td><td>
+                <p>Offsets game-defined auxiliary send values, in decibels.</p>
+              </td></tr><tr><td>
+                <p>Total Volume</p>
+              </td><td>
+                <p>Volume of the voice plus the contributions from all mixing bus gains of the signal path, from the voice down to the Main Audio Bus inclusively. In cases where there are multiple signal paths, such as what happens when using auxiliary sends, the largest value among all paths is taken. The Total Volume is evaluated against the Volume Threshold for virtual voices. It includes virtually all volume offsets in Wwise, except those that pertain to normalization and make-up gain (see Normalization / Make-Up Gain column below).</p>
+              </td></tr><tr><td>
+                <p>Normalization / Make-Up Gain</p>
+              </td><td>
+                <p>Volume gain applied to the audio source independently of the other logical volumes in Wwise. It results from the make-up gain property, loudness normalization, and localization volume offset (audio source make-up gain). It does not contribute to the Total Volume, and is thus ignored when evaluating the voice against the Volume Threshold. It is also transparent from the HDR, and not considered by the 
+                  <span class="bold"><strong>Voice Monitor</strong></span>
+                  .</p>
+                <p>Refer to 
+                  <a class="xref" href="ch35s09s04.html" title="HDR and the Wwise voice pipeline">HDR and the Wwise voice pipeline</a>
+                  for more details.</p>
+              </td></tr><tr><td>
+                <p>Device</p>
+              </td><td>
+                <p>The medium of the sound's transition, such as 
+                  <span class="bold"><strong>Main</strong></span>
+                  for the main audio output of your system or 
+                  <span class="bold"><strong>background</strong></span>
+                  for the background music speakers available on PS4, PS5, Xbox One, and Xbox Series X.</p>
+              </td></tr><tr><td>
+                <p>Voice LPF</p>
+              </td><td>
+                <p>The LPF really applied on the main voice pipeline, this value includes the Base LPF, the Occlusion LPF and the cone-distance attenuation LPF.</p>
+              </td></tr><tr><td>
+                <p>Voice HPF</p>
+              </td><td>
+                <p>The HPF really applied on the main voice pipeline, this value includes the Base HPF, the Occlusion HPF and the cone-distance attenuation HPF.</p>
+              </td></tr><tr><td>
+                <p>Priority</p>
+              </td><td>
+                <p>The importance given to the object in relation to other objects within the same hierarchical structure.</p>
+              </td></tr><tr><td>
+                <p>Virtual</p>
+              </td><td>
+                <p>Indicates when the object is in the virtual voice list.</p>
+              </td></tr><tr><td>
+                <p>Over Limit</p>
+              </td><td>
+                <p>Indicates when the object is virtual because it is over the maximum number of instances allowed by one of its node limiters.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

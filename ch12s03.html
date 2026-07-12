@@ -1,0 +1,114 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Building sound and motion hierarchies</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch12.html" title="Building your sound and motion hierarchies"><link rel="prev" href="ch12s02s02.html" title="Using containers and Property Containers in the Containers hierarchy"><link rel="next" href="ch12s04.html" title="About properties in the project hierarchy"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch12.html">Building your sound and motion hierarchies</a></span> &gt; <span class="breadcrumb-node">Building sound and motion hierarchies</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="building_actor_mixer_hierarchy_building_actor_mixer_hierarchy"></a>Building sound and motion hierarchies</h2></div></div></div><p>
+      After you have created your project, you can start creating the structures for your assets in the Audio tab of the Project Explorer. You do this under the Containers hierarchy. You can add objects and create relationships by grouping them at different levels in the hierarchy. The following table lists the kinds of sound and motion objects you can add.
+    </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100px" class="col1"><col width="50px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+              <p>Object</p>
+            </th><th>
+              <p>Icon</p>
+            </th><th>
+              <p>Description</p>
+            </th></tr></thead><tbody><tr><td rowspan="3">
+              <p>Sounds</p>
+            </td><td> </td><td>
+              <p>Wwise objects that represent the individual audio asset and contain the audio source. There are two kinds of sound objects:</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Sound_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Sound SFX</strong></span> - Sound effect object.
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Voice_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Sound Voice</strong></span> - Sound Voice object.
+              </p>
+            </td></tr><tr><td rowspan="4">
+              <p>Containers</p>
+            </td><td> </td><td>
+              <p>A group of objects that contain objects, or other containers, that are played according to certain behaviors. You can apply properties that will affect the child objects in the container. There are four kinds of containers:</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Random_Container_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Random Containers</strong></span> - A group of one or more objects that are played back in a random order.
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Sequence_Container_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Sequence Containers</strong></span> - A group of one or more objects or containers that are played according to a specific playlist.
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Layer_container_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Blend Containers</strong></span> - A group of one or more objects and/or containers that are played back simultaneously. The sounds and containers within the Blend Container can be grouped into blend tracks where sound properties are mapped to Game Parameter values using RTPCs. Crossfades can also be applied between the sounds within a blend track based on the value of a Game Parameter.
+              </p>
+            </td></tr><tr><td> </td><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/Switch_Container_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                <span class="bold"><strong>Switch Containers</strong></span> - A group of one or more objects and/or containers that are organized into a series of Switches or States that correspond to the different alternatives that exist for a particular element in the game.
+              </p>
+            </td></tr><tr><td>
+              <p>Property Containers</p>
+            </td><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/ActorMixer_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>High level objects into which you can group other objects. Properties that are applied to a Property Container affect the properties of the objects grouped under it.</p>
+              <p>You can also group objects within a Property Container using Virtual Folders.</p>
+            </td></tr><tr><td>
+              <p>Virtual Folders</p>
+            </td><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 13px"><td><img src="Images/folder_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                High level elements into which you can place other objects. Virtual folders cannot be child objects for containers or sounds. 
+              </p>
+            </td></tr><tr><td>
+              <p>Work Units</p>
+            </td><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 15px"><td><img src="Images/workunit_nor.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>High level elements that are used to divide up a project so that different people can work on the project concurrently. Work Units contain the assets within your project hierarchy as well as other Wwise elements, such as States, Effects, and SoundBanks.</p>
+            </td></tr><tr><td>
+              <p>Physical Folders</p>
+            </td><td align="center">
+              <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="15"><tr style="height: 13px"><td><img src="Images/physical_folder_icon.png" width="15"></td></tr></table></div>
+            </td><td>
+              <p>
+                High level elements into which you can group other physical folders or Work Units in a project. Physical folders cannot be child objects for containers or sounds. 
+              </p>
+            </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="adding_objects_to_actor_mixer_hierarchy"></a>Adding objects to the Containers hierarchy</h3></div></div></div><p>
+        Your starting place for creating your hierarchy is the Work Unit. You can begin creating your hierarchy directly from the Default Work Unit. 
+          Otherwise, as is often the case when working in a team, you will start adding objects to created Work Units. For more information about Work Units and source control, refer to <a class="xref" href="ch10.html" title="Working with a team"><i>Working with a team</i></a>.
+        
+      </p><p>To actually build the structure, you can do either of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Set up your project structure and then import your audio files into the structure.</p></li><li class="listitem"><p>Import your audio files and organize them into a project structure that you create afterwards.</p><p>
+            For more information on importing audio files and how they create new objects in the Containers hierarchy, refer to <a class="xref" href="ch11.html" title="Managing media files in your project"><i>Managing media files in your project</i></a>.
+          </p></li></ul></div><div class="orderedlist"><p class="title"><b>To create a child object using the Project Explorer toolbar:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Audio tab of the Project Explorer, select the Work Unit under which you want to create an object.</p><p>A series of icons become active in the Project Explorer toolbar.</p></li><li class="listitem"><p>From the list, click the icon that represents the object that you want to add.</p><p>The object is added to the Containers hierarchy under the selected Work Unit. </p></li><li class="listitem"><p>Replace the default name with one that best represents the object. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following characters may not be used when naming objects in Wwise: &#8216;:&lt;&gt;%*?&#8221;/\|.&#8217;</p></td></tr></table></div><p>You can now start adding other objects to the hierarchy. Take the time up-front to understand the relationships between objects so that you can organize them accordingly. This will save you a great deal of time later on in the project.</p></li></ol></div><div class="orderedlist"><p class="title"><b>To create a child object in the Containers hierarchy:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Audio tab of the Project Explorer, right-click the Work Unit under which you want to create an object.</p></li><li class="listitem"><p>
+            From the shortcut menu, select <span class="bold"><strong>New Child.</strong></span>
+          </p><p>The sub-menu is displayed with a list of objects that you can add. </p><p>At this level of the hierarchy, you can add any of the following objects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Virtual Folder</p></li><li class="listitem"><p>Property Container</p></li><li class="listitem"><p>Switch Container</p></li><li class="listitem"><p>Random Container</p></li><li class="listitem"><p>Sequence Container</p></li><li class="listitem"><p>Blend Container</p></li><li class="listitem"><p>Sound SFX</p></li><li class="listitem"><p>Sound Voice</p></li></ul></div></li><li class="listitem"><p>From the list, click the object that you want to add.</p><p>The object is added to the Containers hierarchy under the selected Work Unit. </p></li><li class="listitem"><p>Replace the default name with one that best represents the object. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following characters may not be used when naming objects in Wwise: &#8216;:&lt;&gt;%*?&#8221;/\|.&#8217;</p></td></tr></table></div><p>You can now start adding other objects to the hierarchy. Take the time up-front to understand the relationships between objects so that you can organize them accordingly. This will save you a great deal of time later on in the project.</p></li></ol></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Within the Project Explorer, you can quickly create parent or child objects using predefined keyboard shortcuts. By default, for example, press Shift+Alt+F to create a parent folder. Click <span class="bold"><strong>Keyboard Shortcuts&#8230;</strong></span> from the Project menu to open the Keyboard Shortcuts view to look up these and other shortcuts for your project.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="building_actor_mixer_hierarchy_adding_parent_objects"></a>Adding parent objects</h3></div></div></div><p>
+        After you have added the first object to your Work Unit you can begin adding other objects to the Containers hierarchy and create parent-child relationships between them. A parent object contains other objects, and after you create one, you can move existing objects under this new parent. The benefit of creating parent-child relationships is that you can change properties and define behaviors for the parent that will affect the child objects placed below it. For more information about properties in the Containers hierarchy, refer to <a class="xref" href="ch12s04.html" title="About properties in the project hierarchy">About properties in the project hierarchy</a>.
+      </p><div class="orderedlist"><p class="title"><b>To create a parent object using the Project Explorer toolbar:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Audio tab of the Project Explorer, select the object to which you want to add a parent object.</p></li><li class="listitem"><p>
+            Press the <span class="bold"><strong>Shift</strong></span> key to display the icons for the objects that can be added as a parent of the selected object.
+          </p></li><li class="listitem"><p>From the list, click the icon that represents the object that you want to add.</p><p>The object is added to the Containers hierarchy as the parent of the selected object. </p></li><li class="listitem"><p>Replace the default name with one that best represents the object. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following characters may not be used when naming objects in Wwise: &#8216;:&lt;&gt;%*?&#8221;/\|.&#8217;</p></td></tr></table></div></li></ol></div><div class="orderedlist"><p class="title"><b>To create a parent object:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Audio tab of the Project Explorer, right-click the object with which you want to create a parent relationship.</p></li><li class="listitem"><p>
+            From the shortcut menu, select <span class="bold"><strong>New Parent</strong></span>.
+          </p><p>A sub-menu opens with a list of objects that you can add.</p><p>Depending on the selected object's level in the hierarchy, you have the option of adding the following as new parent objects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                Switch Container
+              </p></li><li class="listitem"><p>
+                Random Container
+              </p></li><li class="listitem"><p>
+                Sequence Container
+              </p></li><li class="listitem"><p>
+                Blend Container
+              </p></li><li class="listitem"><p>
+                Virtual Folder
+              </p></li><li class="listitem"><p>Property Container</p></li></ul></div></li><li class="listitem"><p>From the list, click the object that you want to add.</p><p>The new parent object is added to the Containers hierarchy with a default name, based on its object type. </p></li><li class="listitem"><p>Replace the default name with one that best represents the object.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following characters may not be used when naming objects in Wwise: &#8216;:&lt;&gt;%*?&#8221;/\|.&#8217;</p></td></tr></table></div></li></ol></div><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Within the Project Explorer, you can quickly create parent or child objects using predefined keyboard shortcuts. By default, for example, press Shift+Alt+F to create a parent folder. Click <span class="bold"><strong>Keyboard Shortcuts&#8230;</strong></span> from the Project menu to open the Keyboard Shortcuts view to look up these and other shortcuts for your project.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="managing_objects_in_actor_mixer_hierarchy"></a>Managing objects in the Containers hierarchy</h3></div></div></div><p>In the Containers hierarchy you have access to shortcut menus and the standard Windows shortcuts for renaming, cutting, copying, and pasting objects. Keep in mind the following when you make changes to the hierarchical structure.</p><div class="itemizedlist"><p class="title"><b>Moving objects</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If you change an object's location in the hierarchy, the object will be affected by
+            its new parent's properties and behaviors.</p></li><li class="listitem"><p>If you move an object that is associated with an event, the object remains
+            associated with the Event.</p></li></ul></div><div class="itemizedlist"><p class="title"><b>Copying and pasting objects</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If you copy and paste an object in a new location, it will be affected by its new
+            parent's properties and behaviors. Its child objects will be affected as well.</p></li><li class="listitem"><p>If you copy an object that is associated with an Event, the new object will not be
+            associated with the Event.</p></li></ul></div><div class="itemizedlist"><p class="title"><b>Cutting/deleting objects</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>If you cut or delete an object, its child objects will be deleted as well.</p></li><li class="listitem"><p>The associated converted audio file is not deleted. Converted audio files that are
+            not associated with an object are called orphan files. To delete these orphan files you
+            need to clear your audio cache. For more information about deleting orphan audio files,
+            refer to <a class="xref" href="ch11s07.html" title="Clearing your cache">Clearing your cache</a>.</p></li><li class="listitem"><p>If you delete or cut an object associated with an event, this will result in a
+            missing object in the Event.</p></li></ul></div></div></div><HR></body></html>

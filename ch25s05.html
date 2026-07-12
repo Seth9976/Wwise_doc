@@ -1,0 +1,22 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effects tips and best practices</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch25.html" title="Managing Effects"><link rel="prev" href="ch25s04.html" title="Using Sidechain Mixes with Effects"><link rel="next" href="ch26.html" title="Managing motion"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch25.html">Managing Effects</a></span> &gt; <span class="breadcrumb-node">Effects tips and best practices</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="effects_tips_and_best_practices"></a>Effects tips and best practices</h2></div></div></div><p>Many options are available when you use effects in Wwise. You can use several
+			strategies to ensure that you generate the best possible sounds for the lowest amount of
+			system resources. Consider the following strategies when you are working with Effects in
+			your Wwise projects.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="effects_tips_and_best_practices_cpu_usage"></a>CPU usage</h3></div></div></div><p>Effects always consume CPU resources. In general, if you apply Effects at the
+				Busses level, you use less CPU than at other levels. For example, if you apply a
+				RoomVerb Effect on the Main Audio Bus of a game, only one instance is processed at
+				runtime. If you apply the Effect at the object level instead, hundreds of instances
+				might be processed concurrently, depending on the number of objects in your
+				project.</p><p>You can also render Effects to conserve CPU resources. Rendered Effects are
+				processed before they are packaged in SoundBanks, which means they do not require
+				processing at runtime. You cannot apply RTPCs to rendered Effects, however, because
+				the properties of these Effects cannot change after they are rendered.</p><p>Certain Effects, such as Delay and Parametric EQ, require minimal CPU. The
+				Compressor, Peak Limiter, and Expander Effects use more. For reverb, the RoomVerb
+				Effect uses a lot of CPU but produces high-quality sounds. Alternatively, you can
+				use Matrix Reverb, which you can adjust to suit your quality and performance
+				needs.</p><p>In general, the best strategy is to test your project with the game profiling
+				tools. In this way, you can observe the CPU usage of Effects in real time and decide
+				how to use those Effects. For more information about profiling, refer to <a class="xref" href="ch40s01.html" title="Understanding the different types of profiling in Wwise">Understanding the different types of profiling in Wwise</a>. </p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="effects_and_music"></a>Effects and music</h3></div></div></div><p>Avoid applying time-based Effects (such as Matrix Reverb or Delay) to music
+				objects at the object level, because the effects can interfere with time-based
+				properties and behaviors already assigned to them. To avoid this type of
+				interference, apply the time-based effects at the Busses level, that is, to an Audio
+				Bus.</p></div></div><HR></body></html>

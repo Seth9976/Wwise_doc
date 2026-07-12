@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Music Playlist Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s04s08.html" title="Music Editor"><link rel="prev" href="ch61s01s04s08s01.html" title="Music Switch Container Association Editor"><link rel="next" href="ch61s01s04s08s03.html" title="Music Segment Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04.html">Containers hierarchy: music objects</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s04s08.html">Music Editor</a></span> &gt; <span class="breadcrumb-node">Music Playlist Editor</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="music_playlist_editor"></a>Music Playlist Editor</h5></div></div></div><p>The Music Playlist Editor is where you assemble the contents of Music Playlist Containers. You can organize segments and groups into a play order within a Music Playlist Container, and then define their properties. Groups in a Playlist Container can be played randomly or in sequence, using step or continuous modes.</p><p>You must add at least one segment or group before most options in the Music
+				Playlist Editor are available. See <a class="xref" href="ch29s02.html" title="Defining the playback behavior of Music Playlist Containers">Defining the playback behavior of Music Playlist Containers</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+								<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="31"><tr style="height: 18px"><td><img src="Images/music_playlist_playing_now.png" height="18"></td></tr></table></div>
+								<p>(Play indicator)</p>
+							</td><td>
+								<p>During playback, indicates the group or segment that is currently playing.</p>
+							</td></tr><tr><td>
+		<p>Play Mode</p>
+	</td><td>
+		<p>The list of objects from the Music Playlist Container that have been arranged in a particular order for playback.</p>
+		<p>The playlist determines which objects will be played in what order when the Playlist Container is called by the game engine.</p>
+		<p>The four types of groups and segments available are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Sequence continuous</strong></span>: Plays all music objects in the group in sequential order each time the group is played.</p></li><li class="listitem"><p><span class="bold"><strong>Sequence step</strong></span>: Plays only one music object in the group each time the group is played. The next time the group is played, the next music object in the group is played.</p></li><li class="listitem"><p><span class="bold"><strong>Random continuous</strong></span>: Plays all music objects in the group one after the other in random order each time the group is played.</p></li><li class="listitem"><p><span class="bold"><strong>Random step</strong></span>: Plays only one music object in the group selected randomly each time the group is played.</p></li></ul></div>
+		<p>Default value: Sequence Continuous</p>
+	</td></tr><tr><td>
+		<p>Random type</p>
+	</td><td>
+		<p>Defines whether a group uses standard or shuffle mode.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Standard</strong></span>: Keeps the pool of objects within the container intact. After an object is played, it is not removed from the possible list of objects that can be played and can therefore be repeated.</p></li><li class="listitem"><p><span class="bold"><strong>Shuffle</strong></span>: Removes objects from the pool after they have been played. This option avoids repetition of sounds until all objects have been played. The last object played cannot be repeated when the list is reset.</p></li></ul></div>
+		<p>The option applies to Random Groups only.</p>
+		<p>Default value: Standard</p>
+	</td></tr><tr><td>
+		<p>Avoid Repeat</p>
+	</td><td>
+		<p>Determines how many other objects must be played before an object can be repeated.</p>
+		<p>The behavior of this option is affected by whether you are in Standard or Shuffle mode.</p>
+		<p>In Standard mode, the object played is selected completely randomly, but the last x objects played are excluded from the list.</p>
+		<p>In Shuffle mode, when the list is reset, the last x objects played will be excluded from the list.</p>
+		<p>If you have an unlooped Random Group that is set to shuffle and continuous, the &#8220;Limit Repetition To&#8221; option has no effect on the playback of your group.</p>
+		<p>This option applies to Random Groups only.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0 to 999</p>
+	</td></tr><tr><td>
+		<p>Weight</p>
+	</td><td>
+		<p>The probability that the object will be selected when the container is played.</p>
+		<p>This option applies to Random Groups only.</p>
+		<p>Default value: 50</p>
+		<p>Range: 0.001 to 100</p>
+	</td></tr><tr><td>
+								<p>Loop Count</p>
+							</td><td>
+								<p>The number of times the group or objects within the group will be played. The end results depend on the type of group being looped:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sequence continuous group: The loop count defines how many times the whole group will play each time the group is played.</p></li><li class="listitem"><p>Sequence step group: The loop count defines how many objects within the group that will play each time the group is played. For example, a Sequence Step group with six segments and a loop count of 2, will play segments 1 and 2 the first time the group is played, segments 3 and 4 the second time the group is played, and so on.</p><p>Random continuous group: The loop count defines how many times the whole group will play each time the group is played.</p></li><li class="listitem"><p>Random step group: The loop count defines how many objects within the group will play each time the group is played.</p></li></ul></div>
+								<p>
+                  Default value: 1<br>Range: 1 to 32,767
+								</p>
+								<p>To set the number of loops to infinite, set the number of loops to 1, then click the down arrow.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_plus_arrow.png"></div>
+								</td><td>Adds Music Segment to playlist.</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_folder_plus.png"></div>
+							</td><td>
+								<p>Creates a child group of the selected group. For information on creating, moving, and
+									deleting groups, see <a class="xref" href="ch29s02.html" title="Defining the playback behavior of Music Playlist Containers">Defining the playback behavior of Music Playlist Containers</a>.</p>
+								<div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Right-click a group to open a shortcut menu with the
+										options Cut, Copy, Paste, and Delete.</p></td></tr></table></div>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_delete_icon.png"></div>
+							</td><td>Deletes one or more Music Segments from playlist.</td></tr></tbody></table></div></div><HR></body></html>

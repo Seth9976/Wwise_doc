@@ -1,0 +1,81 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Game Sync Monitor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s11s02.html" title="Game Object 3D Viewer Keyboard Shortcuts"><link rel="next" href="ch63s13.html" title="Profiler Statistics"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Game Sync Monitor</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="game_object_profiler_game_sync_monitor"></a>Game Sync Monitor</h2></div></div></div><p>The Game Sync Monitor tracks changing RTPC values over time for Game Parameters, Modulators (i.e., LFO, Envelope, and Time) and MIDI parameters. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=soundengine_rtpc.html" target="_blank">Integration Details - RTPCs</a> for more information on setting RTPC values.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+                    <p>Filtering Toolbar</p>
+                </th></tr></thead><tbody><tr><td colspan="2" align="left">
+                    <p>This view includes a filtering toolbar, which allows you to reduce the amount of information displayed in the view so you can focus on specific elements. Refer to <a class="xref" href="ch40s07s04.html" title="Filtering in the profiling views">Filtering in the profiling views</a> for further details.</p>
+                </td></tr><tr><td colspan="2" align="center">
+                    <div class="mediaobject"><img src="Images/ProfilerFilteringToolbar.png"></div>
+                </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Unlink Filter</strong></span>: Allows you to disable synchronization between multiple filter views.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Text Filter</strong></span>: Allows you to filter content by specifying the text. The specified words are matched with the beginning of names or strings found in content. Each additional word refines the results. This match is not case sensitive. For advanced usage, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Object Filter</strong></span>: Allows you to filter content by specifying the Wwise object. The specified Wwise objects, from the project, are used to match content from the view. Additionally, object relations, such as parent-children relations and output bus relations, are also used to match content.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Browse Object Filter</strong></span>: Shows a project explorer browser to select an object to filter.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Mute/Solo Filtering</strong></span>: When enabled, the objects with Mute activated are removed from the results, and the objects with Solo activated are exclusively displayed.</p>
+                    </td></tr><tr><td align="center">
+                        <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                    </td><td>
+                        <p><span class="bold"><strong>Options</strong></span>: Displays additional actions.</p>
+                    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_display_options_arrow.png"></div>
+          </td><td>
+            <p><span class="bold"><strong>Group by Game Object</strong></span>: Groups rows that have the same content in the Name column under a single row showing the common name.</p>
+          </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+            <p>Name</p>
+          </td><td>
+            <p>Identifies the RTPC, or the game object if <span class="bold"><strong>Group by Game Object</strong></span> is selected.</p>
+          </td></tr><tr><td>
+            <p>Game Object</p>
+          </td><td>
+            <p>Identifies the game object associated with the RTPC value, for example, the game object specified in <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_ab0e4ddefe5ea550b2f356edaa5a49a26.html" target="_blank"> <code class="code">AK::SoundEngine::SetRTPCValue</code></a>.</p>
+          </td></tr><tr><td>
+            <p>Playing ID</p>
+          </td><td>
+            <p>Identifies the playing ID associated with the RTPC value. This field is populated for RTPC values set by calling <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a7caeef1dde89425615aa37085469015a.html" target="_blank">
+                <code class="code">AK::SoundEngine::SetRTPCValueByPlayingID</code></a>, or for modulators with scope "Voice" on MIDI targets. Refer to <a class="xref" href="ch61s05s04.html" title="Modulator Editor">Modulator Editor</a> for more information on modulator scopes.</p>
+          </td></tr><tr><td>
+            <p>MIDI Target</p>
+          </td><td>
+            <p>Identifies the target node in the Containers hierarchy to which the associated MIDI Event was routed. This field is populated for RTPC values specific to a MIDI target. For example, MIDI parameters (note, velocity, and frequency) or modulators on MIDI targets. Refer to <a class="xref" href="ch31.html#understanding_midi_content_and_midi_target" title="Understanding MIDI content and MIDI target">Understanding MIDI content and MIDI target</a> and <a class="xref" href="ch61s01s04s05s04.html" title="MIDI category: music objects">MIDI category: music objects</a> for more information on MIDI targets.</p>
+          </td></tr><tr><td>
+            <p>Pipeline ID</p>
+          </td><td>
+            <p>Identifies the specific voice or bus instance to which the RTPC value applies.
+              This field is populated, for example, for MIDI targets with modulators on the "Note or
+              Event" scope. The Pipeline ID corresponds to the Target ID or Sound ID shown in the
+              Voice Explorer and the Voice Inspector. The shortcut menu on this column can be used to
+              show the corresponding item in the Voice Explorer or Voice Inspector. Refer to <a class="xref" href="ch63s10.html" title="Voice Explorer">Voice Explorer</a> for more information on that view.</p>
+          </td></tr><tr><td>
+            <p>Value</p>
+          </td><td>
+            <p>Shows the current value of the RTPC.</p>
+          </td></tr></tbody></table></div></div><HR></body></html>

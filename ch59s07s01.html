@@ -1,0 +1,86 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>3D Meter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59s07.html" title="Meter"><link rel="prev" href="ch59s07.html" title="Meter"><link rel="next" href="ch59s08.html" title="Contextual Help"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch59s07.html">Meter</a></span> &gt; <span class="breadcrumb-node">3D Meter</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="meter_3d"></a>3D Meter</h3></div></div></div><p>The 3D Meter mode provides a 3D spherical representation of the directionality of an ambisonic signal. It calculates the Peak level at every position on the sphere. A heatmap representation is then generated from each of the positions on the sphere. The 3D meter mode is currently only available on busses that have an ambisonics bus configuration. During the decoding process, gain factors are applied to each channel in the ambisonic signal, resulting in meter levels that are very specific to the target speaker configuration. For this reason, the 3D meter mode is primarily designed for monitoring directionality rather than level.</p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="context_menu"></a>Panels and Shortcut Menu</h4></div></div></div><p>
+        The 3D Meter provides four individual panels that can be used to view the meter from different viewpoints. The viewpoint in each panel can be changed. To do this, right-click anywhere within a panel and open the "Viewpoint" submenu. To reset a viewpoint to its default orientation and zoom level, right-click and select <span class="bold"><strong>Reset Viewpoint</strong></span>.
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="interaction"></a>Interaction</h4></div></div></div><p>
+        It is possible to zoom in and out on each panel using the mouse wheel. When the perspective viewpoint is selected, the view can also be rotated by clicking and dragging the left mouse button. 
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="local_bus_space"></a>Local bus space</h4></div></div></div><p>
+        The meter displays the directionality from the point of view of the bus. The local bus space is indicated using axes labels around the perimeter of the sphere (front/back, top/bottom, and left/right). The directional data on the meter depends on the positions of emitters that are routed through the bus, and their listeners. For example, consider an emitter source that has two listeners and is positioned directly between them on the horizontal plane. In this case, the 3D Meter would show directional data coming from both left and right. 
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="positioning_busses"></a>Positioning busses</h4></div></div></div><p>
+        Any positioning that is applied directly to the bus itself will not affect the meter, since this positioning is applied after the incoming sources are mixed into the bus. To observe the effect of positioning applied to a bus, the meter of the parent bus should be used.
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="spatial_resolution"></a>Spatial resolution</h4></div></div></div><p>
+        When decoding an ambisonics signal, the spatial resolution depends on both the ambisonics order and the target speaker setup. Therefore, there may be inconsistencies between what is shown on the meter and the actual result you hear from your speaker setup.
+			</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="meter_settings_3d"></a>3D Meter Settings</h4></div></div></div><p>
+        There are various configurable settings for the 3D Meter, accessible from the Meter Settings dialog.
+			</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Meter Options</strong></span></p>
+							</td></tr><tr><td>
+								<p>Meter Minimum</p>
+							</td><td>
+								<p>Determines the minimum value shown for the Meter.</p>
+								<p>Default value: -72</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>3D Meter Options</strong></span></p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Smoothing Options</strong></span></p>
+							</td></tr><tr><td>
+								<p>Release</p>
+							</td><td>
+								<p>The time it takes for the output value to fall by 10 dB when the monitored level is below the current output value.</p>
+								<p>Default value: 0.1</p>
+								<p>Range: 0.05 to 10</p>
+								<p>Units: s</p>
+							</td></tr><tr><td colspan="2">
+								<p><span class="bold"><strong>Color Mappings</strong></span></p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Black - Blue</p>
+							</td><td>
+								<p>Volume level above which the meter color will transition from black to blue.</p>
+								<p>Default value: -20</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Blue - Green</p>
+							</td><td>
+								<p>Volume level above which the meter color will transition from blue to green.</p>
+								<p>Default value: -16</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Green - Yellow</p>
+							</td><td>
+								<p>Volume level above which the meter color will transition from green to yellow.</p>
+								<p>Default value: -12</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Yellow - Orange</p>
+							</td><td>
+								<p>Volume level above which the meter color will transition from yellow to orange.</p>
+								<p>Default value: -8</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Orange - Red</p>
+							</td><td>
+								<p>Volume level above which the meter color will transition from orange to red.</p>
+								<p>Default value: -4</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr><tr><td>
+								<p>Volume Mapping: Red</p>
+							</td><td>
+								<p>Volume level above which the meter color will be red.</p>
+								<p>Default value: 0</p>
+								<p>Range: -96 to 0</p>
+								<p>Units: dB</p>
+							</td></tr></tbody></table></div></div></div><HR></body></html>

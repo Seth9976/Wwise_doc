@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Paste Properties</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s10.html" title="Transport Control"><link rel="next" href="ch60.html" title="Edit, Windows, and Help"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Paste Properties</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="paste_properties_reference"></a>Paste Properties</h2></div></div></div><p>Through the Paste Properties view, you can copy various properties from an object to one
+      or more other objects. For example, you might need to manage a large collection objects of the
+      same type and want to ensure that many or all of the objects have the same settings, or that
+      they use the same list of RTPCs. The Paste Properties view provides an efficient way to manage
+      this type of data across objects.</p><p>For more information about the Paste Properties view and how to use it, refer to <a class="xref" href="ch56.html" title="Copying and pasting object properties"><i>Copying and pasting object properties</i></a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" align="left" class="c1"><col width="720px" align="left" class="c2"></colgroup><thead><tr><th align="left">
+		<p>Interface Element</p>
+	</th><th align="left">
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="left">Copy from Object</td><td align="left">Contains the source object whose properties will be copied and pasted to one or
+              more target objects. To select a source object, you can drag an object to this
+              selection box from the Project Explorer or use the buttons to the right (Follow
+              Clipboard, Browse for Source Objects, and Select a Recent Paste).</td></tr><tr><td align="left">Paste to Object(s)</td><td align="left">Contains one or more target objects. You can drag objects here from the Project
+              Explorer or use the Follow Selection button to the right.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_follow_clipboard.png"></div>
+            </td><td align="left">When selected, sets any object copied to the clipboard as the source
+              object.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_follow_selection.png"></div>
+            </td><td align="left">When selected, sets any object or objects you click in the Project Explorer as
+              the target object.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_browse_source_objects.png"></div>
+            </td><td align="left">Opens the Project Explorer Browser, from which you can select a source
+              object.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_select_recent_paste.png"></div>
+            </td><td align="left">Opens a list of the 15 most recent paste operations. You can select one of them
+              to view the source and target objects, the Property Filter button state, the Paste
+              Mode that was used, and which check boxes were selected or cleared.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_property_filter.png"></div>
+            </td><td align="left">Turns the Property Filter on or off. When selected, the two object comparison
+              panes only display objects that will change if you click <span class="bold"><strong>Paste</strong></span>. </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td align="left">
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="left">Properties</td><td align="left">Displays the object properties within their corresponding hierarchies. As with
+              other hierarchical views, you can expand and collapse parents to show or hide child
+              elements. If the Property Filter is enabled, only Properties with values that differ
+              from the corresponding values in the target objects are visible. RTPC and State icons
+              are not displayed.</td></tr><tr><td align="left">Source Value</td><td align="left">Displays the value of the Property in the source object. All values are
+              read-only.</td></tr><tr><td align="left">Target Value(s)</td><td align="left">Displays the value of the Property in the target object. If there are multiple
+              target objects with different values, a dash is displayed. If no target supports the
+              Property and the Property Filter is disabled, the value is blank. All values are
+              read-only.</td></tr><tr><td align="left">Objs Changed on Paste</td><td align="left">Displays the number of target objects that will change when you click <span class="bold"><strong>Paste</strong></span>. If there are multiple target objects, you can
+              right-click the number and then click <span class="bold"><strong>Show Changed in List
+                View</strong></span> for a list of the affected objects. If no target supports the
+              Property and the Property Filter is disabled, nothing is displayed.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/icn_partial_expand.png"></div>
+            </td><td align="left">Indicates that the list of properties is only partially visible, and that only
+              the properties in the source that have different values from those in the target are
+              displayed. These arrows are only visible if the Property Filter is turned on. To view
+              the full list of properties, you can click an arrow to display the full list of
+              properties in that section, at which point the icon becomes a regular gray expansion
+              arrow. Alternatively, you can turn off the Property Filter to view all properties in
+              all sections.</td></tr><tr><td align="left">Paste Mode</td><td align="left">
+              <p>Determines how the target objects are affected when you paste List Elements to them. There are three options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Replace Entire List</strong></span>. Completely removes the
+                    target object List Elements and copies the selected List Elements from the
+                    source to the targets.</p></li><li class="listitem"><p><span class="bold"><strong>Add New, Replace Existing</strong></span>. Pastes all List
+                    Elements from the source to the targets and replaces any List Elements that are
+                    already present in the targets, but does not remove any extra List Elements from
+                    the targets.</p></li><li class="listitem"><p><span class="bold"><strong>Add New, Keep Existing</strong></span>. Pastes any List
+                    Elements that exist in the source and not the targets, but does not replace or
+                    remove any List Elements that exist in the targets already.</p></li></ul></div>
+            </td></tr><tr><td align="left">List Element</td><td align="left">
+              <p>Displays the List Elements that will be copied from the source to the target objects. There are four possible Lists:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Metadata</p></li><li class="listitem"><p>RTPCs</p></li><li class="listitem"><p>Stingers</p></li><li class="listitem"><p>Music Cues</p></li></ul></div>
+            </td></tr><tr><td align="left">Objs with Added</td><td align="left">Displays the number of target objects that will receive new list elements when
+              you click <span class="bold"><strong>Paste</strong></span>. If there are multiple target
+              objects, you can right-click the number and then click <span class="bold"><strong>Show
+                Changed in List View</strong></span> for a list of the affected objects.</td></tr><tr><td align="left">Objs with Replaced</td><td align="left">Displays the number of target objects that contain list elements that will be
+              replaced when you click <span class="bold"><strong>Paste</strong></span>. If there are multiple
+              target objects, you can right-click the number and then click <span class="bold"><strong>Show Changed in List View</strong></span> for a list of the affected objects.</td></tr><tr><td align="left">Objs with Removed</td><td align="left">Displays the number of target objects that contain list elements that will be
+              removed when you click <span class="bold"><strong>Paste</strong></span>. If there are multiple
+              target objects, you can right-click the number and then click <span class="bold"><strong>Show Changed in List View</strong></span> for a list of the affected objects.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_select_all.png"></div>
+            </td><td align="left">Selects all check boxes in both the Properties and List Elements areas.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_select_none.png"></div>
+            </td><td align="left">Clears all check boxes in both the Properties and List Elements areas.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_paste.png"></div>
+            </td><td align="left">Pastes Properties and List Elements from the source to the targets.</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch56.html" title="Copying and pasting object properties"><i>Copying and pasting object properties</i></a></p></li><li class="listitem"><p><a class="xref" href="ch56.html#paste_properties_paste" title="Pasting object properties">Pasting object properties</a></p></li></ul></div></div><HR></body></html>

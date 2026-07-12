@@ -1,0 +1,191 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Managing platforms</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt02.html" title="Setting up your projects"><link rel="prev" href="ch07s06.html" title="Project management tips and best practices"><link rel="next" href="ch09.html" title="Managing languages"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-node">Managing platforms</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="managing_platforms"></a>Managing platforms</h2></div></div></div><p>A game is often released for multiple platforms. You can specify the target platforms
+    using the Platform Manager in Wwise. You can also use the Platform Manager to specify volume
+    thresholds and max voice instances for each platform.</p><p>In the Wwise menu bar, select <span class="bold"><strong>Project &gt; Platform
+      Manager</strong></span>.</p><p>A platform consists of a platform name and a base SDK. You can specify as many platforms
+    as desired for any listed SDK.</p><p>Wwise includes a list of base platforms which cover the primary SDKs used with Wwise, and
+    you are free to create your platforms according to all the base platforms pertinent to your
+    project. Additionally, you might want to add multiple platforms with the same base platform to
+    accommodate differences. For example, you may have both iPhone and iPad platforms to develop in
+    your project. They're not exactly the same even though they're fundamentally iOS platforms. To
+    facilitate your management of these distinct project types, you could create two iOS-based
+    platforms: one specific to iPad and another specific to iPhone.</p><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="projects_platform_manager"></a>Platform Manager dialog</h2></div></div></div><p>Use the Platform Manager dialog to define the project's platforms.</p><p>The Platform Manager queues all requested platform actions (Add/Remove/Rename). Click
+        <span class="bold"><strong>OK</strong></span> to execute all pending platform actions.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>After you click <span class="bold"><strong>OK</strong></span>, Wwise saves and then reloads the
+        project.</p></td></tr></table></div><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="550"><tr><td><img src="Images/Platform_manager.png" width="550"></td></tr></table></div><p>The following table describes the interface elements in the Platform Manager
+      dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+              <p>Platform</p>
+            </td><td>
+              <p>The unique alphanumeric name of the defined platform.</p>
+            </td></tr><tr><td>
+              <p>Base Platform</p>
+            </td><td>
+              <p>The platform's SDK.</p>
+            </td></tr><tr><td>
+              <p>Pending Actions</p>
+            </td><td>
+              <p>Actions, such as <span class="bold"><strong>Add</strong></span> or <span class="bold"><strong>Copy Settings</strong></span> for the specified platform that you complete by clicking
+                  <span class="bold"><strong>OK</strong></span>.</p>
+            </td></tr><tr><td>
+		<p>Volume Threshold</p>
+	</td><td>
+		<p>The default volume level below which a voice will be managed by behaviors defined in the Advanced Settings tab of the Property Editor. For example, voices that fall below the volume threshold can do any of the following:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Continue to play</p></li><li class="listitem"><p>Be killed</p></li><li class="listitem"><p>Sent to the virtual voice list</p></li></ul></div>
+		<p>This value can be overridden by using the Wwise SDK API.</p>
+		<p><span class="bold"><strong>Note</strong></span>: Even if it continues to play or becomes virtual, the voice will be inaudible while it&#8217;s still below the volume threshold. <span class="bold"><strong>Note</strong></span>: The default slider range is from -96 to 0. You can go over those limits by entering the value directly, or by rolling the mouse while the focus is on the edit control.</p>
+		<p>
+			For more information, see 
+			<a class="link" href="ch08.html#specifying_volume_thresholds_for_project" title="Specifying volume thresholds for a platform">Specifying volume thresholds for a project</a>
+			.
+		</p>
+		<p>Default value: -80</p>
+		<p>Range: -96 to 0</p>
+	</td></tr><tr><td>
+              <p>Max Voice Instances</p>
+            </td><td>
+              <p>The maximum number of simultaneous voices that can be active at the same time in
+                the project. Virtual voices don't count as active voices. Over this limit, voices
+                with the lowest priority adopt their virtual behavior. If priorities are equal,
+                older sounds have a higher priority. Each sound can override its own virtual
+                behavior, which can be: </p>
+              <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Continue to play</p></li><li class="listitem"><p>Be killed</p></li><li class="listitem"><p>Send to virtual voice</p></li></ul></div>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Maximum number of voice instances might not be respected if you set the
+                  virtual behavior on some sounds to <span class="bold"><strong>Continue to
+                    play</strong></span>. To have this limit respected, you must set the virtual behavior
+                  of playing voices to <span class="bold"><strong>Kill voice</strong></span> or <span class="bold"><strong>Send to Virtual voice</strong></span>.</p></td></tr></table></div>
+              <p>You can override this value using the Wwise SDK API.</p>
+              <p>See <a class="xref" href="ch08.html#specifying_max_voice_instances" title="Specifying max voice instances">Specifying max voice instances</a>.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_add_dots.png"></div>
+            </td><td>
+              <p>Click to open the Add Platform dialog to add a platform to the <span class="bold"><strong>Platforms</strong></span> list.</p>
+              <p>See <a class="xref" href="ch08.html#adding_platforms" title="Adding platforms">Adding platforms</a>.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_remove.png"></div>
+            </td><td>
+              <p>Click to remove the selected platform. If the platform was a recently added and
+                has the pending Add action, it's removed from the Platform list. Otherwise, the
+                platform still has the pending Remove action and you must click <span class="bold"><strong>OK</strong></span> to remove it from your project.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_rename_dots.png"></div>
+            </td><td>
+              <p>Click to rename the selected platform. The new platform name must be unique
+                among all platforms, and consist only of alphanumeric characters.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_copy_settings_dots.png"></div>
+            </td><td>
+              <p>Click copy one platform's settings to another using the Copy Platform Settings
+                dialog. </p>
+              <p>See <a class="xref" href="ch08.html#copying_platform_settings" title="Copying platform settings">Copying platform settings</a>.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_ok.png"></div>
+            </td><td>
+              <p>Click to close the Platform Manager dialog. All pending actions are performed.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>After you click <span class="bold"><strong>OK</strong></span>, Wwise saves and then
+                    reloads the project.</p></td></tr></table></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+            </td><td>
+              <p>Click to close the Platform Manager dialog without making any changes to your
+                project.</p>
+            </td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="adding_platforms"></a>Adding platforms</h2></div></div></div><p>The following table describes the interface elements in the Add Platform dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>Base Platform</p>
+            </td><td>
+              <p>The SDK for the platform, selected from a comprehensive list of SDKs that can
+                you can use with Wwise.</p>
+            </td></tr><tr><td>
+              <p>Override Default Name</p>
+            </td><td>
+              <p>The unique alphanumeric name given to the new platform. Using the default name
+                is strongly recommended because third-party Wwise integrations might reference that
+                platform name.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can use underscores but not spaces when you rename a platform.</p></td></tr></table></div>
+            </td></tr><tr><td>
+              <p>Copy Settings</p>
+            </td><td>
+              <p>If enabled, the new platform inherits settings from the selected platform. You
+                can only copy settings from an existing platform. For more details, see <a class="xref" href="ch36s01.html#list_settings_copied_over" title="Platform-specific settings that are copied over from the source to the target platform:">Platform-specific settings that are copied over from the source to the target platform:</a>.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_ok.png"></div>
+            </td><td>
+              <p>Click to close the Add Platform dialog. The platform is added to the <span class="bold"><strong>Platforms</strong></span> list of the Platform Manager with a pending Add
+                action. </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+            </td><td>
+              <p>Click to close the Add Platform dialog without making any changes to your
+                project.</p>
+            </td></tr></tbody></table></div><p><span class="bold"><strong>To add a platform:</strong></span></p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the Platform Manager, click <span class="bold"><strong>Add</strong></span>.</p><p>The Add Platform dialog appears.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If a platform is highlighted in the Platform Manager when you click <span class="bold"><strong>Add</strong></span>, the fields are populated with that platform's default
+            information.</p></td></tr></table></div></li><li class="listitem"><p>Select a <span class="bold"><strong>Base Platform</strong></span> from the list of SDKs.</p></li><li class="listitem"><p>To specify a new name for the Platform, select <span class="bold"><strong>Override Default
+            Name</strong></span> and then enter the new name. It must be alphanumeric (no spaces, but
+          underscores are accepted) and unique among all defined platform names.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Avoid overriding the default name as third-party Wwise plug-ins may reference
+            it.</p></td></tr></table></div></li><li class="listitem"><p>Optionally, copy the settings from an existing platform by enabling the <span class="bold"><strong>Copy settings from</strong></span> check box and then selecting the desired
+          platform.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to confirm the new platform information and
+          close the Add Platform dialog.</p><p>The new platform name, base platform, and pending Add action appear in their
+          respective columns in the row containing the new platform.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>To remove this platform instantly, click <span class="bold"><strong>Remove</strong></span>.</p></td></tr></table></div></li><li class="listitem"><p>Adjust the volume threshold or max voice instances for your platform if desired. See
+            <a class="xref" href="ch08.html#specifying_volume_thresholds_for_project" title="Specifying volume thresholds for a platform">Specifying volume thresholds for a platform</a>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to add the new platform to your
+          project.</p><p>A warning appears explaining that these platform changes can't be undone.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Yes</strong></span> to proceed with the pending action.</p><p>Another warning appears to remind you to verify the platform changes, especially in
+          path names, after the project reloads.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to reload the project.</p><p>The project closes and reloads with the new platform settings. Depending on the size
+          of your project, this may take a few seconds.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="copying_platform_settings"></a>Copying platform settings</h2></div></div></div><p>Use the Copy Platform Settings dialog to copy the settings from one platform to another.
+      This is typically used when adding a new platform to your project. This could save you a lot
+      of time if most of the settings from the source platform are the same as the destination
+      platform you are adding.</p><p>The following table describes the interface elements in the Copy Platform Settings
+      dialog.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+              <p>From</p>
+            </td><td>
+              <p>The platform containing the settings you want to copy. You can only copy the
+                settings from a platform that existed before you opened the Platform Manager. In
+                other words, you can't copy the settings from a platform that has a pending Add
+                action. </p>
+            </td></tr><tr><td>
+              <p>To</p>
+            </td><td>
+              <p>The platform to which you want to copy the settings. This might be either a
+                newly added platform&#8212;meaning a platform that didn't exist before you opened the
+                Platform Manager&#8212;or an existing platform that isn't the source of a settings
+                copy.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_ok.png"></div>
+            </td><td>
+              <p>Closes the Copy Platform Settings dialog and adds the <span class="bold"><strong>Copy
+                  settings from &lt;name of platform&gt;</strong></span> action to the platform.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+            </td><td>
+              <p>Closes the Copy Platform Settings dialog without making any changes to your
+                project.</p>
+            </td></tr></tbody></table></div><p><span class="bold"><strong>To copy platform settings:</strong></span></p><div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p>This operation can't be undone, and it clears the Wwise-related contents on your
+        clipboard and your Undo history. Be sure to have an up-to-date backup of your project in
+        case you decide to revert these changes later.</p></td></tr></table></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the Platform Manager, click <span class="bold"><strong>Copy settings</strong></span>.</p><p>The Copy Platform Settings dialog appears.</p></li><li class="listitem"><p>Select the source platform in the <span class="bold"><strong>From</strong></span> list.</p></li><li class="listitem"><p>Select the destination platform in the <span class="bold"><strong>To</strong></span>
+          list.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to commit the newly added platforms.</p><p>A warning appears explaining that these platform changes can't be undone.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Yes</strong></span> to proceed with the pending actions.</p><p>Another warning appears to remind you to verify the platform changes, especially in
+          path names, after the project reloads.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to reload the project.</p><p>The project closes and reloads with the new <a class="xref" href="ch36s01.html#list_settings_copied_over" title="Platform-specific settings that are copied over from the source to the target platform:">Platform-specific settings that are copied over from the source to the target platform:</a>. Depending on the size of your project, this may take a few seconds.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="removing_platform"></a>Removing platforms</h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>In the Platform Manager, select the platform you want to remove.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Remove</strong></span>.</p><p>The Remove action appears in the Pending Actions column for the platform.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>To cancel the Remove action, you can close the Platform Manager or click <span class="bold"><strong>Cancel</strong></span>.</p></td></tr></table></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to activate the removal of the selected
+          platforms.</p><p>A warning appears explaining that these platform changes can't be undone.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Yes</strong></span> to proceed with the pending action.</p><p>Another warning appears to remind you to verify the platform changes, especially in
+          path names, after the project reloads.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to reload the project.</p><p>The project closes and reloads with the new platform settings. Depending on the size
+          of your project, this may take a few seconds.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="specifying_volume_thresholds_for_project"></a>Specifying volume thresholds for a platform</h2></div></div></div><p>The Volume Threshold refers to the point below which a voice will be managed by behaviors
+      defined in the Advanced category of the Property Editor. You can specify a default volume
+      threshold in your project in the Platform Manager dialog. This value will be used if the
+      Volume Threshold is not specifically set using the Wwise API. For more information on managing
+      low level sounds and motion objects and defining the object's behavior when it reaches the
+      volume threshold, refer to <a class="xref" href="ch24s04.html" title="Managing low-volume objects">Managing low-volume objects</a>. </p><p>Use the following step list to define the volume thresholds for a platform.</p><div class="orderedlist"><p class="title"><b>To define the volume thresholds for a platform:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Platform Manager dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Platform Manager</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+Alt+P</strong></span>.</p></li></ul></div></li><li class="listitem"><p>For each platform, specify the point at which the sound will be managed by the
+          behaviors defined in the Advanced category of the Property Editor.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This default value will be used if no Volume Threshold setting is specified using
+            the Wwise API.</p></td></tr></table></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and to close the
+          Platform Manager dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="specifying_max_voice_instances"></a>Specifying max voice instances</h2></div></div></div><p>Much like specifying the platform's volume thresholds, within a project there is a
+      specified limit of voice instances that can play at one time. If the project exceeds this
+      specified value of voice instances, then it reverts to the Advanced Settings of the playing
+      objects as defined in the Property Editor. </p><p>Wwise decides which voices to keep according to which objects have the highest priority.
+      So, those with the lowest priority that are in excess of the number of virtual voices will be
+      virtualized or killed. </p></div></div><HR></body></html>

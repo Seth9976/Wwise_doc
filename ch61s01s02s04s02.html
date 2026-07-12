@@ -1,0 +1,143 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effects tab: busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s02s04.html" title="Common tabs and categories: Busses hierarchy objects"><link rel="prev" href="ch61s01s02s04s01.html" title="Audio Bus tab and Auxiliary Bus tab: busses"><link rel="next" href="ch61s01s02s04s03.html" title="States tab: busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02.html">Busses hierarchy</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02s04.html">Common tabs and categories: Busses hierarchy objects</a></span> &gt; <span class="breadcrumb-node">Effects tab: busses</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="effects_tab_audio_bus"></a>Effects tab: busses</h5></div></div></div><p>In the Effects tab for busses, you can apply up to 255 different Effects to an Audio or Auxiliary Bus. When Effects are applied to a channel-based bus, all incoming audio data is submixed before the Effect chain is applied. The Effects are applied in the same order as they appear in the list.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>In the case of an Effect inserted on an Audio Objects bus, whether or not the incoming data is submixed before processing depends on the particular Effect used. Refer to <a class="xref" href="ch25s01.html" title="Using Effects with Audio Objects">Using Effects with Audio Objects</a> for further details.</p></td></tr></table></div><p>When applying Effects in Wwise, keep in mind that a voice can go through the following four levels of Effects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Up to 255 Effects can be applied on the voice in the Containers hierarchy. But, keep in mind that child objects can also override their parent objects' Effects.</p></li><li class="listitem"><p>Up to 255 Effects can be applied to each Audio Bus and Auxiliary Bus in the bus hierarchy output path.</p></li><li class="listitem"><p>Up to 255 Effects can be applied on the final main bus (the Main Audio or the Main Secondary Bus).</p></li><li class="listitem"><p>Up to 255 Effects can be applied to Audio Devices.</p></li></ul></div><p>This means that a chain of potentially many Effects will be applied to the final output. You can do a couple of things to manage these Effects:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Use the Mode option to set the Effect as a ShareSet, through which you can adjust multiple instances of the same Effect simultaneously. You can also set the Mode to Custom to apply specific settings to an individual Effect instance, as needed.</p></li><li class="listitem"><p>Select the Bypass check box to temporarily remove the Effect, and clear the check box to restore the Effect as desired. This is useful in testing, when you want to establish the impact of the Effect. You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to remove Effects for certain game scenarios or Events.</p></li></ul></div><p>Unlike Effects on objects in the Containers hierarchy, Effects on busses cannot be rendered.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>For information on the Effects tab of objects in the Containers hierarchy, see <a class="xref" href="ch61s01s05s08.html" title="Effects tab: Containers hierarchy objects">Effects tab: Containers hierarchy objects</a>. </p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                  <p>Effects</p>
+                </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td colspan="2">
+                  <p><span class="bold"><strong>Effects</strong></span></p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+                  <p>(Selector)</p>
+                </td><td>
+                <p>Opens the list of Effects and corresponding instances that can be applied to the object. If you select an Effect, it replaces the Effect that previously occupied the slot.</p>
+                <p>To remove an Effect, select the <span class="bold"><strong>None</strong></span> option.</p>
+              </td></tr><tr><td>
+                  <p>ID</p>
+                </td><td>
+                  <p>The identification number assigned to the Effect.</p>
+                </td></tr><tr><td>
+                  <p>Effect</p>
+                </td><td>
+                  <p>The type of Effect applied to the bus, for example, Compressor, Matrix Reverb, or Parametric EQ.</p>
+                </td></tr><tr><td>
+                  <p>Name</p>
+                </td><td>
+                  <p>The name of the Effect instance applied to the bus. The Effect instance can be a ShareSet or a custom instance of a ShareSet.</p>
+                  <p>All Effect instances for the selected Effect type will appear in the corresponding list.</p>
+                </td></tr><tr><td align="center">
+                <p>Prev.</p>
+                <div class="mediaobject"><img src="Images/btn_previous.png"></div>
+              </td><td>
+                  <p>Selects the previous ShareSet in the Effects hierarchy.</p>
+                </td></tr><tr><td align="center">
+                <p>Next</p>
+                <div class="mediaobject"><img src="Images/btn_next.png"></div>
+              </td><td>
+                  <p>Selects the next ShareSet in the Effects hierarchy.</p>
+                </td></tr><tr><td>
+                  <p>Mode</p>
+                </td><td>
+                  <p>Determines whether the Effect instance is shared. The mode can either be:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> <span class="bold"><strong>Define custom</strong></span>: Creates a custom Effect instance whose properties are not shared between objects. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Use ShareSets</strong></span>: Uses a ShareSet of an Effect, which means that Effect properties can be shared between objects. </p></li></ul></div>
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you add a custom Effect, then change the <span class="bold"><strong>Mode</strong></span> to <span class="bold"><strong>Use ShareSets</strong></span>, the Create ShareSet from Custom Object alert dialog opens. There are three options: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> <span class="bold"><strong>Convert</strong></span>: Opens the New Effect dialog, in which you can create a new ShareSet with the specified Effect Settings. </p></li><li class="listitem"><p> <span class="bold"><strong>Revert</strong></span>: Clears the Effect Editor and reverts the Effect to the original settings of the ShareSet. </p></li><li class="listitem"><p> <span class="bold"><strong>Cancel</strong></span>: Returns to the unaltered Effect Editor with the Mode restored to Define custom. </p></li></ul></div></td></tr></table></div>
+                </td></tr><tr><td>
+		<p>Bypass</p>
+	</td><td>
+		<p>Determines whether the selected Effect instance is processed or not. Select the check box to remove the Effect. Clear the check box to restore the Effect.</p>
+		<p>This option is useful in the following scenarios:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When profiling your game, you can toggle this option on and off to establish the impact of an Effect on the sound design and on CPU usage as indicated in the Performance Monitor.</p></li><li class="listitem"><p>When customizing your sound design per platform, you can unlink the Effects on an object and then bypass certain Effects on that object for platforms with less processing power.</p></li></ul></div>
+		<p>You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to remove Effects for certain game scenarios or Events.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td align="center">
+                <p>Edit</p>
+                <div class="mediaobject"><img src="Images/btn_popout_editor.png"></div>
+              </td><td>
+                <p>Opens the <a class="xref" href="ch61s05s01.html" title="Effect Plug-in Editor">Effect Plug-in Editor</a> where you can edit the properties of the selected Effect instance in real time.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_plus_arrow.png"></div>
+              </td><td>
+                <p>Opens the list of Effects and corresponding instances that can be applied to the bus. Select an Effect to add it to the next available slot at the bottom of the Effects list.</p>
+                <p>After adding an Effect, you can select and drag it up or down in the list. Use the Ctrl or Shift keys to select and drag multiple Effects.</p>
+                <p>You can also add Effects to the list by dragging ShareSets from the Project Explorer ShareSets tab, or by right-clicking an Effect in the list and selecting <span class="bold"><strong>Add Effect</strong></span>. In this case, the new Effect is inserted in the current slot and all subsequent Effects are shifted down the list by one slot.</p>
+              </td></tr><tr><td align="center">
+                <div class="mediaobject"><img src="Images/btn_delete_icon.png"></div>
+              </td><td>
+                <p>Deletes any Effects that are selected in the Effects list. You can select multiple Effects using the Ctrl or Shift keys.</p>
+              </td></tr><tr><td>
+                <p>(Location in Hierarchy)</p>
+              </td><td>
+                <p>Displays the location of the ShareSet in the Effects hierarchy. If it is a custom instance of the Effect, it shows the name of the custom instance.</p>
+              </td></tr><tr><td>
+		<p>Bypass All</p>
+	</td><td>
+		<p>Determines whether all Effects inserted on the object are processed or not. Select the check box to remove all Effects. Clear the check box to restore the Effects.</p>
+		<p>This option is useful in the following scenarios:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When profiling your game, you can toggle this option on and off to establish the impact of the Effects on the sound design and on CPU usage as indicated in the Performance Monitor.</p></li><li class="listitem"><p>When customizing your sound design per platform, you can unlink the Effects for an object and then bypass all Effects on that object for platforms with less processing power.</p></li></ul></div>
+		<p>You can also use Bypass options in RTPCs or Bypass Effect Actions in Events to remove Effects for certain game scenarios or Events.</p>
+		<p>Default value: false</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch25.html#applying_an_effect_shareset_to_an_object" title="Applying Effect ShareSets to Wwise objects">Applying Effect ShareSets to Wwise objects</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch25.html#converting_effect_sharesets_into_custom_instances" title="Converting Effect ShareSets into custom instances">Converting Effect ShareSets into custom instances</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch25.html#editing_effect_properties" title="Editing Effect properties">Editing Effect properties</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch25.html#bypassing_an_effect" title="Bypassing Effects">Bypassing Effects</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch25.html#rendering_effects" title="Rendering Effects">Rendering Effects</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch25.html#re_ordering_effects" title="Re-ordering Effects">Re-ordering Effects</a>
+            </p></li></ul></div></div><HR></body></html>

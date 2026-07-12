@@ -1,0 +1,89 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Multi Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s12.html" title="Searches and Project-wide Editing"><link rel="prev" href="ch61s12s02.html" title="List View"><link rel="next" href="ch61s12s04.html" title="Schematic View"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s12.html">Searches and Project-wide Editing</a></span> &gt; <span class="breadcrumb-node">Multi Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="multi_editor_multi_editor"></a>Multi Editor</h3></div></div></div><p>The Multi Editor is where you can define and modify properties for several objects at once. This can be very useful when, for example, you want to route several containers through a particular bus, or you want to modify the volume for a large selection of objects and busses. You can do this quickly and easily in the Multi Editor.
+		</p><p>You can open the Multi Editor directly from the Views menu, and then select objects to edit. Alternatively, you can select the objects that you want to edit, then right-click and select <span class="bold"><strong>Show in Multi Editor</strong></span> from the shortcut menu to open the Multi Editor.
+		</p><p>The selected objects are loaded into the view. If it is just one object, its Name appears in
+			the upper left tab. Otherwise, the tab displays a count of the selected objects.
+			Although you can freely work elsewhere in the project without closing the view, note
+			that the Multi Editor will reload with whatever items you select in other views.</p><p>
+        You can use the Multi Editor to modify almost any property of any Wwise object. Essentially, only an object's <span class="bold"><strong>Mute</strong></span>, <span class="bold"><strong>Solo</strong></span>, <span class="bold"><strong>Name</strong></span>, and <span class="bold"><strong>Notes</strong></span> properties are unavailable for edit in the Multi Editor.
+		</p><p>The Multi Editor displays the relevant properties for the selected objects. This means that the properties and behaviors that are displayed will depend on the kind of objects that you have selected. For example, if you open the Multi Editor for a Switch Container, you will see the properties that are displayed in the Property Editor for a Switch Container; for sounds, the properties displayed in the Property Editor for sounds; and, so on.</p><p>If you open the Multi Editor for a selection containing many types of objects, some displayed properties might apply only to a subset of the selection. Moreover, the displayed Values will only work if the selected objects all happen to have the same value for a particular property. Often, there will be an assortment of applicable values, so a small dash, "-", is displayed to indicate that a single value cannot be displayed.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>To view descriptions for the various properties of the selected objects, consult the help in the corresponding Property Editor.</p></td></tr></table></div><p>In addition to specifying property values and defining behaviors, you can also do the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="bold"><strong>Specify whether values are absolute or relative</strong></span>: You can specify whether the property values that you apply to the selected objects are relative or absolute by adding a + or - sign to the values that you enter. Where you place the + or - sign determines whether you are adding an absolute or relative value - the sign placed before the value specifies an absolute value; the sign placed after the value specifies a relative value. For example, entering an absolute value of -23 for the volume of objects that previously had a volume of -17 dB, changes the volume of all selected objects to -23 dB. On the other hand, entering a relative value such as 6+ for objects that have volume settings of -15 dB, -20 dB, and -10 dB means that you are creating an offset that adds 6 dB to the volume of all the selected objects.
+				</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Link/Unlink property values</strong></span>: You can link the values across platforms or unlink them to create custom values for the current platform.
+				</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Enable Randomizers</strong></span>: You can enable Randomizers and define a range of values for them. Randomizers modify the property values of an object each time it is played by selecting a value from within the range that you have specified.
+				</p></li><li class="listitem"><p>
+					<span class="bold"><strong>Add RTPC</strong></span>: When a single object is loaded in the
+					Multi Editor, you can add new RTPCs with Game Parameters, MIDI, or Modulator
+					objects. This option is not available when multiple objects are loaded; however,
+					you can use the <a class="xref" href="ch59s11.html" title="Paste Properties">Paste Properties</a> view to copy RTPCs
+					from one object to one or more other objects.</p></li><li class="listitem"><p><span class="bold"><strong>Vew and edit effects:</strong></span></p><div class="orderedlist"><p class="title"><b></b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click <span class="bold"><strong> View Settings</strong></span> (Ctrl+Alt+H) in
+							the title bar.</p></li><li class="listitem"><p>In the <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> list, navigate to
+							Audio &gt; Effects, and choose the effect properties to view and click
+							OK.</p></li><li class="listitem"><p>An Effects folder appears under any appropriate object. Expand it to
+							view the effects in rows and their properties in columns. This displays
+							the same properties as the <a class="xref" href="ch61s01s05s08.html" title="Effects tab: Containers hierarchy objects">Effects tab: Containers hierarchy objects</a>.</p></li><li class="listitem"><p>To delete an effect, right-click it and select <span class="bold"><strong>Delete</strong></span>.</p></li><li class="listitem"><p>To move an effect, right-click it and select <span class="bold"><strong>Move Up</strong></span> or <span class="bold"><strong>Move Down</strong></span>,
+							depending on its position.</p></li></ol></div></li><li class="listitem"><p>View object counts. For Effects and RTPC faders, a count is given in the Value
+					column:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>count: n</strong></span>: where <span class="emphasis"><em>n</em></span> is a numeric
+							value, indicates the quantity.</p></li><li class="listitem"><p><span class="bold"><strong>mixed count: n-n</strong></span>: where <span class="emphasis"><em>n</em></span> is a
+							numeric value, indicates the high and low quantities for more than one
+							object.</p></li></ul></div></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+  </td><td>
+    <p>Click the View Settings icon in the upper right corner of the view.
+    </p>
+    <p>
+      The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> dialog opens. Select the individual properties for every possible Wwise object type that you want to display.
+    </p>
+  </td></tr><tr><td align="center">
+							<p>
+								</p><div class="mediaobject"><a name="treeview_png"></a><img src="Images/btn_tree_view.png"></div><p>
+							</p>
+						</td><td>
+							<p>
+                  A three-option list for how to display properties in the panel:
+								</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Tree view</strong></span>: Displays the object properties within their corresponding hierarchies. As with other hierarchical views, parents can be expanded and collapsed to show or hide child elements.</p></li><li class="listitem"><p><span class="bold"><strong>Flat view</strong></span>: Displays all the object properties in a non-collapsible list with their hierarchical position indicated only by their full path Name. With this view, only editable properties are directly listed; their structural, non-editable, hierarchical elements are only seen in the path name.</p></li><li class="listitem"><p><span class="bold"><strong>Flat view (name only)</strong></span>: Displays all the object properties in a non-collapsible list with no indication of their hierarchical position.</p></li></ul></div><p>
+							</p>
+						</td></tr><tr><td align="center">
+							<p>
+								</p><div class="mediaobject"><img src="Images/btn_edit_arrows.png"></div><p>
+							</p>
+						</td><td>
+							<p>Opens a three-option list for changing which objects are selected for editing in the panel according to their hierarchical position relative to the currently selected objects. Each option gives the number of corresponding objects and, when uniformly applicable, the type of object.
+								</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>All children - "#" objects</strong></span>: Displays the object properties for all the objects immediately under the selected objects in the hierarchy.</p></li><li class="listitem"><p><span class="bold"><strong>All descendants - "#" objects</strong></span>: Displays the object properties for all levels of the objects under the selected objects in the hierarchy.</p></li><li class="listitem"><p><span class="bold"><strong>All parents - "#" objects</strong></span>: Displays the object properties for all the objects immediately above the selected objects in the hierarchy.</p></li></ul></div><p>
+							</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For Events, there are no directly associated properties. Instead, properties are applicable to an Event's children: Actions. So, to multi edit Events, be sure to select <span class="bold"><strong>All descendants</strong></span> or <span class="bold"><strong>All children</strong></span>.
+								</p></td></tr></table></div>
+						</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+							<p>Name</p>
+						</td><td>
+							<p>The name of the property or behavior. The property or behavior listed here will be based on the objects selected.</p>
+              <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Color property is always listed first. Its value displays the associated color of the selected objects and can be clicked to open the color selector <a class="link" href="ch05s03.html" title="Setting colors">to set their color chip</a>.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>Value</p>
+						</td><td>
+							<p>The property value that you want to assign to all the selected objects. This can include a numerical value, but can also be a check box where you enable or disable certain behaviors or properties.</p>
+							<p>For numerical fields, you can specify whether you want to create a relative or absolute property change. By adding a + or - sign after the value, you create an offset for the properties of the selected objects. By placing it before the value, you are changing the objects' properties to that absolute value.</p>
+							<p>For check boxes, such as <span class="bold"><strong>Use Game-Defined Auxiliary Sends</strong></span>, a filled box (<span class="inlinemediaobject"><img src="Images/checkbox_filled.png" width="11"></span>) is displayed to indicate that it applies to one or more, but not all, of the selected objects. 
+
+								</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Properties inherited from a parent, such as <span class="bold"><strong>Use Game-Defined Auxiliary Sends</strong></span>, cannot be enabled in the Property Editor unless the object is the top level or overrides the parent. In the Multi Editor, if only one of multiple selected objects can consequently be enabled, the change will still affect all objects. The setting will not, however, take effect until an override option is enabled.
+									</p></td></tr></table></div><p>
+							</p>                
+							<p>Where applicable, the Value column can include a Link, an RTPC, or - within a field - a Randomizer indicator on its left. Because of its power to edit multiple objects, each of which may have different settings, the Multi Editor has <a class="link" href="ch04s01.html#property_value_indicators">special indicators for Link Mixed, RTPC Mixed, and Randomizer Mixed</a>.</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

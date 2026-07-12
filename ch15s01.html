@@ -1,0 +1,193 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Types of Event Actions</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch15.html" title="Managing Events"><link rel="prev" href="ch15.html" title="Managing Events"><link rel="next" href="ch15s02.html" title="Creating Events"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt03.html">Interacting with the game</a></span> &gt; <span class="breadcrumb-link"><a href="ch15.html">Managing Events</a></span> &gt; <span class="breadcrumb-node">Types of Event Actions</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="types_of_event_actions"></a>Types of Event Actions</h2></div></div></div><p>Wwise comes with a variety of Actions that you can use to drive the sound, music, and motion in game.  The Actions are grouped by category and each category contains a series of Actions that you can choose from.</p><div class="mediaobject"><img src="Images/Event_actions_list.png"></div><p>Each Action also has a set of properties, such as delays and fades, that you can use to better manage the incoming and outgoing objects. The following table describes each of the Event Actions.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following descriptions are general descriptions and do not take into account the Scope setting for each Action. The Scope, which is either Game Object or Global, specifies the extent to which the Action is applied to objects within the game.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="200px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+								<p>Event Action</p>
+							</th><th>
+								<p>Description</p>
+							</th></tr></thead><tbody><tr><td>
+								<p>Empty Event</p>
+							</td><td>
+								<p>Contains no Actions or objects.</p>
+							</td></tr><tr><td>
+								<p>Play</p>
+							</td><td>
+								<p>Plays back the associated object.</p>
+							</td></tr><tr><td>
+								<p>Stop &gt; Stop</p>
+							</td><td>
+								<p>Stops playback of the associated object.</p>
+							</td></tr><tr><td>
+								<p>Stop &gt; Stop All</p>
+							</td><td>
+								<p>Stops playback of all objects, although exceptions can be added.</p>
+							</td></tr><tr><td>
+								<p>Pause &gt; Pause</p>
+							</td><td>
+								<p>Pauses playback of the associated object. </p>
+							</td></tr><tr><td>
+								<p>Pause &gt; Pause All</p>
+							</td><td>
+								<p>Pauses playback of all objects, although exceptions can be added.
+								</p>
+							</td></tr><tr><td>
+								<p>Resume &gt; Resume</p>
+							</td><td>
+								<p>Resumes playback of the associated object that had previously been paused. </p>
+							</td></tr><tr><td>
+								<p>Resume &gt; Resume All</p>
+							</td><td>
+								<p>Resumes playback of all paused objects, although exceptions can be added.</p>
+							</td></tr><tr><td>
+                <p>Break</p>
+              </td><td>
+                <p>Stops playback of a looped sound or continuous container while allowing the current object or objects to finish playing.</p>
+              </td></tr><tr><td>
+                <p>Seek &gt; Seek</p>
+              </td><td>
+                <p>Changes the playback position of the associated Wwise object. It has no effect on objects that are not currently playing.</p>
+              </td></tr><tr><td>
+                <p>Seek &gt; Seek All</p>
+              </td><td>
+                <p>Changes the playback position of all Wwise objects, although exceptions can be added. It has no effect on objects that are not currently playing.</p>
+              </td></tr><tr><td>
+                <p>Post Event</p>
+              </td><td>
+                <p>Triggers an Event from within another Event.</p>
+              </td></tr><tr><td>
+								<p>Bus Volume &gt; Set Voice Volume</p>
+							</td><td>
+								<p>Changes the volume level of the associated bus.</p>
+							</td></tr><tr><td>
+								<p>Bus Volume &gt; Reset Volume</p>
+							</td><td>
+								<p>Returns the volume of the associated bus to its original level.</p>
+							</td></tr><tr><td>
+								<p>Bus Volume &gt; Reset Volume All</p>
+							</td><td>
+								<p>Returns the volume of all busses to their original levels, although exceptions can be added.</p>
+							</td></tr><tr><td>
+                <p>Voice Volume &gt; Set Voice Volume</p>
+              </td><td>
+                <p>Changes the volume level of the associated object.</p>
+              </td></tr><tr><td>
+                <p>Voice Volume &gt; Reset Volume</p>
+              </td><td>
+                <p>Returns the volume of the associated object to its original level.</p>
+              </td></tr><tr><td>
+                <p>Voice Volume &gt; Reset Volume All</p>
+              </td><td>
+                <p>Returns the volume of all objects to their original levels, although exceptions can be added.</p>
+              </td></tr><tr><td>
+								<p>Voice Pitch &gt; Set Voice Pitch</p>
+							</td><td>
+								<p>Changes the pitch for the associated object. </p>
+							</td></tr><tr><td>
+								<p>Voice Pitch &gt; Reset Pitch</p>
+							</td><td>
+								<p>Returns the pitch of the associated object to its original value.</p>
+							</td></tr><tr><td>
+								<p>Voice Pitch &gt; Reset Voice Pitch All</p>
+							</td><td>
+								<p>Returns the pitch of all objects to their original values, although exceptions can be added.</p>
+							</td></tr><tr><td>
+								<p>Voice Low-pass Filter &gt; Set Voice Low-pass Filter</p>
+							</td><td>
+								<p>Changes the amount of Low-Pass Filter applied to the associated Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Voice Low-pass Filter &gt; Reset Voice Low-pass Filter</p>
+							</td><td>
+								<p>Returns the amount of Low-Pass Filter applied to the associated Wwise object to its original value.</p>
+							</td></tr><tr><td>
+								<p>Voice Low-pass Filter &gt; Reset Voice Low-pass Filter All</p>
+							</td><td>
+								<p>Returns the amount of Low-Pass Filter applied to all Wwise objects to their original values, although exceptions can be added.</p>
+							</td></tr><tr><td>
+								<p>Voice High-pass Filter &gt; Set Voice High-pass Filter</p>
+							</td><td>
+								<p>Changes the amount of high-pass filter applied to the associated Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Voice High-pass Filter &gt; Reset Voice High-pass Filter</p>
+							</td><td>
+								<p>Returns the amount of high-pass filter applied to the associated Wwise object to its original value.</p>
+							</td></tr><tr><td>
+								<p>Voice High-pass Filter &gt; Reset Voice High-pass Filter All</p>
+							</td><td>
+								<p>Returns the amount of high-pass filter applied to all Wwise objects to their original values, although exceptions can be added.</p>
+							</td></tr><tr><td>
+                <p>Mute &gt; Mute</p>
+              </td><td>
+                <p>
+                  Silences the associated object.
+                </p>
+              </td></tr><tr><td>
+                <p>Mute &gt; Unmute</p>
+              </td><td>
+                <p>Returns the associated object to its original &#8220;pre-silenced&#8221; volume level. </p>
+              </td></tr><tr><td>
+                <p>Mute &gt; Unmute All</p>
+              </td><td>
+                <p>Returns all objects to their original &#8220;pre-silenced&#8221; volume levels, although exceptions can be added.</p>
+              </td></tr><tr><td>
+                <p>Game Parameter &gt; Set Game Parameter</p>
+              </td><td>
+                <p>Changes the value of a Game Parameter.</p>
+              </td></tr><tr><td>
+                <p>Game Parameter &gt; Reset Game Parameter</p>
+              </td><td>
+                <p>Returns to the original value of a Game Parameter.</p>
+              </td></tr><tr><td>
+								<p>States &gt; Set State</p>
+							</td><td>
+								<p>Activates a specific State.
+								</p>
+							</td></tr><tr><td>
+								<p>States &gt; Enable State</p>
+							</td><td>
+								<p>Re-enables the State or States applicable to the associated Wwise object after having applied a Disable State Action.</p>
+							</td></tr><tr><td>
+								<p>States &gt; Disable State</p>
+							</td><td>
+								<p>Disables the State or States for the associated Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Set Switch</p>
+							</td><td>
+								<p>Activates a specific Switch.</p>
+							</td></tr><tr><td>
+                <p>Trigger</p>
+              </td><td>
+                <p>Calls a Trigger that, in turn, launches a Stinger.</p>
+              </td></tr><tr><td>
+								<p>Bypass Effect &gt; Enable Bypass</p>
+							</td><td>
+								<p>Bypasses the Effect(s) applied to the associated Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Bypass Effect &gt; Disable Bypass</p>
+							</td><td>
+								<p>Removes the Effect bypass which reapplies the Effect(s) to the associated Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Bypass Effect &gt; Reset Bypass Effect</p>
+							</td><td>
+								<p>Returns the bypass effect option of the associated object to its original setting.</p>
+							</td></tr><tr><td>
+								<p>Bypass Effect &gt; Reset Bypass Effect All</p>
+							</td><td>
+								<p>Returns the bypass effect option of all Wwise objects to their original settings, although exceptions can be added.</p>
+							</td></tr><tr><td>
+								<p>Release Envelope</p>
+							</td><td>
+								<p>Releases envelopes associated with the Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Reset Playlist</p>
+							</td><td>
+								<p>Reset playlist of the specified Random/Sequence Container to the initial state. This has no impact on the continuous mode playback nor on currently playing sounds.</p>
+							</td></tr><tr><td>
+								<p>Set Effect &gt; Set Effect</p>
+							</td><td>
+								<p>Overrides an Effect assigned to a single Effect Slot on a Wwise object.</p>
+							</td></tr><tr><td>
+								<p>Set Effect &gt; Reset Effect</p>
+							</td><td>
+								<p>Resets the given Effect Slot of an object that was overridden by a Set Effect Action.</p>
+							</td></tr><tr><td>
+								<p>Set Effect &gt; Reset Set Effect All</p>
+							</td><td>
+								<p>Resets the given Effect Slot of all objects that were overridden by a Set Effect Action.</p>
+							</td></tr></tbody></table></div></div><HR></body></html>

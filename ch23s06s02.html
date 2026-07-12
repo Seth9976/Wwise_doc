@@ -1,0 +1,61 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Effect of orientation</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s06.html" title="3D positioning illustrated"><link rel="prev" href="ch23s06s01.html" title="Effect of Spread"><link rel="next" href="ch23s06s03.html" title="Focus"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s06.html">3D positioning illustrated</a></span> &gt; <span class="breadcrumb-node">Effect of orientation</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="effect_of_orientation"></a>Effect of orientation</h3></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+       For context, reference the <a class="link" href="ch23s06s01.html" title="Effect of Spread">first example</a>.
+     </p></td></tr></table></div><p>The effect of emitter orientation described below applies only when 3D Spatialization is set to <span class="bold"><strong>Position + Orientation</strong></span>. A discussion follows, below, about the use of <span class="bold"><strong>Position + Orientation</strong></span> versus <span class="bold"><strong>Position</strong></span> 3D Spatializations.</p><p>The following example is similar to the previous one, but the listener faces east. This illustrates the behavior of two different orientations at once:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>Relative emitter position</strong></span>: The emitter is <span class="italic">located to the left</span> of the listener, which means that the contraction due to Spread happens towards the left. This is most noticeable in the first image with Spread at 0.
+          </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Relative emitter orientation</strong></span>: The relative orientation of the emitter is shifted by 90 degrees counterclockwise relative to the listener, which means that the virtual sources are rotated accordingly. This is most noticeable in the fourth image with Spread at 100, where the colors representing the input channels have rotated. Of course, this would have no incidence if the source were mono.
+          </p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="60px" class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th colspan="3">
+                <p>The Effect of Relative Emitter Orientation with Various Spread Values</p>
+              </th></tr><tr><th>
+                <p>Spread</p>
+              </th><th>
+                <p>Relative emitter position and orientation</p>
+              </th><th>
+                <p>
+                  Placement of Virtual Sources<br>and Output Bus Channel Energy
+                </p>
+              </th></tr></thead><tbody><tr><td>
+                <p>0% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient_0.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="313"><tr><td><img src="Images/pan_orient_0.png" width="313"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>30% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient_30.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="289"><tr><td><img src="Images/pan_orient_30.png" width="289"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>70% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient_70.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="292"><tr><td><img src="Images/pan_orient_70.png" width="292"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>100% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient_100.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="294"><tr><td><img src="Images/pan_orient_100.png" width="294"></td></tr></table></div>
+              </td></tr></tbody></table></div><p>Just to make sure you understand the difference between relative emitter position and relative emitter orientation, here is the result with a relative emitter position of 45 degrees, a relative emitter orientation of 90 degrees, and 70% Spread. This can be viewed as if the listener was penetrating the emitter's sound field from the southwest, facing east. The green and red emitter channels are somewhat placed at the front left and front right from the listener, and the blue channel is starting to envelop it.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="60px" class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th colspan="3">
+                <p>
+                  Effective Panning of an Emitter Located 45 Degrees from the Listener's Azimuth,<br>with Relative Orientation of 90 degrees and a 70% Spread
+                </p>
+              </th></tr><tr><th>
+              <p>Spread</p>
+            </th><th>
+              <p>Relative emitter position and orientation</p>
+            </th><th>
+              <p>
+                Placement of Virtual Sources<br>and Output Bus Channel Energy
+              </p>
+            </th></tr></thead><tbody><tr><td>
+                <p>70% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="308"><tr><td><img src="Images/orient45_70.png" width="308"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="311"><tr><td><img src="Images/pan_orient45_70.png" width="311"></td></tr></table></div>
+              </td></tr></tbody></table></div><p>From the examples above it should be clear that emitter orientation only affects multichannel sources. Orientation-driven rotation works best when the multichannel source represents a "sound field", an "ambience" with its sonic constituents panned and rendered in the multichannel material. At run-time, Wwise rotates this material based on the listener and the emitter orientation, effectively tying the ambience to the 3D world geometry.</p><p>However, it sometimes happens that multichannel files are not necessarily representations of sound fields, but instead are simply sounds that were authored so that they given an impression of spatial extent. This is often the case with stereo sounds. In these cases, the spatial extent effect is optimal with the original channel separation, and any attempt to rotate them is undesirable. For this type of content, users can opt out of the emitter orientation with the 3D Spatialization <span class="bold"><strong>Position</strong></span>.</p><p>
+         Proceed to the next 3D positioning example: <a class="xref" href="ch23s06s03.html" title="Focus">Focus</a>. 
+      </p></div><HR></body></html>

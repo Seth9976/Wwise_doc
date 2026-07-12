@@ -1,0 +1,123 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Mixing Desk and Mixing Sessions</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s06.html" title="Sessions Tab"><link rel="prev" href="ch61s06s01s01.html" title="Soundcaster Keyboard Shortcuts"><link rel="next" href="ch61s06s02s01.html" title="Mixing Desk Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s06.html">Sessions Tab</a></span> &gt; <span class="breadcrumb-node">Mixing Desk and Mixing Sessions</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="master_mixer_mixing_desk"></a>Mixing Desk and Mixing Sessions</h3></div></div></div><p>The Mixing Desk is a flexible and powerful mixing console that groups a variety of properties into one view allowing you to fine-tune the audio mix of your game. You can add any object or bus to the Mixing Desk and then define routing, apply effects and Attenuation ShareSets, edit state properties, and modify properties of individual objects and busses within your project.</p><p>If you start a capture session, you can also view the activity of each object within the Mixing Desk, including when a voice is playing, if a bus is being ducked, and whether effects are being bypassed. Each bus can also be muted allowing you to tweak the individual objects within your audio mix.</p><p>The Mixing Desk is basically a grid where each column is a mixer strip and each row is a section related to a set of common properties in Wwise. Each mixer strip is bound to an object, the name of which is displayed at the top and bottom of the each strip.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+            By default in Wwise, you can switch to the Mixer layout by pressing 
+      <span class="bold"><strong>F8</strong></span>.
+          
+    </p></td></tr></table></div><p>A shortcut menu is available for each property setting in the mixer strip. These menus contain a set of commands specifically related to the selected property. To access the shortcut menus, simply right-click the property settings in the mixer strip. You can also arrange the mixer strips in any order by dragging them from one position to another.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>When multiple objects are selected, modifying a property (slider or fader) will affect the whole selection and set the object's value to all other objects in selection. However, when holding the Alt key and dragging a slider or fader, the selected objects values will be offset instead of being set to an absolute value.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1517566688"></a>Using a Control Surface with the Mixing Desk</h4></div></div></div><p>You can attach a control surface (MIDI hardware controller) to the mixing desk. For instructions, refer to 
+      <a class="xref" href="ch57s06.html" title="Understanding Control Surface View Groups">Understanding Control Surface View Groups</a>.
+    </p><p>Additionally, the shortcut menu for the Mixing Desk (when right-clicking outside the grid) shows a 
+      <span class="bold"><strong>Control Surface Bindings</strong></span> sub menu. This sub menu allows
+          selecting which of the State Group being referred in the session will be used for the control surface binding group associated with the Mixing Desk. 
+          
+    </p><p>
+          By default, when using a Control Surface Binding Group
+          on the Mixing Desk, the objects associated with each column will be used for the bindings (<span class="bold"><strong>Session Objects</strong></span> menu item). 
+          However, if you select a State Group from the <span class="bold"><strong>Control Surface Bindings</strong></span> sub menu,
+          the State Group's current state will be used for binding the properties, such as the Voice Volume.           
+    </p><p>
+          This can be useful when using the Mixing Desk for mixing states.           You could have the mixing desk to automatically follow the current state, using the 
+      <span class="bold"><strong>Follow States</strong></span> button. That would affect
+          the control surface bindings.                  
+    </p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>
+          There are global commands available through keyboard shortcuts or control surface binding that allow you to change which state group is being used for the Control Surface Bindings, without the need for the shortcut menu.
+          </p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+            <p>(Mixing Session Selector)</p>
+          </td><td>
+            <p>A list of mixing sessions that currently exist within the project.</p>
+            <p>The name of the selected mixing session is displayed in the corresponding field.</p>
+          </td></tr><tr><td>
+            <p>Editing States</p>
+          </td><td>
+            <p>The name of each State Group and corresponding States associated with the objects in the mixing session.</p>
+            <p>The currently selected state changes the States being edited in the Mixing Desk.</p>
+          </td></tr><tr><td>
+            <p>Follow States</p>
+          </td><td>
+            <p>When enabled, the mixing session follows the State changes made in game. When disabled, the States in the mixing session do not follow the State changes in game.</p>
+          </td></tr><tr><td>
+            <p>Push States</p>
+          </td><td>
+            <p>When enabled, each time you change a State in the Editing States pane of the
+                mixing session, the State also changes in the game, the Transport Control, and the
+                Soundcaster.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_copy_states_values_dots.png"></div>
+          </td><td>
+            <p>Opens the Copy States Values dialog where you can copy the property settings from one State to another within the same State Group.</p>
+          </td></tr><tr><td>
+            <p>Activity</p>
+          </td><td>
+            <p>Indicates, using a series of icons, whether there is any audio activity within the bus or object.</p>
+            <p>You can monitor the activity of each object or bus using the following icons:</p>
+            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                  <span class="inlinemediaobject"><img src="Images/AnchoredFrames/cx1296b2.jpg" align="left" height="21"></span>
+                  <span class="bold"><strong>Voice Playback</strong></span> - Indicates when the object is being played. In the case of a bus, it indicates when a playing voice is being routed through the bus.
+                </p></li><li class="listitem"><p>
+                  <span class="inlinemediaobject"><img src="Images/AnchoredFrames/cx129775.jpg" align="left" height="26"></span>
+                  <span class="bold"><strong>Ducking</strong></span> - Indicates whether the bus is being ducked.
+                </p></li><li class="listitem"><p>
+                  <span class="inlinemediaobject"><img src="Images/AnchoredFrames/cx129791.jpg" align="left" height="26"></span>
+                  <span class="bold"><strong>Effect Bypass</strong></span> - Indicates when an inserted Effect is being bypassed.
+                </p></li></ul></div>
+          </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/meter_large.png"></div>
+            <p>(Meter)</p>
+          </td><td>
+                  <p>A per channel peak meter. 
+For more information about speaker configurations and channels, refer to <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>.<br><br>
+ The signal level is green under -6 dB, yellow from -6 to 0 dB, and red over 0 dB.
+ <br><br>The meter data source can be synchronized with the currently playing objects or, when a profiling session is present, with historical values.
+	When the meter is showing the profiling session history, use the <span class="bold"><strong>LIVE</strong></span> button on the Wwise toolbar to return to current values.
+ </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Meters are not available on non-mixing busses. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more information on the various
+      processing statuses.</p></td></tr></table></div>
+          </td></tr><tr><td colspan="2">
+                  <p>The Mixing Desk lists all properties associated with the objects added as mixer strips to the Mixing Session, if they are set to be displayed in the <a class="xref" href="ch61s06s02s01.html" title="Mixing Desk Settings">Mixing Desk Settings</a>. For details on the properties, refer to the objects' corresponding Property Editor documentation under the <a class="xref" href="ch61s01s02.html" title="Busses hierarchy">Busses hierarchy</a>, <a class="xref" href="ch61s01s03.html" title="Containers hierarchy: sound and motion objects">Containers hierarchy: sound and motion objects</a>, or <a class="xref" href="ch61s01s04.html" title="Containers hierarchy: music objects">Containers hierarchy: music objects</a> pages.
+            </p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+          </td><td>
+            <p>Widens the mixer strips.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+          </td><td>
+            <p>Resets the mixer strips to their default width.</p>
+          </td></tr><tr><td align="center">
+            <div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+          </td><td>
+            <p>Narrows the mixer strips.</p>
+          </td></tr></tbody></table></div><br><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>When multiple mixer strips are selected (by holding Shift or Ctrl and clicking the mixer strip headers), modifying the Volume, Pitch, Low-pass filter, or High-pass filter will affect the selected objects.</p></td></tr></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+        <a class="xref" href="ch35s11s07.html" title="Mixing audio using the Mixing Desk">Mixing audio using the Mixing Desk</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s04.html" title="Getting to know the Mixing Desk">Getting to know the Mixing Desk</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s06.html" title="Customizing the information displayed in the Mixing Desk">Customizing the information displayed in the Mixing Desk</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s05.html#creating_mixing_session" title="Creating a Mixing Session">Creating a Mixing Session</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s05.html#adding_objects_busses_to_mixing_session" title="Adding objects/busses to a Mixing Session">Adding objects/busses to a Mixing Session</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s05.html#reording_mixing_strips_within_mixing_session" title="Reordering mixing strips within a Mixing Session">Reordering mixing strips within a Mixing Session</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s05.html#resizing_mixing_strips_within_mixing_session" title="Resizing the mixing strips within a Mixing Session">Resizing the mixing strips within a Mixing Session</a>
+      </p></li><li class="listitem"><p>
+        <a class="xref" href="ch35s11s05.html#removing_mixing_strips_from_mixing_session" title="Removing mixing strips from a Mixing Session">Removing mixing strips from a Mixing Session</a>
+      </p></li></ul></div></div></div><HR></body></html>

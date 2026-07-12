@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio Bus tab and Auxiliary Bus tab: busses</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s02s04.html" title="Common tabs and categories: Busses hierarchy objects"><link rel="prev" href="ch61s01s02s04.html" title="Common tabs and categories: Busses hierarchy objects"><link rel="next" href="ch61s01s02s04s02.html" title="Effects tab: busses"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02.html">Busses hierarchy</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s02s04.html">Common tabs and categories: Busses hierarchy objects</a></span> &gt; <span class="breadcrumb-node">Audio Bus tab and Auxiliary Bus tab: busses</span></div><div class="sect4"><div class="titlepage"><div><div><h5 class="title"><a name="audio_bus_tab_busses"></a>Audio Bus tab and Auxiliary Bus tab: busses</h5></div></div></div><p>In the Audio Bus or Auxiliary Bus tab, there is a bus meter (if processing), bus status
+        information, and the HDR Window (if HDR is enabled for the bus).</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Bus Specific</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+                <div class="mediaobject"><img src="Images/meter_large.png"></div>
+                <p>(Meter)</p>
+              </td><td>
+                <p>A per channel peak meter. 
+For more information about speaker configurations and channels, refer to <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>.<br><br>
+ The signal level is green under -6 dB, yellow from -6 to 0 dB, and red over 0 dB.
+ <br><br>The meter data source can be synchronized with the currently playing objects or, when a profiling session is present, with historical values.
+	When the meter is showing the profiling session history, use the <span class="bold"><strong>LIVE</strong></span> button on the Wwise toolbar to return to current values.
+ </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Meters are not available on non-mixing busses. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for more information on the various
+      processing statuses.</p></td></tr></table></div>
+              </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Bus Status (Authoring)</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+					<p>Processing</p>
+				</td><td>
+					<p>Displays the processing status of the bus based on how the project has been authored in Wwise; the processing status at runtime may differ. Refer to <a class="xref" href="ch35s11s01.html" title="Understanding the bus icons and processing status">Understanding the bus icons and processing status</a> for details on how the processing status is determined.</p>
+				</td></tr><tr><td>
+					<p>Bus Config.</p>
+				</td><td>
+					<p>Displays the bus configuration at the Pre-Effects stage based on how the project has been authored in Wwise; the bus configuration at runtime may differ.  </p>
+					<p>The displayed value is read-only. You can change it with the Configuration property in
+						the Property Editor for the selected Audio Bus or Auxiliary Bus. See <a class="xref" href="ch61s01s02s02.html" title="Property Editor: Audio Bus">Property Editor: Audio Bus</a> or <a class="xref" href="ch61s01s02s03.html" title="Property Editor: Auxiliary Busses">Property Editor: Auxiliary Busses</a>.</p>
+					<p>When there is mixing on a bus, the Pre-Effects stage is after the mixing
+						stage, but before any Effects are processed. For example, in the case of a
+						bus with the bus configuration set to 2.0, all inputs are mixed to a stereo
+						configuration, and then Effects are added to the stereo signal. The Bus
+						Config. field displays the configuration of the bus between these two
+						stages.</p>
+				</td></tr><tr><td>
+					<p>Out Config.</p>
+				</td><td>
+					<p>Displays the bus configuration at the Post-Effects stage (i.e., after both mixing and Effects have been processed). This is based on how the project has been authored in Wwise; the bus configuration at runtime may differ. </p>
+					<p>Because Effects have the ability to change the bus configuration, the Out
+						Config. can differ from the Bus Config. For example, consider a bus with the
+						Reflect plug-in. The Bus Config. could be 1.0, while its Out Config.
+						would be Audio Objects.</p>
+					<p dir="ltr">If there are no Effects inserted on a bus, Bus Config. and Out
+						Config. are equivalent. When there are Effects inserted on a bus, the Out
+						Config. will indicate 'Unknown' unless you are profiling captured data from
+						the sound engine. In this case, the actual Out Config. will be
+						displayed.</p>
+				</td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>HDR</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>HDR Window</td><td>
+                <p>Displays the applicable HDR threshold dB range as a light blue rectangle
+                  within a full window range of -96 dB to 96 dB. Only visible when the bus is HDR
+                  enabled. See <a class="xref" href="ch35s09.html#enabling_hdr_in_project" title="Enabling HDR">Enabling HDR</a>.</p>
+              </td></tr></tbody></table></div></div><HR></body></html>

@@ -1,0 +1,70 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Specifying the default object values for your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07.html" title="Working with projects"><link rel="prev" href="ch07s03s08.html" title="Defining Custom Properties"><link rel="next" href="ch07s05.html" title="Troubleshooting your project"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-node">Specifying the default object values for your project</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="defining_default_user_settings_for_project"></a>Specifying the default object values for your project</h2></div></div></div><p>In Wwise you can specify certain default object values for your project. The default values
+			are applied to each new object that you create, except when a new object is created as a
+			child of another object. In this case, the object inherits the audio output and
+			Conversion Settings ShareSet assigned to its parent.</p><p>We recommend specifying the default object values early in the project so they can be
+			applied as you create new objects.</p><p>Changing default object values during project development only affects objects created
+			after the change. This means you can set up default object values before creating one
+			type of object, such as SFX objects, and then change the default object values before
+			creating another type of object, such as Voice objects.</p><p>Default object values can be specified for each user. Wwise saves them in an XML file with
+			the path <code class="code">&lt;project
+				directory&gt;/&lt;project_name&gt;.&lt;user_name&gt;.wsettings</code>.</p><div class="orderedlist"><p class="title"><b>To specify default object values:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the menu bar, click <span class="bold"><strong>Project &gt; Default Object Values</strong></span>
+					(Shift+D).</p></li><li class="listitem"><p>In the Default Object Values dialog, specify your default values. See the following table
+					for details.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p><p>The Default Object Values dialog closes and your values are saved.</p></li></ol></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+							<p><span class="bold"><strong>Routing</strong></span></p>
+						</td></tr><tr><td>
+							<p>Audio Output</p>
+						</td><td>
+							<p>The default Audio Bus within the Busses hierarchy through
+								which new sound and music objects will be routed. </p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+						</td><td>
+							<p>Opens the Project Explorer - Browser where you can select the
+								default Audio Bus.</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Sound Objects</strong></span></p>
+						</td></tr><tr><td>
+							<p>Voice Volume</p>
+						</td><td>
+							<p>The default level or amplitude for all new sound objects.</p>
+							<p>Default value: 0<br>Range: -200 to 0<br>Units: dB</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Default Conversion
+								Settings</strong></span></p>
+						</td></tr><tr><td>
+							<p>Override Project Settings</p>
+						</td><td>
+							<p>Overrides the project settings, which allows you to select a
+								different default Conversion Settings ShareSet.</p>
+							<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The default Conversion Settings ShareSet applies to newly
+									created Wwise objects. Changing this will not replace the
+									previously applied Conversion Settings ShareSet.</p></td></tr></table></div>
+						</td></tr><tr><td>
+							<p>(Conversion Setting ShareSet)</p>
+						</td><td>
+							<p>The name of the ShareSet that will be used as your default
+								Conversion Settings.</p>
+							<p>The default Conversion Settings ShareSet will be used each time a
+								new top-level parent object is created in your project. If a new
+								object is created as a child of another object, it will inherit the
+								Conversion Settings ShareSet assigned to the parent.</p>
+							<p>The User default Conversion Settings are never used during
+								SoundBank generation.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+						</td><td>
+							<p>Opens the Project Explorer - Browser where you can navigate to and
+								select a different default Conversion Settings ShareSet.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+						</td><td>
+							<p>Closes the Default Object Values dialog and saves your settings.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+						</td><td>
+							<p>Closes the Default Object Values dialog without saving your settings.</p>
+						</td></tr></tbody></table></div></div><HR></body></html>

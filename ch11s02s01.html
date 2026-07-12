@@ -1,0 +1,218 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Audio File Importer</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s02.html" title="Wwise importer dialogs"><link rel="prev" href="ch11s02.html" title="Wwise importer dialogs"><link rel="next" href="ch11s02s02.html" title="Voice Asset Importer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s02.html">Wwise importer dialogs</a></span> &gt; <span class="breadcrumb-node">Audio File Importer</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="audio_file_importer"></a>Audio File Importer</h3></div></div></div><p>In the Audio File Importer, you can import Sound SFX and Sound Voice media files into
+        your Wwise project, determine how you want the files to be integrated, and where in the
+        project you want to import them. You can import a file at different times and for different
+        reasons:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>To bring new files into the project and to create new structures</p></li><li class="listitem"><p>To replace existing files</p></li><li class="listitem"><p>To localize for language versions</p></li></ul></div><p>To access the Audio File Importer:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From Wwise menu bar, click <span class="bold"><strong>Views</strong></span> &gt; <span class="bold"><strong>Audio File Importer</strong></span>.</p></li><li class="listitem"><p>From the Wwise menu bar, click <span class="bold"><strong>Project</strong></span> &gt;
+                <span class="bold"><strong>Import Audio Files</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Shift + I</strong></span>.</p></li><li class="listitem"><p>Right-click an object in the Project Explorer and then select <span class="bold"><strong>Import Audio Files</strong></span>.</p></li></ul></div><p>To accommodate how you intend to use the imported files in the Audio File Importer, you
+        can specify corresponding import modes.</p><p>When a file is imported, it is validated to ensure that it will be supported in Wwise.
+        If a problem occurs during the import process, you can view the errors and if possible
+        resolve some of them in the Import Conflict manager.</p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="what_files_are_supported"></a>What Files Are Supported?</h4></div></div></div><p>The following audio file properties and formats are supported:</p><p>
+          <span class="bold"><strong>PCM Audio Formats</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>WAV and AMB</p></li></ul></div><p>
+          <span class="bold"><strong>Channel Configurations</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>0.1 to 13.1</p></li></ul></div><p>
+          <span class="bold"><strong>Sample Rates</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Up to 96 kHz</p></li></ul></div><p>
+          <span class="bold"><strong>Bit Depth</strong></span>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>16 Bits</p></li><li class="listitem"><p>24 Bits</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Wwise can also import 32-bit float PCM files; however, the maximum conversion
+            format is only 24 bits. Additionally, when played in the <a class="xref" href="ch59s10.html" title="Transport Control">Transport Control</a>, files are converted to 16 bits.
+          </p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="dc_offsets"></a>DC Offsets</h4></div></div></div><p>It is sometimes a good idea to remove the DC offset using a DC offset filter because
+          DC offsets can affect volume and cause artifacts in Wwise. There are some cases where you
+          should not remove the DC offset, for example, for sample accurate containers. In other
+          cases, where sounds are normalized to 0 dB, you might or might not need to remove the DC
+          offset. You can enable or disable this setting in the Conversion Settings dialog.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>We recommend not removing the DC offset for looping sounds. The remove mechanism is
+            a high-pass filter, so there is no guarantee that it will modify the first and last
+            sample of the loop in the same way because it does not know they will play contiguously.
+            This could create a discontinuity in the signal, which is audible as a click.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                  <p>Import Mode</p>
+                </td><td>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Create new objects</strong></span>: Imports the files as
+                        new objects in the current Wwise project. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Replace audio files</strong></span>: Imports the files to
+                        replace media files in the current Wwise project. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Localize languages</strong></span>: Imports the files for
+                        localization of the current project. </p></li></ul></div>
+                </td></tr><tr><td>
+                  <p>Import as</p>
+                </td><td>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sound SFX: Imports the files as Sound SFX objects to the specified
+                        destination in the project hierarchy.</p></li><li class="listitem"><p>Sound Voice: Imports the files as Sound Voice objects to the specified
+                        destination in the project hierarchy.</p></li></ul></div>
+                </td></tr><tr><td>
+                  <p>Destination language </p>
+                </td><td>
+                  <p>Defines the language associated with the imported Sound Voice files from a
+                    list of project languages that were determined in the Language Manager.</p>
+                </td></tr><tr><td>
+                  <p>Audio file destination </p>
+                </td><td>
+                  <p>Use to select a subfolder for the files and folders to import in the
+                    Original folder.</p>
+                </td></tr><tr><td>
+                  <p>Object destination</p>
+                </td><td>
+                  <p>Use to select the location within the current project hierarchy of the game
+                    structure where the media files will be imported, selected in the Project
+                    Explorer - Browser.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_add_files_dots.png"></div>
+                </td><td>
+                  <p>Opens the File Open dialog where you can select files that you want to
+                    import.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_add_folders.png"></div>
+                </td><td>
+                  <p>Opens the Folder Open dialog where you can select folders that you want to
+                    import.</p>
+                  <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can also drag files or folders from your system to the import
+                      list.</p></td></tr></table></div>
+                </td></tr><tr><td>
+                  <p>Import Tab Delimited</p>
+                </td><td>
+                  <p>Imports a tab delimited text file that defines the audio files to import,
+                    and the structures to create.</p>
+                  <p> For more information, refer to <a class="xref" href="ch11s03s05.html" title="Importing media files from tab delimited text files">Importing media files from tab delimited text files</a>. </p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_remove.png"></div>
+                </td><td>
+                  <p>Removes the currently selected files and folders from the list to
+                    import.</p>
+                </td></tr><tr><td>
+                  <p>Audio File/Folder</p>
+                </td><td>
+                  <p>The name of each audio file or folder to import.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+                </td><td>
+                  <p>Template selector. Shows a shortcut menu allowing to browse for a template
+                    and to select the most recently used templates. When a template is selected, it
+                    will uses the current Template match mode to match audio file names with
+                    template object names.</p>
+                  <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can multi-select entries in the list and select a template to quickly
+                      apply the template to multiple entries simultaneously.</p></td></tr></table></div>
+                </td></tr><tr><td>
+                  <p>Template</p>
+                </td><td>
+                  <p> Shows the associated template object for the file or folder to import.
+                    Refer to <a class="xref" href="ch11s03s03.html" title="Using a template to import media files">Using a template to import media files</a> for more
+                    information. </p>
+                </td></tr><tr><td>
+                  <p>Object Type/Action</p>
+                </td><td>
+                  <p>Shows a list of the possible object types to create for the WAV file or
+                    folder. Also lists the following actions when they are possible:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>No Object</strong></span>: Selecting this option won't
+                        create a Wwise object for the WAV file or folder. Note that when selecting
+                        this option for a WAV file, the WAV file will still be imported. Remove the
+                        entry from the list if you don't want to import the WAV file. Use the DEL
+                        key to remove entries from the list. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Use existing object</strong></span>: Selecting this option
+                        will not create a new Wwise object for the WAV file or folder but instead
+                        will re-use the existing object found at the specified location in the
+                        project (with the same name) and will merge the existing content with the
+                        descendants of the imported entry. This option is only available when a
+                        matching object is found at the import destination. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Copy template</strong></span>: Selecting this option will
+                        copy the associated template object (including all of it's settings) and
+                        will use the imported WAV file for the copied object. This option is only
+                        available when a template is associated. </p></li></ul></div>
+                  <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>You can multi-select entries in the list and change the object type or
+                      action to modify multiple entries simultaneously.</p></td></tr></table></div>
+                </td></tr><tr><td>
+                  <p>Object</p>
+                </td><td>
+                  <p>Shows the object name and type after it is imported.</p>
+                  <p>The object name color might be one of the following:</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>White</strong></span>, when a new object will be created.
+                      </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Yellow</strong></span>, when a new object will be created
+                        from the associated template. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Gray</strong></span>, when an existing object will be used
+                        for creation of the descendants. </p></li></ul></div>
+                  <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>In case of name conflict at the destination, the resulting object may have
+                      a different name. A sequence number will be appended if the target name
+                      already exists at the destination.</p></td></tr></table></div>
+                </td></tr><tr><td>
+                  <p>Message</p>
+                </td><td>
+                  <p>Shows additional information about the current situation. Review those
+                    messages to ensure the importation will done correctly.</p>
+                </td></tr><tr><td>
+                  <p>File Size</p>
+                </td><td>
+                  <p>The size in KB of the media files.</p>
+                </td></tr><tr><td>
+                  <p>Date Modified</p>
+                </td><td>
+                  <p>The date and time that the last changes were made on the media file.</p>
+                </td></tr><tr><td>
+                  <p>Template match mode</p>
+                </td><td>
+                  <p>Sets the match mode when using a template.</p>
+                  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                        <span class="bold"><strong>Match all</strong></span>: Tries to match each audio file
+                        and folder with a template object using the string distance and an
+                        assignment algorithm. Audio file names and template names do not needs to be
+                        equal. This method works well in most scenarios but could match unrelated
+                        elements if the audio file names are different from the template names. </p></li><li class="listitem"><p>
+                        <span class="bold"><strong>Perfect matches only</strong></span>: Matches only the
+                        audio file names and the template names that are the same. </p></li></ul></div>
+                </td></tr><tr><td>
+                  <p>Auto Add/Checkout on Source Control</p>
+                </td><td>
+                  <p>Determines if Wwise will automatically perform an Add or Checkout operation
+                    on the imported files with the source control.</p>
+                  <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is only visible when a source control plug-in has been selected in the Project Settings' <a class="xref" href="ch07s03s01.html#general_tab" title="General tab of the Project Settings dialog">General tab of the Project Settings dialog</a>.</p></td></tr></table></div>
+                </td></tr><tr><td>
+                  <p>
+                    <span class="bold"><strong>Custom Properties</strong></span> button </p>
+                </td><td>
+                  <p>Shows the Custom Properties editor dialog allowing to set custom properties
+                    on the imported objects.</p>
+                  <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This option is only available when custom properties are set in the
+                      Project Settings.</p></td></tr></table></div>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_import.png"></div>
+                </td><td>
+                  <p>Opens the Importing dialog where you can view the progress of the file
+                    import and stop the import if required.</p>
+                </td></tr><tr><td align="center">
+                  <div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+                </td><td>
+                  <p>Closes the Audio Importer dialog.</p>
+                </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+              <a class="xref" href="ch11s03.html" title="Importing media files">Importing media files</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s03s01.html" title="Importing media files for SFX">Importing media files for SFX</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s03s04.html" title="Importing media files for voice-overs">Importing media files for voice-overs</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s04.html" title="Replacing media files">Replacing media files</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s04.html#replacing_sound_voice_media_files" title="Replacing sound voice media files">Replacing sound voice media files</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s04.html#replacing_sfx_files" title="Replacing SFX files">Replacing SFX files</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch11s05.html" title="Managing file import issues">Managing file import issues</a>
+            </p></li><li class="listitem"><p>
+              <a class="xref" href="ch30s04.html" title="Populating tracks">Populating tracks</a>
+            </p></li></ul></div></div></div><HR></body></html>

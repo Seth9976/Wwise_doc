@@ -1,0 +1,237 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Query Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s07.html" title="Queries Tab"><link rel="prev" href="ch61s07.html" title="Queries Tab"><link rel="next" href="ch61s08.html" title="Project Explorer - Browser"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s07.html">Queries Tab</a></span> &gt; <span class="breadcrumb-node">Query Editor</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="query_editor"></a>Query Editor</h3></div></div></div><p>The Query Editor is where you create and run queries. A query is basically a request to
+    display a subset of information in your project. You can create very specific queries when
+    looking for particular objects, or more general queries to find all sound objects in a
+    particular platform, for example. The Query Editor also supports WAQL queries. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=waql_introduction.html" target="_blank">Understanding the Wwise Authoring Query Language (WAQL)</a> for details
+    on WAQL queries.</p><p>All project elements that match your query criteria are displayed in the Results list. When you select an entry in the Results list, it automatically gets loaded into the Transport Control and is ready for playback. You can right-click a selection of entries in the Results list to access a series of commands, such as Edit, Show in Multi Editor, Show in Schematic View, and Convert. You can double-click an entry in the Results list at any time to display it in the Property Editor. You can also drag project elements from the Results list to the Project Explorer. For example, you can drag one or more sound objects from the Results list into a Property Container or containers within the Project Explorer.</p><p>
+  </p><div class="itemizedlist"><p class="title"><b>Working with search results</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When the results of your search are displayed, you can select an entry to automatically
+        load it into the <a class="xref" href="ch59s10.html" title="Transport Control">Transport Control</a> for immediate
+        playback. If the corresponding view is not open, double-click the object.</p></li><li class="listitem"><p>You can also select one or more entries in the results list and then right-click to
+        display the shortcut menu commands. Many of these, including <span class="bold"><strong>Show in
+          Multi Editor</strong></span> (Ctrl+M), <span class="bold"><strong>Show in Schematic View</strong></span>
+        (Ctl+Shift+S), and <span class="bold"><strong>Convert</strong></span> (Shift+C), are common to a
+        variety of objects. There are, however, a few specific to the search and query views:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Refresh All Sizes</strong></span>: Refreshes all Preview Sizes in
+              the results list.</p></li><li class="listitem"><p><span class="bold"><strong>Refresh Size</strong></span>: Refreshes only the Preview Sizes of
+              the selected objects.</p></li><li class="listitem"><p><span class="bold"><strong>Remove From View</strong></span>: Removes the selected objects
+              from the current search's results list.</p></li></ul></div></li></ul></div><p>
+  </p><div class="itemizedlist"><p class="title"><b>To choose which columns (properties) are displayed:</b></p><p>When different types of objects appear in the list, all of the columns possible for those
+      objects are shown. </p><p>Both of the following methods open the <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a>.</p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right-click the list header and select <span class="bold"><strong>Configure
+          Columns</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>View Settings</strong></span> (Ctrl+Alt+H) in the title
+        bar.</p></li></ul></div><p>
+  </p><div class="orderedlist"><p class="title"><b>To view and edit effects:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click <span class="bold"><strong> View Settings</strong></span> (Ctrl+Alt+H) in the title
+        bar.</p></li><li class="listitem"><p>In the <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> list, navigate to Audio &gt; Effects, and
+        choose the effect properties to view and click OK.</p></li><li class="listitem"><p>An Effects folder appears under any appropriate object. Expand it to view the effects in
+        rows and their properties in columns. This displays the same properties as the <a class="xref" href="ch61s01s05s08.html" title="Effects tab: Containers hierarchy objects">Effects tab: Containers hierarchy objects</a>.</p></li></ol></div><p>
+  </p><div class="itemizedlist"><p class="title"><b>To edit properties of multiple items:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Modifying a property (slider, combo, or check box) sets the property to the same value
+        for all selected objects.</p></li><li class="listitem"><p>Holding the Alt key and dragging a slider offsets the selected objects' values instead
+        of setting them to an absolute value.</p></li></ul></div><p>
+</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_view_settings.png"></div>
+  </td><td>
+    <p>Click the View Settings icon in the upper right corner of the view.
+    </p>
+    <p>
+      The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> dialog opens. Select the individual properties for every possible Wwise object type that you want to display.
+    </p>
+  </td></tr><tr><td>
+              <p>Name</p>
+            </td><td>
+              <p>The name of the query.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_selector.png"></div>
+            </td><td>
+              <p>Opens the selector menu, where you can create a new query or select an existing one.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_clear_small.png"></div>
+            </td><td>
+              <p>Clears all criteria and search results from the Query Editor.</p>
+            </td></tr><tr><td>
+              <p>Notes</p>
+            </td><td>
+              <p>Any additional information used to describe the query.</p>
+            </td></tr><tr><td>
+            <p>Query From</p>
+          </td><td>
+            <p>The type of object or other project element for which you are searching, for
+              example, sound, Audio Bus, SoundBank, and so on. </p>
+            <p>Alternatively, you can select <span class="bold"><strong>WAQL Query</strong></span> from the
+              list to enable the WAQL Query field.</p>
+          </td></tr><tr><td>
+              <p>Start From</p>
+            </td><td>
+              <p>The location in the project hierarchy where your query will begin.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+            </td><td>
+              <p>Opens the Project Explorer - Browser dialog where you can navigate to the location where you want your query to begin.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_reset_small.png"></div>
+            </td><td>
+              <p>Resets the Start From Here location.</p>
+            </td></tr><tr><td align="left">WAQL Query</td><td>
+            <p>The WAQL query you would like to execute. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=waql_introduction.html" target="_blank">Understanding the Wwise Authoring Query Language (WAQL)</a>
+              for details on WAQL queries.</p>
+            <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This field is only available when <span class="bold"><strong>WAQL Query</strong></span> is
+                selected in the <span class="bold"><strong>Query From</strong></span> list.</p></td></tr></table></div>
+          </td></tr><tr><td>
+              <p>Platform</p>
+            </td><td>
+              <p>The platform or platforms that you want to include in your search.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_run_query.png"></div>
+            </td><td>
+              <p>Searches through the project for the objects and other project elements that meet your search criteria.</p>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Criteria</strong></span></p>
+            </td></tr><tr><td>
+              <p>Browser</p>
+            </td><td>
+              <p>A list of criteria on which you can base your query, such as Name or Output Bus.</p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+              <p>Criteria</p>
+            </td><td>
+              <p>A list of criteria you have selected for your query.</p>
+            </td></tr><tr><td>
+              <p>Operator</p>
+            </td><td>
+              <p>The logical operator used when your query contains multiple criteria. The following operators are available:</p>
+              <p>
+                <span class="bold"><strong>And</strong></span> for items that match all criteria.
+              </p>
+              <p>
+                <span class="bold"><strong>Or</strong></span> for items that match at least one criteria.
+              </p>
+            </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+              <p>Name</p>
+            </td><td>
+              <p>The name and category of the criterion on which you are basing your search.</p>
+            </td></tr><tr><td>
+              <p>Condition</p>
+            </td><td>
+              <p>The specific details of the criterion on which you are basing your search.</p>
+              <p>
+                For some criteria, you can use a wildcard operator, which is the asterisk (*) in Wwise, to replace part of a word when you are trying to find different project elements that contain, start with, or end with certain letters or numbers.
+              </p>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Results</strong></span></p>
+            </td></tr><tr><td align="center">
+      <div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+    </td><td>
+      <p>
+        Click the <span class="bold"><strong>Configure Columns</strong></span> shortcut (right-click) option from the column header band.
+      </p>
+      <p>
+        The <a class="xref" href="ch61s12s06.html" title="Object Property Settings">Object Property Settings</a> dialog opens. Select the individual properties for every possible Wwise object type that you want to display as a column.
+      </p>
+    </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+        <p>
+          Common Columns: If the following properties are selected in the Object Property Settings, they are always present as columns in the results area. Other columns display according to which types of objects are listed in the Results area.
+        </p>
+      </td></tr><tr><td>
+        <p>Name</p>
+      </td><td>
+        <p>The name of the object or project element that matches your search criteria.</p>
+      </td></tr><tr><td>
+        <p>Path</p>
+      </td><td>
+        <p>The location in the project hierarchy of the object or project element.</p>
+      </td></tr><tr><td>
+        <p>Notes</p>
+      </td><td>
+        <p>Defines the notes or comments specified for the object or project element.</p>
+      </td></tr><tr><td>
+		<p>Type</p>
+	</td><td>
+		<p>The type of object or project element included in your results. For example: sound, bus, SoundBank, Query, Effect, and so on.</p>
+		<p>Default value: All Objects</p>
+	</td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td>
+              <p>Platform</p>
+            </td><td>
+              <p>The platform on which the object or project element is located.</p>
+            </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+        <p>Size Previews: All the Size Preview values are calculated when opening the view. They will, however, auto-refresh when there are fundamental changes, such as changing the platform.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Any fields marked as "-" are either incalculable or inapplicable to the object in question.</p></td></tr></table></div>      
+      </td></tr><tr><td>
+        <p>Total Size</p>
+      </td><td>
+        <p>
+          The sum of the element's Media Size and Structure Size, which approximates the total size that they will take up in a SoundBank.
+        </p>
+      </td></tr><tr><td>
+        <p>Media Size</p>
+      </td><td>
+        <p>An approximation of the total size that a Wwise object's media files, including converted source files, Events, and Effects, will take up within a SoundBank.</p>
+        <p>
+          </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For Effects requiring a license, their size value is not included unless the appropriate license is entered.</p></td></tr></table></div><p>
+        </p>
+        <p>
+          The parent object will only display the size of the normally smaller audio buffer files if its <a class="link" href="ch22s01.html#streaming_media" title="Streaming media">media files are set to stream</a> with <span class="bold"><strong>Zero latency</strong></span>. No size displays for the parent object if its media files stream without <span class="bold"><strong>Zero latency</strong></span>.
+        </p>
+        <div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>
+            There are many situations where the media size of an object has changed but the view is not updated. To ensure that all sizes are up to date, use the <span class="bold"><strong>Refresh All Sizes</strong></span> shortcut menu option. To update one or several specific items, select them and use the <span class="bold"><strong>Refresh Size</strong></span> shortcut menu option.
+          </p></td></tr></table></div>
+      </td></tr><tr><td>
+        <p>Object Size</p>
+      </td><td>
+        <p>An approximation of the size Wwise objects, excluding the size of sound files on disk, will take up within a SoundBank.</p>   
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Actions do not have any size. And objects that are only in the Init bank, such as Game Syncs, are not included.</p></td></tr></table></div>
+      </td></tr><tr><td>
+        <p>Structure Size</p>
+      </td><td>
+        <p>An approximation of the size an object (Object Size) and its structural descendants will take up within a SoundBank.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><tbody><tr><td colspan="2">
+    <p>Other Columns: Apart from the columns listed above, many object-type-specific properties can be added as columns. These will display according to your results, when the query returns a configured column's property.</p>
+  </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/btn_copy_to_clipboard.png"></div>
+            </td><td>
+              <p>Copies query results to the Windows clipboard so you can paste them into another application.</p>
+            </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch54s03.html#creating_query" title="Creating queries">Creating queries</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch54s03.html#defining_and_running_query" title="Defining and running queries">Defining and running queries</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch54s03.html#creating_advanced_queries_using_criteria_groups" title="Creating advanced queries using criteria groups">Creating advanced queries using criteria groups</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch54s03.html#using_factory_defined_queries" title="Using factory-defined queries">Using factory-defined queries</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch54s03.html#deleting_query" title="Deleting queries">Deleting queries</a>
+        </p></li></ul></div></div><HR></body></html>

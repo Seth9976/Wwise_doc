@@ -1,0 +1,85 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Voice Inspector</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63.html" title="Profiler Views"><link rel="prev" href="ch63s03s19.html" title="API Calls"><link rel="next" href="ch63s05.html" title="Audio Object 3D Viewer"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-node">Voice Inspector</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="voice_inspector"></a>Voice Inspector</h2></div></div></div><p>The Voice Inspector provides detailed information about Volume, LPF, HPF and DSF (the "value") for selected voice paths processed by a sound. The information displays the values of all contributors to the hierarchy, from the source to the Main Audio Bus, and the runtime value modifications, such as Event Actions, transitions, distance attenuation, and cone angles.</p><p>To load the view's information, you must have captured information and selected a point in time from the capture. The <a class="link" href="ch63s04.html#panel_voices_graph">Voice Graph</a> and the <a class="link" href="ch63s04.html#panel_contribution">Contribution List</a> panels then display the corresponding voice information.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Two types of data must be profiled: Voices and Voice Inspector. If the former is not enabled, both the <a class="xref" href="ch63s09.html" title="Voice Monitor">Voice Monitor</a> and the <a class="xref" href="ch63s04.html" title="Voice Inspector">Voice Inspector</a> will be empty. If the latter is not enabled, then the Voice Inspector will only display the following message: 'This view needs "Voice Inspector Data". Enable it in the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a>.' Conveniently, the Profiler Settings view can be opened by clicking either the link in the message or the View Settings button in the titlebar of the view.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+              <p>
+                </p><div class="mediaobject"><img src="Images/btn_display_options_dots.png"></div><p>
+              </p>
+            </td><td>
+              <p>Click the View Settings icon in the upper right corner of the view to prompt the <a class="xref" href="ch40s07s01.html" title="Profiler Settings dialog">Profiler Settings dialog</a>, where you can specify the type of data to capture. You must enable the Voice Inspector Data to view information in the Voice Inspector.</p>
+              </td></tr><tr><td colspan="2"><a name="panel_voices_graph"></a>
+              <p>Voice Graph</p>
+              <p>This panel displays the same content as the <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a> tab of the Advanced Profiler, namely the optimized bus hierarchy as it exists in the lower engine at runtime for each of the voices or playback instances managed by the sound engine. It does not, however, have object-specific or text-based filters.</p>
+             </td></tr><tr><td>
+                <p>View</p>
+              </td><td>
+                <p>Click the 
+                  <span class="bold"><strong>View</strong></span>
+                  select button to show or hide from the graph the following elements:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Game Objects</strong></span>: Displays or hides the Game Objects in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Events</strong></span>: Displays or hides the Events in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Targets</strong></span>: Displays or hides the Targets in the graph view.</p><p>A Target refers to the object targeted for playing by the Event. The playing of the Target object triggers its child sources. In the case where a Random Container is the Target, enabling this view option will show both the Random Container targeted by the Event and the resulting source object.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Virtual Voices</strong></span>: Displays or hides the virtual voices in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Devices</strong></span>: Displays or hides the final output devices in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Volumes</strong></span>: Displays or hides the Volume values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>LPF</strong></span>: Displays or hides the LPF values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>HPF</strong></span>: Displays or hides the HPF values in the graph view.</p></li><li class="listitem"><p>
+                      <span class="bold"><strong>DSF</strong></span>: Displays or hides the DSF values in the graph view.</p></li></ul></div>
+              </td></tr><tr><td>
+                <p>Graph view</p>
+              </td><td>
+                <p>Displays the structure and contents of each voice generated by the sound engine. For more information, see the 
+                  <a class="xref" href="ch63s03s01.html#graph_view" title="Graph view">Graph view</a> section of the Voices Graph tab reference documentation.</p>
+              </td></tr><tr><td colspan="2"><a name="panel_contribution"></a>
+              <p><span class="bold"><strong>Contribution List</strong></span></p>
+             </td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td>
+                <p>Name</p>
+              </td><td>
+                <p>The name of the objects which make up the final values of the selected voice.</p>
+                <p>The first row always displays <span class="bold"><strong>&#931; Final Value</strong></span> for the sum total of the Volume, LPF, HPF and DSF of the selected voice.</p>
+				<p>The child rows have nodes of Wwise objects, such as busses, containers, and sounds. Further child object details can be found under the nodes, covering things such as Attenuations and their emitter-listener pairs. The final child level covers the name of object properties, such as Bus Volume and Voice Volume, which have been changed by a Driver.</p>
+              </td></tr><tr><td>
+                <p>Driver</p>
+              </td><td>
+                <p>The cause of a possible change in the Final Value for the voice's Volume, LPF, HPF or DSF. It might be a game parameter or a Wwise element (interpreted in the broadest sense to cover an object, property, or setting).</p>
+                <div class="itemizedlist"><p class="title"><b>Possible Drivers:</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Music Segment Envelope</strong></span> (If a Music Track has volume curves.)</p></li><li class="listitem"><p><span class="bold"><strong>Background Music Mute</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Cone Attenuation</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Distance Attenuation</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Ducking</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Events/Actions</strong></span> (Summary of Set Volume Actions&#8212;or LPF or HPF.)</p></li><li class="listitem"><p><span class="bold"><strong>Fade in/out</strong></span> (For all fade-in/out due to Events.)</p></li><li class="listitem"><p><span class="bold"><strong>HDR Gain</strong></span> (When an HDR window changes the volume.)</p></li><li class="listitem"><p><span class="bold"><strong>Live Edit</strong></span> (When the user makes a modification while connected to a game.)</p></li><li class="listitem"><p><span class="bold"><strong>Modulator</strong></span> (Shows the Modulator name and icon&#8212;can be LFO, Time, or Envelope.)</p></li><li class="listitem"><p><span class="bold"><strong>Mute</strong></span> (Shown when a Mute Action was triggered. Disappears with Unmute.)</p></li><li class="listitem"><p><span class="bold"><strong>Obstruction</strong></span> (Shown under Attenuation nodes.)</p></li><li class="listitem"><p><span class="bold"><strong>Occlusion</strong></span> (Shown under Attenuation nodes.)</p></li><li class="listitem"><p><span class="bold"><strong>Pause</strong></span> (Shown when a Pause Action was triggered. Disappears when Resumed.</p></li><li class="listitem"><p><span class="bold"><strong>Project Value</strong></span> (Value of the property as shown in the Property Editor. Used only when profiling locally&#8212;not connected.)</p></li><li class="listitem"><p><span class="bold"><strong>Randomizer</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>RTPC</strong></span> (Shows the RTPC name.)</p></li><li class="listitem"><p><span class="bold"><strong>SoundBank Value</strong></span> (Taken from the SoundBank.)</p></li><li class="listitem"><p><span class="bold"><strong>State</strong></span> (Shows the State Group name.)</p></li><li class="listitem"><p><span class="bold"><strong>Normalization</strong></span> (Either loudness normalization or downmix normalization.)</p></li><li class="listitem"><p><span class="bold"><strong>Switch</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Diffraction Tapering</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Smoothing</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Portal Transition</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Propagation Path Gain</strong></span> (Adjustments made by Spatial Audio, such as fading in/out contributing paths.)</p></li><li class="listitem"><p><span class="bold"><strong>Room Send</strong></span> (Game-Defined Auxiliary Sends set by Spatial Audio.)</p></li><li class="listitem"><p><span class="bold"><strong>SetEarlyReflectionsVolume</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>SetGameObjectAuxSendValues</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>SetGameObjectOutputBusVolume</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Transmission Loss</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>Diffraction</strong></span></p></li><li class="listitem"><p><span class="bold"><strong>User-Defined Sends</strong></span></p></li></ul></div>
+                <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>For further information on these drivers, see <a class="xref" href="ch40s10.html#voice_inspector_notes_on_properties" title="Notes on how certain properties are reported">Notes on how certain properties are reported</a>.</p></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Driver Value</p>
+              </td><td>
+                <p>The corresponding value of the particular driver.</p>
+              </td></tr><tr><td>
+                <p>Volume</p>
+              </td><td>
+                <p>The impact in dB, rounded to the nearest decimal, of the driver on the voice volume.</p>
+              </td></tr><tr><td>
+                <p>LPF</p>
+              </td><td>
+                <p>The % impact of the driver to establish a low-pass filter cutoff frequency on the voice. Refer to <a class="xref" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF value cutoff frequencies</a> for the corresponding frequency.</p>
+              </td></tr><tr><td>
+                <p>HPF</p>
+              </td><td>
+                <p>The % impact of the drivers to establish a high-pass filter cutoff frequency on the voice. Refer to <a class="xref" href="ch12s04s02s01.html#wwise_lpf_value_cutoff_frequencies" title="Wwise LPF and HPF value cutoff frequencies">Wwise LPF and HPF value cutoff frequencies</a> for the corresponding frequency.</p>
+              </td></tr><tr><td>
+                <p>DSF</p>
+              </td><td>
+                <p>The impact of the drivers to establish a dual-shelf filter gain (in dB) on the voice.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+          <a class="xref" href="ch40s10.html#setting_up_voice_inspector" title="Setting up the Voice Inspector:">Setting up the Voice Inspector:</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s10.html" title="Analyzing voices with the Voice Inspector">Analyzing voices with the Voice Inspector</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s10.html#voice_inspector_notes_on_properties" title="Notes on how certain properties are reported">Notes on how certain properties are reported</a>
+        </p></li><li class="listitem"><p>
+          <a class="xref" href="ch40s07s06.html" title="Filtering the Capture Log">Filtering the Capture Log</a>
+        </p></li></ul></div></div><HR></body></html>

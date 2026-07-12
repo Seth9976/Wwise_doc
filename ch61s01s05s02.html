@@ -1,0 +1,245 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>RTPC tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s05.html" title="Common tabs and categories: audio structures"><link rel="prev" href="ch61s01s05s01.html" title="Metadata tab"><link rel="next" href="ch61s01s05s02s01.html" title="Build Smart Pitch Curve"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s05.html">Common tabs and categories: audio structures</a></span> &gt; <span class="breadcrumb-node">RTPC tab</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="rtpc_tab"></a>RTPC tab</h4></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The RTPC tab for busses is exactly the same as the RTPC tab for
+						objects in the Containers hierarchy except that the Inclusion box does
+						not apply. The <a class="xref" href="ch61s05s01.html" title="Effect Plug-in Editor">Effect Plug-in Editor</a> has an identical RTPC tab to
+						the one for objects in the Containers hierarchy.</p></td></tr></table></div><p>The RTPC (Real-time Parameter Controls) tab allows you to map Wwise property
+					values to in-game parameters. The relationship between the two is represented by
+					an RTPC curve in a graph view, where the X axis represents the in-game parameter
+					and the Y axis represents the Wwise property. You can add control points along
+					each curve to define a detailed relationship between the two values. You can
+					choose to display one curve at a time or all together for purposes of
+					comparison. You can also copy curves from one property to another or from one
+					object to another.</p><p>The graph view has a Game Parameter cursor that you can scroll back and forth
+					to test the property value mappings during playback. You can also modify the
+					points in real time during playback. The graph view will also display a game
+					object's parameter values during playback. That is, for each displayed curve,
+					the corresponding parameter's values will be displayed per game object.</p><p>Below the graph, the RTPC tab is divided into two panels. The left panel is
+					where you create the RTPCs, reassign their Wwise property values, or change
+					their associated in-game parameter. The right panel (the RTPC side panel), like
+					a miniature variety of the <a class="xref" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>, allows
+					you to edit properties across multiple selected parameters, including modulator
+					ShareSets.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You must create at least one Game Parameter in the Game Syncs tab of the
+						Project Explorer before the options on the RTPC tab will be enabled.</p></td></tr></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>To bypass Game Parameter interpolation during playback, hold Ctrl while
+						using the Game Parameter cursor.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>General</p>
+              </th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+		<p>[name]</p>
+	</td><td>
+		<p>The name of the object.</p>
+	</td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/project_color_icon.png"></div>
+        <p>(Object Color)</p>
+    </td><td>
+        <p>Displays the object's color. Clicking the icon opens the color selector.</p>
+        <div class="mediaobject"><img src="Images/color_selector.png"></div>
+        <p>Select a color to apply it to the object. When you choose a color for an object, a
+            palette icon appears on the selected square, as well as a yellow triangle in the
+            lower-right corner, as shown.</p>
+        <p>To inherit the parent object's color, select the square at the far left of the color
+            selector.</p>
+    </td></tr><tr><td align="center">
+    <div class="mediaobject"><img src="Images/btn_mute_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_explicit_solo.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_mute.png"></div>
+    <div class="mediaobject"><img src="Images/btn_mute_solo_implicit_solo.png"></div>
+    <p>(Mute and Solo)</p>
+  </td><td>
+    <p>Controls the Mute and Solo states for the object and shows the implicit mute and solo states for the object.  </p>
+    <p>Muting an object silences this object for the current monitoring session. Soloing an object silences all the other objects in the project except this one.</p>
+    <p>A bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> indicates that the Mute or Solo state has been explicitly set for the object. A non-bold <span class="bold"><strong>M</strong></span> or <span class="bold"><strong>S</strong></span> with faded color indicates that the object's Mute or Solo state was implicitly set from another object's state.</p>
+    <p>Muting an object implicitly mutes the descendant objects.</p>
+    <p>Soloing an object implicitly mutes the sibling objects and implicitly solos the descendant and ancestor objects.</p>
+    <div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Hold the Ctrl key while clicking a solo button to exclusively solo the object for which the solo button is associated.</p></td></tr></table></div>
+    <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Mute and Solo are designed to be used for monitoring purposes only and are not persisted in the project or stored in the SoundBanks.</p></td></tr></table></div>
+  </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/btn_show_references_inactive.png"></div>
+        <div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+        <p>(Show references)</p>
+    </td><td>
+        <p>Indicates the number of elements in your project that contain direct references to the
+            object. The icon is displayed in orange when references to the object exist, and in gray
+            when no references exist. </p>
+        <p>Selecting the button opens the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> with the object's name
+            in the <span class="bold"><strong>References to:</strong></span> field.</p>
+    </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th colspan="2">
+									<p>RTPC</p>
+								</th></tr><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+									<p>(Graph View)</p>
+								</td><td>
+									<p>A graphical representation of the relationship between an
+										in-game parameter (X axis) and a property value in Wwise (Y
+										axis).</p>
+									<p>The graph view can display several curves
+										simultaneously.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+								</td><td>
+									<p>Zooms in towards the center of the graph view.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+								</td><td>
+									<p>Resets the graph view to the default zoom factor ratio of
+										1:1.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+								</td><td>
+									<p>Zooms out from the center of the graph view.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Coordinates</strong></span></p>
+								</td></tr><tr><td>
+									<p>X</p>
+								</td><td>
+									<p>The coordinate along the X axis of the selected control
+										point.</p>
+									<p>If more than one control point is selected, the field
+										displays a value of 0, so that you can increase or decrease
+										the value of all selected control points relative to their
+										current values. For example, if you select two control
+										points and type -5 in the X text box, both control points
+										will move to the left by 5 units.</p>
+								</td></tr><tr><td>
+									<p>Y</p>
+								</td><td>
+									<p>The coordinate along the Y axis of the selected control
+										point.</p>
+									<p>If more than one control point is selected, the field
+										displays a value of 0, so that you can increase or decrease
+										the value of all selected control points relative to their
+										current values. For example, if you select two control
+										points and type -5 in the Y text box, both control points
+										will move down by 5 units.</p>
+								</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_selector.png"></div>
+									<p>(Selector)</p>
+								</td><td>
+									<p>Opens the Selector menu where you can select the Wwise
+										property that you want to map to an in-game
+										parameter.</p>
+									<p>Low-pass and high-pass filter parameters for user defined
+										auxiliary sends and game-defined auxiliary sends that do not
+										appear in the general settings can be selected for RTPC
+										control.</p>
+								</td></tr><tr><td align="center">
+	<div class="mediaobject"><img src="Images/pin_icon.png"></div>
+	<div class="mediaobject"><img src="Images/unpin_icon.png"></div>
+	<p>(Pinned/Unpinned)</p>
+</td><td>
+									<p>Determines whether the RTPC curve is displayed in the
+										graph view.</p>
+									<p>When the Pin icon is selected, the RTPC curve will be
+										displayed in the graph view whether the curve is selected or
+										not.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="13"><tr style="height: 13px"><td><img src="Images/Color_Red.png" width="13"></td></tr></table></div>
+									<p>(Color block)</p>
+								</td><td>
+									<p>Displays the color of the RTPC curve in the graph view.
+										Each new curve is assigned a different color.</p>
+									<p>The relative properties (volume, pitch, Low-Pass Filter,
+										etc) are always assigned the same color.</p>
+								</td></tr><tr><td>
+									<p>Y axis</p>
+								</td><td>
+									<p>The Wwise property assigned to the Y axis.</p>
+									<p>To change the Wwise property assigned to the Y axis, click
+										the Wwise Property Display button and select a new
+										property.</p>
+								</td></tr><tr><td>
+									<p>X axis</p>
+								</td><td>
+									<p>The Game Parameter, MIDI controller, or modulator assigned
+										to the X axis.</p>
+									<p>Expand the list to select a different X axis
+										assignment.</p>
+								</td></tr><tr><td>
+									<p>Notes</p>
+								</td><td>
+									<p>Any additional information about the RTPC.</p>
+								</td></tr><tr><td colspan="2" align="center"><a name="rtpc_side_panel"></a>
+									<p><span class="bold"><strong>RTPC Side Panel</strong></span></p>
+								</td></tr><tr><td>
+									<p>[name field]</p>
+								</td><td>
+									<p>An editable text field which displays the name of the
+										selected RTPC object (X Axis).</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_show_references_active.png"></div>
+								</td><td>
+									<p>The References button displays the number of references in
+										the project to the currently selected RTPC object.</p>
+									<p>Click the button to prompt the <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a> loaded with all the project
+										objects/elements that directly reference the selected RTPC
+										object.</p>
+									<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The button will be grayed out and display "0" when
+											selecting multiple RTPC objects.</p><p>The display maximum is 999.In the uncommon
+											circumstance of 1,000 or more references, the number
+											will not increase but all the objects/elements will show
+											up in the Reference view.</p></td></tr></table></div>
+								</td></tr><tr><td colspan="2">
+									<p>The Name and Value columns of the RTPC side panel display
+										all the properties and corresponding values (which are
+										directly editable) of the currently selected RTPC objects (X
+										Axis). Where multiple selected RTPCs have the same property
+										but with different values, a dash will appear.</p>
+									<div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Even if a dash appears in a property value, you can
+											still edit it. Your changes will, however, apply to all
+											the applicable selected RTPCs.</p></td></tr></table></div>
+									<p>Double-click any RTPC object to open its editor view. With
+										the exception of the Simulation Value property, described
+										below, refer to the objects' respective editor help pages
+											(<a class="xref" href="ch61s04s03s01.html" title="Property Editor: Game Parameter">Property Editor: Game Parameter</a> or
+											<a class="xref" href="ch61s05s04.html" title="Modulator Editor">Modulator Editor</a>) for property
+										information.</p>
+								</td></tr><tr><td>
+		<p>Simulation Value</p>
+	</td><td>
+		<p>
+			Sets the current value of the selected Game Parameter, thereby positioning the graph&#8217;s Game Parameter cursor, solely for simulation within the authoring tool. Its field and slider range is set in the Game Parameter&#8217;s Property Editor; however, this property only appears in RTPC sections, such as the 
+			<a class="link" href="ch61s01s05s02.html#rtpc_side_panel">RTPC side panel</a>
+			, and the 
+			<a class="link" href="ch61s12s03.html" title="Multi Editor">Multi Editor</a>
+			.
+		</p>
+		<p>Default value: 50</p>
+	</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+							<a class="xref" href="ch19s03s01.html" title="Assigning Wwise properties to Game Parameters">Assigning Wwise properties to Game Parameters</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s03s02.html" title="Mapping values in the RTPC graph">Mapping values in the RTPC graph</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s03s04.html" title="Removing RTPCs from the list">Removing RTPCs from the list</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s02.html#creating_game_parameter" title="Creating Game Parameters">Creating Game Parameters</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch19s07.html" title="Viewing game objects">Viewing game objects</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch50s01.html" title="Changing the display of the graph view">Changing the display of the graph view</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch50s02.html#adding_control_points" title="Adding control points">Adding control points</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch50s02.html#selecting_control_points" title="Selecting control points">Selecting control points</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch50s02.html#moving_control_points" title="Moving control points">Moving control points</a>
+						</p></li><li class="listitem"><p>
+							<a class="xref" href="ch50s02.html#deleting_control_points" title="Deleting control points">Deleting control points</a>
+						</p></li></ul></div></div><HR></body></html>

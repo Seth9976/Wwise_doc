@@ -1,0 +1,60 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Loudness Meter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch59.html" title="Views"><link rel="prev" href="ch59s04.html" title="Audio Device Meter"><link rel="next" href="ch59s05s01.html" title="Loudness Meter Settings"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch59.html">Views</a></span> &gt; <span class="breadcrumb-node">Loudness Meter</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="loudness_meter"></a>Loudness Meter</h2></div></div></div><p>The Loudness Meter provides a standard way to measure the loudness level and loudness range of an audio signal. It is based on the following standards:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>EBU R128</strong></span>
+          </p></li><li class="listitem"><p>
+            <span class="bold"><strong>ITU-R BS.1770-4</strong></span>
+          </p></li></ul></div><p>
+        For more information about the loudness, refer to <a class="xref" href="ch35s11s02.html" title="Monitoring the signal level">Monitoring the signal level</a>.
+      </p><p>The Loudness Meter displays the following elements:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+                <p>Momentary</p>
+              </td><td>
+                <p>Loudness level calculated using a sliding rectangular time window of length 0.4 seconds. The measurement is not gated.
+                </p>
+                  <p>Depending on the Show Live Data status on the toolbar, the momentary value can be the current measured value or the value at the time cursor position.
+                  </p>
+
+              </td></tr><tr><td>
+                <p>Short-term</p>
+              </td><td>
+                <p>Loudness level calculated using a sliding rectangular time window of length 3 seconds. The measurement is not gated.</p>
+                  <p>Depending on the Show Live Data status on the toolbar, the short-term value can be the current measured value or the value at the time cursor position.
+                  </p>
+              </td></tr><tr><td>
+                <p>Momentary and short-term graph</p>
+              </td><td>
+                  <p>Graph of the momentary and short-term values. The graph is only active when the profiler Capture is on. Use the Start Capture button on the Wwise toolbar to start collecting momentary short-term values.
+                    </p>
+                  <p>When a capture session is present, it is possible to click the graph to inspect the momentary and short-term values in the past. Changing the time cursor will also affect other profiling views.
+                  </p>
+              </td></tr><tr><td>
+                <p>Measure</p>
+              </td><td>
+                <p>
+                  Starts or stops the integrated loudness measurement. When activated, the <span class="bold"><strong>integrated loudness</strong></span> and the <span class="bold"><strong>loudness range</strong></span> are being measured. The Measure status does not have an impact on the momentary or short-term loudness.
+                </p>
+              </td></tr><tr><td>
+                <p>Reset</p>
+              </td><td>
+                <p>
+                  Resets the current measurement. This is equivalent to clicking <span class="bold"><strong>Measure</strong></span> twice to start and stop the measurement. Resetting the measurement resets the integrated loudness and the loudness range.
+                </p>
+              </td></tr><tr><td>
+                <p>Integrated</p>
+              </td><td>
+                <p>
+                  Loudness level calculated during the measurement time. The integrated loudness uses gating (all values below -70 LUFS are ignored) and is a long term measurement (an integration over the entire measurement time) based on the momentary loudness. The measurement starts when clicking the <span class="italics">Measure</span> button, and stops when clicking it again. Clicking the <span class="italics">Reset</span> button restarts the measurement.
+                </p>
+              </td></tr><tr><td>
+                <p>Loudness Range (LRA)</p>
+              </td><td>
+                <p>Loudness range is a statistic calculation of the material's dynamic range corresponding to the integrated loudness measurement using gating (all values below -70 LUFS are ignored). Loudness range measures the variation of loudness on a macroscopic time-scale, in units of LU (Loudness Unit).</p>
+                <p>
+                  The measurement starts when clicking the <span class="strong"><strong>Measure</strong></span> button, and stops when clicking it again. Clicking the <span class="strong"><strong>Reset</strong></span> button restarts the measurement.
+                </p>
+              </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="loudness_meter_monitoring"></a>Loudness Meter Monitoring</h3></div></div></div><p>The following loudness levels can be captured in time directly from the Loudness Meter, or in the Performance Monitor:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Momentary Loudness Level - Instance A</p></li><li class="listitem"><p>Momentary Loudness Level - Instance B</p></li><li class="listitem"><p>Momentary Loudness Level - Instance C</p></li><li class="listitem"><p>Momentary Loudness Level - Instance D</p></li><li class="listitem"><p>Short-Term Loudness Level - Instance A</p></li><li class="listitem"><p>Short-Term Loudness Level - Instance B</p></li><li class="listitem"><p>Short-Term Loudness Level - Instance C</p></li><li class="listitem"><p>Short-Term Loudness Level - Instance D</p></li></ul></div><p>
+          For more information, refer to <a class="xref" href="ch35s11s02.html#measuring_loudness_in_wwise" title="Measuring the loudness in Wwise">Measuring the loudness in Wwise</a>.
+        </p></div></div><HR></body></html>

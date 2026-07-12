@@ -1,0 +1,34 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Searching for elements within your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch54.html" title="Working with searches, queries, and references"><link rel="prev" href="ch54.html" title="Working with searches, queries, and references"><link rel="next" href="ch54s02.html" title="Finding the project elements that reference a particular object"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch54.html">Working with searches, queries, and references</a></span> &gt; <span class="breadcrumb-node">Searching for elements within your project</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="searching_for_elements_within_project"></a>Searching for elements within your project</h2></div></div></div><p>You can find any element in your project both quickly and easily using the Search tool. The Search tool is a simple text-based search. You simply have to type some text in the Search field and Wwise will search through the entire project to find all elements with matching Names or Notes. If any matches are found, they are automatically displayed in the Results list. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can also type a WAQL query in the Search field by prefixing the query with the $ symbol. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=waql_introduction.html" target="_blank">Understanding the Wwise Authoring Query Language (WAQL)</a> for details.</p></td></tr></table></div><p>The Search tool tries to create a match by looking at the start of each new word in the Name or Notes field. It is important to understand that throughout Wwise, words are considered separate if they contain non-alphanumeric characters, such as spaces, underscores, dashes, and so on, or a change in case. The Search tool takes this into consideration when looking for matches. The following table demonstrates a few different examples:</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th>
+						<p>Search Field Text</p>
+					</th><th>
+						<p>Match</p>
+					</th><th>
+						<p>No Match</p>
+					</th></tr></thead><tbody><tr><td>
+						<p>Big</p>
+					</td><td>
+						<p>Big_Car</p>
+						<p>Big Car</p>
+						<p>Bigcar</p>
+						<p>VeryBigCar</p>
+					</td><td>
+						<p>Verybigcar</p>
+					</td></tr><tr><td>
+						<p>Small Car</p>
+					</td><td>
+						<p>Small Fast Car</p>
+						<p>Small_Car</p>
+						<p>Very small car</p>
+					</td><td>
+						<p>Smallcar</p>
+						<p>Verysmallcar</p>
+					</td></tr><tr><td>
+						<p>mediumcar</p>
+					</td><td>
+						<p>mediumcar</p>
+						<p>VeryMediumcar</p>
+						<p>Very_Mediumcar</p>
+					</td><td>
+						<p>Medium</p>
+						<p>Car</p>
+					</td></tr></tbody></table></div><p>The Search tool supports "!" as a NOT operator. Including this operator before any search field text excludes all results that match the text. For example, "!Big" would exclude all items listed as a match for Big in the preceding table.</p><p>You can use the List View for performing searches, but you can also do a quick search using the Search field, which is located on the right side of the Wwise toolbar.  From the list of results, you can load a project element into its corresponding editor. When using the List View, you can also right-click a selection of entries in the list to perform a variety of tasks, including multi-edit, convert, and delete. </p><div class="orderedlist"><p class="title"><b>To search for elements within your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>In the Wwise toolbar, type the project element's Name, Notes, or a portion thereof, in the Search field. (Press Ctrl+Shift+F anywhere in Wwise to bring the keyboard focus to the Search field.)</p><p>As you type, a list of project elements with matching Names/Notes is displayed below the Search field.</p><div class="mediaobject"><img src="Images/Search_Results.png"></div></li><li class="listitem"><p>Do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Click <span class="bold"><strong>Open Results in List View</strong></span> to display the complete list of results in the List View.</p></li><li class="listitem"><p>Click <span class="bold"><strong>Open Results in Schematic View</strong></span> to display the complete list of results in the Schematic view.</p></li><li class="listitem"><p>Click the project element you were looking for to load it into its corresponding Editor.</p></li><li class="listitem"><p>Use the arrow keys to scroll through the Results list and then press <span class="bold"><strong>Enter</strong></span> to load the selected element into its corresponding Editor.</p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If the results are displayed in the List View, you can select an entry to automatically load it into the Transport Control for immediate playback. You can also right-click a selection of entries in the list to perform a variety of tasks, including multi-edit, convert, and delete.</p></td></tr></table></div></li><li class="listitem"><p>Click the <span class="bold"><strong>x</strong></span> in the Search field to clear the entry and the results listed in the columns below.</p></li></ol></div></div><HR></body></html>

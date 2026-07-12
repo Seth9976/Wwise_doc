@@ -1,0 +1,181 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Position Editor (3D Automation) Interface Elements</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch61s01s08.html" title="Position Editor (3D Automation)"><link rel="prev" href="ch61s01s08.html" title="Position Editor (3D Automation)"><link rel="next" href="ch61s01s08s02.html" title="Position Editor (3D Automation) Keyboard Shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch61.html">Project Explorer</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01.html">Audio tab</a></span> &gt; <span class="breadcrumb-link"><a href="ch61s01s08.html">Position Editor (3D Automation)</a></span> &gt; <span class="breadcrumb-node">Position Editor (3D Automation) Interface Elements</span></div><div class="sect3"><div class="titlepage"><div><div><h4 class="title"><a name="position_editor_ui_elements"></a>Position Editor (3D Automation) Interface Elements</h4></div></div></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+						<p>Name</p>
+					</td><td>
+						<p>The name of the Wwise object to which the propagation behaviors will be applied.</p>
+					</td></tr><tr><td>
+						<p>Notes</p>
+					</td><td>
+						<p>Additional information about the object or propagation behaviors that have been applied.</p>
+					</td></tr><tr><td colspan="2">
+						<p>Paths</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_new.png"></div>
+					</td><td>
+						<p>Creates a new animation path in the list.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_delete.png"></div>
+					</td><td>
+						<p>Deletes the selected animation path from the list.</p>
+					</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+						<p>Path Name</p>
+					</td><td>
+						<p>The name of the animation path.</p>
+					</td></tr><tr><td>
+						<p>Duration</p>
+					</td><td>
+						<p>The duration of the animation path.</p>
+					</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>Random Range</strong></span></p>
+					</td></tr><tr><td>
+						<p>Horizontal</p>
+					</td><td>
+						<p>Randomizes the horizontal position of a path each time it is played. This value acts as a +/- offset to the X and Y coordinate values of each point, creating a range of possible values. At runtime, Wwise picks a random value from within these ranges to specify the horizontal position of the control point.</p>
+						<p>
+              Default value: 0 <br>Range: 0 to 100 <br>Units: Percentage of max distance value
+						</p>
+					</td></tr><tr><td>
+						<p>Vertical</p>
+					</td><td>
+						<p>Randomizes the vertical position of your path each time it is played. This value acts as a +/- offset to the Z coordinate value of each point, creating a range of possible values. At runtime, Wwise picks a random value from within this range to specify the vertical position of the control point.</p>
+						<p>
+              Default value: 0 <br>Range: 0 to 100 <br>Units: Percentage of max distance value
+						</p>
+						<p>The default vertical position (Z value) of each point along your path is 0.</p>
+					</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>Play Type</strong></span></p>
+					</td></tr><tr><td>
+						<p>Sequence</p>
+					</td><td>
+						<p>Plays the animation paths in a sequential order from the start of the list to the end. When the last path is played, it returns to the beginning of the list.</p>
+					</td></tr><tr><td>
+						<p>Random</p>
+					</td><td>
+						<p>Plays the animation paths in a random order until all paths have been played.</p>
+					</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>Play Mode</strong></span></p>
+					</td></tr><tr><td>
+						<p>Continuous</p>
+					</td><td>
+						<p>Plays the animation paths one after the other until all paths have been played.</p>
+					</td></tr><tr><td>
+						<p>Step</p>
+					</td><td>
+						<p>Plays a single animation path from the list.</p>
+					</td></tr><tr><td>
+		<p>Use new path for each sound</p>
+	</td><td>
+		<p>Forces a new path to be used each time a new sound is played regardless of whether the sound is triggered by a play event.</p>
+		<p>When selected, this option allows you to use a different path for each sound played within a continuous container. If this option is not selected, each sound within a continuous container will use the same path.</p>
+		<p>This option is only available when the play mode of the animation paths is set to Step.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+						<p>Loop</p>
+					</td><td>
+						<p>Determines whether the animation paths will be played indefinitely. When selected, the entire path list is played indefinitely. When unselected, the entire path list is played only once.</p>
+						<p>This option is only available when the Continuous option is selected.</p>
+					</td></tr><tr><td>
+		<p>Transition time</p>
+	</td><td>
+		<p>Determines the amount of time that passes between the end of one path and the start of another.</p>
+		<p>This option is only available when the Continuous option is selected.</p>
+		<p>Default value: 1</p>
+	</td></tr><tr><td>
+						<p>Graph view</p>
+					</td><td>
+						<p>
+							A visual 2D representation of the position of the control points within a horizontal 3D sound or motion field.  The graph view displays animation paths and allows you to simulate 3D attenuation along a horizontal axis by creating radius and cone-shaped boundaries.
+						</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+					</td><td>
+						<p>Zooms in towards the center of the graph view.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+					</td><td>
+						<p>Resets the graph view to the default zoom factor ratio of 1:1.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+					</td><td>
+						<p>Zooms out from the center of the graph view.</p>
+					</td></tr><tr><td>
+		<p>Pan Left-Right (3D)</p>
+	</td><td>
+		<p>The coordinate along the X axis of the currently selected control point. The X coordinate is measured as a percentage of the attenuation max distance; therefore, the value will always fall between 0 and +/- 100, regardless of the actual distance value (which could even be 0).</p>
+		<p>If more than one control point is selected, the field displays a value of 0. This way, you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the X text box, both control points will move to the left by 5 percentage units.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Pan Front-Rear (3D)</p>
+	</td><td>
+		<p>The coordinate along the Y axis of the currently selected control point. The Y coordinate is measured as a percentage of the attenuation max distance; therefore, the value will always fall between 0 and +/- 100, regardless of the actual distance value (which could even be 0).</p>
+		<p>If more than one control point is selected, the field displays a value of 0. This way, you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the Y text box, both control points will move down by 5 percentage units.</p>
+		<p>Default value: 35</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Pan Up-Down (3D)</p>
+	</td><td>
+		<p>The coordinate along the Z axis of the currently selected control point. The Z coordinate is measured as a percentage of the attenuation max distance; therefore, the value will always fall between 0 and +/- 100, regardless of the actual distance value (which could even be 0).</p>
+		<p>If more than one control point is selected, the field displays a value of 0. This way, you can increase or decrease the value of all selected control points relative to their current values. For example, if you select two control points and type -5 in the Z text box, both control points will move down by 5 percentage units.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+						<p>From center</p>
+					</td><td>
+						<p>The actual distance in Wwise units between the selected control point and the center of the radius.</p>
+						<p>This field is read-only and is only enabled when the Radius option is selected.</p>
+					</td></tr><tr><td colspan="2">
+						<p><span class="bold"><strong>Display Options</strong></span></p>
+					</td></tr><tr><td>
+						<p>Show Radius</p>
+					</td><td>
+						<p>Displays a representation of the attenuation max distance radius in the graph view. The radius is shown as a percentage of the max distance value.</p>
+						<p>This option is not available if you aren't using any attenuation.</p>
+					</td></tr><tr><td>
+						<p>Show Cone</p>
+					</td><td>
+						<p>Displays a representation of the sound cone angles (inner and outer) in the graph view.</p>
+						<p>This option is not available if you aren't using cone-based attenuation.</p>
+					</td></tr><tr><td>
+						<p>(Timeline)</p>
+					</td><td>
+						<p>A visual representation of the control points seen as a measure of time. The timeline displays time using the mm:ss:ms time format.</p>
+						<p>The first control point key on the timeline cannot be deleted.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_in.png"></div>
+					</td><td>
+						<p>Zooms in towards the center of the timeline by a factor of 50%.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_reset.png"></div>
+					</td><td>
+						<p>Resets the timeline to the default zoom factor ratio of 1:1.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_zoom_out.png"></div>
+					</td><td>
+						<p>Zooms out from the center of the timeline.</p>
+						<p>The timeline can only be zoomed out to the length of the timeline.</p>
+					</td></tr><tr><td>
+						<p>Linear mode</p>
+					</td><td>
+						<p>Determines if control points are evenly spaced along the timeline.</p>
+						<p>If selected, control points will always be spaced evenly along the timeline producing a constant motion from key frame to key frame. If unselected, control points can be placed anywhere on the timeline, which can create the effect of speeding up or slowing down between key frames.</p>
+					</td></tr><tr><td>
+						<p>Key</p>
+					</td><td>
+						<p>Displays the current time of the selected control point.</p>
+						<p>This option is read-only in Linear mode.</p>
+					</td></tr><tr><td align="center">
+						<div class="mediaobject"><img src="Images/btn_configure_timeline_dots.png"></div>
+					</td><td>
+						<p>
+              Opens the <a class="xref" href="ch61s01s08s03.html" title="Timeline Configuration">Timeline Configuration</a> dialog where you can define certain properties and behaviors of the Position Editor timeline.
+						</p>
+					</td></tr></tbody></table></div></div><HR></body></html>

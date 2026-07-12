@@ -1,0 +1,75 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Panning on a 3D configuration</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s06.html" title="3D positioning illustrated"><link rel="prev" href="ch23s06s05.html" title="Effect of Height Spread"><link rel="next" href="ch23s07.html" title="Applying attenuation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s06.html">3D positioning illustrated</a></span> &gt; <span class="breadcrumb-node">Panning on a 3D configuration</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="panning_on_3d_config"></a>Panning on a 3D configuration</h3></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+       For context, reference the <a class="link" href="ch23s06s01.html" title="Effect of Spread">first example</a>.
+     </p></td></tr></table></div><p>When panning on a 3D channel configuration, meaning a configuration (such as 7.1.4 or ambisonics) that can represent sound coming from above and/or below, the virtual sources are disposed in the shape of spherical caps. The following figures show stereo and 4.0 sources with various Spread and Focus.</p><p>Recall that 3D positioning only takes up to 7 input channels (the channels on the plane) for panning, and drops the other ones.</p><p>On the contrary, with ambisonics, channels are not exactly assigned to groups of virtual sources, but all the spatial information is preserved. The transformation of the virtual sources (rotation, contraction) behaves the same as with standard configurations, so the diagrams below apply as well, apart from the coloring.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="60px" class="col1"><col width="55px" class="col2"><col width="55px" class="col3"><col class="col4"></colgroup><thead><tr><th colspan="4">
+                <p>
+                  Panning Stereo and 4.0 Sources onto a 3D Configuration (not shown),<br>with Various Spread and Focus Values
+                </p>
+              </th></tr><tr><th align="center">
+                <p>Source config</p>
+              </th><th align="center">
+                <p>Spread</p>
+              </th><th align="center">
+                <p>Focus</p>
+              </th><th align="center">
+                <p>Result</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>Stereo</p>
+              </td><td align="center">
+                <p>100</p>
+              </td><td align="center">
+                <p>0</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="360"><tr><td><img src="Images/stereo_100_0.png" width="360"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Stereo</p>
+              </td><td align="center">
+                <p>30</p>
+              </td><td align="center">
+                <p>0</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="360"><tr><td><img src="Images/stereo_30_0.png" width="360"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Stereo</p>
+              </td><td align="center">
+                <p>30</p>
+              </td><td align="center">
+                <p>
+                  <span class="bold"><strong>80</strong></span>
+                </p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="363"><tr><td><img src="Images/stereo_30_80.png" width="363"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>4.0</p>
+              </td><td align="center">
+                <p>100</p>
+              </td><td align="center">
+                <p>0</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="382"><tr><td><img src="Images/40_100_0.png" width="382"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>4.0</p>
+              </td><td align="center">
+                <p>70</p>
+              </td><td align="center">
+                <p>0</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="382"><tr><td><img src="Images/40_70_0.png" width="382"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>4.0</p>
+              </td><td align="center">
+                <p>70</p>
+              </td><td align="center">
+                <p>
+                  <span class="bold"><strong>50</strong></span>
+                </p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="382"><tr><td><img src="Images/40_70_50.png" width="382"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>4.0</p>
+              </td><td align="center">
+                <p>0</p>
+              </td><td align="center">
+                <p>-</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="382"><tr><td><img src="Images/40_0_0.png" width="382"></td></tr></table></div>
+              </td></tr></tbody></table></div></div><HR></body></html>

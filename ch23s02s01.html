@@ -1,0 +1,91 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Balance-Fade speaker panning illustrated</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s02.html" title="Working with speaker panning"><link rel="prev" href="ch23s02.html" title="Working with speaker panning"><link rel="next" href="ch23s02s02.html" title="Steering speaker panning illustrated"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s02.html">Working with speaker panning</a></span> &gt; <span class="breadcrumb-node">Balance-Fade speaker panning illustrated</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="balance_fade_illustrated"></a>Balance-Fade speaker panning illustrated</h3></div></div></div><p>When Speaker Panning is set to <span class="bold"><strong>Balance-Fade</strong></span>, the Speaker Panner can be used to adjust the volume of the channels in an object&#8217;s Output Bus. With this mode selected, the <span class="bold"><strong>Edit</strong></span> button is available and opens the Speaker Panner. The Speaker Panner contains a two-dimensional graph view with X and Y coordinates and a control point in the center. You can drag the control point anywhere within the graph view to adjust the volume of the channels of the Output Bus. Channels close to the control point become louder; channels far from the control point become quieter.</p><p>If the object&#8217;s source audio has more channels than the Output Bus, the content is first
+				downmixed according to the <a class="link" href="ch35s12.html" title="Downmixing behavior">downmix
+					behavior</a>. If the source audio has fewer channels than the Output Bus, the
+				content is first upmixed, that is, extended towards the rear. For example, stereo
+				channels are replicated in the surround channels. Surround channels of a 4.x/5.x
+				configuration are replicated in the side/back channels of a 6.x/7.x
+				configuration.</p><p>The actual volume adjustments depend on the Output Bus configuration. For example, the Y
+				coordinate has no effect when the Output Bus is stereo. Refer to the following
+				sections for detailed examples.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A quad upmix to 5.1 configuration is similar to the stereo upmixes described
+					in the following examples. The difference is that in a quad upmix, the front and
+					back pair are populated from the corresponding source pairs.</p></td></tr></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1533732208"></a>Volume modulation</h4></div></div></div><p>The figures in the following table illustrate the case of a 5.x channel input panned on a 5.x channel bus. The channels of the input are represented by the colored squares, and they are placed in their respective position, meaning that the front left channel (FL) of the input plays in the FL channel of the bus exclusively, the C channel of the input plays in the C channel of the bus exclusively, and so on.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2" align="left" valign="top">
+								<p>5.x channel input panned on a 5.x channel bus</p>
+							</th></tr><tr><th valign="top">
+								<p>Speaker Panner</p>
+							</th><th valign="top">
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_a.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = 0, Y = 0.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_a.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The FL channel of the input plays in the FL channel of the bus exclusively, the C channel of the input plays in the C channel of the bus exclusively, and so on.</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_b.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = 0.</p>
+								<p>The input channels C, FR, SR are faded out, proportional to their volume. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_b.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The channels on the right (FR and SR) play at 33% power, and the C channel plays at 50% power. </p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_c.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -100, Y = 0.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_c.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>Only the channels on the left (FL and SL) are heard.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1533674352"></a>Upmixing</h4></div></div></div><p>When the channel count of the input is less than that of the output, the input is upmixed
+					prior to being panned. The figures in the following table illustrate the case of
+					a stereo input panned on a 5.x channel bus.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>In Balance-Fade mode, the Z coordinate only applies to 7.1.4 sounds or
+							busses routed to a 7.1.4 bus. Otherwise, no upmixing occurs towards the
+							height speakers.</p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2" align="left" valign="top">
+								<p>2.0 channel input panned on a 5.x channel bus</p>
+							</th></tr><tr><th valign="top">
+								<p>Speaker Panner</p>
+							</th><th valign="top">
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_d.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = 0, Y = 0. </p>
+								<p>The stereo input is upmixed to 5.1 prior to panning. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_d.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The volume of the surround channels (SL and SR) is equal to the volume of the front channels (FL and FR).</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_e.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = 0, Y = 50.</p>
+								<p>The stereo input is upmixed to 5.1 prior to panning. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_e.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The volume of the front channels (FL and FR) is greater than the volume of surround channels (SL and SR).</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_balance_fade_f.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = 100.</p>
+								<p>The stereo input is upmixed to 5.1 prior to panning, however, with Y = 100, the volume of the surround channels is reduced to 0. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_balance_fade_meter_f.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The FL channel is twice as loud as the FR channel and the surround channels (SL and SR) are silent.</p>
+							</td></tr></tbody></table></div></div></div><HR></body></html>

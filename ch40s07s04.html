@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Filtering in the profiling views</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40s07.html" title="Capturing data from the sound engine"><link rel="prev" href="ch40s07s03.html" title="Starting/stopping the capture process"><link rel="next" href="ch40s07s05.html" title="Using profiler filter expressions"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-link"><a href="ch40s07.html">Capturing data from the sound engine</a></span> &gt; <span class="breadcrumb-node">Filtering in the profiling views</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="filtering_in_profiling_views"></a>Filtering in the profiling views</h3></div></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="filtering_in_profiler_views_overview"></a>Overview</h4></div></div></div><p>When looking at a profiling session, it is not uncommon to have a lot data
+					visible at the same time, making it difficult to clearly assess what is
+					happening. You can filter the displayed data in most of the profiling views,
+					making it possible to reduce the visual clutter and focus on the objects of
+					interest.</p><p>A filtering toolbar is available in the following locations:</p><p>
+					</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Advanced Profiler's Voices Graph: <a class="xref" href="ch63s03s01.html" title="Voices Graph">Voices Graph</a></p></li><li class="listitem"><p>Advanced Profiler's Voices Tab: <a class="xref" href="ch63s03s02.html" title="Voices">Voices</a></p></li><li class="listitem"><p>Audio Object 3D Viewer: <a class="xref" href="ch63s05.html" title="Audio Object 3D Viewer">Audio Object 3D Viewer</a></p></li><li class="listitem"><p>Audio Object List: <a class="xref" href="ch63s06.html" title="Audio Object List">Audio Object List</a></p></li><li class="listitem"><p>Capture Log: <a class="xref" href="ch63s01.html" title="Capture Log">Capture Log</a></p></li><li class="listitem"><p>Game Object 3D Viewer: <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a></p></li><li class="listitem"><p>Game Sync Monitor: <a class="xref" href="ch63s12.html" title="Game Sync Monitor">Game Sync Monitor</a></p></li><li class="listitem"><p>Voice Explorer: <a class="xref" href="ch63s10.html" title="Voice Explorer">Voice Explorer</a></p></li><li class="listitem"><p>Voice Monitor: <a class="xref" href="ch63s09.html" title="Voice Monitor">Voice Monitor</a></p></li></ul></div><p>
+				</p></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="filtering_basics"></a>Filtering basics</h4></div></div></div><p>Filtering in profiling views enables you to reduce the amount of information
+					displayed in the views. Using the filtering toolbar, you can filter data in
+					three ways:</p><p>
+					</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="c1"><col class="c2"></colgroup><thead><tr><th align="left">Filtering Method</th><th align="left">Description</th></tr></thead><tbody><tr><td>Text</td><td>
+										<p>The specified text is used to filter the content
+											displayed in the view, discarding the elements that do
+											not match.</p>
+										<p>Text filtering is case insensitive and matches its
+											text with the beginning of names or strings found in the
+											current view.</p>
+										<p>Each additional specified word refines the
+											results.</p>
+										<p>For more advanced instructions, refer to <a class="xref" href="ch40s07s05.html" title="Using profiler filter expressions">Using profiler filter expressions</a>.</p>
+									</td></tr><tr><td>Object</td><td>
+										<p>The specified Wwise objects are used to match objects
+											in the current view.</p>
+										<p>Additionally, object relations, such as
+											parent-children relations and output bus relations, are
+											also used to match content.</p>
+										<p>For example:</p>
+										<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Specifying a <span class="bold"><strong>Property Container</strong></span> object also matches its
+												descendant Sound objects.</p></li><li class="listitem"><p>Specifying a <span class="bold"><strong>Bus</strong></span> object also matches the objects
+												routed directly or indirectly to it.</p></li></ul></div>
+									</td></tr><tr><td>Mute/Solo</td><td>
+										<p>When this option is activated, the objects with Mute enabled disappear from the results, while the objects with Solo enabled are displayed. The Mute/Solo function enables you to filter elements manually.</p>
+										<p>Clicking the Reset Mute or Reset Solo buttons in the Wwise toolbar resets the
+											filter.</p>
+									</td></tr></tbody></table></div><p>
+				</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Filtering the content of a profiling view does not affect the data recorded in the profiler capture session. It only affects the display of information.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="linked_unlinked_filtering"></a>Linked and unlinked filtering</h4></div></div></div><p>By default, the filters in all profiling views are synchronized. This can be especially
+					useful to correlate information between different data types in the profiling
+					views.</p><p>A filter can be unlinked from the others by clicking the Link/Unlink button. When
+					unlinked, the filter applies to the current view. This enables the current
+					view to filter its content using different criteria than the synchronized
+					filters. At any time, the filter can be linked again and the view is
+					re-synchronized. Additionally, an unlinked filter can be promoted to the other
+					views, effectively synchronizing the different views.</p><p>
+					</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col class="c1"><col class="c2"></colgroup><thead><tr><th align="left">Operation</th><th align="left">Description</th></tr></thead><tbody><tr><td><p>Filter Toolbar Buttons</p></td><td><p>Hover the mouse over buttons in the toolbar to display
+										their function. The button's assigned keyboard shortcut is
+										also displayed.</p></td></tr><tr><td><p>Drag &amp; Drop</p></td><td><p>Drag one or more objects to the object filter to use it as the object filter. This action replaces any object filter that was previously selected.</p></td></tr><tr><td><p>Shortcut Menu</p></td><td><p>A <span class="bold"><strong>Profiling</strong></span> sub menu is
+										displayed when right-clicking a <span class="bold"><strong>Game</strong></span>
+										<span class="bold"><strong>Object</strong></span> from the <span class="bold"><strong>Profiling</strong></span> view. This also applies to most, though not all, objects within your project.</p></td></tr><tr><td><p>Main Menu</p></td><td><p>The <span class="bold"><strong>Profiling</strong></span> main menu contains options to clear
+										and synchronize the filters.</p></td></tr><tr><td><p>Text Filter Shortcut Menu</p></td><td><p>The shortcut menu in the Text Filter offers several preconfigured filter prefixes, such as bus:, event:, sound: and more.</p></td></tr><tr><td><p>Commands &amp; Shortcuts</p></td><td><p>A variety of commands are available, using keyboard shortcuts or a control surface.
+										For more information on keyboard shortcuts and on using a control surface, see the following:</p>
+										<p><a class="xref" href="ch40s16.html" title="Profiling keyboard shortcuts">Profiling keyboard shortcuts</a></p>
+										<p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=Help&amp;id=using_control_surface" target="_blank">Using a Control Surface</a></p>
+										<p><a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=waapi_gettingstarted.html" target="_blank">Getting Started with the Wwise Authoring API</a></p></td></tr></tbody></table></div><p>
+				</p></div></div><HR></body></html>

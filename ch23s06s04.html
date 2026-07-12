@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Panning a plane source onto a plane channel configuration</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s06.html" title="3D positioning illustrated"><link rel="prev" href="ch23s06s03.html" title="Focus"><link rel="next" href="ch23s06s05.html" title="Effect of Height Spread"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s06.html">3D positioning illustrated</a></span> &gt; <span class="breadcrumb-node">Panning a plane source onto a plane channel configuration</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="panning_plane_source_onto_plane_config"></a>Panning a plane source onto a plane channel configuration</h3></div></div></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+       For context, reference the <a class="link" href="ch23s06s01.html" title="Effect of Spread">first example</a>.
+     </p></td></tr></table></div><p>So far we have only seen flat sources (4.0, no height channel) and flat output channel configurations (5.0) from above. Here we go again, but with perspective. Note that it is the projection of the virtual sources coordinates on the speakers' plane that is used to compute panning. </p><p>
+        In the middle column of the figure below, Rotating the Listener Up, we show what happens when the <span class="italic">listener</span> looks up (towards the sky) by 30 degrees. The fact that the listener rotates has an impact on:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>the relative orientation of the emitter sound field (as seen with 100% Spread); and</p></li><li class="listitem"><p>the incident angle of the point source (as seen with 0% Spread).</p></li></ul></div><p>
+        This is why the point source (0% Spread) ends up <span class="italic">below</span> the Center speaker.
+      </p><p>
+        In the right column, Rotating the Emitter Down, we rotate the <span class="italic">emitter</span> by 30 degrees down, instead of the listener. This only has an impact on the relative orientation of the emitter sound field, but not on the incident angle of the point source. Consequently, with 0% Spread the point source is right in front of the listener, not below it like in the middle column. Notice how virtual sources morph differently from 100% to 0% Spread.
+      </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="40px" class="col1"><col class="col2"><col class="col3"></colgroup><thead><tr><th colspan="3">
+                <p>Panning of a 4.0 Source on a 5.0 Channel Configuration, with Various Spread Values</p>
+              </th></tr><tr><th align="center">
+                <p>Spread</p>
+              </th><th align="center">
+                <p>Rotating the Listener Up</p>
+              </th><th align="center">
+                <p>Rotating the Emitter Down</p>
+              </th></tr></thead><tbody><tr><td> </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="271"><tr style="height: 64px"><td><img src="Images/listenerup.png" height="64"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="251"><tr style="height: 86px"><td><img src="Images/emitterdown.png" height="86"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>100% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="359"><tr><td><img src="Images/pan_ele30_100_annot.png" width="359"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="359"><tr><td><img src="Images/pan_ele30_100_annot.png" width="359"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>50% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="384"><tr><td><img src="Images/pan_ele30_50.png" width="384"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="327"><tr><td><img src="Images/pan_eleem30_50.png" width="327"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>0% Spread</p>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="341"><tr><td><img src="Images/pan_ele30_0.png" width="341"></td></tr></table></div>
+              </td><td align="center">
+                <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="342"><tr><td><img src="Images/pan_eleem30_0.png" width="342"></td></tr></table></div>
+              </td></tr></tbody></table></div><p>
+         Proceed to the next 3D positioning example: <a class="xref" href="ch23s06s05.html" title="Effect of Height Spread">Effect of Height Spread</a>. 
+      </p></div><HR></body></html>

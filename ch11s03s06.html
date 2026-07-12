@@ -1,0 +1,58 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Importing voice assets from a text file</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch11s03.html" title="Importing media files"><link rel="prev" href="ch11s03s05.html" title="Importing media files from tab delimited text files"><link rel="next" href="ch11s04.html" title="Replacing media files"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch11.html">Managing media files in your project</a></span> &gt; <span class="breadcrumb-link"><a href="ch11s03.html">Importing media files</a></span> &gt; <span class="breadcrumb-node">Importing voice assets from a text file</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="importing_voice_assets_from_text_file"></a>Importing voice assets from a text file</h3></div></div></div><p>It is not uncommon to have thousands of voice assets in your game, so it is important to have an efficient way to create these voice assets in Wwise. Since these assets are generally managed in an external program, such as Microsoft Excel, Wwise allows you to recreate them in your Wwise project by importing specific information from a tab delimited text file. This not only speeds up the creation process but also reduces the potential for error.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A tab delimited text file is a special kind of plain text file where the information is arranged into columns separated by tabs. Most spreadsheet programs, including Microsoft Excel, allow you to export the information in a worksheet to a tab delimited text file. </p></td></tr></table></div><p>The following illustration demonstrates the workflow for getting your voice asset list from a spreadsheet program into Wwise.</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="573"><tr style="height: 635px"><td><img src="Images/VA_Importer_Illus_Online.png" width="573"></td></tr></table></div><p>Although your text file may contain many different pieces of information about your assets, only the following four types of information are used by Wwise when importing the file:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <span class="bold"><strong>Filenames</strong></span>: This information is used to create the Sound
+            Voice object and its corresponding audio source. Initially, the audio source will be
+            empty, but it does contain a reference to an audio file with the same name. This means
+            you can replace it in the same way you would any other audio file in Wwise. For more
+            information on replacing media files for Sound Voice objects, refer to <a class="xref" href="ch11s04.html#replacing_sound_voice_media_files" title="Replacing sound voice media files">Replacing sound voice media files</a>. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Random Container names</strong></span>: This information, if included
+            in the text file, is used to create a parent Random Container for the corresponding
+            Sound Voice object. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Sound Voice notes</strong></span>: This information is added to the
+            Notes field of the Sound Voice object. For example, you may want to add the name of the
+            character speaking the dialogue. </p></li><li class="listitem"><p>
+            <span class="bold"><strong>Audio source notes</strong></span>: This information is added to the
+            Notes field of the audio source. For example, you may want to include the actual line of
+            dialogue that is spoken. </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+          When you import voice assets into Wwise, the audio sources are created in the reference language only. To create audio sources for the different language versions in your project, refer to <a class="xref" href="ch36s02.html#importing_language_files" title="Importing language files">Importing language files</a>.
+        </p></td></tr></table></div><p>The order and amount of information in your text file isn't important, because before
+        importing the file, you must specify which columns in your text file you want to import. The
+        only mandatory piece of information is the filename because this name is used to create the
+        Sound Voice object and the audio source. If a column in your text file has not been mapped
+        to one of the four information types, it will be ignored by Wwise. </p><p>To help you make sure that you have correctly assigned the columns, a preview is displayed of the objects that will be created and the information that will be imported.</p><p>
+        </p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="654"><tr style="height: 166px"><td><img src="Images/VoiceAI_Preview.png" height="166"></td></tr></table></div><p>
+      </p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>After you have imported the voice assets from a text file, it can't be undone.</p></td></tr></table></div><div class="orderedlist"><p class="title"><b>To import voice assets from a text file:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>
+            From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Import Voice Assets</strong></span>.
+          </p><p>The Voice Asset Importer opens.</p></li><li class="listitem"><p>
+            Click the browse button (...) next to the <span class="bold"><strong>File to import</strong></span> field.
+          </p><p>The Open dialog opens.</p></li><li class="listitem"><p>
+            Select the text file you want to import and click <span class="bold"><strong>Open</strong></span>.
+          </p><p>
+            The file's location is displayed in the <span class="bold"><strong>File to import</strong></span> field.
+          </p></li><li class="listitem"><p>
+            If there is a header row in the text file and you want to use it to assign columns, select the <span class="bold"><strong>Use header</strong></span> check box.
+          </p></li><li class="listitem"><p>
+            In the <span class="bold"><strong>Header row</strong></span> spinner, specify which row in the text file contains the header information.
+          </p></li><li class="listitem"><p>
+            In the <span class="bold"><strong>Start import at row</strong></span> spinner, specify the row at which you want Wwise to start reading the voice asset information.
+          </p></li><li class="listitem"><p>
+            From the <span class="bold"><strong>Column Index</strong></span> list, select the corresponding column in your text file for each of the following column types:
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                <span class="bold"><strong>Filename</strong></span>
+              </p></li><li class="listitem"><p>
+                <span class="bold"><strong>Random Container Name</strong></span>
+              </p></li><li class="listitem"><p>
+                <span class="bold"><strong>Sound Voice Note</strong></span>
+              </p></li><li class="listitem"><p>
+                <span class="bold"><strong>Audio Source Note</strong></span>
+              </p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+                    The filename column in your text file must be assigned to the <span class="bold"><strong>Filename</strong></span> column type so that the voice assets in your text file can be recreated in Wwise. All other information is optional.
+                </p></td></tr></table></div></li><li class="listitem"><p>Review the information in the Voice Assets Preview table to make sure that you correctly assigned the columns in your text file to the corresponding information types in Wwise.</p></li><li class="listitem"><p>If you want to change the location where the new Sound Voice assets will be created, do the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                Click the <span class="bold"><strong>Browse</strong></span> button beside the Import destination text box.
+              </p></li><li class="listitem"><p>In the Project Explorer- Browser, select a new location in your project
+                hierarchy.</p></li><li class="listitem"><p>
+                Click <span class="bold"><strong>OK</strong></span>.
+              </p></li></ul></div><p>
+            The new path is displayed in the <span class="bold"><strong>Import destination</strong></span> text field.
+          </p></li><li class="listitem"><p>
+            Click <span class="bold"><strong>Import</strong></span>.
+          </p><p>The Sound Voice objects are created in Wwise along with their corresponding audio sources and Random Containers, if any. If any problems are encountered during import, Wwise will list them in the Import Completed dialog.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The import process may take a while if you have many assets because Wwise has to verify that every asset name is unique.</p></td></tr></table></div></li></ol></div></div><HR></body></html>

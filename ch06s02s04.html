@@ -1,0 +1,169 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Regular expression reference</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch06s02.html" title="Using the Batch Rename"><link rel="prev" href="ch06s02s03.html" title="Applying Batch Rename changes"><link rel="next" href="pt02.html" title="Setting up your projects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt01.html">Getting started</a></span> &gt; <span class="breadcrumb-link"><a href="ch06.html">Speeding up the way you work</a></span> &gt; <span class="breadcrumb-link"><a href="ch06s02.html">Using the Batch Rename</a></span> &gt; <span class="breadcrumb-node">Regular expression reference</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="regexref"></a>Regular expression reference</h3></div></div></div><p>Wwise uses the ECMAScript regex style detailed in the following tables.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Anchors</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>^</p>
+              </td><td>
+                <p>Start of string, or start of line in multi-line pattern</p>
+              </td></tr><tr><td>
+                <p>$</p>
+              </td><td>
+                <p>End of string, or end of line in multi-line pattern</p>
+              </td></tr><tr><td>
+                <p>\b</p>
+              </td><td>
+                <p>Word boundary</p>
+              </td></tr><tr><td>
+                <p>\B</p>
+              </td><td>
+                <p>Not word boundary</p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Character Classes</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>\s</p>
+              </td><td>
+                <p>White space</p>
+              </td></tr><tr><td>
+                <p>\S</p>
+              </td><td>
+                <p>Not white space</p>
+              </td></tr><tr><td>
+                <p>\d</p>
+              </td><td>
+                <p>Digit</p>
+              </td></tr><tr><td>
+                <p>\D</p>
+              </td><td>
+                <p>Not digit</p>
+              </td></tr><tr><td>
+                <p>\w</p>
+              </td><td>
+                <p>Word</p>
+              </td></tr><tr><td>
+                <p>\W</p>
+              </td><td>
+                <p>Not Word</p>
+              </td></tr><tr><td>
+                <p>\x</p>
+              </td><td>
+                <p>Hexadecimal digit</p>
+                <p>Used for matching hex code characters, such as: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>"\xA9", as in "0xA9", for the copyright symbol</p></li><li class="listitem"><p>"\x5B", as in "0x5B", for the open square bracket</p></li></ul></div><p> </p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Quantifiers</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>*</p>
+              </td><td>
+                <p>White space</p>
+              </td></tr><tr><td>
+                <p>+</p>
+              </td><td>
+                <p>Not white space</p>
+              </td></tr><tr><td>
+                <p>?</p>
+              </td><td>
+                <p>Digit</p>
+              </td></tr><tr><td>
+                <p>{3}</p>
+              </td><td>
+                <p>Exactly 3 </p>
+              </td></tr><tr><td>
+                <p>{3,}</p>
+              </td><td>
+                <p>3 or more</p>
+              </td></tr><tr><td>
+                <p>{3,5}</p>
+              </td><td>
+                <p>3, 4, or 5</p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Escape Sequences</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>\</p>
+              </td><td>
+                <p>Escape following character</p>
+                <p>^ [ . $ { * ( \ + ) | ? &lt; &gt;</p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Special Characters</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>\n</p>
+              </td><td>
+                <p>New line</p>
+              </td></tr><tr><td>
+                <p>\r</p>
+              </td><td>
+                <p>Carriage return</p>
+              </td></tr><tr><td>
+                <p>\t</p>
+              </td><td>
+                <p>Tab</p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>Groups and Ranges</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>.</p>
+              </td><td>
+                <p>Any character except new line (\n)</p>
+              </td></tr><tr><td>
+                <p>\r</p>
+              </td><td>
+                <p>Carriage return</p>
+              </td></tr><tr><td>
+                <p>(a|b)</p>
+              </td><td>
+                <p>a or b</p>
+              </td></tr><tr><td>
+                <p>(...)</p>
+              </td><td>
+                <p>Group</p>
+              </td></tr><tr><td>
+                <p>(?:...)</p>
+              </td><td>
+                <p>Passive (non-c­apt­uring) group</p>
+              </td></tr><tr><td>
+                <p>[abc]</p>
+              </td><td>
+                <p>Range (a or b or c)</p>
+              </td></tr><tr><td>
+                <p>[^abc]</p>
+              </td><td>
+                <p>Not (a or b or c)</p>
+              </td></tr><tr><td>
+                <p>[a-q]</p>
+              </td><td>
+                <p>Lower case letter from a to q</p>
+              </td></tr><tr><td>
+                <p>[A-Q]</p>
+              </td><td>
+                <p>Upper case letter from A to Q</p>
+              </td></tr><tr><td>
+                <p>[0-7]</p>
+              </td><td>
+                <p>Digit from 0 to 7</p>
+              </td></tr></tbody></table></div><br><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="100pt" class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2">
+                <p>String Replacement</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>$n</p>
+              </td><td>
+                <p>nth non-passive group</p>
+              </td></tr><tr><td>
+                <p>$2</p>
+              </td><td>
+                <p>"xyz" in /^(abc(xyz))$/</p>
+              </td></tr><tr><td>
+                <p>$1</p>
+              </td><td>
+                <p>"xyz" in /^(?:abc)(xyz)$/</p>
+              </td></tr><tr><td>
+                <p>$`</p>
+              </td><td>
+                <p>Before matched string</p>
+              </td></tr><tr><td>
+                <p>$'</p>
+              </td><td>
+                <p>After matched string</p>
+              </td></tr><tr><td>
+                <p>$+</p>
+              </td><td>
+                <p>Last matched string</p>
+              </td></tr><tr><td>
+                <p>$&amp;</p>
+              </td><td>
+                <p>Entire matched string</p>
+              </td></tr></tbody></table></div></div><HR></body></html>

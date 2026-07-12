@@ -1,0 +1,15 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Managing media files in your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="pt02.html" title="Setting up your projects"><link rel="prev" href="ch10s06.html" title="Source control tips and best practices"><link rel="next" href="ch11s01.html" title="The importing process"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-node">Managing media files in your project</span></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a name="managing_media_files_in_project"></a>Managing media files in your project</h2></div></div></div><p>In a typical game you can have thousands of assets and it's important to know how to
+    manage them efficiently in your project. Wwise distinguishes between the following two types of
+    assets:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Original assets imported into Wwise.</p></li><li class="listitem"><p>Versions of these assets created for the various game platforms.</p></li></ul></div><p>Wwise stores these two types of assets in different locations within your project folder
+    so they can be managed independently. The original assets are stored in the Originals project
+    folder. Since these assets are usually shared by several people on your team, this folder can be
+    located anywhere on your network and can be managed by your source control system.</p><p>The other asset versions are stored locally in each user's project cache folder. This allows each user to manage their own platform versions and to experiment with different Conversion Settings. 
+    </p><p>You can play back both types of files in Wwise. The original preconverted file is played
+    back whenever you select the <span class="bold"><strong>Original</strong></span> control in the Transport
+    Control or Soundcaster. When the <span class="bold"><strong>Original</strong></span> control isn't active,
+    Wwise will attempt to play the converted file, if one exists. It's important to note, however,
+    that playing converted files in Wwise isn't always possible for some formats. When you convert
+    an audio file for a particular platform, it is converted to meet the specific hardware
+    requirements of that platform. As a result, you might not be able to play back these converted
+    files in Wwise if the authoring tool is running on a platform that does not support the file
+    type. </p></div><HR></body></html>

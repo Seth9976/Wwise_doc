@@ -1,0 +1,87 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with the Contents Editor</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch47.html" title="Getting to know the Contents Editor"><link rel="prev" href="ch47s15.html" title="Music Switch Containers"><link rel="next" href="ch47s16s01.html" title="Displaying objects in the Contents Editor"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch47.html">Getting to know the Contents Editor</a></span> &gt; <span class="breadcrumb-node">Working with the Contents Editor</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="working_with_contents_editor"></a>Working with the Contents Editor</h2></div></div></div><p>The Contents Editor contains a series of fields, lists, options, and sliders that you can use to define properties and behaviors for your objects, States, and Switches. If you require help using these tools, refer to the following sections:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch04.html#using_text_boxes" title="Using text boxes and sliders">Using text boxes and sliders</a></p></li><li class="listitem"><p><a class="xref" href="ch04.html#using_lists" title="Using lists">Using lists</a></p></li></ul></div><p>In the Contents Editor, you can play back individual objects, and re-order, copy, paste, and delete objects within the view. The options or properties that appear in the view will be different depending on the object you currently have loaded. However, in most views certain icons are displayed beside some of the property sliders to indicate that certain properties have been assigned to them. The different icons are described in the following table.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><thead><tr><th>
+              <p>Icon</p>
+            </th><th>
+              <p>Name</p>
+            </th><th>
+              <p>Description</p>
+            </th></tr></thead><tbody><tr><td colspan="3"> </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_icon.png"></div>
+      </td><td>
+        <p>Link</p>
+      </td><td>
+        <p>The property value is linked to the values of other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Unlink_icon.png"></div>
+      </td><td>
+        <p>Unlink</p>
+      </td><td>
+        <p>The property value is not linked to the values of the other active game platforms.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Link_Half_icon.png"></div>
+      </td><td>
+        <p>Partial Unlink</p>
+      </td><td>
+        <p>The property value for the current platform is linked to the other active platforms, but one or more corresponding values of other platforms are unlinked.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/unlink_icon_multiplevalues.png"></div>
+      </td><td>
+        <p>Link Mixed</p>
+      </td><td>
+        <p>Some of the selected objects have different link statuses. Some may be linked, while others are unlinked or partially unlinked.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_Off.png"></div>
+      </td><td>
+        <p>RTPC Disabled</p>
+      </td><td>
+        <p>This property value is not tied to an in-game parameter value.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_On.png"></div>
+      </td><td>
+        <p>RTPC Enabled</p>
+      </td><td>
+        <p>An in-game parameter value is tied to this property value. This means, for example, that the speed of a car in-game can be tied directly to the pitch property in Wwise. As the speed of the car increases in-game, the pitch in Wwise will increase in real time.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/RTPC_Indicator_MultipleValues.png"></div>
+      </td><td>
+        <p>RTPC Mixed</p>
+      </td><td>
+        <p>
+          In-game parameter values are tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Off.png"></div>
+      </td><td>
+        <p>State Disabled</p>
+      </td><td>
+        <p>This property value is not tied to a State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_On.png"></div>
+      </td><td>
+        <p>State Enabled</p>
+      </td><td>
+        <p>A State Group is tied to this property value. This means, that the property in question, such as the Volume, may change according to the applied State.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/State_Indicator_Mixed.png"></div>
+      </td><td>
+        <p>State Mixed</p>
+      </td><td>
+        <p>A State Group is tied to property values for one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+      </td></tr></tbody></table><table class="informaltable" border="1" width="850px"><colgroup><col width="94px" class="col1"><col width="131px" class="col2"><col class="col3"></colgroup><tbody><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Enable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Enabled</p>
+      </td><td>
+        <p>A property value to which a Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Modifier_Disable_icon.png"></div>
+      </td><td>
+        <p>Randomizer Disabled</p>
+      </td><td>
+        <p>A property value to which no Randomizer effect has been applied.</p>
+      </td></tr><tr><td align="center">
+        <div class="mediaobject"><img src="Images/Randomizer_Mixed.png"></div>
+      </td><td>
+        <p>Randomizer Mixed</p>
+      </td><td>
+        <p>A Randomizer effect applies to the property value of one or more, but not all, objects loaded in the Multi Editor. You will not see this indicator in the Property Editor or the Contents Editor.</p>
+        
+      </td></tr></tbody></table></div></div><HR></body></html>

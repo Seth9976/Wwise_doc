@@ -1,0 +1,301 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Game Object 3D Viewer Options</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s11.html" title="Game Object 3D Viewer"><link rel="prev" href="ch63s11.html" title="Game Object 3D Viewer"><link rel="next" href="ch63s11s02.html" title="Game Object 3D Viewer Keyboard Shortcuts"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s11.html">Game Object 3D Viewer</a></span> &gt; <span class="breadcrumb-node">Game Object 3D Viewer Options</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="game_object_3d_viewer_settings"></a>Game Object 3D Viewer Options</h3></div></div></div><p>
+      You can use the Game Object 3D Viewer Options to specify what information will be displayed in the <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>.
+    </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+              <p><span class="bold"><strong>View</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_IconSize.png"></div>
+              <p>Icon Size</p>
+            </td><td>
+              <p>Multiplies the size of the Game Object icons.</p>
+              <p>
+                Default value: 1.0<br>Range: 0.0 to 4.0<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_AllText.png"></div>
+              <p>Text Size</p>
+            </td><td>
+              <p>Multiplies the size of the text in the 3D Viewer.</p>
+              <p>
+                Default value: 1.0<br>Range: 0.1 to 4.0<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GameUnitsPerMeters.png"></div>
+              <p>Game Units Per Meter</p>
+            </td><td>
+              <p>The number of game units in a meter. This helps adapt the size of settings in meters</p>
+              <p>
+                Default value: 1 <br>UI Range: 0.001 to 1000 <br>Range: FLT_MIN to FLT_MAX <br>Units: Game units/meter
+              </p>
+              <p>
+                You don't need to adjust this setting if it is set by your game with the <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=struct_ak_init_settings_acbb4594e7634edbe91adec361e2cf111.html" target="_blank"><code class="code">fGameUnitsToMeters</code></a> initialization setting.
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_Grid.png"></div>
+              <p>Grid</p>
+            </td><td>
+              <p>Determines whether a grid on the floor plane is displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <p>Grid Subdivision Size</p>
+            </td><td>
+              <p>The spacing between the lines of the floor grid.</p>
+              <p>
+                Default value: 1 <br>Range: 0.1 to 10,000 <br>Units: Game units
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_WorldAxis.png"></div>
+              <p>World Axis</p>
+            </td><td>
+              <p>Determines whether the world axis indicator is displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolbar_WorldOrientation.png"></div>
+              <p>World Orientation</p>
+            </td><td>
+              <p>The vector pointing up in the graph of the 3D Viewer. The following options are available:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>Y Up</strong></span> - The X-Z plane will be used as the
+                      floor. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Z Up</strong></span> - The X-Y plane will be used as the
+                      floor. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>X Up</strong></span> - The Y-Z plane will be used as the
+                      floor. </p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_CameraSpeed.png"></div>
+              <p>Camera Speed</p>
+            </td><td>
+              <p>Determines the speed of camera movement.</p>
+              <p>
+                Default value: 1.0 (approximately 15 units per second)<br>Range: 0.1 to 10<br>Units: Wwise units per frame
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_CameraAcceleration.png"></div>
+              <p>Camera Acceleration</p>
+            </td><td>
+              <p>Multiplier used to determine the acceleration when holding Shift and moving the camera.</p>
+              <p>
+                Default value: 3 <br>Range: 0.1 to 10 <br>Units: N/A
+              </p>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Game Object</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GameObjectName.png"></div>
+              <p>Game Object Name</p>
+            </td><td>
+              <p>Determines whether the name of the game object is displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GameObjectInputChannels.png"></div>
+              <p>Game Object Input Channels</p>
+            </td><td>
+              <p>Indicates which channels are emitted for each position of a given Game Object.</p>
+              <p>
+                Toggling the <span class="bold"><strong>Input Channels</strong></span> option on will show the channel mask for each position of a given Game Object if these positions only use a subset of the possible source channels. For example, when the Game Object positions are set using the AkChannelEmitter version of <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_af723c685e94599084916e14874e5aaab.html" target="_blank">
+                  <code class="code">AK::SoundEngine::SetMultiplePositions</code>
+                </a>.
+              </p>
+              <p>
+                Toggling the <span class="bold"><strong>Input Channels</strong></span> option on does not result in any noticeable change if all channels are emitted from all positions of a given Game Object.
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GameObjectPosition.png"></div>
+              <p>Game Object Position</p>
+            </td><td>
+              <p>Determines whether the coordinates of the game object are displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GameObjectVoices.png"></div>
+              <p>Game Object Voices</p>
+            </td><td>
+              <p>Determines whether the names of the Attenuation ShareSets used, if any, are displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_ActiveVoicesOnly.png"></div>
+              <p>Active Voices Only</p>
+            </td><td>With this enabled, only game objects that have active voices are displayed in the viewer. A game object is considered to have active voices if an active voice is emitting from the game object, or if the game object is a listener of an active voice.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_VirtualVoices.png"></div>
+              <p>Virtual Voices</p>
+            </td><td>With this enabled, game objects that have virtual voices are
+              displayed in the viewer.</td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_Axis.png"></div>
+              <p>Axis</p>
+            </td><td>
+              <p>Determines whether arrows aligned with the front and top axes of the game object are displayed in the 3D Viewer. These arrows are shown in the same color as the Z and Y axes, respectively.</p>
+              <p>Also determines whether the arrow aligned with the front of a Portal is displayed in the 3D Viewer. This arrow is shown in the same color and opacity as the Portal.</p>
+            </td></tr><tr><td align="center">
+              <p>Axis Size</p>
+            </td><td>
+              <p>The length of the top and front axes that indicate the orientation of a Game Object or Portal.</p>
+              <p>
+                Default value: 1<br>Range: 0.1 to 10,000<br>Units: Game units
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_RadiusOpacity.png"></div>
+              <p>Radius Opacity</p>
+            </td><td>
+              <p>Adjusts visibility of the Game Object radii within the Game Object 3D Viewer, where 0 is transparent and 1 is fully opaque.</p>
+              <p>
+                Default value: 0.5 <br>Slider Range: 0 to 1<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_InaudibleRadius.png"></div>
+              <p>Inaudible Radius</p>
+            </td><td>
+              <p>Determines whether the radii of a Game Object are shown when the listener is beyond the Max distance defined in its attenuation.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_AttenuationCone.png"></div>
+              <p>Attenuation Cone</p>
+            </td><td>
+              <p>Determines whether the attenuation cone of the voice, if any, is displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_AttenuationRadius.png"></div>
+              <p>Attenuation Radius</p>
+            </td><td>
+              <p>Determines whether the attenuation radius of the voice, if any, is displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_AttenuationSpread.png"></div>
+              <p>Attenuation Spread</p>
+            </td><td>
+              <p>Determines whether spread cones are displayed on the listener game object in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <p>Spread Size</p>
+            </td><td>
+              <p>Adjusts the size of the spread cones.</p>
+              <p>
+                Default value: 2.0 <br>Slider Range: 0.01 to 1000<br>Units: meters
+              </p>
+            </td></tr><tr><td colspan="2">
+              <p><span class="bold"><strong>Acoustics</strong></span></p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_Diffraction.png"></div>
+              <p>Diffraction</p>
+            </td><td>
+              <p>Determines whether diffraction paths or diffraction rays are displayed in the 3D
+                Viewer. The following options are available:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>None</strong></span> - Neither diffraction paths nor
+                      diffraction rays are displayed in the 3D Viewer. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Paths</strong></span> - Displays diffraction paths in the 3D
+                      Viewer. They represent the path the emitted sound takes to reach the listener
+                      after diffracting from Spatial Audio Portals or Geometry edges. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Rays</strong></span> - Displays the diffraction rays cast by
+                      the ray casting engine instead of the audio paths. The diffraction rays are
+                      cast to sample the environment and find potential diffraction paths. </p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_DiffractionEdge.png"></div>
+              <p>Diffraction Edges</p>
+            </td><td>
+              <p>Determines whether diffraction edges are displayed on the Spatial Audio Geometry in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_DiffractionEdgeReceptors.png"></div>
+              <p>Edge Receptors</p>
+            </td><td>
+              <p>Displays the edge receptors. Edge receptors are used by the ray casting engine to find potential diffraction edges.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_VirtualEmitters.png"></div>
+              <p>Virtual Emitters</p>
+            </td><td>
+              <p>Determines whether virtual emitters are displayed in the 3D Viewer. They represent the simulated position of the emitted sound after diffracting from Spatial Audio Portals or Geometry edges.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_InaudiblePaths.png"></div>
+              <p>Inaudible Paths</p>
+            </td><td>
+              <p>Determines whether inaudible paths are displayed or hidden in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_Reflection.png"></div>
+              <p>Reflection</p>
+            </td><td>
+              <p>Determines whether reflection paths or reflection rays are displayed in the 3D
+                Viewer. The following options are available:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+                      <span class="bold"><strong>None</strong></span> - Neither reflection paths nor
+                      reflection rays are displayed in the 3D Viewer. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Paths</strong></span> - Displays reflection paths in the 3D
+                      Viewer. These paths are created by Spatial Audio to be sent to the Reflect
+                      Effect plug-in. They represent the path the emitted sound takes to reach the
+                      listener after reflecting off the Spatial Audio Geometry. </p></li><li class="listitem"><p>
+                      <span class="bold"><strong>Rays</strong></span> - Displays the reflection rays cast by
+                      the ray casting engine instead of the audio paths. The reflection rays are
+                      cast to sample the environment and find potential reflection paths. </p></li></ul></div>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_ImageSources.png"></div>
+              <p>Image Sources</p>
+            </td><td>
+              <p>Determines whether image sources are displayed in the 3D Viewer with an icon. They represent the position of image sources created with the Reflect Effect plug-in.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_PortalInfo.png"></div>
+              <p>Portal Info</p>
+            </td><td>
+              <p>Determines if captured Portal information, such as the name and state, is displayed.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_DiffractionPerc.png"></div>
+              <p>Diffraction %</p>
+            </td><td>
+              <p>Determines whether diffraction percentages are displayed in the 3D Viewer. They represent the amount of diffraction applied at a Spatial Audio Geometry edge.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_TransmissionPerc.png"></div>
+              <p>Transmission %</p>
+            </td><td>
+              <p>Determines whether transmission percentages are displayed in the 3D Viewer. They represent the amount of transmission loss applied when a sound passes through a Spatial Audio Geometry.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_WireFrame.png"></div>
+              <p>Wire Frame</p>
+            </td><td>
+              <p>Determines if Portals and Geometry are displayed as transparent wire frames or as solid colored texture.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_TransparentTriangles.png"></div>
+              <p>Transparent Triangles</p>
+            </td><td>
+              <p>Enable/Disable the display of transparent triangles. Transparent triangles are triangles with a transmission loss of 0.0.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_ReverbZoneTransitionRegions.png"></div>
+              <p>Reverb Zone Transition Regions</p>
+            </td><td>
+              <p>Determines whether Reverb Zone Transition Regions are displayed in the 3D Viewer.</p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_GeometryOpacity.png"></div>
+              <p>Geometry Opacity</p>
+            </td><td>
+              <p>Adjusts visibility of the Spatial Audio Geometry within the Game Object 3D Viewer, where 0 is transparent and 1 is fully opaque.</p>
+              <p>
+                Default value: 0.5 <br>Slider Range: 0 to 1<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_PortalOpacity.png"></div>
+              <p>Portal Opacity</p>
+            </td><td>
+              <p>Adjusts visibility of Spatial Audio Portals within the Game Object 3D Viewer, where 0 is transparent and 1 is fully opaque.</p>
+              <p>
+                Default value: 0.5 <br>Slider Range: 0 to 1<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_RoomExtentOpacity.png"></div>
+              <p>Room Extent Opacity</p>
+            </td><td>
+              <p>Adjusts visibility of the Spatial Audio Room Extent within the Game Object 3D Viewer, where 0 is transparent and 1 is fully opaque.</p>
+              <p>The room extent is a bounding box computed from the different vertices of the room. The room extent is used in the calculation of the room wet transmission spread.</p>
+              <p>Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=spatial_audio_roomsportals_apiconfig.html#spatial_audio_roomsportals_apiconfigroomgeometry" target="_blank">Setting up Room Geometry</a> for further details.
+              </p>
+              <p>
+                Default value: 0.0 <br>Slider Range: 0 to 1<br>Units: N/A
+              </p>
+            </td></tr><tr><td align="center">
+              <div class="mediaobject"><img src="Images/3DToolBar_Clusters.png"></div>
+              <p>Clusters</p>
+            </td><td>
+              <p>Select to display emitter clusters in the 3D Viewer. They represent grouped emitters based on their distance from the listener and other criteria. Clusters are represented by transparent spheres. Each cluster has a different color, and colors might change from frame to frame. The largest sphere represents the cluster leader. See <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=raytracing_geometry_guide.html#emitter_clustering_(experimental)" target="_blank">Emitter Clustering</a> for more information.
+              </p>
+            </td></tr><tr><td align="center">
+              <p>Cluster Size</p>
+            </td><td>
+              <p>Adjusts the size of spheres representing emitter clusters in the 3D Viewer.</p>
+              <p></p>
+              <p>
+                Default value: 1.0 <br>Slider Range: 0 to 5.0<br>Units: N/A
+              </p>
+            </td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="idm1512591072"></a>Related Topics</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch63s11.html" title="Game Object 3D Viewer">Game Object 3D Viewer</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s11.html#enable_spatial_audio_objects" title="Enabling Spatial Audio in the Game Object 3D Viewer">Enabling Spatial Audio in the Game Object 3D Viewer</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s11.html#specifying_data_to_be_displayed_in_game_object_3d_viewer" title="Specifying the data to be displayed in the Game Object 3D Viewer">Specifying the data to be displayed in the Game Object 3D
+				Viewer</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s11.html#working_with_camera" title="Working with the camera">Working with the camera</a>
+          </p></li></ul></div></div></div><HR></body></html>

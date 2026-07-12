@@ -1,0 +1,493 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Source Editor: Soundseed Grain</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch66s12.html" title="Soundseed Grain"><link rel="prev" href="ch66s12s01.html" title="Soundseed Grain tips"><link rel="next" href="ch66s12s03.html" title="Contents Editor: Soundseed Grain plug-in"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66.html">Source plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66s12.html">Soundseed Grain</a></span> &gt; <span class="breadcrumb-node">Source Editor: Soundseed Grain</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="source_plug_in_editor_soundseed_grain_plug_in"></a>Source Editor: Soundseed Grain</h3></div></div></div><p>The Source Editor displays all the properties associated with the Soundseed Grain plug-in.</p><p>The first part of this page covers only the Effect Settings tab of the plug-in. Exceptionally for a plug-in, however, the Soundseed Grain plug-in has two additional tabs which are covered in the <a class="xref" href="ch66s12s02.html#ssg_source_settings" title="Source settings">Source settings</a> section below.</p><p>For a general overview of the Soundseed Grain plug-in, refer to <a class="xref" href="ch66s12.html" title="Soundseed Grain">Soundseed Grain</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td>
+					<p>Name</p>
+				</td><td>
+					<p>The user-defined name given to this instance of the Soundseed Grain plug-in.</p>
+				</td></tr><tr><td>
+					<p>Source Plug-in</p>
+				</td><td>
+					<p>The type of source plug-in.</p>
+				</td></tr><tr><td>
+                <p>Notes</p>
+              </td><td>
+                <p>Any additional information about the Soundseed Grain plug-in.</p>
+              </td></tr><tr><td>
+                <p>Filename</p>
+              </td><td>
+                <p>The audio source file, WAV or AMB, to be used by the granular synthesizer. Click the browse button to the right of the field to choose the file.</p>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Grains</strong></span></p>
+              </td></tr><tr><td>
+		<p>Time between Emissions</p>
+	</td><td>
+		<p>Time between each grain emitted, in ms.</p>
+		<p>Select Freq/Time needs to be set to <span class="bold"><strong>Time Between Emissions</strong></span>.</p>
+		<p>Default value: 1000</p>
+		<p>Range: 0.05 to 50000</p>
+	</td></tr><tr><td>
+		<p>Emissions per Second</p>
+	</td><td>
+		<p>Number of grains emitted per second.</p>
+		<p>Select Freq/Time needs to be set to <span class="bold"><strong>Emissions per Second</strong></span>.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.02 to 20000</p>
+		<p>Units: Frequency</p>
+	</td></tr><tr><td>
+		<p>Duration Link</p>
+	</td><td>
+		<p>When <span class="bold"><strong>Duration Multiplier</strong></span> is selected, grain duration is specified as a multiple of the time between emissions. When <span class="bold"><strong>Duration</strong></span> is selected, grain duration is completely independent from the time between emissions. When <span class="bold"><strong>MIDI Duration</strong></span> is selected, and if the synthesizer was spawned from a MIDI note, the note value overrides grain Duration. Modulating the Duration property will modulate <span class="bold"><strong>MIDI Duration</strong></span>.</p>
+		<p>Default value: Duration Multiplier</p>
+	</td></tr><tr><td>
+		<p>Duration Multiplier</p>
+	</td><td>
+		<p>Grain duration, expressed as a multiplication factor of the emission rate (set using either Emissions per Second or Time Between Emissions). This control is only available when Duration Link is set to Duration Multiplier.</p>
+		<p>When set to 1, actual grain duration is equal to the time that elapses between each grain, with envelope release overlapping envelope attack, resulting in a continuous dovetailing of grains. When smaller than 1, gaps will exist between grains; when greater than 1, grains stack up.</p>
+		<p>Default value: 1</p>
+		<p>Range: 0.001 to 1000</p>
+	</td></tr><tr><td>
+		<p>Duration</p>
+	</td><td>
+		<p>Grain duration, in ms. This control is only available when Duration Link is set to Duration.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The release portion of the grain envelope is not comprised in the grain duration, so grains may actually be longer.</p></td></tr></table></div>
+		<p>Default value: 1000</p>
+		<p>Range: 0.02 to 10000.0</p>
+	</td></tr><tr><td>
+		<p>Amplitude</p>
+	</td><td>
+		<p>Amplitude of grains, in percent.</p>
+		<p>This control is useful when assigned with a modulator, in order to vary the relative level of grains.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> If the effective amplitude goes below zero, the perceived amplitude goes back up, but the signal is 180 degrees out of phase.</p></td></tr></table></div>
+		<p>Default value: 100</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Attack</p>
+	</td><td>
+		<p>Attack time of the grain envelope, in ms. When Window Mode is <span class="bold"><strong>Release Same as Attack</strong></span>, the Release time is equal to Attack time.</p>
+		<p>The Attack envelope starts at the beginning of the grain and is therefore comprised in the grain&#8217;s duration, as opposed to the envelope&#8217;s release portion (Release), which starts at the end of the grain.</p>
+		<p>You may also change the Attack time using the upper-left handle in the grain visualizer window.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> If the Attack time is longer than the grain&#8217;s duration, the grain will not play at full volume but, instead, at the envelope level that was applied when the Attack was truncated.</p></td></tr></table></div>
+		<p>Default value: 10</p>
+		<p>Range: 0 to 5000</p>
+	</td></tr><tr><td align="center">			  
+				<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="23"><tr style="height: 23px"><td><img src="Images/follow_capture_time.png" width="23"></td></tr></table></div>
+                <p>Window Mode</p>
+              </td><td>
+                <p>When there's an independent Attack and Release, allows you to set different values for envelope Attack and Release times.</p>
+				<p>Default value: Release Same as Attack</p>
+              </td></tr><tr><td>
+		<p>Release</p>
+	</td><td>
+		<p>Release time of the grain envelope, in ms. Ignored when Window Mode is <span class="bold"><strong>Release Same as Attack</strong></span>.</p>
+		<p>The release envelope starts at the end of the grain, and is therefore not comprised in the grain&#8217;s duration, as opposed to the envelope&#8217;s attack portion (Attack).</p>
+		<p>You may also change the release time using the lower-right handle in the Grain Visualizer window.</p>
+		<p>Default value: 10</p>
+		<p>Range: 0 to 5000</p>
+	</td></tr><tr><td>
+		<p>Grain Envelope Shape</p>
+	</td><td>
+		<p>Defines the shape of the Attack and Release segments of the grain envelope.</p>
+		<p>Choices available are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Linear</p></li><li class="listitem"><p>Constant Power</p></li><li class="listitem"><p>Exponential</p></li><li class="listitem"><p>Raised Cosine</p></li></ul></div>
+		<p>Default value: Linear</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Playback</strong></span></p>
+              </td></tr><tr><td>
+		<p>Position</p>
+	</td><td>
+		<p>Position in the source file from which grains are read. The position is expressed in percentage of the file&#8217;s duration.</p>
+		<p>If Snap to Markers is enabled and markers exist, the effective grain start position is that of the marker nearest to the position set with this control.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Snap to Markers</p>
+	</td><td>
+		<p>If enabled, and markers are present, the chosen grain start position is that of the marker nearest to the position set with Position.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Offset%</p>
+	</td><td>
+		<p>Position in the source file from which grains are read. The position is expressed in percentage of the file&#8217;s duration.</p>
+		<p>This position offset is only considered if Snap to Markers is enabled and further offsets the grain start positions from the marker nearest to Position.</p>
+		<p>Default value: 0</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td>
+		<p>Pitch</p>
+	</td><td>
+		<p>The pitch by which grains are transposed, in cents.</p>
+		<p>Values above 0 result in faster playback speeds, while values below 0 result in lower playback speeds.</p>
+		<p>The effective playback speed also depends on grain Speed.</p>
+		<p>Default value: 0</p>
+		<p>Range: -4800 to 4800</p>
+		<p>Units: Cents</p>
+	</td></tr><tr><td>
+		<p>Map MIDI to Grain Pitch</p>
+	</td><td>
+		<p>When set, and if the synthesizer was spawned from a MIDI note, the note value, relative to Root, adds to grain Pitch.</p>
+		<p>Default value: false</p>
+	</td></tr><tr><td>
+		<p>Root MIDI Note</p>
+	</td><td>
+		<p>Defines the root MIDI note in order to derive an offset to the Pitch from the input MIDI note value.</p>
+		<p>Default value: 60</p>
+		<p>Range: 0 to 127</p>
+	</td></tr><tr><td>
+		<p>Speed</p>
+	</td><td>
+		<p>Playback speed of grains.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>With a speed of 1, grains play at the same speed as the original sound.</p></li><li class="listitem"><p>With speeds greater than 1, they play faster than the original sound, and thus at a higher pitch.</p></li><li class="listitem"><p>With speeds lower than 1, but positive, they play slower than the original sound, and thus at a lower pitch.</p></li><li class="listitem"><p>With negative speeds, they play backwards.</p></li></ul></div>
+		<p>The effective speed at which grains play also depends on grain Pitch.</p>
+		<p>Default value: 1</p>
+		<p>Range: -4 to 4</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Filter</strong></span></p>
+              </td></tr><tr><td>
+		<p>Filter Type</p>
+	</td><td>
+		<p>Type of the filter applied on each grain.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>LPF6: First-order (6 dB/octave) low-pass filter. With this filter, parameter Filter Q has no effect.</p></li><li class="listitem"><p>LPF12: Second-order (12 dB/octave) low-pass filter.</p></li><li class="listitem"><p>HPF6: First-order (6 dB/octave) high-pass filter. With this filter, parameter Filter Q has no effect.</p></li><li class="listitem"><p>HPF12: Second-order (12 dB/octave) high-pass filter.</p></li><li class="listitem"><p>BP: Second-order (6 dB/octave on each side) band-pass filter. With this filter, parameter Filter Q has no effect.</p></li></ul></div>
+		<p>Default value: LPF12</p>
+	</td></tr><tr><td>
+		<p>Filter Cutoff</p>
+	</td><td>
+		<p>Cutoff (or center) frequency of the grain filter, in Hz.</p>
+		<p>Default value: 20000</p>
+		<p>Range: 20 to 20000</p>
+		<p>Units: Frequency</p>
+	</td></tr><tr><td>
+		<p>Filter Q</p>
+	</td><td>
+		<p>Quality factor of the grain filter. When this value is larger, the filter is more resonant at the filter cutoff frequency.</p>
+		<p>Filter Q only applies when Filter Type is set to <span class="bold"><strong>LPF12</strong></span>, <span class="bold"><strong>HPF12</strong></span>, or <span class="bold"><strong>BP</strong></span>.</p>
+		<p>Default value: 0.707</p>
+		<p>Range: 0.1 to 100</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Positioning</strong></span></p>
+              </td></tr><tr><td>
+		<p>Channels</p>
+	</td><td>
+		<p>Defines whether grains should be spatialized onto the output channel configuration of the synthesizer, as defined by Output Config, or just assigned directly.</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Direct Speaker Assignment: No spatialization or panning is applied. Mono files are routed to the center channel if the Output Config has a center channel, otherwise to the front left and front right channels. In general, the input channels are mapped to the same output channels and dropped when these channels are not present in the output configuration.</p></li><li class="listitem"><p>3D Spatialization: Grains are 3D spatialized onto the synthesizer&#8217;s output configuration using Azimuth, Elevation, and Spread. Note that Output Config has to have multiple channels for spatialization to be useful.</p></li></ul></div>
+		<p>Default value: Direct Speaker Assignment</p>
+	</td></tr><tr><td>
+		<p>Azimuth</p>
+	</td><td>
+		<p>Azimuth angle of grains&#8217; spatial positioning, in degrees, with positive values to the right.</p>
+		<p>This control requires Channels to be set to <span class="bold"><strong>3D Spatialization</strong></span>, and only makes sense when the synthesizer&#8217;s Output Config is set to a multichannel configuration.</p>
+		<p>Default value: 0</p>
+		<p>Range: -180 to 180</p>
+	</td></tr><tr><td>
+		<p>Elevation</p>
+	</td><td>
+		<p>Elevation angle of grains&#8217; spatial positioning, in degrees, with positive values to the top.</p>
+		<p>This control requires Channels to be set to <span class="bold"><strong>3D Spatialization</strong></span>, and only makes sense when the synthesizer&#8217;s Output Config is set to a multichannel configuration.</p>
+		<p>Default value: 0</p>
+		<p>Range: -90 to 90</p>
+	</td></tr><tr><td>
+		<p>Spread</p>
+	</td><td>
+		<p>Spread of grains used with spatial positioning, in percentage. This is the equivalent of Attenuation Spread in Wwise.</p>
+		<p>This control requires Channels to be set to <span class="bold"><strong>3D Spatialization</strong></span> and only makes sense when the synthesizer&#8217;s Output Config is set to a multichannel configuration.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td colspan="2"><a name="output"></a>
+                <p><span class="bold"><strong>Output</strong></span></p>
+              </td></tr><tr><td>
+		<p>Output Config</p>
+	</td><td>
+		<p>Channel configuration forced at the output of the synthesizer.</p>
+		<p>Using a multichannel output configuration is useful for creating 3D ambiences. To do so, set the positioning of the sound to 3D and set an attenuation ShareSet that uses spread at close distances. Design your synthesizer patch such that the output is maximally enveloping, by using <span class="bold"><strong>3D Spatialization</strong></span> and modulating Azimuth and, if applicable, Elevation. The channel configuration is visible in the Effect&#8217;s VU Meter during playback with Capture running.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The synthesizer&#8217;s output signal is further panned or spatialized by Wwise, depending on the sound&#8217;s positioning settings.</p></td></tr></table></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> If changing the output configuration while playing, the new configuration will only be effective the next time the synthesizer is played.</p></td></tr></table></div>
+		<p>Default value: Mono</p>
+	</td></tr><tr><td>
+		<p>Output Level</p>
+	</td><td>
+		<p>Level applied to the final signal.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+		<p>Units: dB</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>VU Meter</strong></span></p>
+              </td></tr><tr><td align="center">
+				<div class="mediaobject"><img src="Images/meter_list.png"></div>				
+			  </td><td>
+				<p>A per channel peak meter, which meters the signal at the output of the synthesizer, and its channel configuration matches that which is set in the <a class="link" href="ch66s12s02.html#output">Output</a> group. For more information about speaker configurations and channels, refer to <a class="xref" href="ch23s11.html" title="Understanding Bus Configurations">Understanding Bus Configurations</a>.
+				<br><br>
+				The signal level is green under -6 dB, yellow from -6 to 0 dB, and red over 0 dB.</p>
+			  </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Envelope Visualizer</strong></span></p>
+              </td></tr><tr><td>
+                <div class="mediaobject"><img src="Images/wwise_soundseedgrain_env_visualizer_small.png"></div>
+              </td><td>
+                <p>The Envelope Visualizer offers a preview of the grain Envelopes' shapes and overlap. The amount of overlap depends on the emission rate, grain duration, and release. These values are before any RTPC or modulation is applied, so the actual outcome may be quite different.</p>
+              </td></tr><tr><td colspan="2">
+                <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following rows describe "Modulator 1" properties. They are, however, applicable to all four Modulator rows.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Grain Modulators (left pane)</strong></span></p>
+              </td></tr><tr><td>
+		<p>Modulator 1 Waveform</p>
+	</td><td>
+		<p>Type of waveform of modulator 1.</p>
+		<p>The available waveform types are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Sine: Bipolar sine wave</p></li><li class="listitem"><p>Triangle: Bipolar triangle wave</p></li><li class="listitem"><p>Square: Bipolar square wave</p></li><li class="listitem"><p>Saw up: Bipolar saw up wave</p></li><li class="listitem"><p>Saw down: Bipolar saw down wave</p></li><li class="listitem"><p>Random: Bipolar sine wave</p></li><li class="listitem"><p>Sine+: Unipolar sine wave</p></li><li class="listitem"><p>Triangle+: Unipolar triangle wave</p></li><li class="listitem"><p>Square+: Unipolar square wave</p></li><li class="listitem"><p>Saw up+: Unipolar saw up wave</p></li><li class="listitem"><p>Saw down+: Unipolar saw down wave</p></li><li class="listitem"><p>Random+: Unipolar sine wave</p></li></ul></div>
+		<p>Default value: Random</p>
+	</td></tr><tr><td>
+		<p>Modulator 1 Time/Freq</p>
+	</td><td>
+		<p>Specify whether to define oscillator rate in terms of time (period, in ms) or frequency (Hz).</p>
+		<p>Default value: Frequency</p>
+	</td></tr><tr><td>
+		<p>Modulator Period</p>
+	</td><td>
+		<p>Period of Modulator, in ms.</p>
+		<p>Default value: 1000</p>
+		<p>Range: 0.05 to 120000</p>
+	</td></tr><tr><td>
+		<p>Modulator 1 Output</p>
+	</td><td>
+		<p>Output level of Modulator 1. Negative values invert the modulator&#8217;s polarity.</p>
+		<p>Default value: 100</p>
+		<p>Range: -100 to 100</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Modulator Assignment (right pane)</strong></span></p>
+				<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The following rows describe the Amount and Quantization columns for each possible Property selection.</p></td></tr></table></div>
+              </td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Amount</strong></span></p>
+              </td></tr><tr><td>
+		<p>Amplitude Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Amplitude.</p>
+		<p>The modulation amount is expressed in percentage, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> With a bipolar modulator it is possible to go under 0. For example, -50% plays a grain at 50% of the original level, but with the signal&#8217;s polarity inverted.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Attack Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Attack.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. One octave up means half the attack&#8217;s duration, one octave down means twice the attack&#8217;s duration. Negative values have the effect of flipping the modulator&#8217;s output signal (that is, inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Azimuth Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Azimuth.</p>
+		<p>The modulation amount is expressed in number of degrees, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 180</p>
+	</td></tr><tr><td>
+		<p>Duration Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Duration.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. One octave up means half the duration, and one octave down means twice the duration. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Duration Multiplier Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Duration Multiplier.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. One octave up means half the duration (i.e. the duration multiplier is halved), and one octave down means twice the duration. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Elevation Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Elevation.</p>
+		<p>The modulation amount is expressed in number of degrees, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 90.0</p>
+	</td></tr><tr><td>
+		<p>Filter Cutoff Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Filter Cutoff.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Filter Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Filter Q.</p>
+		<p>The modulation amount is expressed as a Q offset, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Emissions per Second Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Emissions per Second.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Time Between Emissions Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Time Between Emissions.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. One octave up means half the duration, and one octave down means twice the duration. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> The value of Time Between Emissions Mod 1 is equivalent to that of Emissions Per Second Mod 1. In other words, if Select Freq/Time was <span class="bold"><strong>Frequency</strong></span>, then the same value would result in the same modulation.</p></td></tr></table></div>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Position Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Position.</p>
+		<p>The modulation amount is expressed in percentage of the file duration, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Offset Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Offset.</p>
+		<p>The modulation amount is expressed in percentage of the file duration, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Release Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Release.</p>
+		<p>The modulation amount is expressed in number of octaves, above and/or below the original value, depending on the choice of modulator waveshape. One octave up means half the release&#8217;s duration, and one octave down means twice the release&#8217;s duration. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: -10 to 10</p>
+	</td></tr><tr><td>
+		<p>Speed Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Speed.</p>
+		<p>The modulation amount is expressed as a speed offset, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 4</p>
+	</td></tr><tr><td>
+		<p>Spread Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Spread.</p>
+		<p>The modulation amount is expressed as an offset, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 100</p>
+	</td></tr><tr><td>
+		<p>Pitch Modulation</p>
+	</td><td>
+		<p>Modulation amount applied to Pitch.</p>
+		<p>The modulation amount is expressed in cents, above and/or below the original value, depending on the choice of modulator waveshape. Negative values have the effect of flipping the modulator&#8217;s output signal (i.e. inverting its polarity).</p>
+		<p>Default value: 0</p>
+		<p>Range: 0 to 4800</p>
+	</td></tr><tr><td colspan="2">
+                <p><span class="bold"><strong>Quantization</strong></span></p>
+              </td></tr><tr><td>
+		<p>Amplitude Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to <span class="bold"><strong>Amplitude</strong></span>.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base <span class="bold"><strong>Amplitude</strong></span> value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Attack Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Attack.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base <span class="bold"><strong>Attack</strong></span> value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Attack duration (see note below).</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Attack duration (see note below).</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Attack duration (see note below).</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -2, 0, 3, 5} semitones around the base Attack duration (see note below).</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Here, modulating &#8220;one octave down&#8221; is equivalent to stretching time by a factor of 2. Similarly, modulating &#8220;one semitone down&#8221; is equivalent to stretching time by 2 to the power of 1/12, that is, by a factor of 1.059.</p></td></tr></table></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Azimuth Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Azimuth.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Azimuth value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Duration Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Duration.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Duration value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Duration (see note below).</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Duration (see note below).</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Duration (see note below).</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -2, 0, 3, 5} semitones around the base Duration (see note below).</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Modulating one octave down is equivalent to stretching time by a factor of 2. Similarly, modulating one semitone down is equivalent to stretching time by 2 to the power of 1/12, that is, by a factor of 1.059.</p></td></tr></table></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Duration Multiplier Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Duration Multiplier.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base <span class="bold"><strong>Duration Multiplier</strong></span> value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Elevation Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Elevation.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Elevation value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Filter Cutoff Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Filter Cutoff.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms, and corresponds to the base Filter Cutoff value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Filter Cutoff frequency.</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Filter Cutoff frequency.</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Filter Cutoff frequency.</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 (octave), the allowed values are {-5, -2, 0, 3, 5} semitones around the base Filter Cutoff frequency.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Filter Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Filter Q.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Filter Q value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Emissions per Second Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Emissions per Second.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms, and corresponds to the base Emissions per Second value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Emissions per Second frequency.</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Emissions per Second frequency.</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Emissions per Second frequency.</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -2, 0, 3, 5} semitones around the base Emissions per Second frequency.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Time Between Emissions Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Time Between Emissions.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Time Between Emissions value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Time Between Emissions duration (see note below).</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Time Between Emissions duration (see note below).</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Time Between Emissions duration (see note below).</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -2, 0, 3, 5} semitones around the base Time Between Emissions duration (see note below).</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Time Between Emissions modulation is equivalent to Emissions per Second modulation. Thus, same values of modulation result in the same behavior. Here, modulating one octave down is equivalent to stretching time by a factor of 2. Similarly, modulating one semitone down is equivalent to stretching time by 2 to the power of 1/12, that is, by a factor of 1.059.</p></td></tr></table></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Position Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Position.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Position value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Offset Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Offset.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Offset value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Release Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Release.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Release value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Release duration (see note below).</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Release duration (see note below).</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Release duration (see note below).</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -2, 0, 3, 5} semitones around the base Release duration (see note below).</p></li></ul></div>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> Here, modulating one octave down is equivalent to stretching time by a factor of 2. Similarly, modulating one semitone down is equivalent to stretching time by 2 to the power of 1/12, that is, by a factor of 1.059.</p></td></tr></table></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Speed Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Speed.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Speed value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Spread Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Spread.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Spread value.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr><tr><td>
+		<p>Pitch Quantization</p>
+	</td><td>
+		<p>Quantization of modulation applied to Pitch.</p>
+		<p>The available quantization schemes for this property are:</p>
+		<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>None: No quantization.</p></li><li class="listitem"><p>(-1, 1): Quantized to the top and bottom of the modulator waveform.</p></li><li class="listitem"><p>(-1, 0, 1): Quantized to the top, middle, and bottom of the modulator waveform. &#8220;Middle&#8221; only applies to bipolar waveforms and corresponds to the base Pitch value.</p></li><li class="listitem"><p>Chromatic: Only semitones (12th of an octave) are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6} semitones around the base Pitch.</p></li><li class="listitem"><p>Major: Only intervals of the major scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -3, -1, 0, 2, 4, 5} semitones around the base Pitch.</p></li><li class="listitem"><p>Minor: Only intervals of the minor scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -4, -2, 0, 2, 3, 5} semitones around the base Pitch.</p></li><li class="listitem"><p>Pentatonic: Only intervals of the pentatonic scale are allowed. Say the modulation amount is 0.5 octave, the allowed values are {-5, -2, 0, 3, 5} semitones around the base Pitch.</p></li></ul></div>
+		<p>Default value: None</p>
+	</td></tr></tbody></table></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="ssg_source_settings"></a>Source settings</h4></div></div></div><p>This plug-in manages media, so it has two additional tabs in the Source Editor:</p><p><span class="bold"><strong>Source tab</strong></span></p><p>In the Source tab, you will find the familiar Wwise <a class="link" href="ch61s01s06.html" title="Source Editor: Audio Sources">Source Editor</a> loaded with a side panel of properties specific to Soundseed Grain. There, you may edit Trim, Fades, and Markers like you would for standard sources in Wwise. Note that any change that you perform here is made "pre-effect", that is, it affects the media before it is stored in SoundBanks. Thus, if you change the Trim, the source file that is used by the plug-in at run-time is effectively the trimmed file.</p><div class="caution" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png"></td><th align="left">Caution</th></tr><tr><td align="left" valign="top"><p>Moving the Trim cursors changes the meaning of the Position setting, since it depends on the audio file's duration.</p></td></tr></table></div><p>In the Source tab, markers can be added and edited. Click <span class="bold"><strong>Edit Markers in List View</strong></span> to see a full list of the source's markers.</p><br><p>In the Effect Settings tab, enable <span class="bold"><strong>Snap to Markers</strong></span> to set the effective grain start position to that of the closest marker.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Markers, if any, are displayed as blue vertical lines in the Effect Settings tab's graph view of the source audio file.</p></td></tr></table></div><br><p><span class="bold"><strong>Conversion tab</strong></span></p><p>In the Conversion tab you may select the Conversion ShareSet that will be used to encode the media prior to storing it in SoundBanks for the purpose of the plug-in. Soundseed Grain supports all channel downmixing and sample rate options, but only the PCM, ADPCM, and Vorbis codecs.</p><div class="warning" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top"><p>Currently, Soundseed Grain only supports decoding PCM, ADPCM, and Vorbis at runtime. If from the Conversion tab you choose another codec (such as Opus) for the Soundseed Grain Sound SFX, it will fail to play and you will see an error in the <a class="xref" href="ch63s01.html" title="Capture Log">Capture Log</a>.</p></td></tr></table></div><br><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You should avoid using ADPCM for files smaller than 64 samples per channel.</p></td></tr></table></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A seek table is required for Vorbis files. You should avoid using Vorbis for files smaller than the mimumum seek table size of 1,024 samples per channel.</p></td></tr></table></div><p>Alternatively, you may select other codecs and have the game "decode" the SoundBank at the
+				point of loading it in memory. Refer to <a class="link" href="https://www.audiokinetic.com/library/edge/?source=SDK&amp;id=namespace_a_k_1_1_sound_engine_a2d99e91099dba3eae8b2c67f9582bc01.html" target="_blank"><code class="code">AK::SoundEngine::DecodeBank</code></a> in the SDK documentation
+				for more details on the Decode Bank workflow.</p></div></div><HR></body></html>

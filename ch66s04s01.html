@@ -1,0 +1,132 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Source Editor: Impacter</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch66s04.html" title="Impacter"><link rel="prev" href="ch66s04.html" title="Impacter"><link rel="next" href="ch66s04s02.html" title="Contents Editor: Impacter"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt09.html">Audiokinetic plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66.html">Source plug-ins</a></span> &gt; <span class="breadcrumb-link"><a href="ch66s04.html">Impacter</a></span> &gt; <span class="breadcrumb-node">Source Editor: Impacter</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="source_editor_impacter_plug_in"></a>Source Editor: Impacter</h3></div></div></div><p>The Source Editor displays all the properties associated with the Impacter
+			plug-in.</p><p>For a general overview of the Impacter plug-in, refer to <a class="xref" href="ch66s04.html" title="Impacter">Impacter</a>.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+							<p>Name</p>
+						</td><td>
+							<p>The user-defined name given to this instance of the Impacter
+								plug-in.</p>
+						</td></tr><tr><td>
+							<p>Source Plugin</p>
+						</td><td>
+							<p>The type of source plug-in.</p>
+						</td></tr><tr><td>
+							<p>Notes</p>
+						</td><td>
+							<p>Any additional information about the Impacter plug-in.</p>
+						</td></tr><tr><td align="center">
+        <span class="inlinemediaobject"><img src="Images/btn_split.png"></span>
+    </td><td>
+        <p>Sets the display of the Source Editor's selected tabs. By default, there is one panel displaying only one selected tab. You can, however, click a splitter button to split the panel into two, either side by side or one on top of the other, for two different tabs. The currently selected option is highlighted with a background color.</p>
+        <div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You cannot display the same tab in both panels. If you select the tab that is currently displayed in the other panel, then the other panel will automatically display another tab.</p></td></tr></table></div>
+    </td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Effect Settings</strong></span></p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>File Input</strong></span></p>
+						</td></tr><tr><td>
+							<p>Audio Source</p>
+						</td><td>
+							<p>The name of the audio source file.</p>
+						</td></tr><tr><td>
+		<p>Impact Selection</p>
+	</td><td>
+		<p>Selects which impact component to add to the SoundBanks to be randomly selected for synthesis. </p>
+		<p>If there is more than one impact, the random selection always avoids repeating the previously played impact. </p>
+		<p>The impact is the leftover audio from analysis that drives the synthesis. It can be cross-synthesized with bodies from other files.</p>
+		<p>Soloing an impact exclusively selects it in the authoring tool for auditioning purposes. The solo setting is not applied to the SoundBanks.</p>
+		<p>Maximum 64 files.</p>
+	</td></tr><tr><td>
+		<p>Body Selection</p>
+	</td><td>
+		<p>Selects which body components to add to the SoundBanks to be randomly selected for synthesis. </p>
+		<p>If there is only one impact available, the random selection only avoids repeating the previously played body. </p>
+		<p>The body is the set of synthesis parameters extracted from audio analysis. It can be cross-synthesized with impacts from other files.</p>
+		<p>Soloing a body exclusively selects it in the authoring tool for auditioning purposes. The solo setting is not applied to the SoundBanks.</p>
+		<p>Maximum 64 files.</p>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_add_files.png"></div>
+						</td><td>
+							<p>Allows you to browse for additional files.</p>
+						</td></tr><tr><td align="center">
+							<div class="mediaobject"><img src="Images/btn_delete_all_files.png"></div>
+						</td><td>
+							<p>Deletes all files from the plug-in.</p>
+						</td></tr><tr><td colspan="2">
+							<p><span class="bold"><strong>Impact Params</strong></span></p>
+						</td></tr><tr><td>
+		<p>Mass</p>
+	</td><td>
+		<p>Uniquely stretches or compresses the length and pitch of the sound to change its feeling of size or weight. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 1.0</p>
+		<p>Range: 0.01 to 2.0</p>
+	</td></tr><tr><td>
+		<p>Mass Random</p>
+	</td><td>
+		<p>Adds a positive random offset to the Mass parameter.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 2.0</p>
+	</td></tr><tr><td>
+		<p>Velocity</p>
+	</td><td>
+		<p>Affects the intensity of the impact, changing the timbre and amplitude of the sound. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 1.0</p>
+		<p>Range: 0.05 to 1.0</p>
+	</td></tr><tr><td>
+		<p>Velocity Random</p>
+	</td><td>
+		<p>Adds a negative random offset to the Velocity parameter.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: -1.0 to 0</p>
+	</td></tr><tr><td>
+		<p>Position</p>
+	</td><td>
+		<p>Shapes the timbre of the sound as if the impact was occurring at different positions on a surface. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 1.0</p>
+	</td></tr><tr><td>
+		<p>Position Random</p>
+	</td><td>
+		<p>Adds a positive random offset to the Impact Position parameter.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 1.0</p>
+	</td></tr><tr><td>
+		<p>Roughness</p>
+	</td><td>
+		<p>Adds a metallic inharmonicity to the sound. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 0</p>
+		<p>Range: 0.0 to 1.0</p>
+	</td></tr><tr><td>
+		<p>Roughness Random</p>
+	</td><td>
+		<p>Adds a positive random offset to the Roughness parameter.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 1.0</p>
+	</td></tr><tr><td>
+		<p>Min Duration</p>
+	</td><td>
+		<p>Sets a minimum duration before looping or ending a play event. For a minimum duration longer than the impact, silence is appended. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 0.0</p>
+		<p>Range: 0.0 to 10.0</p>
+	</td></tr><tr><td>
+		<p>Output Level</p>
+	</td><td>
+		<p>Level applied to the final signal. RTPC updates are only applied at the start of an impact.</p>
+		<p>Default value: 0</p>
+		<p>Range: -96 to 24</p>
+		<p>Units: dB</p>
+	</td></tr></tbody></table></div></div><HR></body></html>

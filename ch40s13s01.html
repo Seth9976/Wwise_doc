@@ -1,0 +1,144 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Available Tab</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch40s13.html" title="Remote Connections dialog"><link rel="prev" href="ch40s13.html" title="Remote Connections dialog"><link rel="next" href="ch40s13s02.html" title="History Tab"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt06.html">Finishing your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch40.html">Profiling</a></span> &gt; <span class="breadcrumb-link"><a href="ch40s13.html">Remote Connections dialog</a></span> &gt; <span class="breadcrumb-node">Available Tab</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="available_tab"></a>Available Tab</h3></div></div></div><p>The Available tab of the Remote Connections dialog displays the remote game consoles that
+				have been automatically discovered on the network. </p><p>Wwise can automatically detect and connect to a game console only if:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Wwise and the game console are on the same network subnet.</p></li><li class="listitem"><p>The same "Game Discovery Broadcast Port" number must be specified in
+							the Wwise project settings and when initializing communications in the
+							game.</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+								<p>Name</p>
+							</td><td>
+								<p>The name of the specific console to which you will
+									connect.</p>
+							</td></tr><tr><td>
+								<p>Platform</p>
+							</td><td>
+								<p> The console's type of platform, chosen from among the names
+									defined in the <a class="xref" href="ch08.html#projects_platform_manager" title="Platform Manager dialog">Platform Manager dialog</a>.
+								</p>
+							</td></tr><tr><td>
+								<p>Base Platform</p>
+							</td><td>
+								<p>The platform's corresponding SDK, such as Android, iOS,
+									PlayStation 4, Switch, Windows, or Xbox One.</p>
+							</td></tr><tr><td>
+								<p>Status</p>
+							</td><td>
+								<p>The status of the remote game console. The status can be one
+									of the following types:</p>
+								<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+											<span class="bold"><strong>Ready</strong></span>: The game console
+											is ready to accept a connection. </p></li><li class="listitem"><p>
+											<span class="bold"><strong>Busy</strong></span>: The game console
+											is already connected to a machine and is therefore not
+											accepting any connections. When the status is Busy, the
+											name of the machine that is connected to the game
+											console is displayed. </p></li><li class="listitem"><p>
+											<span class="bold"><strong>Different Version</strong></span>: The
+											version of Wwise is not compatible with the version of
+											the game running on the remote PC or console. </p></li><li class="listitem"><p>
+											<span class="bold"><strong>Not Available</strong></span>: The game
+											console is no longer connected to the network. </p></li></ul></div>
+							</td></tr><tr><td>
+								<p>IP Address</p>
+							</td><td>
+								<p>The network address of the game console.</p>
+							</td></tr><tr><td>
+								<p>Application Name</p>
+							</td><td>
+								<p>The application name that was provided when initializing the
+									sound engine.</p>
+							</td></tr><tr><td>
+								<p>Port</p>
+							</td><td>
+								<p>The Dynamic ports of communication detected. (IP connection
+									only)</p>
+							</td></tr><tr><td>
+								<p>Ping</p>
+							</td><td>
+								<p>The round-trip latency in milliseconds.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_refresh.png"></div>
+							</td><td>
+								<p>Updates the information about each console in the list.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_connect.png"></div>
+							</td><td>
+								<p>Connects to the device currently selected in the list.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_connect_to_ip_dots.png"></div>
+							</td><td>
+								<p>Opens a dialog where you can specify the IP address of the
+									console.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_connect_to_file_dots.png"></div>
+							</td><td>
+								<p>Opens a dialog where you can select the .prof file that
+									contains all the data from the last profiling session.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_disconnect.png"></div>
+							</td><td>
+								<p>Removes the connection to the device currently selected in the
+									list.</p>
+							</td></tr><tr><td>
+    <p>Synchronization Method</p>
+  </td><td>
+    <p>Specifies how synchronization with the remote instance is handled:</p>
+    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Profile Only</strong></span>: There is no synchronization with the
+          remote instance. </p><p> Note that playback in Wwise Authoring is unavailable when connected in <span class="bold"><strong>Profile Only</strong></span> mode because objects and media are not synchronized
+          with the remote instance. </p><p> Use this option to quickly connect to your remote instance for profiling and to
+              prevent sound engine changes due to unexpected synchronization. </p></li><li class="listitem"><p>
+          <span class="bold"><strong>Profile and Edit (Sync Inspected Objects Only)</strong></span>: Only
+          objects that are currently inspected in the Transport Control are synchronized, in
+          addition to all necessary related objects, such as the Output Bus, Effects, and
+          Attenuation.</p><p> This means that changes to other objects in your Wwise project are not synchronized.
+          The sound engine plays back objects in the remote instance based on the behaviors defined
+          in the last generated SoundBanks, while also applying any changes made to the Wwise
+          project during the current remote connect session. </p><p>Modified media (sounds, MIDI, Convolution IR, etc.) that is currently in use by the
+          game is also transferred to the game.</p></li><li class="listitem"><p>
+          <span class="bold"><strong>Profile and Edit (Sync All Modified Objects)</strong></span>: All objects
+          that are modified in the Wwise project and are also loaded in the remote instance are
+          synchronized. </p><p> Use this option to automatically synchronize all loaded objects upon connection
+              and as SoundBanks are loaded while connected. </p><p>Modified media (sounds, MIDI, Convolution IR, etc.) that is currently in use by the game is
+          also transferred to the game.</p></li></ul></div>
+    <p>See <a class="xref" href="ch40s08.html" title="Editing while profiling a game">Editing while profiling a game</a> for further details.</p>
+  </td></tr><tr><td>
+								<p>Start capture on connect</p>
+							</td><td>
+								<p>Determines when the capture process will begin. If selected,
+									the capture process begins as soon as a connection is made. If
+									unselected, the capture process only begins when you click the
+									Start Capture button.</p>
+								<p>Each time a new capture process is started, all existing data
+									is cleared from the Capture Log.</p>
+							</td></tr><tr><td>
+								<p>Status</p>
+							</td><td>
+								<p>Displays whether you are currently connected to a remote
+									console. If you are connected, it displays the name and IP
+									address of the remote console.</p>
+							</td></tr><tr><td align="center">
+								<div class="mediaobject"><img src="Images/btn_close.png"></div>
+							</td><td>
+								<p>Closes the Remote Connection dialog without interrupting any
+									active connection.</p>
+							</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch40s07s10.html" title="Loading the data from a previous remote capture session">Loading the data from a previous remote capture session</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s07.html" title="Specifying network ports">Specifying network ports</a>
+					</p></li></ul></div></div><HR></body></html>

@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Defining relative properties (volume, pitch, LPF, HPF)</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch12s04.html" title="About properties in the project hierarchy"><link rel="prev" href="ch12s04s01.html" title="Defining absolute properties"><link rel="next" href="ch12s04s02s01.html" title="Associating low-pass and high-pass filter values with their corresponding cutoff frequencies"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch12.html">Building your sound and motion hierarchies</a></span> &gt; <span class="breadcrumb-link"><a href="ch12s04.html">About properties in the project hierarchy</a></span> &gt; <span class="breadcrumb-node">Defining relative properties (volume, pitch, LPF, HPF)</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="defining_relative_properties_volume_pitch_lpf_hpf"></a>Defining relative properties (volume, pitch, LPF, HPF)</h3></div></div></div><p>Relative properties are defined for each object within your hierarchy. Unlike absolute properties, relative properties are cumulative, which means that a parent's property values are added to those of the child.</p><p>You can randomize relative property values to further enhance the realism of objects within your game. For more information on randomizing property values, refer to <a class="xref" href="ch12s05.html" title="Enhancing playback by randomizing property values">Enhancing playback by randomizing property values</a>.</p><p>Not all relative properties are available for all objects and on all platforms. The following table lists the relative properties that are available for each object and on each platform.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="150px" class="col1"><col width="80px" class="col2"><col width="80px" class="col4"><col width="80px" class="col5"></colgroup><thead><tr><th>
+                
+				<p>Objects/Platforms</p>
+              </th><th>
+                <p>Volume</p>
+              </th><th>
+                <p>Pitch</p>
+              </th><th>
+                <p>LPF and HPF</p>
+              </th></tr></thead><tbody><tr><td>
+                <p>Sound object</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Containers (All)</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Property Container</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Music track</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Music Segment</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr><tr><td>
+                <p>Music containers (All)</p>
+              </td><td align="center">
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td><td>
+
+              </td><td>
+                <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="11"><tr style="height: 10px"><td align="center"><img src="Images/checkmark_wingding.png" align="middle" width="11"></td></tr></table></div>
+              </td></tr></tbody></table></div><div class="orderedlist"><p class="title"><b>To define the relative properties of an object:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Load an object into the Property Editor.</p></li><li class="listitem"><p>Type a value or drag the corresponding slider to set a value for each of the following properties:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong><a class="glossterm" href="go01.html#glossary_volume"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_volume" title="Volume">Volume</a></em></a></strong></span></p></li><li class="listitem"><p><span class="bold"><strong><a class="glossterm" href="go01.html#glossary_pitch"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_pitch" title="Pitch">Pitch</a></em></a></strong></span></p></li><li class="listitem"><p><span class="bold"><strong><a class="glossterm" href="go01.html#glossary_low_pass_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_low_pass_filter" title="Low-Pass Filter">Low-Pass Filter</a></em></a></strong></span></p></li><li class="listitem"><p><span class="bold"><strong><a class="glossterm" href="go01.html#glossary_high_pass_filter"><em class="glossterm"><a class="glossterm" href="go01.html#glossary_high_pass_filter" title="High-Pass Filter">High-Pass Filter</a></em></a></strong></span></p></li></ul></div><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>To edit the relative properties for several objects at the same time, select several objects in the Project Explorer, right-click the selection, and select <span class="bold"><strong>Show in Multi Editor</strong></span>.</p></td></tr></table></div></li></ol></div></div><HR></body></html>

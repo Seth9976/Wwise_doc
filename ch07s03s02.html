@@ -1,0 +1,98 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Defining the conversion settings for your project</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch07s03.html" title="Defining your project settings"><link rel="prev" href="ch07s03s01.html" title="Defining the general settings for your project"><link rel="next" href="ch07s03s03.html" title="Defining the SoundBank settings for your project"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt02.html">Setting up your projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07.html">Working with projects</a></span> &gt; <span class="breadcrumb-link"><a href="ch07s03.html">Defining your project settings</a></span> &gt; <span class="breadcrumb-node">Defining the conversion settings for your project</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="defining_conversion_settings_for_project"></a>Defining the conversion settings for your project</h3></div></div></div><p>In the <a class="xref" href="ch07s03s02.html#project_settings_source_settings_tab" title="Source Settings tab of the Project Settings dialog">Source Settings tab of the Project Settings dialog</a>, you can peform the following
+				tasks:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<a class="xref" href="ch07s03s02.html#specifying_default_conversion_settings" title="Specifying the default conversion settings">Specifying the default conversion settings</a>
+					</p></li><li class="listitem"><p>
+						<a class="xref" href="ch07s03s02.html#defining_sample_rate_automatic_detection_settings" title="Defining the sample rate automatic detection settings">Defining the sample rate automatic detection settings</a>
+					</p></li></ul></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="specifying_default_conversion_settings"></a>Specifying the default conversion settings</h4></div></div></div><p>After you have created the Conversion Settings ShareSets for your project, you can specify which one you want to use as the default. </p><p>Use the default Conversion Settings ShareSet in the following situations:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>When a new object is created: The default ShareSet will only be used if the new object
+							is a top-level parent object. If the new object is a child of another
+							object, it will inherit the Conversion Settings assigned to the
+							parent.</p></li><li class="listitem"><p>During SoundBank generation: If an object has not been assigned a Conversion Settings
+							ShareSet, the default ShareSet will be used to convert the object before
+							the SoundBanks are generated.</p></li></ul></div><div class="orderedlist"><p class="title"><b>To specify the default Conversion Settings ShareSet:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select<span class="bold"><strong> Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the Source Settings tab. See <a class="xref" href="ch07s03s02.html#project_settings_source_settings_tab" title="Source Settings tab of the Project Settings dialog">Source Settings tab of the Project Settings dialog</a>.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Default Conversion Settings</strong></span> group, click the <span class="bold"><strong>Browse</strong></span> button (...).</p><p>The Project Explorer - Browser opens.</p></li><li class="listitem"><p>Select the ShareSet that you want to use for your project's default Conversion Settings.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="defining_sample_rate_automatic_detection_settings"></a>Defining the sample rate automatic detection settings</h4></div></div></div><p>Deciding on the best sample rate for your media files can be difficult and time-consuming. To help speed up the process, you can have Wwise perform an analysis of each file using the Fast Fourier Transform (FFT) algorithm. At a very basic level, Wwise uses the FFT to generate a spectral analysis of the media file by analyzing the sound wave one portion at a time using a Hanning window. A cutoff volume or threshold identifies a frequency that is used to determine the best sample rate at which to convert your files. As part of your Project Settings, you can define the size of the Hanning window used by the FFT algorithm as well as the threshold levels for three different quality settings: High, Medium, and Low. These threshold settings are used when you select Auto High, Auto Medium, or Auto Low as your sample rate conversion method.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The volume threshold values are used in the context of a normalized spectrum.</p></td></tr></table></div><div class="orderedlist"><p class="title"><b>To define the automatic sample rate detection settings for your project:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Open the Project Settings dialog by doing one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>From the <span class="bold"><strong>Project</strong></span> menu, select <span class="bold"><strong>Project Settings</strong></span>.</p></li><li class="listitem"><p>Press <span class="bold"><strong>Shift+K</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Switch to the Source Settings tab. See <a class="xref" href="ch07s03s02.html#project_settings_source_settings_tab" title="Source Settings tab of the Project Settings dialog">Source Settings tab of the Project Settings dialog</a>.</p></li><li class="listitem"><p>From the FFT window size list in the <span class="bold"><strong>Sample Rate Automatic Detection</strong></span> group, select the size of the Hanning window that will be used by the FFT algorithm to analyze the sound wave.</p></li><li class="listitem"><p>In the <span class="bold"><strong>Volume Thresholds</strong></span> group, specify the cutoff volume level used by the FFT algorithm for each of the following quality options:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Low quality</strong></span>: A cutoff volume level that identifies the
+									frequency that is used to determine the best sample rate at
+									which to convert your files. The low quality threshold is used
+									when the Auto Low option is selected as your conversion sample
+									rate.</p></li><li class="listitem"><p><span class="bold"><strong>Medium quality</strong></span>: A cutoff volume level that identifies the
+									frequency that is used to determine the best sample rate at
+									which to convert your files. The medium quality threshold is
+									used when the Auto Medium option is selected as your conversion
+									sample rate.</p></li><li class="listitem"><p><span class="bold"><strong>High quality</strong></span>: A cutoff volume level that identifies the
+									frequency that is used to determine the best sample rate at
+									which to convert your files. The high quality threshold is used
+									when the Auto High option is selected as your conversion sample
+									rate.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>A higher threshold level will result in a lower quality sample rate being used in the conversion process and a smaller file size.</p></td></tr></table></div></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span> to save your settings and close the Project Settings dialog.</p></li></ol></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="project_settings_source_settings_tab"></a>Source Settings tab of the Project Settings dialog</h4></div></div></div><p>In the Source Settings tab, you can define the following for your
+					project:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Default Conversion Settings ShareSet that will be used for newly
+							created objects</p></li><li class="listitem"><p>Sample Rate Automatic Detection</p></li><li class="listitem"><p>Volume thresholds used by the automatic sample rate detection</p></li></ul></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2">
+									<p><span class="bold"><strong>Default Conversion
+											Settings</strong></span></p>
+								</td></tr><tr><td>
+									<p>(ShareSet)</p>
+								</td><td>
+									<p>The name of the ShareSet that will be used as the
+										project's default Conversion Settings.</p>
+									<p>The default Conversion Settings will be used in the
+										following situations:</p>
+									<p>When a new object is created. The default Conversion
+										Settings will only be used if the new object is a top-level
+										parent object. If the new object is a child of another
+										object, it will inherit the Conversion Settings assigned to
+										the parent.</p>
+									<p>During SoundBank generation for all objects that haven't been assigned a Conversion
+										Settings ShareSet.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_browse_icon.png"></div>
+									<p>(Browse)</p>
+								</td><td>
+									<p>Opens the Project Explorer - Browser where you can
+										navigate to and select the ShareSet that you want to use as
+										your project's default Conversion Settings.</p>
+								</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Sample Rate Automatic
+											Detection</strong></span></p>
+								</td></tr><tr><td>
+		<p>Auto Detect FFT Window Size</p>
+	</td><td>
+		<p>Defines the size of the Hanning window used by the FFT algorithm to analyze the media file&#8217;s sound wave.</p>
+		<p>Wwise uses the FFT algorithm to automatically detect an appropriate sample rate for your media files when you select the Auto Low, Auto Medium, or Auto High options from the Sample Rate list in the Conversion Settings dialog.</p>
+		<p>Default value: 512</p>
+	</td></tr><tr><td colspan="2">
+									<p><span class="bold"><strong>Volume Thresholds</strong></span></p>
+								</td></tr><tr><td>
+		<p>Low quality</p>
+	</td><td>
+		<p>Defines the cutoff volume threshold that identifies the frequency that is used to determine the best sample rate for a given media file. A higher threshold level will result in a lower quality sample rate used in the conversion process.</p>
+		<p>The low quality volume threshold value is used in the context of a normalized spectrum.</p>
+		<p>The low quality volume threshold is used when you select the Auto Low option from the Sample Rate list in the Conversion Settings dialog.</p>
+		<p>Default value: -30</p>
+		<p>Range: -96.3 to 0</p>
+	</td></tr><tr><td>
+		<p>Medium quality</p>
+	</td><td>
+		<p>Defines the cutoff volume threshold that identifies the frequency that is used to determine the best sample rate for a given media file. A higher threshold level will result in a lower quality sample rate used in the conversion process.</p>
+		<p>The medium quality volume threshold value is used in the context of a normalized spectrum.</p>
+		<p>The medium quality volume threshold is used when you select the Auto Medium option from the Sample Rate list in the Conversion Settings dialog.</p>
+		<p>Default value: -40</p>
+		<p>Range: -96.3 to 0</p>
+	</td></tr><tr><td>
+		<p>High quality</p>
+	</td><td>
+		<p>Defines the cutoff volume threshold that identifies the frequency that is used to determine the best sample rate for a given media file. A higher threshold level will result in a lower quality sample rate used in the conversion process.</p>
+		<p>The high quality volume threshold value is used in the context of a normalized spectrum.</p>
+		<p>The high quality volume threshold is used when you select the Auto High option from the Sample Rate list in the Conversion Settings dialog.</p>
+		<p>Default value: -50</p>
+		<p>Range: -96.3 to 0</p>
+	</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_ok.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog and saves your
+										settings.</p>
+								</td></tr><tr><td align="center">
+									<div class="mediaobject"><img src="Images/btn_cancel.png"></div>
+								</td><td>
+									<p>Closes the Project Settings dialog without saving your
+										settings.</p>
+								</td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="xref" href="ch07s03s02.html#specifying_default_conversion_settings" title="Specifying the default conversion settings">Specifying the default conversion settings</a></p></li><li class="listitem"><p><a class="xref" href="ch07s03s02.html#defining_sample_rate_automatic_detection_settings" title="Defining the sample rate automatic detection settings">Defining the sample rate automatic detection settings</a></p></li></ul></div></div></div><HR></body></html>

@@ -1,0 +1,85 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Streams</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s09.html" title="Memory Arenas"><link rel="next" href="ch63s03s11.html" title="Streaming Devices"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Streams</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="streams"></a>Streams</h3></div></div></div><p>The Advanced Profiler - Streams tab displays information about how each of the streams is managed by the Wwise sound engine. For in-depth details on I/O management in Wwise, refer to the "Streaming / Stream Manager" section of the SDK documentation.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Device Name</p>
+              </td><td>
+                <p>The name of the device from which the stream occurs. The string that is returned from your implementation of 
+                  <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=class_a_k_1_1_stream_mgr_1_1_i_ak_low_level_i_o_hook_a06860cb1211c2ebd5c49f4429cc66a0b.html" target="_blank">
+                    <code class="code">IAkLowLevelIOHook::GetDeviceDesc()</code></a>.</p>
+              </td></tr><tr><td>
+                <p>Stream Name</p>
+              </td><td>
+                <p>The name given to the stream. When played from the authoring tool, the stream name is the full file path of the streamed audio file. When played in game, it is the name of the audio source.</p>
+              </td></tr><tr><td>
+                <p>Priority</p>
+              </td><td>
+                <p>The priority of the stream. The priority has an influence on which stream is serviced by the scheduler when more than one stream is starving.</p>
+              </td></tr><tr><td>
+                <p>Tgt. Buffer Size</p>
+              </td><td>
+                <p>The target buffer length. It is the streaming device's target buffer length, specified in code in milliseconds (
+                   <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=struct_ak_device_settings_af396c1626da7df1bbb6d9129e132b02f.html" target="_blank">AkDeviceSettings::fTargetAutoStmBufferLength</a>
+                  ) multiplied by the stream's estimated throughput, in bytes per second. When a streamed sound's buffering is below the target buffer length, this indicates to the streaming device that more I/O data is required. The stream is idle when it is above the target buffer length.</p>
+              </td></tr><tr><td>
+                <p>Ref. Memory</p>
+              </td><td>
+                <p>The amount of memory that is referenced by the stream. This excludes memory used for I/O transfers. It can be seen as a measure of how much data the stream may grant to the sound engine at any given time. For example, if a stream exhibits a full "Buffering Status" but references 0 bytes of memory, this means that all of its I/O transfers have been scheduled, but none of them has completed yet resulting in the stream starving. Because the I/O memory pool is split into blocks of equal size (specified in 
+                   <a class="link" href="https://www.audiokinetic.com/library/?source=SDK&amp;id=struct_ak_device_data_a73ceca6480ceffa50466df30b5d2120f.html" target="_blank">AkDeviceSettings::uGranularity</a>
+                  ), the amount of memory that is referenced may be larger than the actual amount of valid data. For example, when one of these blocks contains the last few bytes of the file. When data caching is enabled for a given device, the sum of memory referenced by all its streams may exceed its streaming I/O pool size because some of these streams reference the same memory.</p>
+              </td></tr><tr><td>
+                <p>Buffering Status</p>
+              </td><td>
+                <p>A graphical representation of how close the stream is to its target buffering.</p>
+                <p>A status bar is displayed in two possible colors:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Gray</strong></span>: Indicates the portion of requested data that is buffered.</p></li><li class="listitem"><p><span class="bold"><strong>Orange (or blue in the Classic theme)</strong></span>: Indicates the portion of requested data that is not yet buffered. This includes any data for which I/O transfers are scheduled but not yet completed.</p></li></ul></div>
+                <p>When no data has been requested, the status bar is empty.</p>
+                <p>When the full width of the status bar is gray, the stream's buffering has reached its target and the stream becomes idle. As the sound engine consumes data from the stream, the buffer length decreases, bringing it below the target. At this point, the stream requests more data. If the buffer is not restored to its target length, the status bar turns orange (or blue in the Classic theme).</p>
+                <p>The color(s) of the status bar are based on the instantaneous state of the stream when it was last sampled by the profiler. The following image shows an example of a status bar that is part gray and part orange. However, with most modern data storage devices, transitions between a fully gray bar and a fully orange (or blue) bar happen very quickly, often between frames. Hence, in most cases, you will observe a status bar that is either one color or the other.</p>
+                <div class="mediaobject"><img src="Images/ap_buffering_status_bar.png"></div>
+              </td></tr><tr><td>
+                <p>File Size</p>
+              </td><td>
+                <p>The size of the file being streamed.</p>
+              </td></tr><tr><td>
+                <p>File Position</p>
+              </td><td>
+                <p>A graphical representation that shows the position of the stream within the file.</p>
+              </td></tr><tr><td>
+                <p>Total Bandwidth</p>
+              </td><td>
+                <p>The rate at which the file was streamed in the last profiling frame. This value takes all transfers into account, including transfers that occurred from the Stream Manager's cache.</p>
+              </td></tr><tr><td>
+                <p>Bandwidth (Low-Level)</p>
+              </td><td>
+                <p>The rate at which the file was streamed in the last profiling frame. Unlike the Total Bandwidth field, this field value considers transfers that occurred from within the low-level device. This value is always less than or equal to Total Bandwidth.</p>
+              </td></tr><tr><td>
+                <p>Est. Throughput</p>
+              </td><td>
+                <p>The estimated throughput of the stream. The sound engine estimates the rate at which it consumes data from a stream according to its encoding format and number of channels. It pushes this value to the stream as a heuristic, which is used by the stream to determine its target buffering length (Buffer Size).</p>
+              </td></tr><tr><td>
+                <p>Active</p>
+              </td><td>
+                <p>Indicates 
+                  <span class="bold"><strong>True</strong></span>
+                  if the stream was active at least once during the last profiling frame. A stream is active if its target buffering has not been reached, or if it is waiting for at least one I/O transfer to complete.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

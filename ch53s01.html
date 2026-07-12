@@ -1,0 +1,207 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Working with databases</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch53.html" title="Working with the Media Pool"><link rel="prev" href="ch53.html" title="Working with the Media Pool"><link rel="next" href="ch53s02.html" title="Similar Sound Search"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt07.html">Working with Wwise</a></span> &gt; <span class="breadcrumb-link"><a href="ch53.html">Working with the Media Pool</a></span> &gt; <span class="breadcrumb-node">Working with databases</span></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="working_with_media_pool_databases"></a>Working with databases</h2></div></div></div><p>In the Media Pool you can create databases, which you can then organize, search, and
+            filter to quickly find audio files in your local or network libraries.</p><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="creating_media_pool_databases"></a>Creating databases</h3></div></div></div><p>There are two folders in the <span class="bold"><strong>Databases</strong></span> tab: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Project Originals</strong></span>: Lists the audio files
+                        in your project. After you import files into your project, they are included
+                        in this list.</p></li><li class="listitem"><p><span class="bold"><strong>User Databases</strong></span>: Used to create databases
+                        and Virtual Folders to organize the audio files in your libraries.</p></li></ul></div><div class="orderedlist"><p class="title"><b>To create databases:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>From the Media Pool <span class="bold"><strong>Databases</strong></span> tab, do one
+                        of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right-click <span class="bold"><strong>User Databases</strong></span>
+                                    and then select <span class="bold"><strong>New Child</strong></span> &gt;
+                                        <span class="bold"><strong>Media Pool Database</strong></span>.</p></li><li class="listitem"><p>Click the <span class="bold"><strong>Create Media Pool
+                                        Database</strong></span> icon.</p></li><li class="listitem"><p>Drag and drop one or many folders from your local file browser
+                                    to a User Databases Virtual Folder.</p></li></ul></div></li><li class="listitem"><p>Enter a name for your database.</p></li><li class="listitem"><p>To open the Media Pool Database Settings dialog, do one of the following: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Double-click the database.</p></li><li class="listitem"><p>Right-click the database and then select <span class="bold"><strong>Database Settings</strong></span>.</p></li></ul></div></li><li class="listitem"><p>Click <span class="bold"><strong>+ </strong></span> to create a path to the folder
+                        containing the files you want to add to the database.</p></li><li class="listitem"><p>Browse to select the folder and then click <span class="bold"><strong>Select
+                            Folder</strong></span>.</p></li><li class="listitem"><p>Click <span class="bold"><strong>OK</strong></span>.</p><p>The Media Pool recursively scans the folders linked to the database and
+                        adds all audio file metadata to that database. The files are then displayed
+                        in the Results pane.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Media Pool detects the following audio formats: .wav, .amb, and
+                            .adm.</p></td></tr></table></div></li></ol></div><p>
+                </p><div class="mediaobject"><img src="Images/mediapool_data_settings.png"></div><p>
+            </p><p>
+                </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="80px" align="center" class="c1"><col width="770px" class="c2"></colgroup><tbody><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                                </td><td>
+                                    <p>Open the folder containing the database cache
+                                        files.</p>
+                                </td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                                </td><td>
+                                    <p>Click + to link your library folder to the
+                                        database.</p>
+                                </td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                                </td><td>
+                                    <p>The list of library folders that are tracked by your
+                                        database.</p>
+                                </td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                                </td><td>
+                                    <p>Click <span class="bold"><strong>Rescan Database</strong></span> to
+                                        manually scan your database because of file changes. Media
+                                        Pool databases are scanned every time you open a project.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>If you suspect a scan has failed or a database
+                                                cache is corrupted. Click <span class="bold"><strong>Open
+                                                  Containing Folder</strong></span> to delete the cached
+                                                files, and then click <span class="bold"><strong>Rescan
+                                                  Database</strong></span>. The tracked folders are
+                                                stored in a separate settings file and are not
+                                                affected. Database settings are found in:
+                                                  <code class="code">%AppData%\Audiokinetic\MediaPool\</code></p></td></tr></table></div><p>
+                                    </p>
+                                </td></tr></tbody></table></div><p>
+            </p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="organizing_media_pool_databases"></a>Organizing databases</h3></div></div></div><p>To organize your databases and access files quickly, you can create Virtual
+                Folders and add databases to them. To create a folder or database:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right-click a folder and then select <span class="bold"><strong>New Child &gt;
+                                Virtual Folder</strong></span> or <span class="bold"><strong>Media Pool
+                                Database</strong></span>: Creates a new child folder or child
+                            database.</p></li><li class="listitem"><p>Click the<span class="bold"><strong> Create new Media Pool
+                                Database</strong></span> icon: Creates a new database under the folder or
+                            database you have selected.</p></li><li class="listitem"><p>Right-click a folder or database and then select <span class="bold"><strong>New Parent &gt; Virtual Folder</strong></span>: Creates a new parent
+                            Virtual Folder where you can add databases.</p></li><li class="listitem"><p>With a virtual folder selected, click the <span class="bold"><strong>Create
+                                new Virtual Folder</strong></span> icon. Creates a new folder under the
+                            selected virtual folder.</p></li></ul></div><p>You can further organize your Databases pane by right-clicking a
+                folder or database and then selecting:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Delete</strong></span>: Delete your database or
+                            folder. Alternatively, you can press the <span class="bold"><strong>Delete</strong></span> key.</p></li><li class="listitem"><p><span class="bold"><strong>Rename</strong></span>: Rename you database or
+                            folder. Alternatively, you can press <span class="bold"><strong>F2</strong></span>.</p></li><li class="listitem"><p><span class="bold"><strong>Set color</strong></span>: Select a color for a
+                            folder or database. A color bar is displayed beside the folder or
+                            database name.</p></li></ul></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="configuring_media_pool_results"></a>Configuring the Results columns</h3></div></div></div><p>By default, the Results pane displays only the <span class="bold"><strong>Name</strong></span> and <span class="bold"><strong>Waveform</strong></span> columns. To
+                configure the columns, do one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>To add or remove columns, right-click the column header and select
+                                <span class="bold"><strong>Configure Columns</strong></span> and then select
+                            the field to display as a column.</p></li><li class="listitem"><p>To reorder the columns, right-click the column header and select
+                                <span class="bold"><strong>Configure Columns</strong></span>. Reorder a
+                            selected field by dragging and dropping it.</p></li><li class="listitem"><p>To add a column from a field in the Metadata pane, right-click a field
+                            and select <span class="bold"><strong>Add Field as Column</strong></span>. For
+                            example, to add a <span class="bold"><strong>Sample Rate</strong></span> column,
+                            right-click <span class="bold"><strong>Sample Rate</strong></span> and then select
+                                <span class="bold"><strong>Add Field as Column</strong></span>.</p></li></ul></div><p>
+                </p><div class="mediaobject"><img src="Images/media_pool_columns.png"></div><p>    
+               
+                </p><p>
+                </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><tbody><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                                </td><td>
+                                    <p>Select a field to include in the Results pane. Deselect a
+                                        field to remove from Results pane.</p>
+                                    <p>Search for a field in the Search bar.</p>
+                                </td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                                </td><td>Select and drag the field to place it in the
+                                    order it will be displayed in the Results pane. In this image,
+                                    the WAV/Channels field is being dragged to appear after the
+                                    General/Name field.</td></tr></tbody></table></div><p>
+            </p></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="searching_media_pool_databases"></a>Searching for files by metadata</h3></div></div></div><p>Use the Search field at the top of the Results pane to find specific audio files.
+                As you type in the Search field, the Media Pool searches the metadata in the
+                database files and displays matches in the Results pane.</p><p>The Results pane displays both the Project Originals and the Database files.
+                Select or deselect the check box next to the folders or databases you want to
+                include or exclude from the search. </p><p>To search for files by metadata:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Select the <span class="bold"><strong>Selected Fields</strong></span> option
+                            Search drop-down list.</p></li><li class="listitem"><p>Click the gear icon to the right of the <span class="bold"><strong>Search</strong></span> field and then select the check box for each
+                            field to include in the search. </p></li><li class="listitem"><p>Type in the text string to search by.</p><p>You can use the following operators to get more precise results:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Exact phrase</strong></span>: Use double
+                                        quotes (") to find a specific phrase, for example, "footstep
+                                        medium".</p></li><li class="listitem"><p><span class="bold"><strong>Exclude words</strong></span>: Use a
+                                        hyphen (-) or exclamation mark (!) to remove unwanted
+                                        results. For example: footstep !concrete.</p></li></ul></div><p>As you type, the Results pane is dynamically populated with matches.
+                            The best matches appear at the top of the list.</p></li></ol></div><p>For a file to appear in the Results pane, each word in the search string
+                must be found at least once in the selected metadata fields. Using quotation marks
+                to specify an exact phrase enforces that the words should appear in the same field
+                in the written order.</p><div class="tip" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top"><p>Right-click the file in the Results pane or the waveform in the Audio
+                        Preview/Region Selector and select either <span class="bold"><strong>Copy Path to
+                            Clipboard</strong></span> or <span class="bold"><strong>Copy Filename to
+                            Clipboard</strong></span> to paste exact matches. </p></td></tr></table></div><p>The word matching process is approximate, allowing for prefix matches. For
+                example, &#8220;foot&#8221; matches with &#8220;footstep&#8221;. The approximate search also allows for
+                typos. For example, &#8220;foottep&#8221; matches with &#8220;footstep&#8221;. </p><p>Matched files are given a score that ranks the exact matches higher than
+                approximate matches. To view the <span class="bold"><strong>Score</strong></span> column,
+                right-click the column header and select <span class="bold"><strong>Configure
+                    Columns</strong></span> to select the Score field. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You can also search by Similar Sound Search. See <a class="xref" href="ch53s02.html" title="Similar Sound Search">Similar Sound Search</a>.</p></td></tr></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h3 class="title"><a name="filtering_media_pool_databases"></a>Filtering databases</h3></div></div></div><p>You can create filters to refine the list of audio files in the Results
+                pane.</p><p>
+                </p><div class="mediaobject"><img src="Images/mediapool_filters.png"></div><p>
+            </p><p>
+                </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><tbody><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout1.png"></div>
+                                </td><td>The number of filters in the Filters
+                                    pane.</td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout2.png"></div>
+                                </td><td>Click the delete icon to delete all filters.
+                                    Alternatively you can click the delete icon beside a filter to
+                                    delete only that one.</td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout3.png"></div>
+                                </td><td>Click <span class="bold"><strong>+</strong></span> to
+                                    add a filter.</td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout4.png"></div>
+                                </td><td>A field filter created by selecting or
+                                    right-clicking a metadata field.</td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout5.png"></div>
+                                </td><td>An <span class="bold"><strong>Audio
+                                        Similarity</strong></span> filter to find audio files with a
+                                    similar sound to the waveform of the selected file.</td></tr><tr><td align="center">
+                                    <div class="mediaobject"><img src="Images/Callout6.png"></div>
+                                </td><td>An <span class="bold"><strong>Audio
+                                        Description</strong></span> filter to find audio files that sound
+                                    similar to the description you type.</td></tr></tbody></table></div><p>
+            </p><div class="orderedlist"><a name="metadata_filter"></a><p class="title"><b>To create a filter from the Metadata pane:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Select a file from the Results pane. The metadata for that file is
+                        displayed in the Metadata pane.</p></li><li class="listitem"><p>In the Metadata pane, right-click a field and select <span class="bold"><strong>Add Field Filter</strong></span>. For example, to filter the results by
+                        Sample Rate, right-click <span class="bold"><strong>Sample Rate</strong></span> and
+                        then click <span class="bold"><strong>Add Field Filter</strong></span>.</p><p>The field is displayed in the <span class="bold"><strong>Filters</strong></span>
+                        pane with its current value.</p></li><li class="listitem"><p>Select an operator and enter or edit the value.</p><p>The Results pane is updated based on the operator and value that you have
+                        configured.</p></li></ol></div><div class="orderedlist"><a name="create_filters_filterspane"></a><p class="title"><b>To create a filter in the Filters pane:</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Click the Filters tab.</p></li><li class="listitem"><p>Click <span class="bold"><strong>+</strong></span>.</p></li><li class="listitem"><p>Select one of the following:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Field</strong></span>: Filters by metadata
+                                    fields.</p></li><li class="listitem"><p><span class="bold"><strong>Audio Similarity</strong></span>: Ranks
+                                    search results based on their similarity to the waveform of the
+                                    audio of the selected file.</p></li><li class="listitem"><p><span class="bold"><strong>Audio Description</strong></span>: Ranks
+                                    search results based on their similarity to the description of a
+                                    sound.</p></li></ul></div></li><li class="listitem"><p>If you selected <span class="bold"><strong>Field</strong></span>, click the pencil
+                        icon to select a field you want to filter by and then click <span class="bold"><strong>OK</strong></span>.</p></li><li class="listitem"><p>Select an operator and enter the value.</p><p>The Results pane is updated based on the operator and value that you have
+                        selected.</p></li></ol></div><div class="orderedlist"><a name="audio_similarity_waveform_filter"></a><p class="title"><b>To create an Audio Similarity filter</b></p><ol class="orderedlist" type="1"><li class="listitem"><p>Do one of the following:</p><p>
+                        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>In the Media Pool Results pane, right-click a file and select
+                                        <span class="bold"><strong>Find Similar</strong></span>.</p></li><li class="listitem"><p>In the Media Pool Audio Preview/Region Selector, right-click
+                                    anywhere in the waveform and select <span class="bold"><strong>Find
+                                        Similar</strong></span>.</p></li><li class="listitem"><p>In the Media Pool Audio Preview/Region Selector, right-click a
+                                    selected region and then select <span class="bold"><strong>Find
+                                        Similar (Region)</strong></span>. </p></li><li class="listitem"><p>In the Project Explorer, right-click a Sound SFX object and
+                                    select <span class="bold"><strong>Find Similar in Media
+                                        Pool</strong></span>.</p></li></ul></div><p>
+                    </p><p>The filter is added to the Filters pane.</p></li><li class="listitem"><p>Set a weight for the filter, if desired.</p></li></ol></div><p>
+                </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>For more information on <span class="bold"><strong>Audio Similarity</strong></span>
+                        and <span class="bold"><strong>Audio Description</strong></span>, see <a class="xref" href="ch53s02.html" title="Similar Sound Search">Similar Sound Search</a>.</p></td></tr></table></div><p>
+            </p><p>The following tables describe the filter properties.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+                                <p>Properties shared by all filters</p>
+                            </th><th>
+                                <p>Description</p>
+                            </th></tr></thead><tbody><tr><td align="center">Filter name</td><td>
+                                <p>Displays the name and information about the filter
+                                    configuration. To change the order of how the filters appear in
+                                    the Filters pane, right-click the name of the filter and select
+                                    either <span class="bold"><strong>Move Up Media Pool Filter at index
+                                        #</strong></span> or <span class="bold"><strong>Move Down Media Pool
+                                        Filter at index #</strong></span>.</p>
+                            </td></tr><tr><td align="center">Include</td><td>
+                                <p>Select to filter based on the field. If you deselect this
+                                    check box, this filter is removed from your search
+                                    criteria.</p>
+                            </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+                                <p>Field Filter Properties</p>
+                            </th><th>
+                                <p>Description</p>
+                            </th></tr></thead><tbody><tr><td align="center">Field</td><td>
+                                <p>The metadata field by which to filter the results.</p>
+                            </td></tr><tr><td align="center">Operator</td><td>
+                                <p>The operation that defines how to filter the field. This
+                                    operator changes depending if the field is a text or numeric
+                                    field.</p>
+                                <p>The operators for text fields:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>!= (not equal to)</p></li><li class="listitem"><p>= (equal to)</p></li><li class="listitem"><p>contains</p></li><li class="listitem"><p>starts with</p></li><li class="listitem"><p>ends with</p></li><li class="listitem"><p>matches regex (regular expression).</p><p> For more information about regular expressions
+                                                that Wwise uses, see <a class="link" href="https://www.audiokinetic.com/library/edge/?source=Help&amp;id=regexref" target="_blank">Regular expression reference</a>.</p></li></ul></div>
+                                <p>The operators for numeric fields: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>&lt; (less than)</p></li><li class="listitem"><p>&lt;= (less than or equal to)</p></li><li class="listitem"><p>!= (not equal to)</p></li><li class="listitem"><p>= (equal to)</p></li><li class="listitem"><p>&amp;gt;= (greater than or equal to)</p></li><li class="listitem"><p>&amp;gt; (greater than)</p></li></ul></div>
+                            </td></tr><tr><td align="center">Value</td><td>
+                                <p>The value by which the operator filters the results. For
+                                    example, for the numeric field <span class="bold"><strong>Sample
+                                        Rate</strong></span>, you can filter a your results to include
+                                    only audio files that have a Sample Rate of &lt; 48000 Hz. </p>
+                                <p>The operator is less than (<span class="bold"><strong>&lt;</strong></span>) and the value is <span class="bold"><strong>48000</strong></span>.</p>
+                            </td></tr></tbody></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col class="col2"></colgroup><thead><tr><th>
+                                <p>Similar Sound Search Properties</p>
+                            </th><th>
+                                <p>Description</p>
+                            </th></tr></thead><tbody><tr><td align="center">Description</td><td>Used for the <span class="bold"><strong>Audio
+                                    Description</strong></span> for Similar Sound Search filter. Type a
+                                description of the sound to filter by, for example, "buzzing". </td></tr><tr><td align="center">Similar To</td><td>
+                                <p>Displays the waveform that other audio files are compared
+                                    to.</p>
+                            </td></tr><tr><td align="center">Weight</td><td>The relative importance of the similarity filter
+                                to other filters. Used for both <span class="bold"><strong>Audio
+                                    Similarity</strong></span> and <span class="bold"><strong>Audio
+                                    Description</strong></span> filters. Use this to boost or reduce the
+                                impact of a given similarity filter for ranking the search
+                                results.</td></tr></tbody></table></div></div></div><HR></body></html>

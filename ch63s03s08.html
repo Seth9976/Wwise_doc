@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Memory</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch63s03.html" title="Advanced Profiler"><link rel="prev" href="ch63s03s07.html" title="Emitter-Listener Associations"><link rel="next" href="ch63s03s09.html" title="Memory Arenas"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt08.html">Reference topics</a></span> &gt; <span class="breadcrumb-link"><a href="ch63.html">Profiler Views</a></span> &gt; <span class="breadcrumb-link"><a href="ch63s03.html">Advanced Profiler</a></span> &gt; <span class="breadcrumb-node">Memory</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="memory"></a>Memory</h3></div></div></div><p>The Advanced Profiler - Memory tab displays information about how memory is managed by the Wwise sound engine. Information is displayed about each of the memory categories tracked by the memory manager.</p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Memory tab only tracks how much memory has been allocated by the memory manager in Wwise, but does not track how much memory has been reserved from the system. Use the <a class="xref" href="ch63s03s09.html" title="Memory Arenas">Memory Arenas</a> tab to monitor memory reservation and fragmentation. </p></td></tr></table></div><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+		<p>Interface Element</p>
+	</th><th>
+		<p>Description</p>
+	</th></tr></thead><tbody><tr><td colspan="2"><span class="bold"><strong>Global
+                Statistics</strong></span></td></tr><tr><td>Used</td><td>The sum of used memory across all categories.</td></tr><tr><td>Total Reserved</td><td>The total amount of memory reserved by the memory manager across all memory arenas.</td></tr><tr><td colspan="2"><p><span class="bold"><strong>Category Table</strong></span></p></td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/search_icon.png"></div>
+		<div class="mediaobject"><img src="Images/search_aklistctrl.png"></div>
+	</td><td>
+		<p>Opens a search field where standard alphanumeric entries filter out unmatching elements from the view. Learn more in <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.
+		</p>
+		<p>Click the Close icon to the left of the search icon to close the search field and remove the filter.</p>
+		<div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The searches do not include elements in collapsed nodes of the <a class="xref" href="ch61s12s02.html" title="List View">List View</a>, <a class="xref" href="ch61s07s01.html" title="Query Editor">Query Editor</a>, <a class="xref" href="ch61s01s03s06s01s01.html" title="MIDI Keymap Editor">MIDI Keymap Editor</a>, and <a class="xref" href="ch61s12s05.html" title="Reference View">Reference View</a>.</p><p>The search is not included in the Settings for Source objects.</p></td></tr></table></div>
+	</td></tr><tr><td align="center">
+		<div class="mediaobject"><img src="Images/configure_columns_shortcut.png"></div>
+	</td><td>
+		<p>Right-click the table header to open the <span class="bold"><strong>Configure Columns</strong></span>
+			dialog where you can specify which columns to display and their order. See <a class="xref" href="ch04.html#using_tables" title="Using tables">Using tables</a>.</p>
+	</td></tr><tr><td>
+                <p>Category Name</p>
+              </td><td>
+                <p>The name of the memory category. The categories and subcategories are defined as follows:</p>
+                <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Game Object</strong></span>: Registered emitter objects as well as others.</p></li><li class="listitem"><p><span class="bold"><strong>Integration</strong></span>: Allocations specific to game engine integrations, like callbacks or capturing audio output.</p></li><li class="listitem"><p><span class="bold"><strong>Job Manager</strong></span>: Allows for asynchronously rendering audio buffers over single and multiple cores. </p></li><li class="listitem"><p><span class="bold"><strong>Media</strong></span>: Compressed and uncompressed media in memory. This value increases if you decode your SoundBanks on load.</p></li><li class="listitem"><p><span class="bold"><strong>Object</strong></span>: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Event</strong></span>: Events and Actions.</p></li><li class="listitem"><p><span class="bold"><strong>Object</strong></span>: Memory allocations that have not been categorized or don't fit with other categories.</p></li><li class="listitem"><p><span class="bold"><strong>Structure</strong></span>: Mainly the hierarchical structure and container settings.</p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Processing</strong></span>:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Processing</strong></span>: Audio buffers for decompression, applying
+                            Effects, mixing, and DSP. This value is directly influenced by the
+                            number of physical voices and busses.</p></li><li class="listitem"><p><span class="bold"><strong>Processing (Plug-in)</strong></span>: Allocations for plug-ins like AK Convolution Reverb, RoomVerb, and Time Stretch.</p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Profiler</strong></span>: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Monitor Queue</strong></span>: Fixed-size allocation for Profiler connection
+                            data.</p></li><li class="listitem"><p><span class="bold"><strong>Profiler</strong></span>: Everything other than Monitor Queue, for example, debug names for objects.</p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Sound Engine</strong></span>: Basic initialization of the
+                      sound engine and other systems used for sound engine management.</p></li><li class="listitem"><p><span class="bold"><strong>Spatial Audio</strong></span>: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Geometry</strong></span>: Geometry sent to Wwise.</p></li><li class="listitem"><p><span class="bold"><strong>Reflection/Diffraction Paths</strong></span>: Mainly the memorization of propagation.</p></li><li class="listitem"><p><span class="bold"><strong>Spatial Audio</strong></span>: Various other memory allocations.</p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Streaming</strong></span>: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Streaming</strong></span>: Supportive costs of streaming. For example, there's a cost for each file opened. </p></li><li class="listitem"><p><span class="bold"><strong>Streaming I/O</strong></span>: Fixed-size buffer into which streamed media chunks are loaded.</p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Temp</strong></span>: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="bold"><strong>Temp (Audio Render)</strong></span>: Pool of memory to manage temporary allocations.</p></li></ul></div></li></ul></div>
+              </td></tr><tr><td>
+                <p>Used</p>
+              </td><td>
+                <p>The amount of memory currently used in the memory category.</p>
+              </td></tr><tr><td>Peak Used</td><td>
+                <p>The peak amount of memory used in the memory category since the initialization of the memory manager.</p>
+              </td></tr><tr><td>
+                <p>Allocs</p>
+              </td><td>
+                <p>The number of allocations performed since the memory manager was initialized.</p>
+                <p>When this number increments, it indicates that the memory manager is currently allocating memory.</p>
+              </td></tr><tr><td>
+                <p>Frees</p>
+              </td><td>
+                <p>The number of deallocations performed since the memory manager was initialized.</p>
+                <p>When this number increments, it indicates that the memory manager is currently deallocating memory.</p>
+              </td></tr><tr><td>
+                <p>Cur. Allocs</p>
+              </td><td>
+                <p>The number of memory blocks that are currently allocated. The Current Allocs value is the number of Allocs minus the number of Frees.</p>
+                <p>When this number increments or decrements, it indicates that the memory manager is currently allocating or deallocating memory.</p>
+              </td></tr></tbody></table></div><div class="itemizedlist"><p class="title"><b>Related Topics</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+            <a class="xref" href="ch40s06.html" title="Connecting to a local/remote game system">Connecting to a local/remote game system</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s07.html" title="Capturing data from the sound engine">Capturing data from the sound engine</a>
+          </p></li><li class="listitem"><p>
+            <a class="xref" href="ch40s09.html" title="Monitoring and troubleshooting with the Performance Monitor">Monitoring and troubleshooting with the Performance Monitor</a>
+          </p></li></ul></div></div><HR></body></html>

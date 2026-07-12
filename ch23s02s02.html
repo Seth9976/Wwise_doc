@@ -1,0 +1,138 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Steering speaker panning illustrated</title><link rel="stylesheet" type="text/css" href="style.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Wwise Help"><link rel="up" href="ch23s02.html" title="Working with speaker panning"><link rel="prev" href="ch23s02s01.html" title="Balance-Fade speaker panning illustrated"><link rel="next" href="ch23s03.html" title="Working with 3D spatialized objects"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="breadcrumbs"><span class="breadcrumb-link"><a href="index.html">Wwise Help</a></span> &gt; <span class="breadcrumb-link"><a href="pt04.html">Using sounds and motion to enhance gameplay</a></span> &gt; <span class="breadcrumb-link"><a href="ch23.html">Defining positioning</a></span> &gt; <span class="breadcrumb-link"><a href="ch23s02.html">Working with speaker panning</a></span> &gt; <span class="breadcrumb-node">Steering speaker panning illustrated</span></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="steering_panner_illustrated"></a>Steering speaker panning illustrated</h3></div></div></div><p>When Speaker Panning is set to <span class="bold"><strong>Steering</strong></span>, the Speaker Panner can be used to redistribute the content of an object&#8217;s source audio amongst the channels of its Output Bus, including possible height channels. With this mode selected, the <span class="bold"><strong>Edit</strong></span> button is available and opens the Speaker Panner. The Speaker Panner contains a two-dimensional graph view with X, Y, and Z coordinates and a control point in the center. You can drag the control point anywhere within the graph view. Instead of changing the volume of the input channels like the Balance-Fade panner, the Steering panner changes the <span class="italic">position</span> of the input channels, and then pans the result on the channels of the Output Bus.</p><p>If the source audio has more channels than the Output Bus, the content is first downmixed. If the source audio has fewer channels than the Output Bus, the content is <span class="italic">not</span> upmixed; channels not existing in the source audio will be silent in the Output Bus unless the Speaker Panner is used to redistribute audio towards those channels.</p><p>When the control point is in the center, the result is identical to direct speaker assignment: the input channels are routed to their corresponding output channels, downmixed if necessary, but never upmixed. </p><div class="note" style="margin-left: 0.0in; margin-right: 0.0in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>The Z-axis is not represented in the graph view; its value is controlled and indicated solely by the Z-axis text box. Additionally, it has no impact on a configuration that does not have channels in the height layer.</p></td></tr></table></div><p>The actual distribution depends on the Output Bus configuration. For example, the Y coordinate has no effect when the Output Bus is stereo. Refer to the following sections for detailed examples.</p><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="steering_side"></a>Steering side to side</h4></div></div></div><p>The figures in the following table illustrate the case of a 5.x channel input panned on a 5.x channel bus. The position of the control point effectively moves the input channels in the corresponding direction, where they are re-panned in the output channels. For example, when the control point is dragged towards the left, R is virtually displaced towards the left. </p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2" align="left">
+								<p>2.0 channel input panned on a 5.x channel bus</p>
+							</th></tr><tr><th valign="top">
+								<p>Speaker Panner</p>
+							</th><th valign="top">
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_a.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = 0, Y = 0.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_a.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The L channel of the input plays in the FL channel of the bus, and the R channel of the input plays in the FR channel of the bus. The other channels of the bus are silent.</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_b.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -25, Y = 0. </p>
+								<p>The input&#8217;s R is repositioned in between the FR and C channels. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_b.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The input's R plays in both the FR and C channels of the bus. </p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_c.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = 0.</p>
+								<p>R is positioned directly over C. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_c.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The C channel of the bus plays the signal of R, and the FR channel of the bus is silent.</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_d.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -75, Y = 0.</p>
+								<p>R is halfway between FL and C. </p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_d.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The C channel contains the signal of the input&#8217;s R channel, but quieter, and the FL channel of the bus contains a mixture of the input&#8217;s L and R channels. The other channels are silent.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="steering_front_back"></a>Steering front to back</h4></div></div></div><p>The figures in the following table illustrate the case of various multichannel inputs panned on a 5.x channel bus. The position of the control point effectively moves the input channels in the corresponding direction, where they are re-panned in the output channels. For example, when the control point is dragged down, the L and R channels of the input start to play in the surround channels of the bus.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col class="col1"><col class="col2"></colgroup><thead><tr><th colspan="2" align="left" valign="top">
+								<p>Various multichannel inputs panned on a 5.x channel bus</p>
+							</th></tr><tr><th valign="top">
+								<p>Speaker Panner</p>
+							</th><th>
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_e.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = -50.</p>
+								<p>2.0 input.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_e.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>L is heard in both the FL and SL channels of the bus, while R is heard in all channels of the bus.</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_f.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = -100.</p>
+								<p>2.0 input.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_f.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>L plays strictly in the SL channel of the bus, while R plays in both the SL and SR channels of the bus.</p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_g.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = 50.</p>
+								<p>2.0 input.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_c.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>Notice that moving the control point in the positive Y direction has no effect and is identical to Y = 0. This example shows that the displacement of the input channel is equivalent to the X = -50, Y = 0 case shown in <a class="xref" href="ch23s02s02.html#steering_side" title="Steering side to side">Steering side to side</a>. This is because the input sound is only stereo, and does not have content in the surround channels that could be steered to the front. </p>
+							</td></tr><tr><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/spkr_pnr_steer_h.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>X = -50, Y = -50.</p>
+								<p>4.0 input.</p>
+							</td><td valign="top">
+								<p>
+									</p><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="444"><tr style="height: 416px"><td><img src="Images/dgm_steer_meter_h.png" width="444"></td></tr></table></div><p>
+								</p>
+								<p>The FL channel of the input is panned to the FL channel of the bus, FR is panned to the C channel of the bus, SL is panned between the SL and FL channels of the bus, and SR is panned between all channels of the bus.</p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="steering_up"></a>Steering up</h4></div></div></div><p>Although not represented in the 2D plane of the user interface, the Z coordinate of the control point can be changed using the corresponding slider in the lower-left corner of the Speaker Panner. </p><p>By increasing Z to a value above 0, the content of the surround channels of a 7.1.4 sound starts to play in the four channels of the height layer of a 7.1.4 Output Bus. The figures in the following table illustrate this effect.</p><div class="informaltable"><table class="informaltable" border="1" width="850px"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+								<p>Z Coordinate</p>
+							</th><th>
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td>Z = 0</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1_a.png"></div><p>
+								</p>
+								<p>The initial state.</p>
+							</td></tr><tr><td>Z = 50</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1_b.png"></div><p>
+								</p>
+								<p>The content of the surround layer is evenly split between the channels of the surround layer and of the height layer. </p>
+							</td></tr><tr><td>Z = 100</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1_c.png"></div><p>
+								</p>
+								<p>All the content of the surround layer is panned across the channels of the height layer. </p>
+							</td></tr></tbody></table></div></div><div class="simplesect"><div class="titlepage"><div><div><h4 class="title"><a name="steering_down"></a>Steering down</h4></div></div></div><p>Although not represented in the 2D plane of the user interface, the Z coordinate of the control point can be changed using the corresponding slider in the lower-left corner of the Speaker Panner. </p><p>By reducing Z to a value below 0, the content of the height channels of a 7.1.4 sound starts to play in the seven channels of the surround layer of a 7.1.4 Output Bus. The figures in the following table illustrate this effect.</p><div class="informaltable"><table class="informaltable" border="1"><colgroup><col width="130px" class="col1"><col width="720px" class="col2"></colgroup><thead><tr><th>
+								<p>Z Coordinate</p>
+							</th><th>
+								<p>Output Bus Meter</p>
+							</th></tr></thead><tbody><tr><td>Z = 0</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1.4_a.png"></div><p>
+								</p>
+								<p>The initial state.</p>
+							</td></tr><tr><td>Z = -50</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1.4_b.png"></div><p>
+								</p>
+								<p>The content of the height layer is evenly split between the channels of the surround layer and of the height layer.</p>
+							</td></tr><tr><td>Z = -100</td><td>
+								<p>
+									</p><div class="mediaobject"><img src="Images/dgm_steer_meter_7.1.4_c.png"></div><p>
+								</p>
+								<p>All the content of the height layer is panned to the surround layer.</p>
+							</td></tr></tbody></table></div></div></div><HR></body></html>
